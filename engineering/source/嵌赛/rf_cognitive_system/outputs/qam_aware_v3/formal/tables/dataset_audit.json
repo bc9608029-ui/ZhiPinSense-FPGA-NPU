@@ -1,0 +1,55 @@
+{
+  "config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\qam_aware_v3.yaml",
+  "base_seed": 2026,
+  "generation_strategy": {
+    "train": "deterministic on-the-fly; SeedSequence[base_seed, split_hash, epoch, index]; epoch changes",
+    "validation": "fixed on-the-fly; split-specific SeedSequence; set_epoch ignored",
+    "test": "fixed on-the-fly; split-specific SeedSequence; set_epoch ignored",
+    "labels_and_snr": "cyclic exact stratification over modulation x configured discrete SNR grid"
+  },
+  "count_balance": {
+    "train": {
+      "class_min": 12600,
+      "class_max": 12600,
+      "snr_min": 4800,
+      "snr_max": 4800,
+      "pair_min": 600,
+      "pair_max": 600
+    },
+    "validation": {
+      "class_min": 2100,
+      "class_max": 2100,
+      "snr_min": 800,
+      "snr_max": 800,
+      "pair_min": 100,
+      "pair_max": 100
+    },
+    "test": {
+      "class_min": 2100,
+      "class_max": 2100,
+      "snr_min": 800,
+      "snr_max": 800,
+      "pair_min": 100,
+      "pair_max": 100
+    }
+  },
+  "fingerprint_overlap_first_64": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "mean_power_span": 8.847564458847046e-09,
+  "rrc_occupied_bandwidth_hz_approx": 21600.0,
+  "ofdm_occupied_bandwidth_hz_approx": 24000.0,
+  "findings": [
+    {
+      "severity": "note",
+      "finding": "Constant-envelope FSK and OFDM CP/PAPR/cyclostationarity are legitimate modulation properties, but models may rely heavily on them; report per-class results."
+    },
+    {
+      "severity": "note",
+      "finding": "All classes use randomized record-start timing. OFDM occupied bandwidth is approximately matched to RRC single-carrier bandwidth."
+    }
+  ],
+  "blocking_leakage_found": false
+}

@@ -1,0 +1,97 @@
+{
+  "kind": "MULTIFREQUENCY_TX_CONTRACT",
+  "created": "2026-10-29",
+  "status": "OFFLINE_TX_PREP_VERIFIED_RF_PENDING",
+  "scope": "TX source preparation + pure-digital verification ONLY. No RX/mode/model/common-frame/two-DC/bitstream changes. No RF_PASS claimed.",
+  "source_identity": {
+    "generator_ui_interactive_tx": {
+      "path": "F:/scan_exec_20261027/ui_interactive_tx.py",
+      "sha256": "c04795d6993e426aefba9c5d7bf3e11ea9ff83740f67a7bd1f72d910d5d681cc",
+      "role": "SCALE / build_frame / load_manifest"
+    },
+    "generator_pilot_recovery": {
+      "path": "F:/AMR_Rescue_20261025/pilot_recovery.py",
+      "sha256": "d7538a1e27b65cd6b712607b485f1e07de447467bbfdbb04ce67143f9d797713",
+      "role": "public preamble/tail (seed 9011)"
+    },
+    "radio_pluto_link_probe": {
+      "path": "F:/AMR_Rescue_20261025/pluto_link_probe.py",
+      "sha256": "1b248f8f391976513c35ca54f31d7daef3fa363e2d095940f9ff17d4d60126a2",
+      "role": "Radio.send int16 rule (round->int16->x16, I/Q interleaved LE), scan_usb, set/get/stop/close"
+    },
+    "manifest": {
+      "path": "F:/嵌赛/rml24_final_integration1_work/pc_runtime/selftest_manifest_240.json",
+      "sha256": "272980e9ca942bf3b70c49104e73733369bc94115806e673685eac8d0d47de2f"
+    },
+    "payload_class_a": {
+      "class": 3,
+      "file": "03_02.bin",
+      "sha256": "1562575bbedd6e815535726f16de6752da0f7441ea609acd3cb2cf6be529c0f8"
+    },
+    "payload_class_b": {
+      "class": 9,
+      "file": "09_09.bin",
+      "sha256": "465def280290eafb0ef659e46b63c11c1c9eba96a66d74487807fe6ba34dd355"
+    }
+  },
+  "frequency_plan": {
+    "tx_lo_hz": 2401800000,
+    "tx_sample_rate_hz": 10240000,
+    "source_sample_rate_hz": 2560000,
+    "upsample": 4,
+    "signal_offsets_hz": [-1800000, 1800000],
+    "signal_centers_hz": [2400000000, 2403600000],
+    "tx_bandwidth_hz": 18000000,
+    "tx_atten_db": -40.0
+  },
+  "amplitude_plan": {
+    "scale": 68.46059377833956,
+    "clip_guard": 2047.0,
+    "int16_rule": "round(component) -> int16 -> x16, I/Q interleaved little-endian",
+    "int16_safe_max": 32752,
+    "frame_layout_2p56": "[zeros2048, train2048, tile(source,8)=8192, tail2048, zeros2048] = 16384",
+    "preamble_seed": 9011
+  },
+  "phase_plan": [
+    {"name": "silence", "seconds": 10.0, "note": "all-zero device buffer (explicit silence)"},
+    {"name": "a_only", "seconds": 10.0, "note": "class 3 at -1.8 MHz (2400.0 MHz)"},
+    {"name": "b_only", "seconds": 10.0, "note": "class 9 at +1.8 MHz (2403.6 MHz)"},
+    {"name": "both", "seconds": 10.0, "note": "A+B sum"},
+    {"name": "a_only", "seconds": 10.0, "note": "remove B, back to A-only"},
+    {"name": "silence", "seconds": 10.0, "note": "explicit silence"}
+  ],
+  "frozen_thresholds": {
+    "recover_corr_resample_min": 0.99,
+    "recover_corr_fir_min": 0.98,
+    "recover_nmse_fir_max_db": -20.0,
+    "separate_corr_fir_min": 0.98,
+    "separate_nmse_fir_max_db": -20.0,
+    "payload_corr_min": 0.98,
+    "center_err_max_hz": 20000.0,
+    "occ_bw_min_hz": 2200000.0,
+    "occ_bw_max_hz": 3000000.0,
+    "image_suppression_min_db": 20.0,
+    "guard_suppression_min_db": 20.0,
+    "int16_peak_max": 32752.0,
+    "int16_saturation_ratio_max": 0.0,
+    "quant_snr_min_db": 40.0,
+    "wrap_discontinuity_max_dbc": -30.0
+  },
+  "threshold_justification": {
+    "recovery_corr": "discriminator: correct offset sign recovers ~0.99+; wrong sign/resample -> ~0 (signal moved 2x off-center and filtered out)",
+    "image_suppression": "first +2.56 MHz image sits in the anti-imaging filter transition band because the source uses full Nyquist; a working 81-tap Kaiser filter gives ~25-30 dBc (measured -28.3/-29.2 dB), a missing filter ~0 dBc; >=20 dBc discriminates filter-present vs filter-absent",
+    "guard_suppression": "signals 3.6 MHz apart, 2.56 MHz occupancy, 1.04 MHz gap; skirts must be >20 dB down at mid-gap",
+    "quant_snr": "int16 step 16 -> error var 256/12; 40 dB is conservative",
+    "wrap": "frame starts/ends with 2048 zeros so the cyclic DDS wrap is perfectly continuous (d=0)"
+  },
+  "frozen_waveforms": {
+    "a_only_sha256": "5d11ab8a61a3ed51270ca2128f3c2b4d972e3138937a92e7825943d504ee177a",
+    "b_only_sha256": "144a9a0b30c8fd243b08eb954391d56c6a72a18c3151f131f7d16e5c49d5d1a6",
+    "both_sha256": "3226f4d5a10390945af2699465ea1fc5cc4b6fe0d50e135d7a1834036569f88b",
+    "silence_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+  },
+  "known_limitations": [
+    "image (first +2.56 MHz sampling replica) is ~-28 dBc, NOT -60 dBc: the source occupies the full Nyquist so the replica's inner edge lands on the anti-imaging filter cutoff; this is a REAL spur consistent with the RX's reported +/-2.56 MHz aliases and must be watched on the board (spectrum analyzer or raw-IQ)",
+    "the offline verification is pure-digital; it does NOT prove RF radiation or spectrum purity on real hardware"
+  ]
+}

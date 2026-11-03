@@ -1,0 +1,470 @@
+{
+  "schema": "pc_reference_npu_partition_v1",
+  "checkpoint": {
+    "path": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\outputs\\qam_aware_v2\\formal\\time_power_phase\\checkpoints\\best.pt",
+    "sha256": "f9e4b5e5513f60907aa69416df3374353848272e14744cb193a46d06b02d71a6",
+    "epoch": 39,
+    "best_epoch": 39
+  },
+  "input_tensor": {
+    "path": "F:\\\u5d4c\u8d5b\\pl_ddr_preparation\\generated\\expected_tensor_plddr.bin",
+    "sha256": "7f4bce133fd00cbd6161eb278ad4f2506e12d74fc223fbda0afb664fc8fe2af5",
+    "bytes": 97280,
+    "frames": 19,
+    "frame_bytes": 5120,
+    "layout": [
+      "iq_i_int8",
+      "iq_q_int8",
+      "power_int8",
+      "lag_re_int8",
+      "lag_im_int8"
+    ]
+  },
+  "dequant_contract": {
+    "iq_scale": 0.007874015748031496,
+    "physical_scale": 0.015748031496062992,
+    "zero_point": 0,
+    "symmetric": true
+  },
+  "class_order": [
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "2FSK",
+    "CPFSK",
+    "OFDM"
+  ],
+  "valid_accuracy": 0.3333333333333333,
+  "valid_frames": 12,
+  "runtime": {
+    "python": "3.11.9",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.4.6",
+    "random_seed": 0,
+    "torch_inference_mode": true,
+    "model_eval": true,
+    "command": "pc_reference_inference.py"
+  },
+  "frames": [
+    {
+      "frame_id": 0,
+      "case_name": "all_zero",
+      "ood": true,
+      "ground_truth": "OOD",
+      "ground_truth_id": null,
+      "logits": [
+        -14.93189525604248,
+        -35.51652526855469,
+        -62.28756332397461,
+        12.382794380187988,
+        17.490413665771484,
+        -27.22734260559082,
+        -50.90196228027344,
+        24.37436866760254
+      ],
+      "argmax_id": 7,
+      "argmax_class": "OFDM",
+      "top1_confidence": 0.9989707469940186,
+      "top1_top2_margin": 0.9979476928710938,
+      "correct": false
+    },
+    {
+      "frame_id": 1,
+      "case_name": "single_impulse",
+      "ood": true,
+      "ground_truth": "OOD",
+      "ground_truth_id": null,
+      "logits": [
+        -14.91710376739502,
+        -35.48017883300781,
+        -62.1662483215332,
+        12.358728408813477,
+        17.458087921142578,
+        -27.173933029174805,
+        -50.78059387207031,
+        24.34651756286621
+      ],
+      "argmax_id": 7,
+      "argmax_class": "OFDM",
+      "top1_confidence": 0.998975396156311,
+      "top1_top2_margin": 0.9979569315910339,
+      "correct": false
+    },
+    {
+      "frame_id": 2,
+      "case_name": "positive_negative_alternating",
+      "ood": true,
+      "ground_truth": "OOD",
+      "ground_truth_id": null,
+      "logits": [
+        -15.519341468811035,
+        -33.00627517700195,
+        -40.276939392089844,
+        14.962501525878906,
+        17.51736068725586,
+        -29.105775833129883,
+        -16.25,
+        10.848937034606934
+      ],
+      "argmax_id": 4,
+      "argmax_class": "64QAM",
+      "top1_confidence": 0.9268068075180054,
+      "top1_top2_margin": 0.854790985584259,
+      "correct": false
+    },
+    {
+      "frame_id": 3,
+      "case_name": "maximum_positive",
+      "ood": true,
+      "ground_truth": "OOD",
+      "ground_truth_id": null,
+      "logits": [
+        21.701810836791992,
+        2.5067625045776367,
+        -5.694206237792969,
+        -8.947982788085938,
+        -11.618589401245117,
+        -39.341243743896484,
+        -2.98393177986145,
+        -38.41690444946289
+      ],
+      "argmax_id": 0,
+      "argmax_class": "BPSK",
+      "top1_confidence": 1.0,
+      "top1_top2_margin": 1.0,
+      "correct": false
+    },
+    {
+      "frame_id": 4,
+      "case_name": "maximum_negative",
+      "ood": true,
+      "ground_truth": "OOD",
+      "ground_truth_id": null,
+      "logits": [
+        19.882755279541016,
+        2.6715455055236816,
+        -5.4660725593566895,
+        -9.354242324829102,
+        -11.995317459106445,
+        -35.209381103515625,
+        -4.4582438468933105,
+        -36.157047271728516
+      ],
+      "argmax_id": 0,
+      "argmax_class": "BPSK",
+      "top1_confidence": 1.0,
+      "top1_top2_margin": 0.9999999403953552,
+      "correct": false
+    },
+    {
+      "frame_id": 5,
+      "case_name": "near_full_scale",
+      "ood": true,
+      "ground_truth": "OOD",
+      "ground_truth_id": null,
+      "logits": [
+        -9.743349075317383,
+        -20.655887603759766,
+        -27.502538681030273,
+        6.511597156524658,
+        8.830526351928711,
+        -13.455521583557129,
+        -19.390090942382812,
+        11.858450889587402
+      ],
+      "argmax_id": 7,
+      "argmax_class": "OFDM",
+      "top1_confidence": 0.9495061039924622,
+      "top1_top2_margin": 0.9035347700119019,
+      "correct": false
+    },
+    {
+      "frame_id": 6,
+      "case_name": "random_iq",
+      "ood": true,
+      "ground_truth": "OOD",
+      "ground_truth_id": null,
+      "logits": [
+        -14.625458717346191,
+        -33.50075912475586,
+        -54.700504302978516,
+        11.461260795593262,
+        16.01845932006836,
+        -24.10009765625,
+        -43.41642761230469,
+        22.277299880981445
+      ],
+      "argmax_id": 7,
+      "argmax_class": "OFDM",
+      "top1_confidence": 0.9980702996253967,
+      "top1_top2_margin": 0.9961605072021484,
+      "correct": false
+    },
+    {
+      "frame_id": 7,
+      "case_name": "bpsk_snr_p20db",
+      "ood": false,
+      "ground_truth": "BPSK",
+      "ground_truth_id": 0,
+      "logits": [
+        3.6533169746398926,
+        -5.83288049697876,
+        -15.715811729431152,
+        -2.0937795639038086,
+        -1.091163158416748,
+        -7.433887958526611,
+        -23.279556274414062,
+        0.4694385528564453
+      ],
+      "argmax_id": 0,
+      "argmax_class": "BPSK",
+      "top1_confidence": 0.949300229549408,
+      "top1_top2_margin": 0.9099757671356201,
+      "correct": true
+    },
+    {
+      "frame_id": 8,
+      "case_name": "bpsk_snr_p0db",
+      "ood": false,
+      "ground_truth": "BPSK",
+      "ground_truth_id": 0,
+      "logits": [
+        -13.395743370056152,
+        -28.02886199951172,
+        -37.995452880859375,
+        10.176414489746094,
+        13.422757148742676,
+        -19.59915542602539,
+        -29.59786033630371,
+        15.250082015991211
+      ],
+      "argmax_id": 7,
+      "argmax_class": "OFDM",
+      "top1_confidence": 0.8568226099014282,
+      "top1_top2_margin": 0.7190084457397461,
+      "correct": false
+    },
+    {
+      "frame_id": 9,
+      "case_name": "bpsk_snr_m10db",
+      "ood": false,
+      "ground_truth": "BPSK",
+      "ground_truth_id": 0,
+      "logits": [
+        -14.453972816467285,
+        -30.937469482421875,
+        -46.03173065185547,
+        10.791065216064453,
+        14.71347427368164,
+        -21.204484939575195,
+        -35.57453918457031,
+        19.24898338317871
+      ],
+      "argmax_id": 7,
+      "argmax_class": "OFDM",
+      "top1_confidence": 0.9891846179962158,
+      "top1_top2_margin": 0.9785791039466858,
+      "correct": false
+    },
+    {
+      "frame_id": 10,
+      "case_name": "qpsk_snr_p20db",
+      "ood": false,
+      "ground_truth": "QPSK",
+      "ground_truth_id": 1,
+      "logits": [
+        -13.778572082519531,
+        10.734036445617676,
+        -1.0098023414611816,
+        -11.41133975982666,
+        -12.1162109375,
+        -3.137604236602783,
+        -2.718632221221924,
+        -20.621213912963867
+      ],
+      "argmax_id": 1,
+      "argmax_class": "QPSK",
+      "top1_confidence": 0.9999896287918091,
+      "top1_top2_margin": 0.999981701374054,
+      "correct": true
+    },
+    {
+      "frame_id": 11,
+      "case_name": "qpsk_snr_p0db",
+      "ood": false,
+      "ground_truth": "QPSK",
+      "ground_truth_id": 1,
+      "logits": [
+        -11.4340181350708,
+        -22.083812713623047,
+        -25.358287811279297,
+        9.932231903076172,
+        11.998970031738281,
+        -19.44124984741211,
+        -20.682344436645508,
+        5.742556095123291
+      ],
+      "argmax_id": 4,
+      "argmax_class": "64QAM",
+      "top1_confidence": 0.8861194252967834,
+      "top1_top2_margin": 0.7739384174346924,
+      "correct": false
+    },
+    {
+      "frame_id": 12,
+      "case_name": "qpsk_snr_m10db",
+      "ood": false,
+      "ground_truth": "QPSK",
+      "ground_truth_id": 1,
+      "logits": [
+        -14.465025901794434,
+        -32.165557861328125,
+        -50.24296569824219,
+        11.080839157104492,
+        15.321398735046387,
+        -22.56769371032715,
+        -39.562461853027344,
+        20.808374404907227
+      ],
+      "argmax_id": 7,
+      "argmax_class": "OFDM",
+      "top1_confidence": 0.9958176016807556,
+      "top1_top2_margin": 0.9916945695877075,
+      "correct": false
+    },
+    {
+      "frame_id": 13,
+      "case_name": "16qam_snr_p20db",
+      "ood": false,
+      "ground_truth": "16QAM",
+      "ground_truth_id": 3,
+      "logits": [
+        -9.581456184387207,
+        -4.904094219207764,
+        -2.404564380645752,
+        3.931595802307129,
+        3.5142922401428223,
+        -12.432565689086914,
+        -10.193385124206543,
+        -11.217144966125488
+      ],
+      "argmax_id": 3,
+      "argmax_class": "16QAM",
+      "top1_confidence": 0.602141261100769,
+      "top1_top2_margin": 0.2054380178451538,
+      "correct": true
+    },
+    {
+      "frame_id": 14,
+      "case_name": "16qam_snr_p0db",
+      "ood": false,
+      "ground_truth": "16QAM",
+      "ground_truth_id": 3,
+      "logits": [
+        -12.793874740600586,
+        -25.184906005859375,
+        -33.58655548095703,
+        10.244268417358398,
+        13.100597381591797,
+        -19.917003631591797,
+        -26.699081420898438,
+        11.940608024597168
+      ],
+      "argmax_id": 4,
+      "argmax_class": "64QAM",
+      "top1_confidence": 0.7294111251831055,
+      "top1_top2_margin": 0.5007483959197998,
+      "correct": false
+    },
+    {
+      "frame_id": 15,
+      "case_name": "16qam_snr_m10db",
+      "ood": false,
+      "ground_truth": "16QAM",
+      "ground_truth_id": 3,
+      "logits": [
+        -13.551350593566895,
+        -29.4697208404541,
+        -44.25414276123047,
+        10.43077564239502,
+        14.185934066772461,
+        -21.033401489257812,
+        -34.417972564697266,
+        18.08435821533203
+      ],
+      "argmax_id": 7,
+      "argmax_class": "OFDM",
+      "top1_confidence": 0.9796736240386963,
+      "top1_top2_margin": 0.9598118662834167,
+      "correct": false
+    },
+    {
+      "frame_id": 16,
+      "case_name": "64qam_snr_p20db",
+      "ood": false,
+      "ground_truth": "64QAM",
+      "ground_truth_id": 4,
+      "logits": [
+        -9.82119083404541,
+        -7.541177272796631,
+        -5.066255569458008,
+        5.724504470825195,
+        5.629739761352539,
+        -15.42887020111084,
+        -11.155172348022461,
+        -9.652122497558594
+      ],
+      "argmax_id": 3,
+      "argmax_class": "16QAM",
+      "top1_confidence": 0.5236672163009644,
+      "top1_top2_margin": 0.04734635353088379,
+      "correct": false
+    },
+    {
+      "frame_id": 17,
+      "case_name": "64qam_snr_p0db",
+      "ood": false,
+      "ground_truth": "64QAM",
+      "ground_truth_id": 4,
+      "logits": [
+        -11.202194213867188,
+        -22.110366821289062,
+        -29.449878692626953,
+        8.785292625427246,
+        11.309494018554688,
+        -17.156660079956055,
+        -25.044179916381836,
+        10.453957557678223
+      ],
+      "argmax_id": 4,
+      "argmax_class": "64QAM",
+      "top1_confidence": 0.664373517036438,
+      "top1_top2_margin": 0.3819781541824341,
+      "correct": true
+    },
+    {
+      "frame_id": 18,
+      "case_name": "64qam_snr_m10db",
+      "ood": false,
+      "ground_truth": "64QAM",
+      "ground_truth_id": 4,
+      "logits": [
+        -14.710615158081055,
+        -32.65105056762695,
+        -51.5570068359375,
+        11.277928352355957,
+        15.622625350952148,
+        -22.970720291137695,
+        -40.79060745239258,
+        21.275104522705078
+      ],
+      "argmax_id": 7,
+      "argmax_class": "OFDM",
+      "top1_confidence": 0.9964582324028015,
+      "top1_top2_margin": 0.9929618239402771,
+      "correct": false
+    }
+  ]
+}

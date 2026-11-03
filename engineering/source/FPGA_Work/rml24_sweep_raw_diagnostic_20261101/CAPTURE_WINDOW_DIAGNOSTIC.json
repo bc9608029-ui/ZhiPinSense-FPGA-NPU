@@ -1,0 +1,1116 @@
+[
+  {
+    "file": "23_07.bin",
+    "label": 23,
+    "frames": [
+      {
+        "frame_id": 19,
+        "pred": 23,
+        "candidate": {
+          "cfo_hz": -1.2574568360031897,
+          "training_residual": 0.27086486608052845,
+          "fir_training_residual": 0.030593161017684656,
+          "head_reference_relative_error": 0.029562708534800856,
+          "tail_reference_relative_error": 0.030767611846132165,
+          "tail_residual": 0.25752812851714296,
+          "gain": 601.7613084276323,
+          "dc": 22.302720079041478,
+          "repeat_average": 8.0,
+          "input_sha256": "f376da299e62e88723cb451a13d7d55f329a5658594a238e0b81fa13da5f59b2",
+          "pred": 23,
+          "class_name": "OQPSK",
+          "confidence": 0.9403254864178415,
+          "top3": [
+            {
+              "index": 23,
+              "class_name": "OQPSK",
+              "probability": 0.9403254864178415
+            },
+            {
+              "index": 15,
+              "class_name": "128QAM",
+              "probability": 0.030226713231020632
+            },
+            {
+              "index": 10,
+              "class_name": "64APSK",
+              "probability": 0.020774495936769707
+            }
+          ],
+          "window_predictions": [
+            23,
+            23,
+            23,
+            23,
+            23,
+            23,
+            23,
+            23
+          ],
+          "mean_logits": [
+            -47.5,
+            -40.5,
+            -44.5,
+            -41.0,
+            -39.25,
+            -43.5,
+            -27.25,
+            -16.75,
+            -35.5,
+            -37.25,
+            -15.875,
+            -27.25,
+            -39.25,
+            -29.5,
+            -23.5,
+            -15.5,
+            -24.875,
+            -34.25,
+            -38.25,
+            -39.0,
+            -42.5,
+            -69.0,
+            -63.0,
+            -12.0625
+          ],
+          "finite": true
+        },
+        "gain": {
+          "selected_gain_db": 62.0,
+          "readback_gain_db": 62.0,
+          "settle_buffers": 3,
+          "initial_adc_stats": {
+            "peak": 1017.0,
+            "rail_count": 0
+          },
+          "final_adc_stats": {
+            "peak": 1017.0,
+            "rail_count": 0
+          },
+          "final_gain_db": 62.0,
+          "backoff_steps": [],
+          "headroom_resolved": true
+        }
+      },
+      {
+        "frame_id": 20,
+        "pred": 23,
+        "candidate": {
+          "cfo_hz": 2.3334089542674503,
+          "training_residual": 1.0673953961820153,
+          "fir_training_residual": 0.06396217898366607,
+          "head_reference_relative_error": 0.043772253596775376,
+          "tail_reference_relative_error": 0.04310555884788926,
+          "tail_residual": 0.9906919914036826,
+          "gain": 503.6683212995452,
+          "dc": 31.754342749687734,
+          "repeat_average": 8.0,
+          "input_sha256": "9cd56c8e456b5ab413a507d878d80fbed27a2fe642933aae7af822dad3d0aa42",
+          "pred": 23,
+          "class_name": "OQPSK",
+          "confidence": 0.9320184700898966,
+          "top3": [
+            {
+              "index": 23,
+              "class_name": "OQPSK",
+              "probability": 0.9320184700898966
+            },
+            {
+              "index": 15,
+              "class_name": "128QAM",
+              "probability": 0.0614732814338395
+            },
+            {
+              "index": 7,
+              "class_name": "32PSK",
+              "probability": 0.006479236194399934
+            }
+          ],
+          "window_predictions": [
+            23,
+            23,
+            23,
+            23,
+            23,
+            23,
+            23,
+            23
+          ],
+          "mean_logits": [
+            -57.25,
+            -38.75,
+            -46.0,
+            -41.0,
+            -42.25,
+            -45.5,
+            -27.625,
+            -12.6875,
+            -40.0,
+            -48.25,
+            -18.125,
+            -24.125,
+            -34.25,
+            -27.75,
+            -29.375,
+            -10.4375,
+            -21.75,
+            -41.25,
+            -48.75,
+            -58.25,
+            -46.5,
+            -85.5,
+            -72.5,
+            -7.71875
+          ],
+          "finite": true
+        },
+        "gain": {
+          "selected_gain_db": 63.0,
+          "readback_gain_db": 63.0,
+          "settle_buffers": 3,
+          "initial_adc_stats": {
+            "peak": 1277.0,
+            "rail_count": 0
+          },
+          "final_adc_stats": {
+            "peak": 1277.0,
+            "rail_count": 0
+          },
+          "final_gain_db": 63.0,
+          "backoff_steps": [],
+          "headroom_resolved": true
+        }
+      }
+    ]
+  },
+  {
+    "file": "19_00.bin",
+    "label": 19,
+    "frames": [
+      {
+        "frame_id": 30,
+        "pred": 19,
+        "candidate": {
+          "cfo_hz": 2.5642546739793364,
+          "training_residual": 0.9835457666854345,
+          "fir_training_residual": 0.07647654323598373,
+          "head_reference_relative_error": 0.05457999566818882,
+          "tail_reference_relative_error": 0.05834224921818078,
+          "tail_residual": 0.9181444828658754,
+          "gain": 550.3323814101523,
+          "dc": 57.28181860032753,
+          "repeat_average": 8.0,
+          "input_sha256": "71d8be41a1ee568fb5e3482db3008de291b662b6ef4464d11dc66541767a3bcf",
+          "pred": 19,
+          "class_name": "AM-DSB-WC",
+          "confidence": 0.8519489026925922,
+          "top3": [
+            {
+              "index": 19,
+              "class_name": "AM-DSB-WC",
+              "probability": 0.8519489026925922
+            },
+            {
+              "index": 20,
+              "class_name": "AM-DSB-SC",
+              "probability": 0.1480465204391713
+            },
+            {
+              "index": 17,
+              "class_name": "AM-SSB-WC",
+              "probability": 4.477352136114792e-06
+            }
+          ],
+          "window_predictions": [
+            19,
+            19,
+            19,
+            19,
+            19,
+            19,
+            19,
+            19
+          ],
+          "mean_logits": [
+            -21.375,
+            -21.5,
+            -20.875,
+            -17.625,
+            -16.125,
+            -15.5625,
+            -17.375,
+            -18.625,
+            -11.5625,
+            -13.75,
+            -14.5625,
+            -15.3125,
+            -17.875,
+            -13.4375,
+            -17.625,
+            -14.25,
+            -17.875,
+            -6.09375,
+            -10.375,
+            6.0625,
+            4.3125,
+            -16.25,
+            -32.5,
+            -12.1875
+          ],
+          "finite": true
+        },
+        "gain": {
+          "selected_gain_db": 64.0,
+          "readback_gain_db": 64.0,
+          "settle_buffers": 3,
+          "initial_adc_stats": {
+            "peak": 1347.0,
+            "rail_count": 0
+          },
+          "final_adc_stats": {
+            "peak": 1347.0,
+            "rail_count": 0
+          },
+          "final_gain_db": 64.0,
+          "backoff_steps": [],
+          "headroom_resolved": true
+        }
+      },
+      {
+        "frame_id": 31,
+        "pred": 19,
+        "candidate": {
+          "cfo_hz": 3.640747626721333,
+          "training_residual": 0.327951569461695,
+          "fir_training_residual": 0.026339122292772386,
+          "head_reference_relative_error": 0.02504971031469041,
+          "tail_reference_relative_error": 0.02343568531724502,
+          "tail_residual": 0.3111172454130708,
+          "gain": 668.3557735141877,
+          "dc": 52.84386810663819,
+          "repeat_average": 8.0,
+          "input_sha256": "0ccb52f851665445865a835ccafd1dbe8316db9391ee30cc8882606643a8ad65",
+          "pred": 19,
+          "class_name": "AM-DSB-WC",
+          "confidence": 0.9770225733277825,
+          "top3": [
+            {
+              "index": 19,
+              "class_name": "AM-DSB-WC",
+              "probability": 0.9770225733277825
+            },
+            {
+              "index": 20,
+              "class_name": "AM-DSB-SC",
+              "probability": 0.02297736857510681
+            },
+            {
+              "index": 17,
+              "class_name": "AM-SSB-WC",
+              "probability": 5.704100039744498e-08
+            }
+          ],
+          "window_predictions": [
+            19,
+            19,
+            19,
+            19,
+            19,
+            19,
+            19,
+            19
+          ],
+          "mean_logits": [
+            -21.25,
+            -25.5,
+            -26.0,
+            -18.875,
+            -21.875,
+            -16.125,
+            -20.375,
+            -21.375,
+            -14.375,
+            -14.75,
+            -13.125,
+            -16.625,
+            -21.125,
+            -17.875,
+            -21.5,
+            -18.0,
+            -23.5,
+            -7.71875,
+            -14.375,
+            8.9375,
+            5.1875,
+            -22.5,
+            -43.75,
+            -12.3125
+          ],
+          "finite": true
+        },
+        "gain": {
+          "selected_gain_db": 63.0,
+          "readback_gain_db": 63.0,
+          "settle_buffers": 3,
+          "initial_adc_stats": {
+            "peak": 1225.0,
+            "rail_count": 0
+          },
+          "final_adc_stats": {
+            "peak": 1225.0,
+            "rail_count": 0
+          },
+          "final_gain_db": 63.0,
+          "backoff_steps": [],
+          "headroom_resolved": true
+        }
+      }
+    ]
+  },
+  {
+    "file": "03_02.bin",
+    "label": 3,
+    "frames": [
+      {
+        "frame_id": 41,
+        "pred": 3,
+        "candidate": {
+          "cfo_hz": -0.20794307489852173,
+          "training_residual": 0.6774351747048872,
+          "fir_training_residual": 0.07199750418901128,
+          "head_reference_relative_error": 0.05965708750265421,
+          "tail_reference_relative_error": 0.08300914683392421,
+          "tail_residual": 0.6410786296754217,
+          "gain": 480.7340463919947,
+          "dc": 16.03418799928405,
+          "repeat_average": 8.0,
+          "input_sha256": "f7585e197dd16412e0e9c90c9ecfb51c873f20e93971ed0ea67e029ec36cb962",
+          "pred": 3,
+          "class_name": "BPSK",
+          "confidence": 0.9999999999997289,
+          "top3": [
+            {
+              "index": 3,
+              "class_name": "BPSK",
+              "probability": 0.9999999999997289
+            },
+            {
+              "index": 23,
+              "class_name": "OQPSK",
+              "probability": 2.543665647376233e-13
+            },
+            {
+              "index": 4,
+              "class_name": "QPSK",
+              "probability": 1.626111044617378e-14
+            }
+          ],
+          "window_predictions": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "mean_logits": [
+            -53.25,
+            -57.75,
+            -74.5,
+            13.0,
+            -18.75,
+            -45.5,
+            -37.25,
+            -33.5,
+            -27.625,
+            -51.5,
+            -43.25,
+            -56.75,
+            -31.0,
+            -36.0,
+            -38.0,
+            -36.5,
+            -38.5,
+            -58.0,
+            -70.5,
+            -41.0,
+            -22.125,
+            -103.0,
+            -97.5,
+            -16.0
+          ],
+          "finite": true
+        },
+        "gain": {
+          "selected_gain_db": 61.0,
+          "readback_gain_db": 61.0,
+          "settle_buffers": 3,
+          "initial_adc_stats": {
+            "peak": 1125.0,
+            "rail_count": 0
+          },
+          "final_adc_stats": {
+            "peak": 1125.0,
+            "rail_count": 0
+          },
+          "final_gain_db": 61.0,
+          "backoff_steps": [],
+          "headroom_resolved": true
+        }
+      },
+      {
+        "frame_id": 42,
+        "pred": 3,
+        "candidate": {
+          "cfo_hz": 1.0157614467650016,
+          "training_residual": 0.20899360114583942,
+          "fir_training_residual": 0.024620948694945653,
+          "head_reference_relative_error": 0.024125117139178243,
+          "tail_reference_relative_error": 0.025354149693401145,
+          "tail_residual": 0.19840825876389007,
+          "gain": 697.0419689096066,
+          "dc": 52.33479328878812,
+          "repeat_average": 8.0,
+          "input_sha256": "7e569b4e3e48a4d9eeec54362ae599e58ae98ea708a33f69d9b291024624eba9",
+          "pred": 3,
+          "class_name": "BPSK",
+          "confidence": 0.9999999999996843,
+          "top3": [
+            {
+              "index": 3,
+              "class_name": "BPSK",
+              "probability": 0.9999999999996843
+            },
+            {
+              "index": 23,
+              "class_name": "OQPSK",
+              "probability": 2.9738464292351156e-13
+            },
+            {
+              "index": 4,
+              "class_name": "QPSK",
+              "probability": 1.8426252147229806e-14
+            }
+          ],
+          "window_predictions": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "mean_logits": [
+            -53.25,
+            -57.75,
+            -69.5,
+            21.0,
+            -10.625,
+            -39.5,
+            -35.5,
+            -30.75,
+            -28.75,
+            -53.75,
+            -44.5,
+            -56.5,
+            -30.0,
+            -37.0,
+            -35.5,
+            -37.25,
+            -39.75,
+            -53.25,
+            -65.5,
+            -38.25,
+            -24.25,
+            -112.0,
+            -100.0,
+            -7.84375
+          ],
+          "finite": true
+        },
+        "gain": {
+          "selected_gain_db": 63.0,
+          "readback_gain_db": 63.0,
+          "settle_buffers": 3,
+          "initial_adc_stats": {
+            "peak": 1365.0,
+            "rail_count": 0
+          },
+          "final_adc_stats": {
+            "peak": 1365.0,
+            "rail_count": 0
+          },
+          "final_gain_db": 63.0,
+          "backoff_steps": [],
+          "headroom_resolved": true
+        }
+      }
+    ]
+  },
+  {
+    "file": "17_01.bin",
+    "label": 17,
+    "frames": [
+      {
+        "frame_id": 52,
+        "pred": 17,
+        "candidate": {
+          "cfo_hz": -0.19320814933143698,
+          "training_residual": 0.5442773231007929,
+          "fir_training_residual": 0.135061326402184,
+          "head_reference_relative_error": 0.11920001565668781,
+          "tail_reference_relative_error": 0.13736635391845534,
+          "tail_residual": 0.5133773636340844,
+          "gain": 76.47575565702665,
+          "dc": 514.7523068015962,
+          "repeat_average": 8.0,
+          "input_sha256": "5e28ee64fc9dadf583f129e7c72d0858e0967a0334fcf6fdb78795d5936a191f",
+          "pred": 17,
+          "class_name": "AM-SSB-WC",
+          "confidence": 0.6297745760847757,
+          "top3": [
+            {
+              "index": 17,
+              "class_name": "AM-SSB-WC",
+              "probability": 0.6297745760847757
+            },
+            {
+              "index": 18,
+              "class_name": "AM-SSB-SC",
+              "probability": 0.3702253741837214
+            },
+            {
+              "index": 20,
+              "class_name": "AM-DSB-SC",
+              "probability": 2.775379250163756e-08
+            }
+          ],
+          "window_predictions": [
+            17,
+            17,
+            17,
+            17,
+            17,
+            17,
+            17,
+            17
+          ],
+          "mean_logits": [
+            -26.125,
+            -19.625,
+            -15.3125,
+            -31.25,
+            -20.25,
+            -17.75,
+            -22.5,
+            -21.0,
+            -12.875,
+            -16.125,
+            -17.5,
+            -21.0,
+            -23.625,
+            -18.75,
+            -19.25,
+            -19.625,
+            -20.125,
+            5.0625,
+            4.53125,
+            -12.875,
+            -11.875,
+            -23.125,
+            -24.25,
+            -22.875
+          ],
+          "finite": true
+        },
+        "gain": {
+          "selected_gain_db": 44.0,
+          "readback_gain_db": 44.0,
+          "settle_buffers": 3,
+          "initial_adc_stats": {
+            "peak": 707.0,
+            "rail_count": 0
+          },
+          "final_adc_stats": {
+            "peak": 707.0,
+            "rail_count": 0
+          },
+          "final_gain_db": 44.0,
+          "backoff_steps": [],
+          "headroom_resolved": true
+        }
+      },
+      {
+        "frame_id": 53,
+        "pred": 17,
+        "candidate": {
+          "cfo_hz": 0.1479576133979773,
+          "training_residual": 0.2984293194954835,
+          "fir_training_residual": 0.12143574685032944,
+          "head_reference_relative_error": 0.11652550719528368,
+          "tail_reference_relative_error": 0.15297696254182278,
+          "tail_residual": 0.3032006428018386,
+          "gain": 77.21291307351483,
+          "dc": 452.618512662572,
+          "repeat_average": 8.0,
+          "input_sha256": "92ee8050a0122f7c4b22e93fe094c812907c3e829b085ad8e69edbd17e9976eb",
+          "pred": 17,
+          "class_name": "AM-SSB-WC",
+          "confidence": 0.6442250940732567,
+          "top3": [
+            {
+              "index": 17,
+              "class_name": "AM-SSB-WC",
+              "probability": 0.6442250940732567
+            },
+            {
+              "index": 18,
+              "class_name": "AM-SSB-SC",
+              "probability": 0.3557748866584583
+            },
+            {
+              "index": 20,
+              "class_name": "AM-DSB-SC",
+              "probability": 1.0122986691714352e-08
+            }
+          ],
+          "window_predictions": [
+            17,
+            17,
+            17,
+            17,
+            17,
+            17,
+            17,
+            17
+          ],
+          "mean_logits": [
+            -30.0,
+            -23.375,
+            -19.0,
+            -34.25,
+            -20.125,
+            -21.25,
+            -24.125,
+            -23.375,
+            -14.1875,
+            -19.125,
+            -18.875,
+            -23.25,
+            -26.0,
+            -20.625,
+            -21.5,
+            -22.375,
+            -23.625,
+            5.34375,
+            4.75,
+            -13.0,
+            -12.625,
+            -30.5,
+            -30.375,
+            -23.5
+          ],
+          "finite": true
+        },
+        "gain": {
+          "selected_gain_db": 43.0,
+          "readback_gain_db": 43.0,
+          "settle_buffers": 3,
+          "initial_adc_stats": {
+            "peak": 658.0,
+            "rail_count": 0
+          },
+          "final_adc_stats": {
+            "peak": 658.0,
+            "rail_count": 0
+          },
+          "final_gain_db": 43.0,
+          "backoff_steps": [],
+          "headroom_resolved": true
+        }
+      }
+    ]
+  },
+  {
+    "file": "14_01.bin",
+    "label": 14,
+    "frames": [
+      {
+        "frame_id": 63,
+        "pred": 14,
+        "candidate": {
+          "cfo_hz": 2.3368473942255963,
+          "training_residual": 0.22401039129381967,
+          "fir_training_residual": 0.016320226183406547,
+          "head_reference_relative_error": 0.015941747588322737,
+          "tail_reference_relative_error": 0.016307997088137485,
+          "tail_residual": 0.212091601728383,
+          "gain": 605.4414580533187,
+          "dc": 44.34445132316786,
+          "repeat_average": 8.0,
+          "input_sha256": "e164b8b7488561b9f16b0a4f08866eefc3d62f107c58b7ff11f70d8642f60ccf",
+          "pred": 14,
+          "class_name": "64QAM",
+          "confidence": 0.9999999999219267,
+          "top3": [
+            {
+              "index": 14,
+              "class_name": "64QAM",
+              "probability": 0.9999999999219267
+            },
+            {
+              "index": 16,
+              "class_name": "256QAM",
+              "probability": 7.806826340824043e-11
+            },
+            {
+              "index": 12,
+              "class_name": "16QAM",
+              "probability": 5.1569168686119156e-15
+            }
+          ],
+          "window_predictions": [
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14
+          ],
+          "mean_logits": [
+            -87.5,
+            -55.0,
+            -52.75,
+            -61.25,
+            -52.25,
+            -59.5,
+            -74.0,
+            -68.5,
+            -63.75,
+            -75.5,
+            -45.5,
+            -67.0,
+            -34.5,
+            -62.5,
+            -1.6015625,
+            -38.75,
+            -24.875,
+            -67.0,
+            -72.0,
+            -104.0,
+            -53.75,
+            -106.0,
+            -77.5,
+            -64.5
+          ],
+          "finite": true
+        },
+        "gain": {
+          "selected_gain_db": 62.0,
+          "readback_gain_db": 62.0,
+          "settle_buffers": 3,
+          "initial_adc_stats": {
+            "peak": 1379.0,
+            "rail_count": 0
+          },
+          "final_adc_stats": {
+            "peak": 1379.0,
+            "rail_count": 0
+          },
+          "final_gain_db": 62.0,
+          "backoff_steps": [],
+          "headroom_resolved": true
+        }
+      },
+      {
+        "frame_id": 64,
+        "pred": 14,
+        "candidate": {
+          "cfo_hz": 1.903273418660452,
+          "training_residual": 0.5790630954335175,
+          "fir_training_residual": 0.029111136301019608,
+          "head_reference_relative_error": 0.025219321091014893,
+          "tail_reference_relative_error": 0.02568782516605888,
+          "tail_residual": 0.5482303106165226,
+          "gain": 546.7960819959427,
+          "dc": 48.37832538523096,
+          "repeat_average": 8.0,
+          "input_sha256": "e5fe5e46fbfdfbd7e4d6c7369824521ef030ee9a9ff268dd298a8c18aaa2ef11",
+          "pred": 14,
+          "class_name": "64QAM",
+          "confidence": 0.9999999985269521,
+          "top3": [
+            {
+              "index": 14,
+              "class_name": "64QAM",
+              "probability": 0.9999999985269521
+            },
+            {
+              "index": 16,
+              "class_name": "256QAM",
+              "probability": 1.4730400631883143e-09
+            },
+            {
+              "index": 12,
+              "class_name": "16QAM",
+              "probability": 7.048669625665217e-15
+            }
+          ],
+          "window_predictions": [
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14
+          ],
+          "mean_logits": [
+            -86.5,
+            -53.0,
+            -51.5,
+            -63.25,
+            -52.75,
+            -58.0,
+            -71.0,
+            -65.0,
+            -62.5,
+            -75.0,
+            -43.75,
+            -64.5,
+            -33.75,
+            -60.25,
+            -1.1640625,
+            -36.25,
+            -21.5,
+            -65.5,
+            -71.0,
+            -101.5,
+            -51.5,
+            -99.5,
+            -72.5,
+            -63.0
+          ],
+          "finite": true
+        },
+        "gain": {
+          "selected_gain_db": 62.0,
+          "readback_gain_db": 62.0,
+          "settle_buffers": 3,
+          "initial_adc_stats": {
+            "peak": 1278.0,
+            "rail_count": 0
+          },
+          "final_adc_stats": {
+            "peak": 1278.0,
+            "rail_count": 0
+          },
+          "final_gain_db": 62.0,
+          "backoff_steps": [],
+          "headroom_resolved": true
+        }
+      }
+    ]
+  },
+  {
+    "file": "20_05.bin",
+    "label": 20,
+    "frames": [
+      {
+        "frame_id": 74,
+        "pred": 20,
+        "candidate": {
+          "cfo_hz": -0.5530211793967809,
+          "training_residual": 0.22798484087857765,
+          "fir_training_residual": 0.08159470430183136,
+          "head_reference_relative_error": 0.07963715100929199,
+          "tail_reference_relative_error": 0.08035135095128028,
+          "tail_residual": 0.21601905691384313,
+          "gain": 591.5520230569176,
+          "dc": 21.502943007414633,
+          "repeat_average": 8.0,
+          "input_sha256": "dc15e2dd88ef49abaf505a7f71d615940f654012abaec0e1c28c1a2c4d19c274",
+          "pred": 20,
+          "class_name": "AM-DSB-SC",
+          "confidence": 0.9994785649810222,
+          "top3": [
+            {
+              "index": 20,
+              "class_name": "AM-DSB-SC",
+              "probability": 0.9994785649810222
+            },
+            {
+              "index": 16,
+              "class_name": "256QAM",
+              "probability": 0.0005193037577205887
+            },
+            {
+              "index": 14,
+              "class_name": "64QAM",
+              "probability": 2.1222757649395655e-06
+            }
+          ],
+          "window_predictions": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "mean_logits": [
+            -33.25,
+            -38.5,
+            -97.0,
+            -69.5,
+            -150.0,
+            -157.0,
+            -149.0,
+            -145.0,
+            -142.0,
+            -37.0,
+            -46.5,
+            -31.375,
+            -47.0,
+            -42.75,
+            -25.75,
+            -35.5,
+            -20.25,
+            -99.0,
+            -116.5,
+            -126.5,
+            -12.6875,
+            -165.0,
+            -168.0,
+            -127.5
+          ],
+          "finite": true
+        },
+        "gain": {
+          "selected_gain_db": 64.0,
+          "readback_gain_db": 64.0,
+          "settle_buffers": 3,
+          "initial_adc_stats": {
+            "peak": 1961.0,
+            "rail_count": 0
+          },
+          "final_adc_stats": {
+            "peak": 1434.0,
+            "rail_count": 0
+          },
+          "final_gain_db": 62.0,
+          "backoff_steps": [
+            {
+              "before_gain": 64.0,
+              "requested": 62.0,
+              "readback": 62.0,
+              "stats": {
+                "peak": 1434.0,
+                "rail_count": 0
+              }
+            }
+          ],
+          "headroom_resolved": true
+        }
+      },
+      {
+        "frame_id": 75,
+        "pred": 20,
+        "candidate": {
+          "cfo_hz": 1.1462826487779314,
+          "training_residual": 0.6393096346459036,
+          "fir_training_residual": 0.029754997043092753,
+          "head_reference_relative_error": 0.02509873004276798,
+          "tail_reference_relative_error": 0.028834296837111213,
+          "tail_residual": 0.6044237309236096,
+          "gain": 513.4582429977593,
+          "dc": 38.16472584277291,
+          "repeat_average": 8.0,
+          "input_sha256": "b7e60d439907b568dc2ec17f9baafd3661d9fbb855289b514c5bfe5892f0cebc",
+          "pred": 20,
+          "class_name": "AM-DSB-SC",
+          "confidence": 0.9997959609684399,
+          "top3": [
+            {
+              "index": 20,
+              "class_name": "AM-DSB-SC",
+              "probability": 0.9997959609684399
+            },
+            {
+              "index": 16,
+              "class_name": "256QAM",
+              "probability": 0.00020342685352167813
+            },
+            {
+              "index": 14,
+              "class_name": "64QAM",
+              "probability": 2.6990276839795676e-07
+            }
+          ],
+          "window_predictions": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "mean_logits": [
+            -27.875,
+            -35.5,
+            -92.0,
+            -67.5,
+            -149.0,
+            -155.0,
+            -146.0,
+            -141.0,
+            -139.0,
+            -31.875,
+            -45.0,
+            -28.75,
+            -48.75,
+            -41.25,
+            -27.75,
+            -34.5,
+            -21.125,
+            -93.0,
+            -109.0,
+            -120.5,
+            -12.625,
+            -159.0,
+            -166.0,
+            -123.5
+          ],
+          "finite": true
+        },
+        "gain": {
+          "selected_gain_db": 62.0,
+          "readback_gain_db": 62.0,
+          "settle_buffers": 3,
+          "initial_adc_stats": {
+            "peak": 1747.0,
+            "rail_count": 0
+          },
+          "final_adc_stats": {
+            "peak": 1747.0,
+            "rail_count": 0
+          },
+          "final_gain_db": 62.0,
+          "backoff_steps": [],
+          "headroom_resolved": true
+        }
+      }
+    ]
+  }
+]

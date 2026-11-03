@@ -1,0 +1,19 @@
+{
+  "status": "VISUAL_BUILD_PIXEL_TEST_PASS_PHYSICAL_PENDING",
+  "ui_sha": "4bf71ab48febe9960f00668a06f2f09e20bd937b28ba69f9788ba0b52fbf287a",
+  "changes": [
+    {
+      "file": "candidate/ui_sw/waterfall_render.cpp",
+      "before": "82ffa6a5332f86add5cda5ceb106185f8e9dd604feda7641139468dbd3363168",
+      "after": "0c089533176778ae55e7088453ba4c9d00a572768d0503e9413bef8029694870"
+    },
+    {
+      "file": "candidate/ui_sw/ui_render.cpp",
+      "before": "40c98dc55054a67d7acbf60cdd40b72317054ef5626b4eec5bd174632897b5fc",
+      "after": "ec2161f7bf62eb29bd507ab0d6ca21ff6a365a5dc69cf22fa78a4cd6ef4a399f"
+    }
+  ],
+  "receiver_changed": false,
+  "model_changed": false,
+  "fft_math_changed": false
+}

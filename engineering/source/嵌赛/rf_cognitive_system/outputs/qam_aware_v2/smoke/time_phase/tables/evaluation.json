@@ -1,0 +1,53 @@
+{
+  "scope": "development_test and frozen snr_sweep only; final_blind_test was not accessed",
+  "variant": "time_phase",
+  "best_epoch": 2,
+  "overall_accuracy": 0.28422619047619047,
+  "macro_f1": 0.2421443280314251,
+  "per_class_accuracy": {
+    "BPSK": 0.2976190476190476,
+    "QPSK": 0.011904761904761904,
+    "8PSK": 0.08333333333333333,
+    "16QAM": 0.30952380952380953,
+    "64QAM": 0.14285714285714285,
+    "2FSK": 0.6904761904761905,
+    "CPFSK": 0.6666666666666666,
+    "OFDM": 0.07142857142857142
+  },
+  "per_class_f1": {
+    "BPSK": 0.29411764705882354,
+    "QPSK": 0.02197802197802198,
+    "8PSK": 0.09271523178807947,
+    "16QAM": 0.2736842105263158,
+    "64QAM": 0.12972972972972974,
+    "2FSK": 0.5603864734299517,
+    "CPFSK": 0.43410852713178294,
+    "OFDM": 0.13043478260869565
+  },
+  "development_qam": {
+    "16qam_samples": 84,
+    "64qam_samples": 84,
+    "16qam_accuracy": 0.30952380952380953,
+    "64qam_accuracy": 0.14285714285714285,
+    "16qam_to_64qam_count": 13,
+    "64qam_to_16qam_count": 22,
+    "16qam_to_64qam_rate": 0.15476190476190477,
+    "64qam_to_16qam_rate": 0.2619047619047619
+  },
+  "qam_high_snr_mean": 0.1328125,
+  "single_sample_cpu_ms": 3.2794319999993604,
+  "batch_throughput_records_per_sec": 5147.059119203612,
+  "end_to_end_development_records_per_sec": 337.6580190538766,
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "torch": "2.14.0+cpu",
+    "cuda_available": false,
+    "torch_cuda_version": null,
+    "cudnn_version": null,
+    "cuda_devices": []
+  },
+  "git_commit": "733f749a1e07df735cb47fc4f904a50269931e82"
+}

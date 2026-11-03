@@ -1,0 +1,19 @@
+{
+  "input": "/root/rml24_fix3_1793425824/vectors/23.i16",
+  "source_sha": "3ff37e7087187d9a5d8179adba6f6ffef7108ec966406bbb617e242034586f72",
+  "integer_scales": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "repeats": 4,
+  "denominator": 36,
+  "threshold_unchanged": true,
+  "goal": "Separate deterministic low-level FFT numerical floor from intermittent corruption; failures retained"
+}

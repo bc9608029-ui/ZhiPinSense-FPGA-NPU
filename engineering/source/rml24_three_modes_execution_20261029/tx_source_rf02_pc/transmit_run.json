@@ -1,0 +1,188 @@
+{
+  "kind": "OFFLINE_TX_TRANSMIT_RUN",
+  "uri": "usb:1.8.5",
+  "config_ok": true,
+  "config_readback": {
+    "tx.hardwaregain": -40.0,
+    "tx.sampling_frequency": 10239999.0,
+    "tx.rf_bandwidth": 18000000.0,
+    "tlo.frequency": 2401799998.0,
+    "tlo.powerdown": 0.0
+  },
+  "originals": {
+    "tx.hardwaregain": "-10.000000 dB",
+    "tx.sampling_frequency": "30720000",
+    "tx.rf_bandwidth": "18000000",
+    "tlo.frequency": "2450000000",
+    "tlo.powerdown": "0"
+  },
+  "restore_readback": {
+    "tx.hardwaregain": "-10.000000 dB",
+    "tx.sampling_frequency": "30720000",
+    "tx.rf_bandwidth": "18000000",
+    "tlo.frequency": "2450000000",
+    "tlo.powerdown": "0"
+  },
+  "restore_ok": {
+    "tx.hardwaregain": true,
+    "tx.sampling_frequency": true,
+    "tx.rf_bandwidth": true,
+    "tlo.frequency": true,
+    "tlo.powerdown": true
+  },
+  "restore_errors": [],
+  "interrupted": false,
+  "events": [
+    {
+      "event": "prepared",
+      "wall_ns": 1793270581752660600,
+      "monotonic_ns": 6780421000000,
+      "uri": "usb:1.8.5",
+      "config_readback": {
+        "tx.hardwaregain": -40.0,
+        "tx.sampling_frequency": 10239999.0,
+        "tx.rf_bandwidth": 18000000.0,
+        "tlo.frequency": 2401799998.0,
+        "tlo.powerdown": 0.0
+      },
+      "config_ok": true
+    },
+    {
+      "event": "start_requested",
+      "wall_ns": 1793270581754738800,
+      "monotonic_ns": 6780421000000,
+      "phase": "silence",
+      "duration_s": 45.0,
+      "wave_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "event": "active",
+      "wall_ns": 1793270581770203500,
+      "monotonic_ns": 6780437000000,
+      "phase": "silence"
+    },
+    {
+      "event": "stop",
+      "wall_ns": 1793270627510930300,
+      "monotonic_ns": 6826187000000,
+      "phase": "silence",
+      "slept_s": 45.0
+    },
+    {
+      "event": "start_requested",
+      "wall_ns": 1793270627513927700,
+      "monotonic_ns": 6826187000000,
+      "phase": "a_only",
+      "duration_s": 45.0,
+      "wave_sha256": "71aa08571cc1a20e216190508acc2d4014e57ff7a799a94c07e24473d521d58e"
+    },
+    {
+      "event": "active",
+      "wall_ns": 1793270627576677700,
+      "monotonic_ns": 6826250000000,
+      "phase": "a_only"
+    },
+    {
+      "event": "stop",
+      "wall_ns": 1793270673339589500,
+      "monotonic_ns": 6872015000000,
+      "phase": "a_only",
+      "slept_s": 45.0
+    },
+    {
+      "event": "start_requested",
+      "wall_ns": 1793270673341602900,
+      "monotonic_ns": 6872015000000,
+      "phase": "b_only",
+      "duration_s": 45.0,
+      "wave_sha256": "d463bd20c6558bac2940d372be75e9fcec147be5295776edcea91d146566611f"
+    },
+    {
+      "event": "active",
+      "wall_ns": 1793270673406090400,
+      "monotonic_ns": 6872078000000,
+      "phase": "b_only"
+    },
+    {
+      "event": "stop",
+      "wall_ns": 1793270719271675300,
+      "monotonic_ns": 6917953000000,
+      "phase": "b_only",
+      "slept_s": 45.0
+    },
+    {
+      "event": "start_requested",
+      "wall_ns": 1793270719273793800,
+      "monotonic_ns": 6917953000000,
+      "phase": "both",
+      "duration_s": 45.0,
+      "wave_sha256": "112be1430e7b27581fa8120b955a427edb248257a92775c1d3c2aa4c631a46f0"
+    },
+    {
+      "event": "active",
+      "wall_ns": 1793270719345958900,
+      "monotonic_ns": 6918015000000,
+      "phase": "both"
+    },
+    {
+      "event": "stop",
+      "wall_ns": 1793270765157052900,
+      "monotonic_ns": 6963828000000,
+      "phase": "both",
+      "slept_s": 45.0
+    },
+    {
+      "event": "start_requested",
+      "wall_ns": 1793270765158065000,
+      "monotonic_ns": 6963828000000,
+      "phase": "a_only",
+      "duration_s": 45.0,
+      "wave_sha256": "71aa08571cc1a20e216190508acc2d4014e57ff7a799a94c07e24473d521d58e"
+    },
+    {
+      "event": "active",
+      "wall_ns": 1793270765226417300,
+      "monotonic_ns": 6963906000000,
+      "phase": "a_only"
+    },
+    {
+      "event": "stop",
+      "wall_ns": 1793270811166279900,
+      "monotonic_ns": 7009843000000,
+      "phase": "a_only",
+      "slept_s": 45.0
+    },
+    {
+      "event": "start_requested",
+      "wall_ns": 1793270811167293600,
+      "monotonic_ns": 7009843000000,
+      "phase": "silence",
+      "duration_s": 45.0,
+      "wave_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+    },
+    {
+      "event": "active",
+      "wall_ns": 1793270811236733100,
+      "monotonic_ns": 7009906000000,
+      "phase": "silence"
+    },
+    {
+      "event": "stop",
+      "wall_ns": 1793270857041312500,
+      "monotonic_ns": 7055718000000,
+      "phase": "silence",
+      "slept_s": 45.0
+    },
+    {
+      "event": "restore_begin",
+      "wall_ns": 1793270857041312500,
+      "monotonic_ns": 7055718000000
+    },
+    {
+      "event": "restore",
+      "wall_ns": 1793270857115596000,
+      "monotonic_ns": 7055796000000,
+      "errors": []
+    }
+  ]
+}

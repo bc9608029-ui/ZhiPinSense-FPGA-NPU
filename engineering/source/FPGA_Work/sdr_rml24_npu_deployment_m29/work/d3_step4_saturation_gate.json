@@ -1,0 +1,187 @@
+{
+  "phase": "M29-Phase-D3-Step4-saturation-gate",
+  "old_input_scale": 0.052646082,
+  "old_input_clip": 6.686052414,
+  "new_input_scale": [
+    0.049874272,
+    0.049874272
+  ],
+  "new_input_clip": 6.334032543999999,
+  "new_stem_out_scale0": 0.052820876,
+  "per_class_input_saturation": [
+    {
+      "class": "OOK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "4ASK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "8ASK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "BPSK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "QPSK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "8PSK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "16PSK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "32PSK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "16APSK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "32APSK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "64APSK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "128APSK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "16QAM",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "32QAM",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "64QAM",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "128QAM",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "256QAM",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "AM-SSB-WC",
+      "input_sat_old_mean": 0.1169586181640625,
+      "input_sat_new_mean": 0.1360321044921875,
+      "input_sat_new_max": 1.0
+    },
+    {
+      "class": "AM-SSB-SC",
+      "input_sat_old_mean": 0.09464263916015625,
+      "input_sat_new_mean": 0.1072540283203125,
+      "input_sat_new_max": 1.0
+    },
+    {
+      "class": "AM-DSB-WC",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "AM-DSB-SC",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "FM",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "GMSK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    },
+    {
+      "class": "OQPSK",
+      "input_sat_old_mean": 0.0,
+      "input_sat_new_mean": 0.0,
+      "input_sat_new_max": 0.0
+    }
+  ],
+  "dra384_eval": {
+    "acc": 0.5423177083333334,
+    "fp32_acc": 0.5540364583333334,
+    "acc_drop": 0.01171875,
+    "macro_f1": 0.5662576383218736,
+    "rated_0_20": 0.8350694444444444,
+    "min_class": 0.140625,
+    "min_class_name": "AM-SSB-SC",
+    "min_class_drop": 0.265625,
+    "am_ssb_sc_correct_rate": 0.140625,
+    "am_ssb_sc_high_snr": 0.15,
+    "am_ssb_sc_fp32": 0.515625,
+    "top1_agree": 0.6119791666666666
+  },
+  "baseline_384": {
+    "acc": 0.539062,
+    "fp32_acc": 0.554036,
+    "macro_f1": 0.5619,
+    "rated_0_20": 0.8385,
+    "min_class": 0.0781,
+    "min_class_name": "AM-SSB-SC",
+    "am_ssb_sc_correct_rate": 0.078,
+    "am_ssb_sc_fp32": 0.516,
+    "top1_agree": 0.615
+  },
+  "expA": {
+    "am_ssb_sc_correct_rate": 0.203,
+    "min_class": 0.203125,
+    "top1_agree": 0.81
+  }
+}

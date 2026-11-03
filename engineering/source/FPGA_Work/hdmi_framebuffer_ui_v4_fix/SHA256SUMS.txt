@@ -1,0 +1,54 @@
+# SHA-256 manifest — hdmi_framebuffer_ui_v4_fix (任务 39e5：HDMI DDR 帧缓冲读取链路修复)
+# Generated 2026-10-04 after the 39e5 PL rebuild PASSED + 交付冻结:
+#   RTL 修复 aq_axi_master.v 读路径半字反转（64→16 非对称 FIFO MSB-first vs DDR 小端）
+#   时序 WNS=+2.308 / WHS=+0.084 / TNS=THS=0；DRC 0 Error / 25 Warning（逐类说明见 BUILD_RESULTS.md）
+#   FMSH IP patch 已应用（Procise 检测 IP Patch version: 53180205）
+# 唯一有效上板位流 = hdmi_framebuffer_720p_top_disable_icap.bit（JTAG 临时加载，禁写 Flash）
+# 已作废位流(0XFFFFFFFF) 见 deprecated_manual_no_patch/README.md（REVOKED_DO_NOT_PROGRAM）
+#
+# --- 2026-10-04 软件修复（本清单仅 sw/* 变更；RTL/XDC/位流/docs 均未改动，哈希不变）---
+#   Phase2/Phase3 Release(-O2) SIGBUS(rc=135) 根因：GCC 自动向量化把非 volatile uint16_t* 直写
+#   u-dma-buf mmap 变成 NEON/SIMD 宽存储。修复：普通内存 staging 缓冲 + 唯一设备写路径
+#   submit_frame()（volatile uint16_t* 逐元素标量 strh）。AArch64 objdump 证据见
+#   sw/objdump_evidence/submit_frame_aarch64_disasm.txt（无 st1/st2/st3/st4/str q/str d）。
+#   状态 = READY-FOR-HARDWARE-RETEST（-O2 上板无 SIGBUS + 显示/触摸正常后才标 HARDWARE_PASS）。
+# Verify on Windows host:  cd /d F:\FPGA_Work\hdmi_framebuffer_ui_v4_fix && sha256sum -c SHA256SUMS.txt
+# (On the board, only the sw/* files are copied; verify with `sha256sum -c` against the sw/ subset.)
+9282f98ae785131e29f38ecb85762400fc2096cb2de604b7a4e4e094390eecd3 *fpga/vivado_prj/hdmi_framebuffer_720p.runs/impl_1/hdmi_framebuffer_720p_top.bit
+df8a0c669812835f7e6698ae0db0bb8524e6681bb211dfd1255bffe4ad1551b7 *fpga/vivado_prj/hdmi_framebuffer_720p.runs/impl_1/hdmi_framebuffer_720p_top_disable_icap.bit
+5a181a799afc5c469a908f7416ee637824941ef5f15aea0978d50cceac485246 *fpga/rtl/display/aq_axi_master.v
+f2d664b825e42a17789660d82eab21b69365c14eb416ace26f175fffd77f20f5 *fpga/build_phase1b.tcl
+1366de826161a43910ee8d7e86cdae2f41ad2d432c8a3b258ee7b74d0cfa312a *fpga/constrs/hdmi_framebuffer_720p.xdc
+dcdda3b8b68b654216277920f832a0c1227f8ffc2fe19f3566715efd3e3ada32 *fpga/program_phase1b_jtag.tcl
+743fa7fef2bc127d4d0d4e86cb262fff7a0c26711c8b917c7689acb073d3c3e2 *fpga/procise_run_disable_icap.tcl
+08f330a2b6f19910399281a72810f4595024e2027380e9163ec317c20529e62b *fpga/call_procise_disable_icap.bat
+8837f1f454893441c8353d6b5384bccc2edc48f6317b255caa9fe8473efb63fc *fpga/logfiles/procise.log
+76e9e8eff505933ed096ebd5e206caecf1d113b1f2ed16ef521e9cf5044f5212 *sw/phase1b_doublebuf_test.cpp
+6a81c744655e441bf4af6bd8506be6b0f622f4964ae7a9bfc663b52fc7fa4074 *sw/phase1c_dynamic_test.cpp
+1e784d26106345e610d767c53a7f5e5e587391491832f7e56ba818dc06a7e186 *sw/phase2_ui_render.cpp
+b5dcc7edb2f5bea1dad9e468550e8b81c3ac5bb178a1d8e8c62a3f3b3327197f *sw/phase3_touch_test.cpp
+5cbe74be068fb9d7ab264404256a5e77593b1539931cbce8c98a96f3b49e598c *sw/direct_framebuffer_backend.hpp
+423eb7e055c1fc3d0bed465a6a2654143ca44abac62eacf157b3ea8369e34865 *sw/direct_framebuffer_backend.cpp
+5a9f1be26999d26b13e93ee0f75b888cead3d8300cd66cf0c9d8c6af5584fed2 *sw/test_direct_framebuffer_backend.cpp
+e29ad113d72cb67f8d8c83ea80af23d0b7f1abfb550d35e61b2cb3c995c29fd9 *sw/CMakeLists.txt
+169134a7833a405c5ae59190101688dc85af4c8586d44839c3001a23bfc4832c *sw/build_on_board.sh
+44ae4cbdc4ff7eff33d2089f23ed8ad8b15bdf451eada7ac463517d6be00f294 *sw/collect_logs.sh
+042b0538ee2f7b20d4ca43b86cabbb87c07bead298f44100cf8c50ff3196ef62 *sw/objdump_evidence/dfb_backend_aarch64.o
+85741ef5658b2366434197f205d932a15b4b61a31146513f2d1cd2d3681ec083 *sw/objdump_evidence/submit_frame_aarch64_full.txt
+fc374f79b56bd00502886e99174d0754f7a49329625678f02ab9196eb84e9a3f *sw/objdump_evidence/submit_frame_aarch64_disasm.txt
+4ef2510f8d98a2f8352e41d9484b4b444de3d5b442d16a95f9975a0b372791a8 *sw/SHA256SUMS.txt
+98d43c7c5e8606125981ebfb5537fcf3519d2405cf01b8e7cc624e8b88124ace *sw/PACKAGE_README.md
+72e54c73a8e7abc07c32b67ccea85087a359daae4b2cfd82d95557fca2018058 *docs/MASTER_MANUAL.md
+82010092ba9f52f4b1338addbc28f321447750b993fc3ea3b0f2cb8ca4800ab8 *docs/PHASE1B_BRINGUP.md
+ea369408197b318af677b85f5ec09ea966edfe0a41c5eb2d982d87aea594a2d4 *docs/PHASE1C_BRINGUP.md
+195fbcfaa0e5e446161002f2717a882efa659648839120c2c9f30ee86e859c73 *docs/PHASE2_BRINGUP.md
+7a2ad6a7c13cca90dee7011935cf3198b40f185f8c03642662eeb8a34bca3906 *docs/PHASE3_BRINGUP.md
+242b6887ccf2e30a915910d19c1403c11c49758113e51f44f08de66c8740d7b8 *docs/BUILD_RESULTS.md
+791bd2ebb6b3f56e95f71037973d0b2a009acac17051f4eed5f0e33474f2528d *docs/CDC_WAIVERS.md
+7dd440f90c24070d477846fc63de832081a9430aed506e9c70713b221c8e11bf *docs/HDMI_WORK_REPORT.md
+d09034c67525c077d35081510c3f523e9179122ef8d1bf08d166289527f3be11 *docs/FIX_39E5_READ_PATH.md
+4f3af2364012979bce27beeaee6c846a1850f267c8c0b0b36cfa6fadeef81a55 *docs/BOARD_TEST_39E5.md
+5a0e11612e35608328c944475e6e047bf608a9f68145c90a29a978fe5239911e *BITSTREAM_RELEASE_MANIFEST.json
+67e5e1d1358c8af439a4f800c710f4ea16d6ea7754650dc469844fdb19962fdc *deprecated_manual_no_patch/README.md
+59aa45ecb0959c16e243546b2e44f1a94187c39805efb0194346bf701138359b *README.md
+7b8bef3c80fde57b9575e962e6d9ba6ec9d69a5ccfdc20622b154cba42712904 *hdmi_39e5_sw.tar.gz

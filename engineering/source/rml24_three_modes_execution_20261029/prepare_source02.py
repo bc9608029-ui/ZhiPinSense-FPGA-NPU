@@ -1,0 +1,2 @@
+from pathlib import Path
+r=Path(r'E:\rml24_three_modes_execution_20261029');s=(r/'capture_tx_source.py').read_text().replace('tx_source_rf01','tx_source_rf02').replace("assert int(config['sample_rate'])==10240000","assert abs(int(config['sample_rate'])-10240000)<=2").replace('sample_rate=10240000,raw_sha256','sample_rate=int(config[\'sample_rate\']),raw_sha256');(r/'capture_tx_source02.py').write_text(s)

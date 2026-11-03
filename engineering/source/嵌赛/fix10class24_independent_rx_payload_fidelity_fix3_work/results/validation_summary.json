@@ -1,0 +1,64 @@
+{
+  "cross_session": {
+    "digital_file_loopback": {
+      "a_mag": "1.0000",
+      "b_mag": "0.00000",
+      "cfo_max": "0.0",
+      "cfo_min": "0.0",
+      "classified": 24,
+      "correct": 23,
+      "end_to_end_accuracy": "0.9583",
+      "gated": 24,
+      "wl_denom": "1.000000"
+    },
+    "rf_dual_sdr": {
+      "a_mag": "0.0310",
+      "b_mag": "0.00137",
+      "cfo_max": "-73.0",
+      "cfo_min": "-98.0",
+      "classified": 23,
+      "correct": 1,
+      "end_to_end_accuracy": "0.0417",
+      "gated": 23,
+      "wl_denom": "0.000960"
+    }
+  },
+  "offset_models": {
+    "M0_baseline": {
+      "classified": 23,
+      "correct": 1,
+      "e2e_accuracy": 0.041666666666666664,
+      "n": 24
+    },
+    "M1_settle_dc": {
+      "classified": 23,
+      "correct": 1,
+      "e2e_accuracy": 0.041666666666666664,
+      "n": 24
+    },
+    "M2_guard_dc": {
+      "classified": 23,
+      "correct": 1,
+      "e2e_accuracy": 0.041666666666666664,
+      "n": 24
+    },
+    "M3_settle_guard_avg": {
+      "classified": 23,
+      "correct": 1,
+      "e2e_accuracy": 0.041666666666666664,
+      "n": 24
+    },
+    "M4_linear_dc": {
+      "classified": 23,
+      "correct": 1,
+      "e2e_accuracy": 0.041666666666666664,
+      "n": 24
+    },
+    "M5_oracle_dc": {
+      "classified": 23,
+      "correct": 1,
+      "e2e_accuracy": 0.041666666666666664,
+      "n": 24
+    }
+  }
+}

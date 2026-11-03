@@ -1,0 +1,13 @@
+{
+  "parameters": 71616,
+  "trainable_parameters": 71616,
+  "neural_macs": 9816064,
+  "neural_flops": 19632128,
+  "physical_frontend_multiplications": 4092,
+  "physical_frontend_additions": 2046,
+  "fp32_parameter_size_mb": 0.273193359375,
+  "checkpoint_tensor_state_size_mb": 0.27730560302734375,
+  "serialized_state_dict_mb": 0.3059253692626953,
+  "projected_npu_model_size_mb": 0.27730560302734375,
+  "hardware_partition_status": "PLANNED ONLY: power/correlation multiply-add frontend is FPGA-suitable; no hardware performance is claimed."
+}

@@ -1,0 +1,4 @@
+python3 -c 'import pathlib,hashlib,json; r=pathlib.Path("/root/rrml24_gain_headroom_integration_20261101/candidate"); print("HEADROOM_META "+jsonn.dumps(dict(identity_sha256=hashlib.sha256((r/"evidence/CANDIDATE_SOURCE_IDENTITTY.json").read_bytes()).hexdigest(),adapter_sha256=hashlib.sha256((r/"candidate/rrml24_final/board_runtime/gain_freeze_radio.py").read_bytes()).hexdigest(),headrooom_sha256=hashlib.sha256((r/"candidate/rml24_final/board_runtime/gain_headroom.ppy").read_bytes()).hexdigest())))'
+
+HEADROOM_META {"identity_sha256": "fa1e6d82884b6b580df62d6776005c199d3c3a26e11593515079de1fe5ec7b24", "adapter_sha256": "d111056547b11762f0cde5f16994be8698233d3f2750f54a2f5cd921fa719055", "headroom_sha256": "51886f2d3c63cc4d715bbe21109b98ef1263676403c0f41c3585cf0e870c3c63"}
+(base) root@U:~# 

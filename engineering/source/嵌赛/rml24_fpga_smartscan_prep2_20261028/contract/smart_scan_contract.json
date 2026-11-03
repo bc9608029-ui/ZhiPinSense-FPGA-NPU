@@ -1,0 +1,12 @@
+{
+  "contract_id":"rml24-fpga-smart-scan-prep-20261028-v2-xfft91",
+  "status":"PRODUCTION_OOC_COMPLETE_PSPL_AND_BITSTREAM_PENDING",
+  "sample_rate_hz":2560000,
+  "fft_length":1024,
+  "window":"symmetric_hann_q1_15_ties_away",
+  "fft_boundary":{"vendor":"xilinx.com:ip:xfft:9.1","input_bits":16,"output_bits":27,"axi_data_bits":64,"axi_user_bits":16,"order":"natural_0_to_1023","scaling":"unscaled","index_required":true},
+  "power_boundary":{"magnitude_square_bits":54,"storage_order":"fftshift","buffer_count":2,"storage_word_bits":64},
+  "fpga_v1":["window","fft_vendor_ip_adapter","magnitude_square","fftshift_address","double_buffer","status"],
+  "cpu_v1":["noise_floor","adaptive_threshold","bin_merge","band_stitch","target_tracking","log_db","ui"],
+  "red_lines":["model IQ unchanged","frozen NPU unchanged","software scan preserved","old bitstream preserved","automatic fallback required"]
+}

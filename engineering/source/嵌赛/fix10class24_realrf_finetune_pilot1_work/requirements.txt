@@ -1,0 +1,20 @@
+# M29-RML24-REALRF-FINETUNE-PILOT1 — 环境锁定（参考，非 pip install 单文件契约）
+#
+# 本任务三套 Python 解释器各有分工，版本按「某环境实测冻结」记录，不保证能通过一条
+# `pip install -r requirements.txt` 复现（详见 ENVIRONMENT.md §1）。逐版本以本文件为准：
+#
+#   A) D:\Anaconda\python  (3.13.5)  —— 离线分析/判读/训练/评估
+#      - numpy 2.1.3   （Anaconda base site，`python -I` 也可见）
+#      - h5py  3.12.1  （Anaconda base site，`python -I` 也可见）
+#      - torch 2.12.0+cpu （用户 site-packages，仅 `python`（不带 -I）可见）
+#   B) D:\radioconda\python —— PC TX 服务（libiio 0.26 + fix10prep2 依赖，只跑 TX）
+#   C) WSL Ubuntu g++ 15.2.0 —— C++ host 测试 + 24 帧 e2e 模拟（iCraft/SDR-free）
+#
+# 判读/一致性（numpy-only，`python -I` 可跑）：
+numpy==2.1.3
+h5py==3.12.1
+
+# 训练/评估（需 torch，**必须**用 `python`（不带 -I），torch 在用户 site-packages）：
+#   torch==2.12.0+cpu   # 额外索引: https://download.pytorch.org/whl/cpu
+#   （torch 不在本 requirements 的可安装范围，见 ENVIRONMENT.md §1.2）
+torch==2.12.0+cpu

@@ -1,0 +1,15 @@
+{
+  "source": "/root/rml24_param_exec_1793366907/full45/*.raw.npy",
+  "count": 24,
+  "selection": "sorted filenames; index floor(i*(N-1)/23), i=0..23; no labels",
+  "window_start": 32768,
+  "complex_samples": 1024,
+  "scale": "one common rule:16384/max(abs(I),abs(Q)); no labels; zero scale1",
+  "rounding": "numpy rint ties to even then saturate int16",
+  "clip_reporting": true,
+  "comparison": "existing same_iq.py unchanged, relativeL1<=2%, peak_power<=2%, peak bin within1% of golden maximum",
+  "first_failure": "stop and preserve; fixed denominator24",
+  "RF": false,
+  "reason": "Amplitude diagnostic supports numerical floor; freeze one common scale8 for all24 sources, retain previous failures; report clipping without dropping sources.",
+  "purpose": "Freeze and test proposed display backend quantization; does not change model input or original raw"
+}

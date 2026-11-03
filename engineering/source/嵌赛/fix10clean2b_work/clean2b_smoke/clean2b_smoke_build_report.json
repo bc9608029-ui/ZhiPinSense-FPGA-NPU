@@ -1,0 +1,41 @@
+{
+  "complex_count": 53760,
+  "deterministic_two_run": "PASS",
+  "edge_policy": "zero",
+  "global_K": 2048.0,
+  "guard": 832,
+  "input_dataset": "clean24_formal12000.hdf5",
+  "input_predictions_tsv": "frozen_model_predictions_formal12000.tsv",
+  "label_correct": "2/2",
+  "sample_rate_hz": 2560000,
+  "samples": [
+    {
+      "clip_count": 0,
+      "deployed23_class": 3,
+      "frozen_deployed23_pred": 3,
+      "frozen_raw24_pred": 3,
+      "modulation": "BPSK",
+      "native_rms": 893.4668792118216,
+      "raw24_class": 3,
+      "seed": 2001500,
+      "source_index": 1500,
+      "tx_peak": 2882.0,
+      "tx_scale": 2.29219464946105
+    },
+    {
+      "clip_count": 0,
+      "deployed23_class": 1,
+      "frozen_deployed23_pred": 1,
+      "frozen_raw24_pred": 1,
+      "modulation": "4ASK",
+      "native_rms": 893.2559751217866,
+      "raw24_class": 1,
+      "seed": 2000500,
+      "source_index": 500,
+      "tx_peak": 2772.0,
+      "tx_scale": 2.2927358529236543
+    }
+  ],
+  "snr_db": "nan",
+  "split_role": "holdout"
+}

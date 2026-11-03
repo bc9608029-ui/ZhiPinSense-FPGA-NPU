@@ -1,0 +1,75 @@
+{
+  "fft_length": 1024,
+  "sample_rate_hz": 2560000,
+  "cases": {
+    "tone_pos37": {
+      "frames": 1,
+      "peak_bins_fftshift": [
+        549
+      ],
+      "peak_check": true
+    },
+    "tone_neg37": {
+      "frames": 1,
+      "peak_bins_fftshift": [
+        475
+      ],
+      "peak_check": true
+    },
+    "tone_dc": {
+      "frames": 1,
+      "peak_bins_fftshift": [
+        512
+      ],
+      "peak_check": true
+    },
+    "tone_bin511": {
+      "frames": 1,
+      "peak_bins_fftshift": [
+        1023
+      ],
+      "peak_check": true
+    },
+    "dual_tone": {
+      "frames": 1,
+      "peak_bins_fftshift": [
+        475
+      ],
+      "peak_check": true,
+      "peak_any_of": [
+        549,
+        475
+      ]
+    },
+    "pulse": {
+      "frames": 1,
+      "peak_bins_fftshift": [
+        0
+      ],
+      "peak_check": false
+    },
+    "random": {
+      "frames": 1,
+      "peak_bins_fftshift": [
+        835
+      ],
+      "peak_check": true
+    },
+    "multi_frame": {
+      "frames": 3,
+      "peak_bins_fftshift": [
+        549,
+        549,
+        549
+      ],
+      "peak_check": true
+    },
+    "zero": {
+      "frames": 1,
+      "peak_bins_fftshift": [
+        0
+      ],
+      "peak_check": false
+    }
+  }
+}

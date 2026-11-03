@@ -1,0 +1,9 @@
+baseline_config: configs/baseline.yaml
+output_root: outputs/dual_domain_v1
+variants: [time_only, frequency_only, time_only_wide, dual]
+model:
+  base_channels: 16
+  wide_base_channels: 23
+  fusion_features: 64
+  dropout: 0.1
+  fft_length: 256

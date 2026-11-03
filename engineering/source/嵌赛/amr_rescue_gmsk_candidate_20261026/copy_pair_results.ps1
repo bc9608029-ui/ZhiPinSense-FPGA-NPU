@@ -1,0 +1,10 @@
+param([Parameter(Mandatory=$true)][string]$BoardRoot,[Parameter(Mandatory=$true)][string]$OutputDir)
+$ErrorActionPreference='Stop'
+if($BoardRoot -notmatch '^/root/amr_pair_(development|validation)_20261026_r[0-9]+$'){throw 'Unexpected board result directory'}
+$boardCmd=@"
+python3 -c 'import gzip,base64,hashlib; b=open("$BoardRoot/capture/results.json","rb").read(); print("PAIR_RESULT_SHA="+hashlib.sha256(b).hexdigest()); print("PAIR_RESULT_B64="+base64.b64encode(gzip.compress(b)).decode()); print("PAIR_RESTORE="+open("$BoardRoot/capture/restore.json").read()); print("__PAIR_COPY_END__")'
+"@
+$p=[System.IO.Ports.SerialPort]::new('COM8',115200,'None',8,'One');$p.ReadBufferSize=1048576;$text=[Text.StringBuilder]::new()
+try{$p.Open();$p.Write($boardCmd+"`r");$watch=[Diagnostics.Stopwatch]::StartNew();while($watch.Elapsed.TotalSeconds -lt 45){$chunk=$p.ReadExisting();if($chunk){[void]$text.Append($chunk)};if($text.ToString() -match '(?m)^__PAIR_COPY_END__\r?$'){break};Start-Sleep -Milliseconds 100}}finally{if($p.IsOpen){$p.Close()}}
+$clean=[regex]::Replace($text.ToString(),"\x1B\[[0-?]*[ -/]*[@-~]",'');$match=[regex]::Match($clean,'(?m)^PAIR_RESULT_B64=([A-Za-z0-9+/=]+)\r?$');if(-not $match.Success){throw 'Incomplete copy'}
+[IO.File]::WriteAllText((Join-Path $OutputDir 'serial_result_copy.txt'),$text.ToString());$bytes=[Convert]::FromBase64String($match.Groups[1].Value);$memory=[IO.MemoryStream]::new($bytes,0,$bytes.Length);$gz=[IO.Compression.GZipStream]::new($memory,[IO.Compression.CompressionMode]::Decompress);$decoded=[IO.MemoryStream]::new();$gz.CopyTo($decoded);$gz.Dispose();$memory.Dispose();$dest=Join-Path $OutputDir 'board_results.json';[IO.File]::WriteAllBytes($dest,$decoded.ToArray());$decoded.Dispose();$expected=[regex]::Match($clean,'(?m)^PAIR_RESULT_SHA=([0-9a-f]{64})\r?$').Groups[1].Value;$hash=(Get-FileHash -LiteralPath $dest).Hash;if($hash -ne $expected){throw 'SHA mismatch'};Write-Output "PAIR_COPY_SHA_PASS=$hash";Write-Output ([regex]::Match($clean,'(?m)^PAIR_RESTORE=.*$').Value)

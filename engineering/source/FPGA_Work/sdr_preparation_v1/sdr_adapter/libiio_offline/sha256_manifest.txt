@@ -1,0 +1,11 @@
+# SHA-256 manifest — libiio 离线安装包（Task 39e5b / Task 3 构建门）
+# 资产：amd64 主机验证 debs（libiio 0.26 + 运行时依赖）+ libiio v0.26 源码 tarball。
+# 板卡侧部署见本目录 README.md §3（aarch64 方案），amd64 debs 不上板。
+# 校验（在本目录内）：  sha256sum -c sha256_manifest.txt
+a0677750521663c898d25ddd0566127712ff4803108ec67182330a27fce85774  debs/libavahi-client3_0.8-18ubuntu1.1_amd64.deb
+2213977fd25dab90f3566d3163576955eb74dc89954c48ba6e2bd960fdcd45e2  debs/libavahi-common3_0.8-18ubuntu1.1_amd64.deb
+f788411ab9e7315d6879e0cfcaf450c87f88af1740376867a9910023239a77b0  debs/libiio-dev_0.26-2build2_amd64.deb
+d13ef97f39e52a7460feaeec0e3a7e738012402aa9273e92dc29807705f767a1  debs/libiio0_0.26-2build2_amd64.deb
+a1da2485d4e8a49c63d822d6fa8b84d792604c2a3f6d08dac2f6ed253576f585  debs/libserialport0_0.1.2-1build1_amd64.deb
+0f3f167c22d00994276b6425a306d1c0b6047e2ea2eb850afbdaf00968330484  debs/libusb-1.0-0_2%3a1.0.29-2build1_amd64.deb
+fb445fb860ef1248759f45d4273a4eff360534480ec87af64c6b8db3b99be7e5  libiio-0.26.tar.gz

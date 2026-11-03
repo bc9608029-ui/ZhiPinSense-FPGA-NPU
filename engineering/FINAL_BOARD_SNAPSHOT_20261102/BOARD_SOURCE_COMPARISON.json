@@ -1,0 +1,2483 @@
+{
+  "archive_sha256": "6d98838ef7dc1e6ea2629951536486cdb8a3decde9ece77f64fd48d996e2dced",
+  "archive_transfer_verified": true,
+  "board_files": 224,
+  "board_manifest_all_match": true,
+  "source_files": 183,
+  "source_files_exactly_in_rar": 179,
+  "source_files_not_in_rar": [
+    {
+      "path": "scripts/run_candidate_eof_compat.py",
+      "bytes": 8739,
+      "sha256": "c8d6b5fdc209aefdee0f021fad6409562724bebfc7b0bc600b54c91933779844",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "candidate/rml24_final/runtime/continuous_sweep.py",
+      "bytes": 3320,
+      "sha256": "077a1acde17f82e416d8dff3f713808273da80af8b06e827ad9a3cb4c8293776",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "candidate/rml24_final/board_runtime/standalone_receiver.py",
+      "bytes": 16294,
+      "sha256": "22d0e3669d55d13c4f05d86348dfc88dde035f812afe132ef7e08770b273ec5a",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "candidate/rml24_final/board_runtime/receiver_repeat_mean_gapfix1.py",
+      "bytes": 1742,
+      "sha256": "c7d93a4d7231a2f41ce9ff1fcf8afdf9ca000b95f7bd55f5fa4c79729491d0d1",
+      "in_source_archive": false,
+      "local_matches": []
+    }
+  ],
+  "all_files": [
+    {
+      "path": "test_history_ui_final",
+      "bytes": 1400664,
+      "sha256": "a5b55532847783f3882e0314990be1927d21e590fe31b43715f0cf03ab28aa18",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "visual_test.log",
+      "bytes": 42,
+      "sha256": "08551117afc8ef8b83f1443696df187fc01174e86cd108ed7c4ae6920cfae5fe",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "NEXT_AGENT_HANDOFF.md",
+      "bytes": 4763,
+      "sha256": "641cbabbc4cd10ad9a72a91e765df0728447f19c338101cd86ef36804b8d7112",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/NEXT_AGENT_HANDOFF.md",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/NEXT_AGENT_HANDOFF.md"
+      ]
+    },
+    {
+      "path": "BOOT_INSTALL_PLAN.json",
+      "bytes": 641,
+      "sha256": "cdd173aeddf824b1aff87b7af6ae49290b38fec83a1493127d2b922c5dea8e58",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_final_deployment_20261031/deployment_prep/BOOT_INSTALL_PLAN.json"
+      ]
+    },
+    {
+      "path": "evidence_retention.py",
+      "bytes": 1188,
+      "sha256": "3ee4a2add905e70b4e0dd3d784ff03a79c708921ced14456cb12d70c8d8a9bd4",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_final_deployment_20261031/deployment_prep/evidence_retention.py"
+      ]
+    },
+    {
+      "path": "docs/BOARDTEST.md",
+      "bytes": 7014,
+      "sha256": "72e6425f0488e73f4969ae7236feff8c9ed22904734f6e7e76efc32a6b69f658",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/docs/BOARDTEST.md",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/docs/BOARDTEST.md"
+      ]
+    },
+    {
+      "path": "docs/DESIGN_AND_LIMITS.md",
+      "bytes": 4462,
+      "sha256": "3d1fefb8fcc688b1dae3d9b49770bb13256e09ea3a7cbd9cad96aa6243f91106",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/docs/DESIGN_AND_LIMITS.md",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/docs/DESIGN_AND_LIMITS.md"
+      ]
+    },
+    {
+      "path": "test_history_ui",
+      "bytes": 1400552,
+      "sha256": "6a99f3ba9e80bb2ddf355edde332e942a3c621c48828d01a5acc2028a988553e",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "bytes": 20265,
+      "sha256": "26d75d6430f72000a90a9a794463fc0ac18642ed33ac716c91e177704a6444c1",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_package_verify_20261029/SHA256SUMS.txt"
+      ]
+    },
+    {
+      "path": "ui_build_final.log",
+      "bytes": 131,
+      "sha256": "86ab83d130586ddc600e1b6b4220d06a9ddb637e2821bbbe4d0e5fb66198a774",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "boot_recovery.py",
+      "bytes": 3522,
+      "sha256": "d578c5fa6cad2cf1fa61e3efa3ca6626efcb35bdd312d1bee47e621c8fb9b47c",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_final_deployment_20261031/deployment_prep/boot_recovery.py"
+      ]
+    },
+    {
+      "path": "previews/history.png",
+      "bytes": 70377,
+      "sha256": "a6fc16fae17079759931290f7f52aaae4414ff881a36985eefb76870a444b201",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "previews/detail.png",
+      "bytes": 46404,
+      "sha256": "3e7fe5c96765ecb01d595ca4e85c46a7270287f841f530d110520569bd2390d7",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "previews/tuning.png",
+      "bytes": 54017,
+      "sha256": "8c10f13edcde8507b543dce683a12768dfb3dc053f78f1afb74b71e6b1226796",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "previews/main.png",
+      "bytes": 43267,
+      "sha256": "d4e3cf0450e0d53f72a71b1603896098cbd395aa0c488648097b2f6302b2a2fb",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "history_test_final.log",
+      "bytes": 27,
+      "sha256": "4e0f855fdb4658ccc66157336936161d24b448fc2735e163903d822c389d9ba9",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "ui_build.log",
+      "bytes": 123,
+      "sha256": "22a9ef8c8d5541e26c5c7c7f2e7bed8ae2dbaebe326bc2231a3afade266e311b",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "scripts/check_cpp.sh",
+      "bytes": 696,
+      "sha256": "ea3141f2d213c0185edfb73a207a20d5e1a51e670caa36ffe5f34cff04dc8c7f",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/scripts/check_cpp.sh",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/scripts/check_cpp.sh",
+        "嵌赛/rml24_history_uptime_fix1_20261029/scripts/check_cpp.sh",
+        "FPGA_Work/rml24_ui_history_uptime_integration_20261031/scripts/check_cpp.sh"
+      ]
+    },
+    {
+      "path": "scripts/make_gui_fixture.py",
+      "bytes": 794,
+      "sha256": "e6c62034f7829fbd7b7225f846dd0f275c2359620505e83efb8c8c5bc4c7427d",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/scripts/make_gui_fixture.py",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/scripts/make_gui_fixture.py"
+      ]
+    },
+    {
+      "path": "scripts/run_candidate_eof_compat.py",
+      "bytes": 8739,
+      "sha256": "c8d6b5fdc209aefdee0f021fad6409562724bebfc7b0bc600b54c91933779844",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "scripts/run_candidate_finalize_v2.py",
+      "bytes": 10223,
+      "sha256": "bc0e5002859adc64759156e8e007bc6c20780290711b7e7ae4923c15309e73b1",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_restart_guard_20261031/run_candidate_finalize_v2.py"
+      ]
+    },
+    {
+      "path": "scripts/run_candidate.py",
+      "bytes": 8101,
+      "sha256": "8c51b7e0ca12ff2c4895829d78f75ffeb4da1b2e77794a73817a9051e840f6dc",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/scripts/run_candidate.py",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/scripts/run_candidate.py"
+      ]
+    },
+    {
+      "path": "scripts/run_offline_checks.py",
+      "bytes": 923,
+      "sha256": "324032bfe3d583daa4d3fdf017436dca8fb0a9d7d799b05eb7e7a3c1c9c24790",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/scripts/run_offline_checks.py",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/scripts/run_offline_checks.py"
+      ]
+    },
+    {
+      "path": "scripts/freeze_and_package.py",
+      "bytes": 3659,
+      "sha256": "adda76a2dfbed0fa5b6969de00c4971270b1bd15d2335ce790cbc9fc5cd8b208",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/scripts/freeze_and_package.py",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/scripts/freeze_and_package.py"
+      ]
+    },
+    {
+      "path": "scripts/hardware_restart_guard.py",
+      "bytes": 1944,
+      "sha256": "129dbc4cfa1135d653c79c3544e35709f25b01832fb8450feca367ff0da1a026",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_restart_guard_20261031/hardware_restart_guard.py"
+      ]
+    },
+    {
+      "path": "PROMOTED_RELEASE.json",
+      "bytes": 31695,
+      "sha256": "fe35cf6ac019c0cd9bba76d02fcc6cc638718c72eacfa2f8827806ee0ec9b373",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "tests/test_ui_process.py",
+      "bytes": 2042,
+      "sha256": "d36ed9f33e2b1191d789fea7cb3e7839893eddd28c97c2b599e1769a25fadb75",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/tests/test_ui_process.py",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/tests/test_ui_process.py"
+      ]
+    },
+    {
+      "path": "tests/test_history_ui.cpp",
+      "bytes": 4913,
+      "sha256": "97c8e4ac30b5e3883e5a94bf2f0a258f4c15af8f5fe4cde1d49c8f3d5a9f81f3",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_history_sweep_fix2_20261031/tests/test_history_ui.cpp"
+      ]
+    },
+    {
+      "path": "tests/render_preview.cpp",
+      "bytes": 1518,
+      "sha256": "5ccec80e5fd1e5d192b03658800b137007ce81c05d31ec931acbf20dd16cf20e",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/tests/render_preview.cpp",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/tests/render_preview.cpp",
+        "嵌赛/rml24_history_uptime_fix1_20261029/tests/render_preview.cpp",
+        "FPGA_Work/rml24_ui_history_uptime_integration_20261031/tests/render_preview.cpp"
+      ]
+    },
+    {
+      "path": "tests/test_receiver_integration.py",
+      "bytes": 5657,
+      "sha256": "31ad83bfebf0bbf1ad4f11f7e3fb1a0ee1dcc7a0b6f73dbe7f07df3402554b5a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/tests/test_receiver_integration.py",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/tests/test_receiver_integration.py"
+      ]
+    },
+    {
+      "path": "tests/test_visual.cpp",
+      "bytes": 1407,
+      "sha256": "b5c966b80d270ecf6939a12eae5ae223f6c9ef72544debe7d7d820765e95edf2",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_visual_review_fix_20261031/tests/test_visual.cpp"
+      ]
+    },
+    {
+      "path": "tests/test_sweep.py",
+      "bytes": 3657,
+      "sha256": "f74ed61dbcc2dc752b9a3d3b619a6fef705256b65857bcba09c8fcb5be006d0a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/tests/test_sweep.py",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/tests/test_sweep.py"
+      ]
+    },
+    {
+      "path": "tests/test_supervisor.py",
+      "bytes": 1644,
+      "sha256": "7786797f3d2e51acd748688c5d495485e70e9ad75e20918141770ae359a55c5b",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/tests/test_supervisor.py",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/tests/test_supervisor.py"
+      ]
+    },
+    {
+      "path": "deployment_launcher.py",
+      "bytes": 2547,
+      "sha256": "70f1d4f4e0c54fe559f50be15bb52f1c467faa1d9d627f449e3183ce01a67b60",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_final_deployment_20261031/deployment_prep/deployment_launcher.py"
+      ]
+    },
+    {
+      "path": "ui_test.log",
+      "bytes": 27,
+      "sha256": "4e0f855fdb4658ccc66157336936161d24b448fc2735e163903d822c389d9ba9",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "test_visual",
+      "bytes": 1339744,
+      "sha256": "eef5e01cd2044da342c5dcc7e01c34f34faac93f0d32fd04cbb740d08c8eb60b",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "visual_test_build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/08_FMQL30TAI开发教程资料/01_第三方软件工具/04_Cmake/仅用于400tai板载系统安装.txt",
+        "嵌赛/tools/Python38/Lib/lib2to3/tests/data/fixers/myfixes/__init__.py",
+        "嵌赛/tools/Python38/Lib/email/mime/__init__.py",
+        "嵌赛/tools/Python38/Lib/pydoc_data/__init__.py"
+      ]
+    },
+    {
+      "path": "ui_test_build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/08_FMQL30TAI开发教程资料/01_第三方软件工具/04_Cmake/仅用于400tai板载系统安装.txt",
+        "嵌赛/tools/Python38/Lib/lib2to3/tests/data/fixers/myfixes/__init__.py",
+        "嵌赛/tools/Python38/Lib/email/mime/__init__.py",
+        "嵌赛/tools/Python38/Lib/pydoc_data/__init__.py"
+      ]
+    },
+    {
+      "path": "visual_spectrum.ppm",
+      "bytes": 2764816,
+      "sha256": "c562bcd8d79ebc971eb8ba827aaa4f6a906bf70927125366311128409f273c07",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "history_test_build_final.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/08_FMQL30TAI开发教程资料/01_第三方软件工具/04_Cmake/仅用于400tai板载系统安装.txt",
+        "嵌赛/tools/Python38/Lib/lib2to3/tests/data/fixers/myfixes/__init__.py",
+        "嵌赛/tools/Python38/Lib/email/mime/__init__.py",
+        "嵌赛/tools/Python38/Lib/pydoc_data/__init__.py"
+      ]
+    },
+    {
+      "path": "visual_ui_build.log",
+      "bytes": 126,
+      "sha256": "62d8d4c317201663bb171c2c0da8de247445b60aec7acae09bdbcf5de50fecc6",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "collect_status.py",
+      "bytes": 1583,
+      "sha256": "bcf54c31fa1f6fab57674ebaeeb9ad3185e6d9d59e26bc44fd7eac11c8267af5",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_final_deployment_20261031/deployment_prep/collect_status.py"
+      ]
+    },
+    {
+      "path": "candidate/bin/board_ui_live_rml24_final",
+      "bytes": 1541464,
+      "sha256": "4bf71ab48febe9960f00668a06f2f09e20bd937b28ba69f9788ba0b52fbf287a",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "candidate/rml24_final/runtime/spectrum_backend.py",
+      "bytes": 2732,
+      "sha256": "e68d0d9bca148471dae2a6b042fa8812792e074d2b0e464fefd3a9c14af2dd5c",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_fpga_ui_integration_20261031/shared_variant/spectrum_backend.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/runtime/mode_control_server.py",
+      "bytes": 4207,
+      "sha256": "ffd78518c69d6203b137c28111fd2b14b9dbb7d2049b1cf0f4f2ab50bcce23d8",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_scan_final_prep1_20261027/runtime/mode_control_server.py",
+        "嵌赛/rml24_scan_final_prep1_20261027/build_host/integration_overlay/runtime/mode_control_server.py",
+        "嵌赛/rml24_scan_final_prep1_20261027/build_host/integration_assembled/rml24_final/runtime/mode_control_server.py",
+        "嵌赛/rml24_scan_final_prep1_20261027/build_host/integration_overlay_final/runtime/mode_control_server.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/runtime/ui_event.py",
+      "bytes": 13819,
+      "sha256": "89ab1f7a13e623fb9a1a8893faef9138e0c325508dfe0bdb7a88fb4c4dc3c8c9",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_fpga_ui_integration_20261031/candidate/rml24_final/runtime/ui_event.py",
+        "FPGA_Work/rml24_ui_history_uptime_integration_20261031/candidate/rml24_final/runtime/ui_event.py",
+        "FPGA_Work/rml24_history_sweep_fix2_20261031/candidate/rml24_final/runtime/ui_event.py",
+        "FPGA_Work/rml24_visual_review_fix_20261031/candidate/rml24_final/runtime/ui_event.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/runtime/scan_runtime.py",
+      "bytes": 9694,
+      "sha256": "26d38b8eddbaf299a2e396198e392b3e6e3f618bc97290aeb836f07331ed7a9b",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_scan_final_prep1_20261027/runtime/scan_runtime.py",
+        "嵌赛/rml24_scan_final_prep1_20261027/build_host/integration_overlay/runtime/scan_runtime.py",
+        "嵌赛/rml24_scan_final_prep1_20261027/build_host/integration_assembled/rml24_final/runtime/scan_runtime.py",
+        "嵌赛/rml24_scan_final_prep1_20261027/build_host/integration_overlay_final/runtime/scan_runtime.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/runtime/scan_lock_policy.py",
+      "bytes": 1615,
+      "sha256": "912f2e24a0cb50768eb8bcdcfc552a8a57082900c85ec4c8485ffb264c13f320",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_scan_gap_ui_control_fix1_20261028/runtime/scan_lock_policy.py",
+        "嵌赛/rml24_scan_gap_ui_control_fix1_20261028/overlay/rml24_final/runtime/scan_lock_policy.py",
+        "嵌赛/rml24_scan_gap_ui_control_fix1_20261028/delivery/overlay/rml24_final/runtime/scan_lock_policy.py",
+        "嵌赛/rml24_scan_gap_ui_control_fix1_20261028/delivery_ui2_final/overlay/rml24_final/runtime/scan_lock_policy.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/runtime/receiver_core.py",
+      "bytes": 3370,
+      "sha256": "cb529824a80e9fa2aea6aaa31375c8d560f117c36b9644862cb459f6c39cd79a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_final_integration1_work/runtime/receiver_core.py",
+        "嵌赛/rml24_package_verify_6764677701b4447a8961243e01e43d70/rml24_final_integration1/runtime/receiver_core.py",
+        "嵌赛/rml24_stage7_verify_e8af20c25e6847d9afb52755d6d240b7/rml24_final_stage7_board_overlay/runtime/receiver_core.py",
+        "嵌赛/rml24_stage7_verify_final_e72442fca735491ca326897d1c90a6c0/rml24_final_stage7_board_overlay/runtime/receiver_core.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/runtime/continuous_sweep.py",
+      "bytes": 3320,
+      "sha256": "077a1acde17f82e416d8dff3f713808273da80af8b06e827ad9a3cb4c8293776",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "candidate/rml24_final/runtime/radio_tuning.py",
+      "bytes": 1823,
+      "sha256": "a6df471b9d69f37334546b436d32eb3aff3f9ea8012027aafd9738c981a323bf",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_scan_final_prep1_20261027/runtime/radio_tuning.py",
+        "嵌赛/rml24_scan_final_prep1_20261027/build_host/integration_overlay/runtime/radio_tuning.py",
+        "嵌赛/rml24_scan_final_prep1_20261027/build_host/integration_assembled/rml24_final/runtime/radio_tuning.py",
+        "嵌赛/rml24_scan_final_prep1_20261027/build_host/integration_overlay_final/runtime/radio_tuning.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/runtime/standalone_control.py",
+      "bytes": 9531,
+      "sha256": "0672d0edeb07538471898f404ad20f668b469d90db5ccc85855776502ab5bd27",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/candidate/rml24_final/runtime/standalone_control.py",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/candidate/rml24_final/runtime/standalone_control.py",
+        "嵌赛/rml24_history_uptime_fix1_20261029/candidate/rml24_final/runtime/standalone_control.py",
+        "FPGA_Work/rml24_fpga_ui_integration_20261031/candidate/rml24_final/runtime/standalone_control.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/board_runtime/rml24_dualmode_receiver_centered_v2.py",
+      "bytes": 15563,
+      "sha256": "11061886abbd51d63eb1ac70bd555d06688e0b673759dc46cb475d2161ef2b36",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_ui_fivepage_prep_20261027/ui_fivepage_candidate/rml24_final/board_runtime/rml24_dualmode_receiver_centered_v2.py",
+        "嵌赛/rml24_ac_integration_20261029/local_base/board_runtime/rml24_dualmode_receiver_centered_v2.py",
+        "嵌赛/rml24_sweep_history_20261029/candidate/rml24_final/board_runtime/rml24_dualmode_receiver_centered_v2.py",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/candidate/rml24_final/board_runtime/rml24_dualmode_receiver_centered_v2.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/board_runtime/locked_detector.py",
+      "bytes": 1144,
+      "sha256": "23ce9944700350d45e0fe97b6fc0b88e832426671b8647f292dc9880e2af8fbd",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_locked_detection_research_20261101/locked_detector.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/board_runtime/gain_headroom.py",
+      "bytes": 1364,
+      "sha256": "51886f2d3c63cc4d715bbe21109b98ef1263676403c0f41c3585cf0e870c3c63",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_gain_headroom_integration_20261101/gain_headroom.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/board_runtime/gain_freeze_radio.py",
+      "bytes": 2598,
+      "sha256": "d111056547b11762f0cde5f16994be8698233d3f2750f54a2f5cd921fa719055",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_gain_headroom_integration_20261101/gain_freeze_headroom_adapter.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/board_runtime/ui_gain_telemetry.py",
+      "bytes": 569,
+      "sha256": "f37cfdb1776fd538e11daff29db604183f840cdf65c348e571861c1ad1ba603c",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_gain_ui_sync_20261102/ui_gain_telemetry.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/board_runtime/standalone_receiver.py",
+      "bytes": 16294,
+      "sha256": "22d0e3669d55d13c4f05d86348dfc88dde035f812afe132ef7e08770b273ec5a",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "candidate/rml24_final/board_runtime/receiver_repeat_mean_gapfix1.py",
+      "bytes": 1742,
+      "sha256": "c7d93a4d7231a2f41ce9ff1fcf8afdf9ca000b95f7bd55f5fa4c79729491d0d1",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "candidate/rml24_final/board_runtime/bounded_input_gain.py",
+      "bytes": 579,
+      "sha256": "ebf380600d7dd9ea9ae1780b1d8d490f2cdd41b5257d7a6c0d0fb4d6677ea196",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_sweep_boundednorm_research_20261102/bounded_input_gain.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/board_runtime/repeat_mean_candidate.py",
+      "bytes": 489,
+      "sha256": "1e837d42485ce717023b580918773f9f53c3095ab3c4f2870321bd58ebd0bdde",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_scan_gap_ui_control_fix1_20261028/board_runtime/repeat_mean_candidate.py",
+        "嵌赛/rml24_scan_gap_ui_control_fix1_20261028/overlay/rml24_final/board_runtime/repeat_mean_candidate.py",
+        "嵌赛/rml24_scan_gap_ui_control_fix1_20261028/delivery/overlay/rml24_final/board_runtime/repeat_mean_candidate.py",
+        "嵌赛/rml24_scan_gap_ui_control_fix1_20261028/delivery_ui2_final/overlay/rml24_final/board_runtime/repeat_mean_candidate.py"
+      ]
+    },
+    {
+      "path": "candidate/rml24_final/recovery/candidate_two_dc.py",
+      "bytes": 3857,
+      "sha256": "e0aa12029e9c5aa670a9340d9c078814b10dcfb0ee82c580adaad4f55affcf3a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/amr_rescue_gmsk_candidate_20261026/candidate_two_dc.py",
+        "嵌赛/rml24_final_integration1_work/recovery/candidate_two_dc.py",
+        "嵌赛/rml24_package_verify_6764677701b4447a8961243e01e43d70/rml24_final_integration1/recovery/candidate_two_dc.py",
+        "嵌赛/rml24_stage7_verify_e8af20c25e6847d9afb52755d6d240b7/rml24_final_stage7_board_overlay/recovery/candidate_two_dc.py"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/frame_analysis.hpp",
+      "bytes": 10926,
+      "sha256": "888ee6cca55f4c3d749b6fc8c6efb10213404a239fc6abbb881339dda8390716",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/frame_analysis.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/frame_analysis.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/frame_analysis.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/frame_analysis.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/crc32.hpp",
+      "bytes": 1727,
+      "sha256": "26c5332f347fb654a1fc3bd5c1cf95f38ea03ed48166f03a56370369d29930ae",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/crc32.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/crc32.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/crc32.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/crc32.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/auto_level_control.hpp",
+      "bytes": 6465,
+      "sha256": "1d3e942a518dad29131307917f0a00afbe41aedfc38cc7891c7c2ff0bc83cf5b",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/auto_level_control.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/auto_level_control.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/auto_level_control.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/auto_level_control.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/resampler.hpp",
+      "bytes": 3187,
+      "sha256": "24d1c2e1696e1caf4cfcad187ec69245fabab36090983883784fde7c40e689b8",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/resampler.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/resampler.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/resampler.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/resampler.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/resampler.cpp",
+      "bytes": 3786,
+      "sha256": "be11f7a6b4ac65a12c09ee222e9a2442e67efe487125b45c635b681d04f2d241",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/resampler.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/resampler.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/resampler.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/resampler.cpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/pluto_libiio.cpp",
+      "bytes": 8789,
+      "sha256": "74b7c6b468c866f32d04cdd5d621314726c65e4240850c793b28bea7a4ac6d74",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/pluto_libiio.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/pluto_libiio.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/pluto_libiio.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/pluto_libiio.cpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/pluto_device_libiio.cpp",
+      "bytes": 38241,
+      "sha256": "76d95e4c5e302600f44a6fbd916cfeb3b1c92485160ad183299b184b528bb8d4",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/sdr_adapter/pluto_device_libiio.cpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/sdr_adapter/pluto_device_libiio.cpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/sdr_adapter/pluto_device_libiio.cpp",
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/sdr_adapter/pluto_device_libiio.cpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/config.hpp",
+      "bytes": 8180,
+      "sha256": "6a27f26c1c68a313945794c5cb10926e5bb5dbc95e6beecc4f8dfdb5f54e6621",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/config.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/config.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/config.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/config.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/receiver_scale.hpp",
+      "bytes": 4660,
+      "sha256": "76855de44b82d8f5eb59bb25ddc3263fd32e119bf009042c629c4a68c55baa44",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/receiver_scale.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/receiver_scale.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/receiver_scale.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/receiver_scale.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/iq_source.hpp",
+      "bytes": 2240,
+      "sha256": "41afcead0989013df6d92a11c8c30f96edafc3d1817af58ce6f23619408ead2d",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/iq_source.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/iq_source.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/iq_source.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/iq_source.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/nco.hpp",
+      "bytes": 2282,
+      "sha256": "4bf27416a17c25151c4ebde1ebe4fd34f3ea2ca59583919798624ad07b8c087a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/nco.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/nco.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/nco.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/nco.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/classify.hpp",
+      "bytes": 4931,
+      "sha256": "f4747960752224380ad7bc2c38548840fff09ab9b392e4efd76a3cff13ea260a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/classify.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/classify.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/classify.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/classify.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/sequence_monitor.hpp",
+      "bytes": 3327,
+      "sha256": "68c22ed11fdd400cce128372a7b7e35eae93d66cb3c647ada302610673198694",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/sequence_monitor.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/sequence_monitor.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/sequence_monitor.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/sequence_monitor.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/libiio_gate.cpp",
+      "bytes": 3083,
+      "sha256": "51cad8b3d42183b763ee6de9ac75cb14884c25e02fd942b8f66dbaf8d8e8b2b1",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/libiio_gate.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/libiio_gate.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/libiio_gate.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/libiio_gate.cpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/latency_stats.hpp",
+      "bytes": 6739,
+      "sha256": "904a66d915a93ef47e9dcbe8f4abad59e7c0a19a1c0e78d9f7ee4e3f648f0266",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/latency_stats.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/latency_stats.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/latency_stats.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/latency_stats.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/offline_chain.hpp",
+      "bytes": 4205,
+      "sha256": "a4e9d32fa9b61e9efbc6b2aa35f45210a374930fa24625320b9800cfe9ac69b7",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/offline_chain.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/offline_chain.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/offline_chain.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/offline_chain.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/unix_socket_sink.hpp",
+      "bytes": 5188,
+      "sha256": "fc5d91273ad846d0959c38507b6f41b8bc964e7af3dd63a3379986945475484e",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/unix_socket_sink.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/unix_socket_sink.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/unix_socket_sink.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/unix_socket_sink.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/sha256.hpp",
+      "bytes": 7376,
+      "sha256": "c7603b4c14a7c01b5f6880cb7096acb96c6ea7d5670d42d2155caaf47f961a66",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/sha256.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/sha256.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/sha256.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/sha256.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/signal_presence.hpp",
+      "bytes": 6504,
+      "sha256": "44ac2e49013e3def1198101a3cd72a60e7fbfa019d96a625a36b3b5b937924a3",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/signal_presence.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/signal_presence.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/signal_presence.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/signal_presence.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/rf_waveform_12class.hpp",
+      "bytes": 27668,
+      "sha256": "41e7be67a3becea2f2a82f8492c829fc3ae7a72facd6a18069bea02457f742e0",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/rf_waveform_12class.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/rf_waveform_12class.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/rf_waveform_12class.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/rf_waveform_12class.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/pluto_device.hpp",
+      "bytes": 47100,
+      "sha256": "9ae6ef891bde6562b4344dcea166329c122a5f13688934a112e16b71410282e0",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/sdr_adapter/pluto_device.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/sdr_adapter/pluto_device.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/sdr_adapter/pluto_device.hpp",
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/sdr_adapter/pluto_device.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/preprocess.hpp",
+      "bytes": 2723,
+      "sha256": "9272ae699a2e6087ee528a640b0133a1f65ab167a52d797b2670e9b2f4ab55c1",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/preprocess.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/preprocess.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/preprocess.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/preprocess.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/logging.hpp",
+      "bytes": 2151,
+      "sha256": "68feeadf0df2a0a569faab6c2631dc83ade8f0b7ffb97f02fb3ce2297d0b60dc",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/logging.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/logging.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/logging.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/logging.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/fir_coeffs.h",
+      "bytes": 38237,
+      "sha256": "c80b34c72cc6c7879208c7a0c62095de44755607a25356e8a477308a87785874",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/fir_coeffs.h",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/fir_coeffs.h",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/fir_coeffs.h",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/fir_coeffs.h"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/sample_rate_negotiate.hpp",
+      "bytes": 1877,
+      "sha256": "f64a1854bd573b16a9e23137922e7838ef62b5b92ca316e0c1debbaf0202b43c",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/sample_rate_negotiate.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/sample_rate_negotiate.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/sample_rate_negotiate.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/sample_rate_negotiate.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/iq_source.cpp",
+      "bytes": 4222,
+      "sha256": "03ef043c8785ab1090952d345548202a5c51a7f75c5e4862f7f3b450f269e9e0",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/iq_source.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/iq_source.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/iq_source.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/iq_source.cpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/pluto.hpp",
+      "bytes": 7651,
+      "sha256": "13e0c012fcf39b18e9a16647026d7732d9bfee0dbd7e95a3d5b5168c346fb1df",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/pluto.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/pluto.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/pluto.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/pluto.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/npu_lifecycle_state.hpp",
+      "bytes": 5998,
+      "sha256": "7232c930cc632bd51b588cd27fda0ff5df002c2fac6cfc0f18015b1c7f16aa93",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/npu_lifecycle_state.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/npu_lifecycle_state.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/npu_lifecycle_state.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/npu_lifecycle_state.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/tcp_control_client.hpp",
+      "bytes": 26000,
+      "sha256": "21487e1c213f2f30000829b91ed1f2421c05631816ce8cf9fcd46abde65cc473",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/sdr_adapter/tcp_control_client.hpp",
+        "嵌赛/fix10clean2b_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10clean2b/sdr_adapter/tcp_control_client.hpp",
+        "嵌赛/fix10prep3_work/sdr_rml23_live_board_package_pc_tx_board_rx_fix10prep3/sdr_adapter/tcp_control_client.hpp",
+        "嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/sdr_adapter/tcp_control_client.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/device_state_guard.hpp",
+      "bytes": 2349,
+      "sha256": "df381387e1eac6aaa14251ecbd1efe3fd44c1bb312afe88fd35b2e096b66745b",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/device_state_guard.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/device_state_guard.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/device_state_guard.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/device_state_guard.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/iio_attr_routing.hpp",
+      "bytes": 5060,
+      "sha256": "433c656bd7d864c387efc45bc55e47e588f860697762e1d052fc6bab655edbe7",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/iio_attr_routing.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/iio_attr_routing.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/iio_attr_routing.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/iio_attr_routing.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/iq_frame.hpp",
+      "bytes": 2693,
+      "sha256": "18d237d2e1e77126e8786c39edf908c33898d4caaf64a3d6827074c843e83919",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/iq_frame.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/iq_frame.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/iq_frame.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/iq_frame.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/iio_backend.hpp",
+      "bytes": 1780,
+      "sha256": "6c0e8724bde7ca16e80a2fd1d9971113cea7310c033d737e5668eb61c4fac09d",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/iio_backend.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/iio_backend.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/iio_backend.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/iio_backend.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/rx_format.hpp",
+      "bytes": 2972,
+      "sha256": "a2a9135beb2c93a4566b46b67a93443732bb3926b7c4c9cadb8d48a6b9d2afc9",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/rx_format.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/rx_format.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/rx_format.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/rx_format.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/dsp_measure.hpp",
+      "bytes": 13271,
+      "sha256": "49e4ec1c35ee8ee089e12fdb000a72cffae2ae08e7deb77057a281f2d239031a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10class24_waterfall1_work/sdr_rml24_fix10class24_waterfall1/sdr_adapter/dsp_measure.hpp",
+        "嵌赛/rml24_final_integration1_work/board_ui_overlay/sdr_adapter/dsp_measure.hpp",
+        "嵌赛/rml24_stage7_verify_e8af20c25e6847d9afb52755d6d240b7/rml24_final_stage7_board_overlay/board_ui_overlay/sdr_adapter/dsp_measure.hpp",
+        "嵌赛/rml24_stage7_verify_final_e72442fca735491ca326897d1c90a6c0/rml24_final_stage7_board_overlay/base_ui/sdr_adapter/dsp_measure.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/sample_rate_negotiate.cpp",
+      "bytes": 2612,
+      "sha256": "549ccc8f381bfa416d98a32d2bc2841181be759624fd458fb2b80b6a34472c07",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/sample_rate_negotiate.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/sample_rate_negotiate.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/sample_rate_negotiate.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/sample_rate_negotiate.cpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/resource_snapshot.hpp",
+      "bytes": 3081,
+      "sha256": "5b3fdfb8961fa146ea386bf23e9dd9e8f165ac0d8163e8119034684d350727bd",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/resource_snapshot.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/resource_snapshot.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/resource_snapshot.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/resource_snapshot.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/mock_iio.hpp",
+      "bytes": 5943,
+      "sha256": "94877719860fbd3406f027df8359a9565b667367f71d9993fa728de3ecf5d454",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/mock_iio.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/mock_iio.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/mock_iio.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/mock_iio.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/pluto_tx.cpp",
+      "bytes": 3700,
+      "sha256": "525b9e81d479624755476158a79f69cafd7009621718734c9f8f74619689f93a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/pluto_tx.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/pluto_tx.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/pluto_tx.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/pluto_tx.cpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/pluto_tx.hpp",
+      "bytes": 4705,
+      "sha256": "4c7229832d221d07b1f83121df5f7995d664d1cfa4b09cba01ef384ec7f135bb",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/pluto_tx.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/pluto_tx.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/pluto_tx.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/pluto_tx.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/result_frame.hpp",
+      "bytes": 4682,
+      "sha256": "ccbe62c74d5f38e86cc276e77d393fbbbb70769ec74740b8597a8a715861b28b",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_final_integration1_work/board_ui_overlay/sdr_adapter/result_frame.hpp",
+        "嵌赛/rml24_stage7_verify_e8af20c25e6847d9afb52755d6d240b7/rml24_final_stage7_board_overlay/board_ui_overlay/sdr_adapter/result_frame.hpp",
+        "嵌赛/rml24_stage7_verify_final_e72442fca735491ca326897d1c90a6c0/rml24_final_stage7_board_overlay/board_ui_overlay/sdr_adapter/result_frame.hpp",
+        "嵌赛/rml24_stage7_delivery_verify_5edd732c45bf43478fec2a3ef70c4b86/rml24_final_stage7_board_overlay/board_ui_overlay/sdr_adapter/result_frame.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/perf_stats.hpp",
+      "bytes": 3846,
+      "sha256": "0a591200aeaba320a0933c0b42843f6a7b244c535449ea5cd32fc505f1919445",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/perf_stats.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/perf_stats.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/perf_stats.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/perf_stats.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/pluto_dual_air_link.hpp",
+      "bytes": 11015,
+      "sha256": "316652a25a3f53cf7569af718e0986c685f93f03dbbbd11dff373bc080a0eada",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/sdr_adapter/pluto_dual_air_link.hpp",
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/sdr_adapter/pluto_dual_air_link.hpp",
+        "嵌赛/fix10clean2b_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10clean2b/sdr_adapter/pluto_dual_air_link.hpp",
+        "嵌赛/fix10prep3_work/sdr_rml23_live_board_package_pc_tx_board_rx_fix10prep3/sdr_adapter/pluto_dual_air_link.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/ui_report.hpp",
+      "bytes": 25918,
+      "sha256": "1dd2cfe87547db6647ca9d5ebb4b8691f318a4a58e782daf26ed528598fcdb72",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10class24_waterfall1_work/sdr_rml24_fix10class24_waterfall1/sdr_adapter/ui_report.hpp",
+        "嵌赛/rml24_stage7_verify_final_e72442fca735491ca326897d1c90a6c0/rml24_final_stage7_board_overlay/base_ui/sdr_adapter/ui_report.hpp",
+        "嵌赛/rml24_stage7_delivery_verify_5edd732c45bf43478fec2a3ef70c4b86/rml24_final_stage7_board_overlay/base_ui/sdr_adapter/ui_report.hpp",
+        "嵌赛/rml24_stage7_execution_20261027/rml24_final_stage7_board_overlay/base_ui/sdr_adapter/ui_report.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/categories.hpp",
+      "bytes": 5452,
+      "sha256": "2f1ef711a5cc363dfd9519e6b9fdd8ee5349f7d47a7006871980d7b5e9af715b",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/categories.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/categories.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/categories.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/categories.hpp"
+      ]
+    },
+    {
+      "path": "candidate/sdr_adapter/pipeline.hpp",
+      "bytes": 4258,
+      "sha256": "6f72d60c4d06f219b911011bdc365c1ad8d51299bd4991a81d0a15bda46043c6",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/sdr_adapter/pipeline.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/sdr_adapter/pipeline.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/sdr_adapter/pipeline.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/sdr_adapter/pipeline.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_dual_sdr_coarse_cfo_recovery.hpp",
+      "bytes": 15854,
+      "sha256": "447f56f7d2c966edff368ec62c73491827b5b1cf3dcea5a5501857d3468fb8e1",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10prep3_work/sdr_rml23_live_board_package_pc_tx_board_rx_fix10prep3/board_package/iq_dual_sdr_coarse_cfo_recovery.hpp",
+        "嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/board_package/iq_dual_sdr_coarse_cfo_recovery.hpp",
+        "嵌赛/fix10class24_dualsdr2_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24_dualsdr2/board_package/iq_dual_sdr_coarse_cfo_recovery.hpp",
+        "嵌赛/fix10class24_rxresidual_audit1_work/sdr_rml24_fix10class24_rxresidual_audit1/board_package/iq_dual_sdr_coarse_cfo_recovery.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_loopback_transfer.hpp",
+      "bytes": 17468,
+      "sha256": "dad2f42688ce67a011db96b86eef3f3136afa8031eb51c9c1a5f7bda19e29a54",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/iq_rf_loopback_transfer.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_loopback_transfer.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_rf_loopback_transfer.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_loopback_transfer.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/npu_classifier24.hpp",
+      "bytes": 12839,
+      "sha256": "d25671fec01a5745adee9b307289235ac8fe71bcf545781c290910be3758b2c8",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/npu_classifier24.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/npu_classifier24.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/npu_classifier24.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/npu_classifier24.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_clean_iq_24class_bf16_fix10.hpp",
+      "bytes": 30279,
+      "sha256": "00e49322107df95426d43cbc7bf76a702a66093b912e35f4425f3afdffc941f8",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/board_package/iq_clean_iq_24class_bf16_fix10.hpp",
+        "嵌赛/fix10class24_dualsdr2_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24_dualsdr2/board_package/iq_clean_iq_24class_bf16_fix10.hpp",
+        "嵌赛/fix10class24_rxresidual_audit1_work/sdr_rml24_fix10class24_rxresidual_audit1/board_package/iq_clean_iq_24class_bf16_fix10.hpp",
+        "嵌赛/fix10class24_nosignal_state1_work/sdr_rml24_fix10class24_nosignal_state1/board_package/iq_clean_iq_24class_bf16_fix10.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/gate9_phase.hpp",
+      "bytes": 1152,
+      "sha256": "c9cfb3c41cbfdf53c656137ef0a69ae04333fae8ff4f3bbc8842a1f3d264f5c7",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/board_package/gate9_phase.hpp",
+        "嵌赛/fix10class24_dualsdr2_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24_dualsdr2/board_package/gate9_phase.hpp",
+        "嵌赛/fix10class24_rxresidual_audit1_work/sdr_rml24_fix10class24_rxresidual_audit1/board_package/gate9_phase.hpp",
+        "嵌赛/fix10class24_nosignal_state1_work/sdr_rml24_fix10class24_nosignal_state1/board_package/gate9_phase.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/chain_common.hpp",
+      "bytes": 17642,
+      "sha256": "5904cd0540afe96dcef66c1a736a782030678420e1cf58b7c14b38bdfc72b325",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/board_package/chain_common.hpp",
+        "嵌赛/fix10class24_dualsdr2_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24_dualsdr2/board_package/chain_common.hpp",
+        "嵌赛/fix10class24_rxresidual_audit1_work/sdr_rml24_fix10class24_rxresidual_audit1/board_package/chain_common.hpp",
+        "嵌赛/fix10class24_nosignal_state1_work/sdr_rml24_fix10class24_nosignal_state1/board_package/chain_common.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_pc_tx_board_rx_transfer_fix10.hpp",
+      "bytes": 25580,
+      "sha256": "f1454bd274c751bce807b6bf55055560062280d3168938446b15543dd14278b7",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/board_package/iq_pc_tx_board_rx_transfer_fix10.hpp",
+        "嵌赛/fix10clean2b_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10clean2b/board_package/iq_pc_tx_board_rx_transfer_fix10.hpp",
+        "嵌赛/fix10prep3_work/sdr_rml23_live_board_package_pc_tx_board_rx_fix10prep3/board_package/iq_pc_tx_board_rx_transfer_fix10.hpp",
+        "嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/board_package/iq_pc_tx_board_rx_transfer_fix10.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_fix9r2d_diagnostic.hpp",
+      "bytes": 10488,
+      "sha256": "90ddcf1b596e32099eb7120e78f641fea45b501f8873100d6102b738d57d22d9",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_fix9r2d_diagnostic.hpp",
+        "嵌赛/fix9r2h3a_delivery/sdr_rml23_live_iq_rf_loopback_fix9r2h3a_patch/board_package/iq_rf_fix9r2d_diagnostic.hpp",
+        "嵌赛/fix9r2h3a_delivery/verify_extract_20261015/sdr_rml23_live_iq_rf_loopback_fix9r2h3a_patch/board_package/iq_rf_fix9r2d_diagnostic.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_fix9r2d_diagnostic.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/npu_classifier.hpp",
+      "bytes": 11875,
+      "sha256": "3350fda76d5fbed81b5be9172ca8f273d95b5b0f2a71eb004f88d75fcd1fff3d",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/npu_classifier.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/npu_classifier.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/npu_classifier.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/npu_classifier.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/capture_hook.hpp",
+      "bytes": 3056,
+      "sha256": "5c5b2c69a41f2f7c38efd78139ba94e01abf63477bd65e9d5a32f178b8257a85",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/capture_hook.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/capture_hook.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/capture_hook.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/capture_hook.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_fix10_canonical_frame_data.hpp",
+      "bytes": 41287,
+      "sha256": "5ed817eba9ff2219d7fed72a0d13bccc2b88732d22cf0743d70930e15b1d725e",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10prep3_work/sdr_rml23_live_board_package_pc_tx_board_rx_fix10prep3/board_package/iq_fix10_canonical_frame_data.hpp",
+        "嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/board_package/iq_fix10_canonical_frame_data.hpp",
+        "嵌赛/fix10class24_dualsdr2_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24_dualsdr2/board_package/iq_fix10_canonical_frame_data.hpp",
+        "嵌赛/fix10class24_rxresidual_audit1_work/sdr_rml24_fix10class24_rxresidual_audit1/board_package/iq_fix10_canonical_frame_data.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_loopback_23class.hpp",
+      "bytes": 49863,
+      "sha256": "d368ee9567698f5fb041cec940415be6a76862847c3433d08d7611e2c1481d3d",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/iq_rf_loopback_23class.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_loopback_23class.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_rf_loopback_23class.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_loopback_23class.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_clean_baseline.hpp",
+      "bytes": 4035,
+      "sha256": "75aced9cde4cd2a8c941dd183271ab732e315a70fd1fefa2402cf82ec991524c",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_clean_baseline.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_clean_baseline.hpp",
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/board_package/iq_clean_baseline.hpp",
+        "嵌赛/fix10clean2b_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10clean2b/board_package/iq_clean_baseline.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/board_gate9_full_chain_rml23.cpp",
+      "bytes": 190967,
+      "sha256": "401dc85e1379b1c8fc9aa2516b916b32eea0510eb0836b8d1682c3a37f418a1a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/board_package/board_gate9_full_chain_rml23.cpp",
+        "嵌赛/fix10class24_dualsdr2_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24_dualsdr2/board_package/board_gate9_full_chain_rml23.cpp",
+        "嵌赛/fix10class24_rxresidual_audit1_work/sdr_rml24_fix10class24_rxresidual_audit1/board_package/board_gate9_full_chain_rml23.cpp",
+        "嵌赛/fix10class24_nosignal_state1_work/sdr_rml24_fix10class24_nosignal_state1/board_package/board_gate9_full_chain_rml23.cpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/synthetic_iq_roundtrip.hpp",
+      "bytes": 22118,
+      "sha256": "56271339c4b2bc8ec67770a0ce2aff01df6c5e08e05452093e00098b0253a091",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/synthetic_iq_roundtrip.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/synthetic_iq_roundtrip.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/synthetic_iq_roundtrip.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/synthetic_iq_roundtrip.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/result_frame_rml23_parse.hpp",
+      "bytes": 1906,
+      "sha256": "ecd8904fcc7174018f48bb9a9910e3d7e57cd0d10ad0e65f53ee832366ac1e82",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/result_frame_rml23_parse.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/result_frame_rml23_parse.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/result_frame_rml23_parse.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/result_frame_rml23_parse.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/board_gate6_sdr_preprocess.cpp",
+      "bytes": 10641,
+      "sha256": "a03824200ff18904e023696688fc717024625cfc2700e167ae9d7826b6ed0a87",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/board_gate6_sdr_preprocess.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/board_gate6_sdr_preprocess.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/board_gate6_sdr_preprocess.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/board_gate6_sdr_preprocess.cpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_loopback.hpp",
+      "bytes": 11087,
+      "sha256": "7bc899f9da25ab9a5b1b1464239798bfe68119b1b42be9bc354f8dcb17d67a68",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/iq_rf_loopback.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_loopback.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_rf_loopback.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_loopback.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_digital_loopback_sync.hpp",
+      "bytes": 28124,
+      "sha256": "0fc2b342978bc475e0bf7123b246be976dc2010306e3b4bec2769c10d9be1014",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/iq_digital_loopback_sync.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_digital_loopback_sync.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_digital_loopback_sync.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_digital_loopback_sync.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_dual_sdr_23class_fix10.hpp",
+      "bytes": 53110,
+      "sha256": "c29d31737d14a5e1d024f83aa3909c192af7eb49dbe4d6372b32a4090f80a38c",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/board_package/iq_dual_sdr_23class_fix10.hpp",
+        "嵌赛/fix10clean2b_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10clean2b/board_package/iq_dual_sdr_23class_fix10.hpp",
+        "嵌赛/fix10prep3_work/sdr_rml23_live_board_package_pc_tx_board_rx_fix10prep3/board_package/iq_dual_sdr_23class_fix10.hpp",
+        "嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/board_package/iq_dual_sdr_23class_fix10.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_digital_loopback_transfer.hpp",
+      "bytes": 12554,
+      "sha256": "caf60406cbb2fd8e2ece8f56437327432a700b511eed8ab2ba195bdc7076b8d0",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/iq_digital_loopback_transfer.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_digital_loopback_transfer.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_digital_loopback_transfer.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_digital_loopback_transfer.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/board_gate8_ui.cpp",
+      "bytes": 6892,
+      "sha256": "22c8e7b734de95ed0089823efa67540866e17edb3adc38a39810db273a3dfc61",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/board_gate8_ui.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/board_gate8_ui.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/board_gate8_ui.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/board_gate8_ui.cpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_clean_iq_23class_fix10.hpp",
+      "bytes": 27036,
+      "sha256": "92077d7e7d64a1f3e089200c87b4ca3fb916f13c1fed291a20c53600bea6cfbf",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_clean_iq_23class_fix10.hpp",
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/board_package/iq_clean_iq_23class_fix10.hpp",
+        "嵌赛/fix10clean2b_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10clean2b/board_package/iq_clean_iq_23class_fix10.hpp",
+        "嵌赛/fix10prep3_work/sdr_rml23_live_board_package_pc_tx_board_rx_fix10prep3/board_package/iq_clean_iq_23class_fix10.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/control_client.hpp",
+      "bytes": 6360,
+      "sha256": "f841deefc6f9b54ba03af1018c8f071c824c701439acddcf5333dc69983c9328",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/control_client.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/control_client.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/control_client.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/control_client.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/build_ui_live_rml24_final.sh",
+      "bytes": 1925,
+      "sha256": "26a6d1c248efb3a4cf62008df8def1d15cae95cdf5caccab7a60ae80a3eb6dc0",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_final_integration1_work/board_ui_overlay/board_package/build_ui_live_rml24_final.sh",
+        "嵌赛/rml24_stage7_verify_e8af20c25e6847d9afb52755d6d240b7/rml24_final_stage7_board_overlay/board_ui_overlay/board_package/build_ui_live_rml24_final.sh",
+        "嵌赛/rml24_stage7_verify_final_e72442fca735491ca326897d1c90a6c0/rml24_final_stage7_board_overlay/board_ui_overlay/board_package/build_ui_live_rml24_final.sh",
+        "嵌赛/rml24_stage7_delivery_verify_5edd732c45bf43478fec2a3ef70c4b86/rml24_final_stage7_board_overlay/board_ui_overlay/board_package/build_ui_live_rml24_final.sh"
+      ]
+    },
+    {
+      "path": "candidate/board_package/mode_control.hpp",
+      "bytes": 6402,
+      "sha256": "0847259fc6410db0727fe115ed61a84abbe4887308a2fa5c31bc7177cd57bc2d",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/candidate/board_package/mode_control.hpp",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/candidate/board_package/mode_control.hpp",
+        "嵌赛/rml24_history_uptime_fix1_20261029/candidate/board_package/mode_control.hpp",
+        "FPGA_Work/rml24_fpga_ui_integration_20261031/candidate/board_package/mode_control.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/touch_mode_control.hpp",
+      "bytes": 28920,
+      "sha256": "bb26f9810879179092d5a6894f43b178dc5d61cde827361296d875697e9965ca",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/candidate/board_package/touch_mode_control.hpp",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/candidate/board_package/touch_mode_control.hpp",
+        "嵌赛/rml24_history_uptime_fix1_20261029/candidate/board_package/touch_mode_control.hpp",
+        "FPGA_Work/rml24_fpga_ui_integration_20261031/candidate/board_package/touch_mode_control.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/unix_socket_server.hpp",
+      "bytes": 9163,
+      "sha256": "2a2d0f9966c1926c3c8686b692177cf0b2ddf9f7662fe7108ff14f44c5aa26fd",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_stage7_execution_20261027/waterfall_fix1/board_package/unix_socket_server.hpp",
+        "嵌赛/rml24_ui_fivepage_prep_20261027/ui_fivepage_candidate/final_waterfall_fix1/board_package/unix_socket_server.hpp",
+        "嵌赛/rml24_ui_fivepage_prep_20261027/ui_fivepage_candidate/board_package/unix_socket_server.hpp",
+        "嵌赛/rml24_sweep_history_20261029/candidate/board_package/unix_socket_server.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/ui_dirty_state.hpp",
+      "bytes": 6567,
+      "sha256": "abafec6937e6324d9a1c441a33c96ae1069742d62ba0b806790826d0036a3604",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10class24_waterfall1_work/sdr_rml24_fix10class24_waterfall1/board_package/ui_dirty_state.hpp",
+        "嵌赛/rml24_stage7_verify_final_e72442fca735491ca326897d1c90a6c0/rml24_final_stage7_board_overlay/base_ui/board_package/ui_dirty_state.hpp",
+        "嵌赛/rml24_stage7_delivery_verify_5edd732c45bf43478fec2a3ef70c4b86/rml24_final_stage7_board_overlay/base_ui/board_package/ui_dirty_state.hpp",
+        "嵌赛/rml24_stage7_execution_20261027/rml24_final_stage7_board_overlay/base_ui/board_package/ui_dirty_state.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/board_ui_live_rml23.cpp",
+      "bytes": 53255,
+      "sha256": "b192254c219ae1270a008590e63c9192102d725d637ac8063dca10f74fbb575a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/board_ui_live_rml23.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/board_ui_live_rml23.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/board_ui_live_rml23.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/board_ui_live_rml23.cpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/rf_fix_helpers.hpp",
+      "bytes": 2938,
+      "sha256": "4990f13d930239538a583d9f8a0240e5a6afdd9040fd1bbe1fefa1fac042d3f5",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/rf_fix_helpers.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/rf_fix_helpers.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/rf_fix_helpers.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/rf_fix_helpers.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/synthetic_iq_runner.hpp",
+      "bytes": 14589,
+      "sha256": "788e8b8b5f04411e54a5b559f458bdf54ce4edfbdff40e32438bb5dee0f33c96",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/synthetic_iq_runner.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/synthetic_iq_runner.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/synthetic_iq_runner.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/synthetic_iq_runner.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/board_ui_live_12class.cpp",
+      "bytes": 43232,
+      "sha256": "ac585999185b4e0f045afe6bac8addfbf06cdebfb75e35ae2ab8dcf503cf7ad8",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/board_ui_live_12class.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/board_ui_live_12class.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/board_ui_live_12class.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/board_ui_live_12class.cpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/producer_12class.hpp",
+      "bytes": 16016,
+      "sha256": "18b04071fe352d7516ee39e022fe7cb7e9a13fb3be040e751986aa709e4a417a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/producer_12class.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/producer_12class.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/producer_12class.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/producer_12class.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/pl_ddr_register_map.hpp",
+      "bytes": 1158,
+      "sha256": "db9f57c8bf5c4555618779a6f1b4dbf83af8c0edb6c9f02296af40b7b88a61d4",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/pl_ddr_register_map.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/pl_ddr_register_map.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/pl_ddr_register_map.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/pl_ddr_register_map.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/touch_geometry.hpp",
+      "bytes": 6165,
+      "sha256": "a4e95c18a99df17d2ec1a6a351eccf292b5c9ee69ed244f52889d343d4c141b4",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_ui_fivepage_prep_20261027/ui_fivepage_candidate/board_package/touch_geometry.hpp",
+        "嵌赛/rml24_sweep_history_20261029/candidate/board_package/touch_geometry.hpp",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/candidate/board_package/touch_geometry.hpp",
+        "嵌赛/rml24_history_uptime_fix1_20261029/candidate/board_package/touch_geometry.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/rml24_bf16_baseline.hpp",
+      "bytes": 4531,
+      "sha256": "77f268a1c106eb86fe2969f6a50b6d422b5e0004f7215d48c3f6d702b85bef59",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/board_package/rml24_bf16_baseline.hpp",
+        "嵌赛/fix10class24_dualsdr2_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24_dualsdr2/board_package/rml24_bf16_baseline.hpp",
+        "嵌赛/fix10class24_rxresidual_audit1_work/sdr_rml24_fix10class24_rxresidual_audit1/board_package/rml24_bf16_baseline.hpp",
+        "嵌赛/fix10class24_nosignal_state1_work/sdr_rml24_fix10class24_nosignal_state1/board_package/rml24_bf16_baseline.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_digital_loopback.hpp",
+      "bytes": 50821,
+      "sha256": "b4f2a96c4ff2a4d57c9a1342f8a8b331ee709a150e2a38973fdc7003c5aa900c",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_digital_loopback.hpp",
+        "嵌赛/fix9r2h5_delivery/sdr_rml23_live_iq_rf_loopback_fix9r2h5_patch/board_package/iq_digital_loopback.hpp",
+        "嵌赛/fix9r2h5_delivery/verify_extract/sdr_rml23_live_iq_rf_loopback_fix9r2h5_patch/board_package/iq_digital_loopback.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_digital_loopback.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_dual_sdr_transfer_fix10.hpp",
+      "bytes": 20511,
+      "sha256": "0fa18e4f20b5fc8be9d73a6d070b3347ccb5228326c01d3b6964698ca77ae50b",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_dual_sdr_transfer_fix10.hpp",
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/board_package/iq_dual_sdr_transfer_fix10.hpp",
+        "嵌赛/fix10clean2b_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10clean2b/board_package/iq_dual_sdr_transfer_fix10.hpp",
+        "嵌赛/fix10prep3_work/sdr_rml23_live_board_package_pc_tx_board_rx_fix10prep3/board_package/iq_dual_sdr_transfer_fix10.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/board_gate7_12class_npu.cpp",
+      "bytes": 13649,
+      "sha256": "bc78c14da257de15640d55c74127f05679635a918fa65818a5d3bbcc73774fb5",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/board_gate7_12class_npu.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/board_gate7_12class_npu.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/board_gate7_12class_npu.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/board_gate7_12class_npu.cpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_loopback_23class_fix9r.hpp",
+      "bytes": 86830,
+      "sha256": "a2c907d3f83d6a07ba3aef0bb67df4fad513069b5ccaed4c2069f5a412e896ea",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_loopback_23class_fix9r.hpp",
+        "嵌赛/fix9r2h5_delivery/sdr_rml23_live_iq_rf_loopback_fix9r2h5_patch/board_package/iq_rf_loopback_23class_fix9r.hpp",
+        "嵌赛/fix9r2h5_delivery/verify_extract/sdr_rml23_live_iq_rf_loopback_fix9r2h5_patch/board_package/iq_rf_loopback_23class_fix9r.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_loopback_23class_fix9r.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/board_ui_live_rml24_final.cpp",
+      "bytes": 60801,
+      "sha256": "dbf98dcf3cd10a3020140edc7709b5f985930ab8558902e530430f12487c7b3a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_history_uptime_fix1_20261029/candidate/board_package/board_ui_live_rml24_final.cpp",
+        "FPGA_Work/rml24_ui_history_uptime_integration_20261031/candidate/board_package/board_ui_live_rml24_final.cpp",
+        "FPGA_Work/rml24_history_sweep_fix2_20261031/candidate/board_package/board_ui_live_rml24_final.cpp",
+        "FPGA_Work/rml24_visual_review_fix_20261031/candidate/board_package/board_ui_live_rml24_final.cpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/gate10_settle.hpp",
+      "bytes": 8182,
+      "sha256": "474e1aa81101d0a4cca32485bd0632722bdc98419f76071cd3195bec3908c46e",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/gate10_settle.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/gate10_settle.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/gate10_settle.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/gate10_settle.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_tx_provenance.hpp",
+      "bytes": 8055,
+      "sha256": "8dca05156d431099f9186ee6b8d8958954307e3443f4ce10d3cd70343d1bd8fd",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_tx_provenance.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_rf_tx_provenance.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_tx_provenance.hpp",
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/board_package/iq_rf_tx_provenance.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/CMakeLists.txt",
+      "bytes": 8233,
+      "sha256": "db9fbca188593871d81a95e2ac213f56d23d644825f3ccab5b92323ad022d412",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/CMakeLists.txt",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/CMakeLists.txt",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/CMakeLists.txt",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/CMakeLists.txt"
+      ]
+    },
+    {
+      "path": "candidate/board_package/frequency_control.hpp",
+      "bytes": 9036,
+      "sha256": "43030d477d0b0bc8caeaac63c7835050e341780c68df85dd8b969eee70ab069d",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/candidate/board_package/frequency_control.hpp",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/candidate/board_package/frequency_control.hpp",
+        "嵌赛/rml24_history_uptime_fix1_20261029/candidate/board_package/frequency_control.hpp",
+        "FPGA_Work/rml24_fpga_ui_integration_20261031/candidate/board_package/frequency_control.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_fix9r_baseline.hpp",
+      "bytes": 3563,
+      "sha256": "8051f78d3622d97ff0c8d89cc1fa9ee2ae5ec34afbd133ab81a576460faaafe7",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_fix9r_baseline.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_rf_fix9r_baseline.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_fix9r_baseline.hpp",
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/board_package/iq_rf_fix9r_baseline.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_fix10_canonical_frame.hpp",
+      "bytes": 7468,
+      "sha256": "06547a2468dae155a6ac0946d628220ee09d3d06269b1adaf1d1181f4f15dccb",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10prep3_work/sdr_rml23_live_board_package_pc_tx_board_rx_fix10prep3/board_package/iq_fix10_canonical_frame.hpp",
+        "嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/board_package/iq_fix10_canonical_frame.hpp",
+        "嵌赛/fix10class24_dualsdr2_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24_dualsdr2/board_package/iq_fix10_canonical_frame.hpp",
+        "嵌赛/fix10class24_rxresidual_audit1_work/sdr_rml24_fix10class24_rxresidual_audit1/board_package/iq_fix10_canonical_frame.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/board_gate10_selftest_12class.cpp",
+      "bytes": 32459,
+      "sha256": "53edbfd06a888ffcac777d40c86a2d5291ec31d0c0afd4120138b1f383b69710",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/board_gate10_selftest_12class.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/board_gate10_selftest_12class.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/board_gate10_selftest_12class.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/board_gate10_selftest_12class.cpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/board_mode_ctl.cpp",
+      "bytes": 4075,
+      "sha256": "60683cd96132980e574de25474db88ee814d9a8241d3d111b2ddba7ab47f5619",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/board_mode_ctl.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/board_mode_ctl.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/board_mode_ctl.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/board_mode_ctl.cpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_digital_loopback_runner.hpp",
+      "bytes": 41838,
+      "sha256": "6e512eb09fbf0f2d70b9d91db928ed86926e5b74758ec26422bc6fe83306ee95",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/iq_digital_loopback_runner.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_digital_loopback_runner.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_digital_loopback_runner.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_digital_loopback_runner.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_loopback_report.hpp",
+      "bytes": 3092,
+      "sha256": "afa092b0ac4ba3a3a2e5ff6f4fec986aca2cdc6b9eaf6f4756026eaa08646baa",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/iq_rf_loopback_report.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_loopback_report.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_rf_loopback_report.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_loopback_report.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/work_mode_engine.hpp",
+      "bytes": 8348,
+      "sha256": "29997d03877435afe9f4b17db73e18a560490fd54b872d26a2e450e86d7dc18d",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/work_mode_engine.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/work_mode_engine.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/work_mode_engine.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/work_mode_engine.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_loopback_runner.hpp",
+      "bytes": 40898,
+      "sha256": "66a30ca4c330afdc3fdf4bca1b2ff173005e61deb41e87242d7937e9ec9814ee",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/iq_rf_loopback_runner.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_loopback_runner.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_rf_loopback_runner.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_loopback_runner.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/board_gate9_full_chain_12class.cpp",
+      "bytes": 68716,
+      "sha256": "07eaceb76beef112e2ec45b76e5520226368a36e2140606bf4b06746b3dcbcbe",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/board_gate9_full_chain_12class.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/board_gate9_full_chain_12class.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/board_gate9_full_chain_12class.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/board_gate9_full_chain_12class.cpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_per_frame_recovery.hpp",
+      "bytes": 934,
+      "sha256": "31e15bbafc047e31d4bdd9a6115edcabb9c7582e8111905d756643f258a4f60a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_per_frame_recovery.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_rf_per_frame_recovery.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_per_frame_recovery.hpp",
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/board_package/iq_rf_per_frame_recovery.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_fix10class24_failed_rx_dump.hpp",
+      "bytes": 15539,
+      "sha256": "bb78d66d26c9df556dbf4a9b818aaeefc78926c45e214aba753fe438f1581a01",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10class24_dualsdr2_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24_dualsdr2/board_package/iq_fix10class24_failed_rx_dump.hpp",
+        "嵌赛/fix10class24_rxresidual_audit1_work/sdr_rml24_fix10class24_rxresidual_audit1/board_package/iq_fix10class24_failed_rx_dump.hpp",
+        "嵌赛/fix10class24_nosignal_state1_work/sdr_rml24_fix10class24_nosignal_state1/board_package/iq_fix10class24_failed_rx_dump.hpp",
+        "嵌赛/fix10class24_waterfall1_work/sdr_rml24_fix10class24_waterfall1/board_package/iq_fix10class24_failed_rx_dump.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_frame_layout.hpp",
+      "bytes": 4343,
+      "sha256": "6a7b413944acbb2b3898fe3c0eef0080c3b0ff1f3e12d0819ce278defc49d2ae",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_frame_layout.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_rf_frame_layout.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_frame_layout.hpp",
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/board_package/iq_rf_frame_layout.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_loopback_ab.hpp",
+      "bytes": 4345,
+      "sha256": "48df6887aab236ecc68165f1c5e3fb941a49a5394432508d854a2aff11015afd",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/iq_rf_loopback_ab.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_loopback_ab.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_rf_loopback_ab.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_loopback_ab.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/rml24_raw.hpp",
+      "bytes": 2665,
+      "sha256": "9aaf2cad3f5f9e4f9b2dd2bda53210be16ed2030e986789a41a4beffdfc8a195",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/board_package/rml24_raw.hpp",
+        "嵌赛/fix10class24_dualsdr2_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24_dualsdr2/board_package/rml24_raw.hpp",
+        "嵌赛/fix10class24_rxresidual_audit1_work/sdr_rml24_fix10class24_rxresidual_audit1/board_package/rml24_raw.hpp",
+        "嵌赛/fix10class24_nosignal_state1_work/sdr_rml24_fix10class24_nosignal_state1/board_package/rml24_raw.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/live_rx_gating.hpp",
+      "bytes": 3423,
+      "sha256": "2ab1263e9e12a3e395a5f2f2e2a20b99dbe2a7eadfd6515ca7a01cc6e60452bb",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/live_rx_gating.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/live_rx_gating.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/live_rx_gating.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/live_rx_gating.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/result_frame_rml24_final_parse.hpp",
+      "bytes": 2083,
+      "sha256": "18e808d5afdc714184539e00625952e9d3bf668c585914f7d20457a9393ff961",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_final_integration1_work/board_ui_overlay/board_package/result_frame_rml24_final_parse.hpp",
+        "嵌赛/rml24_stage7_verify_e8af20c25e6847d9afb52755d6d240b7/rml24_final_stage7_board_overlay/board_ui_overlay/board_package/result_frame_rml24_final_parse.hpp",
+        "嵌赛/rml24_stage7_verify_final_e72442fca735491ca326897d1c90a6c0/rml24_final_stage7_board_overlay/board_ui_overlay/board_package/result_frame_rml24_final_parse.hpp",
+        "嵌赛/rml24_stage7_delivery_verify_5edd732c45bf43478fec2a3ef70c4b86/rml24_final_stage7_board_overlay/board_ui_overlay/board_package/result_frame_rml24_final_parse.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/synthetic_iq_generator.hpp",
+      "bytes": 11086,
+      "sha256": "8675f2d5f4b62f635d7a9f64f51f8a12c0127dcc34965f0c67a90ea09731437e",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/synthetic_iq_generator.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/synthetic_iq_generator.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/synthetic_iq_generator.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/synthetic_iq_generator.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/control_channel.hpp",
+      "bytes": 10192,
+      "sha256": "2c26957ca822eb9189e00c1ecc6325df5475ea03788e8ea892a60610ca39ddab",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/control_channel.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/control_channel.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/control_channel.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/control_channel.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/ui_state_map.hpp",
+      "bytes": 8262,
+      "sha256": "2bd7eeba0d197ef4a138c283ee367583a3f4135f4575ecd7e35add4146f21cf0",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_scan_gap_ui_control_fix1_20261028/board_package/ui_state_map.hpp",
+        "嵌赛/rml24_scan_gap_ui_control_fix1_20261028/overlay/board_package/ui_state_map.hpp",
+        "嵌赛/rml24_scan_gap_ui_control_fix1_20261028/delivery_ui2_final/overlay/board_package/ui_state_map.hpp",
+        "嵌赛/rml24_scan_gap_ui_control_fix1_20261028/delivery_ui2_BROKEN_MANIFEST/overlay/board_package/ui_state_map.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/rml23_merged.hpp",
+      "bytes": 4477,
+      "sha256": "0f11385e7c50430bbc5a653972471c55108378a40b2004b783e6ddad16f85a7a",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/rml23_merged.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/rml23_merged.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/rml23_merged.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/rml23_merged.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_fix9r2a_diagnostic.hpp",
+      "bytes": 7810,
+      "sha256": "b9d906da617f225e9b6623dbf0201c06f3b578e72970f84b93a7f2da4e406df3",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_fix9r2a_diagnostic.hpp",
+        "嵌赛/fix9r2h1_delivery/sdr_rml23_live_iq_rf_loopback_fix9r2h1_patch/board_package/iq_rf_fix9r2a_diagnostic.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_rf_fix9r2a_diagnostic.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_fix9r2a_diagnostic.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_fix9r2b_diagnostic.hpp",
+      "bytes": 14210,
+      "sha256": "04a73b48c533525e57d69121028563cbca08720bb93b8fd5577e5e900b133568",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_fix9r2b_diagnostic.hpp",
+        "嵌赛/fix9r2h4_delivery/sdr_rml23_live_iq_rf_loopback_fix9r2h4_patch/board_package/iq_rf_fix9r2b_diagnostic.hpp",
+        "嵌赛/fix9r2h4_delivery/verify_extract_20261015/sdr_rml23_live_iq_rf_loopback_fix9r2h4_patch/board_package/iq_rf_fix9r2b_diagnostic.hpp",
+        "嵌赛/fix9r2h4_delivery/verify_final_20261015/sdr_rml23_live_iq_rf_loopback_fix9r2h4_patch/board_package/iq_rf_fix9r2b_diagnostic.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/board_common.hpp",
+      "bytes": 23825,
+      "sha256": "789324c91174f8a52010ceb5b1c40205616ad7e65726d772202120b2298bb9c2",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/board_common.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/board_common.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/board_common.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/board_common.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/board_calibrate_rec_scale.cpp",
+      "bytes": 9884,
+      "sha256": "f4833358f0f4625111dd188dd956884ab5aa858413a071359efae10d569d86af",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/board_calibrate_rec_scale.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/board_calibrate_rec_scale.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/board_calibrate_rec_scale.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/board_calibrate_rec_scale.cpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_loopback_transfer_fix9r.hpp",
+      "bytes": 17178,
+      "sha256": "a0c4c564be5c0d638fb58ac2eafcd2058467bf880087c992d0c7a428269d8d5f",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_loopback_transfer_fix9r.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_rf_loopback_transfer_fix9r.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_loopback_transfer_fix9r.hpp",
+        "嵌赛/fix10prep2_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2/board_package/iq_rf_loopback_transfer_fix9r.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/npu_rearm_state.hpp",
+      "bytes": 2955,
+      "sha256": "a8fda20d1f4c45a731d88b1a68c810b3f72b435d33c5173f2d2cdb8d605b5537",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/npu_rearm_state.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/npu_rearm_state.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/npu_rearm_state.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/npu_rearm_state.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/board_display_diagnostic.cpp",
+      "bytes": 9374,
+      "sha256": "31cca831d7805e6ff66ec872fe161aa96adceafd9aa2b8533a57171cdee2e4a3",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/board_display_diagnostic.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/board_display_diagnostic.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/board_display_diagnostic.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/board_display_diagnostic.cpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/delay_gate.hpp",
+      "bytes": 5568,
+      "sha256": "fc26632d0170df14502a2d3193986ed4e5601572ee76b188806a401c7edbcbf8",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/delay_gate.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/delay_gate.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/delay_gate.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/delay_gate.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/band_scan.hpp",
+      "bytes": 7143,
+      "sha256": "47bfa6b83bd2b71b43e178d6c834dc6966559302724a110effebac26d8a9702c",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/band_scan.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/band_scan.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/band_scan.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/band_scan.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_sync_recovery.hpp",
+      "bytes": 31260,
+      "sha256": "a8b3b6039d87ee5c1b08a79f8e5d8ae8cbf16aafa1844929efd7f84266d07a98",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_sync_recovery.hpp",
+        "嵌赛/fix9r2h4_delivery/sdr_rml23_live_iq_rf_loopback_fix9r2h4_patch/board_package/iq_rf_sync_recovery.hpp",
+        "嵌赛/fix9r2h4_delivery/verify_final_20261015/sdr_rml23_live_iq_rf_loopback_fix9r2h4_patch/board_package/iq_rf_sync_recovery.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_sync_recovery.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_training_frame.hpp",
+      "bytes": 12893,
+      "sha256": "d702cb58329b52eac09a687da7d18d3ccecd790a6ecdce882fbeb70fe0a36d6d",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_training_frame.hpp",
+        "嵌赛/fix9r2h3_delivery/sdr_rml23_live_iq_rf_loopback_fix9r2h3_patch/board_package/iq_rf_training_frame.hpp",
+        "嵌赛/fix9r2h3_verify_1792043115002/sdr_rml23_live_iq_rf_loopback_fix9r2h3_patch/board_package/iq_rf_training_frame.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_training_frame.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/result_frame_v2_parse.hpp",
+      "bytes": 52313,
+      "sha256": "6221b38d058d4211ecb324d6450c8f491790cbcafe8ceff98891a67d453a311b",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/candidate/board_package/result_frame_v2_parse.hpp",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/candidate/board_package/result_frame_v2_parse.hpp",
+        "嵌赛/rml24_history_uptime_fix1_20261029/candidate/board_package/result_frame_v2_parse.hpp",
+        "FPGA_Work/rml24_fpga_ui_integration_20261031/candidate/board_package/result_frame_v2_parse.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_pc_tx_board_rx_23class_fix10.hpp",
+      "bytes": 68665,
+      "sha256": "2504faa406f7d04db408c08b68649352c632d02f5eb758cc492b263e2506bfe7",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10prep3_work/sdr_rml23_live_board_package_pc_tx_board_rx_fix10prep3/board_package/iq_pc_tx_board_rx_23class_fix10.hpp",
+        "嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/board_package/iq_pc_tx_board_rx_23class_fix10.hpp",
+        "嵌赛/fix10class24_dualsdr2_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24_dualsdr2/board_package/iq_pc_tx_board_rx_23class_fix10.hpp",
+        "嵌赛/fix10class24_rxresidual_audit1_work/sdr_rml24_fix10class24_rxresidual_audit1/board_package/iq_pc_tx_board_rx_23class_fix10.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_pc_tx_board_rx_24class_bf16_fix10.hpp",
+      "bytes": 72554,
+      "sha256": "81478dc6bb71b81fb838c4d21e19146929218141fcb326be317c61a76b02afb7",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10class24_dualsdr2_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24_dualsdr2/board_package/iq_pc_tx_board_rx_24class_bf16_fix10.hpp",
+        "嵌赛/fix10class24_rxresidual_audit1_work/sdr_rml24_fix10class24_rxresidual_audit1/board_package/iq_pc_tx_board_rx_24class_bf16_fix10.hpp",
+        "嵌赛/fix10class24_nosignal_state1_work/sdr_rml24_fix10class24_nosignal_state1/board_package/iq_pc_tx_board_rx_24class_bf16_fix10.hpp",
+        "嵌赛/fix10class24_waterfall1_work/sdr_rml24_fix10class24_waterfall1/board_package/iq_pc_tx_board_rx_24class_bf16_fix10.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/touch_evdev.hpp",
+      "bytes": 9487,
+      "sha256": "5507d3d9ae0cbd24d495dd42492b35b43f5a7fdf5273dea47cd95b8196ecebcf",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/touch_evdev.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/touch_evdev.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/touch_evdev.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/touch_evdev.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/logits_export.hpp",
+      "bytes": 3526,
+      "sha256": "9cd8603b510e828a4584b449ef977ff8c81712075b24ccd2193b8ce2a2fed3ae",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/board_package/logits_export.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/board_package/logits_export.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/board_package/logits_export.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/logits_export.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_rf_loopback_level_sweep.hpp",
+      "bytes": 16581,
+      "sha256": "7d9a4e94503d0f9909c74ac692fbd4a22cdcb8880bc6bfe2491c6079742bb642",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/iq_rf_loopback_level_sweep.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_rf_loopback_level_sweep.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_rf_loopback_level_sweep.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_rf_loopback_level_sweep.hpp"
+      ]
+    },
+    {
+      "path": "candidate/board_package/iq_digital_loopback_sweep.hpp",
+      "bytes": 42552,
+      "sha256": "d0ea04b79a5e4f68365617b519735f0b12653df02e0093a7077634a688ed2d73",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/board_package/iq_digital_loopback_sweep.hpp",
+        "嵌赛/fix9r2g1_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2g1/board_package/iq_digital_loopback_sweep.hpp",
+        "嵌赛/fix10prep_work/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2h2/board_package/iq_digital_loopback_sweep.hpp",
+        "嵌赛/fix10prep1_clean_work/sdr_rml23_live_board_package_iq_rf_loopback_fix10prep1_clean/board_package/iq_digital_loopback_sweep.hpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/waterfall_render.cpp",
+      "bytes": 13401,
+      "sha256": "0c089533176778ae55e7088453ba4c9d00a572768d0503e9413bef8029694870",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_visual_review_fix_20261031/candidate/ui_sw/waterfall_render.cpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/waterfall_history.hpp",
+      "bytes": 4679,
+      "sha256": "3d50c01c1a977f2b2d28c1e19d310f29d59095f1e01b872e3dcea345d73f6e71",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10class24_waterfall1_work/sdr_rml24_fix10class24_waterfall1/ui_sw/waterfall_history.hpp",
+        "嵌赛/rml24_stage7_verify_final_e72442fca735491ca326897d1c90a6c0/rml24_final_stage7_board_overlay/base_ui/ui_sw/waterfall_history.hpp",
+        "嵌赛/rml24_stage7_delivery_verify_5edd732c45bf43478fec2a3ef70c4b86/rml24_final_stage7_board_overlay/base_ui/ui_sw/waterfall_history.hpp",
+        "嵌赛/rml24_stage7_execution_20261027/rml24_final_stage7_board_overlay/base_ui/ui_sw/waterfall_history.hpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/display_diagnostic.hpp",
+      "bytes": 2650,
+      "sha256": "1876e9cf6f66de30ccc186b6b37f9dd86b699b844a7028e424e79d9be5621d92",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/ui_sw/display_diagnostic.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/ui_sw/display_diagnostic.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/ui_sw/display_diagnostic.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/ui_sw/display_diagnostic.hpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/display_diagnostic.cpp",
+      "bytes": 2297,
+      "sha256": "3ff5693bf12779a7e4d519d9cd4863ddf481e205e054ef299bdef14d4eb49321",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/ui_sw/display_diagnostic.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/ui_sw/display_diagnostic.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/ui_sw/display_diagnostic.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/ui_sw/display_diagnostic.cpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/ui_theme.hpp",
+      "bytes": 4862,
+      "sha256": "4c4a9e553d87c507303b5ea8df18699faabba614b4af4ce74e122906104a0111",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/ui_sw/ui_theme.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/ui_sw/ui_theme.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/ui_sw/ui_theme.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/ui_sw/ui_theme.hpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/direct_framebuffer_backend.cpp",
+      "bytes": 16119,
+      "sha256": "86223cab1322af11e66e8d401cf4c3d806a4afcc5723fad5d46477c53494e2dd",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/ui_sw/direct_framebuffer_backend.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/ui_sw/direct_framebuffer_backend.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/ui_sw/direct_framebuffer_backend.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/ui_sw/direct_framebuffer_backend.cpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/ui_render.hpp",
+      "bytes": 11885,
+      "sha256": "08709e31356f09a4ca5d0ef052c6853b962d6423b58179b14b0f7f3ab6a57367",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/candidate/ui_sw/ui_render.hpp",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/candidate/ui_sw/ui_render.hpp",
+        "嵌赛/rml24_history_uptime_fix1_20261029/candidate/ui_sw/ui_render.hpp",
+        "FPGA_Work/rml24_fpga_ui_integration_20261031/candidate/ui_sw/ui_render.hpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/ui_render.cpp",
+      "bytes": 48451,
+      "sha256": "ec2161f7bf62eb29bd507ab0d6ca21ff6a365a5dc69cf22fa78a4cd6ef4a399f",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_visual_review_fix_20261031/candidate/ui_sw/ui_render.cpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/font_atlas.cpp",
+      "bytes": 6183,
+      "sha256": "ad6e479bd52228495d56ff774a2d34b7b2fe5a3584423025f8a4fddfe5c6ba8d",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/ui_sw/font_atlas.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/ui_sw/font_atlas.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/ui_sw/font_atlas.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/ui_sw/font_atlas.cpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/font_atlas.hpp",
+      "bytes": 4088,
+      "sha256": "9b0e0752d091a770dca54df8ebf660b05c772443e2268f190452ebd4e9b6b957",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/ui_sw/font_atlas.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/ui_sw/font_atlas.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/ui_sw/font_atlas.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/ui_sw/font_atlas.hpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/ui_layout.hpp",
+      "bytes": 4915,
+      "sha256": "4b0dc81b54afe113e0ec55edca40dc61666e31855a4b79d31bed7d0e8f52ce78",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/ui_sw/ui_layout.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/ui_sw/ui_layout.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/ui_sw/ui_layout.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/ui_sw/ui_layout.hpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/signal_history.hpp",
+      "bytes": 12861,
+      "sha256": "82370603705197785bdc28b58b9500a771afb6b4aa0a71edfe980ce0b655e856",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_history_sweep_fix2_20261031/candidate/ui_sw/signal_history.hpp",
+        "FPGA_Work/rml24_visual_review_fix_20261031/candidate/ui_sw/signal_history.hpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/direct_framebuffer_backend.hpp",
+      "bytes": 12873,
+      "sha256": "94b26bb060c70c872614c44ddae29534275f03d5ee4ec1d292298f9abd6e6722",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/ui_sw/direct_framebuffer_backend.hpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/ui_sw/direct_framebuffer_backend.hpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/ui_sw/direct_framebuffer_backend.hpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/ui_sw/direct_framebuffer_backend.hpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/font_atlas_data.cpp",
+      "bytes": 6416208,
+      "sha256": "85612292cba32db7c316df721f24f529252ee6062d1a48207a10621614a8afa1",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/tmp/diag39e5_inspect/sdr_rml23_live_board_package_diag_errata_39e5/ui_sw/font_atlas_data.cpp",
+        "嵌赛/rml23_stage_g_test/sdr_rml23_live_board_package_synthetic_iq_route_d/ui_sw/font_atlas_data.cpp",
+        "嵌赛/rml23_stage_h_e_test/inspect_route_e/sdr_rml23_live_board_package_iq_digital_loopback/ui_sw/font_atlas_data.cpp",
+        "嵌赛/rml23_fix9_host_extract/sdr_rml23_live_board_package_iq_rf_loopback_fix9/ui_sw/font_atlas_data.cpp"
+      ]
+    },
+    {
+      "path": "candidate/ui_sw/waterfall_render.hpp",
+      "bytes": 1299,
+      "sha256": "39a1337fb4a9a8256cd1bf99ca223bd827bcc9257a78b71aa23ad8a26e1b3f84",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/fix10class24_waterfall1_work/sdr_rml24_fix10class24_waterfall1/ui_sw/waterfall_render.hpp",
+        "嵌赛/rml24_final_integration1_work/board_ui_overlay/ui_sw/waterfall_render.hpp",
+        "嵌赛/rml24_stage7_verify_e8af20c25e6847d9afb52755d6d240b7/rml24_final_stage7_board_overlay/board_ui_overlay/ui_sw/waterfall_render.hpp",
+        "嵌赛/rml24_stage7_verify_final_e72442fca735491ca326897d1c90a6c0/rml24_final_stage7_board_overlay/base_ui/ui_sw/waterfall_render.hpp"
+      ]
+    },
+    {
+      "path": "rml24-integrated.service",
+      "bytes": 860,
+      "sha256": "375337eb7c103c68ead87db72262a03eda18825f51c631ed5f062373fb7a98f6",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_final_deployment_20261031/deployment_prep/rml24-integrated.service"
+      ]
+    },
+    {
+      "path": "evidence/gui_frames.jsonl",
+      "bytes": 74592,
+      "sha256": "248b8466b560b1a6d6e597ba1ec564f4c5ffbaf94247b2c64495cfe8ffb69b23",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "evidence/test_receiver_integration.log",
+      "bytes": 512,
+      "sha256": "7f4380a7ff0b8f892b457bb6994fce34988ccbd6a0057b4daa4ac751fd82a853",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "evidence/python_checks.json",
+      "bytes": 124,
+      "sha256": "403db99057512d3a380f9ddf99b85c3000bb881a1895e275e61b2071f12b23dc",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/evidence/python_checks.json",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/evidence/python_checks.json"
+      ]
+    },
+    {
+      "path": "evidence/RESTART_GUARD_FREEZE.json",
+      "bytes": 357,
+      "sha256": "0cb1d9a9b2c61a4e942373b1c4af9730ce2da869e01194ea3b9555a7d51ee3cd",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "evidence/test_supervisor.log",
+      "bytes": 438,
+      "sha256": "04af95bc5697e033ae60b1907aef073f4c419f41d7d62f05bf2ea738ea273497",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "evidence/UI_TIMING_UPDATE.json",
+      "bytes": 1522,
+      "sha256": "8d04d91ef164591a420b72daa99718a1ccdc8282f5b776e9594ffe108ac64adb",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "evidence/CANDIDATE_SOURCE_IDENTITY.json",
+      "bytes": 19797,
+      "sha256": "d960b668f1298962ec230db661fbcf2f7881206ba49c1ceb4d39dc25518c611b",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "evidence/cpp_check.log",
+      "bytes": 169,
+      "sha256": "ee5fb2b8b494cd46f9b0d33a5199a3766a2315369a969a44331734668ea65f91",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "evidence/CHANGED_FILES.json",
+      "bytes": 2910,
+      "sha256": "c1183c32dfee6be6ab298a9cdd44d2a83eee637ed978c4928534fe904b156b18",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/evidence/CHANGED_FILES.json",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/evidence/CHANGED_FILES.json"
+      ]
+    },
+    {
+      "path": "evidence/BASELINE_IDENTITY.json",
+      "bytes": 19612,
+      "sha256": "20561adcd39a88cabbcdd347e2b651d8393319390aefaa5f4b79ce95bb042e15",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/evidence/BASELINE_IDENTITY.json",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/evidence/BASELINE_IDENTITY.json"
+      ]
+    },
+    {
+      "path": "evidence/test_sweep.log",
+      "bytes": 903,
+      "sha256": "91c8c7711ce35f85b5dc286f04e2b6d5d6d2d3173c954b3b56910842068fde96",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "evidence/VISUAL_FINAL_RECEIPT.json",
+      "bytes": 705,
+      "sha256": "6f9909577c8731765ab19b78d7ce30965964d93c111697423420a4e7adf04cf9",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "evidence/GAIN_QUALIFIED_GATES.json",
+      "bytes": 5590,
+      "sha256": "b3063b489ef6155a2b902bff96de553fb798301bbae9c867c720cc9bb31602cf",
+      "in_source_archive": true,
+      "local_matches": [
+        "FPGA_Work/rml24_gain_ui_sync_20261102/deployment/QUALIFIED_GATES.json"
+      ]
+    },
+    {
+      "path": "evidence/ui_process_history.txt",
+      "bytes": 849,
+      "sha256": "d9e51daffc01bf26dad4d7627c1e332f3ca9a820ec231cc6ac9afb0a8e283a52",
+      "in_source_archive": true,
+      "local_matches": [
+        "嵌赛/rml24_sweep_history_20261029/evidence/ui_process_history.txt",
+        "嵌赛/rml24_sweep_history_package_verify_20261029/evidence/ui_process_history.txt"
+      ]
+    },
+    {
+      "path": "evidence/ui_process.log",
+      "bytes": 1710,
+      "sha256": "d0a38ea1dd5eff464361bbd42ebd38d9eb512a6dcd0ce8732393ba8987d4d8cf",
+      "in_source_archive": false,
+      "local_matches": []
+    },
+    {
+      "path": "evidence/FINAL_UI_CLOCK_PATCH.json",
+      "bytes": 1236,
+      "sha256": "4d500c1dc1a541c4ed5c9587fd773e4acf07c503196542456e317010658f0bee",
+      "in_source_archive": false,
+      "local_matches": []
+    }
+  ],
+  "symlinks": "",
+  "current_release": "/opt/rml24-integrated/releases/gain_ui_sync_20261102"
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "file": "F:\\嵌赛\\2026嵌赛FPGA开发\\30TAI使用教程.pdf",
+    "page": 1,
+    "text": "30TAI使用教程\n一. 安装时序库\n1.1 解压工具包\n解压JFM_Kits.zip到一个英文路径（路径中不要有中文、空格和特殊字符）。解压后的目录结构如\n下图所示。\n图1\n1.2 设置用户环境变量\n关闭Vivado，新建下图所示的用户环境变量。变量名：JFM_PATH; 变量值：工具包的解压位置。\n以图1为例，变量值为E:\\JFM_Kits，即IP_PATCH文件夹的上一级目录。\n注：重启Vivado，在TCL Console中使用命令puts $::env(JFM_PATH)，可查看环境变量是否设置成\n功。\n1.3 关闭IP cache\n打开Vivado工程的设置界面，将Project Settings -> IP -> IP Cache -> Cache scope选项设置为\nDisabled。\n"
+  },
+  {
+    "file": "F:\\嵌赛\\2026嵌赛FPGA开发\\30TAI使用教程.pdf",
+    "page": 5,
+    "text": "若以图1为例，命令应为：source E:/JFM_Kits/ip_patch/run.tcl。注意命令中不要出现反斜杠。\n1.6 加载脚本\n在Vivado的Tcl Console中，输入以下命令：add_hook_tcl_to_prj，再按回车键，执行脚本加载。\n1.7 加载时序库\n首次使用30TAI时序库，需在Vivado的Tcl Console中，输入以下命令：replace_7z030ai_file，再按\n回车键，执行时序库加载。\n注：使用非30TAI器件时，如果已经执行过步骤1.7，需要通过命令reset_database_to_default恢复\n时序库。执行命令前，需完成步骤1.5，否则找不到命令。恢复时序库后，若再次使用30TAI器\n件，需要重新加载时序库。\n二. Vivado开发\n2.1 安装时序库\n在使用30TAI器件前，确保已经完成时序库以及Procise的安装。\n2.2 新建Vivado工程\n（1）Vivado版本：2018.03\n（2）器件：xc7z030ffg676-2\n（3）执行步骤1.3，关闭IP cache。\n2.3 添加源文件及约束\n"
+  },
+  {
+    "file": "F:\\嵌赛\\2026嵌赛FPGA开发\\复微JFMQL30TAI器件VIVADO开发流程_V1.1（同样适用70tai_100tai）.pdf",
+    "page": 5,
+    "text": "2  VIVADO 开发流程 \n2.1 开发流程步骤 \n1. 工程建立 \n \nVIVADO 中选择对应的器件，选择如表1 所示： \n我司器件 \nVIVADO 中开发工程对应器件 \njfmql30tai \nxc7z030ffg676-2 \n \n创建工程，如图2-1 所示。 \n \n图2-1 选择的器件工程示意图 \n2. 写物理及时序约束 \n \n按照实际原理图中的管脚连接写物理约束以及时序约束。 \n \n3. 添加HDL 文件以及例化IP。 \n \n4. 打IP_PATCH（IP_PATCH 工具使用参考《IP_PATCH 工具使用说明_V5.3.2.0》） \n \n5. 综合实现生成位流 \n"
+  },
+  {
+    "file": "F:\\嵌赛\\2026嵌赛FPGA开发\\FPAI_DEMO说明.pdf",
+    "page": 5,
+    "text": "数据握手时序图 (valid信号先到达)\n数据握手时序图 (ready信号先到达)\n六. PS程序\n6.1 软件工程源文件\n—— deps                                 // 依赖库\n—— examples\n  |—— 1_single_input+ai\n     |—— configs                        // 存放配置文件\n     |—— imodel                         // 存放网络模型\n     |—— names                          // 数据集标签\n     |—— src                     \n        |—— adder_demo.cpp              // 加法器demo的源代码\n        |—— sdicamera+yolov5+hdmi.cpp   // 参考设计的源代码\n     |—— README.md\n     |—— CMakeLists.txt\n     |—— adder_demo                     // 加法器demo的可执行文件\n     |—— sdicamera+yolov5+hdmi          // 参考设计的可执行文件\n本DEMO提供加法器作为示例程序，具体可参考\nexamples/1_single_input+ai/PLin+SingleNet+HDMI/src/adder_demo.cpp。\n"
+  }
+]

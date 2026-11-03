@@ -1,0 +1,38 @@
+[
+  {
+    "name": "fixed240",
+    "denominator": 240,
+    "correct": 239,
+    "missing": 0,
+    "minimum_correct": 235,
+    "clock_drift_ns": -24325300,
+    "promotion_gate_pass": true
+  },
+  {
+    "name": "search240",
+    "denominator": 240,
+    "correct": 234,
+    "missing": 0,
+    "minimum_correct": 235,
+    "clock_drift_ns": -21807690,
+    "promotion_gate_pass": false
+  },
+  {
+    "name": "sweep24",
+    "denominator": 24,
+    "correct": 23,
+    "missing": 0,
+    "minimum_correct": 23,
+    "clock_drift_ns": -16855740,
+    "promotion_gate_pass": true
+  },
+  {
+    "name": "wide13",
+    "denominator": 13,
+    "correct": 13,
+    "missing": 0,
+    "minimum_correct": 13,
+    "clock_drift_ns": -5258790,
+    "promotion_gate_pass": true
+  }
+]

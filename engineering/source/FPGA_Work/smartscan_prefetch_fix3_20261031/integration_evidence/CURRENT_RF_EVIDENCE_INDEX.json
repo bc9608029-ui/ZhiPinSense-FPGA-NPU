@@ -1,0 +1,121 @@
+{
+  "updated": "2026-10-31T17:41:26.752348",
+  "production_promoted": false,
+  "temporary_jtag_only": true,
+  "results": [
+    {
+      "phase": "phase20_gui_rf_cases",
+      "result_file": "E:\\FPGA_Work\\smartscan_prefetch_fix3_20261031\\phase20_gui_rf_cases\\GUI_RF_RESULT.json",
+      "sha256": "2a3fac442dc579a19ee350ee1d1489fea96a0800f28736d4521ce240211b7472",
+      "kind": "SIX_GUI_FUNCTIONAL_CASES_NOT_24CLASS_ACCURACY",
+      "denominator": 6,
+      "correct": 5,
+      "missing": 0,
+      "restore_verified": true,
+      "failures": [
+        {
+          "index": 2,
+          "config": {
+            "bank": 0,
+            "message": 1,
+            "gain_db": -60
+          },
+          "chosen_frame": {
+            "frame_id": 123,
+            "capture_time_ns": 1773389894006786790,
+            "pred": -1,
+            "finite": false
+          },
+          "correct": false,
+          "missing": false,
+          "source_sha": "1562575bbedd6e815535726f16de6752da0f7441ea609acd3cb2cf6be529c0f8"
+        }
+      ]
+    },
+    {
+      "phase": "phase21_gui_24_smoke",
+      "result_file": "E:\\FPGA_Work\\smartscan_prefetch_fix3_20261031\\phase21_gui_24_smoke\\GUI_24_RF_RESULT.json",
+      "sha256": "9f8c8fad2d48c62c2605c46f2b79c2f6176ddcfffb29e001e44d36f77f386868",
+      "kind": "GUI_24CLASS_EXISTING_WAVEFORM_RF_SMOKE_NOT_240_REGRESSION",
+      "denominator": 24,
+      "correct": 24,
+      "missing": 0,
+      "restore_verified": true,
+      "failures": []
+    },
+    {
+      "phase": "phase22_gui_multifrequency",
+      "result_file": "E:\\FPGA_Work\\smartscan_prefetch_fix3_20261031\\phase22_gui_multifrequency\\GUI_FREQUENCY_RESULT.json",
+      "sha256": "c615bf6c96450674ecb6f87f3357de205a1d2b429487f6e4a7f8bdac0deba69d",
+      "kind": "THREE_FREQUENCY_GUI_SWEEP_FUNCTIONAL_NOT_FORMAL_ACCURACY",
+      "denominator": 3,
+      "correct": 3,
+      "missing": 0,
+      "restore_verified": true,
+      "failures": []
+    },
+    {
+      "phase": "phase23_gui_newmessage1",
+      "result_file": "E:\\FPGA_Work\\smartscan_prefetch_fix3_20261031\\phase23_gui_newmessage1\\GUI_24_RF_RESULT.json",
+      "sha256": "8894f6bce0050d09488f6087159b28fd3095c409f4fa9cc79f64f081b82ea675",
+      "kind": "GUI_24CLASS_NEW_SEED_MESSAGE_1_RF_SMOKE_NOT_240_REGRESSION",
+      "denominator": 24,
+      "correct": 22,
+      "missing": 0,
+      "restore_verified": true,
+      "failures": [
+        {
+          "index": 17,
+          "expected": 17,
+          "chosen_frame": {
+            "frame_id": 459,
+            "capture_time_ns": 1773391316790965710,
+            "pred": 18,
+            "finite": true
+          },
+          "correct": false,
+          "missing": false,
+          "source_sha": "2b8425f8d3d1eba567c15d4074aff185e28136d5954f6dadc7683737cc85ec51"
+        },
+        {
+          "index": 23,
+          "expected": 23,
+          "chosen_frame": {
+            "frame_id": 601,
+            "capture_time_ns": 1773391354558623960,
+            "pred": 10,
+            "finite": true
+          },
+          "correct": false,
+          "missing": false,
+          "source_sha": "1a00009440bf3abff7fed59ff3a50760f1595e8c8c42cf31a15d9f481ef38f8e"
+        }
+      ]
+    },
+    {
+      "phase": "phase24_gui_newmessage2",
+      "result_file": "E:\\FPGA_Work\\smartscan_prefetch_fix3_20261031\\phase24_gui_newmessage2\\GUI_24_RF_RESULT.json",
+      "sha256": "f8f543835ac44c838ea50120c8fb22a486a41632c2e43ba8dd1b25a3445f8c00",
+      "kind": "GUI_24CLASS_NEW_SEED_MESSAGE_2_RF_SMOKE_NOT_240_REGRESSION",
+      "denominator": 24,
+      "correct": 23,
+      "missing": 0,
+      "restore_verified": true,
+      "failures": [
+        {
+          "index": 10,
+          "expected": 10,
+          "chosen_frame": {
+            "frame_id": 285,
+            "capture_time_ns": 1773391697743784430,
+            "pred": 9,
+            "finite": true
+          },
+          "correct": false,
+          "missing": false,
+          "source_sha": "b2c068214280fe0b251afa217e14afe15a7a2bd94039744546c5cfd60718c422"
+        }
+      ]
+    }
+  ]
+}

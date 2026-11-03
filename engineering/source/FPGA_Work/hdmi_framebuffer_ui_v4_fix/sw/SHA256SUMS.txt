@@ -1,0 +1,18 @@
+# SHA-256 manifest — software-only transfer package (hdmi_39e5_sw, 软件修复版)
+# 任务 39e5：Release(-O2) SIGBUS 修复（staging + submit_frame 唯一标量设备写路径）。
+# 仅 sw/* 变更；RTL/XDC/位流未动、未重新生成。位流与全量清单见仓库根 SHA256SUMS.txt。
+# 状态：READY-FOR-HARDWARE-RETEST（-O2 上板无 SIGBUS + 显示/触摸正常后才标 HARDWARE_PASS）。
+# 板上校验（在解包目录内）：  sha256sum -c SHA256SUMS.txt
+76e9e8eff505933ed096ebd5e206caecf1d113b1f2ed16ef521e9cf5044f5212 *phase1b_doublebuf_test.cpp
+6a81c744655e441bf4af6bd8506be6b0f622f4964ae7a9bfc663b52fc7fa4074 *phase1c_dynamic_test.cpp
+1e784d26106345e610d767c53a7f5e5e587391491832f7e56ba818dc06a7e186 *phase2_ui_render.cpp
+b5dcc7edb2f5bea1dad9e468550e8b81c3ac5bb178a1d8e8c62a3f3b3327197f *phase3_touch_test.cpp
+5cbe74be068fb9d7ab264404256a5e77593b1539931cbce8c98a96f3b49e598c *direct_framebuffer_backend.hpp
+423eb7e055c1fc3d0bed465a6a2654143ca44abac62eacf157b3ea8369e34865 *direct_framebuffer_backend.cpp
+5a9f1be26999d26b13e93ee0f75b888cead3d8300cd66cf0c9d8c6af5584fed2 *test_direct_framebuffer_backend.cpp
+e29ad113d72cb67f8d8c83ea80af23d0b7f1abfb550d35e61b2cb3c995c29fd9 *CMakeLists.txt
+169134a7833a405c5ae59190101688dc85af4c8586d44839c3001a23bfc4832c *build_on_board.sh
+44ae4cbdc4ff7eff33d2089f23ed8ad8b15bdf451eada7ac463517d6be00f294 *collect_logs.sh
+042b0538ee2f7b20d4ca43b86cabbb87c07bead298f44100cf8c50ff3196ef62 *objdump_evidence/dfb_backend_aarch64.o
+85741ef5658b2366434197f205d932a15b4b61a31146513f2d1cd2d3681ec083 *objdump_evidence/submit_frame_aarch64_full.txt
+fc374f79b56bd00502886e99174d0754f7a49329625678f02ab9196eb84e9a3f *objdump_evidence/submit_frame_aarch64_disasm.txt

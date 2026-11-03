@@ -1,0 +1,15 @@
+{
+  "experiment_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\qam_aware_v2.yaml",
+  "run_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\qam_aware_v2_smoke.yaml",
+  "baseline_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\baseline.yaml",
+  "git_commit": "733f749a1e07df735cb47fc4f904a50269931e82",
+  "variant": "time_phase",
+  "seed": 2026,
+  "model": {
+    "time_base_channels": 22,
+    "physical_base_channels": 8,
+    "fusion_features": 64,
+    "dropout": 0.1
+  },
+  "smoke_only": true
+}

@@ -1,0 +1,1 @@
+此文件是最新可移动盘启动器，替换 FPGA_Work/rml24_gain_ui_sync_20261102/START_TX_CONSOLE.cmd。依赖按脚本自身位置寻找，兼容E/F盘；Python依赖探测通过不等于真实TX验证。历史SOURCE_MAP保留原始快照，不代表最新启动器。

@@ -1,0 +1,64 @@
+{
+  "checkpoint": "F:\\FPGA_Work\\model_ad_amr_v1\\outputs\\ad_amr_v1\\smoke\\checkpoints\\best.pt",
+  "checkpoint_epoch": 1,
+  "loss_variant": "P0",
+  "onnx_path": "F:\\FPGA_Work\\model_ad_amr_v1\\outputs\\ad_amr_v1\\smoke\\onnx\\ad_amr_v1_classifier_opset17.onnx",
+  "inspection": {
+    "checker_passed": true,
+    "opset": 17,
+    "op_types": {
+      "Abs": 4,
+      "Add": 4,
+      "Concat": 4,
+      "Constant": 52,
+      "Conv": 34,
+      "Gemm": 2,
+      "Mul": 16,
+      "ReduceMean": 13,
+      "Relu": 22,
+      "Resize": 4,
+      "Sigmoid": 12,
+      "Sign": 4,
+      "Squeeze": 24,
+      "Sub": 4,
+      "Unsqueeze": 24
+    },
+    "file_size_bytes": 1189834
+  },
+  "allowed_operator_policy": [
+    "Add",
+    "BatchNormalization",
+    "Concat",
+    "Conv",
+    "Gemm",
+    "Mul",
+    "ReduceMean",
+    "Relu"
+  ],
+  "npu_whitelist_gap": [
+    "Abs",
+    "Constant",
+    "Resize",
+    "Sigmoid",
+    "Sign",
+    "Squeeze",
+    "Sub",
+    "Unsqueeze"
+  ],
+  "npu_whitelist_gap_is_expected": true,
+  "ort_parity": {
+    "status": "ok",
+    "max_abs_diff": 1.1175870895385742e-08,
+    "mean_abs_diff": 3.958120942115784e-09
+  },
+  "profile": {
+    "parameters": 288236,
+    "trainable_parameters": 288236,
+    "neural_macs": 32525014,
+    "neural_flops": 65050028,
+    "fp32_parameter_size_mb": 1.0995330810546875,
+    "state_dict_size_mb": 1.1058120727539062,
+    "serialized_state_dict_mb": 1.1504812240600586
+  },
+  "note": "AD-AMR uses ops outside the frozen 8-op NPU policy; deployment is NOT claimed."
+}

@@ -1,0 +1,57 @@
+{
+  "run_id": "m20_20261008T132329Z_809441",
+  "step": "logits_parity",
+  "n_samples": 31,
+  "labels": [
+    "id:OOK@0dB",
+    "id:4ASK@0dB",
+    "id:AM-DSB@0dB",
+    "id:WBFM@0dB",
+    "id:2FSK@0dB",
+    "id:GFSK@0dB",
+    "id:BPSK@0dB",
+    "id:QPSK@0dB",
+    "id:8PSK@0dB",
+    "id:16QAM@0dB",
+    "id:64QAM@0dB",
+    "id:OFDM@0dB",
+    "id:OOK@10dB",
+    "id:4ASK@10dB",
+    "id:AM-DSB@10dB",
+    "id:WBFM@10dB",
+    "id:2FSK@10dB",
+    "id:GFSK@10dB",
+    "id:BPSK@10dB",
+    "id:QPSK@10dB",
+    "id:8PSK@10dB",
+    "id:16QAM@10dB",
+    "id:64QAM@10dB",
+    "id:OFDM@10dB",
+    "ood:near_12:8ASK@10dB",
+    "ood:near_12:16PSK@10dB",
+    "ood:near_12:32QAM@10dB",
+    "ood:near_12:OQPSK@10dB",
+    "ood:far:LFM@10dB",
+    "ood:far:CW@10dB",
+    "ood:far:MULTITONE@10dB"
+  ],
+  "comparisons": [
+    {
+      "reference": "pytorch_fp32",
+      "max_abs_diff": 9.5367431640625e-06,
+      "mean_abs_diff": 1.3760503842144885e-06,
+      "argmax_agreement": 1.0,
+      "tolerance": 0.0001,
+      "within_tolerance": true
+    }
+  ],
+  "decision_agreement": {
+    "score_method": "logit_margin",
+    "temperature": 1.0,
+    "threshold": -0.15274411201477073,
+    "pytorch_vs_onnx_decision_agreement": 1.0
+  },
+  "fp32_tolerance": 0.0001,
+  "npu_int8_tolerance": 0.6,
+  "npu_logits_provided": false
+}

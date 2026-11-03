@@ -1,0 +1,48 @@
+{
+  "time": "2026-10-30T20:56:03.688257+08:00",
+  "checks": [
+    {
+      "check": "selftest",
+      "rc": 0
+    },
+    {
+      "check": "legacy_gain_selftest",
+      "rc": 0
+    },
+    {
+      "check": "preflight",
+      "rc": 0
+    },
+    {
+      "check": "plan_24",
+      "rc": 0
+    },
+    {
+      "check": "tx_dryrun_24",
+      "rc": 0
+    },
+    {
+      "check": "vectors",
+      "rc": 0
+    },
+    {
+      "check": "software_suite",
+      "rc": 0
+    },
+    {
+      "check": "selection_cli",
+      "rc": 0
+    },
+    {
+      "check": "score_cli",
+      "rc": 0
+    }
+  ],
+  "python_tests": 20,
+  "software_psd_vectors": 8,
+  "tx_dryrun_sources": 24,
+  "device_access": false,
+  "rf": false,
+  "board_compile": false,
+  "production_integration": false
+}

@@ -1,0 +1,104 @@
+{
+  "correct": 6,
+  "denominator": 6,
+  "missing": 0,
+  "clock_drift_ns": -4216830,
+  "rows": [
+    {
+      "index": 0,
+      "expected": 23,
+      "pred": 23,
+      "correct": true,
+      "missing": false,
+      "calibration": {
+        "applied": true,
+        "input_power": 1.0208507776260376,
+        "scale": 0.9897348622103568,
+        "power_window": [
+          0.8,
+          1.25
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "expected": 19,
+      "pred": 19,
+      "correct": true,
+      "missing": false,
+      "calibration": {
+        "applied": true,
+        "input_power": 1.038719654083252,
+        "scale": 0.9811848309191856,
+        "power_window": [
+          0.8,
+          1.25
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "expected": 3,
+      "pred": 3,
+      "correct": true,
+      "missing": false,
+      "calibration": {
+        "applied": true,
+        "input_power": 0.9746260046958923,
+        "scale": 1.0129336587592155,
+        "power_window": [
+          0.8,
+          1.25
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "expected": 17,
+      "pred": 17,
+      "correct": true,
+      "missing": false,
+      "calibration": {
+        "applied": false,
+        "input_power": 136.29373168945312,
+        "scale": 1.0,
+        "power_window": [
+          0.8,
+          1.25
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "expected": 14,
+      "pred": 14,
+      "correct": true,
+      "missing": false,
+      "calibration": {
+        "applied": true,
+        "input_power": 1.014636516571045,
+        "scale": 0.9927611095987089,
+        "power_window": [
+          0.8,
+          1.25
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "expected": 20,
+      "pred": 20,
+      "correct": true,
+      "missing": false,
+      "calibration": {
+        "applied": true,
+        "input_power": 0.9208250641822815,
+        "scale": 1.0421048905375938,
+        "power_window": [
+          0.8,
+          1.25
+        ]
+      }
+    }
+  ]
+}

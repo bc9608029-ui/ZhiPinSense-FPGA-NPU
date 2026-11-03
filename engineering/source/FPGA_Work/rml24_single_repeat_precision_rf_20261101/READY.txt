@@ -1,0 +1,3 @@
+test -f /root/rml24_single_repeat_precision_rf_20261101/PROGRESSS.json && echo DIAG_READY; tail -c 600 /root/single_precision_diag_20261101.log
+DIAG_READY
+(base) root@U:~# 

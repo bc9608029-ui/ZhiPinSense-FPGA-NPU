@@ -1,0 +1,44 @@
+{
+  "track": "qam_aware_v3_1",
+  "experiment_config": "/root/autodl-tmp/v31_final_run/qam_aware_v3_1_autodl_final/configs/qam_aware_v3_1.yaml",
+  "requested_config": "/root/autodl-tmp/v31_final_run/qam_aware_v3_1_autodl_final/configs/qam_aware_v3_1.yaml",
+  "baseline_config": "/root/autodl-tmp/v31_final_run/qam_aware_v3_1_autodl_final/configs/baseline.yaml",
+  "git_commit": null,
+  "seed": 2026,
+  "device": "cuda",
+  "classes": [
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "2FSK",
+    "CPFSK",
+    "OFDM"
+  ],
+  "final_blind_test_accessed": false,
+  "model_profile": {
+    "parameters": 506882,
+    "trainable_parameters": 506872,
+    "neural_macs": 55044608,
+    "neural_flops": 110089216,
+    "fp32_parameter_size_mb": 1.9336013793945312,
+    "checkpoint_tensor_state_size_mb": 1.9462966918945312,
+    "serialized_state_dict_mb": 1.9981012344360352,
+    "input_contract": "iq[N,2,1024] + physical[N,3,1024] -> logits[N,8]",
+    "operator_policy": "Conv/BatchNorm/ReLU/Add/Concat/ReduceMean/Mul/Gemm only"
+  },
+  "environment": {
+    "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+    "platform": "Linux-5.15.0-94-generic-x86_64-with-glibc2.35",
+    "machine": "x86_64",
+    "processor": "x86_64",
+    "torch": "2.8.0+cu128",
+    "cuda_available": true,
+    "torch_cuda_version": "12.8",
+    "cudnn_version": 91002,
+    "cuda_devices": [
+      "NVIDIA GeForce RTX 5090"
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "time_power": {
+    "checker_passed": true,
+    "opset": 17,
+    "op_types": {
+      "Add": 5,
+      "BatchNormalization": 1,
+      "Concat": 1,
+      "Constant": 10,
+      "Conv": 14,
+      "Flatten": 1,
+      "Gemm": 2,
+      "GlobalAveragePool": 1,
+      "Identity": 9,
+      "Mul": 3,
+      "ReduceMean": 2,
+      "Relu": 11,
+      "Slice": 2
+    },
+    "onnx_file_size_mb": 0.2812223434448242,
+    "profile": {
+      "parameters": 71576,
+      "trainable_parameters": 71576,
+      "neural_macs": 9795584,
+      "neural_flops": 19591168,
+      "physical_frontend_multiplications": 2048,
+      "physical_frontend_additions": 1024,
+      "fp32_parameter_size_mb": 0.273040771484375,
+      "checkpoint_tensor_state_size_mb": 0.2771453857421875,
+      "serialized_state_dict_mb": 0.3057422637939453,
+      "projected_npu_model_size_mb": 0.2771453857421875,
+      "hardware_partition_status": "PLANNED ONLY: power/correlation multiply-add frontend is FPGA-suitable; no hardware performance is claimed."
+    }
+  },
+  "time_phase": {
+    "checker_passed": true,
+    "opset": 17,
+    "op_types": {
+      "Add": 5,
+      "BatchNormalization": 1,
+      "Concat": 4,
+      "Constant": 28,
+      "Conv": 14,
+      "Flatten": 1,
+      "Gemm": 2,
+      "GlobalAveragePool": 1,
+      "Identity": 9,
+      "Mul": 5,
+      "ReduceMean": 2,
+      "Relu": 11,
+      "Slice": 6,
+      "Sub": 1
+    },
+    "onnx_file_size_mb": 0.2852516174316406,
+    "profile": {
+      "parameters": 71616,
+      "trainable_parameters": 71616,
+      "neural_macs": 9816064,
+      "neural_flops": 19632128,
+      "physical_frontend_multiplications": 4092,
+      "physical_frontend_additions": 2046,
+      "fp32_parameter_size_mb": 0.273193359375,
+      "checkpoint_tensor_state_size_mb": 0.27730560302734375,
+      "serialized_state_dict_mb": 0.3059253692626953,
+      "projected_npu_model_size_mb": 0.27730560302734375,
+      "hardware_partition_status": "PLANNED ONLY: power/correlation multiply-add frontend is FPGA-suitable; no hardware performance is claimed."
+    }
+  },
+  "time_power_phase": {
+    "checker_passed": true,
+    "opset": 17,
+    "op_types": {
+      "Add": 6,
+      "BatchNormalization": 1,
+      "Concat": 4,
+      "Constant": 28,
+      "Conv": 14,
+      "Flatten": 1,
+      "Gemm": 2,
+      "GlobalAveragePool": 1,
+      "Identity": 9,
+      "Mul": 7,
+      "ReduceMean": 2,
+      "Relu": 11,
+      "Slice": 6,
+      "Sub": 1
+    },
+    "onnx_file_size_mb": 0.2871513366699219,
+    "profile": {
+      "parameters": 71656,
+      "trainable_parameters": 71656,
+      "neural_macs": 9836544,
+      "neural_flops": 19673088,
+      "physical_frontend_multiplications": 6140,
+      "physical_frontend_additions": 3070,
+      "fp32_parameter_size_mb": 0.273345947265625,
+      "checkpoint_tensor_state_size_mb": 0.2774658203125,
+      "serialized_state_dict_mb": 0.3061084747314453,
+      "projected_npu_model_size_mb": 0.2774658203125,
+      "hardware_partition_status": "PLANNED ONLY: power/correlation multiply-add frontend is FPGA-suitable; no hardware performance is claimed."
+    }
+  }
+}

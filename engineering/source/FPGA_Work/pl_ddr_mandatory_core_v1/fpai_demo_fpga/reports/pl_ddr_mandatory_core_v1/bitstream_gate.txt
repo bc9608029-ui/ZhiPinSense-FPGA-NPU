@@ -1,0 +1,6 @@
+RAW_BIT=/f/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.runs/impl_1/pl_ddr_mandatory_core_top.bit
+RAW_BIT_SIZE=5980035
+DISABLE_ICAP_BIT=/f/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.runs/impl_1/pl_ddr_mandatory_core_top_disable_icap.bit
+DISABLE_ICAP_SIZE=5980619
+WRITE_BITSTREAM_DRC=0_Errors_121_Warnings_32_Advisories
+NOTE=disable_icap produced by official FMSH post_write_bitstream_patch (procise increment_bit_cfg_v3 -disable_icap)

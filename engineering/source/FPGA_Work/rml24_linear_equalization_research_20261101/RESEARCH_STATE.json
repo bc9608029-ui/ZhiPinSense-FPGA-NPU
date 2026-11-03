@@ -1,0 +1,18 @@
+{
+  "state": "OFFLINE_RESEARCH_ONLY_REAL_RAW_REPLAY_QUEUED_AFTER_FORMAL",
+  "development_cases": 72,
+  "development_improved": 60,
+  "heldout_channel_cases": 18,
+  "heldout_both_recovered": 18,
+  "heldout_fidelity_improved": 18,
+  "rf_classification_validated": false,
+  "not_deployed": true,
+  "queued_replay_cases": 35,
+  "files": {
+    "linear_single_recovery_ref.py": "a914ea7d665ea0c6b72907d979019db1c0eb281c994b370a3eb9c7adaf35f76c",
+    "replay_linear_single.py": "370398ec4f5e09ac78ce1599567e97bd25db40503c5747bd59feea2b7655d0f3",
+    "after_formal.py": "77a26850249e229a56e4a92c22d9a7900d8fc555a59b9219fbe25aae66110aea"
+  },
+  "raw_statistics_note": "Queued replay will include ADC peak/rail counts from exact35 actual1-repeat captures; not current formal data",
+  "persistent_pure_input_cases": 8
+}

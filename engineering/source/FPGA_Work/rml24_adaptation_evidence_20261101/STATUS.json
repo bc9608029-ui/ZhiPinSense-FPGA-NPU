@@ -1,0 +1,14 @@
+{
+  "stage": "EVIDENCE_PACKAGE_VERIFIED_NOT_DEPLOYMENT",
+  "archive": "E:\\FPGA_Work\\rml24_adaptation_evidence_20261101\\adaptation_research_and_formal_evidence.zip",
+  "sha256": "59262d996a251d694be1671b320d6477b39a1692ca903a0ad8b075b216fe7291",
+  "files": 299,
+  "formal_performance_gates": false,
+  "single_repeat_linear_replay": {
+    "old_correct": 32,
+    "new_correct": 32,
+    "denominator": 35,
+    "regressions": 0
+  },
+  "deployed": false
+}

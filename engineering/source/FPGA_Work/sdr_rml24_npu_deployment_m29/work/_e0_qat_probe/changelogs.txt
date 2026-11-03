@@ -1,0 +1,657 @@
+
+ 更新日志 — Icraft 文档 
+ Skip to main content 
+ Back to top
+ Ctrl + K 
+ Icraft 文档 
+ Icraft 文档 
+ 快速开始 
+ 安装 
+ 编译 
+ 运行 
+ 用户接口 
+ 命令行参数 
+ API Reference 
+ 算子支持 
+ 框架支持列表 
+ 所有支持的算子 
+ Abs 
+ ACos 
+ ACosh 
+ Add 
+ AlignAxis 
+ Argmax 
+ Argmin 
+ ASin 
+ ASinh 
+ ATan 
+ ATanh 
+ AvgPool1d 
+ AvgPool2d 
+ AvgPool3d 
+ BatchNorm1d 
+ BatchNorm2d 
+ BatchNorm3d 
+ Cast 
+ ChannelShuffle 
+ ClampScalar 
+ Concat 
+ Conv1d 
+ Conv2d 
+ Conv3d 
+ ConvTranspose1d 
+ ConvTranspose2d 
+ ConvTranspose3d 
+ Copy 
+ Cos 
+ Cosh 
+ DivideScalar 
+ Einsum 
+ Equal 
+ Expand 
+ Greater 
+ GreaterEqual 
+ HardOp 
+ Hardshrink 
+ Hardsigmoid 
+ Hardswish 
+ Hardtanh 
+ InstanceNorm1d 
+ InstanceNorm2d 
+ InstanceNorm3d 
+ Less 
+ LessEqual 
+ Log 
+ LogSigmoid 
+ LogSoftmax 
+ Matmul 
+ Max 
+ Maximum 
+ MaxPool1d 
+ MaxPool2d 
+ MaxPool3d 
+ Mean 
+ Min 
+ Minimum 
+ Mish 
+ Multiply 
+ MultiYolo 
+ Neg 
+ Normalize 
+ NotEqual 
+ Pad 
+ PixelShuffle 
+ Pow 
+ PruneAxis 
+ Region 
+ Reorg 
+ Reshape 
+ Resize 
+ Roll 
+ Route 
+ Sigmoid 
+ Sin 
+ Sinh 
+ Slice 
+ Softmax 
+ Softplus 
+ Softshrink 
+ Softsign 
+ Split 
+ Sqrt 
+ Squeeze 
+ SSDOutput 
+ Stack 
+ Sum 
+ SwapOrder 
+ Swish 
+ Tan 
+ Tanh 
+ Tanhshrink 
+ Tile 
+ Transpose 
+ Unbind 
+ Unfold 
+ Unknown 
+ Unstack 
+ Unsupport 
+ Upsample 
+ Where 
+ Yolo 
+ 组件指南 
+ Icraft 组件总览 
+ 扩展机制 
+ 自定义算子 
+ 布衣架构排布说明 
+ 程序示例 
+ Icraft Demo 
+ 故障排除 
+ 故障排查 
+ 版本缺陷 
+ 版本缺陷 
+ 更新日志 
+ 更新日志 
+ 版本 
+ 复旦微AI Icraft工具更新（v3.33.0）发布通知——30TAI 
+ 复旦微AI Icraft工具更新（v3.33.0_FMQL100TAI）发布通知 
+ .rst 
+ .pdf 
+ 更新日志 
+ 目录 
+ v3.39.0 
+ v3.38.0 
+ v3.37.0 
+ v3.36.0 
+ v3.35.0 
+ v3.34.0 
+ v3.33.1 
+ v3.33.0 
+ v3.31.0 
+ v3.30.0 
+ v3.8.1 
+ v3.8.0 
+ v3.7.1 
+ v3.7.0 
+ v3.6.3 
+ v3.6.2 
+ v3.5.0 
+ v3.4.0 
+ v3.3.0 
+ v3.2.0 
+ v3.1.1 
+ v3.1.0 
+ v3.0.1 
+ v3.0.0 
+ 更新日志 # 
+ v3.39.0 # 
+ 【发布时间】开发中 
+ bug修复 
+ 修复本地预览（ file:// ）下版本切换器下拉框为空的问题：服务器侧为 latest 补 CORS 头，前端加降级脚本在 fetch 失败时回退为纯文本版本号； 
+ 关闭空的 genindex.html 生成； 
+ 修复 troubles 页面 gp_device_handler_ 被 RST 误解析为引用目标导致的构建 ERROR（改用行内字面量）。 
+ 修复中文搜索失效（搜中文词无结果）：根因是 Sphinx 中文搜索适配器（ sphinx/search/zh.py ）在未安装 jieba 时对中文零分词， searchindex.js 不含任何中文词项；现已将 jieba 纳入文档构建依赖（见 docs/requirements.txt ），离线环境用 whl 安装。 
+ 修复全量并行构建文档站（ -j ）时间歇性失败，两类根因：一是各组件 doxygen 共享同一 _doxygen/xml 输出目录并发抢写（ breathe.parser.ParserError 退出 code=2），改为每组件独立 _doxygen/<组件>/xml 子目录并在 configure 期预建目录；二是 zg330backend 文档跨组件导入 buyibackend pyd 但构建图缺保序依赖（sphinx 与 DLL 链接并行竞争致 ImportError ），顶层补 add_dependencies(zg330backend_docs buyibackend) 。 
+ v3.38.0 # 
+ 【发布时间】2026.6.11 
+ FMQL30TAI FMQL400TAI 
+ 新增特性 
+ 支持ZG30S浮点核的编译、量化、指令生成和run_llm运行链路； 
+ OnnxParser新增支持GatherElements、GridNSample、TopK算子，并扩展ScatterND数据类型支持； 
+ 支持ConvTranspose1d解析，以及1D反卷积到2D反卷积的编译适配； 
+ 支持大模型多batch相关解析和指令生成场景。 
+ 功能升级 
+ Adapter新增Transpose/Reshape优化、Open_AlcNetPass、Gns相关优化pass，减少冗余Transpose并提升特定模型编译效率； 
+ Quantizer新增ZG30S量化流程与软硬算子划分，支持zhuge30s目标配置； 
+ CodeGen增强ZG30S FP32指令生成、softmax mask、SliceDynamic和Matmul多batch处理； 
+ BuyiBackend新增GridNSample后端运行支持。 
+ bug修复 
+ OnnxParser修复GRU可能输出错误shape的问题、GroupQueryAttention中cast处理异常的问题； 
+ 修复Adapter中tile算子的layout构造错误的问题； 
+ 修复CodeGen中多维度Transpose编译可能失败的bug。 
+ v3.37.0 # 
+ 【发布时间】2026.4.22 
+ FMQL30TAI FMQL400TAI 
+ 新增特性 
+ 支持Qwen2.5-7B模型； 
+ 支持Slicedynamic，RopeDynamic算子 
+ 支持在指令生成时配置使用的icore核心数 
+ bug修复 
+ 修复optimizer部分pass循环次数过多的问题 
+ 修复Quantizer 400TAI适配不完全的问题 
+ 修复Adapter之后网络输出的Layout改变的问题 
+ 修复算子输入输出数量超过16个时无法生成指令的问题 
+ v3.36.0 # 
+ 【发布时间】2026.3.23 
+ FMQL30TAI 
+ 新增特性 
+ Zhuge适配Imagemake； 
+ 支持Qwen2-0.5B模型； 
+ bug修复 
+ 修复Icraft-Show无法打开json文件的bug； 
+ 修复zhuge int8 cu划分错误的问题； 
+ v3.35.0 # 
+ 【发布时间】2026.2.11 
+ FMQL30TAI 
+ 新增特性 
+ 兼容大模型和小模型的parse； 
+ 优化大模型的内存占用问题：内存交换、dump&load优化等； 
+ 新增工具 
+ Icraft-IDE：配置管理、编译控制、网络结构可视化； 
+ v3.34.0 # 
+ 【发布时间】2026.1.28 
+ FMQL30TAI 
+ 新增特性 
+ 新增支持算子：maximum、minimum、not； 
+ matmul、transposeCW算子支持计算无穷值。 
+ bug修复 
+ 修复ArgmaxCodeGen中尝试将两个numElements不同的dma进行Align的bug； 
+ 修复fp16的normalize计算溢出的问题，中间计算一律使用tf32（触发网络：superpoint）； 
+ 修复算子划Tile的逻辑，reshape算子cu划分错误的问题（修复方案会略微影响DDRnet、rtmdet_tiny、ResNetSE的hardtime）； 
+ 修复量化自动调优工具的bug，修复后，首轮调节精度位宽后，若效果不好则将该调整复原。 
+ v3.33.1 # 
+ 【发布时间】2025.12.15 
+ FMQL30TAI 
+ bug修复 
+ 修改fp16的softmax的累加task的数据类型，改为tf32，以防止溢出； 
+ bf16的hardtanh拟合阶数过高的问题； 
+ 修复softmax中的mask赋值可能错误的问题，优化mask的赋值方式； 
+ 修复upsample VLM输入尺寸2048时越界的bug。 
+ v3.33.0 # 
+ 【发布时间】2025.11.14 
+ FMQL100TAI 
+ Parser``组件：新增 ``image_channel_order 参数，表示期望的输入图片颜色通道顺序，仅支持 bgr、rgb，默认bgr； 
+ FMQL30TAI 
+ 参见``Icraft v3.33.0``发布文档 
+ v3.31.0 # 
+ 【发布时间】 2025.07.03 
+ 【版本说明】 
+ 新增和升级功能 
+ FMQL100TAI ： 
+ Adapter 组件：添加SetNetworkOutputLayoutPass，用于配置网络输出的layout，以解决版本之间网络输出layout不一致的问题，该pass默认关闭，请用户按需配置。详见 Icraft Adapter内置Pass列表 
+ Quantizer 组件：当target配置为zhuge情况下,且量化数据类型配置为浮点数据类型（bf16,fp16,tf32,fp32）时,由于不需要进行前向校准过程，因此forward_dir、forward_list、saturation和per不再为必须配置项，但若额外配置了混合精度mix_precision，则上述四个配置仍为必配项。详见 Icraft Quantizer参数配置 ； 
+ 扩充支持16bit图片作为网络的输入，要求图片的最大有效位宽不超过15位； 
+ segpost 增加功能：求取每个像素的ID类别基础上，增加返回该ID对应的概率值。 
+ 参数配置对应更新说明：移除”src_ysize”、”src_xsize”参数，其余参数保持不变; 
+ 返回值格式更新说明：仅有argmax模式时，按4字节为一个单位，低地址1字节为原来的通道索引值，然后2个字节为具体通道值（8bit的话高位补充符号位），再1个字节为0（无效值）；argmax+upsample模式时，按4字节为一个单位，低地址1字节为原来的通道索引值，然后3个字节为具体通道值（需要再除以16是实际值）. 
+ 注意：由于输出格式改变、使用v3.8.1及以前的toml配置时应对应修改输出数据的读取方式。 
+ FMQL30TAI ：无更新 
+ bug修复 
+ FMQL100TAI ： HostBackend 组件，调整读图片的方式，修改为rgb格式读入图片，从而确保编译器采用的读图片格式与参考实现中pl方案的读图形式保持一致； 
+ FMQL100TAI ： Quantizer 组件，针对forward_list中配置的txt文件中的量化校准集参数检查更加完善，路径或者文件不存在、含有特殊字符以及输入个数与实际网络个数不一致均会抛出对应报错信息； 
+ FMQL30TAI ：无更新 
+ v3.30.0 # 
+ 【发布时间】 2025.03.26 
+ 【版本说明】 
+ 新增后端 
+ 新增支持基于FMQL30TAI的模型编译和部署，因此Icraft v3.30.0同时支持FMQL100TAI、FMQL30TAI两个后端： 
+ FMQL100TAI ：功能、接口均与Icraft v3.8.1保持兼容；性能、精度均与Icraft v3.8.1保持一致； 
+ FMQL30TAI ：功能基本与``FMQL100TAI``呈包含关系； 
+ 调整算子库 
+ FMQL100TAI ：无更新 
+ FMQL30TAI ：算子库在对齐Icraft v3.8.1的基础上，新增部分算子， 详见 《Icraft Docs之算子支持》 
+ Argmax（pytorch、onnx） 
+ Log（pytorch、onnx） 
+ LogSoftmax（pytorch、onnx） 
+ Neg（pytorch、onnx） 
+ Mean（pytorch、onnx）（完善算子支持程度，完全支持） 
+ 新增和升级功能 
+ FMQL100TAI ：无更新 
+ FMQL30TAI ：在Icraft v3.8.1的基础上，差异如下 
+ 数据精度的调整，FMQL30TAI仅支持int8，不再支持int16，相应的扩充支持了bf16和tf32两种浮点精度格式，详见 《zg330量化概述》 
+ 支持自适应混合精度，FMQL30TAI支持int8->bf16<->tf32的自适应混合精度，详见 《zg330混合量化配置》 ，同时也保留了通过csv手动配置算子数据精度的方式，详见 《zg330自定义量化配置》 。需要注意的是，文档提到的fp16暂不支持。 
+ 从算子库和精度两个点出发，对强化学习类网络有了更好的支持； 
+ Icore内置cast算子（数据类型转换），相比于host做数据转换，有利于提升网络性能。同时，保留了之前版本的view功能，用户可以按需取用。 
+ 接口变更 
+ FMQL100TAI ：无更新 
+ FMQL30TAI ：编译方式上来讲，30TAI与100TAI基本保持一致，详见 《compiler参数配置》 。当然，各组件为了支持30TAI，从接口上进行了一定的功能扩充。 
+ Parser ：调整pre_method参数的定义；新增inputs_dtype和 target。详见 《parser使用说明》 
+ Optimizer ：无变化 
+ Quantizer ：参数名称调整（bit->qtype,double->float），新增asymmetric（该功能暂时不支持）。详见 《quantizer使用说明》 
+ Adapter ：无变化 
+ CodeGen ：新增fit_deg、fit_json。详见 《codegen使用说明》 
+ ZG330Backend ：新增后端，详见 《30TAIbackend使用说明》 
+ Xrt ：新增forward接口，可指定输出tensor数据存储地址，详见 《XRT使用手册1.3.2章节》 ;新增setDumpOutputs接口，用于设置每层前向结束保存输出结果至指定路径下,详见 《XRT使用手册1.4.3章节》 ；新增内存管理器类MemManager，和getAllMemChunk接口，用于获取当前已分配的内存情况。详见 《XRT使用手册1.5章节》 ；MemRegion.malloc接口新增字节对齐参数，默认为1；MemChunk添加修改deleter和autofree的接口。 
+ Xrun ：调整参数默认值，compress默认关闭，merge_hardop默认打开；新增参数ocmopt。详见 《xrun使用说明》 
+ v3.8.1 # 
+ 【发布时间】 2025.02.19 
+ 【版本说明】 
+ 修复Bug 
+ PytorchParser：用户配置输入数量和模型输入数量不一致时不再抛出异常，改为warning； 
+ PytorchParser：修复normalize融合Pass的Layout前后不一致的bug； 
+ 新增feature 
+ 新增imk接口，用户可在customop.toml配置input_port和insert_imk参数来灵活指定分支插入imk,并设置不同端口号 
+ v3.8.0 # 
+ 【发布时间】 2025.01.14 
+ 【版本说明】 
+ 调整算子库 
+ Pytorch，详见 《Icraft Docs之算子支持》 
+ Pad3d 
+ 新增和升级功能 
+ Parser组件：升级PytorchParser，解决之前版本稳定性较差的问题； 
+ Optimizer组件：新增 icraft.MergePad2Conv2dPass ,用于合并pad到卷积内，提升网络计算速度。详见 Icraft Adapter内置Pass列表 
+ Quantizer组件：优化add（部分输入为常量）的量化实现，尽可能减小特征图和常数的量化误差； 
+ HostBackend组件：支持读1通道、4通道的图片，且保留decodedll的通路； 
+ HostBackend组件：去掉找不到cuda时报warning的特性； 
+ BuyiBackend组件：添加fpga算子的位流检查； 
+ 编译器整体：添加基于linux系统的编译能力，用户可以在linux系统实现网络的编译和部署； 
+ 修复Bug 
+ HostBackend组件：修复了add, multiply在量化前向时浮点数转定点数时没有考虑fake_qf的问题； 
+ HostBackend组件：调整了底层数据管理逻辑，避免多个chunk同时指向同一块内存地址导致析构出错； 
+ HostBackend组件：去掉了pad算子在没有’N’ layout的情况下还去掉第0维Pad参数的bug； 
+ BuyiBackend组件：修复使用快照时对于内存复用的段没有分配Memchunk的问题 
+ Show组件：修复对比两个文件夹下ftmp失败的bug； 
+ Show组件：修复创建文件夹错误抛出异常的bug； 
+ Show组件：修复打开fake_qf时输入adapted与BY阶段的量化分析异常； 
+ v3.7.1 # 
+ 【发布时间】 2024.12.24 
+ 【版本说明】 
+ 修复Bug 
+ Xir组件：修复replaceopkeepuses里删除算子时将连接列表里的连接关系错误删除了的bug，影响网络：yoloseg相关的网络； 
+ Parser组件：OnnxParser修复反卷积算子layout指定错误的bug，该bug的修复解决了反卷积算子的量化精度问题，影响网络：YoloV6s_v2_reopt和simple_pose； 
+ Parser组件：OnnxParser修复hardswish解析不完善的bug，影响网络：yolop_1x3x640x640_traced； 
+ Parser组件：OnnxParser修复gather解析错误的bug，影响网络：raft_440x1024_2.onnx； 
+ Quantizer组件：修复了matmul_const量化优化环节引入的截位相关的bug，影响网络：EcapaTDNN； 
+ CodeGen组件：修复算子中无效通道大于cu的情况中bug，影响网络：pointnet和yolov8_cls混合精度模式； 
+ Show组件：修复了log_path指定错误的bug； 
+ Show组件：修复量化分析工具分析多输入网络时，报Internal Server Error的bug，影响网络：EcapaTDNN； 
+ Show组件：修复命令行打开show中存在的权限问题； 
+ Show组件：修复show工具多次打开时，从第二次开始无法启动的bug； 
+ v3.7.0 # 
+ 【发布时间】 2024.11.29 
+ 【版本说明】 
+ 调整支持的深度学习框架 
+ Darknet：不再支持Darknet框架网络的编译部署； 
+ Tensorflow：增加TensorFlow2Onnx的模型，支持tf1、tf2保存的Onnx模型，详见 《Icraft Docs之算子支持》 ； 
+ 调整算子库 
+ Pytorch（仅限pytorch转onnx），详见 《Icraft Docs之算子支持》 ： 
+ AdaptiveAvgPool3d（算子约束，详见 《Icraft Docs之算子支持》 ） 
+ AdaptiveMaxPool3d 
+ AvgPool3d（算子约束，详见 《Icraft Docs之算子支持》 ） 
+ BatchNorm3d 
+ Conv3d 
+ MaxPool3d 
+ InstanceNorm3d 
+ equal 
+ greater 
+ greater_equal 
+ less 
+ less_equal 
+ mean（完善算子支持程度，完全支持） 
+ not_equal 
+ PaddlePaddle（仅限paddlepaddle转onnx），详见 《Icraft Docs之算子支持》 ： 
+ AdaptiveAvgPool3d（算子约束，详见 《Icraft Docs之算子支持》 ） 
+ AdaptiveMaxPool3d 
+ AvgPool3d（算子约束，详见 《Icraft Docs之算子支持》 ） 
+ BatchNorm3d 
+ Conv3d 
+ MaxPool3d 
+ equal 
+ greater_equal 
+ greater_than 
+ InstanceNorm3d 
+ less_equal 
+ less_than 
+ MaxPool3d 
+ mean（完善算子支持程度，完全支持） 
+ not_equal 
+ 新增和升级功能 
+ Xir组件：新增一种序列化和反序列化方式——flatbuffers （只支持对 Network 序列化和反序列化），详见 《Icraft Docs之Xir用户手册》 
+ Xir组件：模式匹配新增 IsOptionalOp ，可用于添加不确定是否存在的 OpPattern； 
+ Xir组件：优化json 反序列化时的内存占用和耗时（反序列化速度提升5倍）； 
+ Xir组件：支持算子有多个相同的输入，例如concat的所有或部分输入为同一个ftmp； 
+ Xir组件：序列化接口函数升级，新增参数 validate ，决定序列化时是否检查网络必须符合规范，默认开启，便于网络调试； 
+ Parser组件： OnnxParser支持unsupport算子，对于不支持算子解析为unsupport算子占位并保存josn&raw文件，方便查看、分析网络; 
+ Parser组件： OnnxParser新增支持TensorFlow2Onnx的模型，支持tf1、tf2保存的Onnx模型，仅支持data_format为默认值channels_last，即排布为NHWC格式，详见 《Icraft Docs之算子支持》 ； 
+ Adapter组件：优化reshape_layout，优化后不改变通道的reshape将不再返回框架排布，有效的减少transpose的引入，提升网络性能；该方案改变了reshape的处理方式，少量特定结构会产生额外的开销，针对该场景可以考虑定制pass的优化方案，例如我们针对yolov5_transfomer添加了定制的pass来解决性能变差的问题； 
+ Quantizer组件：优化matmul量化方案，当其中一个输入为相同值的常数，将常数量化至定点数1，尽可能减少ftmp过大时乘累加的溢出； 
+ HostBackend组件：Ftmp2Tensor添加了文件大小检查，如果文件大小和Tensor大小不匹配报warning； 
+ Xrt组件：优化OpenDevice 时间，优化后基本与Icraft 2.x的时间一致； 
+ Icraft-Show组件：支持在win7下应用； 
+ Icraft-Show组件：log_path参数设置保存文件的路径，详见 《Icraft Docs之Icraft-Show用户手册》 
+ 修复Bug 
+ OnnxParser：修复Gather算子indices为负数解析错误的bug，影响网络：maskformer_R50_640x640； 
+ OnnxParser：修复Squeeze算子axis为空时不支持解析的bug，影响网络：trajairnet； 
+ Quantizer：修复通过ftmp_csv手动配置Cast算子的量化系数时系数传递错误的bug，影响网络：isegpost； 
+ CodeGen：修复网络中存在的负数v_id的bug； 
+ CodeGen：修复16bit下pad刷常数时未刷满整个输出范围及pad_value的值错误的bug； 
+ CodeGen：绕开olm硬件的bug，对rolm与wolm的地址进行偏移（常在expand算子遇到）； 
+ Icraft-Show：修复量化分析工具平均值选项； 
+ Icraft-Show：修复网络太深时导致的堆栈溢出问题，影响网络：CAMpplus； 
+ v3.6.3 # 
+ 【发布时间】 2024.10.14 
+ 【版本说明】 
+ 修复Bug 
+ Parser组件：OnnxParser修复Pytorch 1.9 normalize算子解析不完善的bug； 
+ HostBackend组件：pixel_shuffle不再要求输入输出layout一致。 
+ v3.6.2 # 
+ 【发布时间】 2024.09.12 
+ 【版本说明】 
+ 调整算子库 
+ pytorch，详见 《Icraft Docs之算子支持》 ： 
+ sum 
+ sqrt 
+ clamp 
+ 新增功能 
+ Parser组件：根据Icraft硬件特性，升级parser对1D算子的解析方式，从而提升1D算子的性能。影响网络：swin_tiny_patch4_window7_224.pt； 
+ Parser组件：全面升级OnnxParser，OnnxParser目前支持Pytorch（opset17）、PaddlePaddle（opset11），详见 《Icraft Docs之算子支持》 ； 
+ Parser组件：升级预检功能，新增参数pre_check，默认为true，用于启动整个编译器级别的模型预检；配置为false，则只完成Parser组件的预检。也就是说，用户调试网络时可以配置pre_check=false，将网络尽量向前编译。目前仅OnnxParser支持支持升级后的模型预检功能，详见《Icraft Docs之解析用户手册》第一节： “CLI说明” ； 
+ Adapter组件：针对BuyiLayoutPass中适配通道添加出的conv2d进行优化，提升网络性能； 
+ Icraft Show组件：新增了任意两阶段的网络误差分析功能；新增命令行参数对比两个文件夹下的ftmp的功能，且ftmp的采样支持配置步长、起始点用于选择采样范围，详见 《Icraft Docs之Icraft-Show用户手册》 。 
+ 功能升级 
+ custom_op：detpost position参数配置-1表示筛选全部。影响网络：使用detpost且筛选位置为all的检测模型； 
+ custom_op：detpost config_id参数由配置实际ftmp调整为配置第几个输出，默认从0开始。影响网络：yolov5_seg、yolov8_seg、yolov9_pan； 
+ custom_op：segpost 支持多输出网络指定输出进行筛选。影响网络：DDRNet； 
+ 修复Bug 
+ 快照：解决不支持内存复用的bug； 
+ BuyiBackend组件：解决multiply算子改指令函数中的某个判断分支有误的bug； 
+ Quantizer组件：解决split算子normratio中的bug。影响网络：shufflenet； 
+ CodeGen组件：解决构造包含无效通道的查找表（例如激活函数）时的bug； 
+ CodeGen组件：解决合并算子后ftmp顺序可能发生变化的bug。影响网络：yolov9c； 
+ CodeGen组件：解决prune和align算子分配地址使用了ocm的bug。影响网络：aiatrack； 
+ CodeGen组件：解决部分模式匹配次数上限配置不合理的bug。影响网络：lstm； 
+ Xir组件：解决ConnetInput没办法正确插入Input的bug。影响网络：yolov7； 
+ Xir组件：解决网络中param.v_id与value.v_id分配不同步导致网络外面游离value的v_id与网络中param.v_id冲突的bug。 
+ PytorchParser组件：解决slice算子不支持参数为负数的bug。影响网络：lstm; 
+ v3.5.0 # 
+ 【发布时间】2024.6.27 
+ 【版本说明】 
+ 调整算子库 
+ pytorch， 《Icraft Docs之算子支持》 ： 
+ swish 
+ ChannelShuffle 
+ stack 
+ unbind 
+ 新增功能 
+ Quantize组件：添加SmoothQuant功能，用于优化transformer中layernorm+matmul结构的量化，该功能需要配置smooth_alpha参数，详见 SmoothQuant功能介绍 ； 
+ Quantizer组件：提供ImageMake接口与Icraft v3.3.0以及之前版本的兼容设计，详见 imagemake接口介绍 ； 
+ XRT组件：添加快照功能接口函数，详见 XRT使用手册1.1.3章节 。影响网络：所有网络； 
+ XRUN组件：添加快照功能接口参数，详见 XRT使用手册1.2章节 。影响网络：所有网络； 
+ HostBackend组件：提供Windows平台上PyApi与torch的兼容方案，Linux暂不支持； 
+ CustomOp：添加segpost。 
+ 功能升级 
+ Xir组件：简化pass的注册接口函数，原接口函数保留； 
+ Xir组件：MergedDistr添加uvalue属性，表示无效值，可选ZERO表示填0，NONE表示不存在。 
+ 新增支持网络 
+ AITrack 
+ 修复Bug 
+ Xir组件：修复无法lazyLoad空的raw文件的bug； 
+ Xir组件：修复Params、Network类型在clone时未考虑depth的bug； 
+ Adapter组件：修复copyFtmpPass在特定结构出错的bug。 
+ v3.4.0 # 
+ 【发布时间】2024.6.6 
+ 【版本说明】 
+ 调整算子库 
+ pytorch，详见 《Icraft Docs之算子支持》 ： 
+ hard_tanh 
+ Softplus 
+ SoftShrink 
+ AdaptiveMaxPool2d（完善算子支持程度，完全支持） 
+ AdaptiveAvgPool2d（完善算子支持程度，完全支持） 
+ 新增功能 
+ Icraft-Show组件：支持鼠标右键加载网络； 
+ Icraft-Show组件：CodeGen内存优化可视化，详见 内存优化分析 ； 
+ Icraft-Show组件：添加Fake_qf_n按钮，用于辅助定位量化后网络中的乘累加溢出的问题，详见 fake_qf ； 
+ Optimizer组件：添加网络输出为常数的常熟折叠功能。影响网络：mixformer、detr，提升性能； 
+ quantize组件：支持多维度的自定义量化配置，详见 自定义量化配置介绍 。影响网络：vit、detr，提升精度 
+ CustomOp：ImageMake支持网络中第一个算子为任意类型 
+ 修复的bug 
+ 网络中存在超大通道的算子，加载到axi上可能会失败，影响网络：ettrack； 
+ python api接口无法对MMU的开关进行设置； 
+ PytorchParser组件：expand算子参数为-1时，显示不支持该算子； 
+ PytorchParser组件：relu6解析错误； 
+ Quantize组件：新增参数imagemake来根据imagemake硬件要求来约束输入的量化系数，原方案Quantize不管是否使用imagemake，会在满足结构的网络输入端统一做输入量化系数的调整； 
+ v3.3.0 # 
+ 【发布时间】2024.5.16 
+ 【版本说明】 
+ 调整算子库 
+ pytorch，详见 《Icraft Docs之算子支持》 ： 
+ AdaptiveMaxpool1d 
+ AdaptiveAvgpool1d 
+ Bachnorm1d 
+ Conv1d 
+ Maxpool1d 
+ InstanceNorm1d 
+ 新增功能 
+ CodeGen组件：新增etm优化方案，详见《Icraft Docs之指令生成用户手册》； 
+ CodeGen组件：新增合并硬算子功能，详见《Icraft Docs之指令生成用户手册》； 
+ Quantizer组件：新增支持add算子的按通道量化； 
+ Quantizer组件：新增自定义量化配置——value_range，用于解决计算过程中的乘累加溢出问题； 
+ Adapter组件：优化pixelshuffle的下降方式，提升算子性能； 
+ BuyiBackend组件：新增sub接口，用于从原session中创建一个新的session； 
+ BuyiBackend组件：新增mmu模式部署网络，可以减少部署时的内存消耗以及部署时间，详见 BuyiBackend使用手册1.1章节 ； 
+ Icraft-Show组件：量化分析工具支持多输入网络校准集的快捷选择功能，详见`量化分析输入 <../show/index.html#qua-analy-start>`_； 
+ 新增支持网络 
+ MixFormer2-S 
+ E.T.Track 
+ PointNet 
+ 修复bug 
+ 自定义算子：修复FPGA算子并行问题。影响网络：yolov5m 
+ CodeGen组件：分组卷积+激活的激活表失效的bug。影响的网络：yolov9c 
+ BuyiBackend组件：修复内存优化并行问题。影响网络：EfficientNet 
+ BuyiBackend组件：修复混合精度下并行问题。影响网络：Yolov6s_v2_reopt_20 
+ BuyiBackend组件：修复了混合精度模式下，BuyiBackend中打开speedmode可能出现卡死的bug。影响网络：Mix-yolov4_mish_9、Mix-YoloV5m_silu_640x640等 
+ v3.2.0 # 
+ 【发布时间】2024.4.10 
+ 【版本说明】 
+ 调整算子库 
+ pytorch，详见 《Icraft Docs之算子支持》 ： 
+ Roll（算子约束，参见 《Icraft Docs之算子支持》 ） 
+ AvgPool1d（算子约束，参见 《Icraft Docs之算子支持》 ） 
+ bmm 
+ Add（完善算子支持程度：完全支持） 
+ Multiply（完善算子支持程度：完全支持） 
+ Matmul（完善算子支持程度：完全支持） 
+ 新增功能 
+ PytorchParser扩充支持pytorch2.0.1 
+ Icraft-Show：调整量化分析图标的排布方式，将op_id的排列序改为图执行序排列 
+ Icraft-Show 支持保存算子参数的二进制方式保存 
+ 修复bug 
+ Adapter组件：concat_layout中的bug 
+ CodeGen组件：提供ocm的自动筛选功能 
+ BuyiBackend组件：修复cast算子对输入尺寸有特定要求的bug 
+ v3.1.1 # 
+ 【发布时间】2024.4.7 
+ 【版本说明】 
+ 1.`` 修复bug``： 
+ Adapter组件：修复concat_layout中bug，影响网络：yolov5-transformer 
+ Adapter组件：修复pixel_shuffle_layout中的bug 
+ PytorchParser组件：修复多输出算子的bug，影响网络：img_cnn_lstm 
+ Quantizer组件：修复多batch量化中的bug，影响网络：SeResnet 
+ 安装包：添加cuda头文件和安装包 
+ 新增支持网络 ： 
+ yolov5-transformer 
+ v3.1.0 # 
+ 【发布时间】2024.3.8 
+ 【版本说明】 
+ 调整算子库 
+ pytorch，详见《Icraft Docs之算子支持》： 
+ InstanceNorm2d（新增算子） 
+ AdaptiveMaxPool2d（新增算子：仅支持可以等效为MaxPool的场景） 
+ Reshape（完善算子支持程度：完全支持） 
+ View（完善算子支持程度：完全支持） 
+ Add（添加算子约束：不支持input0为常量，input1为变量的场景） 
+ Multiply（添加算子约束：不支持input0为常量，input1为变量的场景） 
+ Matmul（添加算子约束：不支持input0为常量，input1为变量的场景） 
+ Onnx（PaddlePaddle），详见《Icraft Docs之算子支持》： 
+ Reshape（完善算子支持程度：完全支持） 
+ View（完善算子支持程度：完全支持） 
+ Add（添加算子约束：不支持input0为常量，input1为变量的场景） 
+ Multiply（添加算子约束：不支持input0为常量，input1为变量的场景） 
+ Matmul（添加算子约束：不支持input0为常量，input1为变量的场景） 
+ 新增支持网络 
+ sr 
+ drl4vrp 
+ 修复bug 
+ Adapter组件： slice_layout中的bug 
+ Optimizer组件：修复了upsample不支持降采样的bug 
+ Quantizer组件：修复concat等算子输入normratio未能前向传递的bug 
+ Quantizer组件：解决Matmul乘累加溢出的问题，减小量化的精度损失 
+ Xir扩充Api接口，详见《Icraft Docs之组件指南》 
+ v3.0.1 # 
+ 【发布时间】2024.1.31 
+ 【版本说明】 
+ 修复安装Icraft时修改系统环境变量的问题 
+ 修复customop的问题 
+ v3.0.0 # 
+ 【发布时间】2024.1.18 
+ 【版本说明】 
+ 新增支持算子 
+ pytorch，详见《Icraft Docs之算子支持》： 
+ add（完善算子支持程度） 
+ multiply（完善算子支持程度） 
+ split（完善算子支持程度：完全支持） 
+ a [ :, 1:2 ]（完善算子支持程度：完全支持） 
+ softmax（扩充buyibackend） 
+ lstmcell（扩充buyibackend） 
+ abs 
+ expand 
+ expand_as 
+ layernorm 
+ matmul 
+ normalize 
+ pixelshuffle 
+ lstm 
+ grucell 
+ gru 
+ InstanceNorm2d 
+ AdaptiveMaxPool2d 
+ Onnx（PaddlePaddle），详见《Icraft Docs之算子支持》 
+ add（完善算子支持程度） 
+ multiply（完善算子支持程度） 
+ split（完善算子支持程度：完全支持） 
+ strided_slice（完善算子支持程度：除stride<0外，其他的参数情况全支持） 
+ softmax（扩充buyibackend） 
+ lstmcell（扩充buyibackend） 
+ abs 
+ layernorm 
+ picel_shuffle 
+ matmul 
+ 新增支持网络 
+ Detr 
+ ViT 
+ SuperPoint + SuperGlue 
+ Drl 
+ A2net 
+ Yolor 
+ Siamrpn 
+ Nafnet 
+ sr 
+ drl4vrp 
+ Icraft中间层进行了升级，优化数据结构，提供模式匹配功能，优化支持针对网络的增删查改，优化算子注册流程。相关介绍详见《Icraft Docs之Icraft组件总览——XIR用户手册》 
+ Icraft前向进行了统一，所有前向统一接口为XRT，不再区分仿真和运行，而是把不同的计算资源抽象为不同的后端，使得Icraft中的网络能够在任意的计算资源上完成计算。相关介绍详见《Icraft Docs之Icraft组件总览——XRT用户手册》 
+ 优化自定义算子接口。相关介绍详见《Icraft Docs之自定义算子》 
+ 提供可视化分析工具Icraft-show，终端命令行启动为icraft show，即可启动该工具。相关介绍详见《Icraft Docs之Icraft组件总览——Icraft-Show用户手册》 
+ 上一页 
+ 版本缺陷 
+ 下一页 
+ 复旦微AI Icraft工具更新（v3.33.0）发布通知——30TAI 
+ 目录
+ v3.39.0 
+ v3.38.0 
+ v3.37.0 
+ v3.36.0 
+ v3.35.0 
+ v3.34.0 
+ v3.33.1 
+ v3.33.0 
+ v3.31.0 
+ v3.30.0 
+ v3.8.1 
+ v3.8.0 
+ v3.7.1 
+ v3.7.0 
+ v3.6.3 
+ v3.6.2 
+ v3.5.0 
+ v3.4.0 
+ v3.3.0 
+ v3.2.0 
+ v3.1.1 
+ v3.1.0 
+ v3.0.1 
+ v3.0.0 
+作者： icrafters
+ © Copyright 2026, FMSH.
+ 最后更新于 26-08-21 17:00.
+ so the DOM is not blocked -->
+ 

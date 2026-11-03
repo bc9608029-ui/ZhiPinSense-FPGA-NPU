@@ -1,0 +1,113 @@
+{
+  "scope": "Synthetic channel fidelity only, no RF or NPU classification; public head/tail context instead of per-payload circular boundary",
+  "rows": [
+    {
+      "case": 14,
+      "fractional_delay": -0.37,
+      "circular1024": 0.032146617636821875,
+      "fullframe_linear_context": 0.023049681066089355
+    },
+    {
+      "case": 14,
+      "fractional_delay": 0.13,
+      "circular1024": 0.021787869881579387,
+      "fullframe_linear_context": 0.021294225402925485
+    },
+    {
+      "case": 14,
+      "fractional_delay": 0.67,
+      "circular1024": 0.03104202647484086,
+      "fullframe_linear_context": 0.02473109815788976
+    },
+    {
+      "case": 15,
+      "fractional_delay": -0.37,
+      "circular1024": 0.025267760799524447,
+      "fullframe_linear_context": 0.022996218219421268
+    },
+    {
+      "case": 15,
+      "fractional_delay": 0.13,
+      "circular1024": 0.022016175413323867,
+      "fullframe_linear_context": 0.021494774324448684
+    },
+    {
+      "case": 15,
+      "fractional_delay": 0.67,
+      "circular1024": 0.025713207788620455,
+      "fullframe_linear_context": 0.024289519130186003
+    },
+    {
+      "case": 17,
+      "fractional_delay": -0.37,
+      "circular1024": 0.019608809034203818,
+      "fullframe_linear_context": 0.0024986689238983297
+    },
+    {
+      "case": 17,
+      "fractional_delay": 0.13,
+      "circular1024": 0.00567393521730625,
+      "fullframe_linear_context": 0.0022807687677223586
+    },
+    {
+      "case": 17,
+      "fractional_delay": 0.67,
+      "circular1024": 0.018267683616185738,
+      "fullframe_linear_context": 0.003949184718931295
+    },
+    {
+      "case": 20,
+      "fractional_delay": -0.37,
+      "circular1024": 0.04074868234724004,
+      "fullframe_linear_context": 0.024713884993534836
+    },
+    {
+      "case": 20,
+      "fractional_delay": 0.13,
+      "circular1024": 0.023480852588700966,
+      "fullframe_linear_context": 0.021814488977578008
+    },
+    {
+      "case": 20,
+      "fractional_delay": 0.67,
+      "circular1024": 0.03933465828511137,
+      "fullframe_linear_context": 0.025009633540897285
+    },
+    {
+      "case": 22,
+      "fractional_delay": -0.37,
+      "circular1024": 0.03380748840665909,
+      "fullframe_linear_context": 0.02338091660436487
+    },
+    {
+      "case": 22,
+      "fractional_delay": 0.13,
+      "circular1024": 0.022309156316520876,
+      "fullframe_linear_context": 0.021101647399821077
+    },
+    {
+      "case": 22,
+      "fractional_delay": 0.67,
+      "circular1024": 0.031216872483489803,
+      "fullframe_linear_context": 0.023759464839383036
+    },
+    {
+      "case": 23,
+      "fractional_delay": -0.37,
+      "circular1024": 0.028258533159660967,
+      "fullframe_linear_context": 0.02337048512739964
+    },
+    {
+      "case": 23,
+      "fractional_delay": 0.13,
+      "circular1024": 0.021885867109610196,
+      "fullframe_linear_context": 0.02145573476663448
+    },
+    {
+      "case": 23,
+      "fractional_delay": 0.67,
+      "circular1024": 0.027657310685765418,
+      "fullframe_linear_context": 0.023766166464176668
+    }
+  ]
+}

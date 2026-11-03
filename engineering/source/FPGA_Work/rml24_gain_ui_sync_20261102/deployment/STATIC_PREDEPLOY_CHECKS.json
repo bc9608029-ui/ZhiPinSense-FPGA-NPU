@@ -1,0 +1,13 @@
+{
+  "status": "STATIC_DEPLOYMENT_PREP_PASS_NOT_ACTIVATED",
+  "screen_guard_before_upload_or_activation": true,
+  "user_ready_file_absent": true,
+  "qualification_file_absent": true,
+  "boot_and_bit_writes_absent": true,
+  "scope_chain_checks_present": true,
+  "files": {
+    "software_deploy_gain_ui.py": "05082ec8a6d880dba56bf44c61676ab698d0701837cb10d1b251794aed7d9ce8",
+    "deploy_and_verify_gain_ui.py": "df849b95d26f7b05e99b3496f8c9ff3586f12c0db75905aee5b7fbee986b5b02",
+    "timing_contract.py": "84d120831ed629f84c1a16e424c87db77b6701cd9a6c5e1aa0eb7e0befacb71b"
+  }
+}

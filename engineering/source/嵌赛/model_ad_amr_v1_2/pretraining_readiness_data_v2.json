@@ -1,0 +1,23 @@
+{
+  "track": "ad_amr_v1_1_data_v2",
+  "status": "pending-public-dataset",
+  "architecture": "unchanged ADAMRV11Net",
+  "hypothesis": "RadioML2018.01A supervised pretraining improves target V1.1 fine-tuning",
+  "public_dataset": {
+    "expected_file": "data/radioml2018/GOLD_XYZ_OSC.0001_1024.hdf5",
+    "expected_samples": 2555904,
+    "expected_classes": 24,
+    "expected_snr_strata": 26,
+    "embedded_in_source_archive": false,
+    "audit_completed": false
+  },
+  "training_started": false,
+  "public_test_accessed": false,
+  "final_blind_test_accessed": false,
+  "ready_for_cuda_preflight": false,
+  "ready_for_pilot": false,
+  "ready_for_formal": false,
+  "formal_stage_implemented": true,
+  "formal_seeds": [2026, 2027],
+  "required_next_action": "place the verified RadioML2018.01A HDF5 beside the extracted source package, then run run_data_audit.sh"
+}

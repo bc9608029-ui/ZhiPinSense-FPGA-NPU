@@ -1,0 +1,75 @@
+{
+  "token": "M29-RML24-FIX10CLASS24-ORIGINAL-RADIOML-DC-AB1-DC-TRANSPORT-ADAPTATION-CONTRACT",
+  "authority_note": "本契约由 dc-ab1 任务固化; singlesdr 与 dualsdr 两个板端 loader/runner 均以本文件 + scripts/radioml_dc_adapt.py + board_package/radioml_dc_adapt.hpp 为唯一权威; direct 路径的 18 列清单/转换仍以 tx_derived_conversion_contract.json 为权威, 本文件是其增量。",
+  "frozen_identity": {
+    "model_json_sha256": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+    "model_raw_sha256": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+    "ckpt_sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+    "training_input_contract": "np.ascontiguousarray(X[row].T).astype(np.float32) -> [2,1024] f32 LE (row0=I, row1=Q); no DC/normalize/resample/filter/augment",
+    "label_order_24": [
+      "OOK", "4ASK", "8ASK", "BPSK", "QPSK", "8PSK", "16PSK", "32PSK",
+      "16APSK", "32APSK", "64APSK", "128APSK", "16QAM", "32QAM", "64QAM",
+      "128QAM", "256QAM", "AM-SSB-WC", "AM-SSB-SC", "AM-DSB-WC", "AM-DSB-SC",
+      "FM", "GMSK", "OQPSK"
+    ]
+  },
+  "adaptation_tags": {
+    "direct": "cyclic_tile_1024_to_53760_rms2048_ci16",
+    "dc_transport": "dc_transport_cyclic_tile_1024_to_53760_rms2048_ci16",
+    "note": "两条路径共用同一 phase 名, 由 --adaptation=direct|dc-transport 区分; direct 逐字节不变, 无秘密改尺度"
+  },
+  "dc_transport_contract": {
+    "forward_dc": "dc = mean(iq); dc_i = dc.real, dc_q = dc.imag (per-I/Q 均值, 可负/零)",
+    "forward_ac": "ac = iq - dc (逐样本复减)",
+    "forward_ac_rms": "ac_rms = sqrt(mean(|ac|^2)) (复 RMS, 与生产 native_rms 同口径)",
+    "forward_scale": "tx_scale = 2048 / ac_rms; CI16 = lround(ac * tx_scale), clamp [-32768,32767] (lround = half-away-from-zero, 与 direct 一致)",
+    "forward_inverse_scale": "inverse_scale = ac_rms / 2048",
+    "duplication": "cyclic_tile_1024_to_payload 作用于 ac (与 direct 同一 cyclic tile, 52 周期 + 512)",
+    "target_rms": 2048.0,
+    "inverse_stage1": "生产恢复 (coarse/fine CFO + 分数定时 + wide-linear + payload 增益), 与 direct 完全一致, 无 DC 参数参与",
+    "inverse_stage2": "counts_r = counts[:1024] * inverse_scale (单次乘法, counts -> AC f32 域)",
+    "inverse_stage3": "iq_r = counts_r + (dc_i + j*dc_q) (DC 加回)",
+    "model_window": "first 1024 complex samples of the RECOVERED payload, 经阶段 2 + 阶段 3 后送入模型 (direct: 阶段 1 + *unscale, 无阶段 3)",
+    "no_double_undo": "inverse_scale 是 counts->AC 域的单次尺度, 与 unscale(direct) 同角色; 恢复链路内部增益恢复(阶段1)与单次乘法(阶段2)是不同量, 绝无双重还原",
+    "resampling": "NONE"
+  },
+  "manifest_layout": {
+    "direct_columns": 18,
+    "dc_transport_columns": 22,
+    "dc_extra_header": "dc_i\tdc_q\tac_rms\tinverse_scale",
+    "dc_extra_fields": {
+      "dc_i": "mean(iq).real (finite, any sign)",
+      "dc_q": "mean(iq).imag (finite, any sign)",
+      "ac_rms": "sqrt(mean(|ac|^2)) (finite, > 0)",
+      "inverse_scale": "ac_rms / 2048 (finite, > 0)"
+    },
+    "dc_params_bound_to": "input model_input_sha256 (原始 .bin 的 SHA-256), 绝不绑定类别/识别结果",
+    "loader_parse_rule": "按 --adaptation 选择 18 或 22 列; 表头逐字节比对, fail-closed"
+  },
+  "shared_implementation": {
+    "host": "scripts/radioml_dc_adapt.py (adapt_forward / adapt_inverse / direct_ideal_roundtrip / dc_ideal_roundtrip)",
+    "board": "board_package/radioml_dc_adapt.hpp (rml24dc: kAdaptationDirect/kAdaptationDcTransport/valid_adaptation/dc_extra_header/DcParams/reconstruct_dc_window)",
+    "note": "DC 数学只有一份; singlesdr 与 dualsdr 两个 runner 均 include radioml_dc_adapt.hpp, 绝无两套计算"
+  },
+  "digital_verification": {
+    "frames": "short24 (24 帧, 每类 1 帧 @30dB 最小 selection_id)",
+    "procedure": "adapt_forward -> adapt_inverse -> 冻结 BF16 推理",
+    "report": "数值误差 / finiteness / 裁剪 + 逐帧预测一致 (分类一致, corr/nMSE 不能替代)",
+    "honest_boundary": "数字验证证明 DC 适配确定性往返; 生产恢复在无 RF 时退化为恒等, 不声明 C++ 恢复的 Python 等效物"
+  },
+  "red_lines_unchanged": [
+    "direct 逐字节不变: --adaptation=direct 的产物与行为 == 现有",
+    "共享实现一份: DC 数学只在 radioml_dc_adapt.{py,hpp}",
+    "三段式不双重还原: 阶段1 RF 增益 / 阶段2 TX 尺度 / 阶段3 DC 加回 严格分离",
+    "DC 参数绑定 input SHA: 门拒/缺失 = 失败(不从分母剔除), hard_invalid 绝不强制",
+    "no training / no model swap / no per-class recovery or capture selection",
+    "residual 0.100 gate + max 3 recapture + last-capture selection",
+    "RMS2048 ceiling + TX attenuation <= -40 dB",
+    "RX manual gain 35 dB, center 2.4 GHz, rate 2.56 Msps, RX/TX BW 18 MHz"
+  ],
+  "phases": {
+    "singlesdr": "radioml-original-singlesdr-ab-24class-bf16-fix10",
+    "dualsdr": "radioml-original-dualsdr-ab-24class-bf16-fix10",
+    "coexist_note": "both phase names + --adaptation 必须共存于 gate9_phase.hpp + board_gate9_full_chain_rml23.cpp 的集成补丁"
+  }
+}

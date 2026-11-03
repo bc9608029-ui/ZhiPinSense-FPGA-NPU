@@ -1,0 +1,4 @@
+import pathlib,json
+p=pathlib.Path(__file__).parent;rows={r['seq']:r for r in json.loads((p/'challenge78_results.json').read_text())['records']};a=json.loads((p/'challenge78_audit.json').read_text())
+a['end_to_end_muted_rejections']=sum(not rows[i]['candidate'].get('finite',True) and rows[i]['candidate'].get('pred',-1)==-1 for i in range(72,78));a['false_muted_classifications']=sum(rows[i]['candidate'].get('finite',False) and rows[i]['candidate'].get('pred',-1)>=0 for i in range(72,78));a['public_discovery_false_hits']=[{'seq':i,'scan_hit':rows[i]['scan_hit'],'recovery_error':rows[i]['candidate'].get('error')} for i in range(72,78) if 'scan_hit' in rows[i]]
+(p/'challenge78_audit.json').write_text(json.dumps(a,indent=2));print(json.dumps({k:a[k] for k in ['end_to_end_muted_rejections','false_muted_classifications','public_discovery_false_hits']}))

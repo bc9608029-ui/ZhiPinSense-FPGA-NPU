@@ -1,0 +1,82 @@
+{
+  "status": "STAGE7_RUNTIME_RF_HDMI_SD_BOOT_VERIFIED_STABILITY_DEFERRED",
+  "final_board_root": "/root/rml24_stage7_execution_20261027/final_waterfall_fix1",
+  "final_runs": [
+    {
+      "correct": 237,
+      "total": 240,
+      "accuracy": 0.9875,
+      "failure_count": 0,
+      "missing_sequences": []
+    },
+    {
+      "correct": 238,
+      "total": 240,
+      "accuracy": 0.9916666666666667,
+      "failure_count": 0,
+      "missing_sequences": []
+    }
+  ],
+  "correct": 475,
+  "total": 480,
+  "accuracy": 0.9895833333333334,
+  "historical_independent_validation_correct": 463,
+  "historical_independent_validation_total": 480,
+  "final_retest_is_new_independent_dataset": false,
+  "hdmi_physical": "User-confirmed classify/spectrum-waterfall/constellation photos saved",
+  "model_changed": false,
+  "recovery_changed": false,
+  "ui_only_changed_files": [
+    "board_package/board_ui_live_rml24_final.cpp",
+    "board_package/unix_socket_server.hpp"
+  ],
+  "ui_process_checks": {
+    "process_exit_zero": true,
+    "two_stream_resets": true,
+    "first_row_per_stream": true,
+    "history_advances": true,
+    "duplicate_does_not_advance": true,
+    "malformed_rejected": true
+  },
+  "ui_same_tensor": {
+    "passed": 480,
+    "total": 480
+  },
+  "no_tx_probe": {
+    "kind": "REAL_RX_WITH_PC_TX_CLOSED",
+    "npu_called": false,
+    "records": [
+      {
+        "seq": 0,
+        "recovery_rejected": true,
+        "error": "RuntimeError: no usable public preamble",
+        "canonical_state": "RECOVERY_FAILED",
+        "prediction": null,
+        "no_classification_sent": true
+      },
+      {
+        "seq": 1,
+        "recovery_rejected": true,
+        "error": "RuntimeError: no usable public preamble",
+        "canonical_state": "RECOVERY_FAILED",
+        "prediction": null,
+        "no_classification_sent": true
+      },
+      {
+        "seq": 2,
+        "recovery_rejected": true,
+        "error": "RuntimeError: no usable public preamble",
+        "canonical_state": "RECOVERY_FAILED",
+        "prediction": null,
+        "no_classification_sent": true
+      }
+    ],
+    "restore_errors": [],
+    "all_rejected_without_class": true
+  },
+  "boot_persistence": "SD uEnv + verified download.bit + enabled UI/RX services; software reboot and physical off/on verified",
+  "pending": [],
+  "board_package_sha256": "beac8e07f661e1e4dcdea74c9ad5fd4324cfb72ea4dcc25667b0675e42023062",
+  "stability_test": "DEFERRED_BY_EXPLICIT_USER_REQUEST; do not start automatically",
+  "boot_handoff": "E:\\嵌赛\\rml24_boot_persistence_20261027\\HANDOFF_BOOT_PERSISTENCE.md"
+}

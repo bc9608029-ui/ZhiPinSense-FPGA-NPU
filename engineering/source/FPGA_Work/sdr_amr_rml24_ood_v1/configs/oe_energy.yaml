@@ -1,0 +1,26 @@
+# Outlier Exposure + Energy training (M13/M14).
+#
+# Adds an OE/Energy auxiliary term to the closed-set CE loss so the Energy score
+# becomes more separable between ID and OOD.  The OE auxiliary family is strictly
+# leave-one-family-out isolated from the final OOD test family.
+
+_base: configs/rml24_base.yaml
+
+seed: 3407
+output_root: runs/rml24_oe_energy
+
+oe_energy:
+  enabled: true
+  temperature: 1.0
+  margin_in: 0.0      # E_ID target (relu(E_ID - m_in)^2)
+  margin_out: -10.0   # E_OOD target (relu(m_out - E_OOD)^2)
+  lambda: 0.1
+  oe_family: near     # OE auxiliary uses the "near" family
+  ood_val_family: far # final OOD validation uses the "far" family (isolated)
+
+training:
+  reconstruction_weight: 0.0
+
+rml24:
+  model_name: RML2018_24_ROBUST_CANDIDATE
+  apply_channel_augmentation: false

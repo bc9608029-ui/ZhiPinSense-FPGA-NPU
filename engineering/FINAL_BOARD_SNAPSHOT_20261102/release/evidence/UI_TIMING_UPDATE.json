@@ -1,0 +1,35 @@
+{
+  "status": "BOARD_BUILD_AND_HISTORY_TEST_PASS_RF_SHORT_PENDING",
+  "changes": [
+    {
+      "file": "candidate/ui_sw/signal_history.hpp",
+      "before": "2248f70220930268d1672e3c26697825623c11146c5444098349c4f8876c2a32",
+      "after": "2578793e94e7ee136e6a391a416193f0aecdc6b1d7f3b3442ae5989ff4a53fd9"
+    },
+    {
+      "file": "candidate/ui_sw/ui_render.cpp",
+      "before": "895d82efb402319e246ffc903cdae40590e5ccefc919d8864864b9f385a1addd",
+      "after": "40c98dc55054a67d7acbf60cdd40b72317054ef5626b4eec5bd174632897b5fc"
+    },
+    {
+      "file": "candidate/board_package/board_ui_live_rml24_final.cpp",
+      "before": "083a3ddf27724f3efbc250ad4b92a00cb7ff1204c99b021c9105c89fa3130c42",
+      "after": "dbf98dcf3cd10a3020140edc7709b5f985930ab8558902e530430f12487c7b3a"
+    },
+    {
+      "file": "candidate/rml24_final/board_runtime/standalone_receiver.py",
+      "before": "4f30870996ba62a5347f23ae627874fc79c4a0aefe23f270d3cafe0568c9d75f",
+      "after": "9b43e19ef4125881e032786ed9ccf708077ae74289a4adb65448851f3bbbc01b"
+    },
+    {
+      "file": "candidate/rml24_final/board_runtime/receiver_repeat_mean_gapfix1.py",
+      "after": "97e9c46259c727ae4897e6bfc97ed8e8a30f50580757a367abb9f39962aba4d4"
+    }
+  ],
+  "ui_binary_sha": "b6d67913b052244bc7b2dffab63ac55492891bdd319518b4e1b71b0cc78ddd35",
+  "receiver_sha": "9b43e19ef4125881e032786ed9ccf708077ae74289a4adb65448851f3bbbc01b",
+  "model_changed": false,
+  "rf_algorithm_changed": false,
+  "bit_changed": false,
+  "official_service_changed": false
+}

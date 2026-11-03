@@ -1,0 +1,8 @@
+# P1 variant — clean-supervised denoising target: MSE(denoised_iq, clean_iq).
+# Identical to P0 except training.loss.variant (and its output_root).
+_base: configs/ad_amr_v1.yaml
+output_root: outputs/ad_amr_v1/P1
+training:
+  loss:
+    variant: P1
+    alpha: 0.1

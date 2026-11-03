@@ -1,0 +1,116 @@
+================================================================================
+RML23 Stage H-E / Route E fix4 — 判责仪表修复交付
+================================================================================
+状态 : M29-RML23-IQ-DIGITAL-LOOPBACK-READY-FOR-BOARD-TEST
+       （不因本轮 host 测试改 DIGITAL_LOOPBACK_CAPABILITY_NOT_PROVEN / RF_LEAKAGE_NOT_PROVEN
+        为 PROVEN；不写 *_PASS / PROJECT_COMPLETE / FINAL_* / BOARD_TEST_PASS）
+基线 : fix3 全量 sdr_rml23_live_board_package_iq_digital_loopback_fix3.tar.gz  (f3128a68…)
+性质 : 纯诊断仪表正确性增量，不碰生产链路 / 模型 / 标签 / 预处理 / RTL / XDC / 位流 / Flash
+
+--------------------------------------------------------------------------------
+1. 修复的 fix3 仪表缺陷清单
+--------------------------------------------------------------------------------
+  (a) kind/target_rms 未传播 -> sweep_one_level() 增 kind/target_rms 参数并写入
+      SweepLevel；sweep_all_levels() 双层循环传入。
+  (b) host 镜像不符 libiio 语义 -> format_convert_raw_to_host() 先限定容器宽
+      (length_bits) 再逻辑右移(shift)，仅 is_fully_defined=false 时 mask/sign-extend；
+      0xFFE0(-32) 不再被无条件 &0x0FFF 成假 +4064。
+  (c) 直接比 counts 可能错 -> 新增 COUNT/NORMALIZED 双域指标，满量程从 DataFormatInfo
+      推导(2^(bits-1))，TX16 fs=32768 / RX12 fs=2048 不硬编码。
+
+--------------------------------------------------------------------------------
+2. host 镜像 vs 官方 libiio 语义对照
+--------------------------------------------------------------------------------
+  libiio iio_channel_convert: 复制/端序 -> 容器 shift -> 仅 is_fully_defined=false 时
+  sign-extend(signed) / clear-high-bits(unsigned)；is_fully_defined=true 不得无条件
+  mask 到 bits。fix4 镜像严格对齐；format_convert_raw_to_host_force_signed 为独立
+  诊断视图(标注 force_signed_diagnostic)，非 libiio 镜像、不进生产 convert 路径。
+
+--------------------------------------------------------------------------------
+3. count / normalized 双域公式
+--------------------------------------------------------------------------------
+  count_gain_db      = 20·log10(rx_count_rms / tx_count_rms)
+  normalized_gain_db = 20·log10((rx_count/2^(rx_bits-1)) / (tx_count/2^(tx_bits-1)))
+  COUNT_DOMAIN_SCALE = normalized ~0 dB 且 count gain 符 TX16/RX12 位宽差(-24.08 dB)。
+
+--------------------------------------------------------------------------------
+4. 判责优先级（A→G）与阈值
+--------------------------------------------------------------------------------
+  A  rx_libiio_diverged            -> LIBIIO_CONVERT_SEMANTICS
+  B  capture失败/RX全零/有效档不足 -> NOT_PROVEN
+  C  报告解码不一致 且 非报告shift同时恢复corr+尺度+无新削顶 -> FORMAT_MISALIGNMENT
+  D  报告格式 corr < 0.9           -> NOT_PROVEN
+  E  normalized~0(<=3dB): tx!=rx 位宽且count符位宽差 -> COUNT_DOMAIN_SCALE；同位宽 count~0 -> UNITY
+  F  normalized< -3dB              -> FIXED_ATTENUATION
+  G  其余                          -> NOT_PROVEN
+  阈值: kFidelityCorrThreshold=0.9 / kGainPreservedDb=3.0 / kQuantFloorCounts=2.0；
+  有效档 = target_rms>=64 且无削顶且 RX>=量化底噪；corr 尺度不变 -> 错位判据用逻辑增益!=计数增益。
+
+--------------------------------------------------------------------------------
+5. host 测试逐项结果
+--------------------------------------------------------------------------------
+  test_iq_digital_loopback_sweep  14 场景 pass=92 fail=0
+  test_iq_digital_loopback / test_iq_digital_loopback_sequence /
+  test_route_e_raw_rx_output_fields 无回归
+  run_tests.sh -> ALL HOST TESTS PASSED
+
+--------------------------------------------------------------------------------
+6. analyzer 自检结果
+--------------------------------------------------------------------------------
+  analyze_iq_digital_loopback_sweep.py --selfcheck -> 6/6 PASS
+    (TX16/RX12 计数域 / 真固定衰减 / shift 错误 / libiio-host 镜像错误 / corr 不足 / 削顶)
+  analyzer 独立重推 A→G 并与板端 token 比对 -> root_cause_match
+
+--------------------------------------------------------------------------------
+7. syntax check 结果
+--------------------------------------------------------------------------------
+  host_tests/syntax_check.sh -> gate9_rml23: syntax OK (gate7/gate9/gate10 亦 OK)
+
+--------------------------------------------------------------------------------
+8. dependency closure 审计结果
+--------------------------------------------------------------------------------
+  package_iq_digital_loopback_fix4.py -> dependency-closure audit: OK
+  (所有改动头文件均由 ROUTE_E_FIX4_FILES 覆盖，合并全量不会静默回退到 fix3 基线)
+
+--------------------------------------------------------------------------------
+9. patch 与全量包（2 工件）
+--------------------------------------------------------------------------------
+  独立补丁:
+    dist/sdr_rml23_live_iq_digital_loopback_fix4_patch.tar.gz
+    88819 字节 / 10 文件 / manifest 10 行
+    SHA256 6a88f03f2296ad7ddc2394fd583284c886622253f4ca55b07a41d714260c5194
+  合并全量:
+    dist/sdr_rml23_live_board_package_iq_digital_loopback_fix4.tar.gz
+    3762987 字节 / 534 文件 / manifest 534 行
+    SHA256 48334de20bd2a3c7c6fc6adc17879b264f269f22e6a30d2c8112eff0e90da151
+  两跑确定性: 两次打包 SHA 完全一致；独立解包 sha256sum -c 全 OK (10/534)。
+
+--------------------------------------------------------------------------------
+10. 历史包未覆盖证明
+--------------------------------------------------------------------------------
+  fix3 全量 f3128a68… / fix3 patch c87b2b73… / fix2 c841cee4… / 2d713085… /
+  fix1 3b925f3b… / c6650a4c… 及更早全部保留；本轮仅新增 fix4 patch + fix4 全量。
+
+--------------------------------------------------------------------------------
+11. 板端复测命令（用户执行；不强制写死 ip）
+--------------------------------------------------------------------------------
+  ./scripts/run_gate9_rml23.sh --phase=iq-digital-loopback-sweep \
+    --center=2400000000 --rx-gain=10 --tx-atten=-40 \
+    --frozen-dir=DIR --input-kind=radioml-reconstructed-2p56m \
+    --sweep-kinds=tone,ramp,prbs --sweep-levels=64,128,256,512 \
+    > /root/rml23_route_e_fix4_sweep.log 2>&1
+  python3 -I scripts/analyze_iq_digital_loopback_sweep.py \
+    --log /root/rml23_route_e_fix4_sweep.log --json /root/rml23_route_e_fix4_sweep.json
+  预期: SIGNCHECK ok=1; LEVEL 有 kind/target_rms; rx_libiio==rx_host_mirror;
+        count_gain≈-24.08 normalized≈0; SHIFT_SCAN shift0 corr≈1;
+        仅 corr 达标才命中 COUNT_DOMAIN_SCALE(否则 NOT_PROVEN);
+        RECOMMENDATION action=--digital-loopback-tx-scale=16 semantics=rx_count_domain_to_tx_count_domain。
+  第二步(仅确认 COUNT_DOMAIN_SCALE 后): --digital-loopback-tx-scale=16 重跑 4 类 fidelity 门(不加 signed)。
+  第三步: 全部目标文件达 PRESERVES_IQ 才允许扩展 24 类。
+
+--------------------------------------------------------------------------------
+12. 状态
+--------------------------------------------------------------------------------
+  状态保持 M29-RML23-IQ-DIGITAL-LOOPBACK-READY-FOR-BOARD-TEST；本交付不声称板端
+  回环保真已通过。COUNT_DOMAIN_SCALE 在编码阶段未写成已证明结论。
+================================================================================

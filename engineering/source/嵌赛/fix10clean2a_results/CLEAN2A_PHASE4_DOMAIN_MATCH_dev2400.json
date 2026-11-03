@@ -1,0 +1,624 @@
+{
+  "set": "dev2400",
+  "tolerances": {
+    "papr_mean_db": 1.8,
+    "occupied_bw_99_frac": 0.25,
+    "occupied_bw_20db_frac": 0.6,
+    "inst_freq_std_hz": 0.5,
+    "psd_corr": 0.3
+  },
+  "inst_freq_excluded": {
+    "classes": [
+      "AM-SSB-SC",
+      "AM-SSB-WC"
+    ],
+    "rationale": "AM-SSB inst-freq is noise-dominated in the measured reference and audio-content-dominated in the clean signal (see profile SNR_MIN note, probe42/probe45); excluded from hard-fail, still reported."
+  },
+  "n_fail": 0,
+  "per_class": {
+    "OOK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.13186359405517578,
+        "occupied_bw_99_frac": 0.01694915239528871,
+        "occupied_bw_20db_frac": 0.06818181738842977,
+        "inst_freq_std_hz": 0.04758398637677533,
+        "psd_corr": 0.07099102587145445
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.4714001417160034,
+        "papr_mean_db": 5.500479698181152,
+        "occupied_bw_99_frac": 0.1171875,
+        "occupied_bw_20db_frac": 0.080078125,
+        "inst_freq_std_hz": 20146.99609375
+      },
+      "measured": {
+        "rms_mean": 1.4714096784591675,
+        "papr_mean_db": 5.632343292236328,
+        "occupied_bw_99_frac": 0.115234375,
+        "occupied_bw_20db_frac": 0.0859375,
+        "inst_freq_std_hz": 19231.8671875
+      }
+    },
+    "4ASK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.004790306091308594,
+        "occupied_bw_99_frac": 0.017857142693877552,
+        "occupied_bw_20db_frac": 0.0,
+        "inst_freq_std_hz": 0.10426715568122355,
+        "psd_corr": 0.07128757208881087
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.752500057220459,
+        "papr_mean_db": 6.07722282409668,
+        "occupied_bw_99_frac": 0.111328125,
+        "occupied_bw_20db_frac": 0.001953125,
+        "inst_freq_std_hz": 15645.90625
+      },
+      "measured": {
+        "rms_mean": 1.7524853944778442,
+        "papr_mean_db": 6.082013130187988,
+        "occupied_bw_99_frac": 0.109375,
+        "occupied_bw_20db_frac": 0.001953125,
+        "inst_freq_std_hz": 14168.587890625
+      }
+    },
+    "8ASK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.015182018280029297,
+        "occupied_bw_99_frac": 0.0,
+        "occupied_bw_20db_frac": 0.0,
+        "inst_freq_std_hz": 0.07877261247730363,
+        "psd_corr": 0.07146702891048906
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.9116002321243286,
+        "papr_mean_db": 5.969794750213623,
+        "occupied_bw_99_frac": 0.107421875,
+        "occupied_bw_20db_frac": 0.001953125,
+        "inst_freq_std_hz": 12048.279296875
+      },
+      "measured": {
+        "rms_mean": 1.9115898609161377,
+        "papr_mean_db": 5.984976768493652,
+        "occupied_bw_99_frac": 0.107421875,
+        "occupied_bw_20db_frac": 0.001953125,
+        "inst_freq_std_hz": 11168.5068359375
+      }
+    },
+    "BPSK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.13460588455200195,
+        "occupied_bw_99_frac": 0.031249999750000004,
+        "occupied_bw_20db_frac": 0.027397260081816477,
+        "inst_freq_std_hz": 0.002729205509070648,
+        "psd_corr": 0.07183308632715824
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 4.719680309295654,
+        "occupied_bw_99_frac": 0.12890625,
+        "occupied_bw_20db_frac": 0.146484375,
+        "inst_freq_std_hz": 24330.25390625
+      },
+      "measured": {
+        "rms_mean": 1.0024335384368896,
+        "papr_mean_db": 4.854286193847656,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 24396.837890625
+      }
+    },
+    "QPSK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.14230728149414062,
+        "occupied_bw_99_frac": 0.015624999875000002,
+        "occupied_bw_20db_frac": 0.027397260081816477,
+        "inst_freq_std_hz": 0.02442880646844341,
+        "psd_corr": 0.0739898320202298
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 4.268583297729492,
+        "occupied_bw_99_frac": 0.126953125,
+        "occupied_bw_20db_frac": 0.146484375,
+        "inst_freq_std_hz": 12358.759765625
+      },
+      "measured": {
+        "rms_mean": 1.0023138523101807,
+        "papr_mean_db": 4.410890579223633,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 12668.2294921875
+      }
+    },
+    "8PSK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.10743141174316406,
+        "occupied_bw_99_frac": 0.031249999750000004,
+        "occupied_bw_20db_frac": 0.027397260081816477,
+        "inst_freq_std_hz": 0.003203387883981035,
+        "psd_corr": 0.07642670100689186
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 4.104308128356934,
+        "occupied_bw_99_frac": 0.12890625,
+        "occupied_bw_20db_frac": 0.146484375,
+        "inst_freq_std_hz": 10535.2177734375
+      },
+      "measured": {
+        "rms_mean": 1.0024807453155518,
+        "papr_mean_db": 4.211739540100098,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 10501.5771484375
+      }
+    },
+    "16PSK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.07486867904663086,
+        "occupied_bw_99_frac": 0.015624999875000002,
+        "occupied_bw_20db_frac": 0.027397260081816477,
+        "inst_freq_std_hz": 0.010791611045209515,
+        "psd_corr": 0.0743732549184487
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 4.132297515869141,
+        "occupied_bw_99_frac": 0.126953125,
+        "occupied_bw_20db_frac": 0.146484375,
+        "inst_freq_std_hz": 10355.240234375
+      },
+      "measured": {
+        "rms_mean": 1.0023000240325928,
+        "papr_mean_db": 4.2071661949157715,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 10244.68359375
+      }
+    },
+    "32PSK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.0650320053100586,
+        "occupied_bw_99_frac": 0.031249999750000004,
+        "occupied_bw_20db_frac": 0.027397260081816477,
+        "inst_freq_std_hz": 0.009403095338145994,
+        "psd_corr": 0.07757106184967766
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 4.127057075500488,
+        "occupied_bw_99_frac": 0.12890625,
+        "occupied_bw_20db_frac": 0.146484375,
+        "inst_freq_std_hz": 10335.595703125
+      },
+      "measured": {
+        "rms_mean": 1.0024456977844238,
+        "papr_mean_db": 4.192089080810547,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 10239.314453125
+      }
+    },
+    "16APSK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.051084041595458984,
+        "occupied_bw_99_frac": 0.031249999750000004,
+        "occupied_bw_20db_frac": 0.027397260081816477,
+        "inst_freq_std_hz": 0.01105996813056651,
+        "psd_corr": 0.07412812374592692
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 4.817439079284668,
+        "occupied_bw_99_frac": 0.12890625,
+        "occupied_bw_20db_frac": 0.146484375,
+        "inst_freq_std_hz": 10655.162109375
+      },
+      "measured": {
+        "rms_mean": 1.0021979808807373,
+        "papr_mean_db": 4.868523120880127,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 10538.60546875
+      }
+    },
+    "32APSK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.11765861511230469,
+        "occupied_bw_99_frac": 0.031249999750000004,
+        "occupied_bw_20db_frac": 0.027397260081816477,
+        "inst_freq_std_hz": 0.0071026793108085505,
+        "psd_corr": 0.07372394871234567
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 5.553450107574463,
+        "occupied_bw_99_frac": 0.12890625,
+        "occupied_bw_20db_frac": 0.146484375,
+        "inst_freq_std_hz": 11057.001953125
+      },
+      "measured": {
+        "rms_mean": 1.0013223886489868,
+        "papr_mean_db": 5.671108722686768,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 10979.021484375
+      }
+    },
+    "64APSK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.15732336044311523,
+        "occupied_bw_99_frac": 0.031249999750000004,
+        "occupied_bw_20db_frac": 0.027397260081816477,
+        "inst_freq_std_hz": 0.006592439651756753,
+        "psd_corr": 0.0724870047580417
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 5.607691764831543,
+        "occupied_bw_99_frac": 0.12890625,
+        "occupied_bw_20db_frac": 0.146484375,
+        "inst_freq_std_hz": 10769.33984375
+      },
+      "measured": {
+        "rms_mean": 1.0020170211791992,
+        "papr_mean_db": 5.450368404388428,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 10698.80859375
+      }
+    },
+    "128APSK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.056777000427246094,
+        "occupied_bw_99_frac": 0.015624999875000002,
+        "occupied_bw_20db_frac": 0.013698630040908238,
+        "inst_freq_std_hz": 0.0014330097218780101,
+        "psd_corr": 0.07247038468211664
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 5.59705924987793,
+        "occupied_bw_99_frac": 0.126953125,
+        "occupied_bw_20db_frac": 0.14453125,
+        "inst_freq_std_hz": 10663.4345703125
+      },
+      "measured": {
+        "rms_mean": 1.0019423961639404,
+        "papr_mean_db": 5.653836250305176,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 10678.7373046875
+      }
+    },
+    "16QAM": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.08575582504272461,
+        "occupied_bw_99_frac": 0.031249999750000004,
+        "occupied_bw_20db_frac": 0.027397260081816477,
+        "inst_freq_std_hz": 0.020013718732059545,
+        "psd_corr": 0.07560043313950193
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 5.480950832366943,
+        "occupied_bw_99_frac": 0.12890625,
+        "occupied_bw_20db_frac": 0.146484375,
+        "inst_freq_std_hz": 11038.0615234375
+      },
+      "measured": {
+        "rms_mean": 1.0012125968933105,
+        "papr_mean_db": 5.566706657409668,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 10821.4833984375
+      }
+    },
+    "32QAM": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.11133050918579102,
+        "occupied_bw_99_frac": 0.031249999750000004,
+        "occupied_bw_20db_frac": 0.027397260081816477,
+        "inst_freq_std_hz": 0.00395937412357567,
+        "psd_corr": 0.07507597835959678
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 5.298374176025391,
+        "occupied_bw_99_frac": 0.12890625,
+        "occupied_bw_20db_frac": 0.146484375,
+        "inst_freq_std_hz": 10671.8662109375
+      },
+      "measured": {
+        "rms_mean": 1.002008318901062,
+        "papr_mean_db": 5.409704685211182,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 10714.2880859375
+      }
+    },
+    "64QAM": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.0912318229675293,
+        "occupied_bw_99_frac": 0.031249999750000004,
+        "occupied_bw_20db_frac": 0.027397260081816477,
+        "inst_freq_std_hz": 0.013444504701962356,
+        "psd_corr": 0.0753945987013932
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 5.7258219718933105,
+        "occupied_bw_99_frac": 0.12890625,
+        "occupied_bw_20db_frac": 0.146484375,
+        "inst_freq_std_hz": 10984.2548828125
+      },
+      "measured": {
+        "rms_mean": 1.0027698278427124,
+        "papr_mean_db": 5.81705379486084,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 10838.5361328125
+      }
+    },
+    "128QAM": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.07975625991821289,
+        "occupied_bw_99_frac": 0.031249999750000004,
+        "occupied_bw_20db_frac": 0.013698630040908238,
+        "inst_freq_std_hz": 0.011507833260110937,
+        "psd_corr": 0.07374794655887762
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 5.503867149353027,
+        "occupied_bw_99_frac": 0.12890625,
+        "occupied_bw_20db_frac": 0.14453125,
+        "inst_freq_std_hz": 10884.6767578125
+      },
+      "measured": {
+        "rms_mean": 1.0019476413726807,
+        "papr_mean_db": 5.58362340927124,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 10760.8427734375
+      }
+    },
+    "256QAM": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.04879331588745117,
+        "occupied_bw_99_frac": 0.015624999875000002,
+        "occupied_bw_20db_frac": 0.041095890122724715,
+        "inst_freq_std_hz": 0.0009839493266095888,
+        "psd_corr": 0.07472202099561964
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 5.84358024597168,
+        "occupied_bw_99_frac": 0.126953125,
+        "occupied_bw_20db_frac": 0.1484375,
+        "inst_freq_std_hz": 10819.423828125
+      },
+      "measured": {
+        "rms_mean": 1.00253164768219,
+        "papr_mean_db": 5.892373561859131,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 10830.080078125
+      }
+    },
+    "AM-SSB-WC": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.31086283922195435,
+        "occupied_bw_99_frac": 0.0,
+        "occupied_bw_20db_frac": 0.0,
+        "inst_freq_std_hz": 0.6732956333785897,
+        "psd_corr": 0.07808027020411501
+      },
+      "excluded_metrics": [
+        "inst_freq_std_hz"
+      ],
+      "clean": {
+        "rms_mean": 11.739201545715332,
+        "papr_mean_db": 1.0834555625915527,
+        "occupied_bw_99_frac": 0.001953125,
+        "occupied_bw_20db_frac": 0.001953125,
+        "inst_freq_std_hz": 104.37455749511719
+      },
+      "measured": {
+        "rms_mean": 11.739191055297852,
+        "papr_mean_db": 0.7725927233695984,
+        "occupied_bw_99_frac": 0.001953125,
+        "occupied_bw_20db_frac": 0.001953125,
+        "inst_freq_std_hz": 319.4770812988281
+      }
+    },
+    "AM-SSB-SC": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.3647174835205078,
+        "occupied_bw_99_frac": 0.0,
+        "occupied_bw_20db_frac": 0.0,
+        "inst_freq_std_hz": 0.4707789992858845,
+        "psd_corr": 0.05976331171102345
+      },
+      "excluded_metrics": [
+        "inst_freq_std_hz"
+      ],
+      "clean": {
+        "rms_mean": 7.8328022956848145,
+        "papr_mean_db": 1.6373497247695923,
+        "occupied_bw_99_frac": 0.001953125,
+        "occupied_bw_20db_frac": 0.001953125,
+        "inst_freq_std_hz": 170.2187957763672
+      },
+      "measured": {
+        "rms_mean": 7.832800388336182,
+        "papr_mean_db": 1.2726322412490845,
+        "occupied_bw_99_frac": 0.001953125,
+        "occupied_bw_20db_frac": 0.001953125,
+        "inst_freq_std_hz": 321.6402893066406
+      }
+    },
+    "AM-DSB-WC": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.20044970512390137,
+        "occupied_bw_99_frac": 0.0,
+        "occupied_bw_20db_frac": 0.0,
+        "inst_freq_std_hz": 0.16268886850535857,
+        "psd_corr": 0.0954238420923732
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 3.8110506534576416,
+        "occupied_bw_99_frac": 0.064453125,
+        "occupied_bw_20db_frac": 0.064453125,
+        "inst_freq_std_hz": 25012.21484375
+      },
+      "measured": {
+        "rms_mean": 1.0002623796463013,
+        "papr_mean_db": 3.6106009483337402,
+        "occupied_bw_99_frac": 0.064453125,
+        "occupied_bw_20db_frac": 0.064453125,
+        "inst_freq_std_hz": 21512.388671875
+      }
+    },
+    "AM-DSB-SC": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.057878971099853516,
+        "occupied_bw_99_frac": 0.0,
+        "occupied_bw_20db_frac": 0.0,
+        "inst_freq_std_hz": 0.1640401444995391,
+        "psd_corr": 0.09965620725397484
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 4.173547267913818,
+        "occupied_bw_99_frac": 0.064453125,
+        "occupied_bw_20db_frac": 0.064453125,
+        "inst_freq_std_hz": 25012.21484375
+      },
+      "measured": {
+        "rms_mean": 0.9999603629112244,
+        "papr_mean_db": 4.115668296813965,
+        "occupied_bw_99_frac": 0.064453125,
+        "occupied_bw_20db_frac": 0.064453125,
+        "inst_freq_std_hz": 21487.416015625
+      }
+    },
+    "FM": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 0.6371078865659001,
+        "occupied_bw_99_frac": 0.16666666429629634,
+        "occupied_bw_20db_frac": 0.02631578911911358,
+        "inst_freq_std_hz": 0.0005169391930683071,
+        "psd_corr": 0.11606521431608308
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 1.035438799590338e-06,
+        "occupied_bw_99_frac": 0.08203125,
+        "occupied_bw_20db_frac": 0.076171875,
+        "inst_freq_std_hz": 514.0482788085938
+      },
+      "measured": {
+        "rms_mean": 1.0000348091125488,
+        "papr_mean_db": 0.6371089220046997,
+        "occupied_bw_99_frac": 0.0703125,
+        "occupied_bw_20db_frac": 0.07421875,
+        "inst_freq_std_hz": 514.3141479492188
+      }
+    },
+    "GMSK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 1.6990362780225041,
+        "occupied_bw_99_frac": 0.0327868849707068,
+        "occupied_bw_20db_frac": 0.0579710140625919,
+        "inst_freq_std_hz": 0.19079933380567338,
+        "psd_corr": 0.22661831792354137
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 1.035438799590338e-06,
+        "occupied_bw_99_frac": 0.123046875,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 4971.3349609375
+      },
+      "measured": {
+        "rms_mean": 1.0023951530456543,
+        "papr_mean_db": 1.6990373134613037,
+        "occupied_bw_99_frac": 0.119140625,
+        "occupied_bw_20db_frac": 0.134765625,
+        "inst_freq_std_hz": 6143.51318359375
+      }
+    },
+    "OQPSK": {
+      "ok": true,
+      "deltas": {
+        "papr_mean_db": 1.2111940383911133,
+        "occupied_bw_99_frac": 0.17187499862500003,
+        "occupied_bw_20db_frac": 0.1780821905318071,
+        "inst_freq_std_hz": 0.4307189287349999,
+        "psd_corr": 0.07509143517805039
+      },
+      "excluded_metrics": [],
+      "clean": {
+        "rms_mean": 1.0,
+        "papr_mean_db": 3.190976142883301,
+        "occupied_bw_99_frac": 0.103515625,
+        "occupied_bw_20db_frac": 0.1171875,
+        "inst_freq_std_hz": 8331.5146484375
+      },
+      "measured": {
+        "rms_mean": 1.002051591873169,
+        "papr_mean_db": 4.402170181274414,
+        "occupied_bw_99_frac": 0.125,
+        "occupied_bw_20db_frac": 0.142578125,
+        "inst_freq_std_hz": 14635.1513671875
+      }
+    }
+  }
+}

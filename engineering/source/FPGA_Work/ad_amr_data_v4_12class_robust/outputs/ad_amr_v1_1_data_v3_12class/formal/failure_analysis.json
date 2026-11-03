@@ -1,0 +1,690 @@
+{
+  "class_contract": [
+    "OOK",
+    "4ASK",
+    "AM-DSB",
+    "WBFM",
+    "2FSK",
+    "GFSK",
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "OFDM"
+  ],
+  "domains": {
+    "2026": {
+      "seed": 2026,
+      "domains": {
+        "cfo_strong": {
+          "macro_f1": 0.6095847744508085,
+          "macro_f1_drop": 0.126874,
+          "per_class_drop": [
+            0.11746,
+            0.136508,
+            0.233333,
+            0.012698,
+            0.315873,
+            0.268254,
+            0.177778,
+            0.212698,
+            0.050794,
+            0.033333,
+            0.009524,
+            0.015873
+          ],
+          "confusion_matrix": "unavailable",
+          "ranked_class_names": [
+            "2FSK",
+            "GFSK",
+            "AM-DSB",
+            "QPSK",
+            "BPSK",
+            "4ASK",
+            "OOK",
+            "8PSK",
+            "16QAM",
+            "OFDM",
+            "WBFM",
+            "64QAM"
+          ],
+          "top_degraded": [
+            {
+              "class": "2FSK",
+              "drop": 0.315873
+            },
+            {
+              "class": "GFSK",
+              "drop": 0.268254
+            },
+            {
+              "class": "AM-DSB",
+              "drop": 0.233333
+            },
+            {
+              "class": "QPSK",
+              "drop": 0.212698
+            },
+            {
+              "class": "BPSK",
+              "drop": 0.177778
+            }
+          ]
+        },
+        "phase_noise": {
+          "macro_f1": 0.7637614028797911,
+          "macro_f1_drop": -0.027303,
+          "per_class_drop": [
+            -0.049206,
+            -0.015873,
+            -0.071429,
+            -0.006349,
+            -0.069841,
+            -0.01746,
+            -0.026984,
+            -0.053968,
+            -0.001587,
+            -0.02381,
+            -0.009524,
+            0.001587
+          ],
+          "confusion_matrix": "unavailable",
+          "ranked_class_names": [
+            "OFDM",
+            "8PSK",
+            "WBFM",
+            "64QAM",
+            "4ASK",
+            "GFSK",
+            "16QAM",
+            "BPSK",
+            "OOK",
+            "QPSK",
+            "2FSK",
+            "AM-DSB"
+          ],
+          "top_degraded": [
+            {
+              "class": "OFDM",
+              "drop": 0.001587
+            },
+            {
+              "class": "8PSK",
+              "drop": -0.001587
+            },
+            {
+              "class": "WBFM",
+              "drop": -0.006349
+            },
+            {
+              "class": "64QAM",
+              "drop": -0.009524
+            },
+            {
+              "class": "4ASK",
+              "drop": -0.015873
+            }
+          ]
+        },
+        "iq_imbalance": {
+          "macro_f1": 0.7603088033722516,
+          "macro_f1_drop": -0.02385,
+          "per_class_drop": [
+            -0.068254,
+            -0.015873,
+            -0.061905,
+            -0.011111,
+            -0.031746,
+            -0.012698,
+            -0.003175,
+            -0.015873,
+            -0.044444,
+            0.019048,
+            -0.047619,
+            -0.022222
+          ],
+          "confusion_matrix": "unavailable",
+          "ranked_class_names": [
+            "16QAM",
+            "BPSK",
+            "WBFM",
+            "GFSK",
+            "4ASK",
+            "QPSK",
+            "OFDM",
+            "2FSK",
+            "8PSK",
+            "64QAM",
+            "AM-DSB",
+            "OOK"
+          ],
+          "top_degraded": [
+            {
+              "class": "16QAM",
+              "drop": 0.019048
+            },
+            {
+              "class": "BPSK",
+              "drop": -0.003175
+            },
+            {
+              "class": "WBFM",
+              "drop": -0.011111
+            },
+            {
+              "class": "GFSK",
+              "drop": -0.012698
+            },
+            {
+              "class": "4ASK",
+              "drop": -0.015873
+            }
+          ]
+        },
+        "multipath": {
+          "macro_f1": 0.6157771891827305,
+          "macro_f1_drop": 0.120682,
+          "per_class_drop": [
+            0.084127,
+            0.060317,
+            0.009524,
+            0.060317,
+            0.025397,
+            0.068254,
+            0.187302,
+            0.255556,
+            0.298413,
+            0.3,
+            -0.004762,
+            0.063492
+          ],
+          "confusion_matrix": "unavailable",
+          "ranked_class_names": [
+            "16QAM",
+            "8PSK",
+            "QPSK",
+            "BPSK",
+            "OOK",
+            "GFSK",
+            "OFDM",
+            "4ASK",
+            "WBFM",
+            "2FSK",
+            "AM-DSB",
+            "64QAM"
+          ],
+          "top_degraded": [
+            {
+              "class": "16QAM",
+              "drop": 0.3
+            },
+            {
+              "class": "8PSK",
+              "drop": 0.298413
+            },
+            {
+              "class": "QPSK",
+              "drop": 0.255556
+            },
+            {
+              "class": "BPSK",
+              "drop": 0.187302
+            },
+            {
+              "class": "OOK",
+              "drop": 0.084127
+            }
+          ]
+        },
+        "clipping": {
+          "macro_f1": 0.7080949353867675,
+          "macro_f1_drop": 0.028364,
+          "per_class_drop": [
+            -0.053968,
+            0.24127,
+            -0.061905,
+            -0.025397,
+            -0.055556,
+            0.001587,
+            -0.046032,
+            -0.092063,
+            -0.030159,
+            0.042857,
+            0.32381,
+            -0.012698
+          ],
+          "confusion_matrix": "unavailable",
+          "ranked_class_names": [
+            "64QAM",
+            "4ASK",
+            "16QAM",
+            "GFSK",
+            "OFDM",
+            "WBFM",
+            "8PSK",
+            "BPSK",
+            "OOK",
+            "2FSK",
+            "AM-DSB",
+            "QPSK"
+          ],
+          "top_degraded": [
+            {
+              "class": "64QAM",
+              "drop": 0.32381
+            },
+            {
+              "class": "4ASK",
+              "drop": 0.24127
+            },
+            {
+              "class": "16QAM",
+              "drop": 0.042857
+            },
+            {
+              "class": "GFSK",
+              "drop": 0.001587
+            },
+            {
+              "class": "OFDM",
+              "drop": -0.012698
+            }
+          ]
+        },
+        "multi_impairment": {
+          "macro_f1": 0.6032775535258025,
+          "macro_f1_drop": 0.133181,
+          "per_class_drop": [
+            0.136508,
+            0.14127,
+            0.128571,
+            0.022222,
+            0.153968,
+            0.05873,
+            0.192063,
+            0.236508,
+            0.193651,
+            0.280952,
+            0.004762,
+            0.025397
+          ],
+          "confusion_matrix": "unavailable",
+          "ranked_class_names": [
+            "16QAM",
+            "QPSK",
+            "8PSK",
+            "BPSK",
+            "2FSK",
+            "4ASK",
+            "OOK",
+            "AM-DSB",
+            "GFSK",
+            "OFDM",
+            "WBFM",
+            "64QAM"
+          ],
+          "top_degraded": [
+            {
+              "class": "16QAM",
+              "drop": 0.280952
+            },
+            {
+              "class": "QPSK",
+              "drop": 0.236508
+            },
+            {
+              "class": "8PSK",
+              "drop": 0.193651
+            },
+            {
+              "class": "BPSK",
+              "drop": 0.192063
+            },
+            {
+              "class": "2FSK",
+              "drop": 0.153968
+            }
+          ]
+        }
+      }
+    },
+    "2027": {
+      "seed": 2027,
+      "domains": {
+        "cfo_strong": {
+          "macro_f1": 0.6145038325903328,
+          "macro_f1_drop": 0.122186,
+          "per_class_drop": [
+            0.157143,
+            0.188889,
+            0.331746,
+            -0.022222,
+            0.3,
+            0.152381,
+            0.209524,
+            0.204762,
+            0.014286,
+            0.001587,
+            -0.012698,
+            -0.014286
+          ],
+          "confusion_matrix": "unavailable",
+          "ranked_class_names": [
+            "AM-DSB",
+            "2FSK",
+            "BPSK",
+            "QPSK",
+            "4ASK",
+            "OOK",
+            "GFSK",
+            "8PSK",
+            "16QAM",
+            "64QAM",
+            "OFDM",
+            "WBFM"
+          ],
+          "top_degraded": [
+            {
+              "class": "AM-DSB",
+              "drop": 0.331746
+            },
+            {
+              "class": "2FSK",
+              "drop": 0.3
+            },
+            {
+              "class": "BPSK",
+              "drop": 0.209524
+            },
+            {
+              "class": "QPSK",
+              "drop": 0.204762
+            },
+            {
+              "class": "4ASK",
+              "drop": 0.188889
+            }
+          ]
+        },
+        "phase_noise": {
+          "macro_f1": 0.7601695311731519,
+          "macro_f1_drop": -0.02348,
+          "per_class_drop": [
+            -0.033333,
+            -0.011111,
+            -0.092063,
+            0.020635,
+            -0.042857,
+            -0.014286,
+            -0.028571,
+            -0.038095,
+            -0.009524,
+            -0.031746,
+            0.006349,
+            -0.028571
+          ],
+          "confusion_matrix": "unavailable",
+          "ranked_class_names": [
+            "WBFM",
+            "64QAM",
+            "8PSK",
+            "4ASK",
+            "GFSK",
+            "BPSK",
+            "OFDM",
+            "16QAM",
+            "OOK",
+            "QPSK",
+            "2FSK",
+            "AM-DSB"
+          ],
+          "top_degraded": [
+            {
+              "class": "WBFM",
+              "drop": 0.020635
+            },
+            {
+              "class": "64QAM",
+              "drop": 0.006349
+            },
+            {
+              "class": "8PSK",
+              "drop": -0.009524
+            },
+            {
+              "class": "4ASK",
+              "drop": -0.011111
+            },
+            {
+              "class": "GFSK",
+              "drop": -0.014286
+            }
+          ]
+        },
+        "iq_imbalance": {
+          "macro_f1": 0.7555411428414636,
+          "macro_f1_drop": -0.018852,
+          "per_class_drop": [
+            -0.033333,
+            -0.08254,
+            -0.044444,
+            0.006349,
+            -0.014286,
+            0.02381,
+            -0.028571,
+            -0.019048,
+            -0.009524,
+            0.034921,
+            -0.065079,
+            -0.019048
+          ],
+          "confusion_matrix": "unavailable",
+          "ranked_class_names": [
+            "16QAM",
+            "GFSK",
+            "WBFM",
+            "8PSK",
+            "2FSK",
+            "QPSK",
+            "OFDM",
+            "BPSK",
+            "OOK",
+            "AM-DSB",
+            "64QAM",
+            "4ASK"
+          ],
+          "top_degraded": [
+            {
+              "class": "16QAM",
+              "drop": 0.034921
+            },
+            {
+              "class": "GFSK",
+              "drop": 0.02381
+            },
+            {
+              "class": "WBFM",
+              "drop": 0.006349
+            },
+            {
+              "class": "8PSK",
+              "drop": -0.009524
+            },
+            {
+              "class": "2FSK",
+              "drop": -0.014286
+            }
+          ]
+        },
+        "multipath": {
+          "macro_f1": 0.6218753138718416,
+          "macro_f1_drop": 0.114814,
+          "per_class_drop": [
+            0.104762,
+            0.093651,
+            0.003175,
+            0.073016,
+            0.038095,
+            0.028571,
+            0.180952,
+            0.257143,
+            0.271429,
+            0.320635,
+            -0.084127,
+            0.038095
+          ],
+          "confusion_matrix": "unavailable",
+          "ranked_class_names": [
+            "16QAM",
+            "8PSK",
+            "QPSK",
+            "BPSK",
+            "OOK",
+            "4ASK",
+            "WBFM",
+            "2FSK",
+            "OFDM",
+            "GFSK",
+            "AM-DSB",
+            "64QAM"
+          ],
+          "top_degraded": [
+            {
+              "class": "16QAM",
+              "drop": 0.320635
+            },
+            {
+              "class": "8PSK",
+              "drop": 0.271429
+            },
+            {
+              "class": "QPSK",
+              "drop": 0.257143
+            },
+            {
+              "class": "BPSK",
+              "drop": 0.180952
+            },
+            {
+              "class": "OOK",
+              "drop": 0.104762
+            }
+          ]
+        },
+        "clipping": {
+          "macro_f1": 0.7090459558091297,
+          "macro_f1_drop": 0.027644,
+          "per_class_drop": [
+            -0.061905,
+            0.112698,
+            -0.05873,
+            -0.012698,
+            -0.047619,
+            0.0,
+            -0.019048,
+            -0.057143,
+            -0.02381,
+            0.049206,
+            0.377778,
+            -0.057143
+          ],
+          "confusion_matrix": "unavailable",
+          "ranked_class_names": [
+            "64QAM",
+            "4ASK",
+            "16QAM",
+            "GFSK",
+            "WBFM",
+            "BPSK",
+            "8PSK",
+            "2FSK",
+            "QPSK",
+            "OFDM",
+            "AM-DSB",
+            "OOK"
+          ],
+          "top_degraded": [
+            {
+              "class": "64QAM",
+              "drop": 0.377778
+            },
+            {
+              "class": "4ASK",
+              "drop": 0.112698
+            },
+            {
+              "class": "16QAM",
+              "drop": 0.049206
+            },
+            {
+              "class": "GFSK",
+              "drop": 0.0
+            },
+            {
+              "class": "WBFM",
+              "drop": -0.012698
+            }
+          ]
+        },
+        "multi_impairment": {
+          "macro_f1": 0.6055212033331066,
+          "macro_f1_drop": 0.131168,
+          "per_class_drop": [
+            0.114286,
+            0.131746,
+            0.146032,
+            0.039683,
+            0.12381,
+            0.085714,
+            0.114286,
+            0.319048,
+            0.185714,
+            0.273016,
+            -0.003175,
+            0.052381
+          ],
+          "confusion_matrix": "unavailable",
+          "ranked_class_names": [
+            "QPSK",
+            "16QAM",
+            "8PSK",
+            "AM-DSB",
+            "4ASK",
+            "2FSK",
+            "OOK",
+            "BPSK",
+            "GFSK",
+            "OFDM",
+            "WBFM",
+            "64QAM"
+          ],
+          "top_degraded": [
+            {
+              "class": "QPSK",
+              "drop": 0.319048
+            },
+            {
+              "class": "16QAM",
+              "drop": 0.273016
+            },
+            {
+              "class": "8PSK",
+              "drop": 0.185714
+            },
+            {
+              "class": "AM-DSB",
+              "drop": 0.146032
+            },
+            {
+              "class": "4ASK",
+              "drop": 0.131746
+            }
+          ]
+        }
+      }
+    }
+  },
+  "confusion_matrix_available": false,
+  "note": "confusion pairs / root cause NOT asserted: baseline acceptance.json stores aggregate metrics only; raw per-sample predictions are required (see docs/NEEDS_AUTODL_RESULTS.md)."
+}

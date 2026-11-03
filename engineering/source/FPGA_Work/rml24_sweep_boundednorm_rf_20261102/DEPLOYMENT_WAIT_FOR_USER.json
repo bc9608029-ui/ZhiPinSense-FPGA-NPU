@@ -1,0 +1,5 @@
+{
+  "deployment_authorized_now": false,
+  "reason": "User requests notification before final deployment; wait for screen powered confirmation. Continue tests/preparation only.",
+  "ready_file_must_not_be_created_without_user_confirmation": true
+}

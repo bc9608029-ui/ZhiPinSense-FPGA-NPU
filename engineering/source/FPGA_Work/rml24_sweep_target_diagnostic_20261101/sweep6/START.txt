@@ -1,0 +1,8 @@
+python3 /root/rml24_three_modes_execution_20261029/fpga_ui_integgration_20261031/sweep_target_device.py start sweep6
+
+Traceback (most recent call last):
+  File "/root/rml24_three_modes_execution_20261029/fpga_ui_integration_20261031/sweep_target_device.py", line 12, in <module>
+    assert not run.exists();assert shutil.disk_usage('/').free>int(1.2*1024**3);assert 'rml24_pl_sha256=f42dd12f03bf81c65978b7034b45808efd5035f6a358cc54710f2404530a057c' in Path('/proc/cmdline').read_text();run.parent.mkdir(parents=True,exist_ok=True)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+(base) root@U:~# 

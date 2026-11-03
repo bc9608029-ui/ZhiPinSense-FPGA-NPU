@@ -1,0 +1,316 @@
+{
+  "n_real_frames": 78,
+  "n_radioml_frames": 200,
+  "baseline_top1": {
+    "128QAM": 5,
+    "16QAM": 21,
+    "256QAM": 37,
+    "64QAM": 15
+  },
+  "label_order_24": [
+    "OOK",
+    "4ASK",
+    "8ASK",
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16PSK",
+    "32PSK",
+    "16APSK",
+    "32APSK",
+    "64APSK",
+    "128APSK",
+    "16QAM",
+    "32QAM",
+    "64QAM",
+    "128QAM",
+    "256QAM",
+    "AM-SSB-WC",
+    "AM-SSB-SC",
+    "AM-DSB-WC",
+    "AM-DSB-SC",
+    "FM",
+    "GMSK",
+    "OQPSK"
+  ],
+  "rows": [
+    {
+      "transform": "1_no_processing_baseline",
+      "compute_cost": "O(N)",
+      "board_deployable": "memcpy (already identity)",
+      "qpsk_top1_count": 0,
+      "qpsk_top1_ratio": 0.0,
+      "qpsk_avg_prob": 2.2e-05,
+      "mean_max_confidence": 0.88084,
+      "logits_l1_delta_vs_baseline": 0.0,
+      "radioml_golden_qpsk_count": 200,
+      "radioml_golden_qpsk_ratio": 1.0,
+      "real_confusion_histogram": {
+        "128QAM": 5,
+        "16QAM": 21,
+        "256QAM": 37,
+        "64QAM": 15
+      },
+      "real_top1_qpsk_vs_qam": {
+        "QPSK": 0,
+        "QAM": 78
+      },
+      "transform_us_per_frame": 0.76
+    },
+    {
+      "transform": "2_per_frame_complex_dc_removal",
+      "compute_cost": "O(N)",
+      "board_deployable": "per-frame mean subtract (deployable)",
+      "qpsk_top1_count": 0,
+      "qpsk_top1_ratio": 0.0,
+      "qpsk_avg_prob": 0.000252,
+      "mean_max_confidence": 0.893874,
+      "logits_l1_delta_vs_baseline": 132.881531,
+      "radioml_golden_qpsk_count": 111,
+      "radioml_golden_qpsk_ratio": 0.555,
+      "real_confusion_histogram": {
+        "128QAM": 5,
+        "16QAM": 11,
+        "256QAM": 49,
+        "64QAM": 13
+      },
+      "real_top1_qpsk_vs_qam": {
+        "QPSK": 0,
+        "QAM": 78
+      },
+      "transform_us_per_frame": 58.95
+    },
+    {
+      "transform": "3_rms_norm_to_radioml",
+      "compute_cost": "O(N)",
+      "board_deployable": "per-frame unit-RMS scale (deployable)",
+      "qpsk_top1_count": 1,
+      "qpsk_top1_ratio": 0.0128,
+      "qpsk_avg_prob": 0.014748,
+      "mean_max_confidence": 0.85254,
+      "logits_l1_delta_vs_baseline": 108.009628,
+      "radioml_golden_qpsk_count": 200,
+      "radioml_golden_qpsk_ratio": 1.0,
+      "real_confusion_histogram": {
+        "128QAM": 18,
+        "16QAM": 15,
+        "256QAM": 34,
+        "64QAM": 10,
+        "QPSK": 1
+      },
+      "real_top1_qpsk_vs_qam": {
+        "QPSK": 1,
+        "QAM": 77
+      },
+      "transform_us_per_frame": 106.41
+    },
+    {
+      "transform": "4_dc_plus_rms",
+      "compute_cost": "O(N)",
+      "board_deployable": "DC remove + RMS scale (deployable)",
+      "qpsk_top1_count": 0,
+      "qpsk_top1_ratio": 0.0,
+      "qpsk_avg_prob": 0.000232,
+      "mean_max_confidence": 0.874834,
+      "logits_l1_delta_vs_baseline": 170.219666,
+      "radioml_golden_qpsk_count": 110,
+      "radioml_golden_qpsk_ratio": 0.55,
+      "real_confusion_histogram": {
+        "128QAM": 17,
+        "16QAM": 8,
+        "256QAM": 47,
+        "64QAM": 6
+      },
+      "real_top1_qpsk_vs_qam": {
+        "QPSK": 0,
+        "QAM": 78
+      },
+      "transform_us_per_frame": 138.55
+    },
+    {
+      "transform": "5_fixed_cfo_plus250",
+      "compute_cost": "O(N)",
+      "board_deployable": "complex NCO mix (deployable)",
+      "qpsk_top1_count": 1,
+      "qpsk_top1_ratio": 0.0128,
+      "qpsk_avg_prob": 0.00628,
+      "mean_max_confidence": 0.844744,
+      "logits_l1_delta_vs_baseline": 106.954506,
+      "radioml_golden_qpsk_count": 200,
+      "radioml_golden_qpsk_ratio": 1.0,
+      "real_confusion_histogram": {
+        "128QAM": 7,
+        "16QAM": 24,
+        "256QAM": 26,
+        "64QAM": 20,
+        "QPSK": 1
+      },
+      "real_top1_qpsk_vs_qam": {
+        "QPSK": 1,
+        "QAM": 77
+      },
+      "transform_us_per_frame": 157.9
+    },
+    {
+      "transform": "6_estimated_cfo_4th",
+      "compute_cost": "O(N log N)",
+      "board_deployable": "FFT-based blind CFO (deployable)",
+      "qpsk_top1_count": 0,
+      "qpsk_top1_ratio": 0.0,
+      "qpsk_avg_prob": 0.000761,
+      "mean_max_confidence": 0.884686,
+      "logits_l1_delta_vs_baseline": 104.9095,
+      "radioml_golden_qpsk_count": 199,
+      "radioml_golden_qpsk_ratio": 0.995,
+      "real_confusion_histogram": {
+        "128QAM": 5,
+        "16QAM": 27,
+        "256QAM": 28,
+        "64QAM": 18
+      },
+      "real_top1_qpsk_vs_qam": {
+        "QPSK": 0,
+        "QAM": 78
+      },
+      "transform_us_per_frame": 416.7
+    },
+    {
+      "transform": "7_global_phase_rotation_45",
+      "compute_cost": "O(N)",
+      "board_deployable": "fixed phase rotate (deployable)",
+      "qpsk_top1_count": 0,
+      "qpsk_top1_ratio": 0.0,
+      "qpsk_avg_prob": 0.001401,
+      "mean_max_confidence": 0.869279,
+      "logits_l1_delta_vs_baseline": 72.417198,
+      "radioml_golden_qpsk_count": 200,
+      "radioml_golden_qpsk_ratio": 1.0,
+      "real_confusion_histogram": {
+        "128QAM": 8,
+        "16QAM": 22,
+        "256QAM": 34,
+        "64QAM": 14
+      },
+      "real_top1_qpsk_vs_qam": {
+        "QPSK": 0,
+        "QAM": 78
+      },
+      "transform_us_per_frame": 58.49
+    },
+    {
+      "transform": "8_iq_swap",
+      "compute_cost": "O(N)",
+      "board_deployable": "I/Q swap (deployable)",
+      "qpsk_top1_count": 1,
+      "qpsk_top1_ratio": 0.0128,
+      "qpsk_avg_prob": 0.006702,
+      "mean_max_confidence": 0.857849,
+      "logits_l1_delta_vs_baseline": 82.245689,
+      "radioml_golden_qpsk_count": 200,
+      "radioml_golden_qpsk_ratio": 1.0,
+      "real_confusion_histogram": {
+        "128QAM": 5,
+        "16QAM": 17,
+        "256QAM": 41,
+        "64QAM": 14,
+        "QPSK": 1
+      },
+      "real_top1_qpsk_vs_qam": {
+        "QPSK": 1,
+        "QAM": 77
+      },
+      "transform_us_per_frame": 6.53
+    },
+    {
+      "transform": "9_q_negation_conjugate",
+      "compute_cost": "O(N)",
+      "board_deployable": "conjugate (deployable)",
+      "qpsk_top1_count": 1,
+      "qpsk_top1_ratio": 0.0128,
+      "qpsk_avg_prob": 0.008315,
+      "mean_max_confidence": 0.874417,
+      "logits_l1_delta_vs_baseline": 91.823265,
+      "radioml_golden_qpsk_count": 200,
+      "radioml_golden_qpsk_ratio": 1.0,
+      "real_confusion_histogram": {
+        "128QAM": 7,
+        "16QAM": 20,
+        "256QAM": 34,
+        "64QAM": 16,
+        "QPSK": 1
+      },
+      "real_top1_qpsk_vs_qam": {
+        "QPSK": 1,
+        "QAM": 77
+      },
+      "transform_us_per_frame": 15.25
+    },
+    {
+      "transform": "10_window_circular_shift_128",
+      "compute_cost": "O(N)",
+      "board_deployable": "circular shift (deployable)",
+      "qpsk_top1_count": 0,
+      "qpsk_top1_ratio": 0.0,
+      "qpsk_avg_prob": 4e-06,
+      "mean_max_confidence": 0.879422,
+      "logits_l1_delta_vs_baseline": 45.693748,
+      "radioml_golden_qpsk_count": 200,
+      "radioml_golden_qpsk_ratio": 1.0,
+      "real_confusion_histogram": {
+        "128QAM": 6,
+        "16QAM": 21,
+        "256QAM": 30,
+        "64QAM": 21
+      },
+      "real_top1_qpsk_vs_qam": {
+        "QPSK": 0,
+        "QAM": 78
+      },
+      "transform_us_per_frame": 26.45
+    },
+    {
+      "transform": "11_bw_align_lowpass",
+      "compute_cost": "O(N log N)",
+      "board_deployable": "FFT low-pass to RadioML -20dB edge (deployable)",
+      "qpsk_top1_count": 35,
+      "qpsk_top1_ratio": 0.4487,
+      "qpsk_avg_prob": 0.467819,
+      "mean_max_confidence": 0.935642,
+      "logits_l1_delta_vs_baseline": 435.841003,
+      "radioml_golden_qpsk_count": 179,
+      "radioml_golden_qpsk_ratio": 0.895,
+      "real_confusion_histogram": {
+        "32PSK": 43,
+        "QPSK": 35
+      },
+      "real_top1_qpsk_vs_qam": {
+        "QPSK": 35,
+        "QAM": 43
+      },
+      "transform_us_per_frame": 5886.72
+    },
+    {
+      "transform": "12_exact_training_loader",
+      "compute_cost": "O(N)",
+      "board_deployable": "identity (already in loader form)",
+      "qpsk_top1_count": 0,
+      "qpsk_top1_ratio": 0.0,
+      "qpsk_avg_prob": 2.2e-05,
+      "mean_max_confidence": 0.88084,
+      "logits_l1_delta_vs_baseline": 0.0,
+      "radioml_golden_qpsk_count": 200,
+      "radioml_golden_qpsk_ratio": 1.0,
+      "real_confusion_histogram": {
+        "128QAM": 5,
+        "16QAM": 21,
+        "256QAM": 37,
+        "64QAM": 15
+      },
+      "real_top1_qpsk_vs_qam": {
+        "QPSK": 0,
+        "QAM": 78
+      },
+      "transform_us_per_frame": 8.56
+    }
+  ]
+}

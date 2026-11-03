@@ -1,0 +1,194 @@
+{
+  "track": "qam_aware_v3_3",
+  "title": "QAM-Aware RFNet V3.3 — pre-training preparation",
+  "date": "2026-10-02",
+  "status": "pending-cuda-preflight",
+  "scope": "audit, design, code, tests, short smoke, AutoDL packaging only (no formal GPU training, no board bring-up, no SDR, no frozen-asset modification)",
+  "path": "F:/FPGA_Work/model_v3_3",
+  "frozen_assets_untouched": true,
+  "v2_champion": "frozen_qam_aware_v2_time_power_phase (accuracy 0.705476, macro_f1 0.697538, qam_mean 0.464762)",
+  "audit_corrections_applied": true,
+  "architecture": {
+    "backbone": "frozen V2 (time 22ch conv + physical 8ch encoder + FusionClassifier 120/64/8)",
+    "residual_expert": "BoundedResidualExpert on E[x^1..x^4] of 3 physical planes (12->32->8), zero gate",
+    "combine": "logits = v2_logits + clamp(gate * delta, +-1.0); clamp on FINAL residual, Add/Mul/Relu only",
+    "residual_bound": 1.0,
+    "residual_penalty_weight": 0.01,
+    "candidates": ["A0 frozen V2", "A1 +residual expert", "A2 +family aux head", "A3 +domain consistency"]
+  },
+  "parameter_budget": {
+    "frozen": 71662,
+    "trainable_expert": 681,
+    "total": 72343
+  },
+  "init_equivalence": "max_abs_diff(V3.3 gate=0, V2) < 1e-6 (asserted)",
+  "bounded_residual": {
+    "bound": 1.0,
+    "clamp_target": "final residual gate*delta (not delta)",
+    "operators": ["Add", "Mul", "Relu"],
+    "buffers": ["_clamp_bound", "_two_bound", "_neg_one"],
+    "no_forbidden_ops": true,
+    "unit_test": "perturbed weights x50 and gate=100 -> |residual| <= 1.0 + 1e-5 (asserted)"
+  },
+  "phase5_numerical_stability_fix": {
+    "trigger": "real RTX 5090 Stage-1 failed: RuntimeError 'V3.3 training produced a non-finite loss'",
+    "root_cause": "-20 dB samples reach iq_max_abs ~ 29.84 and PowerLagOneFeatures physical_max_abs ~ 975.61; HigherOrderMomentPool under FP16 autocast overflows (order-2 = Inf, order-4 = NaN; FP16 max ~ 65504)",
+    "fix_input_clamp": "deployable clamp to [-2, 2] BEFORE HigherOrderMomentPool, built from Add/Mul/Relu over pre-registered 1-D buffers (_input_bound=2.0, _input_two_bound=4.0, _neg_one); matches the deployment physical-dequant range int8[-127,127] * (2/127) = [-2, 2]",
+    "input_clamp_operators": ["Add", "Mul", "Relu"],
+    "input_clamp_buffers": ["_input_bound", "_input_two_bound", "_neg_one"],
+    "no_clip_sub_constant": true,
+    "v2_backbone_input_and_behavior_unchanged": true,
+    "gate_zero_logits_still_elementwise_equal_v2": true,
+    "order4_moment_bounded": "|x| <= 2 -> x^4 <= 16, finite under FP16",
+    "loss_fp32": {
+      "residual_penalty": "(residual.float() ** 2).mean() in FP32",
+      "domain_consistency": "mse_loss(logits.float(), hw_logits.detach().float()) in FP32",
+      "no_nan_swallow": "non-finite loss raises RuntimeError with full diagnostics; NaN is never replaced by 0 or dropped"
+    },
+    "diagnostics_fields": ["variant", "seed", "epoch", "batch", "snr_range", "iq_max_abs", "physical_max_abs", "moments_max_abs", "ce", "family", "residual", "domain", "logits_finite", "logits_max_abs"],
+    "tests": {
+      "cpu_numeric": "tests/test_qam_aware_v3_3_numeric_cpu.py (deploy contract; -20 dB physical > 2 clamped to <= 2; FP16 overflow reproduced without clamp + fixed with clamp; full-SNR forward finite + zero-gate residual bounded)",
+      "full_snr_cuda": "tests/test_qam_aware_v3_3_full_snr_cuda.py (release-blocking; A1/A2/A3 over full 21-SNR; FP16 autocast on; forward/each-loss/total/backward/gradients/step finite; |expert input| <= 2; order-4 finite; gate=0 init equivalence; residual <= bound; ONNX checker/opset17/8-op whitelist; skipif CPU)",
+      "preflight_step2": "run_preflight.sh step [2] runs the full-SNR CUDA gate BEFORE the 2-epoch smoke; any non-finite -> no marker"
+    }
+  },
+  "phase5_1_test_isolation_fix": {
+    "scope": "test-only device-isolation fix in tests/test_qam_aware_v3_3_full_snr_cuda.py; no model/clamp/trainer/loss/dataset/SNR/LR/epoch/search/selection/acceptance/build_partition-shared-semantics change",
+    "root_cause": "build_qam_aware_v3_3_partition(student) returns student.core (parameters shared); .cpu() on it moved the live CUDA student's backbone off cuda:0, so the post-export extreme-residual check fed CUDA input to CPU weights",
+    "fix": "export graph built as copy.deepcopy(source_partition).eval().cpu() (independent copy; verified 0 shared param/buffer tensors), then assert every live student parameter and buffer is still exactly on cuda:0 before weights-x50 / gate=100 residual-bound check",
+    "not_a_model_or_clamp_failure": "A1/A2/A3 had already completed full 21-SNR FP16-autocast train/val with finite loss/grad/params and finite -20 dB forward; the failure occurred only after the ONNX export step"
+  },
+  "data_isolation": {
+    "stage1_split": "v3_3_validation",
+    "forbidden_splits": ["test", "v3_3_final_blind_test"],
+    "selection_seeds": [2026, 2027],
+    "two_seeds_change_training_and_validation": true,
+    "a0_real_inference": true,
+    "access_audit": "outputs/qam_aware_v3_3/ablation/access_audit.json (required before formal)",
+    "formal_dev_test_only_after_freeze": true
+  },
+  "ood_evaluation": {
+    "enabled": true,
+    "samples": 5040,
+    "domains": ["cfo", "sfo", "phase_offset", "phase_noise", "iq_imbalance", "rayleigh", "rician", "multipath", "amplitude_variation", "start_offset", "multi_impairment(cross-family holdout)"],
+    "participates_in": "validation selection only (never test/blind)"
+  },
+  "narrow_search": {
+    "enabled": true,
+    "max_trials": 8,
+    "epochs_per_trial": 6,
+    "full_epochs": 15,
+    "space": ["learning_rate", "residual_bound", "residual_penalty_weight", "family_aux_loss_weight", "domain_consistency_weight"],
+    "target": "actual Stage-1 winning mechanism (never a fixed A3)",
+    "result_frozen_into_selected_candidate": true,
+    "tuned_kept_only_if_better_than_untuned": true,
+    "test_never_in_tuning": true
+  },
+  "deployment_contract_unchanged": {
+    "iq": [1, 2, 1024],
+    "physical": [1, 3, 1024],
+    "logits": [1, 8],
+    "class_order": ["BPSK", "QPSK", "8PSK", "16QAM", "64QAM", "2FSK", "CPFSK", "OFDM"],
+    "quant": "SInt8 NCL, dequant 1/127 (IQ) and 2/127 (physical), zero-point 0, round-nearest-away-from-zero, saturate [-127,127]",
+    "operator_policy": ["Add", "BatchNormalization", "Concat", "Conv", "Gemm", "Mul", "ReduceMean", "Relu"],
+    "onnx_opset": 17
+  },
+  "tests": {
+    "passed": 72,
+    "skipped": 5,
+    "skipped_reason": "all CUDA-only cases (tiny trainer CUDA smoke + real-model CUDA integration + full-SNR numeric gate) skipped on the CPU host; none is ever counted as a CUDA pass",
+    "files": 11,
+    "new_regression_tests": 15,
+    "new_cuda_integration_tests": 1,
+    "new_numeric_stability_tests": {
+      "cpu": "tests/test_qam_aware_v3_3_numeric_cpu.py (4 tests)",
+      "cuda": "tests/test_qam_aware_v3_3_full_snr_cuda.py (3 variants, release-blocking)"
+    }
+  },
+  "smoke_pipeline": {
+    "train": "2 epochs, finite loss, checkpoint written",
+    "eval": "final_blind_test_accessed = false",
+    "onnx_export": "operator gate passed (no unexpected operators), clamp path active with residual_bound=1.0",
+    "bash_n": "all autodl_v3_3/*.sh pass",
+    "note": "2-epoch smoke shows FP32-vs-FPGA-sim accuracy gap 0.087 > 0.03 floor; expected for an undertrained model, watch in formal run (A3 consistency loss is the remedy)"
+  },
+  "selection_rule": "two-validation-seed lexicographic: mean macro-F1 (desc) > worst-seed macro-F1 (desc) > worst-domain OOD macro-F1 (desc) > mean accuracy (desc) > mean QAM (desc) > worst-class regression vs same-seed A0 (asc) > FPGA-sim gap (asc) > name; A0 can win",
+  "stage1_regression_baseline": "same-seed A0 (real inference on v3_3_validation); each OOD domain compared same-seed same-domain; never acceptance.yaml V2 test per-class",
+  "pilot_minimum_improvement_threshold": 0.01,
+  "pilot_hard_gates": {
+    "improvement_mean_macro_f1_min": 0.01,
+    "per_seed_macro_f1_not_below_same_seed_a0": true,
+    "per_seed_worst_domain_ood_regression_max": 0.01,
+    "per_seed_per_class_accuracy_drop_max": 0.03,
+    "per_seed_fpga_sim_accuracy_gap_max": 0.03,
+    "per_seed_fpga_sim_macro_f1_gap_max": 0.03,
+    "no_nan_inf_timeout_missing": true,
+    "any_fail_promoted_false": true,
+    "run_complete_skips_formal_on_promoted_false": true
+  },
+  "pilot_threshold_blocks_auto_promotion": true,
+  "promotion_gate": {
+    "seeds": [2026, 2027, 2028],
+    "mean_accuracy_gain_min": 0.02,
+    "mean_macro_f1_gain_min": 0.02,
+    "mean_qam_mean_gain_min": 0.05,
+    "max_per_class_accuracy_drop": 0.03,
+    "max_key_snr_accuracy_drop": 0.01,
+    "max_fpga_sim_accuracy_gap": 0.03,
+    "max_fpga_sim_macro_f1_gap": 0.03
+  },
+  "pipeline_gates": {
+    "preflight": "functional smoke only (tests + 2-epoch train/eval/export); does NOT certify performance",
+    "pilot": "performance gate (Stage-1 ablation + validation/OOD selection + threshold); sole entry to formal",
+    "hash_guard_scope": "model + trainer + evaluators + selection + narrow-search code + Stage-1 (search + pilot-gate) config + acceptance + dataset/channel config + V2 checkpoint hash"
+  },
+  "packaging": {
+    "archive": "dist/qam_aware_v3_3_autodl.zip",
+    "sha256": "ae43f3a35b897115078cb2ca0549efa090723ce83bff4ee94ffb4fc84599ec4f",
+    "superseded_sha256": [
+      "a423f7d21dcb8a4b22c0222fade69221199ebf0d7f74ec9b03dd250d4d5555a3 (DISCARDED — Phase 5 build before the 5.1 test-isolation fix)",
+      "baabc407742a2b5a603bacfe4fc46c6cf7ba0863a48cbd55c94680af7741921c (DISCARDED — pre-Phase-5 build, no input clamp)"
+    ],
+    "size_bytes": 6812534,
+    "manifest_entries": 743,
+    "manifest_lf_only": true,
+    "manifest_no_bom": true,
+    "manifest_digest_mismatches": 0,
+    "zip_crc_ok": true,
+    "no_outputs_or_cache_residue": true
+  },
+  "cuda_preflight": {
+    "status": "pending-autodl",
+    "requirement": "must print V3_3_PREFLIGHT_FUNCTIONAL_PASS on the real GPU before formal training is considered fully ready",
+    "full_snr_gate": "run_preflight.sh step [2] runs tests/test_qam_aware_v3_3_full_snr_cuda.py (A1/A2/A3, 21-SNR, FP16 autocast, input clamp, per-component/grad/param finiteness, ONNX 8-op gate) BEFORE the 2-epoch smoke; any non-finite loss aborts with diagnostics and no marker is written",
+    "bugs_fixed": [
+      "CUDA test assertion now logits.is_cuda (index-robust) instead of logits.device == torch.device('cuda')",
+      "verify_init_matches_v2 shared input built on next(model.parameters()).device",
+      "_finite_probe DataLoader inputs moved to the model device",
+      "defensive: verify_qam_aware_v3_3_init.py shared input on the student device",
+      "GPU resume: structured checkpoint loaded map_location='cpu' (not self.device) so the DataLoader generator + CPU/CUDA RNG states stay CPU ByteTensor; optimizer state migrated to the exact CUDA device; AMP scaler state (scalar-only in torch 2.8) restored device-free; legacy migration path audited",
+      "CUDA RNG restore: torch.cuda.get_rng_state_all() returns list[ByteTensor] (not a single tensor); restore_rng_state now validates list/tuple + device count and restores element-wise on CPU before set_rng_state_all (the prior .detach().cpu() on the list would raise AttributeError on GPU)",
+      "Resume history: load_resume restores round-1 history and fit appends round 2, so the resumed fit() returns [1,2]; CUDA test assertion corrected to [1,2] / len==2 / [-1]['epoch']==2 (no history clearing, no weakened assertion); resume test now perturbs all RNG before load_resume and asserts exact restoration of generator/CPU-RNG/CUDA-RNG-per-device/Python/NumPy/scheduler/AMP-scaler/optimizer-on-cuda:0"
+    ],
+    "new_cuda_test": "tests/test_qam_aware_v3_3_cuda.py (14 coverage points incl. the CUDA resume round-trip against the real V2 champion + real V3.3 model; every RNG source is perturbed before load_resume to prove restoration, cumulative [1,2] history asserted; skipped on CPU only)",
+    "run_preflight_hard_gate": "asserts torch.cuda.is_available(), prints runtime, runs the CUDA test first, writes V3_3_PREFLIGHT_DONE only after every step; hash covers all test files + init-equivalence script + resume core",
+    "run_complete_gate": "requires the CUDA preflight marker with a source-hash match before entering the pilot",
+    "hash_guard_resume_core": "preflight + pilot INPUT_HASH now include training/resumable_trainer.py, training/trainer.py, training/utils.py, and the resume-related tests"
+  },
+  "autodl_command": "bash autodl_v3_3/run_preflight.sh (CUDA preflight-only first stage; run_complete.sh only after V3_3_PREFLIGHT_FUNCTIONAL_PASS is pasted back)",
+  "remaining_risks": [
+    "FPGA-sim gap under formal training must clear the 0.03 floor (A3 consistency loss is the intended remedy if A1 alone cannot)",
+    "QAM gain must not regress non-QAM classes beyond the per-class floors; A0 'V2 can win' fallback bounds this",
+    "AutoDL bit-reproducibility on resume (CUBLAS_WORKSPACE_CONFIG=:4096:8 exported)"
+  ],
+  "deliverables": [
+    "docs/literature_review.md",
+    "docs/method_hardware_matrix.md",
+    "docs/v3_2_failure_audit.md",
+    "docs/v3_3_design.md",
+    "docs/pretraining_readiness.md",
+    "docs/v3_3_report.md",
+    "docs/v3_3_phase5_stability_fix_report.md",
+    "dist/qam_aware_v3_3_autodl.zip"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "SIMULTANEOUS_TWO_RF_CENTERS_NOT_240_REGRESSION",
+  "tx_center_hz": 2401800000,
+  "sample_rate": 10240000,
+  "signal_centers_hz": [
+    2400000000,
+    2403600000
+  ],
+  "records": [
+    {
+      "seq": 18,
+      "file": "03_02.bin",
+      "source_sha256": "1562575bbedd6e815535726f16de6752da0f7441ea609acd3cb2cf6be529c0f8"
+    },
+    {
+      "seq": 22,
+      "file": "09_09.bin",
+      "source_sha256": "465def280290eafb0ef659e46b63c11c1c9eba96a66d74487807fe6ba34dd355"
+    }
+  ],
+  "composite_sha256": "aa3778636f0f85ccc3a01d61a4fa06662705092c8e9b37019cd01b579e63fa97",
+  "peak_component_before_x16": 213.4956835506507,
+  "clipping": false,
+  "rf_started": false
+}

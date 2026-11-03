@@ -1,0 +1,32 @@
+{
+  "scope_verified": true,
+  "changed_rtl": [
+    "smartscan_integration/rtl/smart_scan_psd_buffers.sv",
+    "smartscan_integration/rtl/user_reg_router.sv",
+    "smartscan_integration/rtl/user_ddr_read_arbiter.sv",
+    "smartscan_integration/rtl/pl_ddr_mandatory_core_top_combined_smartscan.sv",
+    "pl_ddr_integration_v1/deps/adapters/async_fifo_gray.sv"
+  ],
+  "constraints": [
+    {
+      "path": "pl_ddr_integration_v1/cdc_async_groups.xdc",
+      "unchanged": true
+    },
+    {
+      "path": "pl_ddr_integration_v1/pl_ddr_mandatory_core_v1.xdc",
+      "unchanged": true
+    }
+  ],
+  "frozen_netlists": [
+    {
+      "path": "npu_base/rtl/edif/AI_Mate.edif",
+      "sha256": "38f14b4427244f49a1ff0edf9dcdfe4438d033807d76018c688aa218c491d49c",
+      "unchanged": true
+    },
+    {
+      "path": "smartscan_integration/netlist/smartscan_fft_1024.edif",
+      "sha256": "448ca9977cd8f4c8031609daf0e5960e0840c023cfdac666f355eb607b2651e3",
+      "unchanged": true
+    }
+  ]
+}

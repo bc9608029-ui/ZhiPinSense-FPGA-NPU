@@ -1,0 +1,69 @@
+{
+  "scope": "Software branch/gate contract only, not RF",
+  "passed": 4,
+  "rows": [
+    {
+      "scan_index": 1,
+      "scan_points": 1,
+      "sweep_cycle": 0,
+      "lo_hz": 2403000000,
+      "public_score": 0.8,
+      "cfo_hz": 600000.0,
+      "captured_ns": 1793541000249624100,
+      "captured_monotonic_ns": 42207171000000,
+      "accepted": true,
+      "confirmed_lo_hz": 2403600000,
+      "confirmed_ns": 1793541000249624100,
+      "confirmed_monotonic_ns": 42207171000000,
+      "confirmed_score": 0.9,
+      "confirmed_cfo_hz": 10.0,
+      "reason": "CENTRED_PUBLIC_FRAME"
+    },
+    {
+      "scan_index": 1,
+      "scan_points": 1,
+      "sweep_cycle": 0,
+      "lo_hz": 2403000000,
+      "public_score": 0.05,
+      "cfo_hz": 0.0,
+      "captured_ns": 1793541000249624100,
+      "captured_monotonic_ns": 42207171000000,
+      "accepted": false,
+      "reason": "DISCOVERY_REJECTED"
+    },
+    {
+      "scan_index": 1,
+      "scan_points": 1,
+      "sweep_cycle": 0,
+      "lo_hz": 2403000000,
+      "public_score": 0.8,
+      "cfo_hz": 600000.0,
+      "captured_ns": 1793541000249624100,
+      "captured_monotonic_ns": 42207171000000,
+      "accepted": false,
+      "confirmed_lo_hz": 2403600000,
+      "confirmed_ns": 1793541000249624100,
+      "confirmed_monotonic_ns": 42207171000000,
+      "confirmed_score": 0.9,
+      "confirmed_cfo_hz": 2000.0,
+      "reason": "CENTRE_CONFIRMATION_FAILED"
+    },
+    {
+      "scan_index": 1,
+      "scan_points": 1,
+      "sweep_cycle": 0,
+      "lo_hz": 2403000000,
+      "public_score": 0.8,
+      "cfo_hz": 600000.0,
+      "captured_ns": 1793541000249624100,
+      "captured_monotonic_ns": 42207171000000,
+      "accepted": false,
+      "confirmed_lo_hz": 2403600000,
+      "confirmed_ns": 1793541000249624100,
+      "confirmed_monotonic_ns": 42207171000000,
+      "confirmed_score": 0.09,
+      "confirmed_cfo_hz": 0.0,
+      "reason": "CENTRE_CONFIRMATION_FAILED"
+    }
+  ]
+}

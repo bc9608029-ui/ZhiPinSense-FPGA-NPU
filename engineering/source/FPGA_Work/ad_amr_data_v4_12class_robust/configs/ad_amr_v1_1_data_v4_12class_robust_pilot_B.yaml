@@ -1,0 +1,11 @@
+# 候选 B：multipath tail + composite（无 CFO tail）。
+# 关闭 CFO tail；multipath 核心 [2,4]/delay10 + 强 tail [3,6]/delay20；复合分支开启。
+_base: configs/ad_amr_v1_1_data_v4_12class_robust.yaml
+
+output_root: outputs/ad_amr_v1_1_data_v4_12class_robust/pilot/candidate_B_seed2026
+
+robust:
+  candidate: B
+  train_channel:
+    cfo:
+      tail: {probability: 0.0}

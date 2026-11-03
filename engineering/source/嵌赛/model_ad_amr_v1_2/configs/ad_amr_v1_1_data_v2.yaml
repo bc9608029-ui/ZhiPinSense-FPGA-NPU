@@ -1,0 +1,65 @@
+_base: configs/ad_amr_v1_1.yaml
+
+# V1.1-data-v2 changes only the training data/initialization path.  The deployed
+# ten-class architecture and operator contract remain byte-for-byte identical.
+output_root: outputs/ad_amr_v1_1_data_v2/formal/seed2026
+
+public_data:
+  dataset: RadioML2018.01A
+  hdf5_path: data/radioml2018/GOLD_XYZ_OSC.0001_1024.hdf5
+  classes_path: data/radioml2018/classes.txt
+  audit_path: data/radioml2018/audit.json
+  index_path: data/radioml2018/split_indices.npz
+  split_seed: 20261003
+  split_ratios: [0.60, 0.20, 0.20]
+  audit_chunk_size: 65536
+  x_audit_chunk_size: 2048
+  expected_samples: 2555904
+  expected_per_stratum: 4096
+  expected_snr_values: [-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+  allowed_snrs: [-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+public_pretraining:
+  output_root: outputs/ad_amr_v1_1_data_v2/public_pretrain
+  epochs: 30
+  batch_size: 256
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  scheduler_factor: 0.5
+  scheduler_patience: 3
+  minimum_lr: 0.000001
+  early_stopping_patience: 6
+  minimum_epochs_before_stopping: 10
+  min_delta: 0.0001
+  gradient_clip_norm: 2.0
+  amp: true
+  amp_dtype: bfloat16
+  reconstruction_weight: 0.0
+  snr_weighting:
+    very_low_snr_weight: 0.35
+    rated_snr_weight: 1.25
+    zero_db_extra_weight: 1.20
+  distillation: {enabled: false, temperature: 3.0, v2_weight: 0.0, v1_weight: 0.0}
+  num_workers: 4
+  max_train_per_stratum: null
+  max_validation_per_stratum: null
+
+initialization:
+  public_checkpoint: outputs/ad_amr_v1_1_data_v2/public_pretrain/checkpoints/best.pt
+
+data_v2_pilot:
+  epochs: 30
+  seed: 2026
+  variants: [scratch, radioml_pretrained]
+  focus_ood_domains: [cfo_strong, multipath, multi_impairment]
+  gates:
+    min_macro_f1_gain: 0.005
+    min_rated_0_20_gain: -0.005
+    min_snr_0_gain: -0.02
+    min_rated_class_delta: -0.03
+    max_focus_ood_drop_increase: 0.01
+
+data_v2_formal:
+  seeds: [2026, 2027]
+  epochs: 100
+  minimum_epochs_before_stopping: 30

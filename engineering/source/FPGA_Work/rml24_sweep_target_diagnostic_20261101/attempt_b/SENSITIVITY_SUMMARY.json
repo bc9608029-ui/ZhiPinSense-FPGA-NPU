@@ -1,0 +1,33 @@
+{
+  "scores": {
+    "original": {
+      "correct": 10,
+      "denominator": 12
+    },
+    "phase_minus003": {
+      "correct": 10,
+      "denominator": 12
+    },
+    "phase_plus003": {
+      "correct": 10,
+      "denominator": 12
+    },
+    "scale095": {
+      "correct": 6,
+      "denominator": 12
+    },
+    "scale105": {
+      "correct": 2,
+      "denominator": 12
+    },
+    "unit_rms": {
+      "correct": 12,
+      "denominator": 12
+    }
+  },
+  "diagnostic_only": true,
+  "findings": "Amplitude sensitivity established on saved inputs; global unit-RMS compatibility with high-power classes not yet established. No receiver changes or deployment.",
+  "npu_stop": [
+    "NPU_STREAM_STOP frames=576 apply=1 reset=575 discipline=1"
+  ]
+}

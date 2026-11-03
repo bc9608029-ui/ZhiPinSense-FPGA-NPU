@@ -1,0 +1,48 @@
+Reading D:/modeltech64_10.4/tcl/vsim/pref.tcl
+
+# 10.4
+
+# vsim -c -do "run -all; quit -f" msim_diag_work.tb_diag 
+# Start time: 21:30:43 on Sep 29,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# //  ModelSim SE-64 10.4 Dec  3 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_diag(fast)
+# run -all
+# DIAG [3000] ddr_job_rst_n ASSERT (#1)
+# DIAG [10000] core_job_rst_n ASSERT (#1)
+# DIAG [470000] core_job_rst_n RELEASE
+# DIAG [568000] ddr_job_rst_n RELEASE
+# DIAG run=0 IQ_ACCEPTED=19456
+# DIAG run=0 TENSOR_ACCEPTED=19456
+# DIAG run=0 ERROR_CODE=00000000 beats=1520
+# DIAG run=0 core_reset_asserts=1 ddr_reset_asserts=1
+# DIAG [420788000] ddr_job_rst_n ASSERT (#2)
+# DIAG [420850000] INPUT  counter RESET: 19456 -> 0
+# DIAG [420850000] OUTPUT counter RESET: 19456 -> 0
+# DIAG [420850000] core_job_rst_n ASSERT (#2)
+# DIAG [421010000] core_job_rst_n RELEASE
+# DIAG [421108000] ddr_job_rst_n RELEASE
+# DIAG run=1 IQ_ACCEPTED=19456
+# DIAG run=1 TENSOR_ACCEPTED=19456
+# DIAG run=1 ERROR_CODE=00000000 beats=1520
+# DIAG run=1 core_reset_asserts=2 ddr_reset_asserts=2
+# DIAG DONE runs=2
+# ** Note: $finish    : tb/tb_diag.sv(234)
+#    Time: 841175 ns  Iteration: 1  Instance: /tb_diag
+# End time: 21:30:46 on Sep 29,2026, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0

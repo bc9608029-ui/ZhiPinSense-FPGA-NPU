@@ -1,0 +1,23 @@
+{
+  "name": "Baseline V1 fairness lock",
+  "policy": "Future comparisons must reuse the locked dataset distribution, ChannelPipeline, split generation, and evaluation sets. Any intentional change requires a new versioned baseline.",
+  "sha256": {
+    "configs/baseline.yaml": "aa27f45ddc6624f849079b48b7f0344503a75af4d30950029650b7b0c99b41eb",
+    "datasets/modulation_generator.py": "e57abbdf081fed563789ea8a06e78c93f3577d4dfd7a2fd6d3ab91795f5525d3",
+    "datasets/synthetic_dataset.py": "7d7f4e85e81211f5853b22107cb2e69c9090468cab2b33e0170fc156cf745a53",
+    "channel/awgn.py": "e772497780e52f72b59629f508a1395232a300da5f5780893263f3fcb52cc04f",
+    "channel/fading.py": "6d54fe8023973d8f44667b2b5af43bd3f4412adbb0881b75dcdd9da4eb11cc66",
+    "channel/impairments.py": "3f79117163e9053b2e5f7f4d875826f74d1eb63fcd2d46f255879ffd2ff08544",
+    "channel/channel_pipeline.py": "8ec33141c5b57bf453d1f42a57d902b29af6ea259f21a03e2bb6ae1b9408aee2",
+    "models/baseline_cnn.py": "413cd7a1ad6c20428e7aff3993f3ce4e2d9084c87e8e3179e9a416028afd7040",
+    "training/trainer.py": "07f14e951338dae3b405183c308feae503d15c9305ede92b69410fc21d6557e8",
+    "training/metrics.py": "be14869dc044b0b131118692e595255586a0dd42877042ee4e1788cadd9fc620",
+    "training/utils.py": "bd2e2ab4906a3eb6c48c733fa5794e8d28c6e02565ebcecb12333074171555ab",
+    "train.py": "e0048cfd4775b672839227b8b1617e9b009aef0cd0e3a14800174f8a73f343ce",
+    "evaluation/evaluate.py": "e0ea937a3f6e3cc748fe121fb071bbc7e4b3ce2793634e864aa3f498e971ff8e",
+    "evaluation/snr_sweep.py": "770fe64b5128b130d381fcfa3d8bc12298c23c0801d9e37486063033bb6c32e4",
+    "evaluation/confusion_matrix.py": "52ff922ab7b1f047a33e0c9ceb4e50bcd0211868347f4d5e31ad610d59a68e6b",
+    "evaluation/dataset_audit.py": "7a8d3d6c70edce634a9ed773b189e2019f37d8da73f9227236232d819328e1e7",
+    "evaluation/baseline_report.py": "ebbb47e5da1fe6b6248304b97aa171ccce10eaf0aed15f671d1b84e08e388919"
+  }
+}

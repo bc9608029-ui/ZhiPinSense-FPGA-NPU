@@ -1,0 +1,13 @@
+{
+  "purpose": "frozen import contract for the 12-class model used by the shared OOD framework",
+  "model_name": "12CLASS_ROBUST_CANDIDATE_V2",
+  "label_order_12": [
+    "OOK", "4ASK", "AM-DSB", "WBFM", "2FSK", "GFSK",
+    "BPSK", "QPSK", "8PSK", "16QAM", "64QAM", "OFDM"
+  ],
+  "checkpoint_path": "PENDING_12CLASS_V2_CHECKPOINT",
+  "model_sha256": "PENDING_12CLASS_V2_SHA256",
+  "input_shape": [1, 2, 1024],
+  "output_dim": 12,
+  "status": "PENDING_12CLASS_V2_CHECKPOINT"
+}

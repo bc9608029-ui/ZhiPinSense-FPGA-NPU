@@ -1,0 +1,20 @@
+[Unit]
+Description=RML23 LIVE UI server (board_ui_live_rml23) on HDMI framebuffer
+# 只依赖本地文件系统；不重配 FPGA、不依赖网络/SDR/位流加载。
+# 注意：本服务不加载合并位流。重启后位流（JTAG 临时加载）已丢失，二进制版本门会失败退出，
+#       服务进入 failed —— 这是诚实信号：需先 JTAG 重载合并位流再 systemctl restart。
+After=local-fs.target
+Wants=local-fs.target
+
+[Service]
+# 前台托管：systemd 直接托管二进制进程（Type=simple）。二进制版本门失败/帧缓冲初始化失败
+# 即非零退出，systemd 记 failed；不假报成功。绝不用 Type=oneshot+后台 nohup（子进程会被清理）。
+Type=simple
+ExecStart=/opt/sdr/bin/board_ui_live_rml23 --sock=/run/sdr_amr_ui_rml23.sock --ctl-sock=/run/sdr_amr_control_rml23.sock
+Restart=no
+TimeoutStartSec=30
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

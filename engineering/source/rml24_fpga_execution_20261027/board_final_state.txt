@@ -1,0 +1,19 @@
+echo FPGA_TEST_FINAL_STATE_BEGIN; systemctl is-enabled rml24-ui..service rml24-receiver.service; systemctl is-active rml24-ui.service rml24-receiiver.service; sha256sum /etc/systemd/system/rml24-ui.service /etc/systemd/system /rml24-receiver.service /opt/rml24-system/bin/board_ui_live_rml24_final; cat /rooot/rml24_fpga_execution_20261027/backup_server.log; ss -ltn | grep :39131 || truee; findmnt /mnt/rml24_feature_backup_ro || true; echo FPGA_TEST_FINAL_STATE_END
+FPGA_TEST_FINAL_STATE_BEGIN
+enabled
+enabled
+[1]+  Done                    nohup python3 /root/rml24_fpga_execution_20261027/serve_baseline.py > /root/rml24_fpga_execution_20261027/backup_server.log 2>&1 < /dev/null
+active
+active
+6ee4461dfae6f1b513e1ae136dc489982ab95318e6aa3b8213654a17e2b8e00e  /etc/systemd/system/rml24-ui.service
+febdfe0940585b56d6725f04fdcad1a8a71b9fd703a3a4bc5fc6493b34229c7e  /etc/systemd/system/rml24-receiver.service
+
+3950201f64f4575755840df2d98879b5d3e44a109372192366d67a90652adaf6  /opt/rml24-system/bin/board_ui_live_rml24_final
+192.168.126.50 - - [13/Mar/2026 04:22:28] "GET /rml24-b43d91-backup/runtime_before.tar.gz HTTP/1.1" 200 -
+192.168.126.50 - - [13/Mar/2026 04:22:28] "GET /rml24-b43d91-backup/sd_boot_before.tar.gz HTTP/1.1" 200 -
+192.168.126.50 - - [13/Mar/2026 04:22:29] "GET /rml24-b43d91-backup/archive_sha256.txt HTTP/1.1" 200 -
+192.168.126.50 - - [13/Mar/2026 04:22:29] "GET /rml24-b43d91-backup/sd_boot_identity.txt HTTP/1.1" 200 -
+192.168.126.50 - - [13/Mar/2026 04:22:29] "GET /rml24-b43d91-backup/context.txt HTTP/1.1" 200 -
+BOUNDED_BACKUP_SERVER_CLOSED
+FPGA_TEST_FINAL_STATE_END
+(base) root@U:~# 

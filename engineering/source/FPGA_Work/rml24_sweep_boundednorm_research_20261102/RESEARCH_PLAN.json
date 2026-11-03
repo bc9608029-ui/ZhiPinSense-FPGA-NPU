@@ -1,0 +1,28 @@
+{
+  "state": "RESEARCH_ONLY_NOT_STAGED_NOT_DEPLOYED",
+  "hypothesis": "Frozen NPU amplitude sensitivity after calibrated recovery; normalize small power deviations only, preserve intentional higher energy levels.",
+  "scope": "CONTINUOUS_SCAN model input only. FIXED/BAND_SCAN bytes and all public detection/recovery thresholds unchanged.",
+  "parameters": {
+    "min_power": 0.8,
+    "max_power": 1.25
+  },
+  "constraints": [
+    "No classifier predictions or labels select normalization",
+    "No arbitrary external-signal invariance claim",
+    "Keep model/public frame/8 repeats/2.56MS/s/bit unchanged",
+    "Store correct raw and effective model-input hashes and effective saved tensors",
+    "Power interval is NEW processing rule, not a proven existing contract; must independently validate and report scope"
+  ],
+  "prior_evidence": {
+    "unconditional_unit_rms_clean": "196/240,44 regressions: REJECTED",
+    "unconditional_targeted_capture": "12/12 vs10/12",
+    "bounded_clean": "240/240 retrospective composition of exact existing blind results, not new RF"
+  },
+  "next": [
+    "Verify exact module vs archived tensor input SHA for both branches",
+    "Replay all available captured inputs including high-energy classes with new module on board",
+    "Only if no new regressions stage isolated sweep-only candidate",
+    "Short sweep targeted plus full24, original fixed/search24 smoke, preserve failed formal denominator",
+    "If all qualified scope/gates valid, software deployment and production RF/restart checks; otherwise continue diagnosis"
+  ]
+}

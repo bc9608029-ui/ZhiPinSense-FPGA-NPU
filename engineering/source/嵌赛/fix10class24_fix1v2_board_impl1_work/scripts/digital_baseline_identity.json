@@ -1,0 +1,23 @@
+{
+  "token": "M29-RML24-FIX10CLASS24-INDEPENDENT-RX-BOARD-IMPL1-BASELINE-IDENTITY",
+  "note": "冻结数字基线身份绑定（S2）。每条 (source_id, conversion_version) 绑定到其确切的 TX manifest SHA 与数字基线 replay TSV SHA，并声明冻结 BF16 模型身份。judge_radioml_independent_rx_board.py 用它防止 v1/v2 数字基线混用。此文件随 PATCH 包冻结，改任意一个 SHA 都会导致判读器 BASELINE_*_SHA_MISMATCH / BASELINE_MODEL_IDENTITY_MISMATCH 而分析失败。",
+  "model": {
+    "note": "板端 NPU 推理只用 json+raw；ckpt 是 host 训练产物不上板，不在此绑定。",
+    "json_sha256": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+    "raw_sha256": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151"
+  },
+  "baselines": {
+    "fix1-public-protocol-24waveforms/v1": {
+      "source_id": "fix1-public-protocol-24waveforms",
+      "conversion_version": "v1",
+      "manifest_sha256": "a1b6c9da10e62c1f4297a6d9ab797e4e6deadff04b5ed8cf3df382a18e659ef5",
+      "baseline_tsv_sha256": "cfe68bdcd34bcb9f6f3705c936395527076bec374b5a7736547c9fa3b1dd560c"
+    },
+    "fix1v2-waveform-corrected-24waveforms/v2": {
+      "source_id": "fix1v2-waveform-corrected-24waveforms",
+      "conversion_version": "v2",
+      "manifest_sha256": "45c493f04bbe3bfd0194810b8a7717cf765916a4e8baaad172e31e5d30ca8847",
+      "baseline_tsv_sha256": "a28d1591fba95011eb4667aadc5b0ca6de313cf13f66419da9adce66c4faeb18"
+    }
+  }
+}

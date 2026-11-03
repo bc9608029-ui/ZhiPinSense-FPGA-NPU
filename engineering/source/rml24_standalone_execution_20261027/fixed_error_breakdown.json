@@ -1,0 +1,31 @@
+{
+  "correct": 227,
+  "total": 240,
+  "confusions": [
+    {
+      "true_class": 19,
+      "predicted_class": 20,
+      "count": 8
+    },
+    {
+      "true_class": 14,
+      "predicted_class": 16,
+      "count": 1
+    },
+    {
+      "true_class": 13,
+      "predicted_class": 15,
+      "count": 1
+    },
+    {
+      "true_class": 22,
+      "predicted_class": 17,
+      "count": 2
+    },
+    {
+      "true_class": 23,
+      "predicted_class": 10,
+      "count": 1
+    }
+  ]
+}

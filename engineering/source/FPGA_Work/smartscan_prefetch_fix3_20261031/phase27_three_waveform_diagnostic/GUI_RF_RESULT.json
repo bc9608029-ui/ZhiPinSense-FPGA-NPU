@@ -1,0 +1,100 @@
+{
+  "kind": "THREE_PREVIOUSLY_FAILING_WAVEFORMS_DIAGNOSTIC_NOT_PROMOTION",
+  "denominator": 3,
+  "correct": 2,
+  "missing": 0,
+  "clock_uncertainty_ms": 54,
+  "gui_start_stop_and_restore_pass": true,
+  "receiver_summary": {
+    "rc": 0,
+    "supervisor": {
+      "mode": "FIXED",
+      "rf_tx": false,
+      "candidate_only": true,
+      "normal_npu_eof_before_rx_reap": true,
+      "finalization_accounting_verified": true,
+      "stop_errors": [],
+      "rx_restore": [],
+      "clean_stop": true
+    },
+    "final": {
+      "valid": 69,
+      "rejected": 152,
+      "records": 221,
+      "no_tcp": true,
+      "no_tx_handshake": true,
+      "restore_errors": [],
+      "ui_sent": 293,
+      "ui_failed": 0
+    },
+    "pred_counts": {
+      "17": 21,
+      "18": 2,
+      "23": 16,
+      "15": 6,
+      "10": 14,
+      "9": 10
+    },
+    "backend_counts": {
+      "fpga": 69
+    },
+    "guard_clean": true,
+    "guard_marker_absent": true
+  },
+  "results": [
+    {
+      "index": 0,
+      "config": {
+        "bank": 1,
+        "message": 1,
+        "gain_db": -40,
+        "class_index": 17
+      },
+      "chosen_frame": {
+        "frame_id": 45,
+        "capture_time_ns": 1773394167547560800,
+        "pred": 18,
+        "finite": true
+      },
+      "correct": false,
+      "missing": false,
+      "source_sha": "2b8425f8d3d1eba567c15d4074aff185e28136d5954f6dadc7683737cc85ec51"
+    },
+    {
+      "index": 1,
+      "config": {
+        "bank": 1,
+        "message": 1,
+        "gain_db": -40,
+        "class_index": 23
+      },
+      "chosen_frame": {
+        "frame_id": 77,
+        "capture_time_ns": 1773394176665960670,
+        "pred": 23,
+        "finite": true
+      },
+      "correct": true,
+      "missing": false,
+      "source_sha": "1a00009440bf3abff7fed59ff3a50760f1595e8c8c42cf31a15d9f481ef38f8e"
+    },
+    {
+      "index": 2,
+      "config": {
+        "bank": 1,
+        "message": 2,
+        "gain_db": -40,
+        "class_index": 10
+      },
+      "chosen_frame": {
+        "frame_id": 109,
+        "capture_time_ns": 1773394185870154550,
+        "pred": 10,
+        "finite": true
+      },
+      "correct": true,
+      "missing": false,
+      "source_sha": "b2c068214280fe0b251afa217e14afe15a7a2bd94039744546c5cfd60718c422"
+    }
+  ]
+}

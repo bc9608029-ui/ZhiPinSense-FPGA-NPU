@@ -1,0 +1,44 @@
+M27.1 精确 diff 清单（Precise Diff List）
+=========================================
+
+性质：本工程为【独立版本化目录】F:\FPGA_Work\sdr_npu_multimodel_m27_1\，
+全部文件为【新增】，对既有工程【零修改、零覆盖、零删除】。
+
+未触碰的既有工程（本工程只读引用，未改动）：
+  - sdr_full_chain_spectrum_monitor_m22_m24（M22/M23/M24 冻结树）
+  - sdr_npu_multimodel_m27（M27 审计/框架，非 M27.1）
+  - npu_realtime_v1 / npu_stage_v1 / fpga_npu_joint_v1（板证 8 类模型来源）
+  - sdr_full_chain_12class_ui_v3* 系列（Gate 9/10 生产链）
+  - 任何 RTL/XDC/位流/模型/训练目录
+
+新增文件（按目录）：
+--------------------------------------------------------------------------------
+docs/
+  M27_1_SDK_MULTI_MODEL_AUDIT.md        SDK 只读审计（多实例 API + 官方多网络机制）
+  M27_1_MODEL_SELECTION.md              模型选择（A=12类冻结 / B=8类板证，非 stub）
+  M27_1_PROBE_PLAN.md                   探针计划 + 测量指标 + 安全边界 + A-E 结论分类
+  M27_1_DELIVERY_REPORT.md              交付报告（七项交付物对照 + 测试结果）
+probes/
+  m27_1_metrics.hpp                     SDK-free 测量/结果 JSON 辅助（主机可离线测）
+  probe_common.hpp                      板端共享（Device/Session 生命周期 + reset1 纪律）
+  probe_single_model.cpp                基线探针
+  probe_two_networks.cpp                驻留探针（A+B 同 Device）
+  probe_sequential_inference.cpp        串行调度探针（A→B→A 无逐帧 Open）
+  probe_concurrent_inference.cpp        并发探针（SDK 无异步 API → SKIP）
+  probe_unload_reload.cpp               卸载/重载探针
+  CMakeLists.txt                        板载构建（icraft-zg330backend + hostbackend）
+  build_on_board.sh                     板载 cmake+make
+board_scripts/
+  run_m27_1_board_probes.sh             一键板测（SHA 冻结校验 + 5 探针 + 结论聚合）
+host_tests/
+  test_m27_1_metrics.cpp                主机单元测试（36 断言）
+  build_host_tests.sh / run_host_tests.sh / run_host_tests_asan.sh / run_host_tests_ubsan.sh
+results/
+  M27_1_RESULT_TEMPLATE.json            结果 JSON 模板（与 ProbeResult.to_json 一致）
+scripts/
+  build_m27_1_package.sh                打包脚本（生成 dist/ 补丁包 + manifest）
+dist/                                   打包产物（生成，非手写）
+  m27_1_multimodel_probe_patch.tar.gz
+  M27_1_PATCH_SHA256SUMS.txt
+
+文件数：内容文件 21（docs 4 + probes 9 + board_scripts 1 + host_tests 5 + results 1 + 根 diff 1）；另 scripts/build_m27_1_package.sh 1 项打包脚本、dist/ 打包产物 2 项另计。

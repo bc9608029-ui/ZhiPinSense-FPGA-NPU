@@ -1,0 +1,152 @@
+CELL=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst
+REF=PLLE2_ADV
+CLKFBOUT_MULT=5
+CLKFBOUT_PHASE=0.000
+CLKIN1_PERIOD=5.000
+CLKIN2_PERIOD=0.000
+CLKOUT0_DIVIDE=1
+CLKOUT0_DUTY_CYCLE=0.500
+CLKOUT0_PHASE=0.000
+CLKOUT1_DIVIDE=1
+CLKOUT1_DUTY_CYCLE=0.500
+CLKOUT1_PHASE=0.000
+CLKOUT2_DIVIDE=1
+CLKOUT2_DUTY_CYCLE=0.500
+CLKOUT2_PHASE=0.000
+CLKOUT3_DIVIDE=1
+CLKOUT3_DUTY_CYCLE=0.500
+CLKOUT3_PHASE=0.000
+CLKOUT4_DIVIDE=1
+CLKOUT4_DUTY_CYCLE=0.500
+CLKOUT4_PHASE=0.000
+CLKOUT5_DIVIDE=1
+CLKOUT5_DUTY_CYCLE=0.500
+CLKOUT5_PHASE=0.000
+C_FCLK_CLK0_BUF=
+C_FCLK_CLK1_BUF=
+C_FCLK_CLK2_BUF=
+C_FCLK_CLK3_BUF=
+C_HAS_ACLKEN=
+C_HAS_INT_CLK=
+C_M00_AXI_ACLK_RATIO=
+C_M00_AXI_IS_ACLK_ASYNC=
+C_RD_FREQ=
+C_S00_AXI_ACLK_RATIO=
+C_S00_AXI_IS_ACLK_ASYNC=
+C_S01_AXI_ACLK_RATIO=
+C_S01_AXI_IS_ACLK_ASYNC=
+C_S02_AXI_ACLK_RATIO=
+C_S02_AXI_IS_ACLK_ASYNC=
+C_S03_AXI_ACLK_RATIO=
+C_S03_AXI_IS_ACLK_ASYNC=
+C_S04_AXI_ACLK_RATIO=
+C_S04_AXI_IS_ACLK_ASYNC=
+C_S05_AXI_ACLK_RATIO=
+C_S05_AXI_IS_ACLK_ASYNC=
+C_S06_AXI_ACLK_RATIO=
+C_S06_AXI_IS_ACLK_ASYNC=
+C_S07_AXI_ACLK_RATIO=
+C_S07_AXI_IS_ACLK_ASYNC=
+C_S08_AXI_ACLK_RATIO=
+C_S08_AXI_IS_ACLK_ASYNC=
+C_S09_AXI_ACLK_RATIO=
+C_S09_AXI_IS_ACLK_ASYNC=
+C_S10_AXI_ACLK_RATIO=
+C_S10_AXI_IS_ACLK_ASYNC=
+C_S11_AXI_ACLK_RATIO=
+C_S11_AXI_IS_ACLK_ASYNC=
+C_S12_AXI_ACLK_RATIO=
+C_S12_AXI_IS_ACLK_ASYNC=
+C_S13_AXI_ACLK_RATIO=
+C_S13_AXI_IS_ACLK_ASYNC=
+C_S14_AXI_ACLK_RATIO=
+C_S14_AXI_IS_ACLK_ASYNC=
+C_S15_AXI_ACLK_RATIO=
+C_S15_AXI_IS_ACLK_ASYNC=
+C_WR_FREQ=
+DIVCLK_DIVIDE=1
+IS_CLKINSEL_INVERTED=1'b0
+MULT=
+P_M_AXI_ACLK_RATIO=
+P_S_AXI_ACLK_RATIO=
+P_S_AXI_IS_ACLK_ASYNC=
+TOOL_DERIVED_CLK_NAMES=1:0:CLKIN1:CLKFBOUT:clk_pll_i:clkfbout_AI_CORE_CLK_ST::1:0:CLKIN1:CLKOUT0:clk_pll_i:clk_out1_AI_CORE_CLK_ST::1:0:CLKIN1:CLKFBOUT:clk_pll_i_1:clkfbout_AI_CORE_CLK_ST_1::1:0:CLKIN1:CLKOUT0:clk_pll_i_1:clk_out1_AI_CORE_CLK_ST_1
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKFBOUT LOADS=1
+  u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKFBIN REF=PLLE2_ADV
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKOUT0 LOADS=1
+  u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/clkout1_buf/I REF=BUFG
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKOUT1 LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKOUT2 LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKOUT3 LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKOUT4 LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKOUT5 LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[15] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[14] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[13] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[12] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[11] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[10] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[9] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[8] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[7] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[6] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[5] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[4] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[3] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[2] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[1] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DO[0] LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/DRDY LOADS=0
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/LOCKED LOADS=2
+  u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_bist_check/start_d1_reg/D REF=FDRE
+  u_ps_ai_peripheral/ZGolo/current_state_i_1/I0 REF=LUT1
+CELL=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/clkout1_buf
+REF=BUFG
+C_FCLK_CLK0_BUF=
+C_FCLK_CLK1_BUF=
+C_FCLK_CLK2_BUF=
+C_FCLK_CLK3_BUF=
+C_HAS_ACLKEN=
+C_HAS_INT_CLK=
+C_M00_AXI_ACLK_RATIO=
+C_M00_AXI_IS_ACLK_ASYNC=
+C_RD_FREQ=
+C_S00_AXI_ACLK_RATIO=
+C_S00_AXI_IS_ACLK_ASYNC=
+C_S01_AXI_ACLK_RATIO=
+C_S01_AXI_IS_ACLK_ASYNC=
+C_S02_AXI_ACLK_RATIO=
+C_S02_AXI_IS_ACLK_ASYNC=
+C_S03_AXI_ACLK_RATIO=
+C_S03_AXI_IS_ACLK_ASYNC=
+C_S04_AXI_ACLK_RATIO=
+C_S04_AXI_IS_ACLK_ASYNC=
+C_S05_AXI_ACLK_RATIO=
+C_S05_AXI_IS_ACLK_ASYNC=
+C_S06_AXI_ACLK_RATIO=
+C_S06_AXI_IS_ACLK_ASYNC=
+C_S07_AXI_ACLK_RATIO=
+C_S07_AXI_IS_ACLK_ASYNC=
+C_S08_AXI_ACLK_RATIO=
+C_S08_AXI_IS_ACLK_ASYNC=
+C_S09_AXI_ACLK_RATIO=
+C_S09_AXI_IS_ACLK_ASYNC=
+C_S10_AXI_ACLK_RATIO=
+C_S10_AXI_IS_ACLK_ASYNC=
+C_S11_AXI_ACLK_RATIO=
+C_S11_AXI_IS_ACLK_ASYNC=
+C_S12_AXI_ACLK_RATIO=
+C_S12_AXI_IS_ACLK_ASYNC=
+C_S13_AXI_ACLK_RATIO=
+C_S13_AXI_IS_ACLK_ASYNC=
+C_S14_AXI_ACLK_RATIO=
+C_S14_AXI_IS_ACLK_ASYNC=
+C_S15_AXI_ACLK_RATIO=
+C_S15_AXI_IS_ACLK_ASYNC=
+C_WR_FREQ=
+MULT=
+P_M_AXI_ACLK_RATIO=
+P_S_AXI_ACLK_RATIO=
+P_S_AXI_IS_ACLK_ASYNC=
+OUTPUT=u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/clkout1_buf/O LOADS=1
+  u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/ai_core_clk_locked_reg/C REF=FDRE

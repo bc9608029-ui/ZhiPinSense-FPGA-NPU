@@ -1,0 +1,3 @@
+nohup /root/miniconda3/envs/torch_v2.0.1_aarch64/bin/python3 /rooot/rml24_three_modes_execution_20261029/fpga_ui_integration_20261031/classify_244.py > /root/rml24_24class_classify.log 2>&1 < /dev/null &
+[2] 830
+(base) root@U:~# 

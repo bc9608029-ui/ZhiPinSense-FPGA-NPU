@@ -1,0 +1,7 @@
+﻿$ErrorActionPreference='Stop'
+$p=[IO.Ports.SerialPort]::new('COM8',115200);$p.ReadBufferSize=1048576;$p.WriteTimeout=3000
+$cmd='python3 -c ''import pathlib,hashlib,gzip,base64;b=pathlib.Path("/root/rml24_boot_persistence_20261027/post_reboot_services.log").read_bytes();print("__RML24_LOG_BEGIN__ "+hashlib.sha256(b).hexdigest());print(base64.b64encode(gzip.compress(b)).decode());print("__RML24_LOG_END__")'''
+$p.Open();$text=''
+try{$null=$p.ReadExisting();$p.Write($cmd+"`r");$end=(Get-Date).AddSeconds(30);while((Get-Date)-lt $end){$text+=$p.ReadExisting();if($text -match '(?s)__RML24_LOG_BEGIN__ ([a-f0-9]{64})\s+([A-Za-z0-9+/=\r\n]+)\s+__RML24_LOG_END__'){break};Start-Sleep -Milliseconds 100}}finally{$p.Close()}
+if($text -notmatch '(?s)__RML24_LOG_BEGIN__ ([a-f0-9]{64})\s+([A-Za-z0-9+/=\r\n]+)\s+__RML24_LOG_END__'){throw 'Serial log export incomplete'}
+$sha=$Matches[1];$bytes=[Convert]::FromBase64String(($Matches[2]-replace '\s',''));$m=[IO.MemoryStream]::new($bytes);$g=[IO.Compression.GzipStream]::new($m,[IO.Compression.CompressionMode]::Decompress);$o=[IO.MemoryStream]::new();$g.CopyTo($o);$g.Dispose();$data=$o.ToArray();$o.Dispose();$m.Dispose();$path=Join-Path (Split-Path -Parent $PSScriptRoot) 'evidence\post_reboot_services.log';[IO.File]::WriteAllBytes($path,$data);if((Get-FileHash -LiteralPath $path).Hash.ToLower() -ne $sha){throw 'Log SHA mismatch'};Write-Output "SERIAL_LOG_COPY_SHA_PASS=$sha"

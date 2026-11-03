@@ -1,0 +1,45 @@
+{
+  "seed": 2027,
+  "split": "ad_amr_v1_1_validation",
+  "split_code": 2978389236,
+  "num_samples": 240,
+  "per_class": 20,
+  "per_class_count": {
+    "OOK": 20,
+    "4ASK": 20,
+    "AM-DSB": 20,
+    "WBFM": 20,
+    "2FSK": 20,
+    "GFSK": 20,
+    "BPSK": 20,
+    "QPSK": 20,
+    "8PSK": 20,
+    "16QAM": 20,
+    "64QAM": 20,
+    "OFDM": 20
+  },
+  "class_order": [
+    "OOK",
+    "4ASK",
+    "AM-DSB",
+    "WBFM",
+    "2FSK",
+    "GFSK",
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "OFDM"
+  ],
+  "source_onnx": "F:\\FPGA_Work\\_tmp_ad_amr_results_verify\\ad_amr_data_v3_12class_ff2b3fb3_run\\outputs\\ad_amr_v1_1_data_v3_12class\\formal\\export\\onnx\\ad_amr_v1_1_opset17.onnx",
+  "source_onnx_sha256": "f77587152b52cda9a467b28790bc62d0eb0c639db2c39da82642c00ca8deda5a",
+  "input_shape": [
+    1,
+    2,
+    1024
+  ],
+  "input_dtype": "fp32",
+  "snr_db": 10.0,
+  "expected_file": "expected_logits_or_argmax.json"
+}

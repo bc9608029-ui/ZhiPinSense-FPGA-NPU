@@ -1,0 +1,231 @@
+{
+  "accuracy": {
+    "A_host_bf16_reference": 0.8729166666666667,
+    "C_end_to_end_gate_reject_is_fail": NaN,
+    "C_gate_reject_forceable_count": 0,
+    "C_gated": NaN,
+    "D_digital_e2e": NaN
+  },
+  "arm_c_board_pending": true,
+  "corr_stats": {
+    "median": null,
+    "min": null,
+    "n": 0
+  },
+  "coverage": {
+    "A": 480,
+    "C": 0,
+    "D_digital_input": 480,
+    "D_prediction": 0
+  },
+  "note": "arm A host_pred \u4ec5\u662f\u53c2\u8003; dataset_snr_db \u975e\u771f\u5b9e RX SNR",
+  "per_class": {
+    "128APSK": {
+      "a_correct": 15,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "128QAM": {
+      "a_correct": 15,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "16APSK": {
+      "a_correct": 19,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "16PSK": {
+      "a_correct": 16,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "16QAM": {
+      "a_correct": 16,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "256QAM": {
+      "a_correct": 19,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "32APSK": {
+      "a_correct": 17,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "32PSK": {
+      "a_correct": 17,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "32QAM": {
+      "a_correct": 16,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "4ASK": {
+      "a_correct": 17,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "64APSK": {
+      "a_correct": 15,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "64QAM": {
+      "a_correct": 15,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "8ASK": {
+      "a_correct": 18,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "8PSK": {
+      "a_correct": 18,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "AM-DSB-SC": {
+      "a_correct": 16,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "AM-DSB-WC": {
+      "a_correct": 19,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "AM-SSB-SC": {
+      "a_correct": 16,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "AM-SSB-WC": {
+      "a_correct": 16,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "BPSK": {
+      "a_correct": 20,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "FM": {
+      "a_correct": 20,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "GMSK": {
+      "a_correct": 20,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "OOK": {
+      "a_correct": 20,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "OQPSK": {
+      "a_correct": 20,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    },
+    "QPSK": {
+      "a_correct": 19,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20
+    }
+  },
+  "per_snr": {
+    "0dB": {
+      "a_correct": 68,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "n": 120
+    },
+    "10dB": {
+      "a_correct": 118,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "n": 120
+    },
+    "20dB": {
+      "a_correct": 117,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "n": 120
+    },
+    "30dB": {
+      "a_correct": 116,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "n": 120
+    }
+  },
+  "prediction_flips": {
+    "A_to_C": 0,
+    "A_to_D": 0,
+    "D_to_C": 0
+  },
+  "residual_stats": {
+    "max": null,
+    "median": null,
+    "min": null,
+    "n": 0,
+    "pass_0100": 0
+  },
+  "token": "M29-RML24-FIX10CLASS24-ORIGINAL-RADIOML-DUALSDR-AB1-JUDGED"
+}

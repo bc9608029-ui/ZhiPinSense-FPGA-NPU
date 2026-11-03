@@ -1,0 +1,3428 @@
+{
+  "rows": [
+    {
+      "index": 0,
+      "initial_file": "pair_000_initial.npy",
+      "final_file": "pair_000_initial.npy",
+      "initial_mono_ns": 35636621738430,
+      "final_mono_ns": 35636621738430,
+      "initial_stats": {
+        "min": -254.0,
+        "max": 278.0,
+        "peak": 278.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -254.0,
+        "max": 278.0,
+        "peak": 278.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 1,
+      "initial_file": "pair_001_initial.npy",
+      "final_file": "pair_001_initial.npy",
+      "initial_mono_ns": 35640630777220,
+      "final_mono_ns": 35640630777220,
+      "initial_stats": {
+        "min": -147.0,
+        "max": 155.0,
+        "peak": 155.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -147.0,
+        "max": 155.0,
+        "peak": 155.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 2,
+      "initial_file": "pair_002_initial.npy",
+      "final_file": "pair_002_initial.npy",
+      "initial_mono_ns": 35644630174880,
+      "final_mono_ns": 35644630174880,
+      "initial_stats": {
+        "min": -110.0,
+        "max": 99.0,
+        "peak": 110.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -110.0,
+        "max": 99.0,
+        "peak": 110.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 3,
+      "initial_file": "pair_003_initial.npy",
+      "final_file": "pair_003_initial.npy",
+      "initial_mono_ns": 35648630000850,
+      "final_mono_ns": 35648630000850,
+      "initial_stats": {
+        "min": -1194.0,
+        "max": 240.0,
+        "peak": 1194.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1194.0,
+        "max": 240.0,
+        "peak": 1194.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 4,
+      "initial_file": "pair_004_initial.npy",
+      "final_file": "pair_004_initial.npy",
+      "initial_mono_ns": 35652630081920,
+      "final_mono_ns": 35652630081920,
+      "initial_stats": {
+        "min": -1552.0,
+        "max": 1564.0,
+        "peak": 1564.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1552.0,
+        "max": 1564.0,
+        "peak": 1564.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 5,
+      "initial_file": "pair_005_initial.npy",
+      "final_file": "pair_005_initial.npy",
+      "initial_mono_ns": 35656630166020,
+      "final_mono_ns": 35656630166020,
+      "initial_stats": {
+        "min": -1562.0,
+        "max": 1568.0,
+        "peak": 1568.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1562.0,
+        "max": 1568.0,
+        "peak": 1568.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 6,
+      "initial_file": "pair_006_initial.npy",
+      "final_file": "pair_006_initial.npy",
+      "initial_mono_ns": 35660640254110,
+      "final_mono_ns": 35660640254110,
+      "initial_stats": {
+        "min": -1061.0,
+        "max": 1064.0,
+        "peak": 1064.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1061.0,
+        "max": 1064.0,
+        "peak": 1064.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 7,
+      "initial_file": "pair_007_initial.npy",
+      "final_file": "pair_007_initial.npy",
+      "initial_mono_ns": 35664640331110,
+      "final_mono_ns": 35664640331110,
+      "initial_stats": {
+        "min": -967.0,
+        "max": 964.0,
+        "peak": 967.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -967.0,
+        "max": 964.0,
+        "peak": 967.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 8,
+      "initial_file": "pair_008_initial.npy",
+      "final_file": "pair_008_initial.npy",
+      "initial_mono_ns": 35668640351350,
+      "final_mono_ns": 35668640351350,
+      "initial_stats": {
+        "min": -1690.0,
+        "max": 1700.0,
+        "peak": 1700.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1690.0,
+        "max": 1700.0,
+        "peak": 1700.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 9,
+      "initial_file": "pair_009_initial.npy",
+      "final_file": "pair_009_initial.npy",
+      "initial_mono_ns": 35672650370640,
+      "final_mono_ns": 35672650370640,
+      "initial_stats": {
+        "min": -1239.0,
+        "max": 1249.0,
+        "peak": 1249.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1239.0,
+        "max": 1249.0,
+        "peak": 1249.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 60.0,
+        "readback_gain_db": 60.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 60.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 10,
+      "initial_file": "pair_010_initial.npy",
+      "final_file": "pair_010_initial.npy",
+      "initial_mono_ns": 35676650463270,
+      "final_mono_ns": 35676650463270,
+      "initial_stats": {
+        "min": -1407.0,
+        "max": 1395.0,
+        "peak": 1407.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1407.0,
+        "max": 1395.0,
+        "peak": 1407.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 11,
+      "initial_file": "pair_011_initial.npy",
+      "final_file": "pair_011_initial.npy",
+      "initial_mono_ns": 35680650548650,
+      "final_mono_ns": 35680650548650,
+      "initial_stats": {
+        "min": -1393.0,
+        "max": 1403.0,
+        "peak": 1403.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1393.0,
+        "max": 1403.0,
+        "peak": 1403.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 12,
+      "initial_file": "pair_012_initial.npy",
+      "final_file": "pair_012_initial.npy",
+      "initial_mono_ns": 35684660624140,
+      "final_mono_ns": 35684660624140,
+      "initial_stats": {
+        "min": -351.0,
+        "max": 356.0,
+        "peak": 356.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -351.0,
+        "max": 356.0,
+        "peak": 356.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 13,
+      "initial_file": "pair_013_initial.npy",
+      "final_file": "pair_013_initial.npy",
+      "initial_mono_ns": 35688660832660,
+      "final_mono_ns": 35688660832660,
+      "initial_stats": {
+        "min": -359.0,
+        "max": 357.0,
+        "peak": 359.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -359.0,
+        "max": 357.0,
+        "peak": 359.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 14,
+      "initial_file": "pair_014_initial.npy",
+      "final_file": "pair_014_initial.npy",
+      "initial_mono_ns": 35692660909400,
+      "final_mono_ns": 35692660909400,
+      "initial_stats": {
+        "min": -526.0,
+        "max": 529.0,
+        "peak": 529.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -526.0,
+        "max": 529.0,
+        "peak": 529.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 15,
+      "initial_file": "pair_015_initial.npy",
+      "final_file": "pair_015_initial.npy",
+      "initial_mono_ns": 35696670875360,
+      "final_mono_ns": 35696670875360,
+      "initial_stats": {
+        "min": -540.0,
+        "max": 528.0,
+        "peak": 540.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -540.0,
+        "max": 528.0,
+        "peak": 540.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 16,
+      "initial_file": "pair_016_initial.npy",
+      "final_file": "pair_016_initial.npy",
+      "initial_mono_ns": 35700670892140,
+      "final_mono_ns": 35700670892140,
+      "initial_stats": {
+        "min": -1681.0,
+        "max": 1688.0,
+        "peak": 1688.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1681.0,
+        "max": 1688.0,
+        "peak": 1688.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 52.0,
+        "readback_gain_db": 52.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 52.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 17,
+      "initial_file": "pair_017_initial.npy",
+      "final_file": "pair_017_initial.npy",
+      "initial_mono_ns": 35704661168280,
+      "final_mono_ns": 35704661168280,
+      "initial_stats": {
+        "min": -1697.0,
+        "max": 1695.0,
+        "peak": 1697.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1697.0,
+        "max": 1695.0,
+        "peak": 1697.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 52.0,
+        "readback_gain_db": 52.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 52.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 18,
+      "initial_file": "pair_018_initial.npy",
+      "final_file": "pair_018_initial.npy",
+      "initial_mono_ns": 35708681116720,
+      "final_mono_ns": 35708681116720,
+      "initial_stats": {
+        "min": -629.0,
+        "max": 617.0,
+        "peak": 629.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -629.0,
+        "max": 617.0,
+        "peak": 629.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 65.0,
+        "readback_gain_db": 65.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 65.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 19,
+      "initial_file": "pair_019_initial.npy",
+      "final_file": "pair_019_initial.npy",
+      "initial_mono_ns": 35712681083610,
+      "final_mono_ns": 35712681083610,
+      "initial_stats": {
+        "min": -1059.0,
+        "max": 1020.0,
+        "peak": 1059.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1059.0,
+        "max": 1020.0,
+        "peak": 1059.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 20,
+      "initial_file": "pair_020_initial.npy",
+      "final_file": "pair_020_initial.npy",
+      "initial_mono_ns": 35716681160900,
+      "final_mono_ns": 35716681160900,
+      "initial_stats": {
+        "min": -875.0,
+        "max": 918.0,
+        "peak": 918.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -875.0,
+        "max": 918.0,
+        "peak": 918.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 21,
+      "initial_file": "pair_021_initial.npy",
+      "final_file": "pair_021_initial.npy",
+      "initial_mono_ns": 35720691370210,
+      "final_mono_ns": 35720691370210,
+      "initial_stats": {
+        "min": -1495.0,
+        "max": 1502.0,
+        "peak": 1502.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1495.0,
+        "max": 1502.0,
+        "peak": 1502.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 22,
+      "initial_file": "pair_022_initial.npy",
+      "final_file": "pair_022_initial.npy",
+      "initial_mono_ns": 35724691457390,
+      "final_mono_ns": 35724691457390,
+      "initial_stats": {
+        "min": -1353.0,
+        "max": 1334.0,
+        "peak": 1353.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1353.0,
+        "max": 1334.0,
+        "peak": 1353.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 62.0,
+        "readback_gain_db": 62.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 62.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 23,
+      "initial_file": "pair_023_initial.npy",
+      "final_file": "pair_023_initial.npy",
+      "initial_mono_ns": 35728681412000,
+      "final_mono_ns": 35728681412000,
+      "initial_stats": {
+        "min": -1079.0,
+        "max": 1180.0,
+        "peak": 1180.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1079.0,
+        "max": 1180.0,
+        "peak": 1180.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 24,
+      "initial_file": "pair_024_initial.npy",
+      "final_file": "pair_024_initial.npy",
+      "initial_mono_ns": 35732701501660,
+      "final_mono_ns": 35732701501660,
+      "initial_stats": {
+        "min": -1697.0,
+        "max": 1797.0,
+        "peak": 1797.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1697.0,
+        "max": 1797.0,
+        "peak": 1797.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 66.0,
+        "readback_gain_db": 66.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 66.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 25,
+      "initial_file": "pair_025_initial.npy",
+      "final_file": "pair_025_initial.npy",
+      "initial_mono_ns": 35736701582270,
+      "final_mono_ns": 35736701582270,
+      "initial_stats": {
+        "min": -650.0,
+        "max": 639.0,
+        "peak": 650.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -650.0,
+        "max": 639.0,
+        "peak": 650.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 26,
+      "initial_file": "pair_026_initial.npy",
+      "final_file": "pair_026_initial.npy",
+      "initial_mono_ns": 35740701787990,
+      "final_mono_ns": 35740701787990,
+      "initial_stats": {
+        "min": -514.0,
+        "max": 388.0,
+        "peak": 514.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -514.0,
+        "max": 388.0,
+        "peak": 514.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 27,
+      "initial_file": "pair_027_initial.npy",
+      "final_file": "pair_027_initial.npy",
+      "initial_mono_ns": 35744711742230,
+      "final_mono_ns": 35744711742230,
+      "initial_stats": {
+        "min": -414.0,
+        "max": 410.0,
+        "peak": 414.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -414.0,
+        "max": 410.0,
+        "peak": 414.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 28,
+      "initial_file": "pair_028_initial.npy",
+      "final_file": "pair_028_initial.npy",
+      "initial_mono_ns": 35748701953150,
+      "final_mono_ns": 35748701953150,
+      "initial_stats": {
+        "min": -418.0,
+        "max": 423.0,
+        "peak": 423.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -418.0,
+        "max": 423.0,
+        "peak": 423.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 29,
+      "initial_file": "pair_029_initial.npy",
+      "final_file": "pair_029_initial.npy",
+      "initial_mono_ns": 35752702034740,
+      "final_mono_ns": 35752702034740,
+      "initial_stats": {
+        "min": -1431.0,
+        "max": 1439.0,
+        "peak": 1439.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1431.0,
+        "max": 1439.0,
+        "peak": 1439.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 30,
+      "initial_file": "pair_030_initial.npy",
+      "final_file": "pair_030_initial.npy",
+      "initial_mono_ns": 35756701995710,
+      "final_mono_ns": 35756701995710,
+      "initial_stats": {
+        "min": -1447.0,
+        "max": 1444.0,
+        "peak": 1447.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1447.0,
+        "max": 1444.0,
+        "peak": 1447.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 31,
+      "initial_file": "pair_031_initial.npy",
+      "final_file": "pair_031_initial.npy",
+      "initial_mono_ns": 35760702207720,
+      "final_mono_ns": 35760702207720,
+      "initial_stats": {
+        "min": -1091.0,
+        "max": 1086.0,
+        "peak": 1091.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1091.0,
+        "max": 1086.0,
+        "peak": 1091.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 32,
+      "initial_file": "pair_032_initial.npy",
+      "final_file": "pair_032_initial.npy",
+      "initial_mono_ns": 35764722038080,
+      "final_mono_ns": 35764722038080,
+      "initial_stats": {
+        "min": -1243.0,
+        "max": 1242.0,
+        "peak": 1243.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1243.0,
+        "max": 1242.0,
+        "peak": 1243.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 62.0,
+        "readback_gain_db": 62.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 62.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 33,
+      "initial_file": "pair_033_initial.npy",
+      "final_file": "pair_033_final.npy",
+      "initial_mono_ns": 35768722371470,
+      "final_mono_ns": 35768992742860,
+      "initial_stats": {
+        "min": -2048.0,
+        "max": 2047.0,
+        "peak": 2048.0,
+        "rail_count": 7582
+      },
+      "final_stats": {
+        "min": -1416.0,
+        "max": 1409.0,
+        "peak": 1416.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 53.0,
+      "backoff_steps": [
+        {
+          "before_gain": 71.0,
+          "requested": 65.0,
+          "readback": 65.0,
+          "stats": {
+            "min": -2048.0,
+            "max": 2047.0,
+            "peak": 2048.0,
+            "rail_count": 6606
+          }
+        },
+        {
+          "before_gain": 65.0,
+          "requested": 59.0,
+          "readback": 59.0,
+          "stats": {
+            "min": -2048.0,
+            "max": 2047.0,
+            "peak": 2048.0,
+            "rail_count": 177
+          }
+        },
+        {
+          "before_gain": 59.0,
+          "requested": 53.0,
+          "readback": 53.0,
+          "stats": {
+            "min": -1416.0,
+            "max": 1409.0,
+            "peak": 1416.0,
+            "rail_count": 0
+          }
+        }
+      ],
+      "headroom_resolved": true
+    },
+    {
+      "index": 34,
+      "initial_file": "pair_034_initial.npy",
+      "final_file": "pair_034_initial.npy",
+      "initial_mono_ns": 35772722380660,
+      "final_mono_ns": 35772722380660,
+      "initial_stats": {
+        "min": -1091.0,
+        "max": 1058.0,
+        "peak": 1091.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1091.0,
+        "max": 1058.0,
+        "peak": 1091.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 51.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 35,
+      "initial_file": "pair_035_initial.npy",
+      "final_file": "pair_035_initial.npy",
+      "initial_mono_ns": 35776734786550,
+      "final_mono_ns": 35776734786550,
+      "initial_stats": {
+        "min": -133.0,
+        "max": 140.0,
+        "peak": 140.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -133.0,
+        "max": 140.0,
+        "peak": 140.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 51.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 36,
+      "initial_file": "pair_036_initial.npy",
+      "final_file": "pair_036_initial.npy",
+      "initial_mono_ns": 35780742557420,
+      "final_mono_ns": 35780742557420,
+      "initial_stats": {
+        "min": -349.0,
+        "max": 335.0,
+        "peak": 349.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -349.0,
+        "max": 335.0,
+        "peak": 349.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 37,
+      "initial_file": "pair_037_initial.npy",
+      "final_file": "pair_037_initial.npy",
+      "initial_mono_ns": 35784743253790,
+      "final_mono_ns": 35784743253790,
+      "initial_stats": {
+        "min": -333.0,
+        "max": 343.0,
+        "peak": 343.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -333.0,
+        "max": 343.0,
+        "peak": 343.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 38,
+      "initial_file": "pair_038_initial.npy",
+      "final_file": "pair_038_initial.npy",
+      "initial_mono_ns": 35788752411440,
+      "final_mono_ns": 35788752411440,
+      "initial_stats": {
+        "min": -1340.0,
+        "max": 1343.0,
+        "peak": 1343.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1340.0,
+        "max": 1343.0,
+        "peak": 1343.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 52.0,
+        "readback_gain_db": 52.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 52.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 39,
+      "initial_file": "pair_039_initial.npy",
+      "final_file": "pair_039_initial.npy",
+      "initial_mono_ns": 35792752489000,
+      "final_mono_ns": 35792752489000,
+      "initial_stats": {
+        "min": -985.0,
+        "max": 973.0,
+        "peak": 985.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -985.0,
+        "max": 973.0,
+        "peak": 985.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 49.0,
+        "readback_gain_db": 49.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 49.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 40,
+      "initial_file": "pair_040_initial.npy",
+      "final_file": "pair_040_final.npy",
+      "initial_mono_ns": 35796752637570,
+      "final_mono_ns": 35796843924660,
+      "initial_stats": {
+        "min": -1940.0,
+        "max": 1915.0,
+        "peak": 1940.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1599.0,
+        "max": 1593.0,
+        "peak": 1599.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 49.0,
+      "backoff_steps": [
+        {
+          "before_gain": 51.0,
+          "requested": 49.0,
+          "readback": 49.0,
+          "stats": {
+            "min": -1599.0,
+            "max": 1593.0,
+            "peak": 1599.0,
+            "rail_count": 0
+          }
+        }
+      ],
+      "headroom_resolved": true
+    },
+    {
+      "index": 41,
+      "initial_file": "pair_041_initial.npy",
+      "final_file": "pair_041_final.npy",
+      "initial_mono_ns": 35800752908160,
+      "final_mono_ns": 35800843153260,
+      "initial_stats": {
+        "min": -2048.0,
+        "max": 2047.0,
+        "peak": 2048.0,
+        "rail_count": 38
+      },
+      "final_stats": {
+        "min": -1176.0,
+        "max": 1171.0,
+        "peak": 1176.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 52.0,
+        "readback_gain_db": 52.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 46.0,
+      "backoff_steps": [
+        {
+          "before_gain": 52.0,
+          "requested": 46.0,
+          "readback": 46.0,
+          "stats": {
+            "min": -1176.0,
+            "max": 1171.0,
+            "peak": 1176.0,
+            "rail_count": 0
+          }
+        }
+      ],
+      "headroom_resolved": true
+    },
+    {
+      "index": 42,
+      "initial_file": "pair_042_initial.npy",
+      "final_file": "pair_042_initial.npy",
+      "initial_mono_ns": 35804763251270,
+      "final_mono_ns": 35804763251270,
+      "initial_stats": {
+        "min": -1649.0,
+        "max": 1624.0,
+        "peak": 1649.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1649.0,
+        "max": 1624.0,
+        "peak": 1649.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 51.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 43,
+      "initial_file": "pair_043_initial.npy",
+      "final_file": "pair_043_final.npy",
+      "initial_mono_ns": 35808762823750,
+      "final_mono_ns": 35808853566790,
+      "initial_stats": {
+        "min": -2048.0,
+        "max": 2047.0,
+        "peak": 2048.0,
+        "rail_count": 55
+      },
+      "final_stats": {
+        "min": -1043.0,
+        "max": 1047.0,
+        "peak": 1047.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 53.0,
+        "readback_gain_db": 53.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 47.0,
+      "backoff_steps": [
+        {
+          "before_gain": 53.0,
+          "requested": 47.0,
+          "readback": 47.0,
+          "stats": {
+            "min": -1043.0,
+            "max": 1047.0,
+            "peak": 1047.0,
+            "rail_count": 0
+          }
+        }
+      ],
+      "headroom_resolved": true
+    },
+    {
+      "index": 44,
+      "initial_file": "pair_044_initial.npy",
+      "final_file": "pair_044_initial.npy",
+      "initial_mono_ns": 35812773285770,
+      "final_mono_ns": 35812773285770,
+      "initial_stats": {
+        "min": -1155.0,
+        "max": 1153.0,
+        "peak": 1155.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1155.0,
+        "max": 1153.0,
+        "peak": 1155.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 62.0,
+        "readback_gain_db": 62.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 62.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 45,
+      "initial_file": "pair_045_initial.npy",
+      "final_file": "pair_045_initial.npy",
+      "initial_mono_ns": 35816773112720,
+      "final_mono_ns": 35816773112720,
+      "initial_stats": {
+        "min": -1161.0,
+        "max": 1164.0,
+        "peak": 1164.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1161.0,
+        "max": 1164.0,
+        "peak": 1164.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 62.0,
+        "readback_gain_db": 62.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 62.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 46,
+      "initial_file": "pair_046_initial.npy",
+      "final_file": "pair_046_initial.npy",
+      "initial_mono_ns": 35820773323060,
+      "final_mono_ns": 35820773323060,
+      "initial_stats": {
+        "min": -1149.0,
+        "max": 1150.0,
+        "peak": 1150.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1149.0,
+        "max": 1150.0,
+        "peak": 1150.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 60.0,
+        "readback_gain_db": 60.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 60.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 47,
+      "initial_file": "pair_047_initial.npy",
+      "final_file": "pair_047_initial.npy",
+      "initial_mono_ns": 35824773279470,
+      "final_mono_ns": 35824773279470,
+      "initial_stats": {
+        "min": -1288.0,
+        "max": 1285.0,
+        "peak": 1288.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1288.0,
+        "max": 1285.0,
+        "peak": 1288.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 48,
+      "initial_file": "pair_048_initial.npy",
+      "final_file": "pair_048_initial.npy",
+      "initial_mono_ns": 35828783239290,
+      "final_mono_ns": 35828783239290,
+      "initial_stats": {
+        "min": -1781.0,
+        "max": 1784.0,
+        "peak": 1784.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1781.0,
+        "max": 1784.0,
+        "peak": 1784.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 49,
+      "initial_file": "pair_049_initial.npy",
+      "final_file": "pair_049_initial.npy",
+      "initial_mono_ns": 35832783326020,
+      "final_mono_ns": 35832783326020,
+      "initial_stats": {
+        "min": -1452.0,
+        "max": 1461.0,
+        "peak": 1461.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1452.0,
+        "max": 1461.0,
+        "peak": 1461.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 50,
+      "initial_file": "pair_050_initial.npy",
+      "final_file": "pair_050_initial.npy",
+      "initial_mono_ns": 35836773275120,
+      "final_mono_ns": 35836773275120,
+      "initial_stats": {
+        "min": -557.0,
+        "max": 844.0,
+        "peak": 844.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -557.0,
+        "max": 844.0,
+        "peak": 844.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 51,
+      "initial_file": "pair_051_initial.npy",
+      "final_file": "pair_051_initial.npy",
+      "initial_mono_ns": 35840793480350,
+      "final_mono_ns": 35840793480350,
+      "initial_stats": {
+        "min": -1056.0,
+        "max": 1028.0,
+        "peak": 1056.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1056.0,
+        "max": 1028.0,
+        "peak": 1056.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 60.0,
+        "readback_gain_db": 60.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 60.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 52,
+      "initial_file": "pair_052_initial.npy",
+      "final_file": "pair_052_initial.npy",
+      "initial_mono_ns": 35844793443020,
+      "final_mono_ns": 35844793443020,
+      "initial_stats": {
+        "min": -1105.0,
+        "max": 1102.0,
+        "peak": 1105.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1105.0,
+        "max": 1102.0,
+        "peak": 1105.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 53,
+      "initial_file": "pair_053_initial.npy",
+      "final_file": "pair_053_initial.npy",
+      "initial_mono_ns": 35848793655100,
+      "final_mono_ns": 35848793655100,
+      "initial_stats": {
+        "min": -1637.0,
+        "max": 1619.0,
+        "peak": 1637.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1637.0,
+        "max": 1619.0,
+        "peak": 1637.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 54,
+      "initial_file": "pair_054_initial.npy",
+      "final_file": "pair_054_initial.npy",
+      "initial_mono_ns": 35852803609860,
+      "final_mono_ns": 35852803609860,
+      "initial_stats": {
+        "min": -1054.0,
+        "max": 1064.0,
+        "peak": 1064.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1054.0,
+        "max": 1064.0,
+        "peak": 1064.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 59.0,
+        "readback_gain_db": 59.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 59.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 55,
+      "initial_file": "pair_055_initial.npy",
+      "final_file": "pair_055_initial.npy",
+      "initial_mono_ns": 35856803568200,
+      "final_mono_ns": 35856803568200,
+      "initial_stats": {
+        "min": -341.0,
+        "max": 361.0,
+        "peak": 361.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -341.0,
+        "max": 361.0,
+        "peak": 361.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 56,
+      "initial_file": "pair_056_initial.npy",
+      "final_file": "pair_056_initial.npy",
+      "initial_mono_ns": 35860793780420,
+      "final_mono_ns": 35860793780420,
+      "initial_stats": {
+        "min": -423.0,
+        "max": 439.0,
+        "peak": 439.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -423.0,
+        "max": 439.0,
+        "peak": 439.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 57,
+      "initial_file": "pair_057_initial.npy",
+      "final_file": "pair_057_final.npy",
+      "initial_mono_ns": 35864813986410,
+      "final_mono_ns": 35864904234710,
+      "initial_stats": {
+        "min": -1800.0,
+        "max": 1852.0,
+        "peak": 1852.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1500.0,
+        "max": 1499.0,
+        "peak": 1500.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 59.0,
+        "readback_gain_db": 59.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 57.0,
+      "backoff_steps": [
+        {
+          "before_gain": 59.0,
+          "requested": 57.0,
+          "readback": 57.0,
+          "stats": {
+            "min": -1500.0,
+            "max": 1499.0,
+            "peak": 1500.0,
+            "rail_count": 0
+          }
+        }
+      ],
+      "headroom_resolved": true
+    },
+    {
+      "index": 58,
+      "initial_file": "pair_058_initial.npy",
+      "final_file": "pair_058_initial.npy",
+      "initial_mono_ns": 35868814200550,
+      "final_mono_ns": 35868814200550,
+      "initial_stats": {
+        "min": -1638.0,
+        "max": 1616.0,
+        "peak": 1638.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1638.0,
+        "max": 1616.0,
+        "peak": 1638.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 58.0,
+        "readback_gain_db": 58.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 58.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 59,
+      "initial_file": "pair_059_initial.npy",
+      "final_file": "pair_059_final.npy",
+      "initial_mono_ns": 35872823901540,
+      "final_mono_ns": 35872914650450,
+      "initial_stats": {
+        "min": -1967.0,
+        "max": 1968.0,
+        "peak": 1968.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1661.0,
+        "max": 1646.0,
+        "peak": 1661.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 48.0,
+        "readback_gain_db": 48.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 46.0,
+      "backoff_steps": [
+        {
+          "before_gain": 48.0,
+          "requested": 46.0,
+          "readback": 46.0,
+          "stats": {
+            "min": -1661.0,
+            "max": 1646.0,
+            "peak": 1661.0,
+            "rail_count": 0
+          }
+        }
+      ],
+      "headroom_resolved": true
+    },
+    {
+      "index": 60,
+      "initial_file": "pair_060_initial.npy",
+      "final_file": "pair_060_final.npy",
+      "initial_mono_ns": 35876824243830,
+      "final_mono_ns": 35876914351720,
+      "initial_stats": {
+        "min": -1836.0,
+        "max": 1849.0,
+        "peak": 1849.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1263.0,
+        "max": 1333.0,
+        "peak": 1333.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 46.0,
+        "readback_gain_db": 46.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 44.0,
+      "backoff_steps": [
+        {
+          "before_gain": 46.0,
+          "requested": 44.0,
+          "readback": 44.0,
+          "stats": {
+            "min": -1263.0,
+            "max": 1333.0,
+            "peak": 1333.0,
+            "rail_count": 0
+          }
+        }
+      ],
+      "headroom_resolved": true
+    },
+    {
+      "index": 61,
+      "initial_file": "pair_061_initial.npy",
+      "final_file": "pair_061_initial.npy",
+      "initial_mono_ns": 35880824452630,
+      "final_mono_ns": 35880824452630,
+      "initial_stats": {
+        "min": -1671.0,
+        "max": 1691.0,
+        "peak": 1691.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1671.0,
+        "max": 1691.0,
+        "peak": 1691.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 60.0,
+        "readback_gain_db": 60.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 60.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 62,
+      "initial_file": "pair_062_initial.npy",
+      "final_file": "pair_062_initial.npy",
+      "initial_mono_ns": 35884814276820,
+      "final_mono_ns": 35884814276820,
+      "initial_stats": {
+        "min": -1278.0,
+        "max": 1284.0,
+        "peak": 1284.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1278.0,
+        "max": 1284.0,
+        "peak": 1284.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 57.0,
+        "readback_gain_db": 57.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 57.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 63,
+      "initial_file": "pair_063_initial.npy",
+      "final_file": "pair_063_initial.npy",
+      "initial_mono_ns": 35888834730670,
+      "final_mono_ns": 35888834730670,
+      "initial_stats": {
+        "min": -384.0,
+        "max": 382.0,
+        "peak": 384.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -384.0,
+        "max": 382.0,
+        "peak": 384.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 64,
+      "initial_file": "pair_064_initial.npy",
+      "final_file": "pair_064_initial.npy",
+      "initial_mono_ns": 35892834564040,
+      "final_mono_ns": 35892834564040,
+      "initial_stats": {
+        "min": -387.0,
+        "max": 392.0,
+        "peak": 392.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -387.0,
+        "max": 392.0,
+        "peak": 392.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 65,
+      "initial_file": "pair_065_initial.npy",
+      "final_file": "pair_065_initial.npy",
+      "initial_mono_ns": 35896844395950,
+      "final_mono_ns": 35896844395950,
+      "initial_stats": {
+        "min": -1080.0,
+        "max": 1079.0,
+        "peak": 1080.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1080.0,
+        "max": 1079.0,
+        "peak": 1080.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 66,
+      "initial_file": "pair_066_initial.npy",
+      "final_file": "pair_066_initial.npy",
+      "initial_mono_ns": 35900844671570,
+      "final_mono_ns": 35900844671570,
+      "initial_stats": {
+        "min": -1013.0,
+        "max": 1006.0,
+        "peak": 1013.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1013.0,
+        "max": 1006.0,
+        "peak": 1013.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 60.0,
+        "readback_gain_db": 60.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 60.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 67,
+      "initial_file": "pair_067_initial.npy",
+      "final_file": "pair_067_initial.npy",
+      "initial_mono_ns": 35904844688270,
+      "final_mono_ns": 35904844688270,
+      "initial_stats": {
+        "min": -554.0,
+        "max": 546.0,
+        "peak": 554.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -554.0,
+        "max": 546.0,
+        "peak": 554.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 68,
+      "initial_file": "pair_068_initial.npy",
+      "final_file": "pair_068_initial.npy",
+      "initial_mono_ns": 35908854900560,
+      "final_mono_ns": 35908854900560,
+      "initial_stats": {
+        "min": -1450.0,
+        "max": 1450.0,
+        "peak": 1450.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1450.0,
+        "max": 1450.0,
+        "peak": 1450.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 69,
+      "initial_file": "pair_069_initial.npy",
+      "final_file": "pair_069_initial.npy",
+      "initial_mono_ns": 35912864858670,
+      "final_mono_ns": 35912864858670,
+      "initial_stats": {
+        "min": -943.0,
+        "max": 945.0,
+        "peak": 945.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -943.0,
+        "max": 945.0,
+        "peak": 945.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 59.0,
+        "readback_gain_db": 59.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 59.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 70,
+      "initial_file": "pair_070_initial.npy",
+      "final_file": "pair_070_initial.npy",
+      "initial_mono_ns": 35916835065250,
+      "final_mono_ns": 35916835065250,
+      "initial_stats": {
+        "min": -432.0,
+        "max": 432.0,
+        "peak": 432.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -432.0,
+        "max": 432.0,
+        "peak": 432.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 71,
+      "initial_file": "pair_071_initial.npy",
+      "final_file": "pair_071_initial.npy",
+      "initial_mono_ns": 35920835146730,
+      "final_mono_ns": 35920835146730,
+      "initial_stats": {
+        "min": -432.0,
+        "max": 433.0,
+        "peak": 433.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -432.0,
+        "max": 433.0,
+        "peak": 433.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 72,
+      "initial_file": "pair_072_initial.npy",
+      "final_file": "pair_072_initial.npy",
+      "initial_mono_ns": 35924865234400,
+      "final_mono_ns": 35924865234400,
+      "initial_stats": {
+        "min": -424.0,
+        "max": 429.0,
+        "peak": 429.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -424.0,
+        "max": 429.0,
+        "peak": 429.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 73,
+      "initial_file": "pair_073_initial.npy",
+      "final_file": "pair_073_initial.npy",
+      "initial_mono_ns": 35928855192830,
+      "final_mono_ns": 35928855192830,
+      "initial_stats": {
+        "min": -665.0,
+        "max": 525.0,
+        "peak": 665.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -665.0,
+        "max": 525.0,
+        "peak": 665.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 74,
+      "initial_file": "pair_074_initial.npy",
+      "final_file": "pair_074_initial.npy",
+      "initial_mono_ns": 35932865648690,
+      "final_mono_ns": 35932865648690,
+      "initial_stats": {
+        "min": -1094.0,
+        "max": 1105.0,
+        "peak": 1105.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1094.0,
+        "max": 1105.0,
+        "peak": 1105.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 75,
+      "initial_file": "pair_075_initial.npy",
+      "final_file": "pair_075_initial.npy",
+      "initial_mono_ns": 35936875613810,
+      "final_mono_ns": 35936875613810,
+      "initial_stats": {
+        "min": -1023.0,
+        "max": 1027.0,
+        "peak": 1027.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1023.0,
+        "max": 1027.0,
+        "peak": 1027.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 60.0,
+        "readback_gain_db": 60.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 60.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 76,
+      "initial_file": "pair_076_initial.npy",
+      "final_file": "pair_076_initial.npy",
+      "initial_mono_ns": 35940875504310,
+      "final_mono_ns": 35940875504310,
+      "initial_stats": {
+        "min": -616.0,
+        "max": 632.0,
+        "peak": 632.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -616.0,
+        "max": 632.0,
+        "peak": 632.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 77,
+      "initial_file": "pair_077_initial.npy",
+      "final_file": "pair_077_initial.npy",
+      "initial_mono_ns": 35944886087850,
+      "final_mono_ns": 35944886087850,
+      "initial_stats": {
+        "min": -625.0,
+        "max": 636.0,
+        "peak": 636.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -625.0,
+        "max": 636.0,
+        "peak": 636.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 78,
+      "initial_file": "pair_078_initial.npy",
+      "final_file": "pair_078_final.npy",
+      "initial_mono_ns": 35948885602400,
+      "final_mono_ns": 35948965721220,
+      "initial_stats": {
+        "min": -1952.0,
+        "max": 2013.0,
+        "peak": 2013.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1642.0,
+        "max": 1635.0,
+        "peak": 1642.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 37.0,
+        "readback_gain_db": 37.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 35.0,
+      "backoff_steps": [
+        {
+          "before_gain": 37.0,
+          "requested": 35.0,
+          "readback": 35.0,
+          "stats": {
+            "min": -1642.0,
+            "max": 1635.0,
+            "peak": 1642.0,
+            "rail_count": 0
+          }
+        }
+      ],
+      "headroom_resolved": true
+    },
+    {
+      "index": 79,
+      "initial_file": "pair_079_initial.npy",
+      "final_file": "pair_079_initial.npy",
+      "initial_mono_ns": 35952885937140,
+      "final_mono_ns": 35952885937140,
+      "initial_stats": {
+        "min": -1598.0,
+        "max": 1611.0,
+        "peak": 1611.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1598.0,
+        "max": 1611.0,
+        "peak": 1611.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 35.0,
+        "readback_gain_db": 35.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 35.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 80,
+      "initial_file": "pair_080_initial.npy",
+      "final_file": "pair_080_initial.npy",
+      "initial_mono_ns": 35956895521990,
+      "final_mono_ns": 35956895521990,
+      "initial_stats": {
+        "min": -1323.0,
+        "max": 1310.0,
+        "peak": 1323.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1323.0,
+        "max": 1310.0,
+        "peak": 1323.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 51.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 81,
+      "initial_file": "pair_081_initial.npy",
+      "final_file": "pair_081_initial.npy",
+      "initial_mono_ns": 35960895852390,
+      "final_mono_ns": 35960895852390,
+      "initial_stats": {
+        "min": -1654.0,
+        "max": 1652.0,
+        "peak": 1654.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1654.0,
+        "max": 1652.0,
+        "peak": 1654.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 53.0,
+        "readback_gain_db": 53.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 53.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 82,
+      "initial_file": "pair_082_initial.npy",
+      "final_file": "pair_082_initial.npy",
+      "initial_mono_ns": 35964895684830,
+      "final_mono_ns": 35964895684830,
+      "initial_stats": {
+        "min": -626.0,
+        "max": 615.0,
+        "peak": 626.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -626.0,
+        "max": 615.0,
+        "peak": 626.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 65.0,
+        "readback_gain_db": 65.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 65.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 83,
+      "initial_file": "pair_083_initial.npy",
+      "final_file": "pair_083_initial.npy",
+      "initial_mono_ns": 35968895771930,
+      "final_mono_ns": 35968895771930,
+      "initial_stats": {
+        "min": -1776.0,
+        "max": 1757.0,
+        "peak": 1776.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1776.0,
+        "max": 1757.0,
+        "peak": 1776.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 57.0,
+        "readback_gain_db": 57.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 57.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 84,
+      "initial_file": "pair_084_initial.npy",
+      "final_file": "pair_084_final.npy",
+      "initial_mono_ns": 35972905850570,
+      "final_mono_ns": 35972995972510,
+      "initial_stats": {
+        "min": -1984.0,
+        "max": 1880.0,
+        "peak": 1984.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -140.0,
+        "max": 96.0,
+        "peak": 140.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 58.0,
+        "readback_gain_db": 58.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 56.0,
+      "backoff_steps": [
+        {
+          "before_gain": 58.0,
+          "requested": 56.0,
+          "readback": 56.0,
+          "stats": {
+            "min": -140.0,
+            "max": 96.0,
+            "peak": 140.0,
+            "rail_count": 0
+          }
+        }
+      ],
+      "headroom_resolved": true
+    },
+    {
+      "index": 85,
+      "initial_file": "pair_085_initial.npy",
+      "final_file": "pair_085_initial.npy",
+      "initial_mono_ns": 35976906194250,
+      "final_mono_ns": 35976906194250,
+      "initial_stats": {
+        "min": -1298.0,
+        "max": 1302.0,
+        "peak": 1302.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1298.0,
+        "max": 1302.0,
+        "peak": 1302.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 51.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 86,
+      "initial_file": "pair_086_initial.npy",
+      "final_file": "pair_086_initial.npy",
+      "initial_mono_ns": 35980906144510,
+      "final_mono_ns": 35980906144510,
+      "initial_stats": {
+        "min": -1065.0,
+        "max": 1062.0,
+        "peak": 1065.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1065.0,
+        "max": 1062.0,
+        "peak": 1065.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 49.0,
+        "readback_gain_db": 49.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 49.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 87,
+      "initial_file": "pair_087_initial.npy",
+      "final_file": "pair_087_initial.npy",
+      "initial_mono_ns": 35984916229740,
+      "final_mono_ns": 35984916229740,
+      "initial_stats": {
+        "min": -1093.0,
+        "max": 1089.0,
+        "peak": 1093.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1093.0,
+        "max": 1089.0,
+        "peak": 1093.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 60.0,
+        "readback_gain_db": 60.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 60.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 88,
+      "initial_file": "pair_088_initial.npy",
+      "final_file": "pair_088_initial.npy",
+      "initial_mono_ns": 35988916096590,
+      "final_mono_ns": 35988916096590,
+      "initial_stats": {
+        "min": -1174.0,
+        "max": 1172.0,
+        "peak": 1174.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1174.0,
+        "max": 1172.0,
+        "peak": 1174.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 89,
+      "initial_file": "pair_089_initial.npy",
+      "final_file": "pair_089_initial.npy",
+      "initial_mono_ns": 35992916264180,
+      "final_mono_ns": 35992916264180,
+      "initial_stats": {
+        "min": -1311.0,
+        "max": 1320.0,
+        "peak": 1320.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1311.0,
+        "max": 1320.0,
+        "peak": 1320.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 90,
+      "initial_file": "pair_090_initial.npy",
+      "final_file": "pair_090_final.npy",
+      "initial_mono_ns": 35996926226350,
+      "final_mono_ns": 35997016469900,
+      "initial_stats": {
+        "min": -1911.0,
+        "max": 1925.0,
+        "peak": 1925.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1508.0,
+        "max": 1499.0,
+        "peak": 1508.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 64.0,
+        "readback_gain_db": 64.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 62.0,
+      "backoff_steps": [
+        {
+          "before_gain": 64.0,
+          "requested": 62.0,
+          "readback": 62.0,
+          "stats": {
+            "min": -1508.0,
+            "max": 1499.0,
+            "peak": 1508.0,
+            "rail_count": 0
+          }
+        }
+      ],
+      "headroom_resolved": true
+    },
+    {
+      "index": 91,
+      "initial_file": "pair_091_initial.npy",
+      "final_file": "pair_091_initial.npy",
+      "initial_mono_ns": 36000926687260,
+      "final_mono_ns": 36000926687260,
+      "initial_stats": {
+        "min": -1620.0,
+        "max": 1632.0,
+        "peak": 1632.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1620.0,
+        "max": 1632.0,
+        "peak": 1632.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 92,
+      "initial_file": "pair_092_initial.npy",
+      "final_file": "pair_092_initial.npy",
+      "initial_mono_ns": 36004916267520,
+      "final_mono_ns": 36004916267520,
+      "initial_stats": {
+        "min": -1595.0,
+        "max": 1618.0,
+        "peak": 1618.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1595.0,
+        "max": 1618.0,
+        "peak": 1618.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 93,
+      "initial_file": "pair_093_initial.npy",
+      "final_file": "pair_093_initial.npy",
+      "initial_mono_ns": 36008936854170,
+      "final_mono_ns": 36008936854170,
+      "initial_stats": {
+        "min": -440.0,
+        "max": 429.0,
+        "peak": 440.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -440.0,
+        "max": 429.0,
+        "peak": 440.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 94,
+      "initial_file": "pair_094_initial.npy",
+      "final_file": "pair_094_initial.npy",
+      "initial_mono_ns": 36012936560210,
+      "final_mono_ns": 36012936560210,
+      "initial_stats": {
+        "min": -451.0,
+        "max": 450.0,
+        "peak": 451.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -451.0,
+        "max": 450.0,
+        "peak": 451.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 95,
+      "initial_file": "pair_095_initial.npy",
+      "final_file": "pair_095_final.npy",
+      "initial_mono_ns": 36016926640480,
+      "final_mono_ns": 36017017008440,
+      "initial_stats": {
+        "min": -2048.0,
+        "max": 2047.0,
+        "peak": 2048.0,
+        "rail_count": 145
+      },
+      "final_stats": {
+        "min": -1235.0,
+        "max": 1228.0,
+        "peak": 1235.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 48.0,
+        "readback_gain_db": 48.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 42.0,
+      "backoff_steps": [
+        {
+          "before_gain": 48.0,
+          "requested": 42.0,
+          "readback": 42.0,
+          "stats": {
+            "min": -1235.0,
+            "max": 1228.0,
+            "peak": 1235.0,
+            "rail_count": 0
+          }
+        }
+      ],
+      "headroom_resolved": true
+    },
+    {
+      "index": 96,
+      "initial_file": "pair_096_initial.npy",
+      "final_file": "pair_096_final.npy",
+      "initial_mono_ns": 36020947039080,
+      "final_mono_ns": 36021127219260,
+      "initial_stats": {
+        "min": -1980.0,
+        "max": 2012.0,
+        "peak": 2012.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1535.0,
+        "max": 1534.0,
+        "peak": 1535.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 48.0,
+        "readback_gain_db": 48.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 44.0,
+      "backoff_steps": [
+        {
+          "before_gain": 48.0,
+          "requested": 46.0,
+          "readback": 46.0,
+          "stats": {
+            "min": -1947.0,
+            "max": 1970.0,
+            "peak": 1970.0,
+            "rail_count": 0
+          }
+        },
+        {
+          "before_gain": 46.0,
+          "requested": 44.0,
+          "readback": 44.0,
+          "stats": {
+            "min": -1535.0,
+            "max": 1534.0,
+            "peak": 1535.0,
+            "rail_count": 0
+          }
+        }
+      ],
+      "headroom_resolved": true
+    },
+    {
+      "index": 97,
+      "initial_file": "pair_097_initial.npy",
+      "final_file": "pair_097_initial.npy",
+      "initial_mono_ns": 36024946687130,
+      "final_mono_ns": 36024946687130,
+      "initial_stats": {
+        "min": -1522.0,
+        "max": 1512.0,
+        "peak": 1522.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1522.0,
+        "max": 1512.0,
+        "peak": 1522.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 52.0,
+        "readback_gain_db": 52.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 52.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 98,
+      "initial_file": "pair_098_initial.npy",
+      "final_file": "pair_098_initial.npy",
+      "initial_mono_ns": 36028957143800,
+      "final_mono_ns": 36028957143800,
+      "initial_stats": {
+        "min": -1709.0,
+        "max": 1704.0,
+        "peak": 1709.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1709.0,
+        "max": 1704.0,
+        "peak": 1709.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 53.0,
+        "readback_gain_db": 53.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 53.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 99,
+      "initial_file": "pair_099_initial.npy",
+      "final_file": "pair_099_initial.npy",
+      "initial_mono_ns": 36032956847730,
+      "final_mono_ns": 36032956847730,
+      "initial_stats": {
+        "min": -624.0,
+        "max": 618.0,
+        "peak": 624.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -624.0,
+        "max": 618.0,
+        "peak": 624.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 65.0,
+        "readback_gain_db": 65.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 65.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 100,
+      "initial_file": "pair_100_initial.npy",
+      "final_file": "pair_100_initial.npy",
+      "initial_mono_ns": 36036957058520,
+      "final_mono_ns": 36036957058520,
+      "initial_stats": {
+        "min": -1034.0,
+        "max": 1038.0,
+        "peak": 1038.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1034.0,
+        "max": 1038.0,
+        "peak": 1038.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 50.0,
+        "readback_gain_db": 50.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 50.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 101,
+      "initial_file": "pair_101_initial.npy",
+      "final_file": "pair_101_initial.npy",
+      "initial_mono_ns": 36040967138270,
+      "final_mono_ns": 36040967138270,
+      "initial_stats": {
+        "min": -1100.0,
+        "max": 1090.0,
+        "peak": 1100.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1100.0,
+        "max": 1090.0,
+        "peak": 1100.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 51.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 102,
+      "initial_file": "pair_102_initial.npy",
+      "final_file": "pair_102_initial.npy",
+      "initial_mono_ns": 36044967212860,
+      "final_mono_ns": 36044967212860,
+      "initial_stats": {
+        "min": -1187.0,
+        "max": 1197.0,
+        "peak": 1197.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1187.0,
+        "max": 1197.0,
+        "peak": 1197.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 50.0,
+        "readback_gain_db": 50.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 50.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 103,
+      "initial_file": "pair_103_initial.npy",
+      "final_file": "pair_103_initial.npy",
+      "initial_mono_ns": 36048967179350,
+      "final_mono_ns": 36048967179350,
+      "initial_stats": {
+        "min": -1310.0,
+        "max": 1312.0,
+        "peak": 1312.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1310.0,
+        "max": 1312.0,
+        "peak": 1312.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 51.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 104,
+      "initial_file": "pair_104_initial.npy",
+      "final_file": "pair_104_initial.npy",
+      "initial_mono_ns": 36052977261620,
+      "final_mono_ns": 36052977261620,
+      "initial_stats": {
+        "min": -1195.0,
+        "max": 1198.0,
+        "peak": 1198.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1195.0,
+        "max": 1198.0,
+        "peak": 1198.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 51.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 105,
+      "initial_file": "pair_105_initial.npy",
+      "final_file": "pair_105_initial.npy",
+      "initial_mono_ns": 36056977221740,
+      "final_mono_ns": 36056977221740,
+      "initial_stats": {
+        "min": -1193.0,
+        "max": 1193.0,
+        "peak": 1193.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1193.0,
+        "max": 1193.0,
+        "peak": 1193.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 51.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 106,
+      "initial_file": "pair_106_initial.npy",
+      "final_file": "pair_106_initial.npy",
+      "initial_mono_ns": 36060977428190,
+      "final_mono_ns": 36060977428190,
+      "initial_stats": {
+        "min": -220.0,
+        "max": 228.0,
+        "peak": 228.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -220.0,
+        "max": 228.0,
+        "peak": 228.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 107,
+      "initial_file": "pair_107_initial.npy",
+      "final_file": "pair_107_initial.npy",
+      "initial_mono_ns": 36064987506970,
+      "final_mono_ns": 36064987506970,
+      "initial_stats": {
+        "min": -250.0,
+        "max": 256.0,
+        "peak": 256.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -250.0,
+        "max": 256.0,
+        "peak": 256.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 108,
+      "initial_file": "pair_108_initial.npy",
+      "final_file": "pair_108_initial.npy",
+      "initial_mono_ns": 36068987590840,
+      "final_mono_ns": 36068987590840,
+      "initial_stats": {
+        "min": -114.0,
+        "max": 132.0,
+        "peak": 132.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -114.0,
+        "max": 132.0,
+        "peak": 132.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 109,
+      "initial_file": "pair_109_initial.npy",
+      "final_file": "pair_109_initial.npy",
+      "initial_mono_ns": 36072997675660,
+      "final_mono_ns": 36072997675660,
+      "initial_stats": {
+        "min": -404.0,
+        "max": 388.0,
+        "peak": 404.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -404.0,
+        "max": 388.0,
+        "peak": 404.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 110,
+      "initial_file": "pair_110_initial.npy",
+      "final_file": "pair_110_initial.npy",
+      "initial_mono_ns": 36076977631360,
+      "final_mono_ns": 36076977631360,
+      "initial_stats": {
+        "min": -208.0,
+        "max": 274.0,
+        "peak": 274.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -208.0,
+        "max": 274.0,
+        "peak": 274.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 111,
+      "initial_file": "pair_111_initial.npy",
+      "final_file": "pair_111_initial.npy",
+      "initial_mono_ns": 36080977853580,
+      "final_mono_ns": 36080977853580,
+      "initial_stats": {
+        "min": -143.0,
+        "max": 321.0,
+        "peak": 321.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -143.0,
+        "max": 321.0,
+        "peak": 321.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 112,
+      "initial_file": "pair_112_initial.npy",
+      "final_file": "pair_112_initial.npy",
+      "initial_mono_ns": 36084998115110,
+      "final_mono_ns": 36084998115110,
+      "initial_stats": {
+        "min": -407.0,
+        "max": 409.0,
+        "peak": 409.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -407.0,
+        "max": 409.0,
+        "peak": 409.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 113,
+      "initial_file": "pair_113_initial.npy",
+      "final_file": "pair_113_initial.npy",
+      "initial_mono_ns": 36088998268560,
+      "final_mono_ns": 36088998268560,
+      "initial_stats": {
+        "min": -417.0,
+        "max": 401.0,
+        "peak": 417.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -417.0,
+        "max": 401.0,
+        "peak": 417.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 114,
+      "initial_file": "pair_114_initial.npy",
+      "final_file": "pair_114_initial.npy",
+      "initial_mono_ns": 36092998784790,
+      "final_mono_ns": 36092998784790,
+      "initial_stats": {
+        "min": -416.0,
+        "max": 402.0,
+        "peak": 416.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -416.0,
+        "max": 402.0,
+        "peak": 416.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 115,
+      "initial_file": "pair_115_initial.npy",
+      "final_file": "pair_115_initial.npy",
+      "initial_mono_ns": 36096998866970,
+      "final_mono_ns": 36096998866970,
+      "initial_stats": {
+        "min": -405.0,
+        "max": 410.0,
+        "peak": 410.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -405.0,
+        "max": 410.0,
+        "peak": 410.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 116,
+      "initial_file": "pair_116_initial.npy",
+      "final_file": "pair_116_initial.npy",
+      "initial_mono_ns": 36101018452900,
+      "final_mono_ns": 36101018452900,
+      "initial_stats": {
+        "min": -108.0,
+        "max": 123.0,
+        "peak": 123.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -108.0,
+        "max": 123.0,
+        "peak": 123.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 117,
+      "initial_file": "pair_117_initial.npy",
+      "final_file": "pair_117_initial.npy",
+      "initial_mono_ns": 36105018283210,
+      "final_mono_ns": 36105018283210,
+      "initial_stats": {
+        "min": -121.0,
+        "max": 125.0,
+        "peak": 125.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -121.0,
+        "max": 125.0,
+        "peak": 125.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 118,
+      "initial_file": "pair_118_initial.npy",
+      "final_file": "pair_118_initial.npy",
+      "initial_mono_ns": 36109028363790,
+      "final_mono_ns": 36109028363790,
+      "initial_stats": {
+        "min": -126.0,
+        "max": 126.0,
+        "peak": 126.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -126.0,
+        "max": 126.0,
+        "peak": 126.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    },
+    {
+      "index": 119,
+      "initial_file": "pair_119_initial.npy",
+      "final_file": "pair_119_initial.npy",
+      "initial_mono_ns": 36113028513780,
+      "final_mono_ns": 36113028513780,
+      "initial_stats": {
+        "min": -113.0,
+        "max": 103.0,
+        "peak": 113.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -113.0,
+        "max": 103.0,
+        "peak": 113.0,
+        "rail_count": 0
+      },
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    }
+  ],
+  "restore_errors": [],
+  "guard_clear_before_restore": true,
+  "restored_health": {
+    "ready": true,
+    "run": "/var/log/rml24-integrated/r7d9fc6c37a3d"
+  },
+  "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4"
+}

@@ -1,0 +1,34 @@
+{
+  "fix1_fixed": {
+    "correct": 233,
+    "denominator": 240,
+    "missing": 0
+  },
+  "fix1_scan": {
+    "correct": 231,
+    "denominator": 240,
+    "missing": 3
+  },
+  "missing_indices": [
+    146,
+    147,
+    148
+  ],
+  "diagnosis": "Missing indices 146/147/148 coincide with blocking full rescan around frame564 (~21.076sec). Five-miss/1sec hysteresis did not remove blocking sweep.",
+  "fix2": "One search grid point per iteration; revisit last successfully recovered LO between search points; only successful frozen recovery establishes lock. Same thresholds/model/twoDC/frames.",
+  "status": "SMOKE24_PASS_PENDING_FORMAL_APPROVAL",
+  "formal_validation_requires_new_user_approval": true,
+  "physical_ui": "User confirmed Fix1 five pages, plots, two modes and four fields normal; keyboard/apply touch acceptance pending; Fix2 UI byte-identical copy.",
+  "smoke": {
+    "correct": 24,
+    "denominator": 24,
+    "missing": 0,
+    "max_elapsed_ms": 4632.247610000377,
+    "max_search_points_per_record": 1,
+    "home_revisit_count": 19,
+    "longer_than_10s": 0
+  },
+  "receiver_sha256": "63e3d5feb8cf0d4636105613d2593a9d05029530801846b07a6b17a950973954",
+  "baseline_restored": true,
+  "logging_note": "Smoke runner reused progress counters displaying total240; actual TX plan/events and score contain exactly24. Do not treat progress counters as score."
+}

@@ -1,0 +1,28 @@
+Linux U.FMSH 5.4.52 #3 SMP Fri Mar 13 13:44:29 CST 2026 aarch64 aarch64 aarch64 GNU/Linux
+console=ttyPS0,115200n8 earlycon=uart8250,mmio32,0xe0004000 loglevel=8 root=/dev/mmcblk0p2 rootwait rw clk_ignore_unused mem=1024M
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+[    0.000000] printk: bootconsole [uart8250] enabled
+[    0.000000] Kernel command line: console=ttyPS0,115200n8 earlycon=uart8250,mmio32,0xe0004000 loglevel=8 root=/dev/mmcblk0p2 rootwait rw clk_ignore_unused mem=1024M
+[    0.059964] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+[    0.060346] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+[    0.060700] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+[    1.589081] FPGA manager framework
+[    1.838968] printk: bootconsole [uart8250] disabled
+[    1.886928] cadence-qspi e0000000.spi: n25q256a (32768 Kbytes)
+[    1.905339] 0x000000000000-0x000000400000 : "bootloader"
+[    2.392689] dw_mmc e0043000.dwmmc: Using external DMA controller.
+[    2.398809] dw_mmc e0043000.dwmmc: Version ID is 220a
+[    2.403893] dw_mmc e0043000.dwmmc: DW MMC controller at irq 23,32 bit host data width,32 deep fifo
+[    2.412938] mmc_host mmc0: card is polling.
+[    2.429711] mmc_host mmc0: Bus speed (slot 0) = 100000000Hz (slot req 400000Hz, actual 400000HZ div = 125)
+[    2.468328] fpga_manager fpga0: FMSH FMQL FPGA Manager registered
+[    2.615878] mmc_host mmc0: Bus speed (slot 0) = 100000000Hz (slot req 50000000Hz, actual 50000000HZ div = 1)
+[    2.630018] mmc0: new high speed SDXC card at address 0001
+[    2.635844] mmcblk0: mmc0:0001 SD 58.2 GiB 
+[    2.648785]  mmcblk0: p1 p2
+[    3.759019] EXT4-fs (mmcblk0p2): 1 orphan inode deleted
+[    3.764260] EXT4-fs (mmcblk0p2): recovery complete
+[    3.793315] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+rescue.service                         static          enabled      
+rescue-ssh.target                      static          enabled      
+rescue.target                          static          disabled     

@@ -1,0 +1,43 @@
+{
+  "capture_id": "rml24_full24_failed_rx_1773374413",
+  "source_index": 10500,
+  "source_class": 21,
+  "gate_bypassed_for_diagnostic": 1,
+  "original_valid": 0,
+  "original_failure": "PAYLOAD_TRAINING_RESIDUAL_TOO_HIGH",
+  "production_gate_modified": 0,
+  "target_rms": 2048,
+  "tx_scale": 2.2921299999999998,
+  "raw_rx_sha256": "c0ccfad13fa3576091708320dd03c290760ac20310b6ed06d1ac939fb480af81",
+  "timing_offset": 25687,
+  "coarse_cfo_hz": -128.28224706466659,
+  "fine_cfo_hz": -4.7659532501254276,
+  "sro_ppm": 0,
+  "fractional_timing_samples": 0.26953125,
+  "payload_training_corr": 0.99374023465704231,
+  "payload_training_residual": 0.11241918677344702,
+  "payload_gain_mag": 0.029612679919666197,
+  "payload_phase_deg": -165.29692668667286,
+  "payload_rms_gain_mag": 0.030169264178062431,
+  "canonical_crosscheck": {"timing_ok": 1, "coarse_ok": 1, "fine_ok": 1, "corr_ok": 1, "resid_ok": 1},
+  "reconstruction_consistent": 1,
+  "classification_chain": {
+    "fs_in_hz": 2560000,
+    "nco_offset_hz": 0.0,
+    "preprocess_gain": 1.0,
+    "recovered_tensor_file": "recovered_tensor_fm.f32",
+    "recovered_tensor_sha256": "c66952e49331676232ed61d56c9ddcf61ebd04562a782ad29da437cedc2f5729",
+    "classification_window_valid": 1,
+    "delay_offset": 263,
+    "tensor_corr": 0.99554165385792048,
+    "tensor_nmse": 0.008896815433831369,
+    "recovered_frames": 2,
+    "model_input_equals_classification_window": 1
+  },
+  "outputs": {
+    "provisional_recovered_payload_sha256": "3ce71f9c567a766e8207d80a41cc27626c0557bcd92f89829158f3ff656eaf8b",
+    "classification_window_sha256": "d2fa4e3cbb858b780ee17546296f4d742ecc21a6932cbec391997f95db7d2a15",
+    "model_input_sha256": "d2fa4e3cbb858b780ee17546296f4d742ecc21a6932cbec391997f95db7d2a15"
+  },
+  "model_input_finite": 1
+}

@@ -1,0 +1,133 @@
+================================================================================
+RML23 Stage H-E / Route E fix6 交付报告
+波形保真 / 循环起点拆分 + 分类窗口选择
+================================================================================
+
+状态：M29-RML23-IQ-DIGITAL-LOOPBACK-READY-FOR-BOARD-TEST
+基线：fix5 全量 sdr_rml23_live_board_package_iq_digital_loopback_fix5.tar.gz
+       sha256 8239285c91aa0e75c2c2483ec5a010d043bf2301fdd825d573240b40733dcb57
+本轮：不碰板；由用户执行板端验收。
+
+--------------------------------------------------------------------------------
+1. 修复的 fix5 遗留缺陷清单 + 代码位置
+--------------------------------------------------------------------------------
+  #1  波形保真与循环起点混为一谈，固定 peak_ratio>=2 门错判干净周期回环。
+       fix5 fidelity_verdict_fix5 把多峰(peak_ratio<2)直接判 CIRCULAR_SYNC_AMBIGUOUS；
+       纯音/周期重复 TX 的循环自相关平坦 -> 交叉相关在全部移位上都是 ~1.0 等价峰，
+       本应 PRESERVES_IQ。修复：board_package/iq_digital_loopback_sync.hpp 的
+       SyncOrigin 枚举 + circular_autocorr_norm + fidelity_verdict_fix6（移除
+       peak_ratio 门，Equivalent 不拦）。
+  #2  分类窗口跨零保护区/循环边界。
+       radioml quant_file=53760 复数 = 20×(1024+2×832 保护)，朴素每文件切 2 帧会
+       跨零保护区；Route D recovered_file（roundtrip_manifest.tsv 第 9 列）已持有
+       正确对齐的 [2,1024] 张量却未被使用。修复：board_package/iq_digital_loopback.hpp
+       的 has_recovered_ref + load_recovered_tensor + select_classification_window
+       + runner 分类分支（对齐后只分类一个窗口）。
+
+--------------------------------------------------------------------------------
+2. 八项要求 -> 实现对照
+--------------------------------------------------------------------------------
+  (1) 保真/循环起点拆成两个独立结论       SyncOrigin + fidelity_verdict_fix6 分离
+  (2) 不再用固定 peak_ratio>=2 作必要条件 kPeakRatioMin 降级为诊断，verdict 不引用
+  (3) 计算 TX 自身循环自相关解释固有旁峰   circular_autocorr_norm + r_tx 预测
+  (4) corr>=0.9 + residual 一致 + 无削顶 + DMA SHA -> PRESERVES_IQ
+  (5) 多个等价起点报 AMBIGUOUS_EQUIVALENT 不判失真   origin==Equivalent 不拦
+  (6) 仅不同波形且无法确定对齐才 CIRCULAR_SYNC_AMBIGUOUS   origin==Ambiguous 才拦
+  (7) 依据原始 1024 有效区选窗口逐帧比对   select_classification_window + sha_equal
+  (8) 不改模型/预处理/RTL/位流/增益       全部改动限于 Stage H-E 判责仪表
+
+--------------------------------------------------------------------------------
+3. 判定优先级（fidelity_verdict_fix6，严格顺序；peak_ratio 门已移除）
+--------------------------------------------------------------------------------
+  INSUFFICIENT_EVIDENCE(rx<1024) > CAPTURE_TOO_SHORT > RX_ALL_ZERO >
+  RX_LOW_AMPLITUDE(rms<2) > CIRCULAR_SYNC_AMBIGUOUS(origin==Ambiguous) >
+  DIGITAL_LOOPBACK_DISTORTS_IQ(corr<0.9) >
+  DIGITAL_LOOPBACK_PRESERVES_IQ(corr>=0.9 且无削顶且 normalized_gain±3dB 且
+  nmse_evm_consistent) > DIGITAL_LOOPBACK_CAPABILITY_NOT_PROVEN。
+  独立循环起点结论：sync_origin=UNIQUE / AMBIGUOUS_EQUIVALENT / CIRCULAR_SYNC_AMBIGUOUS
+  （runner 打印 IQ_DIGITAL_LOOPBACK_SYNC_ORIGIN）。TX DMA payload SHA 门在 transfer 层
+  （TX_DMA_PAYLOAD_MISMATCH 由 runner 覆盖）。全部冻结文件达 PRESERVES_IQ 才跑 24 类。
+
+--------------------------------------------------------------------------------
+4. host 测试逐项结果（本轮离线）
+--------------------------------------------------------------------------------
+  test_iq_digital_loopback_sync    pass=75 fail=0   （含 6 个 fix6 新测试）
+  test_iq_digital_loopback         pass=117 fail=0  （含 recovered_file 侧车回环）
+  test_iq_digital_loopback_sequence pass=158 fail=0
+  test_iq_digital_loopback_sweep   pass=92 fail=0
+  test_route_e_raw_rx_output_fields pass=12 fail=0
+  build_host_tests.sh              全量编译通过（-Wall -Wextra -Werror）
+  run_tests.sh                     ALL HOST TESTS PASSED
+  syntax_check.sh                  gate9_rml23: syntax OK
+
+--------------------------------------------------------------------------------
+5. 打包自检
+--------------------------------------------------------------------------------
+  dependency-closure audit          OK（所有改动头均列入 ROUTE_E_FIX6_FILES）
+  两跑确定性                        两次打包 SHA 一致
+  独立解包 sha256sum -c             patch 7/7 OK；full 540/540 OK
+  fix5 vs fix6 全量 diff             仅 5 改文件 + 2 新文件 + SHA256SUMS 不同，
+                                    其余（模型/标签/预处理/RTL/XDC/位流/Flash）逐字节一致
+
+--------------------------------------------------------------------------------
+6. 2 工件（路径/字节/文件数/manifest 行数/64-hex SHA）
+--------------------------------------------------------------------------------
+  [独立补丁]
+  dist/sdr_rml23_live_iq_digital_loopback_fix6_patch.tar.gz
+    字节 50896  文件 7  manifest 7 行
+    sha256 21910e229a4c2c06904d495df686b41292cd5cbed115d622a35263fb3cef6a2f
+    manifest dist/IQ_DIGITAL_LOOPBACK_FIX6_PATCH_SHA256SUMS.txt (776 字节)
+  [合并全量 fix5+fix6]
+  dist/sdr_rml23_live_board_package_iq_digital_loopback_fix6.tar.gz
+    字节 3795832  文件 540  manifest 540 行
+    sha256 713c93b4a408355c542aa374237e239a1e9008509dc1302dde592e866aff41f0
+    manifest dist/sdr_rml23_live_board_package_iq_digital_loopback_fix6.SHA256SUMS.txt (54181 字节)
+
+--------------------------------------------------------------------------------
+7. 文件差异（相对 fix5 全量 8239285c… 基线）
+--------------------------------------------------------------------------------
+  修改 5：board_package/iq_digital_loopback_sync.hpp、
+          board_package/iq_digital_loopback.hpp、
+          board_package/iq_digital_loopback_runner.hpp、
+          host_tests/test_iq_digital_loopback_sync.cpp、
+          host_tests/test_iq_digital_loopback.cpp
+  新增 2：scripts/package_iq_digital_loopback_fix6.py、
+          docs/M29_RML23_STAGE_H_E_IQ_DIGITAL_LOOPBACK_FIX6_AUDIT.md
+  不改：模型 json/raw、标签、PreprocessChain、RTL/XDC、位流、Flash、read_rx 生产
+        libiio 路径、sweep 判责 A→G、Stage G A/B/C/D 语义、transfer/pluto_device
+        逐字节一致。
+
+--------------------------------------------------------------------------------
+8. 历史包未覆盖证明
+--------------------------------------------------------------------------------
+  dist/ 下 fix1..fix5 及原始 iq_digital_loopback 包全部保留（ls 确认存在）。
+  fix6 两份工件为新增文件名，未覆盖任何历史包。
+
+--------------------------------------------------------------------------------
+9. 板端复测命令（用户执行；本轮不写死 ip；RC=0 ≠ 回环保真 PASS）
+--------------------------------------------------------------------------------
+  ./scripts/run_gate9_rml23.sh --phase=iq-digital-loopback --center=2400000000 \
+    --rx-gain=10 --tx-atten=-40 --frozen-dir=DIR \
+    --input-kind=radioml-reconstructed-2p56m \
+    > /root/rml23_route_e_fix6_loopback.log 2>&1
+  预期观测：
+    纯音/周期类文件 IQ_DIGITAL_LOOPBACK_SYNC_ORIGIN ... sync_origin=AMBIGUOUS_EQUIVALENT
+      且 fidelity 仍 DIGITAL_LOOPBACK_PRESERVES_IQ（不再 CIRCULAR_SYNC_AMBIGUOUS）
+    PRBS/非周期文件 sync_origin=UNIQUE
+    仅真·不同波形竞争峰才 sync_origin=CIRCULAR_SYNC_AMBIGUOUS 且 fidelity 判
+      CIRCULAR_SYNC_AMBIGUOUS
+    IQ_DIGITAL_LOOPBACK_WINDOW 有 delay_offset/tensor_corr/tensor_nmse/sha_equal；
+      sha_equal=1 仅位精确回环（否则 0，但 tensor_corr 仍应≈1）
+    不把 sweep PASS / capture_ok=1 / program RC=0 写成回环保真 PASS；
+      DIGITAL_LOOPBACK_CAPABILITY_NOT_PROVEN / RF_LEAKAGE_NOT_PROVEN 不因 host 测试改 PROVEN
+
+--------------------------------------------------------------------------------
+10. 结论
+--------------------------------------------------------------------------------
+  host 侧证明：波形保真与循环起点已拆分为独立结论，TX 循环自相关解释固有旁峰，
+  分类窗口按 Route D recovered_file 对齐选择；75+117+158+92+12 项 host 测试全绿、
+  全套件无回归、语法检查 OK、打包确定性 + 依赖闭包 + 独立解包校验全 OK。
+  host 测试不产生、也不声称 DIGITAL_LOOPBACK_CAPABILITY 已 PROVEN；回环保真
+  PRESERVES_IQ 只在板端出现。状态保持 READY-FOR-BOARD-TEST，不写任何 *_PASS /
+  PROJECT_COMPLETE / FINAL_* / BOARD_TEST_PASS。
+================================================================================

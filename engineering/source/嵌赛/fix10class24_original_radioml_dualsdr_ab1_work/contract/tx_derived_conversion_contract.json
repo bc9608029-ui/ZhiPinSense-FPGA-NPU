@@ -1,0 +1,87 @@
+{
+  "token": "M29-RML24-FIX10CLASS24-ORIGINAL-RADIOML-DUALSDR-AB1-TX-DERIVED-CONVERSION-CONTRACT",
+  "authority_note": "本契约由 dualsdr-ab1 任务固化; singlesdr-ab1 与 dualsdr-ab1 的板端 loader/runner 均以本文件 + scripts/radioml_dualsdr_common.py + scripts/radioml_dualsdr_burst.py 为权威。",
+  "frozen_identity": {
+    "model_json_sha256": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+    "model_raw_sha256": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+    "ckpt_sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+    "training_input_contract": "np.ascontiguousarray(X[row].T).astype(np.float32) -> [2,1024] f32 LE (row0=I, row1=Q); no DC/normalize/resample/filter/augment",
+    "label_order_24": [
+      "OOK", "4ASK", "8ASK", "BPSK", "QPSK", "8PSK", "16PSK", "32PSK",
+      "16APSK", "32APSK", "64APSK", "128APSK", "16QAM", "32QAM", "64QAM",
+      "128QAM", "256QAM", "AM-SSB-WC", "AM-SSB-SC", "AM-DSB-WC", "AM-DSB-SC",
+      "FM", "GMSK", "OQPSK"
+    ]
+  },
+  "conversion_contract": {
+    "input": "[2,1024] f32 LE -> complex128[1024] (plane0=I, plane1=Q)",
+    "duplication": "cyclic_tile_1024_to_payload: payload[k] = iq[k mod 1024], k=0..53759; 52 full periods + first 512 of the 53rd period (53760 = 52*1024 + 512)",
+    "scaling_quantize": "CI16: interleaved int16 [I0,Q0,...] = lround(tiled * scale), scale = 2048 / native_rms(original_1024), clamp [-32768,32767]; lround = half-away-from-zero (C++ std::llround, NOT numpy.rint)",
+    "quantize_rounding": "half-away-from-zero (lround); byte-exact vs C++ std::lround/llround",
+    "target_rms": 2048.0,
+    "unscale": "native_rms(original_1024) / 2048.0  (maps recovered counts back to original f32 domain)",
+    "model_window": "first 1024 complex samples of the RECOVERED payload (after wide-linear IQ compensation + coarse/fine CFO + fractional timing + payload-gain recovery), then * unscale",
+    "resampling": "NONE (rate unchanged 2.56 Msps; no resample/filter/normalize beyond recovery)",
+    "padding_burst_layout": "[preamble ZC(root=1) 1024][settling-zero 1024][payload-training 16QAM 1024][payload 53760][guard-zero 2048][tail ZC(root=3) 1024] == 59904 complex == 119808 int16",
+    "burst_constants": {
+      "kPreambleComplex": 1024,
+      "kGuardComplex": 2048,
+      "kTailComplex": 1024,
+      "kPayloadComplex": 53760,
+      "kPayloadStart": 3072,
+      "kTailStart": 58880,
+      "kTotalBurstComplex": 59904,
+      "kTrainAmp": 2048.0,
+      "kZadoffChuRoot": 1,
+      "kTailZadoffChuRoot": 3,
+      "kPayloadTrainingComplex": 1024,
+      "kPayloadTrainingOffset": 2048,
+      "kPayloadTrainingSeed": "0x2A9E1B7D",
+      "kPayloadTrainingSamplesPerSymbol": 32,
+      "kPayloadTrainingAmp": 2896.309375740099
+    },
+    "canonical_wrapper_sha256": {
+      "preamble_sha256": "d4b4bb3af9ad57836f4de7dfd9046898983c66f949d33aad35ed8dc434ccc97f",
+      "settling_zero_sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+      "payload_training_sha256": "f06e9b3de0f51594d8db0501a03918350072d4bc0e5a56f955053bafa35663ca",
+      "guard_zero_sha256": "9f1dcbc35c350d6027f98be0f5c8b43b42ca52b7604459c0c42be3aa88913d47",
+      "tail_sha256": "ccddabe154b62a4cbae7d628f410d89ef9bfd54ebbaf79d83139417a36666a8e"
+    },
+    "burst_sha_scale_formula": {
+      "payload_sha_pre": "sha256(<sid>.i16 bytes as exported)",
+      "payload_sha_post": "sha256(clip(lround(i16 * tx_scale))) where tx_scale = 2048 / native_rms(i16 counts)",
+      "burst_sha": "sha256(build_burst(scaled_payload_i16))",
+      "tx_scale": "2048 / native_rms(payload counts); == 1.0 when .i16 already at RMS 2048"
+    },
+    "red_lines_unchanged": [
+      "no training / no model swap / no per-class recovery or capture selection",
+      "residual 0.100 gate + max 3 recapture + last-capture selection",
+      "RMS2048 ceiling + TX attenuation <= -40 dB",
+      "RX manual gain 35 dB, center 2.4 GHz, rate 2.56 Msps, RX/TX BW 18 MHz"
+    ]
+  },
+  "short24_selection_rule": {
+    "definition": "for each raw24_class c in 0..23, take the frame with dataset_snr_db==30 and the SMALLEST selection_id; requires exactly one 30 dB frame per class else fail-closed",
+    "count": 24,
+    "purpose": "board smoke: verify transport/identity/output integrity only; NOT accuracy measurement",
+    "note": "label/SNR never used for recovery or prediction; short24 selection uses label only to pick one frame per class for the identity/smoke pass"
+  },
+  "board_results_tsv_columns": [
+    "selection_id", "hdf5_row_index", "raw24_class", "dataset_snr_db", "gated",
+    "board_pred", "finite", "residual", "corr", "coarse_cfo_hz", "fine_cfo_hz",
+    "total_cfo_hz", "fractional_timing_samples", "clip", "capture_attempts",
+    "gate_reject", "hard_invalid", "tx_stop_ok", "rx_restore_ok"
+  ],
+  "board_semantics": {
+    "gated": "1 iff residual <= 0.100 gate passed",
+    "finite": "1 iff board_pred is a valid 0..23 argmax",
+    "hard_invalid": "1 iff irrecoverable (clip / residual > 0.30); NEVER forced to success",
+    "board_pred": "raw24 class index 0..23, or -1 sentinel when finite==0",
+    "tx_stop_ok / rx_restore_ok": "dual-SDR TX/RX restore flags (single-SDR sets tx flags N/A or 1)"
+  },
+  "phases": {
+    "singlesdr": "radioml-original-singlesdr-ab-24class-bf16-fix10",
+    "dualsdr": "radioml-original-dualsdr-ab-24class-bf16-fix10",
+    "coexist_note": "both phase names must coexist in gate9_phase.hpp + board_gate9_full_chain_rml23.cpp when the user merges the two PATCHes"
+  }
+}

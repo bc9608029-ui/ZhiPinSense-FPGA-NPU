@@ -1,0 +1,1580 @@
+{
+  "scope": "48-item same-TX paired capture study, original8 repeats and TX quantization; not full regression or deployment",
+  "clock_drift_ns": -4245730,
+  "denominator": 48,
+  "old_correct": 46,
+  "new_correct": 46,
+  "missing": 0,
+  "groups": [
+    {
+      "tx_gain_db": -60,
+      "denominator": 12,
+      "old_correct": 11,
+      "new_correct": 11
+    },
+    {
+      "tx_gain_db": -40,
+      "denominator": 24,
+      "old_correct": 24,
+      "new_correct": 24
+    },
+    {
+      "tx_gain_db": -30,
+      "denominator": 12,
+      "old_correct": 11,
+      "new_correct": 11
+    }
+  ],
+  "gained": [],
+  "lost": [],
+  "rows": [
+    {
+      "index": 0,
+      "file": "15_00.bin",
+      "expected": 15,
+      "tx_gain_db": -40,
+      "pair_index": 4,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 15,
+      "new_pred": 15,
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "initial_stats": {
+        "min": -1552.0,
+        "max": 1564.0,
+        "peak": 1564.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1552.0,
+        "max": 1564.0,
+        "peak": 1564.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 1,
+      "file": "22_00.bin",
+      "expected": 22,
+      "tx_gain_db": -40,
+      "pair_index": 6,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 22,
+      "new_pred": 22,
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "initial_stats": {
+        "min": -1061.0,
+        "max": 1064.0,
+        "peak": 1064.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1061.0,
+        "max": 1064.0,
+        "peak": 1064.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 2,
+      "file": "09_00.bin",
+      "expected": 9,
+      "tx_gain_db": -40,
+      "pair_index": 8,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 9,
+      "new_pred": 9,
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "initial_stats": {
+        "min": -1690.0,
+        "max": 1700.0,
+        "peak": 1700.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1690.0,
+        "max": 1700.0,
+        "peak": 1700.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 3,
+      "file": "12_00.bin",
+      "expected": 12,
+      "tx_gain_db": -40,
+      "pair_index": 10,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 12,
+      "new_pred": 12,
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "initial_stats": {
+        "min": -1407.0,
+        "max": 1395.0,
+        "peak": 1407.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1407.0,
+        "max": 1395.0,
+        "peak": 1407.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 4,
+      "file": "04_00.bin",
+      "expected": 4,
+      "tx_gain_db": -60,
+      "pair_index": 13,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 4,
+      "new_pred": 4,
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "initial_stats": {
+        "min": -359.0,
+        "max": 357.0,
+        "peak": 359.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -359.0,
+        "max": 357.0,
+        "peak": 359.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 5,
+      "file": "20_07.bin",
+      "expected": 20,
+      "tx_gain_db": -60,
+      "pair_index": 15,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 20,
+      "new_pred": 20,
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "initial_stats": {
+        "min": -540.0,
+        "max": 528.0,
+        "peak": 540.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -540.0,
+        "max": 528.0,
+        "peak": 540.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 6,
+      "file": "12_00.bin",
+      "expected": 12,
+      "tx_gain_db": -30,
+      "pair_index": 17,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 12,
+      "new_pred": 12,
+      "initial_gain": {
+        "selected_gain_db": 52.0,
+        "readback_gain_db": 52.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 52.0,
+      "initial_stats": {
+        "min": -1697.0,
+        "max": 1695.0,
+        "peak": 1697.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1697.0,
+        "max": 1695.0,
+        "peak": 1697.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 7,
+      "file": "21_00.bin",
+      "expected": 21,
+      "tx_gain_db": -40,
+      "pair_index": 19,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 21,
+      "new_pred": 21,
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "initial_stats": {
+        "min": -1059.0,
+        "max": 1020.0,
+        "peak": 1059.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1059.0,
+        "max": 1020.0,
+        "peak": 1059.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 8,
+      "file": "11_00.bin",
+      "expected": 11,
+      "tx_gain_db": -40,
+      "pair_index": 21,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 11,
+      "new_pred": 11,
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "initial_stats": {
+        "min": -1495.0,
+        "max": 1502.0,
+        "peak": 1502.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1495.0,
+        "max": 1502.0,
+        "peak": 1502.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 9,
+      "file": "17_00.bin",
+      "expected": 17,
+      "tx_gain_db": -60,
+      "pair_index": 23,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 17,
+      "new_pred": 17,
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "initial_stats": {
+        "min": -1079.0,
+        "max": 1180.0,
+        "peak": 1180.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1079.0,
+        "max": 1180.0,
+        "peak": 1180.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 10,
+      "file": "15_00.bin",
+      "expected": 15,
+      "tx_gain_db": -60,
+      "pair_index": 25,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 15,
+      "new_pred": 15,
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "initial_stats": {
+        "min": -650.0,
+        "max": 639.0,
+        "peak": 650.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -650.0,
+        "max": 639.0,
+        "peak": 650.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 11,
+      "file": "14_05.bin",
+      "expected": 14,
+      "tx_gain_db": -60,
+      "pair_index": 27,
+      "missing": false,
+      "old_correct": false,
+      "new_correct": false,
+      "old_pred": 16,
+      "new_pred": 16,
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "initial_stats": {
+        "min": -414.0,
+        "max": 410.0,
+        "peak": 414.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -414.0,
+        "max": 410.0,
+        "peak": 414.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 12,
+      "file": "10_00.bin",
+      "expected": 10,
+      "tx_gain_db": -40,
+      "pair_index": 30,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 10,
+      "new_pred": 10,
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "initial_stats": {
+        "min": -1447.0,
+        "max": 1444.0,
+        "peak": 1447.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1447.0,
+        "max": 1444.0,
+        "peak": 1447.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 13,
+      "file": "05_00.bin",
+      "expected": 5,
+      "tx_gain_db": -40,
+      "pair_index": 32,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 5,
+      "new_pred": 5,
+      "initial_gain": {
+        "selected_gain_db": 62.0,
+        "readback_gain_db": 62.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 62.0,
+      "initial_stats": {
+        "min": -1243.0,
+        "max": 1242.0,
+        "peak": 1243.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1243.0,
+        "max": 1242.0,
+        "peak": 1243.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 14,
+      "file": "19_00.bin",
+      "expected": 19,
+      "tx_gain_db": -30,
+      "pair_index": 34,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 19,
+      "new_pred": 19,
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 51.0,
+      "initial_stats": {
+        "min": -1091.0,
+        "max": 1058.0,
+        "peak": 1091.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1091.0,
+        "max": 1058.0,
+        "peak": 1091.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 15,
+      "file": "23_00.bin",
+      "expected": 23,
+      "tx_gain_db": -60,
+      "pair_index": 36,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 23,
+      "new_pred": 23,
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "initial_stats": {
+        "min": -349.0,
+        "max": 335.0,
+        "peak": 349.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -349.0,
+        "max": 335.0,
+        "peak": 349.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 16,
+      "file": "04_00.bin",
+      "expected": 4,
+      "tx_gain_db": -30,
+      "pair_index": 38,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 4,
+      "new_pred": 4,
+      "initial_gain": {
+        "selected_gain_db": 52.0,
+        "readback_gain_db": 52.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 52.0,
+      "initial_stats": {
+        "min": -1340.0,
+        "max": 1343.0,
+        "peak": 1343.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1340.0,
+        "max": 1343.0,
+        "peak": 1343.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 17,
+      "file": "00_00.bin",
+      "expected": 0,
+      "tx_gain_db": -30,
+      "pair_index": 40,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 0,
+      "new_pred": 0,
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 49.0,
+      "initial_stats": {
+        "min": -1940.0,
+        "max": 1915.0,
+        "peak": 1940.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1599.0,
+        "max": 1593.0,
+        "peak": 1599.0,
+        "rail_count": 0
+      },
+      "backoff_steps": [
+        {
+          "before_gain": 51.0,
+          "requested": 49.0,
+          "readback": 49.0,
+          "stats": {
+            "min": -1599.0,
+            "max": 1593.0,
+            "peak": 1599.0,
+            "rail_count": 0
+          }
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "file": "20_07.bin",
+      "expected": 20,
+      "tx_gain_db": -30,
+      "pair_index": 42,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 20,
+      "new_pred": 20,
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 51.0,
+      "initial_stats": {
+        "min": -1649.0,
+        "max": 1624.0,
+        "peak": 1649.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1649.0,
+        "max": 1624.0,
+        "peak": 1649.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 19,
+      "file": "23_00.bin",
+      "expected": 23,
+      "tx_gain_db": -40,
+      "pair_index": 45,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 23,
+      "new_pred": 23,
+      "initial_gain": {
+        "selected_gain_db": 62.0,
+        "readback_gain_db": 62.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 62.0,
+      "initial_stats": {
+        "min": -1161.0,
+        "max": 1164.0,
+        "peak": 1164.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1161.0,
+        "max": 1164.0,
+        "peak": 1164.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 20,
+      "file": "08_00.bin",
+      "expected": 8,
+      "tx_gain_db": -40,
+      "pair_index": 47,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 8,
+      "new_pred": 8,
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "initial_stats": {
+        "min": -1288.0,
+        "max": 1285.0,
+        "peak": 1288.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1288.0,
+        "max": 1285.0,
+        "peak": 1288.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 21,
+      "file": "13_00.bin",
+      "expected": 13,
+      "tx_gain_db": -40,
+      "pair_index": 49,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 13,
+      "new_pred": 13,
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "initial_stats": {
+        "min": -1452.0,
+        "max": 1461.0,
+        "peak": 1461.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1452.0,
+        "max": 1461.0,
+        "peak": 1461.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 22,
+      "file": "07_00.bin",
+      "expected": 7,
+      "tx_gain_db": -40,
+      "pair_index": 51,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 7,
+      "new_pred": 7,
+      "initial_gain": {
+        "selected_gain_db": 60.0,
+        "readback_gain_db": 60.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 60.0,
+      "initial_stats": {
+        "min": -1056.0,
+        "max": 1028.0,
+        "peak": 1056.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1056.0,
+        "max": 1028.0,
+        "peak": 1056.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 23,
+      "file": "14_00.bin",
+      "expected": 14,
+      "tx_gain_db": -40,
+      "pair_index": 53,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 14,
+      "new_pred": 14,
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "initial_stats": {
+        "min": -1637.0,
+        "max": 1619.0,
+        "peak": 1637.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1637.0,
+        "max": 1619.0,
+        "peak": 1637.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 24,
+      "file": "19_00.bin",
+      "expected": 19,
+      "tx_gain_db": -60,
+      "pair_index": 55,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 19,
+      "new_pred": 19,
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "initial_stats": {
+        "min": -341.0,
+        "max": 361.0,
+        "peak": 361.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -341.0,
+        "max": 361.0,
+        "peak": 361.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 25,
+      "file": "01_00.bin",
+      "expected": 1,
+      "tx_gain_db": -40,
+      "pair_index": 57,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 1,
+      "new_pred": 1,
+      "initial_gain": {
+        "selected_gain_db": 59.0,
+        "readback_gain_db": 59.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 57.0,
+      "initial_stats": {
+        "min": -1800.0,
+        "max": 1852.0,
+        "peak": 1852.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1500.0,
+        "max": 1499.0,
+        "peak": 1500.0,
+        "rail_count": 0
+      },
+      "backoff_steps": [
+        {
+          "before_gain": 59.0,
+          "requested": 57.0,
+          "readback": 57.0,
+          "stats": {
+            "min": -1500.0,
+            "max": 1499.0,
+            "peak": 1500.0,
+            "rail_count": 0
+          }
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "file": "17_00.bin",
+      "expected": 17,
+      "tx_gain_db": -40,
+      "pair_index": 59,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 17,
+      "new_pred": 17,
+      "initial_gain": {
+        "selected_gain_db": 48.0,
+        "readback_gain_db": 48.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 46.0,
+      "initial_stats": {
+        "min": -1967.0,
+        "max": 1968.0,
+        "peak": 1968.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1661.0,
+        "max": 1646.0,
+        "peak": 1661.0,
+        "rail_count": 0
+      },
+      "backoff_steps": [
+        {
+          "before_gain": 48.0,
+          "requested": 46.0,
+          "readback": 46.0,
+          "stats": {
+            "min": -1661.0,
+            "max": 1646.0,
+            "peak": 1661.0,
+            "rail_count": 0
+          }
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "file": "00_00.bin",
+      "expected": 0,
+      "tx_gain_db": -40,
+      "pair_index": 62,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 0,
+      "new_pred": 0,
+      "initial_gain": {
+        "selected_gain_db": 57.0,
+        "readback_gain_db": 57.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 57.0,
+      "initial_stats": {
+        "min": -1278.0,
+        "max": 1284.0,
+        "peak": 1284.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1278.0,
+        "max": 1284.0,
+        "peak": 1284.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 28,
+      "file": "08_00.bin",
+      "expected": 8,
+      "tx_gain_db": -60,
+      "pair_index": 64,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 8,
+      "new_pred": 8,
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "initial_stats": {
+        "min": -387.0,
+        "max": 392.0,
+        "peak": 392.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -387.0,
+        "max": 392.0,
+        "peak": 392.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 29,
+      "file": "06_00.bin",
+      "expected": 6,
+      "tx_gain_db": -40,
+      "pair_index": 66,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 6,
+      "new_pred": 6,
+      "initial_gain": {
+        "selected_gain_db": 60.0,
+        "readback_gain_db": 60.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 60.0,
+      "initial_stats": {
+        "min": -1013.0,
+        "max": 1006.0,
+        "peak": 1013.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1013.0,
+        "max": 1006.0,
+        "peak": 1013.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 30,
+      "file": "04_00.bin",
+      "expected": 4,
+      "tx_gain_db": -40,
+      "pair_index": 68,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 4,
+      "new_pred": 4,
+      "initial_gain": {
+        "selected_gain_db": 63.0,
+        "readback_gain_db": 63.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 63.0,
+      "initial_stats": {
+        "min": -1450.0,
+        "max": 1450.0,
+        "peak": 1450.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1450.0,
+        "max": 1450.0,
+        "peak": 1450.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 31,
+      "file": "13_01.bin",
+      "expected": 13,
+      "tx_gain_db": -60,
+      "pair_index": 70,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 13,
+      "new_pred": 13,
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "initial_stats": {
+        "min": -432.0,
+        "max": 432.0,
+        "peak": 432.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -432.0,
+        "max": 432.0,
+        "peak": 432.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 32,
+      "file": "03_00.bin",
+      "expected": 3,
+      "tx_gain_db": -60,
+      "pair_index": 72,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 3,
+      "new_pred": 3,
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "initial_stats": {
+        "min": -424.0,
+        "max": 429.0,
+        "peak": 429.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -424.0,
+        "max": 429.0,
+        "peak": 429.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 33,
+      "file": "19_00.bin",
+      "expected": 19,
+      "tx_gain_db": -40,
+      "pair_index": 74,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 19,
+      "new_pred": 19,
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "initial_stats": {
+        "min": -1094.0,
+        "max": 1105.0,
+        "peak": 1105.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1094.0,
+        "max": 1105.0,
+        "peak": 1105.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 34,
+      "file": "00_00.bin",
+      "expected": 0,
+      "tx_gain_db": -60,
+      "pair_index": 77,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 0,
+      "new_pred": 0,
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "initial_stats": {
+        "min": -625.0,
+        "max": 636.0,
+        "peak": 636.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -625.0,
+        "max": 636.0,
+        "peak": 636.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 35,
+      "file": "17_00.bin",
+      "expected": 17,
+      "tx_gain_db": -30,
+      "pair_index": 79,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 17,
+      "new_pred": 17,
+      "initial_gain": {
+        "selected_gain_db": 35.0,
+        "readback_gain_db": 35.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 35.0,
+      "initial_stats": {
+        "min": -1598.0,
+        "max": 1611.0,
+        "peak": 1611.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1598.0,
+        "max": 1611.0,
+        "peak": 1611.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 36,
+      "file": "14_05.bin",
+      "expected": 14,
+      "tx_gain_db": -30,
+      "pair_index": 81,
+      "missing": false,
+      "old_correct": false,
+      "new_correct": false,
+      "old_pred": 16,
+      "new_pred": 16,
+      "initial_gain": {
+        "selected_gain_db": 53.0,
+        "readback_gain_db": 53.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 53.0,
+      "initial_stats": {
+        "min": -1654.0,
+        "max": 1652.0,
+        "peak": 1654.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1654.0,
+        "max": 1652.0,
+        "peak": 1654.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 37,
+      "file": "02_00.bin",
+      "expected": 2,
+      "tx_gain_db": -40,
+      "pair_index": 83,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 2,
+      "new_pred": 2,
+      "initial_gain": {
+        "selected_gain_db": 57.0,
+        "readback_gain_db": 57.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 57.0,
+      "initial_stats": {
+        "min": -1776.0,
+        "max": 1757.0,
+        "peak": 1776.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1776.0,
+        "max": 1757.0,
+        "peak": 1776.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 38,
+      "file": "15_00.bin",
+      "expected": 15,
+      "tx_gain_db": -30,
+      "pair_index": 85,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 15,
+      "new_pred": 15,
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 51.0,
+      "initial_stats": {
+        "min": -1298.0,
+        "max": 1302.0,
+        "peak": 1302.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1298.0,
+        "max": 1302.0,
+        "peak": 1302.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 39,
+      "file": "03_00.bin",
+      "expected": 3,
+      "tx_gain_db": -40,
+      "pair_index": 87,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 3,
+      "new_pred": 3,
+      "initial_gain": {
+        "selected_gain_db": 60.0,
+        "readback_gain_db": 60.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 60.0,
+      "initial_stats": {
+        "min": -1093.0,
+        "max": 1089.0,
+        "peak": 1093.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1093.0,
+        "max": 1089.0,
+        "peak": 1093.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 40,
+      "file": "16_00.bin",
+      "expected": 16,
+      "tx_gain_db": -40,
+      "pair_index": 89,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 16,
+      "new_pred": 16,
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "initial_stats": {
+        "min": -1311.0,
+        "max": 1320.0,
+        "peak": 1320.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1311.0,
+        "max": 1320.0,
+        "peak": 1320.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 41,
+      "file": "20_00.bin",
+      "expected": 20,
+      "tx_gain_db": -40,
+      "pair_index": 91,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 20,
+      "new_pred": 20,
+      "initial_gain": {
+        "selected_gain_db": 61.0,
+        "readback_gain_db": 61.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 61.0,
+      "initial_stats": {
+        "min": -1620.0,
+        "max": 1632.0,
+        "peak": 1632.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1620.0,
+        "max": 1632.0,
+        "peak": 1632.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 42,
+      "file": "12_00.bin",
+      "expected": 12,
+      "tx_gain_db": -60,
+      "pair_index": 94,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 12,
+      "new_pred": 12,
+      "initial_gain": {
+        "selected_gain_db": 71.0,
+        "readback_gain_db": 71.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 71.0,
+      "initial_stats": {
+        "min": -451.0,
+        "max": 450.0,
+        "peak": 451.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -451.0,
+        "max": 450.0,
+        "peak": 451.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 43,
+      "file": "18_00.bin",
+      "expected": 18,
+      "tx_gain_db": -40,
+      "pair_index": 96,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 18,
+      "new_pred": 18,
+      "initial_gain": {
+        "selected_gain_db": 48.0,
+        "readback_gain_db": 48.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 44.0,
+      "initial_stats": {
+        "min": -1980.0,
+        "max": 2012.0,
+        "peak": 2012.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1535.0,
+        "max": 1534.0,
+        "peak": 1535.0,
+        "rail_count": 0
+      },
+      "backoff_steps": [
+        {
+          "before_gain": 48.0,
+          "requested": 46.0,
+          "readback": 46.0,
+          "stats": {
+            "min": -1947.0,
+            "max": 1970.0,
+            "peak": 1970.0,
+            "rail_count": 0
+          }
+        },
+        {
+          "before_gain": 46.0,
+          "requested": 44.0,
+          "readback": 44.0,
+          "stats": {
+            "min": -1535.0,
+            "max": 1534.0,
+            "peak": 1535.0,
+            "rail_count": 0
+          }
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "file": "13_01.bin",
+      "expected": 13,
+      "tx_gain_db": -30,
+      "pair_index": 98,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 13,
+      "new_pred": 13,
+      "initial_gain": {
+        "selected_gain_db": 53.0,
+        "readback_gain_db": 53.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 53.0,
+      "initial_stats": {
+        "min": -1709.0,
+        "max": 1704.0,
+        "peak": 1709.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1709.0,
+        "max": 1704.0,
+        "peak": 1709.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 45,
+      "file": "23_00.bin",
+      "expected": 23,
+      "tx_gain_db": -30,
+      "pair_index": 100,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 23,
+      "new_pred": 23,
+      "initial_gain": {
+        "selected_gain_db": 50.0,
+        "readback_gain_db": 50.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 50.0,
+      "initial_stats": {
+        "min": -1034.0,
+        "max": 1038.0,
+        "peak": 1038.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1034.0,
+        "max": 1038.0,
+        "peak": 1038.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 46,
+      "file": "08_00.bin",
+      "expected": 8,
+      "tx_gain_db": -30,
+      "pair_index": 102,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 8,
+      "new_pred": 8,
+      "initial_gain": {
+        "selected_gain_db": 50.0,
+        "readback_gain_db": 50.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 50.0,
+      "initial_stats": {
+        "min": -1187.0,
+        "max": 1197.0,
+        "peak": 1197.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1187.0,
+        "max": 1197.0,
+        "peak": 1197.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    },
+    {
+      "index": 47,
+      "file": "03_00.bin",
+      "expected": 3,
+      "tx_gain_db": -30,
+      "pair_index": 104,
+      "missing": false,
+      "old_correct": true,
+      "new_correct": true,
+      "old_pred": 3,
+      "new_pred": 3,
+      "initial_gain": {
+        "selected_gain_db": 51.0,
+        "readback_gain_db": 51.0,
+        "settle_buffers": 3
+      },
+      "final_gain_db": 51.0,
+      "initial_stats": {
+        "min": -1195.0,
+        "max": 1198.0,
+        "peak": 1198.0,
+        "rail_count": 0
+      },
+      "final_stats": {
+        "min": -1195.0,
+        "max": 1198.0,
+        "peak": 1198.0,
+        "rail_count": 0
+      },
+      "backoff_steps": []
+    }
+  ],
+  "short_no_regression_gate": true
+}

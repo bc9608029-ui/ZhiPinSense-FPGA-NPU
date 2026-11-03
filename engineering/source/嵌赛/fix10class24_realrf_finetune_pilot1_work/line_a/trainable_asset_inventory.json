@@ -1,0 +1,103 @@
+{
+  "task": "M29-RML24-REALRF-FINETUNE-PILOT1",
+  "line": "A (pilot1_train_data)",
+  "date": "2026-10-21",
+  "conclusion": "TRAINABLE_CHECKPOINT_FOUND",
+  "verdict": "可训练资产齐全：PyTorch checkpoint（SHA 已核验）+ 模型结构源码 + 训练配置 + 训练代码 + 切分索引全部存在，且冻结 ckpt 与 NPU JSON/RAW 同源。微调可从原始 PyTorch checkpoint 初始化，不构成 BLOCKED_NO_TRAINABLE_CHECKPOINT。",
+  "frozen_model_identity": {
+    "network": "model_24class",
+    "arch": "ADAMRV11Net",
+    "num_classes": 24,
+    "json_sha256": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+    "raw_sha256": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+    "ckpt_sha256": "96cd25f87d6f6f6cacda94432136db9420f74300cecba71df3c9fbe49817be6d"
+  },
+  "trainable_checkpoint": {
+    "found": true,
+    "path": "F:\\FPGA_Work\\sdr_rml24_npu_deployment_m29\\_frozen\\runs\\rml24_base\\formal\\t002_losscross_entropy_optadamw\\seed2027\\checkpoints\\best.pt",
+    "duplicate_path": "F:\\FPGA_Work\\24class_results\\rml24_seed2027_best.pt",
+    "size_bytes": 3537312,
+    "sha256": "96cd25f87d6f6f6cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+    "sha_verified": true,
+    "format": {
+      "keys": ["model_state", "class_names", "epoch", "best_epoch"],
+      "note": "model_state=state_dict; class_names=24-class frozen order; torch.load(weights_only=False)"
+    }
+  },
+  "model_source": {
+    "found": true,
+    "path": "F:\\FPGA_Work\\sdr_amr_12class_ood_u_v1\\models\\ad_amr_v1_1_net.py",
+    "class": "ADAMRV11Net",
+    "constructor": {
+      "num_classes": 24,
+      "denoiser_channels": 24,
+      "denoiser_blocks": 3,
+      "feature_channels": [32, 48, 64, 96],
+      "classifier_hidden": 128,
+      "dropout": 0.15
+    },
+    "forward": "forward(iq[N,2,1024]) -> (logits[N,24], denoised); 分类头取 logits",
+    "operator_policy": "Conv/BatchNormalization/Relu/Add/ReduceMean/Gemm only (NPU-deployable)"
+  },
+  "training_config": {
+    "found": true,
+    "path": "F:\\FPGA_Work\\sdr_amr_12class_ood_u_v1\\configs\\rml24_base.yaml",
+    "key_values": {
+      "seed": 3407,
+      "epochs": 80,
+      "batch_size": 256,
+      "learning_rate": 1.0e-3,
+      "weight_decay": 1.0e-4,
+      "scheduler_factor": 0.5,
+      "scheduler_patience": 5,
+      "minimum_lr": 1.0e-6,
+      "early_stopping_patience": 12,
+      "min_delta": 1.0e-4,
+      "gradient_clip_norm": 2.0,
+      "loss": "cross_entropy",
+      "label_smoothing": 0.1,
+      "optimizer": "adamw",
+      "class_sampling": "balanced",
+      "amp": true,
+      "amp_dtype": "bfloat16"
+    },
+    "frozen_run_name": "t002_losscross_entropy_optadamw/seed2027"
+  },
+  "training_code": {
+    "found": true,
+    "project_root": "F:\\FPGA_Work\\sdr_amr_12class_ood_u_v1",
+    "entrypoints": [
+      "training/rml24_trainer.py",
+      "training/rml24_run.py",
+      "training/rml24_formal.py",
+      "training/rml24_select.py",
+      "train_ad_amr_v1_1_data_v2.py",
+      "scripts/run_train_rml24.sh"
+    ],
+    "dataset_loader": "datasets/radioml2018_dataset.py",
+    "note": "verbatim 复用自 12 类鲁棒工程 ad_amr_12class_robust_v2/autodl_v2；OFFICIAL_CLASS_ORDER 冻结"
+  },
+  "split_indices": {
+    "found": true,
+    "path": "F:\\FPGA_Work\\sdr_amr_12class_ood_u_v1\\data\\radioml2018\\rml24_split_indices.npz",
+    "sha256": "9a035841baef299ac918ae64294d59ba2298c5f20852862d3dd4069547330335",
+    "split_seed": 20261003,
+    "ratios": [0.6, 0.2, 0.2],
+    "counts": {"train": 1533168, "validation": 511056, "test": 511680},
+    "keys": ["train_indices", "train_labels", "train_snrs", "validation_indices", "validation_labels", "validation_snrs", "test_indices", "test_labels", "test_snrs"]
+  },
+  "input_contract": {
+    "model_input": "[2,1024] f32 LE planar [real, imag], 8192 bytes",
+    "from_hdf5": "X[i] is [1024,2] fp32 -> np.ascontiguousarray(X[i].T).astype(np.float32)",
+    "no_rescale": true,
+    "note": "无 DC/归一化/重采样/滤波；RMS 已在训练域匹配"
+  },
+  "hdf5": {
+    "path": "F:\\datasets\\RadioML2018\\GOLD_XYZ_OSC.0001_1024.hdf5",
+    "sha256": "e3dd0bef66a3426959ee66a1709a8c0a95d4f8395d18aaf6f1214bdbc763bd38",
+    "size_bytes": 21449148312,
+    "samples": 2555904,
+    "strata": "24 classes x 26 SNR = 624, 4096/stratum"
+  },
+  "npU_artifacts_note": "NPU model_rml24_bf16/rml24_adamrv11_bf16.{json,raw} 是编译产物，不是可训练 checkpoint；微调必须从上面 trainable_checkpoint 初始化，不从 RAW 反推权重。"
+}

@@ -1,0 +1,27 @@
+# Smoke / overfit probe: a tiny deterministic slice used only to prove the
+# trainer can overfit one batch before any full run is allowed.  Not a model.
+
+_base: configs/rml24_base.yaml
+
+seed: 3407
+output_root: runs/rml24_smoke
+
+training:
+  epochs: 3
+  batch_size: 64
+  learning_rate: 1.0e-3
+  minimum_epochs_before_stopping: 1
+  early_stopping_patience: 3
+  reconstruction_weight: 0.0
+  amp: false
+
+public_data:
+  hdf5_path: data/radioml2018/GOLD_XYZ_OSC.0001_1024.hdf5
+  classes_path: data/radioml2018/classes.txt
+  audit_path: data/radioml2018/audit.json
+  index_path: data/radioml2018/rml24_split_indices.npz
+
+rml24:
+  model_name: RML2018_24_BENCHMARK
+  apply_channel_augmentation: false
+  smoke_max_per_stratum: 4

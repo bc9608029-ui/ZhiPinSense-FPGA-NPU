@@ -1,0 +1,674 @@
+[
+  {
+    "class_index": 0,
+    "name": "OOK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -167500.0,
+      "high_hz": 167500.0,
+      "span_hz": 337500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1060000.0,
+      "high_hz": 842500.0,
+      "span_hz": 1905000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 1,
+    "name": "4ASK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -145000.0,
+      "high_hz": 145000.0,
+      "span_hz": 292500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1025000.0,
+      "high_hz": 765000.0,
+      "span_hz": 1792500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 2,
+    "name": "8ASK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -182500.0,
+      "high_hz": 182500.0,
+      "span_hz": 367500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -922500.0,
+      "high_hz": 722500.0,
+      "span_hz": 1647500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 3,
+    "name": "BPSK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -167500.0,
+      "high_hz": 167500.0,
+      "span_hz": 337500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1150000.0,
+      "high_hz": 907500.0,
+      "span_hz": 2060000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 4,
+    "name": "QPSK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -165000.0,
+      "high_hz": 160000.0,
+      "span_hz": 327500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1147500.0,
+      "high_hz": 897500.0,
+      "span_hz": 2047500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 5,
+    "name": "8PSK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -165000.0,
+      "high_hz": 165000.0,
+      "span_hz": 332500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1150000.0,
+      "high_hz": 897500.0,
+      "span_hz": 2050000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 6,
+    "name": "16PSK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -162500.0,
+      "high_hz": 162500.0,
+      "span_hz": 327500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1150000.0,
+      "high_hz": 910000.0,
+      "span_hz": 2062500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 7,
+    "name": "32PSK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -162500.0,
+      "high_hz": 157500.0,
+      "span_hz": 322500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1150000.0,
+      "high_hz": 907500.0,
+      "span_hz": 2060000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 8,
+    "name": "16APSK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -162500.0,
+      "high_hz": 162500.0,
+      "span_hz": 327500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1150000.0,
+      "high_hz": 910000.0,
+      "span_hz": 2062500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 9,
+    "name": "32APSK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -167500.0,
+      "high_hz": 170000.0,
+      "span_hz": 340000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1147500.0,
+      "high_hz": 897500.0,
+      "span_hz": 2047500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 10,
+    "name": "64APSK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -165000.0,
+      "high_hz": 167500.0,
+      "span_hz": 335000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1147500.0,
+      "high_hz": 897500.0,
+      "span_hz": 2047500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 11,
+    "name": "128APSK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -165000.0,
+      "high_hz": 162500.0,
+      "span_hz": 330000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1150000.0,
+      "high_hz": 910000.0,
+      "span_hz": 2062500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 12,
+    "name": "16QAM",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -162500.0,
+      "high_hz": 165000.0,
+      "span_hz": 330000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1150000.0,
+      "high_hz": 907500.0,
+      "span_hz": 2060000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 13,
+    "name": "32QAM",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -162500.0,
+      "high_hz": 160000.0,
+      "span_hz": 325000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1150000.0,
+      "high_hz": 907500.0,
+      "span_hz": 2060000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 14,
+    "name": "64QAM",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -167500.0,
+      "high_hz": 165000.0,
+      "span_hz": 335000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1147500.0,
+      "high_hz": 882500.0,
+      "span_hz": 2032500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 15,
+    "name": "128QAM",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -167500.0,
+      "high_hz": 167500.0,
+      "span_hz": 337500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1150000.0,
+      "high_hz": 907500.0,
+      "span_hz": 2060000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 16,
+    "name": "256QAM",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -162500.0,
+      "high_hz": 165000.0,
+      "span_hz": 330000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1150000.0,
+      "high_hz": 897500.0,
+      "span_hz": 2050000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 17,
+    "name": "AM-SSB-WC",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": 0.0,
+      "high_hz": 27500.0,
+      "span_hz": 30000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -10000.0,
+      "high_hz": 10000.0,
+      "span_hz": 22500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 18,
+    "name": "AM-SSB-SC",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": 12500.0,
+      "high_hz": 122500.0,
+      "span_hz": 112500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": 12500.0,
+      "high_hz": 120000.0,
+      "span_hz": 110000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 19,
+    "name": "AM-DSB-WC",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -82500.0,
+      "high_hz": 82500.0,
+      "span_hz": 167500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1155000.0,
+      "high_hz": 962500.0,
+      "span_hz": 2120000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 20,
+    "name": "AM-DSB-SC",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -140000.0,
+      "high_hz": 140000.0,
+      "span_hz": 282500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1150000.0,
+      "high_hz": 937500.0,
+      "span_hz": 2090000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 21,
+    "name": "FM",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": 45000.0,
+      "high_hz": 115000.0,
+      "span_hz": 72500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1155000.0,
+      "high_hz": 962500.0,
+      "span_hz": 2120000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 22,
+    "name": "GMSK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -155000.0,
+      "high_hz": 165000.0,
+      "span_hz": 322500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1150000.0,
+      "high_hz": 910000.0,
+      "span_hz": 2062500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  },
+  {
+    "class_index": 23,
+    "name": "OQPSK",
+    "public_training": {
+      "valid": true,
+      "low_hz": -1265000.0,
+      "high_hz": 1247500.0,
+      "span_hz": 2515000.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "payload": {
+      "valid": true,
+      "low_hz": -182500.0,
+      "high_hz": 137500.0,
+      "span_hz": 322500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    },
+    "whole_frame": {
+      "valid": true,
+      "low_hz": -1150000.0,
+      "high_hz": 910000.0,
+      "span_hz": 2062500.0,
+      "touches_sample_band_edge": false,
+      "method": "Welch-like PSD median-subtracted99percent energy; diagnostic heuristic"
+    }
+  }
+]

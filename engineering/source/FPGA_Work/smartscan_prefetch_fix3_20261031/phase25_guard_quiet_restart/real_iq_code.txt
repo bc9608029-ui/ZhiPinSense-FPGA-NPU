@@ -1,0 +1,13 @@
+from collections import Counter
+from pathlib import Path
+import subprocess,sys,json
+root=Path(sys.argv[1]);root.mkdir();run=root/'quiet';cmd=[sys.executable,'/root/rml24_fpga_ui_20261031/delivery_guard/scripts/run_candidate_finalize_v2.py','--legacy-root','/root/amr_rescue_20261025','--model-dir','/root/realrf_finetune_pilot1_test_1773373090/model_rml24_bf16','--npu-sha','cc88cb0bf5cde766937d011978314b7dafd1122d0f18e1cbda731ec2f7a440d8']
+with (root/'preflight.log').open('w') as f:subprocess.run(cmd+['--check'],stdout=f,stderr=subprocess.STDOUT,check=True)
+results=[]
+for index in range(2):
+ run=root/('quiet' if index==0 else 'quiet2')
+ with (root/('supervisor%d.log'%index)).open('w') as f:r=subprocess.run(cmd+['--run',str(run),'--mode','FIXED','--duration-sec','20'],stdout=f,stderr=subprocess.STDOUT)
+ v=json.loads((run/'supervisor.json').read_text());assert r.returncode==0 and v['clean_stop'];assert not Path('/run/rml24-fpga-shared-guard/reset_required.json').exists()
+ results.append(dict(rc=r.returncode,supervisor=v,guard_clean='HARDWARE_GUARD_CLEAN_EXIT' in (run/'npu.log').read_text()))
+ assert results[-1]['guard_clean']
+(root/'SUMMARY.json').write_text(json.dumps(dict(results=results,model_changed=False,rf_tx=False),indent=2));print(json.dumps(results));print('REAL_IQ_MATRIX_DONE',flush=True)

@@ -1,0 +1,29 @@
+{
+  "status": "PENDING_FORMAL_COMPLETION",
+  "checks": [
+    {
+      "name": "same_actual_input_shared_vs_original_npu_logits",
+      "source_live_records": "/root/rml24_fix3_1793441664/quiet/capture/records.jsonl",
+      "source_original_replay": "/root/rml24_clean_compare_1773394583/RESULT.json",
+      "description": "Compare all49 saved recovered input frame IDs against actual RF shared-worker mean_logits, not just predictions; exact arithmetic comparison plus maximum absolute difference. No new inference needed.",
+      "required": true
+    },
+    {
+      "name": "all_formal_scores_and_hardware_gates",
+      "required": true
+    },
+    {
+      "name": "final_release_identity_and_original_backup",
+      "required": true
+    },
+    {
+      "name": "production_entry_staged_test",
+      "required": true
+    },
+    {
+      "name": "physical_display_touch_and_cold_boot",
+      "required": true,
+      "user_presence_needed": true
+    }
+  ]
+}

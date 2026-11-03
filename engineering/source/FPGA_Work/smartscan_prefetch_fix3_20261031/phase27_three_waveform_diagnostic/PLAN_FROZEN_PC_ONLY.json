@@ -1,0 +1,26 @@
+{
+  "cases": [
+    {
+      "bank": 1,
+      "message": 1,
+      "gain_db": -40,
+      "class_index": 17
+    },
+    {
+      "bank": 1,
+      "message": 1,
+      "gain_db": -40,
+      "class_index": 23
+    },
+    {
+      "bank": 1,
+      "message": 2,
+      "gain_db": -40,
+      "class_index": 10
+    }
+  ],
+  "denominator": 3,
+  "purpose": "Failure diagnosis only; keep all raw captures and inputs; not promotion or new accuracy claim",
+  "selection": "first capture TX start+1.5s through stop-.3s",
+  "center_hz": 2400000000
+}

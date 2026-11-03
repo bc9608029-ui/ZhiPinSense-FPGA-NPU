@@ -1,0 +1,34 @@
+{
+  "onnx_path": "F:\\FPGA_Work\\ad_amr_data_v4_12class_robust\\outputs\\ad_amr_v1_1_data_v4_12class_robust\\smoke\\onnx\\ad_amr_v1_1_opset17.onnx",
+  "checkpoint": "outputs/ad_amr_v1_1_data_v4_12class_robust/smoke/checkpoints/best.pt",
+  "checkpoint_epoch": 2,
+  "inspection": {
+    "checker_passed": true,
+    "opset": 17,
+    "op_types": {
+      "Add": 12,
+      "Conv": 28,
+      "Gemm": 2,
+      "ReduceMean": 1,
+      "Relu": 24
+    },
+    "unexpected_operators": []
+  },
+  "ort_parity": {
+    "status": "ok",
+    "max_abs_diff": 5.960464477539063e-08,
+    "mean_abs_diff": 2.60770320892334e-08
+  },
+  "profile": {
+    "parameters": 279036,
+    "trainable_parameters": 279036,
+    "neural_macs": 46544384,
+    "neural_flops": 93088768,
+    "fp32_parameter_size_mb": 1.0644378662109375,
+    "state_dict_size_mb": 1.0750808715820312,
+    "serialized_state_dict_mb": 1.125412940979004,
+    "input_contract": "iq[N,2,1024] -> logits[N,12]",
+    "operator_policy": "Conv/BatchNormalization/Relu/Add/ReduceMean/Gemm only"
+  },
+  "npu_graph_claim": "operator-compatible only; vendor compilation and board parity remain required"
+}

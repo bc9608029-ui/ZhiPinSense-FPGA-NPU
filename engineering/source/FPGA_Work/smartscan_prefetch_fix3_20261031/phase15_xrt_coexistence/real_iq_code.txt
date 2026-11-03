@@ -1,0 +1,10 @@
+import sys,subprocess,json,os
+from pathlib import Path
+root=Path(sys.argv[1]);root.mkdir();results=[]
+CANARY_CODE=Path('/root/rml24_three_modes_execution_20261029/fpga_ui_integration_20261031/canary_hook.py.txt').read_text()
+for mode in ['baseline','probe','execute']:
+ folder=root/mode;env=dict(os.environ,DIAG_HOOK=mode)
+ with (root/(mode+'.log')).open('w') as f:r=subprocess.run([sys.executable,'-c',CANARY_CODE,'/root/amr_rescue_20261025/build/npu_stream','/root/realrf_finetune_pilot1_test_1773373090/model_rml24_bf16',str(folder)],stdout=f,stderr=subprocess.STDOUT,env=env)
+ text=(root/(mode+'.log')).read_text();results.append(dict(mode=mode,rc=r.returncode,before_hook_pass='FIRST_EIGHT_NPU_PASS' in text,finite16='"finite": 16' in text,tail=text[-1800:]))
+ if (folder/'hook.log').exists() and 'UNSAFE_BUSY_REQUIRES_BOARD_RESET' in (folder/'hook.log').read_text():break
+(root/'SUMMARY.json').write_text(json.dumps(dict(kind='XRT_COEXISTENCE_DIAGNOSTIC_NOT_ACCURACY',results=results),indent=2));print(json.dumps(results));print('REAL_IQ_MATRIX_DONE',flush=True)

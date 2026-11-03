@@ -1,0 +1,78 @@
+{
+  "smart_scan_framer.sv": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\smartscan_integration\\rtl\\smart_scan_framer.sv",
+    "sha256": "5be35ade9f66c0e4be512334c670980042097932384b8f2b2bb8babd4ed33e7e"
+  },
+  "hann_coeff_rom.v": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\smartscan_integration\\rtl\\hann_coeff_rom.v",
+    "sha256": "36e71083e80be7fc83e077010cd010404d167e4177f57fa0fb8b7985ad2d254b"
+  },
+  "window_mul_q15.sv": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\smartscan_integration\\rtl\\window_mul_q15.sv",
+    "sha256": "50486a1bdbdc228e64d10ef32ed992d09ab035a054d06911371f02b7bcea8dc7"
+  },
+  "fft_vendor_ip_adapter.sv": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\smartscan_integration\\rtl\\fft_vendor_ip_adapter.sv",
+    "sha256": "012cc4538b13fe7c90ff8ea524a85ecc851a90612ffc6817e94db1588c0cff34"
+  },
+  "fft_psd_stream_writer.sv": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\smartscan_integration\\rtl\\fft_psd_stream_writer.sv",
+    "sha256": "b5e714add96b2f6713e01c7ff7def1de754e053c4e109e41519e33fa1c8c0f39"
+  },
+  "smart_scan_psd_buffers.sv": {
+    "source": "F:\\\u5d4c\u8d5b\\rml24_fpga_route_review_fix1_20261030\\smart_scan_psd_buffers.sv",
+    "sha256": "10f0dc8ff21ccf7da5f5eb20892914e321e4b4a7faac688dc4fa22b2c62573ee"
+  },
+  "smart_scan_top.sv": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\smartscan_integration\\rtl\\smart_scan_top.sv",
+    "sha256": "5b811a7d4e9b9d28df63a5446ccfb687bc9d68834f86fd8d659be33b6fb9e6f0"
+  },
+  "smart_scan_iq_frame_marker.sv": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\smartscan_integration\\rtl\\smart_scan_iq_frame_marker.sv",
+    "sha256": "e6c1b8a0a4dbd8b663e4f91c044a4301136409fa9a490efe876f8830feb6edbe"
+  },
+  "smart_scan_pspl_engine.sv": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\smartscan_integration\\rtl\\smart_scan_pspl_engine.sv",
+    "sha256": "2d7736a2e9e1e84652e4ae1265141bab632112a2dc9a359666eeb82f5200ca49"
+  },
+  "smart_scan_pspl_regs.sv": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\smartscan_integration\\rtl\\smart_scan_pspl_regs.sv",
+    "sha256": "8cdfb0b01670f3552f19d9a0bb344291d7e60816b99d845ab97b484017fae675"
+  },
+  "async_fifo_gray.sv": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\pl_ddr_integration_v1\\deps\\adapters\\async_fifo_gray.sv",
+    "sha256": "610d60ebe001531d65c987bc844e1d3f9bb82f7fefd377f75aca1ae35cc8902b"
+  },
+  "iq_beat_unpacker.sv": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\pl_ddr_integration_v1\\deps\\adapters\\iq_beat_unpacker.sv",
+    "sha256": "b6b906a0750da69092de446ae45dd560c51fecda91d4b02fb944d178c64aaac1"
+  },
+  "pl_ddr_iq_input_adapter.sv": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\pl_ddr_integration_v1\\deps\\adapters\\pl_ddr_iq_input_adapter.sv",
+    "sha256": "327a14b1fae9892c932643cdd5f5b23ec4adfb3830e3aed93b138c838ddb4c1a"
+  },
+  "user_ddr_iq_reader.sv": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\pl_ddr_integration_v1\\deps\\adapters\\user_ddr_iq_reader.sv",
+    "sha256": "3576f113d2a8d1d73e0ee7ae5fc2c69406aafd2e8ab5da37d6ec50f82e7eb970"
+  },
+  "job_domain_controller.sv": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\pl_ddr_integration_v1\\rtl\\job_domain_controller.sv",
+    "sha256": "1ceda4b13aff436568a4a3da60b2335b7595c47514dde3e6551f0bd772976757"
+  },
+  "fft_magnitude_square_u54.sv": {
+    "source": "F:\\\u5d4c\u8d5b\\rml24_fpga_smartscan_prep2_20261028\\rtl\\fft_magnitude_square_u54.sv",
+    "sha256": "bb58c166f5f5ba88e79f601873c30fe77cedeffdb7c9d32f99046ebdb7f767ab"
+  },
+  "tb_smart_scan_pspl.sv": {
+    "source": "F:\\\u5d4c\u8d5b\\rml24_fpga_smartscan_prep2_20261028\\tb\\tb_smart_scan_pspl.sv",
+    "sha256": "c0146b7922d1c1df8644a37897af53a992e853779f089834d27d94d2bf89f2f4"
+  },
+  "smartscan_fft_1024_sim_netlist.v": {
+    "source": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1\\fpga\\smartscan_integration\\xfft_z030\\work_build\\smartscan_fft_z030.srcs\\sources_1\\ip\\smartscan_fft_1024\\smartscan_fft_1024_sim_netlist.v",
+    "sha256": "00af5ff782a44d071283c2d9375bd0c57501954957025b419494842ec0ccea4f"
+  },
+  "glbl.v": {
+    "source": "D:\\Xilinx2018.3\\Vivado\\2018.3\\data\\verilog\\src\\glbl.v",
+    "sha256": "c48753ff3481f46872a09160eee14b5596b37444c1bf2b84bf2acd922e7c982d"
+  }
+}

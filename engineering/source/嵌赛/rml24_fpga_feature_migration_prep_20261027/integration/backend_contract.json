@@ -1,0 +1,8 @@
+{
+  "backend_modes": ["software", "fpga", "auto"],
+  "default_before_acceptance": "software",
+  "default_after_acceptance": "auto",
+  "fallback_triggers": ["timeout", "frame_id_mismatch", "sample_count_mismatch", "nonfinite_derived_value", "device_error", "ab_mismatch"],
+  "telemetry": ["backend_requested", "backend_used", "fallback_reason", "frame_id", "sample_count", "energy", "peak_power", "rms", "feature_latency_us"],
+  "model_input_policy": "unchanged_raw_iq"
+}

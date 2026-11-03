@@ -1,0 +1,2655 @@
+{
+  "denominator": 240,
+  "correct": {
+    "1": 176,
+    "2": 205,
+    "4": 216,
+    "8": 223
+  },
+  "rows": [
+    {
+      "opportunity": 0,
+      "label": 8,
+      "record_id": 29,
+      "pred": {
+        "1": 8,
+        "2": 8,
+        "4": 8,
+        "8": 8
+      }
+    },
+    {
+      "opportunity": 1,
+      "label": 15,
+      "record_id": 35,
+      "pred": {
+        "1": 15,
+        "2": 15,
+        "4": 15,
+        "8": 15
+      }
+    },
+    {
+      "opportunity": 2,
+      "label": 23,
+      "record_id": 41,
+      "pred": {
+        "1": 15,
+        "2": 15,
+        "4": 10,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 3,
+      "label": 6,
+      "record_id": 47,
+      "pred": {
+        "1": 6,
+        "2": 6,
+        "4": 6,
+        "8": 6
+      }
+    },
+    {
+      "opportunity": 4,
+      "label": 0,
+      "record_id": 53,
+      "pred": {
+        "1": 0,
+        "2": 0,
+        "4": 0,
+        "8": 0
+      }
+    },
+    {
+      "opportunity": 5,
+      "label": 22,
+      "record_id": 59,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 22,
+        "8": 22
+      }
+    },
+    {
+      "opportunity": 6,
+      "label": 15,
+      "record_id": 65,
+      "pred": {
+        "1": 11,
+        "2": 15,
+        "4": 15,
+        "8": 15
+      }
+    },
+    {
+      "opportunity": 7,
+      "label": 22,
+      "record_id": 71,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 17
+      }
+    },
+    {
+      "opportunity": 8,
+      "label": 0,
+      "record_id": 77,
+      "pred": {
+        "1": 0,
+        "2": 0,
+        "4": 0,
+        "8": 0
+      }
+    },
+    {
+      "opportunity": 9,
+      "label": 1,
+      "record_id": 83,
+      "pred": {
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "8": 1
+      }
+    },
+    {
+      "opportunity": 10,
+      "label": 8,
+      "record_id": 89,
+      "pred": {
+        "1": 8,
+        "2": 8,
+        "4": 8,
+        "8": 8
+      }
+    },
+    {
+      "opportunity": 11,
+      "label": 12,
+      "record_id": 95,
+      "pred": {
+        "1": 12,
+        "2": 12,
+        "4": 12,
+        "8": 12
+      }
+    },
+    {
+      "opportunity": 12,
+      "label": 2,
+      "record_id": 101,
+      "pred": {
+        "1": 17,
+        "2": 2,
+        "4": 2,
+        "8": 2
+      }
+    },
+    {
+      "opportunity": 13,
+      "label": 15,
+      "record_id": 107,
+      "pred": {
+        "1": 16,
+        "2": 15,
+        "4": 15,
+        "8": 15
+      }
+    },
+    {
+      "opportunity": 14,
+      "label": 2,
+      "record_id": 113,
+      "pred": {
+        "1": 2,
+        "2": 2,
+        "4": 2,
+        "8": 2
+      }
+    },
+    {
+      "opportunity": 15,
+      "label": 11,
+      "record_id": 119,
+      "pred": {
+        "1": 11,
+        "2": 11,
+        "4": 11,
+        "8": 11
+      }
+    },
+    {
+      "opportunity": 16,
+      "label": 4,
+      "record_id": 125,
+      "pred": {
+        "1": 4,
+        "2": 4,
+        "4": 4,
+        "8": 4
+      }
+    },
+    {
+      "opportunity": 17,
+      "label": 5,
+      "record_id": 131,
+      "pred": {
+        "1": 8,
+        "2": 5,
+        "4": 5,
+        "8": 5
+      }
+    },
+    {
+      "opportunity": 18,
+      "label": 3,
+      "record_id": 137,
+      "pred": {
+        "1": 3,
+        "2": 3,
+        "4": 3,
+        "8": 3
+      }
+    },
+    {
+      "opportunity": 19,
+      "label": 8,
+      "record_id": 143,
+      "pred": {
+        "1": 8,
+        "2": 8,
+        "4": 8,
+        "8": 8
+      }
+    },
+    {
+      "opportunity": 20,
+      "label": 11,
+      "record_id": 149,
+      "pred": {
+        "1": 11,
+        "2": 11,
+        "4": 11,
+        "8": 11
+      }
+    },
+    {
+      "opportunity": 21,
+      "label": 13,
+      "record_id": 155,
+      "pred": {
+        "1": 13,
+        "2": 13,
+        "4": 13,
+        "8": 13
+      }
+    },
+    {
+      "opportunity": 22,
+      "label": 9,
+      "record_id": 161,
+      "pred": {
+        "1": 9,
+        "2": 9,
+        "4": 9,
+        "8": 9
+      }
+    },
+    {
+      "opportunity": 23,
+      "label": 14,
+      "record_id": 167,
+      "pred": {
+        "1": 14,
+        "2": 14,
+        "4": 14,
+        "8": 14
+      }
+    },
+    {
+      "opportunity": 24,
+      "label": 11,
+      "record_id": 173,
+      "pred": {
+        "1": 11,
+        "2": 11,
+        "4": 11,
+        "8": 11
+      }
+    },
+    {
+      "opportunity": 25,
+      "label": 19,
+      "record_id": 179,
+      "pred": {
+        "1": 19,
+        "2": 19,
+        "4": 19,
+        "8": 19
+      }
+    },
+    {
+      "opportunity": 26,
+      "label": 8,
+      "record_id": 185,
+      "pred": {
+        "1": 9,
+        "2": 8,
+        "4": 8,
+        "8": 8
+      }
+    },
+    {
+      "opportunity": 27,
+      "label": 10,
+      "record_id": 191,
+      "pred": {
+        "1": 10,
+        "2": 10,
+        "4": 10,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 28,
+      "label": 16,
+      "record_id": 197,
+      "pred": {
+        "1": 16,
+        "2": 16,
+        "4": 16,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 29,
+      "label": 21,
+      "record_id": 203,
+      "pred": {
+        "1": 21,
+        "2": 21,
+        "4": 21,
+        "8": 21
+      }
+    },
+    {
+      "opportunity": 30,
+      "label": 21,
+      "record_id": 209,
+      "pred": {
+        "1": 21,
+        "2": 21,
+        "4": 21,
+        "8": 21
+      }
+    },
+    {
+      "opportunity": 31,
+      "label": 14,
+      "record_id": 215,
+      "pred": {
+        "1": 1,
+        "2": 9,
+        "4": 16,
+        "8": 14
+      }
+    },
+    {
+      "opportunity": 32,
+      "label": 2,
+      "record_id": 221,
+      "pred": {
+        "1": 2,
+        "2": 2,
+        "4": 2,
+        "8": 2
+      }
+    },
+    {
+      "opportunity": 33,
+      "label": 3,
+      "record_id": 227,
+      "pred": {
+        "1": 3,
+        "2": 3,
+        "4": 3,
+        "8": 3
+      }
+    },
+    {
+      "opportunity": 34,
+      "label": 7,
+      "record_id": 233,
+      "pred": {
+        "1": 7,
+        "2": 7,
+        "4": 7,
+        "8": 7
+      }
+    },
+    {
+      "opportunity": 35,
+      "label": 5,
+      "record_id": 239,
+      "pred": {
+        "1": 5,
+        "2": 5,
+        "4": 5,
+        "8": 5
+      }
+    },
+    {
+      "opportunity": 36,
+      "label": 5,
+      "record_id": 245,
+      "pred": {
+        "1": 8,
+        "2": 5,
+        "4": 5,
+        "8": 5
+      }
+    },
+    {
+      "opportunity": 37,
+      "label": 13,
+      "record_id": 251,
+      "pred": {
+        "1": 13,
+        "2": 13,
+        "4": 13,
+        "8": 13
+      }
+    },
+    {
+      "opportunity": 38,
+      "label": 5,
+      "record_id": 257,
+      "pred": {
+        "1": 5,
+        "2": 5,
+        "4": 5,
+        "8": 5
+      }
+    },
+    {
+      "opportunity": 39,
+      "label": 4,
+      "record_id": 263,
+      "pred": {
+        "1": 4,
+        "2": 4,
+        "4": 4,
+        "8": 4
+      }
+    },
+    {
+      "opportunity": 40,
+      "label": 20,
+      "record_id": 269,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 41,
+      "label": 11,
+      "record_id": 275,
+      "pred": {
+        "1": 11,
+        "2": 11,
+        "4": 11,
+        "8": 11
+      }
+    },
+    {
+      "opportunity": 42,
+      "label": 11,
+      "record_id": 281,
+      "pred": {
+        "1": 11,
+        "2": 11,
+        "4": 11,
+        "8": 11
+      }
+    },
+    {
+      "opportunity": 43,
+      "label": 20,
+      "record_id": 287,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 44,
+      "label": 20,
+      "record_id": 293,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 45,
+      "label": 16,
+      "record_id": 299,
+      "pred": {
+        "1": 16,
+        "2": 16,
+        "4": 16,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 46,
+      "label": 17,
+      "record_id": 305,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 17
+      }
+    },
+    {
+      "opportunity": 47,
+      "label": 20,
+      "record_id": 311,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 48,
+      "label": 9,
+      "record_id": 317,
+      "pred": {
+        "1": 9,
+        "2": 9,
+        "4": 9,
+        "8": 9
+      }
+    },
+    {
+      "opportunity": 49,
+      "label": 23,
+      "record_id": 323,
+      "pred": {
+        "1": 8,
+        "2": 23,
+        "4": 23,
+        "8": 23
+      }
+    },
+    {
+      "opportunity": 50,
+      "label": 18,
+      "record_id": 329,
+      "pred": {
+        "1": 18,
+        "2": 18,
+        "4": 18,
+        "8": 18
+      }
+    },
+    {
+      "opportunity": 51,
+      "label": 4,
+      "record_id": 335,
+      "pred": {
+        "1": 4,
+        "2": 4,
+        "4": 4,
+        "8": 4
+      }
+    },
+    {
+      "opportunity": 52,
+      "label": 7,
+      "record_id": 341,
+      "pred": {
+        "1": 7,
+        "2": 7,
+        "4": 7,
+        "8": 7
+      }
+    },
+    {
+      "opportunity": 53,
+      "label": 1,
+      "record_id": 347,
+      "pred": {
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "8": 1
+      }
+    },
+    {
+      "opportunity": 54,
+      "label": 6,
+      "record_id": 353,
+      "pred": {
+        "1": 8,
+        "2": 8,
+        "4": 6,
+        "8": 6
+      }
+    },
+    {
+      "opportunity": 55,
+      "label": 10,
+      "record_id": 359,
+      "pred": {
+        "1": 10,
+        "2": 10,
+        "4": 10,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 56,
+      "label": 3,
+      "record_id": 365,
+      "pred": {
+        "1": 3,
+        "2": 3,
+        "4": 3,
+        "8": 3
+      }
+    },
+    {
+      "opportunity": 57,
+      "label": 23,
+      "record_id": 370,
+      "pred": {
+        "1": 7,
+        "2": 7,
+        "4": 10,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 58,
+      "label": 3,
+      "record_id": 377,
+      "pred": {
+        "1": 3,
+        "2": 3,
+        "4": 3,
+        "8": 3
+      }
+    },
+    {
+      "opportunity": 59,
+      "label": 21,
+      "record_id": 382,
+      "pred": {
+        "1": 8,
+        "2": 20,
+        "4": 8,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 60,
+      "label": 10,
+      "record_id": 388,
+      "pred": {
+        "1": 10,
+        "2": 10,
+        "4": 10,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 61,
+      "label": 0,
+      "record_id": 394,
+      "pred": {
+        "1": 0,
+        "2": 0,
+        "4": 0,
+        "8": 0
+      }
+    },
+    {
+      "opportunity": 62,
+      "label": 1,
+      "record_id": 400,
+      "pred": {
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "8": 1
+      }
+    },
+    {
+      "opportunity": 63,
+      "label": 7,
+      "record_id": 406,
+      "pred": {
+        "1": 8,
+        "2": 6,
+        "4": 7,
+        "8": 7
+      }
+    },
+    {
+      "opportunity": 64,
+      "label": 17,
+      "record_id": 412,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 17
+      }
+    },
+    {
+      "opportunity": 65,
+      "label": 17,
+      "record_id": 418,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 17
+      }
+    },
+    {
+      "opportunity": 66,
+      "label": 22,
+      "record_id": 424,
+      "pred": {
+        "1": 17,
+        "2": 22,
+        "4": 22,
+        "8": 22
+      }
+    },
+    {
+      "opportunity": 67,
+      "label": 0,
+      "record_id": 430,
+      "pred": {
+        "1": 0,
+        "2": 0,
+        "4": 0,
+        "8": 0
+      }
+    },
+    {
+      "opportunity": 68,
+      "label": 0,
+      "record_id": 436,
+      "pred": {
+        "1": 0,
+        "2": 0,
+        "4": 0,
+        "8": 0
+      }
+    },
+    {
+      "opportunity": 69,
+      "label": 20,
+      "record_id": 442,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 70,
+      "label": 11,
+      "record_id": 448,
+      "pred": {
+        "1": 11,
+        "2": 11,
+        "4": 11,
+        "8": 11
+      }
+    },
+    {
+      "opportunity": 71,
+      "label": 1,
+      "record_id": 454,
+      "pred": {
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "8": 1
+      }
+    },
+    {
+      "opportunity": 72,
+      "label": 23,
+      "record_id": 460,
+      "pred": {
+        "1": 6,
+        "2": 23,
+        "4": 23,
+        "8": 23
+      }
+    },
+    {
+      "opportunity": 73,
+      "label": 3,
+      "record_id": 466,
+      "pred": {
+        "1": 0,
+        "2": 3,
+        "4": 3,
+        "8": 3
+      }
+    },
+    {
+      "opportunity": 74,
+      "label": 18,
+      "record_id": 472,
+      "pred": {
+        "1": 18,
+        "2": 18,
+        "4": 18,
+        "8": 18
+      }
+    },
+    {
+      "opportunity": 75,
+      "label": 6,
+      "record_id": 478,
+      "pred": {
+        "1": 6,
+        "2": 6,
+        "4": 6,
+        "8": 6
+      }
+    },
+    {
+      "opportunity": 76,
+      "label": 19,
+      "record_id": 484,
+      "pred": {
+        "1": 20,
+        "2": 19,
+        "4": 19,
+        "8": 19
+      }
+    },
+    {
+      "opportunity": 77,
+      "label": 10,
+      "record_id": 490,
+      "pred": {
+        "1": 10,
+        "2": 10,
+        "4": 10,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 78,
+      "label": 4,
+      "record_id": 496,
+      "pred": {
+        "1": 4,
+        "2": 4,
+        "4": 4,
+        "8": 4
+      }
+    },
+    {
+      "opportunity": 79,
+      "label": 18,
+      "record_id": 502,
+      "pred": {
+        "1": 18,
+        "2": 18,
+        "4": 18,
+        "8": 18
+      }
+    },
+    {
+      "opportunity": 80,
+      "label": 8,
+      "record_id": 508,
+      "pred": {
+        "1": 8,
+        "2": 8,
+        "4": 8,
+        "8": 8
+      }
+    },
+    {
+      "opportunity": 81,
+      "label": 23,
+      "record_id": 514,
+      "pred": {
+        "1": 13,
+        "2": 15,
+        "4": 23,
+        "8": 23
+      }
+    },
+    {
+      "opportunity": 82,
+      "label": 9,
+      "record_id": 520,
+      "pred": {
+        "1": 9,
+        "2": 9,
+        "4": 9,
+        "8": 9
+      }
+    },
+    {
+      "opportunity": 83,
+      "label": 12,
+      "record_id": 526,
+      "pred": {
+        "1": 12,
+        "2": 12,
+        "4": 12,
+        "8": 12
+      }
+    },
+    {
+      "opportunity": 84,
+      "label": 0,
+      "record_id": 532,
+      "pred": {
+        "1": 0,
+        "2": 0,
+        "4": 0,
+        "8": 0
+      }
+    },
+    {
+      "opportunity": 85,
+      "label": 14,
+      "record_id": 538,
+      "pred": {
+        "1": 16,
+        "2": 16,
+        "4": 16,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 86,
+      "label": 19,
+      "record_id": 544,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 87,
+      "label": 14,
+      "record_id": 550,
+      "pred": {
+        "1": 15,
+        "2": 14,
+        "4": 16,
+        "8": 14
+      }
+    },
+    {
+      "opportunity": 88,
+      "label": 7,
+      "record_id": 556,
+      "pred": {
+        "1": 7,
+        "2": 7,
+        "4": 7,
+        "8": 7
+      }
+    },
+    {
+      "opportunity": 89,
+      "label": 3,
+      "record_id": 562,
+      "pred": {
+        "1": 3,
+        "2": 3,
+        "4": 3,
+        "8": 3
+      }
+    },
+    {
+      "opportunity": 90,
+      "label": 20,
+      "record_id": 568,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 91,
+      "label": 1,
+      "record_id": 574,
+      "pred": {
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "8": 1
+      }
+    },
+    {
+      "opportunity": 92,
+      "label": 1,
+      "record_id": 580,
+      "pred": {
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "8": 1
+      }
+    },
+    {
+      "opportunity": 93,
+      "label": 10,
+      "record_id": 586,
+      "pred": {
+        "1": 10,
+        "2": 10,
+        "4": 10,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 94,
+      "label": 9,
+      "record_id": 592,
+      "pred": {
+        "1": 9,
+        "2": 9,
+        "4": 9,
+        "8": 9
+      }
+    },
+    {
+      "opportunity": 95,
+      "label": 10,
+      "record_id": 598,
+      "pred": {
+        "1": 11,
+        "2": 10,
+        "4": 10,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 96,
+      "label": 9,
+      "record_id": 604,
+      "pred": {
+        "1": 9,
+        "2": 9,
+        "4": 9,
+        "8": 9
+      }
+    },
+    {
+      "opportunity": 97,
+      "label": 17,
+      "record_id": 610,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 17
+      }
+    },
+    {
+      "opportunity": 98,
+      "label": 7,
+      "record_id": 616,
+      "pred": {
+        "1": 6,
+        "2": 7,
+        "4": 7,
+        "8": 7
+      }
+    },
+    {
+      "opportunity": 99,
+      "label": 20,
+      "record_id": 622,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 100,
+      "label": 11,
+      "record_id": 628,
+      "pred": {
+        "1": 11,
+        "2": 11,
+        "4": 11,
+        "8": 11
+      }
+    },
+    {
+      "opportunity": 101,
+      "label": 21,
+      "record_id": 634,
+      "pred": {
+        "1": 21,
+        "2": 21,
+        "4": 21,
+        "8": 21
+      }
+    },
+    {
+      "opportunity": 102,
+      "label": 21,
+      "record_id": 640,
+      "pred": {
+        "1": 21,
+        "2": 21,
+        "4": 21,
+        "8": 21
+      }
+    },
+    {
+      "opportunity": 103,
+      "label": 12,
+      "record_id": 646,
+      "pred": {
+        "1": 12,
+        "2": 12,
+        "4": 12,
+        "8": 12
+      }
+    },
+    {
+      "opportunity": 104,
+      "label": 20,
+      "record_id": 652,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 105,
+      "label": 20,
+      "record_id": 658,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 106,
+      "label": 2,
+      "record_id": 664,
+      "pred": {
+        "1": 2,
+        "2": 2,
+        "4": 2,
+        "8": 2
+      }
+    },
+    {
+      "opportunity": 107,
+      "label": 13,
+      "record_id": 670,
+      "pred": {
+        "1": 11,
+        "2": 13,
+        "4": 13,
+        "8": 13
+      }
+    },
+    {
+      "opportunity": 108,
+      "label": 9,
+      "record_id": 676,
+      "pred": {
+        "1": 9,
+        "2": 9,
+        "4": 9,
+        "8": 9
+      }
+    },
+    {
+      "opportunity": 109,
+      "label": 7,
+      "record_id": 682,
+      "pred": {
+        "1": 7,
+        "2": 7,
+        "4": 7,
+        "8": 7
+      }
+    },
+    {
+      "opportunity": 110,
+      "label": 4,
+      "record_id": 688,
+      "pred": {
+        "1": 4,
+        "2": 4,
+        "4": 4,
+        "8": 4
+      }
+    },
+    {
+      "opportunity": 111,
+      "label": 19,
+      "record_id": 694,
+      "pred": {
+        "1": 19,
+        "2": 19,
+        "4": 19,
+        "8": 19
+      }
+    },
+    {
+      "opportunity": 112,
+      "label": 1,
+      "record_id": 700,
+      "pred": {
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "8": 1
+      }
+    },
+    {
+      "opportunity": 113,
+      "label": 10,
+      "record_id": 706,
+      "pred": {
+        "1": 10,
+        "2": 10,
+        "4": 10,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 114,
+      "label": 8,
+      "record_id": 712,
+      "pred": {
+        "1": 9,
+        "2": 8,
+        "4": 8,
+        "8": 8
+      }
+    },
+    {
+      "opportunity": 115,
+      "label": 13,
+      "record_id": 718,
+      "pred": {
+        "1": 11,
+        "2": 11,
+        "4": 15,
+        "8": 15
+      }
+    },
+    {
+      "opportunity": 116,
+      "label": 16,
+      "record_id": 724,
+      "pred": {
+        "1": 16,
+        "2": 16,
+        "4": 16,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 117,
+      "label": 21,
+      "record_id": 730,
+      "pred": {
+        "1": 21,
+        "2": 21,
+        "4": 21,
+        "8": 21
+      }
+    },
+    {
+      "opportunity": 118,
+      "label": 14,
+      "record_id": 736,
+      "pred": {
+        "1": 16,
+        "2": 16,
+        "4": 16,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 119,
+      "label": 6,
+      "record_id": 742,
+      "pred": {
+        "1": 6,
+        "2": 6,
+        "4": 6,
+        "8": 6
+      }
+    },
+    {
+      "opportunity": 120,
+      "label": 17,
+      "record_id": 748,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 17
+      }
+    },
+    {
+      "opportunity": 121,
+      "label": 16,
+      "record_id": 754,
+      "pred": {
+        "1": 14,
+        "2": 14,
+        "4": 16,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 122,
+      "label": 2,
+      "record_id": 760,
+      "pred": {
+        "1": 2,
+        "2": 2,
+        "4": 2,
+        "8": 2
+      }
+    },
+    {
+      "opportunity": 123,
+      "label": 9,
+      "record_id": 766,
+      "pred": {
+        "1": 9,
+        "2": 9,
+        "4": 9,
+        "8": 9
+      }
+    },
+    {
+      "opportunity": 124,
+      "label": 19,
+      "record_id": 772,
+      "pred": {
+        "1": 19,
+        "2": 19,
+        "4": 19,
+        "8": 19
+      }
+    },
+    {
+      "opportunity": 125,
+      "label": 3,
+      "record_id": 778,
+      "pred": {
+        "1": 3,
+        "2": 3,
+        "4": 3,
+        "8": 3
+      }
+    },
+    {
+      "opportunity": 126,
+      "label": 18,
+      "record_id": 784,
+      "pred": {
+        "1": 18,
+        "2": 18,
+        "4": 18,
+        "8": 18
+      }
+    },
+    {
+      "opportunity": 127,
+      "label": 14,
+      "record_id": 790,
+      "pred": {
+        "1": 16,
+        "2": 16,
+        "4": 16,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 128,
+      "label": 1,
+      "record_id": 796,
+      "pred": {
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "8": 1
+      }
+    },
+    {
+      "opportunity": 129,
+      "label": 13,
+      "record_id": 802,
+      "pred": {
+        "1": 11,
+        "2": 13,
+        "4": 13,
+        "8": 13
+      }
+    },
+    {
+      "opportunity": 130,
+      "label": 12,
+      "record_id": 808,
+      "pred": {
+        "1": 12,
+        "2": 12,
+        "4": 12,
+        "8": 12
+      }
+    },
+    {
+      "opportunity": 131,
+      "label": 20,
+      "record_id": 814,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 132,
+      "label": 19,
+      "record_id": 820,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 133,
+      "label": 22,
+      "record_id": 826,
+      "pred": {
+        "1": 8,
+        "2": 17,
+        "4": 17,
+        "8": 22
+      }
+    },
+    {
+      "opportunity": 134,
+      "label": 9,
+      "record_id": 832,
+      "pred": {
+        "1": 9,
+        "2": 9,
+        "4": 9,
+        "8": 9
+      }
+    },
+    {
+      "opportunity": 135,
+      "label": 9,
+      "record_id": 838,
+      "pred": {
+        "1": 9,
+        "2": 9,
+        "4": 9,
+        "8": 9
+      }
+    },
+    {
+      "opportunity": 136,
+      "label": 16,
+      "record_id": 844,
+      "pred": {
+        "1": 16,
+        "2": 16,
+        "4": 16,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 137,
+      "label": 22,
+      "record_id": 850,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 17
+      }
+    },
+    {
+      "opportunity": 138,
+      "label": 21,
+      "record_id": 856,
+      "pred": {
+        "1": 21,
+        "2": 21,
+        "4": 21,
+        "8": 21
+      }
+    },
+    {
+      "opportunity": 139,
+      "label": 7,
+      "record_id": 862,
+      "pred": {
+        "1": 7,
+        "2": 7,
+        "4": 7,
+        "8": 7
+      }
+    },
+    {
+      "opportunity": 140,
+      "label": 12,
+      "record_id": 868,
+      "pred": {
+        "1": 12,
+        "2": 12,
+        "4": 12,
+        "8": 12
+      }
+    },
+    {
+      "opportunity": 141,
+      "label": 12,
+      "record_id": 874,
+      "pred": {
+        "1": 12,
+        "2": 12,
+        "4": 12,
+        "8": 12
+      }
+    },
+    {
+      "opportunity": 142,
+      "label": 1,
+      "record_id": 880,
+      "pred": {
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "8": 1
+      }
+    },
+    {
+      "opportunity": 143,
+      "label": 6,
+      "record_id": 886,
+      "pred": {
+        "1": 6,
+        "2": 6,
+        "4": 6,
+        "8": 6
+      }
+    },
+    {
+      "opportunity": 144,
+      "label": 7,
+      "record_id": 892,
+      "pred": {
+        "1": 6,
+        "2": 7,
+        "4": 7,
+        "8": 7
+      }
+    },
+    {
+      "opportunity": 145,
+      "label": 17,
+      "record_id": 898,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 17
+      }
+    },
+    {
+      "opportunity": 146,
+      "label": 13,
+      "record_id": 904,
+      "pred": {
+        "1": 13,
+        "2": 13,
+        "4": 13,
+        "8": 13
+      }
+    },
+    {
+      "opportunity": 147,
+      "label": 15,
+      "record_id": 910,
+      "pred": {
+        "1": 11,
+        "2": 15,
+        "4": 15,
+        "8": 15
+      }
+    },
+    {
+      "opportunity": 148,
+      "label": 18,
+      "record_id": 916,
+      "pred": {
+        "1": 18,
+        "2": 18,
+        "4": 18,
+        "8": 18
+      }
+    },
+    {
+      "opportunity": 149,
+      "label": 19,
+      "record_id": 922,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 150,
+      "label": 5,
+      "record_id": 928,
+      "pred": {
+        "1": 5,
+        "2": 5,
+        "4": 5,
+        "8": 5
+      }
+    },
+    {
+      "opportunity": 151,
+      "label": 10,
+      "record_id": 934,
+      "pred": {
+        "1": 10,
+        "2": 10,
+        "4": 10,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 152,
+      "label": 1,
+      "record_id": 940,
+      "pred": {
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "8": 1
+      }
+    },
+    {
+      "opportunity": 153,
+      "label": 2,
+      "record_id": 946,
+      "pred": {
+        "1": 17,
+        "2": 2,
+        "4": 2,
+        "8": 2
+      }
+    },
+    {
+      "opportunity": 154,
+      "label": 2,
+      "record_id": 952,
+      "pred": {
+        "1": 2,
+        "2": 2,
+        "4": 2,
+        "8": 2
+      }
+    },
+    {
+      "opportunity": 155,
+      "label": 22,
+      "record_id": 958,
+      "pred": {
+        "1": 17,
+        "2": 22,
+        "4": 22,
+        "8": 22
+      }
+    },
+    {
+      "opportunity": 156,
+      "label": 19,
+      "record_id": 964,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 19,
+        "8": 19
+      }
+    },
+    {
+      "opportunity": 157,
+      "label": 13,
+      "record_id": 970,
+      "pred": {
+        "1": 9,
+        "2": 9,
+        "4": 13,
+        "8": 13
+      }
+    },
+    {
+      "opportunity": 158,
+      "label": 12,
+      "record_id": 976,
+      "pred": {
+        "1": 12,
+        "2": 12,
+        "4": 12,
+        "8": 12
+      }
+    },
+    {
+      "opportunity": 159,
+      "label": 17,
+      "record_id": 982,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 17
+      }
+    },
+    {
+      "opportunity": 160,
+      "label": 13,
+      "record_id": 988,
+      "pred": {
+        "1": 9,
+        "2": 13,
+        "4": 13,
+        "8": 13
+      }
+    },
+    {
+      "opportunity": 161,
+      "label": 15,
+      "record_id": 994,
+      "pred": {
+        "1": 16,
+        "2": 15,
+        "4": 15,
+        "8": 15
+      }
+    },
+    {
+      "opportunity": 162,
+      "label": 0,
+      "record_id": 1000,
+      "pred": {
+        "1": 0,
+        "2": 0,
+        "4": 0,
+        "8": 0
+      }
+    },
+    {
+      "opportunity": 163,
+      "label": 2,
+      "record_id": 1006,
+      "pred": {
+        "1": 2,
+        "2": 2,
+        "4": 2,
+        "8": 2
+      }
+    },
+    {
+      "opportunity": 164,
+      "label": 0,
+      "record_id": 1012,
+      "pred": {
+        "1": 0,
+        "2": 0,
+        "4": 0,
+        "8": 0
+      }
+    },
+    {
+      "opportunity": 165,
+      "label": 11,
+      "record_id": 1018,
+      "pred": {
+        "1": 11,
+        "2": 11,
+        "4": 11,
+        "8": 11
+      }
+    },
+    {
+      "opportunity": 166,
+      "label": 15,
+      "record_id": 1024,
+      "pred": {
+        "1": 15,
+        "2": 15,
+        "4": 15,
+        "8": 15
+      }
+    },
+    {
+      "opportunity": 167,
+      "label": 23,
+      "record_id": 1030,
+      "pred": {
+        "1": 23,
+        "2": 23,
+        "4": 23,
+        "8": 23
+      }
+    },
+    {
+      "opportunity": 168,
+      "label": 16,
+      "record_id": 1036,
+      "pred": {
+        "1": 16,
+        "2": 16,
+        "4": 16,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 169,
+      "label": 21,
+      "record_id": 1042,
+      "pred": {
+        "1": 21,
+        "2": 21,
+        "4": 21,
+        "8": 21
+      }
+    },
+    {
+      "opportunity": 170,
+      "label": 15,
+      "record_id": 1048,
+      "pred": {
+        "1": 15,
+        "2": 15,
+        "4": 15,
+        "8": 15
+      }
+    },
+    {
+      "opportunity": 171,
+      "label": 10,
+      "record_id": 1054,
+      "pred": {
+        "1": 10,
+        "2": 10,
+        "4": 10,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 172,
+      "label": 15,
+      "record_id": 1060,
+      "pred": {
+        "1": 18,
+        "2": 9,
+        "4": 15,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 173,
+      "label": 15,
+      "record_id": 1066,
+      "pred": {
+        "1": 15,
+        "2": 15,
+        "4": 15,
+        "8": 15
+      }
+    },
+    {
+      "opportunity": 174,
+      "label": 4,
+      "record_id": 1072,
+      "pred": {
+        "1": 4,
+        "2": 4,
+        "4": 4,
+        "8": 4
+      }
+    },
+    {
+      "opportunity": 175,
+      "label": 3,
+      "record_id": 1078,
+      "pred": {
+        "1": 3,
+        "2": 3,
+        "4": 3,
+        "8": 3
+      }
+    },
+    {
+      "opportunity": 176,
+      "label": 18,
+      "record_id": 1084,
+      "pred": {
+        "1": 17,
+        "2": 18,
+        "4": 18,
+        "8": 18
+      }
+    },
+    {
+      "opportunity": 177,
+      "label": 22,
+      "record_id": 1090,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 22
+      }
+    },
+    {
+      "opportunity": 178,
+      "label": 19,
+      "record_id": 1096,
+      "pred": {
+        "1": 19,
+        "2": 19,
+        "4": 19,
+        "8": 19
+      }
+    },
+    {
+      "opportunity": 179,
+      "label": 6,
+      "record_id": 1102,
+      "pred": {
+        "1": 6,
+        "2": 6,
+        "4": 6,
+        "8": 6
+      }
+    },
+    {
+      "opportunity": 180,
+      "label": 8,
+      "record_id": 1108,
+      "pred": {
+        "1": 9,
+        "2": 9,
+        "4": 8,
+        "8": 8
+      }
+    },
+    {
+      "opportunity": 181,
+      "label": 13,
+      "record_id": 1114,
+      "pred": {
+        "1": 13,
+        "2": 13,
+        "4": 13,
+        "8": 13
+      }
+    },
+    {
+      "opportunity": 182,
+      "label": 5,
+      "record_id": 1120,
+      "pred": {
+        "1": 5,
+        "2": 5,
+        "4": 5,
+        "8": 5
+      }
+    },
+    {
+      "opportunity": 183,
+      "label": 19,
+      "record_id": 1126,
+      "pred": {
+        "1": 20,
+        "2": 20,
+        "4": 20,
+        "8": 20
+      }
+    },
+    {
+      "opportunity": 184,
+      "label": 23,
+      "record_id": 1132,
+      "pred": {
+        "1": 9,
+        "2": 15,
+        "4": 10,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 185,
+      "label": 18,
+      "record_id": 1138,
+      "pred": {
+        "1": 18,
+        "2": 18,
+        "4": 18,
+        "8": 18
+      }
+    },
+    {
+      "opportunity": 186,
+      "label": 22,
+      "record_id": 1144,
+      "pred": {
+        "1": 22,
+        "2": 22,
+        "4": 22,
+        "8": 22
+      }
+    },
+    {
+      "opportunity": 187,
+      "label": 17,
+      "record_id": 1150,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 17
+      }
+    },
+    {
+      "opportunity": 188,
+      "label": 2,
+      "record_id": 1156,
+      "pred": {
+        "1": 2,
+        "2": 2,
+        "4": 2,
+        "8": 2
+      }
+    },
+    {
+      "opportunity": 189,
+      "label": 21,
+      "record_id": 1162,
+      "pred": {
+        "1": 21,
+        "2": 21,
+        "4": 21,
+        "8": 21
+      }
+    },
+    {
+      "opportunity": 190,
+      "label": 11,
+      "record_id": 1168,
+      "pred": {
+        "1": 11,
+        "2": 11,
+        "4": 11,
+        "8": 11
+      }
+    },
+    {
+      "opportunity": 191,
+      "label": 4,
+      "record_id": 1174,
+      "pred": {
+        "1": 4,
+        "2": 4,
+        "4": 4,
+        "8": 4
+      }
+    },
+    {
+      "opportunity": 192,
+      "label": 9,
+      "record_id": 1180,
+      "pred": {
+        "1": 11,
+        "2": 9,
+        "4": 9,
+        "8": 9
+      }
+    },
+    {
+      "opportunity": 193,
+      "label": 14,
+      "record_id": 1186,
+      "pred": {
+        "1": 14,
+        "2": 14,
+        "4": 14,
+        "8": 14
+      }
+    },
+    {
+      "opportunity": 194,
+      "label": 16,
+      "record_id": 1192,
+      "pred": {
+        "1": 16,
+        "2": 16,
+        "4": 16,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 195,
+      "label": 18,
+      "record_id": 1198,
+      "pred": {
+        "1": 18,
+        "2": 18,
+        "4": 18,
+        "8": 18
+      }
+    },
+    {
+      "opportunity": 196,
+      "label": 5,
+      "record_id": 1204,
+      "pred": {
+        "1": 5,
+        "2": 5,
+        "4": 5,
+        "8": 5
+      }
+    },
+    {
+      "opportunity": 197,
+      "label": 14,
+      "record_id": 1210,
+      "pred": {
+        "1": 16,
+        "2": 14,
+        "4": 14,
+        "8": 14
+      }
+    },
+    {
+      "opportunity": 198,
+      "label": 0,
+      "record_id": 1216,
+      "pred": {
+        "1": 0,
+        "2": 0,
+        "4": 0,
+        "8": 0
+      }
+    },
+    {
+      "opportunity": 199,
+      "label": 23,
+      "record_id": 1222,
+      "pred": {
+        "1": 10,
+        "2": 10,
+        "4": 23,
+        "8": 23
+      }
+    },
+    {
+      "opportunity": 200,
+      "label": 22,
+      "record_id": 1228,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 17
+      }
+    },
+    {
+      "opportunity": 201,
+      "label": 3,
+      "record_id": 1234,
+      "pred": {
+        "1": 3,
+        "2": 3,
+        "4": 3,
+        "8": 3
+      }
+    },
+    {
+      "opportunity": 202,
+      "label": 15,
+      "record_id": 1240,
+      "pred": {
+        "1": 15,
+        "2": 15,
+        "4": 15,
+        "8": 15
+      }
+    },
+    {
+      "opportunity": 203,
+      "label": 5,
+      "record_id": 1246,
+      "pred": {
+        "1": 5,
+        "2": 5,
+        "4": 5,
+        "8": 5
+      }
+    },
+    {
+      "opportunity": 204,
+      "label": 0,
+      "record_id": 1252,
+      "pred": {
+        "1": 0,
+        "2": 0,
+        "4": 0,
+        "8": 0
+      }
+    },
+    {
+      "opportunity": 205,
+      "label": 16,
+      "record_id": 1258,
+      "pred": {
+        "1": 14,
+        "2": 14,
+        "4": 14,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 206,
+      "label": 5,
+      "record_id": 1264,
+      "pred": {
+        "1": 5,
+        "2": 5,
+        "4": 5,
+        "8": 5
+      }
+    },
+    {
+      "opportunity": 207,
+      "label": 6,
+      "record_id": 1270,
+      "pred": {
+        "1": 6,
+        "2": 6,
+        "4": 6,
+        "8": 6
+      }
+    },
+    {
+      "opportunity": 208,
+      "label": 4,
+      "record_id": 1276,
+      "pred": {
+        "1": 4,
+        "2": 4,
+        "4": 4,
+        "8": 4
+      }
+    },
+    {
+      "opportunity": 209,
+      "label": 12,
+      "record_id": 1282,
+      "pred": {
+        "1": 12,
+        "2": 12,
+        "4": 12,
+        "8": 12
+      }
+    },
+    {
+      "opportunity": 210,
+      "label": 18,
+      "record_id": 1288,
+      "pred": {
+        "1": 18,
+        "2": 18,
+        "4": 18,
+        "8": 18
+      }
+    },
+    {
+      "opportunity": 211,
+      "label": 22,
+      "record_id": 1294,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 22,
+        "8": 22
+      }
+    },
+    {
+      "opportunity": 212,
+      "label": 3,
+      "record_id": 1300,
+      "pred": {
+        "1": 3,
+        "2": 3,
+        "4": 3,
+        "8": 3
+      }
+    },
+    {
+      "opportunity": 213,
+      "label": 10,
+      "record_id": 1306,
+      "pred": {
+        "1": 11,
+        "2": 11,
+        "4": 11,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 214,
+      "label": 4,
+      "record_id": 1312,
+      "pred": {
+        "1": 4,
+        "2": 4,
+        "4": 4,
+        "8": 4
+      }
+    },
+    {
+      "opportunity": 215,
+      "label": 5,
+      "record_id": 1318,
+      "pred": {
+        "1": 5,
+        "2": 5,
+        "4": 5,
+        "8": 5
+      }
+    },
+    {
+      "opportunity": 216,
+      "label": 16,
+      "record_id": 1324,
+      "pred": {
+        "1": 16,
+        "2": 16,
+        "4": 16,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 217,
+      "label": 18,
+      "record_id": 1330,
+      "pred": {
+        "1": 18,
+        "2": 18,
+        "4": 18,
+        "8": 18
+      }
+    },
+    {
+      "opportunity": 218,
+      "label": 6,
+      "record_id": 1336,
+      "pred": {
+        "1": 6,
+        "2": 6,
+        "4": 6,
+        "8": 6
+      }
+    },
+    {
+      "opportunity": 219,
+      "label": 8,
+      "record_id": 1342,
+      "pred": {
+        "1": 8,
+        "2": 8,
+        "4": 8,
+        "8": 8
+      }
+    },
+    {
+      "opportunity": 220,
+      "label": 12,
+      "record_id": 1348,
+      "pred": {
+        "1": 12,
+        "2": 12,
+        "4": 12,
+        "8": 12
+      }
+    },
+    {
+      "opportunity": 221,
+      "label": 21,
+      "record_id": 1354,
+      "pred": {
+        "1": 20,
+        "2": 14,
+        "4": 8,
+        "8": 21
+      }
+    },
+    {
+      "opportunity": 222,
+      "label": 17,
+      "record_id": 1360,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 17
+      }
+    },
+    {
+      "opportunity": 223,
+      "label": 13,
+      "record_id": 1366,
+      "pred": {
+        "1": 13,
+        "2": 13,
+        "4": 13,
+        "8": 13
+      }
+    },
+    {
+      "opportunity": 224,
+      "label": 2,
+      "record_id": 1372,
+      "pred": {
+        "1": 2,
+        "2": 2,
+        "4": 2,
+        "8": 2
+      }
+    },
+    {
+      "opportunity": 225,
+      "label": 7,
+      "record_id": 1378,
+      "pred": {
+        "1": 9,
+        "2": 8,
+        "4": 8,
+        "8": 7
+      }
+    },
+    {
+      "opportunity": 226,
+      "label": 14,
+      "record_id": 1383,
+      "pred": {
+        "1": 14,
+        "2": 14,
+        "4": 14,
+        "8": 14
+      }
+    },
+    {
+      "opportunity": 227,
+      "label": 14,
+      "record_id": 1389,
+      "pred": {
+        "1": 15,
+        "2": 14,
+        "4": 14,
+        "8": 14
+      }
+    },
+    {
+      "opportunity": 228,
+      "label": 16,
+      "record_id": 1395,
+      "pred": {
+        "1": 14,
+        "2": 16,
+        "4": 16,
+        "8": 16
+      }
+    },
+    {
+      "opportunity": 229,
+      "label": 12,
+      "record_id": 1401,
+      "pred": {
+        "1": 14,
+        "2": 12,
+        "4": 12,
+        "8": 12
+      }
+    },
+    {
+      "opportunity": 230,
+      "label": 23,
+      "record_id": 1407,
+      "pred": {
+        "1": 10,
+        "2": 10,
+        "4": 23,
+        "8": 23
+      }
+    },
+    {
+      "opportunity": 231,
+      "label": 11,
+      "record_id": 1413,
+      "pred": {
+        "1": 11,
+        "2": 11,
+        "4": 11,
+        "8": 11
+      }
+    },
+    {
+      "opportunity": 232,
+      "label": 17,
+      "record_id": 1419,
+      "pred": {
+        "1": 17,
+        "2": 17,
+        "4": 17,
+        "8": 17
+      }
+    },
+    {
+      "opportunity": 233,
+      "label": 8,
+      "record_id": 1425,
+      "pred": {
+        "1": 8,
+        "2": 8,
+        "4": 8,
+        "8": 8
+      }
+    },
+    {
+      "opportunity": 234,
+      "label": 6,
+      "record_id": 1431,
+      "pred": {
+        "1": 6,
+        "2": 6,
+        "4": 6,
+        "8": 6
+      }
+    },
+    {
+      "opportunity": 235,
+      "label": 6,
+      "record_id": 1437,
+      "pred": {
+        "1": 6,
+        "2": 6,
+        "4": 6,
+        "8": 6
+      }
+    },
+    {
+      "opportunity": 236,
+      "label": 4,
+      "record_id": 1443,
+      "pred": {
+        "1": 4,
+        "2": 4,
+        "4": 4,
+        "8": 4
+      }
+    },
+    {
+      "opportunity": 237,
+      "label": 23,
+      "record_id": 1449,
+      "pred": {
+        "1": 15,
+        "2": 10,
+        "4": 10,
+        "8": 10
+      }
+    },
+    {
+      "opportunity": 238,
+      "label": 8,
+      "record_id": 1455,
+      "pred": {
+        "1": 8,
+        "2": 8,
+        "4": 8,
+        "8": 8
+      }
+    },
+    {
+      "opportunity": 239,
+      "label": 7,
+      "record_id": 1461,
+      "pred": {
+        "1": 7,
+        "2": 7,
+        "4": 7,
+        "8": 7
+      }
+    }
+  ],
+  "selected": 240,
+  "warning": "fixed source set under frozen conditions; no arbitrary-RF or shortened-TX claim",
+  "measurement_valid": true,
+  "invalid_reasons": []
+}

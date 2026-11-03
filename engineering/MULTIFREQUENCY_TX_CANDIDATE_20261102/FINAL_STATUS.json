@@ -1,0 +1,82 @@
+{
+  "status": "OFFLINE_VERIFIED_RF_PENDING",
+  "new_tests": 19,
+  "legacy_tests": 13,
+  "multi_gui": {
+    "status": "PASS_OFFLINE_ONLY",
+    "checks": [
+      "opening does not create a worker or enable real TX",
+      "Qt start -> actual QProcess -> offline four-lane waveform plan -> acknowledgement",
+      "only A / A+B / remove B / all / individual D checkbox",
+      "all silent / cooperative stop / process finished / controls unlocked",
+      "close while running waits for worker cleanup"
+    ],
+    "real_transmission": false,
+    "screenshot": "MULTI_UI_PREVIEW.png"
+  },
+  "single_gui": {
+    "result": "PASS",
+    "actual_qprocess": true,
+    "real_tx": false,
+    "stop_requested": true,
+    "worker_result": {
+      "real": false,
+      "count": 1,
+      "error": null,
+      "restore_errors": [],
+      "restore_readback": [],
+      "restore_status": "NOT_APPLICABLE"
+    },
+    "run_dir": "F:\\嵌赛\\rml24_tx_multifrequency_candidate_20261102\\pc_console\\runs\\20261102_161813_28700"
+  },
+  "unchanged": {
+    "tx_core.py": true,
+    "tx_worker.py": true,
+    "timing_contract.py": true,
+    "vendor/frame_builder.py": true,
+    "vendor/pilot_recovery.py": true,
+    "vendor/pluto_link_probe.py": true
+  },
+  "actual_rf_transmission": false,
+  "receiver_changed": false,
+  "official_console_changed": false,
+  "max_lanes": 4,
+  "iio_import_check": [
+    {
+      "executable": "D:/radioconda/python.exe",
+      "library": "D:\\radioconda\\Library\\bin\\libiio.dll",
+      "required_exports": 22,
+      "returncode": 0,
+      "device_context_created": false
+    },
+    {
+      "executable": "D:/Anaconda/python.exe",
+      "library": "D:\\radioconda\\Library\\bin\\libiio.dll",
+      "required_exports": 22,
+      "returncode": 0,
+      "device_context_created": false
+    }
+  ],
+  "hardware_attempt_status": "Three user attempts rejected before send; DLL resolved, observed sample-rate -1 Hz and LO -2 Hz accommodated using bounded per-attribute contracts; real send and reception pending.",
+  "sample_rate_readback_fix": "1 Hz absolute tolerance, matching prior dual source; ±1 accepted and ±2 refused in mock tests",
+  "test_execution": [
+    {
+      "script": "test_multifrequency.py",
+      "returncode": 0,
+      "tests": 19
+    },
+    {
+      "script": "pc_console\\tests\\test_console.py",
+      "returncode": 0,
+      "tests": 13
+    }
+  ],
+  "config_tolerances": {
+    "hardwaregain": 0.01,
+    "sampling_frequency": 1,
+    "frequency": 100,
+    "rf_bandwidth": 0.5,
+    "powerdown": 0
+  },
+  "mute_sequence": "powerdown and readback -> replace buffer -> enable and readback; restore original attributes on final close"
+}

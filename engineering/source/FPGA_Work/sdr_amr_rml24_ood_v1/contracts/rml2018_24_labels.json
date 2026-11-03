@@ -1,0 +1,14 @@
+{
+  "dataset": "RadioML2018.01A",
+  "source": "DeepSig RadioML 2018.01A (GOLD_XYZ_OSC.0001_1024.hdf5)",
+  "num_classes": 24,
+  "samples_per_class": 106496,
+  "snr_grid": "[-20..30] step 2 (26 strata)",
+  "per_class_per_snr": 4096,
+  "labels": [
+    "OOK", "4ASK", "8ASK", "BPSK", "QPSK", "8PSK", "16PSK", "32PSK",
+    "16APSK", "32APSK", "64APSK", "128APSK", "16QAM", "32QAM", "64QAM",
+    "128QAM", "256QAM", "AM-SSB-WC", "AM-SSB-SC", "AM-DSB-WC",
+    "AM-DSB-SC", "FM", "GMSK", "OQPSK"
+  ]
+}

@@ -1,0 +1,12 @@
+Vivado Tcl Console 执行指令：
+
+source $::env(JFM_PATH)/ip_patch/run.tcl
+add_hook_tcl_to_prj
+
+使用顺序：
+1. 新建或打开 Vivado 工程，并完成 RTL、约束和顶层设置。
+2. 在 Vivado 的 Tcl Console 中依次执行上面两条指令。
+3. 运行 Synthesis、Implementation 和 Generate Bitstream。
+4. 烧录生成的 *_disable_icap.bit 文件。
+
+注意：add_hook_tcl_to_prj 通常每个工程成功执行一次即可。

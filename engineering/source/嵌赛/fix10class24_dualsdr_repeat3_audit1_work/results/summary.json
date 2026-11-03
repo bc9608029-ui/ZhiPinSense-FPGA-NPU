@@ -1,0 +1,586 @@
+{
+  "board_gated": 23,
+  "board_gated_correct": 19,
+  "class_category_counts": {
+    "ALWAYS_GATED_CORRECT": 3,
+    "PERSISTENT_MISCLASSIFIED_SAME_CLASS": 2,
+    "RECOVERABLE_CORRECT": 11,
+    "ROUND_FLUCTUATION": 8
+  },
+  "classes": [
+    {
+      "category": "RECOVERABLE_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 0,
+      "modulation": "OOK",
+      "raw24_class": 0,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "category": "ROUND_FLUCTUATION",
+      "correct_count": 2,
+      "gate_pass_count": 0,
+      "modulation": "4ASK",
+      "raw24_class": 1,
+      "round_correct": [
+        0,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "category": "RECOVERABLE_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 0,
+      "modulation": "8ASK",
+      "raw24_class": 2,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "category": "RECOVERABLE_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 0,
+      "modulation": "BPSK",
+      "raw24_class": 3,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "category": "ALWAYS_GATED_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 3,
+      "modulation": "QPSK",
+      "raw24_class": 4,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        1,
+        1,
+        1
+      ],
+      "round_preds": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "category": "ALWAYS_GATED_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 3,
+      "modulation": "8PSK",
+      "raw24_class": 5,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        1,
+        1,
+        1
+      ],
+      "round_preds": [
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "category": "ROUND_FLUCTUATION",
+      "correct_count": 1,
+      "gate_pass_count": 0,
+      "modulation": "16PSK",
+      "raw24_class": 6,
+      "round_correct": [
+        0,
+        1,
+        0
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        7,
+        6,
+        7
+      ]
+    },
+    {
+      "category": "RECOVERABLE_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 0,
+      "modulation": "32PSK",
+      "raw24_class": 7,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "category": "RECOVERABLE_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 0,
+      "modulation": "16APSK",
+      "raw24_class": 8,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "category": "ALWAYS_GATED_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 3,
+      "modulation": "32APSK",
+      "raw24_class": 9,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        1,
+        1,
+        1
+      ],
+      "round_preds": [
+        9,
+        9,
+        9
+      ]
+    },
+    {
+      "category": "ROUND_FLUCTUATION",
+      "correct_count": 1,
+      "gate_pass_count": 3,
+      "modulation": "64APSK",
+      "raw24_class": 10,
+      "round_correct": [
+        1,
+        0,
+        0
+      ],
+      "round_gate_pass": [
+        1,
+        1,
+        1
+      ],
+      "round_preds": [
+        10,
+        14,
+        16
+      ]
+    },
+    {
+      "category": "ROUND_FLUCTUATION",
+      "correct_count": 2,
+      "gate_pass_count": 0,
+      "modulation": "128APSK",
+      "raw24_class": 11,
+      "round_correct": [
+        1,
+        0,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        11,
+        15,
+        11
+      ]
+    },
+    {
+      "category": "RECOVERABLE_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 2,
+      "modulation": "16QAM",
+      "raw24_class": 12,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        1,
+        1,
+        0
+      ],
+      "round_preds": [
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "category": "RECOVERABLE_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 0,
+      "modulation": "32QAM",
+      "raw24_class": 13,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        13,
+        13,
+        13
+      ]
+    },
+    {
+      "category": "PERSISTENT_MISCLASSIFIED_SAME_CLASS",
+      "correct_count": 0,
+      "gate_pass_count": 0,
+      "modulation": "64QAM",
+      "raw24_class": 14,
+      "round_correct": [
+        0,
+        0,
+        0
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "category": "PERSISTENT_MISCLASSIFIED_SAME_CLASS",
+      "correct_count": 0,
+      "gate_pass_count": 0,
+      "modulation": "128QAM",
+      "raw24_class": 15,
+      "round_correct": [
+        0,
+        0,
+        0
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "category": "RECOVERABLE_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 0,
+      "modulation": "256QAM",
+      "raw24_class": 16,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "category": "ROUND_FLUCTUATION",
+      "correct_count": 2,
+      "gate_pass_count": 0,
+      "modulation": "AM-SSB-WC",
+      "raw24_class": 17,
+      "round_correct": [
+        1,
+        0,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        17,
+        18,
+        17
+      ]
+    },
+    {
+      "category": "RECOVERABLE_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 0,
+      "modulation": "AM-SSB-SC",
+      "raw24_class": 18,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        18,
+        18,
+        18
+      ]
+    },
+    {
+      "category": "ROUND_FLUCTUATION",
+      "correct_count": 2,
+      "gate_pass_count": 2,
+      "modulation": "AM-DSB-WC",
+      "raw24_class": 19,
+      "round_correct": [
+        1,
+        1,
+        0
+      ],
+      "round_gate_pass": [
+        1,
+        1,
+        0
+      ],
+      "round_preds": [
+        19,
+        19,
+        20
+      ]
+    },
+    {
+      "category": "RECOVERABLE_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 2,
+      "modulation": "AM-DSB-SC",
+      "raw24_class": 20,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        1,
+        1
+      ],
+      "round_preds": [
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "category": "RECOVERABLE_CORRECT",
+      "correct_count": 3,
+      "gate_pass_count": 2,
+      "modulation": "FM",
+      "raw24_class": 21,
+      "round_correct": [
+        1,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        1,
+        1
+      ],
+      "round_preds": [
+        21,
+        21,
+        21
+      ]
+    },
+    {
+      "category": "ROUND_FLUCTUATION",
+      "correct_count": 1,
+      "gate_pass_count": 3,
+      "modulation": "GMSK",
+      "raw24_class": 22,
+      "round_correct": [
+        1,
+        0,
+        0
+      ],
+      "round_gate_pass": [
+        1,
+        1,
+        1
+      ],
+      "round_preds": [
+        22,
+        16,
+        16
+      ]
+    },
+    {
+      "category": "ROUND_FLUCTUATION",
+      "correct_count": 2,
+      "gate_pass_count": 0,
+      "modulation": "OQPSK",
+      "raw24_class": 23,
+      "round_correct": [
+        0,
+        1,
+        1
+      ],
+      "round_gate_pass": [
+        0,
+        0,
+        0
+      ],
+      "round_preds": [
+        16,
+        23,
+        23
+      ]
+    }
+  ],
+  "forced_accuracy": 0.7346938775510204,
+  "gated_accuracy": 0.8260869565217391,
+  "host_forced": 49,
+  "host_forced_correct": 36,
+  "merge_marker": "HYBRID_BOARD_GATED_PLUS_HOST_FORCED",
+  "merged_correct": 55,
+  "merged_end_to_end_accuracy": 0.7638888888888888,
+  "note": "Merged metric = board-gated (board NPU) + host-forced (Host BF16 diagnostic gate bypass). This is a HYBRID diagnostic, NOT a homogeneous board NPU measurement. production_gate_modified=0.",
+  "per_round": [
+    {
+      "end_to_end_accuracy": "0.791667",
+      "forced": 17,
+      "forced_correct": 12,
+      "gated": 7,
+      "gated_correct": 7,
+      "merged_correct": 19,
+      "round": "dual_bf16_rms2048_run1",
+      "total": 24
+    },
+    {
+      "end_to_end_accuracy": "0.750000",
+      "forced": 15,
+      "forced_correct": 11,
+      "gated": 9,
+      "gated_correct": 7,
+      "merged_correct": 18,
+      "round": "dual_bf16_rms2048_run2",
+      "total": 24
+    },
+    {
+      "end_to_end_accuracy": "0.750000",
+      "forced": 17,
+      "forced_correct": 13,
+      "gated": 7,
+      "gated_correct": 5,
+      "merged_correct": 18,
+      "round": "dual_bf16_rms2048_run3",
+      "total": 24
+    }
+  ],
+  "production_gate_modified": 0,
+  "production_threshold": 0.1,
+  "rounds": 3,
+  "status": "M29-RML24-FIX10CLASS24-DUALSDR-REPEAT3-AUDIT1-COMPLETE",
+  "task_id": "fix10class24-dualsdr-repeat3-audit1",
+  "total_samples": 72
+}

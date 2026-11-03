@@ -1,0 +1,15 @@
+{
+  "experiment_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\dual_domain_v1.yaml",
+  "baseline_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\baseline.yaml",
+  "baseline_git_commit": "2bd657983c062582450b8da871f87df9345264d6",
+  "current_git_commit": "f1b07f31a2076115a21b59cccb0001261e71d53b",
+  "variant": "time_only_wide",
+  "seed": 2026,
+  "model": {
+    "base_channels": 16,
+    "wide_base_channels": 23,
+    "fusion_features": 64,
+    "dropout": 0.1,
+    "fft_length": 256
+  }
+}

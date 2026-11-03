@@ -1,0 +1,49 @@
+{
+  "candidate_freeze_sha256": "ea6715f166145e73fd90ba2f49bb7cd73dadf200666a4ddd8be1c9322bab06ef",
+  "runs": [
+    {
+      "name": "formal_fixed01",
+      "mode": "FIXED",
+      "denominator": 240,
+      "tx_center_hz": 2400000000,
+      "hold_sec": 4,
+      "rx_duration_sec": 1120
+    },
+    {
+      "name": "formal_lock01",
+      "mode": "BAND_SCAN",
+      "denominator": 240,
+      "tx_center_hz": 2403600000,
+      "hold_sec": 6,
+      "rx_duration_sec": 1610
+    },
+    {
+      "name": "formal_sweep24_01",
+      "mode": "CONTINUOUS_SCAN",
+      "denominator": 24,
+      "tx_center_hz": 2403600000,
+      "hold_sec": 40,
+      "rx_duration_sec": 1120
+    }
+  ],
+  "common": {
+    "warmup_sec": 40,
+    "mute_sec": 8,
+    "gap_sec": 0.25,
+    "eligible_window_start_sec": 1.5,
+    "eligible_window_end_margin_sec": 0.3,
+    "scan_start_hz": 2395000000,
+    "scan_stop_hz": 2405000000,
+    "scan_step_hz": 1000000
+  },
+  "scoring": {
+    "fixed_and_search": "Original first capture, all failures count wrong",
+    "sweep": "First eligible scheduled dwell with abs(discovery LO - TX center)<=1152000Hz, irrespective of detection/prediction; first opportunity failure counts wrong; no opportunity missing; final center must within10kHz",
+    "deployment": "Never automatic",
+    "historical_thresholds": {
+      "fixed": 235,
+      "search": 232
+    },
+    "sweep_report": "Report fixed24 separately; no historical240 equivalence"
+  }
+}

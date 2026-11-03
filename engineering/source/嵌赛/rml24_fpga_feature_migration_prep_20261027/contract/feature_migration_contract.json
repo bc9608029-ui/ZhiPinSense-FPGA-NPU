@@ -1,0 +1,24 @@
+{
+  "contract_id": "rml24-fpga-feature-migration-prep-20261027-v1",
+  "status": "PC_PREPARED_NOT_BOARD_VERIFIED",
+  "frame_length": 1024,
+  "input": {"dtype": "int16", "layout": "interleaved_iq", "accepted_only_on": "valid&&ready"},
+  "per_sample": {
+    "power": "uint32:I^2+Q^2",
+    "lag_re": "int33:I[n]I[n-1]+Q[n]Q[n-1]",
+    "lag_im": "int33:Q[n]I[n-1]-I[n]Q[n-1]",
+    "first_lag": 0
+  },
+  "per_frame": {
+    "energy": "uint42:sum(power)",
+    "peak_power": "uint32:max(power)",
+    "rms": "software:sqrt(energy/sample_count)"
+  },
+  "red_lines": [
+    "model IQ bytes remain unchanged",
+    "two-DC recovery remains unchanged",
+    "frozen BF16 model remains unchanged",
+    "software path remains available",
+    "automatic fallback on FPGA mismatch/timeout/error"
+  ]
+}

@@ -1,0 +1,3 @@
+from pathlib import Path
+import json
+r=Path(r'E:\嵌赛\rml24_stage7_execution_20261027');p=r/'NEXT_AGENT_HANDOFF_STAGE7_VERIFIED.md';s=p.read_text(encoding='utf-8').replace('1. 至少30分钟的持续收发稳定性测试（不是单纯UI空闲驻留）。','1. 长时间稳定性测试：用户明确要求先不做。不得自动开始，后续需用户重新提出。');p.write_text(s,encoding='utf-8');p=r/'STAGE7_FINAL_VERIFIED_SUMMARY.json';d=json.loads(p.read_text(encoding='utf-8'));d['stability_test']='DEFERRED_BY_EXPLICIT_USER_REQUEST; do not start automatically';d['pending']=[x for x in d['pending'] if '30 minute' not in x];p.write_text(json.dumps(d,indent=2,ensure_ascii=False),encoding='utf-8')

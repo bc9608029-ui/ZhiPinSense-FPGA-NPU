@@ -1,0 +1,24 @@
+# data-v4 鲁棒性增强 CUDA preflight（真实 GPU + BF16）。
+# 极小数据集 + 2 轮，用于验证：init-from-best.pt 严格加载 → 1 轮 → strict resume 1 轮
+# → 验证评估 → ONNX 算子白名单不变。init_checkpoint 指向十二类正式 seed2026 best.pt，
+# 必须真实存在（preflight 前由用户放置或已跑完十二类 formal），否则 fail closed。
+_base: configs/ad_amr_v1_1_data_v4_12class_robust.yaml
+
+device: cuda:0
+output_root: outputs/ad_amr_v1_1_data_v4_12class_robust/preflight/target
+
+dataset:
+  train_samples: 504
+  val_samples: 504
+  num_workers: 0
+
+training:
+  epochs: 2
+  batch_size: 32
+  minimum_epochs_before_stopping: 2
+  early_stopping_patience: 2
+
+evaluation:
+  batch_size: 64
+  samples: 504
+  ood_samples: 252

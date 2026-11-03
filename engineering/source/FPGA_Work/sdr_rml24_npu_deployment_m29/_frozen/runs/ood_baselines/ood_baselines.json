@@ -1,0 +1,361 @@
+{
+  "rml24": {
+    "id_samples": 511056,
+    "threshold_family": "far",
+    "threshold_lock_split": "ood_validation",
+    "calibrated_temperature": 1.254966089759614,
+    "families": {
+      "msp": {
+        "thresholds": {
+          "conservative": {
+            "threshold": 0.948563130176257,
+            "id_frr": 0.050000391346545194,
+            "ood_far": 1.0
+          },
+          "balanced": {
+            "threshold": 6.886293698604717e-07,
+            "id_frr": 0.6048104317335087,
+            "ood_far": 0.18828125
+          },
+          "strict": {
+            "threshold": 1.5477619186299316e-13,
+            "id_frr": 0.8974358974358975,
+            "ood_far": 0.05
+          }
+        },
+        "ranking": {
+          "auroc": 0.5208230872387273,
+          "aupr_in": 0.9980287625995534,
+          "aupr_out": 0.002405990881795173,
+          "fpr95": 0.8974358974358975
+        },
+        "auroc_ci": {
+          "estimate": 0.5208230872387273,
+          "lower": 0.5096588608470745,
+          "upper": 0.529757941881308,
+          "n_boot": 1000
+        },
+        "fpr95_ci": {
+          "estimate": 0.8974358974358975,
+          "lower": 0.8596135746376131,
+          "upper": 0.9465285604708682,
+          "n_boot": 1000
+        },
+        "oscr": {
+          "auc_ccr_fpr": 0.8831284561182641
+        },
+        "working_points": {
+          "conservative": {
+            "threshold": 0.948563130176257,
+            "id_frr": 0.050000391346545194,
+            "id_accept_rate": 0.9499996086534548,
+            "ood_far": 1.0,
+            "ood_rejected_fraction": 0.0
+          },
+          "balanced": {
+            "threshold": 6.886293698604717e-07,
+            "id_frr": 0.6048104317335087,
+            "id_accept_rate": 0.3951895682664913,
+            "ood_far": 0.18828125,
+            "ood_rejected_fraction": 0.81171875
+          },
+          "strict": {
+            "threshold": 1.5477619186299316e-13,
+            "id_frr": 0.8974358974358975,
+            "id_accept_rate": 0.10256410256410253,
+            "ood_far": 0.05,
+            "ood_rejected_fraction": 0.95
+          }
+        },
+        "calibration_samples": {
+          "id": 511056,
+          "ood": 1280
+        }
+      },
+      "entropy": {
+        "thresholds": {
+          "conservative": {
+            "threshold": 3.152320410518215,
+            "id_frr": 0.050000391346545194,
+            "ood_far": 0.996875
+          },
+          "balanced": {
+            "threshold": 1.4031661470290383e-05,
+            "id_frr": 0.6010554616323847,
+            "ood_far": 0.19140625
+          },
+          "strict": {
+            "threshold": 4.4337285896843864e-12,
+            "id_frr": 0.8974398109013494,
+            "ood_far": 0.05
+          }
+        },
+        "ranking": {
+          "auroc": 0.5376151812374769,
+          "aupr_in": 0.9977435346818915,
+          "aupr_out": 0.002506367798017623,
+          "fpr95": 0.8974398109013494
+        },
+        "auroc_ci": {
+          "estimate": 0.5376151812374769,
+          "lower": 0.5259249618528841,
+          "upper": 0.5473514870434942,
+          "n_boot": 1000
+        },
+        "fpr95_ci": {
+          "estimate": 0.8974398109013494,
+          "lower": 0.8596666510128049,
+          "upper": 0.9467711953288876,
+          "n_boot": 1000
+        },
+        "oscr": {
+          "auc_ccr_fpr": 0.9114351803053458
+        },
+        "working_points": {
+          "conservative": {
+            "threshold": 3.152320410518215,
+            "id_frr": 0.050000391346545194,
+            "id_accept_rate": 0.9499996086534548,
+            "ood_far": 0.996875,
+            "ood_rejected_fraction": 0.003125
+          },
+          "balanced": {
+            "threshold": 1.4031661470290383e-05,
+            "id_frr": 0.6010554616323847,
+            "id_accept_rate": 0.39894453836761534,
+            "ood_far": 0.19140625,
+            "ood_rejected_fraction": 0.80859375
+          },
+          "strict": {
+            "threshold": 4.4337285896843864e-12,
+            "id_frr": 0.8974398109013494,
+            "id_accept_rate": 0.10256018909865061,
+            "ood_far": 0.05,
+            "ood_rejected_fraction": 0.95
+          }
+        },
+        "calibration_samples": {
+          "id": 511056,
+          "ood": 1280
+        }
+      },
+      "max_logit": {
+        "thresholds": {
+          "conservative": {
+            "threshold": 2.50091552734375,
+            "id_frr": 0.050000391346545194,
+            "ood_far": 0.85234375
+          },
+          "balanced": {
+            "threshold": 0.0036614686250686646,
+            "id_frr": 0.1318974828590213,
+            "ood_far": 0.52421875
+          },
+          "strict": {
+            "threshold": -19.009839916229247,
+            "id_frr": 0.9019402961710654,
+            "ood_far": 0.05
+          }
+        },
+        "ranking": {
+          "auroc": 0.6688767259605601,
+          "aupr_in": 0.9982649617995358,
+          "aupr_out": 0.023381858599563467,
+          "fpr95": 0.9019402961710654
+        },
+        "auroc_ci": {
+          "estimate": 0.6688767259605601,
+          "lower": 0.6524161873282968,
+          "upper": 0.6853276655003011,
+          "n_boot": 1000
+        },
+        "fpr95_ci": {
+          "estimate": 0.9019402961710654,
+          "lower": 0.8944215017532325,
+          "upper": 0.9113296781566013,
+          "n_boot": 1000
+        },
+        "oscr": {
+          "auc_ccr_fpr": 0.8358159392587347
+        },
+        "working_points": {
+          "conservative": {
+            "threshold": 2.50091552734375,
+            "id_frr": 0.050000391346545194,
+            "id_accept_rate": 0.9499996086534548,
+            "ood_far": 0.85234375,
+            "ood_rejected_fraction": 0.14765625
+          },
+          "balanced": {
+            "threshold": 0.0036614686250686646,
+            "id_frr": 0.1318974828590213,
+            "id_accept_rate": 0.8681025171409786,
+            "ood_far": 0.52421875,
+            "ood_rejected_fraction": 0.47578125
+          },
+          "strict": {
+            "threshold": -19.009839916229247,
+            "id_frr": 0.9019402961710654,
+            "id_accept_rate": 0.09805970382893459,
+            "ood_far": 0.05,
+            "ood_rejected_fraction": 0.95
+          }
+        },
+        "calibration_samples": {
+          "id": 511056,
+          "ood": 1280
+        }
+      },
+      "energy": {
+        "thresholds": {
+          "conservative": {
+            "threshold": 2.4782920387007135,
+            "id_frr": 0.050000391346545194,
+            "ood_far": 0.87734375
+          },
+          "balanced": {
+            "threshold": -2.77883230140621,
+            "id_frr": 0.19043314235621928,
+            "ood_far": 0.28984375
+          },
+          "strict": {
+            "threshold": -19.009840252557154,
+            "id_frr": 0.901858113396575,
+            "ood_far": 0.05
+          }
+        },
+        "ranking": {
+          "auroc": 0.7090281951121795,
+          "aupr_in": 0.9984217766265818,
+          "aupr_out": 0.023596418443836347,
+          "fpr95": 0.901858113396575
+        },
+        "auroc_ci": {
+          "estimate": 0.7090281951121795,
+          "lower": 0.6921186463588995,
+          "upper": 0.7250600405856941,
+          "n_boot": 1000
+        },
+        "fpr95_ci": {
+          "estimate": 0.901858113396575,
+          "lower": 0.8942191266710497,
+          "upper": 0.9113082030149338,
+          "n_boot": 1000
+        },
+        "oscr": {
+          "auc_ccr_fpr": 0.7912786362001607
+        },
+        "working_points": {
+          "conservative": {
+            "threshold": 2.4782920387007135,
+            "id_frr": 0.050000391346545194,
+            "id_accept_rate": 0.9499996086534548,
+            "ood_far": 0.87734375,
+            "ood_rejected_fraction": 0.12265625
+          },
+          "balanced": {
+            "threshold": -2.77883230140621,
+            "id_frr": 0.19043314235621928,
+            "id_accept_rate": 0.8095668576437807,
+            "ood_far": 0.28984375,
+            "ood_rejected_fraction": 0.71015625
+          },
+          "strict": {
+            "threshold": -19.009840252557154,
+            "id_frr": 0.901858113396575,
+            "id_accept_rate": 0.09814188660342504,
+            "ood_far": 0.05,
+            "ood_rejected_fraction": 0.95
+          }
+        },
+        "calibration_samples": {
+          "id": 511056,
+          "ood": 1280
+        }
+      }
+    },
+    "recommended_score_method": "entropy",
+    "method_selection": {
+      "recommended_score_method": "entropy",
+      "selection_rule": "borda_count_over_auroc_fpr95_oscr_id_frr_ood_reject",
+      "target_operating_point": "balanced",
+      "validation_only": true,
+      "final_data_used": false,
+      "criteria": [
+        {
+          "name": "AUROC",
+          "higher_is_better": true
+        },
+        {
+          "name": "FPR@95TPR",
+          "higher_is_better": false
+        },
+        {
+          "name": "OSCR",
+          "higher_is_better": true
+        },
+        {
+          "name": "ID false-reject rate",
+          "higher_is_better": false
+        },
+        {
+          "name": "OOD reject rate",
+          "higher_is_better": true
+        }
+      ],
+      "ranking": [
+        {
+          "method": "entropy",
+          "borda": 9.0,
+          "criteria": {
+            "auroc": 0.5376151812374769,
+            "fpr95": 0.8974398109013494,
+            "oscr": 0.9114351803053458,
+            "id_frr": 0.6010554616323847,
+            "ood_reject": 0.80859375
+          }
+        },
+        {
+          "method": "msp",
+          "borda": 8.0,
+          "criteria": {
+            "auroc": 0.5208230872387273,
+            "fpr95": 0.8974358974358975,
+            "oscr": 0.8831284561182641,
+            "id_frr": 0.6048104317335087,
+            "ood_reject": 0.81171875
+          }
+        },
+        {
+          "method": "energy",
+          "borda": 7.0,
+          "criteria": {
+            "auroc": 0.7090281951121795,
+            "fpr95": 0.901858113396575,
+            "oscr": 0.7912786362001607,
+            "id_frr": 0.19043314235621928,
+            "ood_reject": 0.71015625
+          }
+        },
+        {
+          "method": "max_logit",
+          "borda": 6.0,
+          "criteria": {
+            "auroc": 0.6688767259605601,
+            "fpr95": 0.9019402961710654,
+            "oscr": 0.8358159392587347,
+            "id_frr": 0.1318974828590213,
+            "ood_reject": 0.47578125
+          }
+        }
+      ],
+      "rationale": "entropy is recommended by a validation-only Borda count over 5 criteria (AUROC, FPR@95TPR, OSCR, ID false-reject, OOD reject). Runner-up is msp (Borda 8 vs 9). Selection uses calibration data only; final results are not consulted."
+    },
+    "checkpoint": "runs/rml24_base/formal/t002_losscross_entropy_optadamw/seed2027/checkpoints/best.pt",
+    "checkpoint_epoch": 50,
+    "id_split": "validation",
+    "model": "RML2018_24",
+    "domain_gap_note": "ID is real RadioML2018.01A (200 kHz); OOD is synthetic at the generator's native rate (128 kHz). A residual ID<->synthetic domain gap is possible and is reported separately, never silently merged into the OOD metric."
+  },
+  "model_training_runs": 0
+}

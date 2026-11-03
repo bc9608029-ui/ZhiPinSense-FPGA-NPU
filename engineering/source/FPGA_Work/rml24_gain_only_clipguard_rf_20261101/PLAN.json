@@ -1,0 +1,12 @@
+{
+  "scope": "Gain-only paired initial vs saturation-backoff captures;48 items all original8 repeats;24 classes at-40dB and12 representatives each at-60/-30dB; frozen model and original TX scale",
+  "hold_sec": 8,
+  "gap_sec": 0.5,
+  "capture_sec": 480,
+  "capture_interval_sec": 4,
+  "rx_bandwidth_hz": 5000000,
+  "sample_rate_hz": 2560000,
+  "tx_scale": 68.46059377833956,
+  "selection": "First eligible pair by initial timestamp, both captures within start+1.5s to end-.3s; no best-prediction selection",
+  "qualification": "Report all wrong/missing/rejects; check old-correct losses and unresolved ADC saturation; no deployment based on short test alone"
+}

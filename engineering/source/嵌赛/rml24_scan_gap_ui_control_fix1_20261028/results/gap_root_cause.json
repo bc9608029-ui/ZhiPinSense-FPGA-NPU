@@ -1,0 +1,11 @@
+{
+  "source_validation": "F:/rml24_repeat_mean_validation_20261028",
+  "scan_result": {"correct": 230, "denominator": 240, "missing": 4},
+  "missing_source_indices": [65, 66, 121, 122],
+  "long_gaps": [
+    {"before_frame": 261, "after_frame": 262, "seconds": 20.88136752, "preceded_by": "NO_VALID_PUBLIC_FRAME"},
+    {"before_frame": 464, "after_frame": 465, "seconds": 20.88012625, "preceded_by": "NO_VALID_PUBLIC_FRAME"}
+  ],
+  "diagnosis": "FULL_RESCAN_STALL_CONFIRMED",
+  "scope": "The evidence explains the four missing scored slots; it does not prove the remaining classification errors are fixed."
+}

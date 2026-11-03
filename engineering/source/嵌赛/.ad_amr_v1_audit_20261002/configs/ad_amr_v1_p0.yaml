@@ -1,0 +1,8 @@
+# P0 variant — paper-literal MSE target: MSE(denoised_iq, noisy_iq).
+# Identical to P1 except training.loss.variant (and its output_root).
+_base: configs/ad_amr_v1.yaml
+output_root: outputs/ad_amr_v1/P0
+training:
+  loss:
+    variant: P0
+    alpha: 0.1

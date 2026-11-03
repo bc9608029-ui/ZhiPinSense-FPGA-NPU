@@ -1,0 +1,4 @@
+python3 -c 'import pathlib,gzip,base64; p=pathlib.Path("/root/rmml24_gain_ui_sync_20261102/scope_DONE.json");print("SCOPE_BEGIN"+base64.b64encod e(gzip.compress(p.read_bytes())).decode()+"SCOPE_END")'
+
+SCOPE_BEGINH4sIAItMtGkC/7WRPW/CMBCG9/4KKzNS/f3RjUIrsYSBInVDZ/tcIqVJlAQQQvz3miKGlqVLF1t6fX7u/Pj0QEgxHBC7zRDaDosncspRDts6bqqIzViNx5wWPkkReVAcRKTaCiadRqOjYt5ASMkoqmLgGL2W1jBKLTAqBSTDLBglismV2+DhBzcKrhx6H6KPEhxzUjOvKOOMprw4pKgV5GbcceFR5C7S0mCE91p5MDfubfxitizfFuV6uV5tVrNpSaqm242kberjhLwu3l/mj8/Tcn492zVhC80HxhtlD3UVYcS4GbbQ5y1VNQ4Zy7TIFedLWRGroavh+NtY1+O+anfDvzzvTpvT1GttM8TZfBsDFzS71yz5kHgy1jJOtc/owAJ6GYXL36MUs0Ez5u+0rRdkwCaSTxwhGwACacQ+20vYYxPw2+AfNMmLpofzF27B8MhZAgAASCOPE_END
+(base) root@U:~# 

@@ -1,0 +1,6 @@
+from pathlib import Path
+import tarfile,hashlib,shutil
+r=Path(r'E:\嵌赛\rml24_stage7_execution_20261027');p=r/'waterfall_fix1/board_package/board_ui_live_rml24_final.cpp';s=p.read_text(encoding='utf-8');a='                        if (latest.meas.spectrum_valid &&';assert s.count(a)==1;s=s.replace(a,'                        ui::WaterfallHistory::Row spectrum_row{};\n                        for (int b = 0; b < ui::kWaterfallBins; ++b)\n                            spectrum_row[b] = static_cast<std::int16_t>(latest.meas.spectrum_dbfs_x4[b]);\n'+a).replace('waterfall_history.push(latest.meas.spectrum_dbfs_x4,','waterfall_history.push(spectrum_row.data(),');p.write_text(s,encoding='utf-8');shutil.copyfile(r/'transfer/waterfall_fix1_patch.tar.gz',r/'waterfall_fix1_patch_attempt1.tar.gz')
+with tarfile.open(r/'transfer/waterfall_fix1_patch.tar.gz','w:gz') as t:
+ for p in sorted((r/'waterfall_fix1/board_package').iterdir()):t.add(p,arcname='board_package/'+p.name)
+print('PATCH_SHA',hashlib.sha256((r/'transfer/waterfall_fix1_patch.tar.gz').read_bytes()).hexdigest())

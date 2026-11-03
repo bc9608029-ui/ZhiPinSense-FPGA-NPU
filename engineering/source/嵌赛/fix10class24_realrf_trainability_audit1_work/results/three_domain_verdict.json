@@ -1,0 +1,105 @@
+{
+  "token": "M29-RML24-REALRF-TRAINABILITY-AUDIT1-THREE-DOMAIN",
+  "domain_A_original": {
+    "accuracy": 0.872917,
+    "correct": 419,
+    "total": 480
+  },
+  "domain_B_digital": {
+    "n": 48,
+    "correct": 46,
+    "accuracy": 0.9583333333333334,
+    "gate_pass": 48,
+    "residual": {
+      "n": 48,
+      "min": 0.0,
+      "median": 2.7237587e-17,
+      "max": 2.7237587e-17,
+      "mean": 1.3618793499999998e-17
+    },
+    "per_session": {
+      "digital_fix2_v2": {
+        "n": 24,
+        "correct": 23,
+        "gate_pass": 24,
+        "acc": 0.9583333333333334,
+        "gated_acc": 0.9583333333333334,
+        "residual": {
+          "n": 24,
+          "min": 2.7237587e-17,
+          "median": 2.7237587e-17,
+          "max": 2.7237587e-17,
+          "mean": 2.7237586999999996e-17
+        }
+      },
+      "digital_independent_v2": {
+        "n": 24,
+        "correct": 23,
+        "gate_pass": 24,
+        "acc": 0.9583333333333334,
+        "gated_acc": 0.9583333333333334,
+        "residual": {
+          "n": 24,
+          "min": 0.0,
+          "median": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        }
+      }
+    }
+  },
+  "domain_C_rf": {
+    "n": 48,
+    "correct": 1,
+    "accuracy": 0.020833333333333332,
+    "gate_pass": 23,
+    "residual": {
+      "n": 48,
+      "min": 0.0858339674,
+      "median": 0.113277651,
+      "max": 0.667418558,
+      "mean": 0.23737520277916668
+    },
+    "per_session": {
+      "rf_fix2_target": {
+        "n": 24,
+        "correct": 1,
+        "gate_pass": 23,
+        "acc": 0.041666666666666664,
+        "gated_acc": 0.043478260869565216,
+        "residual": {
+          "n": 24,
+          "min": 0.0858339674,
+          "median": 0.0917942981,
+          "max": 0.106605952,
+          "mean": 0.09206309139166667
+        }
+      },
+      "rf_independent_v2": {
+        "n": 24,
+        "correct": 0,
+        "gate_pass": 0,
+        "acc": 0.0,
+        "gated_acc": NaN,
+        "residual": {
+          "n": 24,
+          "min": 0.113277651,
+          "median": 0.413419883,
+          "max": 0.667418558,
+          "mean": 0.3826873141666667
+        }
+      }
+    }
+  },
+  "domain_C0_full24": {
+    "end_to_end_accuracy": 0.416667,
+    "end_to_end_correct": "10/24",
+    "gated_accuracy": 0.666667,
+    "gated_correct": "10/15",
+    "coverage": 0.625,
+    "forced_correct": "18/24",
+    "production_threshold": 0.1
+  },
+  "Q1_info_retained": "PARTIAL",
+  "Q2_mismatch_vs_broken": "RECEIVE_CHAIN_RESIDUAL_BOTTLENECK"
+}

@@ -1,0 +1,40 @@
+{
+  "status": "MULTIFREQUENCY_SWEEP_SHORT_RF_RUNNING",
+  "run": "multifreq_sweep01",
+  "formal_regression_started": false,
+  "completed": {
+    "board_build": true,
+    "strict_preflight": true,
+    "quiet_three_modes": true,
+    "single_signal_three_modes": true,
+    "history_capacity_corruption_board_unit": true,
+    "physical_three_modes_and_history_detail": true,
+    "physical_sweep_progress_after_render_fix": true,
+    "physical_history_cancel_clear": true,
+    "cleared_history_saved_header_only": true,
+    "search_lock_loss_reacquire": {
+      "latency_sec": 9.990540872,
+      "mute_valid": 0
+    },
+    "tx_offline_checks": 19,
+    "tx_actual_i16_four_scenes_match": true,
+    "wideband_source_rf_captures": 151,
+    "source_raw_sha_failures": 0
+  },
+  "limits": [
+    "Current source has image/background components; not claimed pure two-target source",
+    "No new formal accuracy result",
+    "Physical full10-record pagination not yet verified",
+    "Supervisor EOF compatibility and progress-render patch are independent candidate changes"
+  ],
+  "next": "Collect all six RF phases, verify expected main-frequency classifications, rejected images, traversal and cleanup; freeze third-mode scoring then request formal regression approval",
+  "physical_acceptance": {
+    "three_modes": true,
+    "frequency_2401_back_2400": true,
+    "history_detail_not_live_iq": true,
+    "sweep_progress_after_fix": true,
+    "history_cancel_then_clear": true,
+    "automatic_clear_save_file_header_only_verified": true,
+    "full10_pagination_physical": false
+  }
+}

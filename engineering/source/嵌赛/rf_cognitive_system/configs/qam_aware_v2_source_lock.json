@@ -1,0 +1,25 @@
+{
+  "name": "QAM-Aware RFNet V2 formal source freeze",
+  "policy": "No source, model structure, formal config, or frozen dependency changes after formal training starts.",
+  "pre_freeze_parent_git_head": "733f749a1e07df735cb47fc4f904a50269931e82",
+  "sha256": {
+    "configs/qam_aware_v2.yaml": "a24cbd0b3883eba75859a2180cbbd902aca3dda8a9a06f07e5de09bbc6d8f329",
+    "configs/qam_aware_v2_smoke.yaml": "313c740e74228d07c4fe52c4c50608923f2b0e960f9cd385688d56f687138d41",
+    "models/qam_aware_rfnet.py": "0788f1bfd5b3a433dea4053dd24833fbcb679e8f0ecb199211cb9c05dd6cb240",
+    "training/qam_aware_utils.py": "95d6a8617fb5181a747d5fd4599b7d772530dc6a60e01863384157a46de10215",
+    "training/train_qam_aware.py": "665fac652132a4697423d4d90ce5cee4dff42831ab9d501f9eb273ca9acec148",
+    "evaluation/evaluate_qam_aware.py": "f7ad528ce64c1b63a1800ede9814c524710c5e6573a6cf24e0fb0425abce564b",
+    "evaluation/evaluate_qam_formal.py": "8501408416c6b817e4954932acf8d58fa900c364952af58e859edc81a9d45386",
+    "evaluation/compare_qam_v2.py": "9aecd30e29630cec03a404132d2bd567f9faef242eb2a40c695eae26e0277901",
+    "evaluation/final_blind_audit.py": "aac1de54266816a1e4c69464b61df6f12c8ec73d0576061788625ac6e4378590",
+    "evaluation/qam_feature_diagnostic.py": "1531d7ba909b786c028680c8e0f37658023e5166241419a62bb66aa13d0b9c47",
+    "scripts/export_qam_aware_onnx.py": "f44482b6d101df0412d39e119cfcb77c82b20887d0ea2c7d4e8088efdc51035a",
+    "tests/test_qam_aware_rfnet.py": "e6f082a70d9fb9768e3e83b7dea55b5964b10a9fc5e0dde23927095607023128",
+    "tests/test_final_blind_test.py": "561bd85f8da54f61af3a3c42e1759e7a52749c511c81efb066ebdb535d5e311e",
+    "models/dual_domain_rfnet.py": "7b8398ba81bfc3e111e8f160749eb15f11fbf992f0d8c707d0d1a450a73d83f4",
+    "training/resumable_trainer.py": "e4318f5c0ebc80e560f5e6108358a3fe8f348a0070c61f2f93688842be4bfd81",
+    "training/ablation_utils.py": "6321910d6828519ea0c7c19382050b2f6a299975b7ce42e3c98ddb4cdc450f0b",
+    "datasets/synthetic_dataset.py": "7d7f4e85e81211f5853b22107cb2e69c9090468cab2b33e0170fc156cf745a53",
+    "configs/baseline_v1_lock.json": "1f5045295ab42167cf45405737422b1faa6da836d9c9ffe6bf55a33a33937f10"
+  }
+}

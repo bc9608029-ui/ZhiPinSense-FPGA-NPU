@@ -1,0 +1,58 @@
+{
+  "kind": "PERSISTENT_RESTART_GUARD_SINGLE_RF_FUNCTIONAL_NOT_ACCURACY",
+  "denominator": 1,
+  "correct": 1,
+  "missing": 0,
+  "clock_uncertainty_ms": 54,
+  "gui_start_stop_and_restore_pass": true,
+  "receiver_summary": {
+    "rc": 0,
+    "supervisor": {
+      "mode": "FIXED",
+      "rf_tx": false,
+      "candidate_only": true,
+      "normal_npu_eof_before_rx_reap": true,
+      "finalization_accounting_verified": true,
+      "stop_errors": [],
+      "rx_restore": [],
+      "clean_stop": true
+    },
+    "final": {
+      "valid": 24,
+      "rejected": 151,
+      "records": 175,
+      "no_tcp": true,
+      "no_tx_handshake": true,
+      "restore_errors": [],
+      "ui_sent": 200,
+      "ui_failed": 0
+    },
+    "pred_counts": {
+      "3": 24
+    },
+    "backend_counts": {
+      "fpga": 24
+    },
+    "guard_clean": true,
+    "guard_marker_absent": true
+  },
+  "results": [
+    {
+      "index": 0,
+      "config": {
+        "bank": 0,
+        "message": 1,
+        "gain_db": -40
+      },
+      "chosen_frame": {
+        "frame_id": 57,
+        "capture_time_ns": 1773393104528849670,
+        "pred": 3,
+        "finite": true
+      },
+      "correct": true,
+      "missing": false,
+      "source_sha": "1562575bbedd6e815535726f16de6752da0f7441ea609acd3cb2cf6be529c0f8"
+    }
+  ]
+}

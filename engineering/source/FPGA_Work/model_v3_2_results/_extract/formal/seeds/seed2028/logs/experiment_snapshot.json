@@ -1,0 +1,53 @@
+{
+  "track": "qam_aware_v3_2",
+  "experiment_config": "/root/autodl-tmp/v32_run_20261002_093450/qam_aware_v3_2_autodl/configs/qam_aware_v3_2.yaml",
+  "requested_config": "/root/autodl-tmp/v32_run_20261002_093450/qam_aware_v3_2_autodl/outputs/qam_aware_v3_2/formal/seeds/seed2028/config/seed_config.yaml",
+  "baseline_config": "/root/autodl-tmp/v32_run_20261002_093450/qam_aware_v3_2_autodl/configs/baseline.yaml",
+  "git_commit": null,
+  "seed": 2028,
+  "device": "cuda",
+  "classes": [
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "2FSK",
+    "CPFSK",
+    "OFDM"
+  ],
+  "final_blind_test_accessed": false,
+  "v2_checkpoint": "init/v2_time_power_phase_best.pt",
+  "init_logits_match_v2": true,
+  "init_logits_max_abs_diff": 0.0,
+  "init_gate": 0.0,
+  "distillation": {
+    "enabled": true,
+    "temperature": 4.0,
+    "alpha": 0.7
+  },
+  "model_profile": {
+    "parameters": 72031,
+    "trainable_parameters": 72025,
+    "neural_macs": 9836864,
+    "neural_flops": 19673728,
+    "fp32_parameter_size_mb": 0.2747764587402344,
+    "checkpoint_tensor_state_size_mb": 0.2789955139160156,
+    "serialized_state_dict_mb": 0.3149881362915039,
+    "input_contract": "iq[N,2,1024] + physical[N,3,1024] -> logits[N,8]",
+    "operator_policy": "Conv/BatchNorm/ReLU/Add/Concat/ReduceMean/Mul/Gemm only"
+  },
+  "environment": {
+    "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+    "platform": "Linux-5.15.0-94-generic-x86_64-with-glibc2.35",
+    "machine": "x86_64",
+    "processor": "x86_64",
+    "torch": "2.8.0+cu128",
+    "cuda_available": true,
+    "torch_cuda_version": "12.8",
+    "cudnn_version": 91002,
+    "cuda_devices": [
+      "NVIDIA GeForce RTX 5090"
+    ]
+  }
+}

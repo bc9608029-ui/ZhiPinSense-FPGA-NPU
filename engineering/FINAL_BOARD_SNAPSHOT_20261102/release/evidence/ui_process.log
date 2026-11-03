@@ -1,0 +1,28 @@
+UI_TOUCH status=DISABLED
+UI_LIVE_READY sock=/tmp/rml_history_sw2njv44/ui.sock
+UI_HEADLESS_MODE sock=/tmp/rml_history_sw2njv44/ui.sock
+UI_RX_STATS state_valid=0 result_valid=0 rejected=0 last_valid_age_ms=-1 last_result_age_ms=-1
+TOUCH_CONTROL_STATS control_taps=0 commands_sent=0 commands_applied=0 commands_rejected=0 commands_timeout=0 duplicate_commands=0 connected=no
+UI_WATERFALL_RESET reason=producer_connected rows=0
+UI_WATERFALL_ROW frame=0 rows=1
+UI_RX type=result version=rml24-final-chain-v1 valid=1 reason=-
+UI_STATUS old=WAITING new=LIVE reason=valid_result freshness_age_ms=0
+UI_WATERFALL_ROW frame=1 rows=1
+UI_WATERFALL_ROW frame=2 rows=1
+UI_WATERFALL_ROW frame=3 rows=1
+UI_WATERFALL_ROW frame=4 rows=1
+UI_WATERFALL_ROW frame=5 rows=1
+UI_WATERFALL_ROW frame=6 rows=1
+UI_WATERFALL_ROW frame=7 rows=1
+UI_WATERFALL_ROW frame=8 rows=1
+UI_WATERFALL_ROW frame=9 rows=1
+UI_WATERFALL_ROW frame=10 rows=1
+UI_WATERFALL_ROW frame=11 rows=1
+UI_RX type=state version=rml24-standalone-state-v1 valid=1 reason=-
+UI_STATUS old=LIVE new=ACQUIRING reason=valid_state freshness_age_ms=0
+UI_STATUS old=ACQUIRING new=STALE_DATA reason=disconnected freshness_age_ms=200
+UI_STATS received=13 valid=12 rejected=0 rendered=12 coalesced=0 last_frame_id=11 state_received=1
+TOUCH_CONTROL_STATS control_taps=0 commands_sent=0 commands_applied=0 commands_rejected=0 commands_timeout=0 duplicate_commands=0 connected=no
+TOUCH_CONTROL_RESULT result=FAIL commands_sent=0 commands_applied=0 commands_rejected=0 commands_timeout=0 duplicate_commands=0
+UI_RUNTIME_STATS submits=0 skips=0
+UI_LIVE_STOP sock=/tmp/rml_history_sw2njv44/ui.sock received=13 valid=12 rejected=0 rendered=12 coalesced=0 last_frame_id=11 state_received=1

@@ -1,0 +1,32 @@
+{
+  "main_set_num_samples": 240,
+  "expected_deployed_argmax_covered": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    14,
+    15,
+    17,
+    18,
+    20,
+    21,
+    22
+  ],
+  "expected_deployed_argmax_missing": [
+    0,
+    1,
+    2,
+    13,
+    16,
+    19
+  ],
+  "all_23_deployed_classes_covered": false,
+  "note": "coverage audit of the model's own predictions over the main 240; NOT a gate.  A missing class simply means the model did not predict it top-1 in these 240 frames -- the conformance gate only checks board-vs-reference agreement, not class coverage."
+}

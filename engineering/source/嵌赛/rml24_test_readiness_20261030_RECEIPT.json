@@ -1,0 +1,24 @@
+{
+  "state": "OFFLINE_TEST_PREP_COMPLETE_TARGET_PREFLIGHT_REQUIRED",
+  "packages": [
+    {
+      "file": "F:\\\u5d4c\u8d5b\\rml24_test_readiness_20261030_pc.zip",
+      "sha256": "8c2c4c6547da555cd16f0bc554c02241dd34b95723a0f8c89572beb7becd38b4",
+      "bytes": 4926562,
+      "content_files": 292,
+      "independent_zip_crc_and_sha": "PASS",
+      "tx_payload_included": true
+    },
+    {
+      "file": "F:\\\u5d4c\u8d5b\\rml24_test_readiness_20261030_board.zip",
+      "sha256": "662b57818f22a56d68d2c42eab63707093b60e559e9e3dd6a197275c40eba921",
+      "bytes": 3401600,
+      "content_files": 50,
+      "independent_zip_crc_and_sha": "PASS",
+      "tx_payload_included": false
+    }
+  ],
+  "board_tested": false,
+  "rf_tested": false,
+  "production_receiver_integrated": false
+}

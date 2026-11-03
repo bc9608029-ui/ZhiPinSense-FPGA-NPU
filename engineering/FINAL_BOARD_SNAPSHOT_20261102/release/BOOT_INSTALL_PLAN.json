@@ -1,0 +1,9 @@
+{
+  "status": "PREPARED_NOT_INSTALLED",
+  "candidate_bit_sha256": "f42dd12f03bf81c65978b7034b45808efd5035f6a358cc54710f2404530a057c",
+  "original_bit_sha256": "22fec95c64f3db727dd250e5768cdadec82f4c4d2de088392980b95a632932e9",
+  "original_uenv_sha256": "b81563447febf35023b7c99a918bd204270518a87ea9cff169a11fbf26d1f4a9",
+  "candidate_uenv_sha256": "0091f295e6a4c501cc358a659f52528462cf41fac683370336f98fcd92cd1fa5",
+  "bootargs_marker": "rml24_pl_sha256=f42dd12f03bf81c65978b7034b45808efd5035f6a358cc54710f2404530a057c",
+  "scope": "One kernel proof argument added; existing loadbit&&kernel gate retained; BOOT/Image/DTB unchanged"
+}

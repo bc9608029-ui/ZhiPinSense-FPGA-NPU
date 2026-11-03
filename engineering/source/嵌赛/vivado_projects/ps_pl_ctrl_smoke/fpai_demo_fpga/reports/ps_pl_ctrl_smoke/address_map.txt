@@ -1,0 +1,3 @@
+SEG_User_GP0_Reg OFFSET=0x40080000 RANGE=0x00080000
+gp0_manager m3/user custom-op subwindow = OFFSET + 0x00040000
+effective smoke register base = 0x400C0000

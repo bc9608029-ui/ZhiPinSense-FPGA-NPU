@@ -1,0 +1,63 @@
+# iCraft 3.39 compile configuration for the frozen RF NPU partition.
+#
+# Target: ZG330 (30TAI "Zhuge"/"ZHUGE"). Framework: Onnx (opset 17, ir 8).
+# Inputs are FP32 at the ONNX boundary; the iCraft quantizer reads FP32
+# binary calibration files produced in the dequantized-FPGA domain.
+#
+#   iq               [1,2,1024] FP32  layout NCW
+#   physical_features[1,3,1024] FP32  layout NCW
+#   logits           [1,8]
+#
+# Frozen constraints honoured here:
+#   * no model-structure/operator deletion or replacement
+#   * no math change, no silent HostBackend fallback
+#   * non-image input: no_transinput / no_imagemake disabled
+#   * calibration from frozen train/val distribution only
+
+[parse]
+net_name = "rfnet_npu"
+framework = "Onnx"
+network = "F:/FPGA_Work/npu_stage_v1/models/time_power_phase_npu_partition_opset17.onnx"
+inputs = "1,2,1024;1,3,1024"
+inputs_layout = "FD;FD"
+inputs_dtype = "fp32;fp32"
+pre_method = "nop;nop"
+pre_scale = "nop;nop"
+pre_mean = "nop;nop"
+channel_swap = "nop;nop"
+target = "zhuge"
+jr_path = "F:/FPGA_Work/npu_stage_v1/compile/jsonraw/"
+
+[optimize]
+target = "ZHUGE"
+json = "F:/FPGA_Work/npu_stage_v1/compile/jsonraw/rfnet_npu_parsed.json"
+raw = "F:/FPGA_Work/npu_stage_v1/compile/jsonraw/rfnet_npu_parsed.raw"
+jr_path = "F:/FPGA_Work/npu_stage_v1/compile/jsonraw/"
+
+[quantize]
+target = "zhuge"
+qdtype = "int8"
+bits = 8
+saturation = "kld"
+per = "channel"
+no_transinput = true
+no_imagemake = true
+forward_dir = "F:/FPGA_Work/npu_stage_v1/calibration/cal_data"
+forward_list = "F:/FPGA_Work/npu_stage_v1/calibration/forward_list.txt"
+json = "F:/FPGA_Work/npu_stage_v1/compile/jsonraw/rfnet_npu_optimized.json"
+raw = "F:/FPGA_Work/npu_stage_v1/compile/jsonraw/rfnet_npu_optimized.raw"
+jr_path = "F:/FPGA_Work/npu_stage_v1/compile/jsonraw/"
+
+[adapt]
+target = "ZHUGE"
+json = "F:/FPGA_Work/npu_stage_v1/compile/jsonraw/rfnet_npu_quantized.json"
+raw = "F:/FPGA_Work/npu_stage_v1/compile/jsonraw/rfnet_npu_quantized.raw"
+jr_path = "F:/FPGA_Work/npu_stage_v1/compile/jsonraw/"
+
+[generate]
+json = "F:/FPGA_Work/npu_stage_v1/compile/jsonraw/rfnet_npu_adapted.json"
+raw = "F:/FPGA_Work/npu_stage_v1/compile/jsonraw/rfnet_npu_adapted.raw"
+jr_path = "F:/FPGA_Work/npu_stage_v1/compile/jsonraw/"
+log_path = "F:/FPGA_Work/npu_stage_v1/compile/logs/"
+rows = 4
+cols = 4

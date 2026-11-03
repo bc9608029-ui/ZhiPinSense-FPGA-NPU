@@ -1,0 +1,29 @@
+{
+  "raw": {
+    "samples": 3,
+    "rms": 316.22776601683796,
+    "peak": 500.0,
+    "mean_i": -66.66666666666666,
+    "mean_q": 200.0,
+    "dc_power_fraction": 0.3333333333333333,
+    "peak_bin_offset": 1,
+    "papr_db": 3.9794000867203754
+  },
+  "recovered": {
+    "samples": 3,
+    "rms": 316.22776601683796,
+    "peak": 500.0,
+    "mean_i": -66.66666666666666,
+    "mean_q": 200.0,
+    "dc_power_fraction": 0.3333333333333333,
+    "peak_bin_offset": 1,
+    "papr_db": 3.9794000867203754
+  },
+  "raw_vs_recovered": {
+    "samples": 3,
+    "complex_gain_i": 1.0,
+    "complex_gain_q": 0.0,
+    "corr": 1.0,
+    "affine_nmse": 0.0
+  }
+}

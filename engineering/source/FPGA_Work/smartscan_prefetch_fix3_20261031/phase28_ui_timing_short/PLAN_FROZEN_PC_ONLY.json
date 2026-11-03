@@ -1,0 +1,26 @@
+{
+  "cases": [
+    {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40,
+      "class_index": 3
+    },
+    {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40,
+      "class_index": 4
+    },
+    {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40,
+      "class_index": 3
+    }
+  ],
+  "denominator": 3,
+  "purpose": "Updated UI history episodes and monotonic timing functional short test",
+  "selection": "first capture in QPC-aligned start+1.5s to muted-.3s",
+  "frequency_hz": 2400000000
+}

@@ -1,0 +1,54 @@
+{
+  "status": "BOARD_FUNCTIONAL_TESTED_PRODUCTION_PROMOTION_PENDING",
+  "dates": "2026-10-27 to 2026-10-28 Asia/Shanghai",
+  "fpga_migration": "DEFERRED_BY_USER",
+  "stability": "DEFERRED_BY_USER",
+  "software_tests": "10/10",
+  "control_hardware_tests": "19/19",
+  "ui_fivepage_navigation": "USER_CONFIRMED",
+  "ui_plots": "USER_CONFIRMED",
+  "formal_rf": {
+    "formal_fixed01": {
+      "kind": "INDEPENDENT_TX_RX_FIRST_CAPTURE_SCORE",
+      "run": "formal_fixed01",
+      "denominator": 240,
+      "correct": 227,
+      "missing": 0,
+      "clock_uncertainty_ms": 57,
+      "first_valid_capture_after_warmup_start_sec": 0.257332088,
+      "warmup_sec": 40.0
+    },
+    "formal_scan01": {
+      "kind": "INDEPENDENT_TX_RX_FIRST_CAPTURE_SCORE",
+      "run": "formal_scan01",
+      "denominator": 240,
+      "correct": 232,
+      "missing": 0,
+      "clock_uncertainty_ms": 57,
+      "first_valid_capture_after_warmup_start_sec": 9.164104368,
+      "warmup_sec": 40.0
+    }
+  },
+  "audit_passed": 35,
+  "audit_total": 35,
+  "baseline_source_checks": "10/10",
+  "clean_input_npu": {
+    "kind": "CLEAN_INPUT_DIRECT_NPU_DIAGNOSTIC_NOT_RF",
+    "n": 33,
+    "correct": 33,
+    "am_dsb_wc_n": 10,
+    "am_dsb_wc_correct": 10,
+    "npu_stop": [
+      "NPU_STREAM_STOP frames=264 apply=1 reset=263 discipline=1"
+    ]
+  },
+  "accuracy_issue_resolved": false,
+  "baseline_services_restored": true,
+  "production_startup_changed": false,
+  "gaps": [
+    "screen frequency keypad / tuning progress",
+    "complete numeric measurement wiring",
+    "scan discovery list / full-band stitched waterfall",
+    "candidate persistent startup and reboot/coldboot verification"
+  ]
+}

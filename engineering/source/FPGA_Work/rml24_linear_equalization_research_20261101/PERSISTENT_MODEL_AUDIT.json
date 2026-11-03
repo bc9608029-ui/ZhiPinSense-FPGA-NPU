@@ -1,0 +1,86 @@
+{
+  "scope": "Frozen model pure/quantized source diagnostic, not RF or training",
+  "complete": true,
+  "rows": [
+    {
+      "index": 0,
+      "file": "20_07.bin",
+      "expected": 20,
+      "mode": "clean",
+      "source_sha256": "4df7e9ad789f9293db93bdc5a09142d65668ff797ce4bf1326b1bac5962c896b",
+      "pred": 20,
+      "confidence": 0.995067588741295,
+      "correct": true
+    },
+    {
+      "index": 1,
+      "file": "20_07.bin",
+      "expected": 20,
+      "mode": "old_quant_pilot_cal",
+      "source_sha256": "4df7e9ad789f9293db93bdc5a09142d65668ff797ce4bf1326b1bac5962c896b",
+      "pred": 20,
+      "confidence": 0.9918948522658567,
+      "correct": true
+    },
+    {
+      "index": 2,
+      "file": "20_07.bin",
+      "expected": 20,
+      "mode": "old_quant_scale_cal",
+      "source_sha256": "4df7e9ad789f9293db93bdc5a09142d65668ff797ce4bf1326b1bac5962c896b",
+      "pred": 20,
+      "confidence": 0.9950697296728755,
+      "correct": true
+    },
+    {
+      "index": 3,
+      "file": "20_07.bin",
+      "expected": 20,
+      "mode": "higher_precision_quant",
+      "source_sha256": "4df7e9ad789f9293db93bdc5a09142d65668ff797ce4bf1326b1bac5962c896b",
+      "pred": 20,
+      "confidence": 0.9961564832419968,
+      "correct": true
+    },
+    {
+      "index": 4,
+      "file": "19_00.bin",
+      "expected": 19,
+      "mode": "clean",
+      "source_sha256": "9065d4fa5c06d01605fc2b5ecf678ae971069dcfecfdb0de0e5beeaae30e4179",
+      "pred": 19,
+      "confidence": 0.9732400956582596,
+      "correct": true
+    },
+    {
+      "index": 5,
+      "file": "19_00.bin",
+      "expected": 19,
+      "mode": "old_quant_pilot_cal",
+      "source_sha256": "9065d4fa5c06d01605fc2b5ecf678ae971069dcfecfdb0de0e5beeaae30e4179",
+      "pred": 19,
+      "confidence": 0.9763103492255049,
+      "correct": true
+    },
+    {
+      "index": 6,
+      "file": "19_00.bin",
+      "expected": 19,
+      "mode": "old_quant_scale_cal",
+      "source_sha256": "9065d4fa5c06d01605fc2b5ecf678ae971069dcfecfdb0de0e5beeaae30e4179",
+      "pred": 19,
+      "confidence": 0.9732400955527228,
+      "correct": true
+    },
+    {
+      "index": 7,
+      "file": "19_00.bin",
+      "expected": 19,
+      "mode": "higher_precision_quant",
+      "source_sha256": "9065d4fa5c06d01605fc2b5ecf678ae971069dcfecfdb0de0e5beeaae30e4179",
+      "pred": 19,
+      "confidence": 0.9748206085176415,
+      "correct": true
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "accuracy": {
+    "A_host_bf16_reference": 0.8729166666666667,
+    "C": {
+      "end_to_end_gate_reject_is_fail": NaN,
+      "gate_reject_forceable_count": 0,
+      "gated": 0,
+      "gated_accuracy": NaN,
+      "hard_invalid_count": 0,
+      "present": 0
+    },
+    "D_digital_e2e": NaN,
+    "S": {
+      "end_to_end_gate_reject_is_fail": NaN,
+      "gate_reject_forceable_count": 0,
+      "gated": 0,
+      "gated_accuracy": NaN,
+      "hard_invalid_count": 0,
+      "present": 0
+    }
+  },
+  "arm_c_board_pending": true,
+  "arm_s_board_pending": true,
+  "coverage": {
+    "A": 480,
+    "C": 0,
+    "D_digital_input": 480,
+    "D_prediction": 0,
+    "S": 0
+  },
+  "note": "arm A host_pred \u4ec5\u53c2\u8003; dataset_snr_db \u975e\u771f\u5b9e RX SNR; gate-reject=\u7aef\u5230\u7aef\u5931\u8d25; hard_invalid \u7edd\u4e0d\u5f3a\u5236\u4e3a\u6210\u529f",
+  "per_class": {
+    "128APSK": {
+      "a_correct": 15,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "128QAM": {
+      "a_correct": 15,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "16APSK": {
+      "a_correct": 19,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "16PSK": {
+      "a_correct": 16,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "16QAM": {
+      "a_correct": 16,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "256QAM": {
+      "a_correct": 19,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "32APSK": {
+      "a_correct": 17,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "32PSK": {
+      "a_correct": 17,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "32QAM": {
+      "a_correct": 16,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "4ASK": {
+      "a_correct": 17,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "64APSK": {
+      "a_correct": 15,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "64QAM": {
+      "a_correct": 15,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "8ASK": {
+      "a_correct": 18,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "8PSK": {
+      "a_correct": 18,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "AM-DSB-SC": {
+      "a_correct": 16,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "AM-DSB-WC": {
+      "a_correct": 19,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "AM-SSB-SC": {
+      "a_correct": 16,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "AM-SSB-WC": {
+      "a_correct": 16,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "BPSK": {
+      "a_correct": 20,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "FM": {
+      "a_correct": 20,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "GMSK": {
+      "a_correct": 20,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "OOK": {
+      "a_correct": 20,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "OQPSK": {
+      "a_correct": 20,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "QPSK": {
+      "a_correct": 19,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "d_correct": 0,
+      "n": 20,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    }
+  },
+  "per_snr": {
+    "0dB": {
+      "a_correct": 68,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "n": 120,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "10dB": {
+      "a_correct": 118,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "n": 120,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "20dB": {
+      "a_correct": 117,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "n": 120,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    },
+    "30dB": {
+      "a_correct": 116,
+      "c_e2e_correct": 0,
+      "c_present": 0,
+      "n": 120,
+      "s_e2e_correct": 0,
+      "s_present": 0
+    }
+  },
+  "prediction_flips": {
+    "A_to_C": 0,
+    "A_to_D": 0,
+    "A_to_S": 0,
+    "C_to_S": 0,
+    "D_to_C": 0,
+    "D_to_S": 0
+  },
+  "residual_corr_C": {
+    "corr": {
+      "median": null,
+      "min": null,
+      "n": 0
+    },
+    "residual": {
+      "max": null,
+      "median": null,
+      "min": null,
+      "n": 0,
+      "pass_0100": 0
+    }
+  },
+  "residual_corr_S": {
+    "corr": {
+      "median": null,
+      "min": null,
+      "n": 0
+    },
+    "residual": {
+      "max": null,
+      "median": null,
+      "min": null,
+      "n": 0,
+      "pass_0100": 0
+    }
+  },
+  "token": "M29-RML24-FIX10CLASS24-ORIGINAL-RADIOML-SINGLESDR-AB1-JUDGED"
+}

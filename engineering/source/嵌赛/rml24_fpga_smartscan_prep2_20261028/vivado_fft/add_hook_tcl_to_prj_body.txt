@@ -1,0 +1,1103 @@
+
+    set str_list $args
+	set vvd_version [string range [version -short] 0 5]
+	set device_part [get_property PART [current_project]]
+	#get help command
+	set help_index [lsearch $str_list -help]
+    if {$help_index >= 0} {
+	    ip_patch_help
+		return 
+    }
+    #check prj length
+    set current_prj_path [get_property DIRECTORY [current_project]]
+	# if {[file exists [file join $current_prj_path "ck_po_test.txt"]]} {
+		# puts "Set MIG to ck_po_test mode!"
+	# }
+	if {[get_property STEPS.SYNTH_DESIGN.ARGS.INCREMENTAL_MODE [get_runs [current_run -synthesis]] -quiet] != ""} {
+		catch {set_property STEPS.SYNTH_DESIGN.ARGS.INCREMENTAL_MODE off [get_runs [current_run -synthesis]]}
+	}
+	set path_length [string length $current_prj_path]
+	if {$path_length > 200} {
+	    error "Critical Warning:\nThe project path length is $path_length (more than 200),please choose a short path for the project!"
+	}
+	#recover HARC.cfg
+	if {$vvd_version == 2018.3} {
+		set vvd_path  [get_vvd_path]	
+		file copy -force [format "%s/ip_patch/device_database/fmk230t/xilinx/HARC.cfg" [file join $::env(JFM_PATH)]] [format "%s/data/parts/xilinx/common/HARC.cfg" $vvd_path] 
+	}
+    #check prj subcore
+	set skip_subcore_check_index [lsearch $str_list -skip_subcore_check]
+    if {$skip_subcore_check_index < 0} {
+        check_need_patch_subcore
+    } else {
+	    puts "Skip subcore check successfully!"
+	}
+    set synthesis_pre_tcl_path 				[file join $current_prj_path "ip_patch" "process_control" "synthesis_pre.tcl"]
+    set implementation_opt_post_tcl_path 	[file join $current_prj_path "ip_patch" "process_control" "implementation_opt_post.tcl"]
+    set write_bitstream_pre_tcl_path 		[file join $current_prj_path "ip_patch" "process_control" "write_bitstream_pre.tcl"]
+    set write_bitstream_post_tcl_path 		[file join $current_prj_path "ip_patch" "process_control" "write_bitstream_post.tcl"]
+	set implementation_opt_pre_tcl_path 	[file join $current_prj_path "ip_patch" "process_control" "implementation_opt_pre.tcl"]
+	set implementation_place_pre_tcl_path 	[file join $current_prj_path "ip_patch" "process_control" "implementation_place_pre.tcl"]
+	set implementation_place_post_tcl_path 	[file join $current_prj_path "ip_patch" "process_control" "implementation_place_post.tcl"]
+	set implementation_route_post_tcl_path 	[file join $current_prj_path "ip_patch" "process_control" "implementation_route_post.tcl"]
+	
+	#bh_mig_dfx
+	set bh_mig_dfx_index [lsearch $str_list -bh_mig_dfx]
+    if {$bh_mig_dfx_index >= 0} {
+        set bh_mig_dfx_value [lindex $str_list [expr $bh_mig_dfx_index+1]]
+        if {$bh_mig_dfx_value  == "TRUE" || $bh_mig_dfx_value  == "true"} {
+		    set bh_mig_dfx_value "TRUE"
+        } elseif {$bh_mig_dfx_value  == "FALSE" || $bh_mig_dfx_value  == "false"} {
+		    set bh_mig_dfx_value "FALSE"
+        } else {
+            error "Error occurs!\nThe value range of -bh_mig_dfx expected is (TRUE, FALSE)."
+        }
+    } else {
+        set bh_mig_dfx_value "FALSE" 
+    }
+
+	#bh_mig 
+	set bh_mig_index [lsearch $str_list -bh_mig]
+    if {$bh_mig_index >= 0} {
+        set bh_mig_value [lindex $str_list [expr $bh_mig_index+1]]
+        if {$bh_mig_value  == "TRUE" || $bh_mig_value  == "true"} {
+		    set bh_mig_value "TRUE"
+        } elseif {$bh_mig_value  == "FALSE" || $bh_mig_value  == "false"} {
+		    set bh_mig_value "FALSE"
+        } else {
+            error "Error occurs!\nThe value range of -bh_mig expected is (TRUE, FALSE)."
+        }
+    } else {
+        set bh_mig_value "FALSE" 
+    }
+	
+	if {[regexp {xc7z045_fmbh45} $device_part]} {
+		set bh_mig_value "TRUE"
+	}
+	
+	
+	
+	set clock_source_index [lsearch $str_list -clock_source]
+    if {$clock_source_index >= 0} {
+        set clock_source_value [lindex $str_list [expr $clock_source_index+1]]
+    } else {
+        set clock_source_value "NONE" 
+    }
+	
+	set rx_def_kl_index [lsearch $str_list -rx_def_kl]
+    if {$rx_def_kl_index >= 0} {
+        set rx_def_kl_value [lindex $str_list [expr $rx_def_kl_index+1]]
+        if {$rx_def_kl_value  == "TRUE" || $rx_def_kl_value  == "true"} {
+		    set rx_def_kl_value "TRUE"
+			if {$vvd_version != "2018.3" && $vvd_version != "2019.2" && $vvd_version != "2017.4" && $vvd_version != "2022.1"} {
+				error "FMSH-->current parameter rx_def_kl is not supported in $vvd_version!(please use vivado2017.4, vivado2018.3 or vivado2022.1)"
+			}
+        } elseif {$rx_def_kl_value  == "FALSE" || $rx_def_kl_value  == "false"} {
+		    set rx_def_kl_value "FALSE"
+        } else {
+            error "Error occurs!\nThe value range of -rx_def_kl expected is (TRUE, FALSE)."
+        }
+    } else {
+        set rx_def_kl_value "FALSE" 
+    }
+	
+	
+	#change_speed
+	set change_speed_index [lsearch $str_list -change_speed]
+    if {$change_speed_index >= 0} {
+        set change_speed_value [lindex $str_list [expr $change_speed_index+1]]
+        if {$change_speed_value  == "TRUE" || $change_speed_value  == "true"} {
+		    set change_speed_value "TRUE"
+        } elseif {$change_speed_value  == "FALSE" || $change_speed_value  == "false"} {
+		    set change_speed_value "FALSE"
+        } elseif {$change_speed_value  == "FAST" || $change_speed_value  == "fast"} {
+		    set change_speed_value "FAST"
+        }  else {
+            error "Error occurs!\nThe value range of -change_speed expected is (TRUE, FALSE,FAST)."
+        }
+    } else {
+        set change_speed_value "TRUE" 
+    }
+	
+	
+	#msg_serverity
+	set msg_serverity_index [lsearch $str_list -msg_serverity]
+    if {$msg_serverity_index >= 0} {
+        set msg_serverity_value [lindex $str_list [expr $msg_serverity_index+1]]
+        if {$msg_serverity_value == "WARNING" || $msg_serverity_value == "warning"} {
+		    set msg_serverity_value "WARNING" 
+        } elseif {$msg_serverity_value == "INFO" || $msg_serverity_value == "info" } {
+		    set msg_serverity_value "INFO" 
+        } elseif {$msg_serverity_value == "STATUS" || $msg_serverity_value == "status" } {
+		    set msg_serverity_value "STATUS" 
+        } elseif {$msg_serverity_value == "CRITICAL" || $msg_serverity_value == "critical"} {
+		    set msg_serverity_value "CRITICAL" 
+        } else {
+            error "Error occurs!\nThe value range of msg_serverity expected is (WARNING, INFO,STATUS,CRITICAL)."
+        }
+    } else {
+        set msg_serverity_value "WARNING" 
+    }
+	#mem_type
+	set mem_type_index [lsearch $str_list -mem_type]
+    if {$mem_type_index >= 0} {
+        set mem_type_value [lindex $str_list [expr $mem_type_index+1]]
+        if {$mem_type_value == "DRAM" || $mem_type_value == "dram"} {
+		    set mem_type_value "DRAM" 
+        } elseif {$mem_type_value == "BRAM" || $mem_type_value == "bram" } {
+		    set mem_type_value "BRAM" 
+        } elseif {$mem_type_value == "LOGIC" || $mem_type_value == "logic" } {
+		    set mem_type_value "LOGIC" 
+        } elseif {$mem_type_value == "SKIP"} {
+		    set mem_type_value "SKIP" 
+        } else {
+            error "Error occurs!\nThe value range of mem_type expected is (DRAM, BRAM)."
+        }
+    } else {
+        set mem_type_value "SKIP" 
+    }
+	#XFFT file modify
+	set xfft_modify_index [lsearch $str_list -xfft_modify]
+    if {$xfft_modify_index >= 0} {
+        set xfft_modify_value [lindex $str_list [expr $xfft_modify_index+1]]
+        if {$xfft_modify_value  == "TRUE" || $xfft_modify_value  == "true"} {
+		    set xfft_modify_value "TRUE"
+        } elseif {$xfft_modify_value  == "FALSE" || $xfft_modify_value  == "false"} {
+		    set xfft_modify_value "FALSE"
+        } else {
+            error "Error occurs!\nThe value range of -xfft_modify expected is (TRUE, FALSE)."
+        }
+    } else {
+        set xfft_modify_value "TRUE" 
+    }
+	#
+	if {$vvd_version == "2018.3"} {
+		if {$xfft_modify_value == "TRUE"} {
+			replace_ip_database $mem_type_value
+		} else {
+			puts "Skip replace_ip_database successfully!"
+		}
+    }
+	#fmk230t fmk300t
+	set device_index [lsearch $str_list -device]
+	if {$device_index >= 0} {
+		set device_value [lindex $str_list [expr $device_index+1]]
+	} else {
+        set device_value "0" 
+    }
+	puts "Set -device to $device_value!"
+    #get BRAM_SDP
+    set runEco0_index [lsearch $str_list -BRAM_SDP]
+    if {$runEco0_index >= 0} {
+        set runEco0_value  [lindex $str_list [expr $runEco0_index+1]]
+        if {$runEco0_value  == "TRUE" || $runEco0_value  == "true"} {
+		    set runEco0_value "TRUE"
+        } elseif {$runEco0_value  == "FALSE" || $runEco0_value  == "false"} {
+		    set runEco0_value "FALSE"
+		} elseif {$runEco0_value  == "FINE" || $runEco0_value  == "fine"} {
+		    set runEco0_value "FINE"
+		} else {
+            error "Error occurs!\nThe value range of -BRAM_SDP expected is (TRUE,FALSE,FINE)."
+        }
+    } else {
+        set runEco0_value  "TRUE" 
+    }
+	
+	
+	if {[regexp {50t} $device_part] || [regexp {045} $device_part]} {
+	    set runEco0_value  "FALSE"  
+	}
+	
+    #get pcie_version
+    set pcie_index [lsearch $str_list -pcie_version]
+    if {$pcie_index >= 0} {
+        set pcie_value  [lindex $str_list [expr $pcie_index+1]]
+        if {$pcie_value  == "NEW" || $pcie_value  == "new"} {
+		    set pcie_value "NEW"
+        } elseif {$pcie_value  == "OLD" || $pcie_value  == "old"} {
+		    set pcie_value "OLD"
+        } else {
+            error "Error occurs!\nThe value range of -pcie_version expected is (NEW,OLD)."
+        }
+    } else {
+        set pcie_value  "NEW" 
+    }
+	
+	#get mig_version
+	set mig_version_index [lsearch $str_list -mig_version]
+    if {$mig_version_index >= 0} {
+        set mig_version_value [lindex $str_list [expr $mig_version_index+1]]
+        if {$mig_version_value == "NORMAL" || $mig_version_value == "normal" } {
+		    set mig_version_value "NORMAL"
+        } elseif {$mig_version_value == "FINE_PRBS" || $mig_version_value == "fine_prbs"} {
+		    set mig_version_value "FINE_PRBS"
+        } else {
+            error "Error occurs!\nThe value range of -mig_version expected is (NORMAL,FINE_PRBS)."
+        }
+    } else {
+        set mig_version_value "NORMAL" 
+    }
+	
+	#get microblaze_value
+	set microblaze_index [lsearch $str_list -microblaze]
+    if {$microblaze_index >= 0} {
+        set microblaze_value [lindex $str_list [expr $microblaze_index+1]]
+        if {$microblaze_value == "NONE" || $microblaze_value == "none" } {
+		    set microblaze_value "NONE"
+        } elseif {$microblaze_value == "SRL" || $microblaze_value == "srl"} {
+		    set microblaze_value "SRL"
+        } elseif {$microblaze_value == "LUTRAM" || $microblaze_value == "lutram"} {
+		    set microblaze_value "LUTRAM"
+        } elseif {$microblaze_value == "BOTH" || $microblaze_value == "both"} {
+		    set microblaze_value "BOTH"
+        } elseif {$microblaze_value == "FALSE" || $microblaze_value == "false"} {
+		    set microblaze_value "FALSE"
+        } else {
+            error "Error occurs!\nThe value range of -microblaze expected is (NONE,SRL,LUTRAM,BOTH)."
+        }
+    } else {
+        set microblaze_value "FALSE" 
+    }
+	
+    #get gp_patch_value
+    set gp_patch_index [lsearch $str_list -gp_patch]
+    if {$gp_patch_index >= 0} {
+        set gp_patch_value [lindex $str_list [expr $gp_patch_index+1]]
+        if {$gp_patch_value  == "TRUE" || $gp_patch_value  == "true"} {
+		    set gp_patch_value "TRUE"
+        } elseif {$gp_patch_value  == "FALSE" || $gp_patch_value  == "false"} {
+		    set gp_patch_value "FALSE"
+        } else {
+            error "Error occurs!\nThe value range of -gp_patch expected is (TRUE, FALSE)."
+        }
+    } else {
+        set gp_patch_value "FALSE" 
+    }
+	
+	#clkout0_phase
+	set clkout0_phase_index [lsearch $str_list -clkout0_phase]
+    if {$clkout0_phase_index >= 0} {
+        set clkout0_phase_value [lindex $str_list [expr $clkout0_phase_index+1]]
+        if {[lsearch {0.0 15.0 22.5 30.0 45.0 60.0 67.5 75.0 90.0 105.0 112.5 120.0 135.0 150.0 157.5 165.0 180.0 195.0 202.5 210.0 225.0 240.0 247.5 255.0 270.0 285.0 292.5 300.0 315.0 330.0 337.5 345.0 360.0} $clkout0_phase_value] < 0} {
+            error "Error occurs!\nThe value range of -clkout0_phase expected is (0.0 15.0 22.5 30.0 45.0 60.0 67.5 75.0 90.0 105.0 112.5 120.0 135.0 150.0 157.5 165.0 180.0 195.0 202.5 210.0 225.0 240.0 247.5 255.0 270.0 285.0 292.5 300.0 315.0 330.0 337.5 345.0 360.0)."
+        }
+    } else {
+        set clkout0_phase_value "NONE"
+    }
+	
+	#get max_adj_flag
+	set max_adj_flag_index [lsearch $str_list -max_adj_flag]
+    if {$max_adj_flag_index >= 0} {
+        set max_adj_flag_value [lindex $str_list [expr $max_adj_flag_index+1]]
+        if {$max_adj_flag_value > 9 || $max_adj_flag_value < 0} {
+            error "Error occurs!\nThe value range of -max_adj_flag expected is (0 to 9)."
+        }
+    } else {
+        set max_adj_flag_value 9 
+    }
+	
+	#get adj_index
+	set adj_index [lsearch $str_list -adj_level]
+    if {$adj_index >= 0} {
+        set adj_level_value [lindex $str_list [expr $adj_index+1]]
+        if {$adj_level_value > 2 || $adj_level_value < 0} {
+            error "Error occurs!\nThe value range of -adj_level expected is (0,1,2)."
+        }
+    } else {
+        set adj_level_value 2 
+    }
+	
+	#cnt max
+	set cnt_max_index [lsearch $str_list -cnt_max]
+    if {$cnt_max_index >= 0} {
+        set cnt_max_value [lindex $str_list [expr $cnt_max_index+1]]
+        if {$cnt_max_value > 18446744073709551616  || $cnt_max_value <= 0} {
+            error "Error occurs!\nThe value range of -cnt_max expected is 1 to 2^64."
+        }
+    } else {
+        set cnt_max_value 0 
+    }
+	
+	#get idel_dec_cnt_value 
+	set idel_dec_cnt_index [lsearch $str_list -idel_dec_cnt]
+    if {$idel_dec_cnt_index >= 0} {
+        set idel_dec_cnt_value [lindex $str_list [expr $idel_dec_cnt_index+1]]
+        if {$idel_dec_cnt_value > 10 || $idel_dec_cnt_value < 1} {
+            error "Error occurs!\nThe value range of -idel_dec_cnt expected is (1 to 10)."
+        }
+    } else {
+        set idel_dec_cnt_value "1" 
+    }
+	
+	#get_pma_mmcm_lock_value
+	set pma_mmcm_lock_index [lsearch $str_list -pma_mmcm_lock]
+    if {$pma_mmcm_lock_index >= 0} {
+        set pma_mmcm_lock_value [lindex $str_list [expr $pma_mmcm_lock_index+1]]
+        if {$pma_mmcm_lock_value == "ON" || $pma_mmcm_lock_value == "on"} {
+		    set pma_mmcm_lock_value "ON" 
+		
+        } elseif {$pma_mmcm_lock_value == "OFF" || $pma_mmcm_lock_value == "off"} {
+		    set pma_mmcm_lock_value "OFF" 
+        } else {
+            error "Error occurs!\nThe value range of -pma_mmcm_lock expected is (ON, OFF)."
+        }
+    } else {
+        set pma_mmcm_lock_value "OFF" 
+    }
+	
+		#get_bh_use_ocal_value
+	set bh_use_ocal_index [lsearch $str_list -bh_use_ocal]
+    if {$bh_use_ocal_index >= 0} {
+        set bh_use_ocal_value [lindex $str_list [expr $bh_use_ocal_index+1]]
+        if {$bh_use_ocal_value == "ON" || $bh_use_ocal_value == "on"} {
+		    set bh_use_ocal_value "ON" 
+		
+        } elseif {$bh_use_ocal_value == "OFF" || $bh_use_ocal_value == "off"} {
+		    set bh_use_ocal_value "OFF" 
+        } else {
+            error "Error occurs!\nThe value range of -bh_use_ocal expected is (ON, OFF)."
+        }
+    } else {
+        set bh_use_ocal_value "OFF" 
+    }
+	
+	if {[regexp {xc7z045_fmbh45} $device_part]} {
+		 # set bh_use_ocal_value "ON"
+	}
+	
+	#get_calib_opt_value
+	set calib_opt_index [lsearch $str_list -calib_opt]
+    if {$calib_opt_index >= 0} {
+        set calib_opt_value [lindex $str_list [expr $calib_opt_index+1]]
+        if {$calib_opt_value == "ON" || $calib_opt_value == "on"} {
+		    set calib_opt_value "ON" 
+		
+        } elseif {$calib_opt_value == "OFF" || $calib_opt_value == "off"} {
+		    set calib_opt_value "OFF" 
+        } else {
+            error "Error occurs!\nThe value range of -calib_opt expected is (ON, OFF)."
+        }
+    } else {
+        set calib_opt_value "OFF" 
+    }
+	
+	#get_init_opt_value
+	set init_opt_index [lsearch $str_list -init_opt]
+    if {$init_opt_index >= 0} {
+        set init_opt_value [lindex $str_list [expr $init_opt_index+1]]
+        if {$init_opt_value == "ON" || $init_opt_value == "on"} {
+		    set init_opt_value "ON" 
+		
+        } elseif {$init_opt_value == "OFF" || $init_opt_value == "off"} {
+		    set init_opt_value "OFF" 
+        } else {
+            error "Error occurs!\nThe value range of -init_opt expected is (ON, OFF)."
+        }
+    } else {
+        set init_opt_value "OFF" 
+    }
+	
+	#get_ck_odelay_value
+	set ck_odelay_index [lsearch $str_list -ck_odelay]
+    if {$ck_odelay_index >= 0} {
+        set ck_odelay_value [lindex $str_list [expr $ck_odelay_index+1]]
+        if {$ck_odelay_value >=0 && $ck_odelay_value <=31} {
+		    
+        } elseif {$ck_odelay_value == "OFF" || $ck_odelay_value == "off"} {
+		    set ck_odelay_value "OFF" 
+        } else {
+            error "Error occurs!\nThe value range of -ck_odelay expected is (0-31, OFF)."
+        }
+    } else {
+        set ck_odelay_value "OFF" 
+    }
+	
+	
+	#get init_adj_value 
+	set init_adj_index [lsearch $str_list -init_adj]
+    if {$init_adj_index >= 0} {
+        set init_adj_value [lindex $str_list [expr $init_adj_index+1]]
+        if {$init_adj_value > 9 || $init_adj_value < 0} {
+            error "Error occurs!\nThe value range of -init_adj expected is (0 to 9)."
+        }
+    } else {
+        set init_adj_value "2" 
+    }
+	
+	set ctl_po_comp_index [lsearch $str_list -ctl_po_comp]
+    if {$ctl_po_comp_index >= 0} {
+        set ctl_po_comp_value [lindex $str_list [expr $ctl_po_comp_index+1]]
+    } else {
+        set ctl_po_comp_value "NONE" 
+    }
+	
+	
+
+	#get_double_freq_value
+	set double_freq_index [lsearch $str_list -double_freq]
+    if {$double_freq_index >= 0} {
+        set double_freq_value [lindex $str_list [expr $double_freq_index+1]]
+        if {$double_freq_value == "ON" || $double_freq_value == "on"} {
+		    set double_freq_value "ON" 
+		
+        } elseif {$double_freq_value == "OFF" || $double_freq_value == "off"} {
+		    set double_freq_value "OFF" 
+        } else {
+            error "Error occurs!\nThe value range of -double_freq expected is (ON, OFF)."
+        }
+    } else {
+        set double_freq_value "OFF" 
+    }
+	
+	set infifo_opt_index [lsearch $str_list -infifo_opt]
+    if {$infifo_opt_index >= 0} {
+        set infifo_opt_value [lindex $str_list [expr $infifo_opt_index+1]]
+        if {$infifo_opt_value == "TRUE" || $infifo_opt_value == "true"} {
+		    set infifo_opt_value "TRUE" 
+        } elseif {$infifo_opt_value == "FALSE" || $infifo_opt_value == "false"} {
+		    set infifo_opt_value "FALSE"
+        } else {
+            error "Error occurs!\nThe value range of -infifo_opt expected is (TRUE, FALSE)."
+        }
+    } else {
+        set infifo_opt_value "FALSE" 
+    }
+	
+	set dqs_find_pattern_index [lsearch $str_list -dqs_find_pattern]
+    if {$dqs_find_pattern_index >= 0} {
+        set dqs_find_pattern_value [lindex $str_list [expr $dqs_find_pattern_index+1]]
+        if {$dqs_find_pattern_value == "000"} {
+        } elseif {$dqs_find_pattern_value == "001"} {
+        } else {
+            error "Error occurs!\nThe value range of -dqs_find_pattern expected is (000, 001)."
+        }
+    } else {
+        set dqs_find_pattern_value "000" 
+    }
+	
+	
+	#get calib_fast_index
+	set calib_fast_index [lsearch $str_list -calib_fast]
+    if {$calib_fast_index >= 0} {
+        set calib_fast_value [lindex $str_list [expr $calib_fast_index+1]]
+        if {$calib_fast_value == "TRUE" || $calib_fast_value == "true"} {
+		    set calib_fast_value "TRUE" 
+        } elseif {$calib_fast_value == "FALSE" || $calib_fast_value == "false"} {
+		    set calib_fast_value "FALSE"
+        } else {
+            error "Error occurs!\nThe value range of -calib_fast expected is (TRUE, FALSE)."
+        }
+    } else {
+        set calib_fast_value "TRUE" 
+    }
+	
+	#get max_pc_cnt_index
+	set max_pc_cnt_index [lsearch $str_list -max_pc_cnt]
+    if {$max_pc_cnt_index >= 0} {
+        set max_pc_cnt_value [lindex $str_list [expr $max_pc_cnt_index+1]]
+        if {$max_pc_cnt_value < 0} {
+            error "Error occurs!\nThe expected value of -max_pc_cnt is greater than 0."
+        }
+    } else {
+        set max_pc_cnt_value 100000 
+    }
+	
+	#get precharge_check_index
+	set precharge_check_index [lsearch $str_list -precharge_check]
+    if {$precharge_check_index >= 0} {
+        set precharge_check_value [lindex $str_list [expr $precharge_check_index+1]]
+        if {$precharge_check_value == "TRUE" || $precharge_check_value == "true"} {
+		    set precharge_check_value "TRUE" 
+		
+        } elseif {$precharge_check_value == "FALSE" || $precharge_check_value == "false"} {
+		    set precharge_check_value "FALSE" 
+        } else {
+            error "Error occurs!\nThe value range of -precharge_check expected is (TRUE, FALSE)."
+        }
+    } else {
+        set precharge_check_value "FALSE" 
+    }
+	
+	#get mig_comp_value 
+	set mig_comp_index [lsearch $str_list -mig_comp]
+    if {$mig_comp_index >= 0} {
+        set mig_comp_value [lindex $str_list [expr $mig_comp_index+1]]
+        if {$mig_comp_value == "TRUE" || $mig_comp_value == "true"} {
+		    set mig_comp_value "TRUE" 
+		
+        } elseif {$mig_comp_value == "FALSE" || $mig_comp_value == "false"} {
+		    set mig_comp_value "FALSE" 
+        } else {
+            error "Error occurs!\nThe value range of -mig_comp expected is (TRUE, FALSE)."
+        }
+    } else {
+        set mig_comp_value "FALSE" 
+    }
+	#####MIG OCD
+	set ocd_comp_mode_index [lsearch $str_list -ocd_comp_mode]
+    if {$ocd_comp_mode_index >= 0} {
+        set ocd_comp_mode_value [lindex $str_list [expr $ocd_comp_mode_index+1]]
+        if {$ocd_comp_mode_value == "ON" || $ocd_comp_mode_value == "on"} {
+		    set ocd_comp_mode_value "ON" 
+		
+        } elseif {$ocd_comp_mode_value == "OFF" || $ocd_comp_mode_value == "off"} {
+		    set ocd_comp_mode_value "OFF" 
+        } else {
+            error "Error occurs!\nThe value range of -ocd_comp_mode expected is (ON, OFF)."
+        }
+    } else {
+        set ocd_comp_mode_value "OFF" 
+    }
+	
+	set ocd_comp_inc_index [lsearch $str_list -ocd_comp_inc]
+    if {$ocd_comp_inc_index >= 0} {
+        set ocd_comp_inc_value [lindex $str_list [expr $ocd_comp_inc_index+1]]
+        if {$ocd_comp_inc_value == "ON" || $ocd_comp_inc_value == "on"} {
+		    set ocd_comp_inc_value "ON" 
+		
+        } elseif {$ocd_comp_inc_value == "OFF" || $ocd_comp_inc_value == "off"} {
+		    set ocd_comp_inc_value "OFF" 
+        } else {
+            error "Error occurs!\nThe value range of -ocd_comp_inc expected is (ON, OFF)."
+        }
+    } else {
+        set ocd_comp_inc_value "OFF" 
+    }
+	
+	set ocd_comp_value_index [lsearch $str_list -ocd_comp_value]
+    if {$ocd_comp_value_index >= 0} {
+        set ocd_comp_value_value [lindex $str_list [expr $ocd_comp_value_index+1]]
+        if {$ocd_comp_value_value > 17  || $ocd_comp_value_value <= 0} {
+            error "Error occurs!\nThe value range of -ocd_comp_value expected is 1 to 16."
+        }
+    } else {
+        set ocd_comp_value_value 2
+    }
+	
+	######
+	set ck_comp_index [lsearch $str_list -ck_comp]
+    if {$ck_comp_index >= 0} {
+        set ck_comp_value [lindex $str_list [expr $ck_comp_index+1]]
+        if {$ck_comp_value == "ON" || $ck_comp_value == "on"} {
+		    set ck_comp_value "ON" 
+		
+        } elseif {$ck_comp_value == "OFF" || $ck_comp_value == "off"} {
+		    set ck_comp_value "OFF" 
+        } else {
+            error "Error occurs!\nThe value range of -ck_comp expected is (ON, OFF)."
+        }
+    } else {
+        set ck_comp_value "OFF" 
+    }
+	
+	set ck_incdec_index [lsearch $str_list -ck_incdec]
+    if {$ck_incdec_index >= 0} {
+        set ck_incdec_value [lindex $str_list [expr $ck_incdec_index+1]]
+        if {$ck_incdec_value == "ON" || $ck_incdec_value == "on"} {
+		    set ck_incdec_value "ON" 
+		
+        } elseif {$ck_incdec_value == "OFF" || $ck_incdec_value == "off"} {
+		    set ck_incdec_value "OFF" 
+        } else {
+            error "Error occurs!\nThe value range of -ck_incdec expected is (ON, OFF)."
+        }
+    } else {
+        set ck_incdec_value "ON" 
+    }
+	
+	set final_bias_tap_index [lsearch $str_list -final_bias_tap]
+    if {$final_bias_tap_index >= 0} {
+        set final_bias_tap_value [lindex $str_list [expr $final_bias_tap_index+1]]
+        if {$final_bias_tap_value > 30  || $final_bias_tap_value <= 0} {
+            error "Error occurs!\nThe value range of -final_bias_tap expected is 1 to 30."
+        }
+    } else {
+        set final_bias_tap_value 18
+    }
+	
+	
+	set phy_rdlvl_index [lsearch $str_list -phy_rdlvl]
+    if {$phy_rdlvl_index >= 0} {
+        set phy_rdlvl_value [lindex $str_list [expr $phy_rdlvl_index+1]]
+        if {$phy_rdlvl_value == "ON" || $phy_rdlvl_value == "on"} {
+		    set phy_rdlvl_value "ON" 
+		
+        } elseif {$phy_rdlvl_value == "OFF" || $phy_rdlvl_value == "off"} {
+		    set phy_rdlvl_value "OFF" 
+        } else {
+            error "Error occurs!\nThe value range of -phy_rdlvl expected is (ON, OFF)."
+        }
+    } else {
+        set phy_rdlvl_value "OFF" 
+    }
+	
+	###########################
+	
+	
+	
+	
+	set mig_ecc_index [lsearch $str_list -mig_ecc]
+    if {$mig_ecc_index >= 0} {
+        set mig_ecc_value [lindex $str_list [expr $mig_ecc_index+1]]
+        if {$mig_ecc_value == "ON" || $mig_ecc_value == "on"} {
+		    set mig_ecc_value "ON" 
+		
+        } elseif {$mig_ecc_value == "OFF" || $mig_ecc_value == "off"} {
+		    set mig_ecc_value "OFF" 
+        } else {
+            error "Error occurs!\nThe value range of -mig_ecc expected is (ON, OFF)."
+        }
+    } else {
+        set mig_ecc_value "OFF" 
+    }
+	
+	#get fmsh_1553b_value 
+	set dst_index [lsearch $str_list -fmsh_1553b]
+    if {$dst_index >= 0} {
+        set fmsh_1553b_value [lindex $str_list [expr $dst_index+1]]
+        if {$fmsh_1553b_value == "TRUE" || $fmsh_1553b_value == "true"} {
+		    set fmsh_1553b_value "TRUE" 
+        } elseif {$fmsh_1553b_value == "FALSE" || $fmsh_1553b_value == "false" } {
+		    set fmsh_1553b_value "FALSE" 
+        } else {
+            error "Error occurs!\nThe value range of fmsh_1553b expected is (TRUE, FALSE)."
+        }
+    } else {
+        set fmsh_1553b_value "FALSE" 
+    }
+	#get eth_40G_value 
+	set dst_index [lsearch $str_list -eth_40G]
+    if {$dst_index >= 0} {
+        set eth_40G_value [lindex $str_list [expr $dst_index+1]]
+        if {$eth_40G_value == "TRUE" || $eth_40G_value == "true"} {
+		    set eth_40G_value "TRUE" 
+        } elseif {$eth_40G_value == "FALSE" || $eth_40G_value == "false" } {
+		    set eth_40G_value "FALSE" 
+        } else {
+            error "Error occurs!\nThe value range of eth_40G expected is (TRUE, FALSE)."
+        }
+    } else {
+        set eth_40G_value "FALSE" 
+    }
+	#rxlpmen
+	set dst_index [lsearch $str_list -rxlpmen]
+    if {$dst_index >= 0} {
+        set rxlpmen_value [lindex $str_list [expr $dst_index+1]]
+        if {$rxlpmen_value == "0"} {
+        } elseif {$rxlpmen_value == "1"} {
+        } elseif {$rxlpmen_value == "NONE" || $rxlpmen_value == "none" } {
+        } else {
+            error "Error occurs!\nThe value range of rxlpmen expected is (0,1,NONE)."
+        }
+    } else {
+        set rxlpmen_value "NONE" 
+    }
+	#
+	#gt_5g_cpll 
+	set dst_index [lsearch $str_list -gt_5g_cpll]
+    if {$dst_index >= 0} {
+        set gt_5g_cpll_value [lindex $str_list [expr $dst_index+1]]
+        if {$gt_5g_cpll_value == "TRUE" || $gt_5g_cpll_value == "true"} {
+		    set gt_5g_cpll_value "TRUE" 
+        } elseif {$gt_5g_cpll_value == "FALSE" || $gt_5g_cpll_value == "false" } {
+		    set gt_5g_cpll_value "FALSE" 
+        } else {
+            error "Error occurs!\nThe value range of gt_5g_cpll expected is (TRUE, FALSE)."
+        }
+    } else {
+        set gt_5g_cpll_value "FALSE" 
+    }
+	
+	
+	#mig_timer 
+	set dst_index [lsearch $str_list -mig_timer]
+    if {$dst_index >= 0} {
+        set mig_timer_value [lindex $str_list [expr $dst_index+1]]
+    } else {
+        set mig_timer_value "5e3" 
+    }
+	
+	#mig_det_dqs_cnt
+	set mig_det_dqs_cnt [lsearch $str_list -mig_det_dqs_cnt]
+    if {$mig_det_dqs_cnt >= 0} {
+        set mig_det_dqs_cnt_value [lindex $str_list [expr $mig_det_dqs_cnt+1]]
+    } else {
+        set mig_det_dqs_cnt_value "2000" 
+    }
+	
+	#qdr_k_init
+	set qdr_k_init [lsearch $str_list -qdr_k_init]
+    if {$qdr_k_init >= 0} {
+        set qdr_k_init_value [lindex $str_list [expr $qdr_k_init+1]]
+    } else {
+        set qdr_k_init_value "1" 
+    }
+	
+	
+	#disable_icap 
+	set dst_index [lsearch $str_list -disable_icap]
+    if {$dst_index >= 0} {
+        set disable_icap_value [lindex $str_list [expr $dst_index+1]]
+        if {$disable_icap_value == "TRUE" || $disable_icap_value == "true"} {
+		    set disable_icap_value "TRUE" 
+        } elseif {$disable_icap_value == "FALSE" || $disable_icap_value == "false" } {
+		    set disable_icap_value "FALSE" 
+        } else {
+            error "Error occurs!\nThe value range of disable_icap expected is (TRUE, FALSE)."
+        }
+    } else {
+        set disable_icap_value "TRUE" 
+    }
+	#xadc_filter
+	set dst_index [lsearch $str_list -xadc_filter]
+    if {$dst_index >= 0} {
+        set xadc_filter_value [lindex $str_list [expr $dst_index+1]]
+        if {$xadc_filter_value == "TRUE" || $xadc_filter_value == "true"} {
+		    set xadc_filter_value "TRUE" 
+        } elseif {$xadc_filter_value == "FALSE" || $xadc_filter_value == "false" } {
+		    set xadc_filter_value "FALSE" 
+        } else {
+            error "Error occurs!\nThe value range of xadc_filter expected is (TRUE, FALSE)."
+        }
+    } else {
+        set xadc_filter_value "TRUE" 
+    }
+    #recreate synthesis_pre.tcl
+    set syn_pre_mod "1"
+    if {$syn_pre_mod == "1"} {
+        set fileout [open $synthesis_pre_tcl_path "w"]
+		
+        puts $fileout {set parent [get_property parent.project_path [current_project] -quiet]}
+	    puts $fileout {set current_prj_path [file dirname $parent]}
+		puts $fileout {set ::env(JFM_PATH) $current_prj_path}
+        puts $fileout {set run_tcl_path [file join $::env(JFM_PATH) "ip_patch" "run.tcl"]}
+		
+        puts $fileout "source \$run_tcl_path"
+		puts $fileout {set prj_path [get_prj_path]}
+        puts $fileout "open_project \$prj_path"
+        puts $fileout {puts "step 1:pre_patch_check"}
+        puts $fileout {pre_patch_check}
+        puts $fileout {puts "step 2:pre_synthesis_patch"}
+		puts "Set PCIE -pcie_version  $pcie_value!"
+		puts "Set MIG -mig_version  $mig_version_value!"
+		puts "Set MIG -mig_comp  $mig_comp_value!"
+		puts "Set MIG -idel_dec_cnt  $idel_dec_cnt_value!"
+		puts "Set MIG -mig_ecc  $mig_ecc_value!"
+		puts "Set MIG -precharge_check  $precharge_check_value!"
+		puts "Set MIG -max_pc_cnt  $max_pc_cnt_value!"
+		puts "Set MIG -calib_fast  $calib_fast_value!"
+		puts "Set MIG -adj_level  $adj_level_value!"
+		puts "Set MIG -max_adj_flag  $max_adj_flag_value!"
+		
+		
+		puts "Set MIG -ocd_comp_inc  $ocd_comp_inc_value!"
+		puts "Set MIG -ocd_comp_value  $ocd_comp_value_value!"
+		puts "Set MIG -ocd_comp_mode  $ocd_comp_mode_value!"
+		
+		puts "Set MIG -ck_comp  $ck_comp_value!"
+		puts "Set MIG -ck_incdec  $ck_incdec_value!"
+		puts "Set MIG -final_bias_tap  $final_bias_tap_value!"
+		puts "Set MIG -phy_rdlvl  $phy_rdlvl_value!"
+		
+		puts "Set MIG -infifo_opt  $infifo_opt_value!"
+		puts "Set MIG -dqs_find_pattern  $dqs_find_pattern_value!"
+		puts "Set MIG -clkout0_phase  $clkout0_phase_value!"
+		puts "Set MIG -bh_use_ocal  $bh_use_ocal_value!"
+		puts "Set MIG -double_freq  $double_freq_value!"
+		puts "Set MIG -calib_opt  $calib_opt_value!"
+		puts "Set MIG -init_opt  $init_opt_value!"
+		puts "Set MIG -ck_odelay  $ck_odelay_value!"
+		puts "Set MIG -init_adj  $init_adj_value!"
+		puts "Set MIG -ctl_po_comp  $ctl_po_comp_value!"
+		
+		puts "Set MICROBLAZE -microblaze  $microblaze_value!"
+		puts "Set PS_MASTER -gp_patch  $gp_patch_value!"
+		puts "Set -fmsh_1553b  $fmsh_1553b_value!"
+		puts "Set -eth_40G  $eth_40G_value!"
+		puts "Set XFFT -mem_type $mem_type_value!"
+		puts "Set AURORA_8B10B -rxlpmen  $rxlpmen_value!"
+		puts "Set PCIe Gen3 -pma_mmcm_lock  $pma_mmcm_lock_value!"
+		puts "Set AURORA_8B10B -cnt_max $cnt_max_value!"
+		puts "Set database info -msg_serverity $msg_serverity_value!"
+		puts "Set XADC -xadc_filter $xadc_filter_value!"
+		puts "Set bit_patch -disable_icap $disable_icap_value!"
+		puts "Set change_speed -change_speed $change_speed_value!"
+		puts "Set MIG -bh_mig $bh_mig_value!"
+		puts "Set MIG -bh_mig_dfx $bh_mig_dfx_value!"
+		puts "Set PCIe -rx_def_kl $rx_def_kl_value!"
+		puts "Set -clock_source $clock_source_value!"
+		puts "Set AURORA_64B66B -gt_5g_cpll $gt_5g_cpll_value!"
+		puts "Set MIG -mig_timer $mig_timer_value!"
+		puts "Set MIG -mig_det_dqs_cnt $mig_det_dqs_cnt_value!"
+		puts "Set MIG -qdr_k_init $qdr_k_init_value!"
+		
+        puts $fileout "pre_synthesis_patch $str_list"
+        puts $fileout {puts "step 3:runEco0"}
+        if {$runEco0_value == "FALSE"} {
+	  
+	        puts "Skip runEco0 successfully!"
+  
+        } elseif {$runEco0_value == "TRUE"} {
+             puts $fileout {runEco 0 0}
+        } elseif {$runEco0_value == "FINE"} {
+		     puts $fileout {runEco 0 1}
+		} 
+		puts $fileout {close_project}
+        close $fileout
+  }
+	#get bh_bram
+	set bh_bram_index [lsearch $str_list -bh_bram]
+	set bram_file ""
+    if {$bh_bram_index >= 0} {
+        set bh_bram_value [lindex $str_list [expr $bh_bram_index+1]]
+        if {$bh_bram_value == "ALL"} {
+        } elseif {$bh_bram_value == "READ_FILE"} {
+			set bram_file [lindex $str_list [expr $bh_bram_index+2]]
+			if {[file exists $bram_file] == 0} {
+				error "FMSH-->ERROR:Current bh_bram mode is READ_FILE,but the brams file is not existing!"
+			}
+        } elseif {$bh_bram_value == "NONEZERO"} {
+        } elseif {$bh_bram_value == "SKIP"} {
+        } else {
+            error "Error occurs!\nThe value range of bh_bram expected is (ALL,READ_FILE,NONEZERO,SKIP)."
+        }
+    } else {
+        set bh_bram_value "SKIP" 
+    }
+   #get buf
+    set buf_index [lsearch $str_list -buf]
+    if {$buf_index >= 0} {
+        set buf_value  [lindex $str_list [expr $buf_index+1]]
+        if {$buf_value  == "BUFG" || $buf_value  == "bufg"} {
+	        set buf_value "BUFG"
+        } elseif {$buf_value  == "BUFH" || $buf_value  == "bufh"} {
+	        set buf_value "BUFH"
+        } else {
+            error "Error occurs!\nThe value range of -buf expected is (BUFG, BUFH)."
+        }
+    } else {
+        set buf_value  "BUFG" 
+    }
+  #get startupe2
+    set startupe2_index [lsearch $str_list -startupe2]
+    if {$startupe2_index >= 0} {
+        set startupe2_value  [lindex $str_list [expr $startupe2_index+1]]
+        if {$startupe2_value  == "TRUE" || $startupe2_value  == "true" } {
+		    set startupe2_value "TRUE"
+        } elseif {$startupe2_value  == "FALSE" || $startupe2_value  == "false"} {
+		    set startupe2_value "FALSE"
+        } else {
+            error "Error occurs!\nThe value range of -startupe2 expected is (TRUE, FALSE)."
+        }
+    } else {
+        set startupe2_value  "FALSE" 
+    }
+  #get qpll
+    set qpll_index [lsearch $str_list -qpll]
+    if {$qpll_index >= 0} {
+        set qpll_value  [lindex $str_list [expr $qpll_index+1]]
+        if {$qpll_value  == "TRUE" || $qpll_value  == "true"} {
+		    set qpll_value "TRUE"
+        } elseif {$qpll_value  == "FALSE" || $qpll_value  == "false"} {
+		    set qpll_value "FALSE"
+        } else {
+            error "Error occurs!\nThe value range of -qpll expected is (TRUE, FALSE)."
+        }
+    } else {
+        set qpll_value  "FALSE" 
+    }
+	#get xadc_aux
+    set xadc_index [lsearch $str_list -xadc_aux]
+    if {$xadc_index >= 0} {
+        set xadc_value  [lindex $str_list [expr $xadc_index+1]]
+        if {$xadc_value  == "UPGRADE" || $xadc_value  == "upgrade"} {
+		    set xadc_value "UPGRADE"
+        } elseif {$xadc_value  == "DEGRADE" || $xadc_value  == "degrade"} {
+		    set xadc_value "DEGRADE"
+        } elseif {$xadc_value  == "FALSE" || $xadc_value  == "false"} {
+		    set xadc_value "FALSE"
+        } elseif {$xadc_value  == "SKIP" || $xadc_value  == "skip"} {
+		    set xadc_value "SKIP"
+        } else {
+            error "Error occurs!\nThe value range of -xadc_aux expected is (UPGRADE,DEGRADE,FALSE,SKIP)."
+        }
+    } else {
+        set xadc_value  "FALSE" 
+    }
+	#get bram_patch_check
+	set bram_patch_check_index [lsearch $str_list -bram_patch_check]
+    if {$bram_patch_check_index >= 0} {
+        set bram_patch_check_value  [lindex $str_list [expr $bram_patch_check_index+1]]
+        if {$bram_patch_check_value  == "TRUE" || $bram_patch_check_value  == "true"} {
+		    set bram_patch_check_value "TRUE"
+        } elseif {$bram_patch_check_value  == "FALSE" || $bram_patch_check_value  == "false"} {
+		    set bram_patch_check_value "FALSE"
+        } else {
+            error "Error occurs!\nThe value range of -bram_patch_check expected is (TRUE,FALSE)."
+        }
+    } else {
+        set bram_patch_check_value  "TRUE" 
+    }
+	
+	set device_part [get_property PART [current_project]]
+	if {[regexp {50t} $device_part] || [regexp {045} $device_part]} {
+	    set bram_patch_check_value  "FALSE"  
+	}
+	
+  #recreate implementation_opt_post.tcl
+    set impl_opt_mod "1"
+    if {$impl_opt_mod == "1"} {
+        set fileout_imp [open $implementation_opt_post_tcl_path "w"]
+
+		puts $fileout_imp {set ::env(JFM_PATH) [file join [pwd] "../.."]}
+        puts $fileout_imp {set run_tcl_path [file join $::env(JFM_PATH) "ip_patch" "run.tcl"]}
+        puts $fileout_imp "source \$run_tcl_path"
+		puts $fileout_imp {set prj_path [get_prj_path]}
+	    puts $fileout_imp "open_project \$prj_path"
+        puts $fileout_imp {puts "step 4:post_opt_design_patch"}
+		puts "Set QPLL -buf  $buf_value!"
+		puts "Set QPLL -qpll  $qpll_value!"
+		puts "Set BRAM/FIFO -bram_patch_check  $bram_patch_check_value!"
+		puts "Set XADC -xadc_aux  $xadc_value!"
+		puts "Set -startupe2  $startupe2_value!"
+		puts "Set BRAM/FIFO -BRAM_SDP  $runEco0_value!"
+		puts "Set BaiHu -bh_bram  $bh_bram_value!"
+		puts $fileout_imp {close_project}
+	    puts $fileout_imp "post_opt_design_patch $str_list"
+		set str {
+set JDY_top_u0_cell [get_cells -hierarchical -regexp  -filter {REF_NAME=~JDY_ip_top_.* || ORIG_REF_NAME=~JDY_ip_top_.*}]
+if { [get_cells $JDY_top_u0_cell] != ""} {
+	set_property PROHIBIT true [get_sites -range {SLICE_X32Y75 SLICE_X79Y129}]
+	set_property PROHIBIT true [get_sites -range {SLICE_X30Y20 SLICE_X81Y74}]
+	set_property PROHIBIT true [get_sites -range {DSP48_X2Y8 DSP48_X3Y52}]
+	set_property PROHIBIT true [get_sites -range {RAMB18_X2Y8 RAMB18_X3Y52}]
+	set_property PROHIBIT true [get_sites -range {RAMB36_X2Y4 RAMB36_X3Y26}]
+	
+	set_property PROHIBIT true [get_sites -range {SLICE_X94Y0 SLICE_X97Y29}]
+	set_property PROHIBIT true [get_sites -range {SLICE_X92Y24 SLICE_X93Y29}]
+	set_property PROHIBIT true [get_sites -range {DSP48_X4Y0 DSP48_X4Y11}]
+	set_property PROHIBIT true [get_sites -range {RAMB18_X4Y0 RAMB18_X4Y11}]
+	set_property PROHIBIT true [get_sites -range {RAMB36_X4Y0 RAMB36_X4Y5}]
+	set_property PROHIBIT true [get_sites -range {DSP48_X6Y0 DSP48_X6Y139}]
+}
+		}
+		puts $fileout_imp $str
+	    close $fileout_imp 
+  }
+  
+    #get time_check
+    set time_check_index [lsearch $str_list -time_check]
+    if {$time_check_index >= 0} {
+        set time_check_value  [lindex $str_list [expr $time_check_index+1]]
+        if {$time_check_value  == "TRUE" || $time_check_value  == "true"} {
+		    set time_check_value "TRUE"
+        } elseif {$time_check_value  == "FALSE" || $time_check_value  == "false"} {
+		    set time_check_value "FALSE"
+        } else {
+            error "Error occurs!\nThe value range of -time_check expected is (TRUE, FALSE)."
+        }
+    } else {
+        set time_check_value  "TRUE" 
+    }
+	
+	#get multi_purpose_pin_check_value
+	set multi_purpose_pin_check_index [lsearch $str_list -multi_purpose_pin_check]
+    if {$multi_purpose_pin_check_index >= 0} {
+        set multi_purpose_pin_check_value  [lindex $str_list [expr $multi_purpose_pin_check_index+1]]
+        if {$multi_purpose_pin_check_value  == "TRUE" || $multi_purpose_pin_check_value  == "true"} {
+		    set multi_purpose_pin_check_value "TRUE"
+        } elseif {$multi_purpose_pin_check_value  == "FALSE" || $multi_purpose_pin_check_value  == "false"} {
+		    set multi_purpose_pin_check_value "FALSE"
+        } else {
+            error "Error occurs!\nThe value range of -multi_purpose_pin_check expected is (TRUE, FALSE)."
+        }
+    } else {
+        set multi_purpose_pin_check_value  "TRUE" 
+    }
+	
+	#recreate write_bitstream_pre.tcl
+    set write_bit_pre_mod "1"
+	
+    if {$write_bit_pre_mod == 1} {
+        set fileout_bit_pre [open $write_bitstream_pre_tcl_path "w"]
+		puts $fileout_bit_pre {set ::env(JFM_PATH) [file join [pwd] "../.."]}
+	    puts $fileout_bit_pre {set run_tcl_path [file join $::env(JFM_PATH) "ip_patch" "run.tcl"]}
+        puts $fileout_bit_pre "source \$run_tcl_path"
+		puts $fileout_bit_pre {set prj_path [get_prj_path]}
+		puts $fileout_bit_pre "open_project \$prj_path"
+		puts $fileout_bit_pre {close_project}
+	    puts $fileout_bit_pre {puts "step 5"}
+		puts "Set -time_check  $time_check_value!"
+		puts "Set -multi_purpose_pin_check  $multi_purpose_pin_check_value!"
+        puts $fileout_bit_pre "pre_write_bitstream_patch $str_list"
+		set str {
+
+if {[get_property BITSTREAM.CONFIG.USERID [get_designs [current_design ]]] == ""} {
+	puts "FMSH-->Current IP PATCH version is $::ip_patch::version,set userID to 32'h$::ip_patch::user_id "
+	set_property BITSTREAM.CONFIG.USERID 32'h$::ip_patch::user_id  [get_designs [current_design]]
+}			
+set JDY_top_u0_cell [get_cells -hierarchical -regexp  -filter {REF_NAME=~JDY_ip_top_.* || ORIG_REF_NAME=~JDY_ip_top_.*}]
+
+if { [get_cells $JDY_top_u0_cell] != ""} {
+    set_property IS_ENABLED 0 [get_drc_checks  REQP-44]
+    set_property IS_ENABLED 0 [get_drc_checks  REQP-46]
+}
+
+set device_part [get_property PART [current_project]]
+if {[regexp {xc7z030} $device_part] || [regexp {xc7z100_jfmql} $device_part]} {
+		set_property IS_ENABLED 0 [get_drc_checks  REQP-44]
+		set_property IS_ENABLED 0 [get_drc_checks  REQP-46]
+		set_property IS_ENABLED 0 [get_drc_checks  REQP-52]
+		set_property IS_ENABLED 0 [get_drc_checks  REQP-56]
+}
+		}
+		
+		puts $fileout_bit_pre $str
+	    close $fileout_bit_pre
+    }
+	
+ set write_bit_post_mod "1"
+    if {$write_bit_post_mod == 1} {
+        set fileout_bit_post [open $write_bitstream_post_tcl_path "w"]
+	    
+		puts $fileout_bit_post {set ::env(JFM_PATH) [file join [pwd] "../.."]}
+	    puts $fileout_bit_post {set run_tcl_path [file join $::env(JFM_PATH) "ip_patch" "run.tcl"]}
+        puts $fileout_bit_post "source \$run_tcl_path"
+		puts $fileout_bit_post "post_write_bitstream_patch $str_list"
+		close $fileout_bit_post
+	}
+    set return_value_catch [catch {add_files -fileset utils_1 -norecurse $synthesis_pre_tcl_path $implementation_opt_post_tcl_path $write_bitstream_pre_tcl_path $write_bitstream_post_tcl_path $implementation_opt_pre_tcl_path $implementation_place_pre_tcl_path $implementation_place_post_tcl_path $implementation_route_post_tcl_path -quiet} info_str]
+   
+
+    if {[catch {set_property STEPS.SYNTH_DESIGN.TCL.PRE $synthesis_pre_tcl_path [get_runs [current_run -synthesis]] -quiet} info_str] != "0"} {
+	
+    }
+    if {[catch {set_property STEPS.OPT_DESIGN.TCL.PRE $implementation_opt_pre_tcl_path [get_runs [current_run -implementation]] -quiet} info_str] != "0"} {
+  
+    }	
+	
+  
+    if {[catch {set_property STEPS.OPT_DESIGN.TCL.POST $implementation_opt_post_tcl_path [get_runs [current_run -implementation]] -quiet} info_str] != "0"} {
+  
+    }
+	
+	if {[catch {set_property STEPS.ROUTE_DESIGN.TCL.POST $implementation_route_post_tcl_path [get_runs [current_run -implementation]] -quiet} info_str] != "0"} {
+  
+    }
+	
+	if {[catch {set_property STEPS.WRITE_BITSTREAM.TCL.PRE $write_bitstream_pre_tcl_path [get_runs [current_run -implementation]] -quiet} info_str] != "0"} {
+  
+    }
+
+    if {[catch {set_property STEPS.WRITE_BITSTREAM.TCL.POST $write_bitstream_post_tcl_path [get_runs [current_run -implementation]] -quiet} info_str] != "0"} {
+  
+    }
+	
+	show_ip_patch_version
+	change_device_speed
+	target_language_check
+	ip_patch_version_check 
+	
+    puts "Add hook tcl to project finished!"
+	option_check $str_list
+

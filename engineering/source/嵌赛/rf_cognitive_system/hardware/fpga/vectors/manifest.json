@@ -1,0 +1,423 @@
+{
+  "schema_version": 1,
+  "seed": 20261001,
+  "frame_length": 1024,
+  "case_count": 19,
+  "total_samples": 19456,
+  "iq_word_layout": "hex {Q[15:0], I[15:0]}",
+  "physical_channel_order": [
+    "power",
+    "lag_re",
+    "lag_im"
+  ],
+  "iq_quantizer": {
+    "multiplier": 127,
+    "shift": 15,
+    "quant_min": -127,
+    "quant_max": 127
+  },
+  "physical_quantizer": {
+    "multiplier": 127,
+    "shift": 31,
+    "quant_min": -127,
+    "quant_max": 127
+  },
+  "cases": [
+    {
+      "case_id": 0,
+      "name": "all_zero",
+      "metadata": {}
+    },
+    {
+      "case_id": 1,
+      "name": "single_impulse",
+      "metadata": {}
+    },
+    {
+      "case_id": 2,
+      "name": "positive_negative_alternating",
+      "metadata": {}
+    },
+    {
+      "case_id": 3,
+      "name": "maximum_positive",
+      "metadata": {}
+    },
+    {
+      "case_id": 4,
+      "name": "maximum_negative",
+      "metadata": {}
+    },
+    {
+      "case_id": 5,
+      "name": "near_full_scale",
+      "metadata": {}
+    },
+    {
+      "case_id": 6,
+      "name": "random_iq",
+      "metadata": {}
+    },
+    {
+      "case_id": 7,
+      "name": "bpsk_snr_p20db",
+      "metadata": {
+        "modulation": "BPSK",
+        "snr_db": 20.0,
+        "generator": {
+          "modulation": "BPSK",
+          "sample_rate": 128000.0,
+          "symbol_rate": 16000.0,
+          "samples_per_symbol": 8,
+          "sample_length": 1024,
+          "amplitude_rms": 1.0,
+          "frequency_offset_hz": 0.0,
+          "phase_offset_rad": 0.0,
+          "pulse_shape": "RRC",
+          "constellation_size": 2,
+          "record_timing_offset_samples": 4,
+          "symbol_center_offset_samples": 4,
+          "occupied_bandwidth_hz_approx": 21600.0,
+          "rrc_warmup_symbols_before_record": 8
+        },
+        "awgn": {
+          "target_snr_db": 20.0,
+          "measured_snr_db": 20.0,
+          "signal_power": 1.0,
+          "noise_power": 0.009999999999999997
+        }
+      }
+    },
+    {
+      "case_id": 8,
+      "name": "bpsk_snr_p0db",
+      "metadata": {
+        "modulation": "BPSK",
+        "snr_db": 0.0,
+        "generator": {
+          "modulation": "BPSK",
+          "sample_rate": 128000.0,
+          "symbol_rate": 16000.0,
+          "samples_per_symbol": 8,
+          "sample_length": 1024,
+          "amplitude_rms": 1.0,
+          "frequency_offset_hz": 0.0,
+          "phase_offset_rad": 0.0,
+          "pulse_shape": "RRC",
+          "constellation_size": 2,
+          "record_timing_offset_samples": 6,
+          "symbol_center_offset_samples": 2,
+          "occupied_bandwidth_hz_approx": 21600.0,
+          "rrc_warmup_symbols_before_record": 8
+        },
+        "awgn": {
+          "target_snr_db": 0.0,
+          "measured_snr_db": 0.0,
+          "signal_power": 1.0,
+          "noise_power": 1.0
+        }
+      }
+    },
+    {
+      "case_id": 9,
+      "name": "bpsk_snr_m10db",
+      "metadata": {
+        "modulation": "BPSK",
+        "snr_db": -10.0,
+        "generator": {
+          "modulation": "BPSK",
+          "sample_rate": 128000.0,
+          "symbol_rate": 16000.0,
+          "samples_per_symbol": 8,
+          "sample_length": 1024,
+          "amplitude_rms": 1.0,
+          "frequency_offset_hz": 0.0,
+          "phase_offset_rad": 0.0,
+          "pulse_shape": "RRC",
+          "constellation_size": 2,
+          "record_timing_offset_samples": 3,
+          "symbol_center_offset_samples": 5,
+          "occupied_bandwidth_hz_approx": 21600.0,
+          "rrc_warmup_symbols_before_record": 8
+        },
+        "awgn": {
+          "target_snr_db": -10.0,
+          "measured_snr_db": -10.0,
+          "signal_power": 1.0,
+          "noise_power": 10.0
+        }
+      }
+    },
+    {
+      "case_id": 10,
+      "name": "qpsk_snr_p20db",
+      "metadata": {
+        "modulation": "QPSK",
+        "snr_db": 20.0,
+        "generator": {
+          "modulation": "QPSK",
+          "sample_rate": 128000.0,
+          "symbol_rate": 16000.0,
+          "samples_per_symbol": 8,
+          "sample_length": 1024,
+          "amplitude_rms": 1.0,
+          "frequency_offset_hz": 0.0,
+          "phase_offset_rad": 0.0,
+          "pulse_shape": "RRC",
+          "constellation_size": 4,
+          "record_timing_offset_samples": 3,
+          "symbol_center_offset_samples": 5,
+          "occupied_bandwidth_hz_approx": 21600.0,
+          "rrc_warmup_symbols_before_record": 8
+        },
+        "awgn": {
+          "target_snr_db": 20.0,
+          "measured_snr_db": 20.0,
+          "signal_power": 1.0,
+          "noise_power": 0.010000000000000002
+        }
+      }
+    },
+    {
+      "case_id": 11,
+      "name": "qpsk_snr_p0db",
+      "metadata": {
+        "modulation": "QPSK",
+        "snr_db": 0.0,
+        "generator": {
+          "modulation": "QPSK",
+          "sample_rate": 128000.0,
+          "symbol_rate": 16000.0,
+          "samples_per_symbol": 8,
+          "sample_length": 1024,
+          "amplitude_rms": 1.0,
+          "frequency_offset_hz": 0.0,
+          "phase_offset_rad": 0.0,
+          "pulse_shape": "RRC",
+          "constellation_size": 4,
+          "record_timing_offset_samples": 5,
+          "symbol_center_offset_samples": 3,
+          "occupied_bandwidth_hz_approx": 21600.0,
+          "rrc_warmup_symbols_before_record": 8
+        },
+        "awgn": {
+          "target_snr_db": 0.0,
+          "measured_snr_db": 0.0,
+          "signal_power": 1.0,
+          "noise_power": 1.0
+        }
+      }
+    },
+    {
+      "case_id": 12,
+      "name": "qpsk_snr_m10db",
+      "metadata": {
+        "modulation": "QPSK",
+        "snr_db": -10.0,
+        "generator": {
+          "modulation": "QPSK",
+          "sample_rate": 128000.0,
+          "symbol_rate": 16000.0,
+          "samples_per_symbol": 8,
+          "sample_length": 1024,
+          "amplitude_rms": 1.0,
+          "frequency_offset_hz": 0.0,
+          "phase_offset_rad": 0.0,
+          "pulse_shape": "RRC",
+          "constellation_size": 4,
+          "record_timing_offset_samples": 2,
+          "symbol_center_offset_samples": 6,
+          "occupied_bandwidth_hz_approx": 21600.0,
+          "rrc_warmup_symbols_before_record": 8
+        },
+        "awgn": {
+          "target_snr_db": -10.0,
+          "measured_snr_db": -10.000000000000002,
+          "signal_power": 1.0,
+          "noise_power": 10.000000000000004
+        }
+      }
+    },
+    {
+      "case_id": 13,
+      "name": "16qam_snr_p20db",
+      "metadata": {
+        "modulation": "16QAM",
+        "snr_db": 20.0,
+        "generator": {
+          "modulation": "16QAM",
+          "sample_rate": 128000.0,
+          "symbol_rate": 16000.0,
+          "samples_per_symbol": 8,
+          "sample_length": 1024,
+          "amplitude_rms": 1.0,
+          "frequency_offset_hz": 0.0,
+          "phase_offset_rad": 0.0,
+          "pulse_shape": "RRC",
+          "constellation_size": 16,
+          "record_timing_offset_samples": 7,
+          "symbol_center_offset_samples": 1,
+          "occupied_bandwidth_hz_approx": 21600.0,
+          "rrc_warmup_symbols_before_record": 8
+        },
+        "awgn": {
+          "target_snr_db": 20.0,
+          "measured_snr_db": 20.0,
+          "signal_power": 0.9999999403953552,
+          "noise_power": 0.009999999403953554
+        }
+      }
+    },
+    {
+      "case_id": 14,
+      "name": "16qam_snr_p0db",
+      "metadata": {
+        "modulation": "16QAM",
+        "snr_db": 0.0,
+        "generator": {
+          "modulation": "16QAM",
+          "sample_rate": 128000.0,
+          "symbol_rate": 16000.0,
+          "samples_per_symbol": 8,
+          "sample_length": 1024,
+          "amplitude_rms": 1.0,
+          "frequency_offset_hz": 0.0,
+          "phase_offset_rad": 0.0,
+          "pulse_shape": "RRC",
+          "constellation_size": 16,
+          "record_timing_offset_samples": 7,
+          "symbol_center_offset_samples": 1,
+          "occupied_bandwidth_hz_approx": 21600.0,
+          "rrc_warmup_symbols_before_record": 8
+        },
+        "awgn": {
+          "target_snr_db": 0.0,
+          "measured_snr_db": 0.0,
+          "signal_power": 1.0,
+          "noise_power": 1.0
+        }
+      }
+    },
+    {
+      "case_id": 15,
+      "name": "16qam_snr_m10db",
+      "metadata": {
+        "modulation": "16QAM",
+        "snr_db": -10.0,
+        "generator": {
+          "modulation": "16QAM",
+          "sample_rate": 128000.0,
+          "symbol_rate": 16000.0,
+          "samples_per_symbol": 8,
+          "sample_length": 1024,
+          "amplitude_rms": 1.0,
+          "frequency_offset_hz": 0.0,
+          "phase_offset_rad": 0.0,
+          "pulse_shape": "RRC",
+          "constellation_size": 16,
+          "record_timing_offset_samples": 1,
+          "symbol_center_offset_samples": 7,
+          "occupied_bandwidth_hz_approx": 21600.0,
+          "rrc_warmup_symbols_before_record": 8
+        },
+        "awgn": {
+          "target_snr_db": -10.0,
+          "measured_snr_db": -10.0,
+          "signal_power": 1.0,
+          "noise_power": 10.0
+        }
+      }
+    },
+    {
+      "case_id": 16,
+      "name": "64qam_snr_p20db",
+      "metadata": {
+        "modulation": "64QAM",
+        "snr_db": 20.0,
+        "generator": {
+          "modulation": "64QAM",
+          "sample_rate": 128000.0,
+          "symbol_rate": 16000.0,
+          "samples_per_symbol": 8,
+          "sample_length": 1024,
+          "amplitude_rms": 1.0,
+          "frequency_offset_hz": 0.0,
+          "phase_offset_rad": 0.0,
+          "pulse_shape": "RRC",
+          "constellation_size": 64,
+          "record_timing_offset_samples": 2,
+          "symbol_center_offset_samples": 6,
+          "occupied_bandwidth_hz_approx": 21600.0,
+          "rrc_warmup_symbols_before_record": 8
+        },
+        "awgn": {
+          "target_snr_db": 20.0,
+          "measured_snr_db": 19.999999999999996,
+          "signal_power": 1.0,
+          "noise_power": 0.010000000000000004
+        }
+      }
+    },
+    {
+      "case_id": 17,
+      "name": "64qam_snr_p0db",
+      "metadata": {
+        "modulation": "64QAM",
+        "snr_db": 0.0,
+        "generator": {
+          "modulation": "64QAM",
+          "sample_rate": 128000.0,
+          "symbol_rate": 16000.0,
+          "samples_per_symbol": 8,
+          "sample_length": 1024,
+          "amplitude_rms": 1.0,
+          "frequency_offset_hz": 0.0,
+          "phase_offset_rad": 0.0,
+          "pulse_shape": "RRC",
+          "constellation_size": 64,
+          "record_timing_offset_samples": 6,
+          "symbol_center_offset_samples": 2,
+          "occupied_bandwidth_hz_approx": 21600.0,
+          "rrc_warmup_symbols_before_record": 8
+        },
+        "awgn": {
+          "target_snr_db": 0.0,
+          "measured_snr_db": 0.0,
+          "signal_power": 1.0,
+          "noise_power": 1.0
+        }
+      }
+    },
+    {
+      "case_id": 18,
+      "name": "64qam_snr_m10db",
+      "metadata": {
+        "modulation": "64QAM",
+        "snr_db": -10.0,
+        "generator": {
+          "modulation": "64QAM",
+          "sample_rate": 128000.0,
+          "symbol_rate": 16000.0,
+          "samples_per_symbol": 8,
+          "sample_length": 1024,
+          "amplitude_rms": 1.0,
+          "frequency_offset_hz": 0.0,
+          "phase_offset_rad": 0.0,
+          "pulse_shape": "RRC",
+          "constellation_size": 64,
+          "record_timing_offset_samples": 3,
+          "symbol_center_offset_samples": 5,
+          "occupied_bandwidth_hz_approx": 21600.0,
+          "rrc_warmup_symbols_before_record": 8
+        },
+        "awgn": {
+          "target_snr_db": -10.0,
+          "measured_snr_db": -10.0,
+          "signal_power": 1.0,
+          "noise_power": 10.0
+        }
+      }
+    }
+  ],
+  "blind_test_accessed": false
+}

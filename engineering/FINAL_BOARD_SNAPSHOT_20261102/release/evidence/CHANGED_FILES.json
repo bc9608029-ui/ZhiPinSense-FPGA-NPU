@@ -1,0 +1,58 @@
+{
+  "candidate/board_package/board_ui_live_rml24_final.cpp": {
+    "before": "2cf0b8bd95d8bd21f114510e02fd82b7b527b3dd119e5447b6c8f91e37739f1b",
+    "after": "083a3ddf27724f3efbc250ad4b92a00cb7ff1204c99b021c9105c89fa3130c42"
+  },
+  "candidate/board_package/build_ui_live_rml24_final.sh": {
+    "before": null,
+    "after": "26a6d1c248efb3a4cf62008df8def1d15cae95cdf5caccab7a60ae80a3eb6dc0"
+  },
+  "candidate/board_package/frequency_control.hpp": {
+    "before": "095ce3faf99a9f4219e1464de7396c057d4905391a3b9833d3fb1cea87099e37",
+    "after": "43030d477d0b0bc8caeaac63c7835050e341780c68df85dd8b969eee70ab069d"
+  },
+  "candidate/board_package/mode_control.hpp": {
+    "before": "bff999948094203d0e37b71929700fb713cf616baf8b7a4b371c5cfc0b5f9c9e",
+    "after": "0847259fc6410db0727fe115ed61a84abbe4887308a2fa5c31bc7177cd57bc2d"
+  },
+  "candidate/board_package/result_frame_v2_parse.hpp": {
+    "before": "4ccc3d9cc945f1fbe9a09fdad16dd45ba442560b18a9e2d2705650a90fde2ec9",
+    "after": "6221b38d058d4211ecb324d6450c8f491790cbcafe8ceff98891a67d453a311b"
+  },
+  "candidate/board_package/touch_mode_control.hpp": {
+    "before": "bd4144b9651b04627796956ee72bb9f95855ad9e9ec56b0054ff168556e04961",
+    "after": "bb26f9810879179092d5a6894f43b178dc5d61cde827361296d875697e9965ca"
+  },
+  "candidate/rml24_final/board_runtime/receiver_repeat_mean_gapfix1.py": {
+    "before": "efe066db23799d9bd637ead702e2b70b2fefcdb492bdce3d3c80ee67184e4d0a",
+    "after": "7e33c886140d46f156e6ea201f8b32fd7ce5a5fed71819ab3142c80c66c95c92"
+  },
+  "candidate/rml24_final/board_runtime/standalone_receiver.py": {
+    "before": "4d35cf5e27f26d6c1bc06f2dbf961b139931b0998ca3995ce47685af38058293",
+    "after": "ee8c484d33a631f2a1cac67a15f2c1347d39e0e87efb65390112969b873601f0"
+  },
+  "candidate/rml24_final/runtime/continuous_sweep.py": {
+    "before": null,
+    "after": "322c0e6851346f6fa850d04c222b5e9a15335d240be6510dd05f9b0221b1ed1b"
+  },
+  "candidate/rml24_final/runtime/standalone_control.py": {
+    "before": "522aeaaa10d5a7e0472478a088ab04c38855876fcbf4eeb0592800cc52de6799",
+    "after": "0672d0edeb07538471898f404ad20f668b469d90db5ccc85855776502ab5bd27"
+  },
+  "candidate/rml24_final/runtime/ui_event.py": {
+    "before": "990d75fe288ecd50a41743d5f6fa451171b435505015278d3a757c961b7ec43d",
+    "after": "5bb41ef1cb8be59ac7e8ceaa12292f52537dfa01a7bae0a9d1095722069bc292"
+  },
+  "candidate/ui_sw/signal_history.hpp": {
+    "before": null,
+    "after": "2248f70220930268d1672e3c26697825623c11146c5444098349c4f8876c2a32"
+  },
+  "candidate/ui_sw/ui_render.cpp": {
+    "before": "735dedbb59f69af5209f4ea8db53268066517c46c22c2bd5455eb33c6af6cd94",
+    "after": "c3de37a4e65cc35a9eb5161276b7e4ba30a5af056bcd7ae0ef26c7aa14548f0e"
+  },
+  "candidate/ui_sw/ui_render.hpp": {
+    "before": "dc40fbc81382a2b9861fe5fd55af6ca298313dfd266b25b9e99c18a3d8ddbb47",
+    "after": "08709e31356f09a4ca5d0ef052c6853b962d6423b58179b14b0f7f3ab6a57367"
+  }
+}

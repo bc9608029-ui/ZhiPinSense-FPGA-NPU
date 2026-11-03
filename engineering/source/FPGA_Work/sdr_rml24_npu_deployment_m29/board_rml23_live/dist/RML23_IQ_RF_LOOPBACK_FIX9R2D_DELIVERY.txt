@@ -1,0 +1,166 @@
+================================================================================
+RML23 Stage H-F / Route F — IQ RF 回环 fix9r2d 交付清单（诊断捕获增强：8 波形 + provenance +
+捕获元数据 + 六判责离线分析器；携带 fix9r2c Phase 1 分析器修复；不改 RF 数学）
+================================================================================
+状态: M29-RML23-IQ-RF-LOOPBACK-FIX9R2D-READY-FOR-BOARD-TEST
+      （待用户上板：重跑同一 R8 2 样本 → 落盘 8 波形/样本 + 捕获 manifest → 离线六判责）
+      FIX9R2C_ROOT_CAUSE=cause=NOT_IDENTIFIED result=NOT_PROVEN（fix9r2c Phase 1 判因结论）
+      FIX9R2D_WORK=DELIVERED(诊断捕获增强)
+      FIX9R2A_R8=FAIL  FIX9R2C_NOT_PROVEN  R9_46_SAMPLE=BLOCKED
+      FIX10_DUAL_SDR=BLOCKED  FORMAL_690_RF_RUN=BLOCKED
+      不写 RF_PASS / RF_PATH_PROVEN / NPU_PASS / PROJECT_COMPLETE / FINAL_*；
+      ROUTE_F_23CLASS_ACCURACY_REGRESSION_PASS 仅由板端 46 样本合法复测建立；
+      六判责 token 永远不能携带回归 PASS/FAIL；
+      fix9r2d 不引入均衡/分数时延/保护带算法，不修改 iq_rf_sync_recovery.hpp。
+基线: sdr_rml23_live_board_package_iq_rf_loopback_fix9r2b.tar.gz
+      27ceb83322ae385bc74a0625b2088cc3cac769fb0f27172655798b1130755b42（587 内容文件）
+================================================================================
+
+1. 工件（6 份；fix9r2b / fix9r2c 及更早历史包 SHA 不变，未覆盖任何历史包）
+--------------------------------------------------------------------------------
+A. 独立补丁（fix9r2c Phase 1 + fix9r2d，自包含；7 新增 + 4 修改 = 11 内容文件）
+   路径: dist/sdr_rml23_live_iq_rf_loopback_fix9r2d_patch.tar.gz
+   字节: 62222
+   文件数: 11（7 NEW + 4 MODIFIED）
+   manifest: dist/IQ_RF_LOOPBACK_FIX9R2D_PATCH_SHA256SUMS.txt（1191 字节，11 行）
+   sha256: f971613548497db5bebd32c577f6ad0934090d6cad5e9ca4c556acd6e3bf581e
+
+B. 合并全量（fix9r2b 全量 + fix9r2c Phase 1 + fix9r2d）
+   路径: dist/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2d.tar.gz
+   字节: 4023433
+   内容文件数: 594（583 fix9r2b 字节一致 + 4 修改 + 7 新增；SHA256SUMS.txt 重生成）
+   manifest: dist/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2d.SHA256SUMS.txt（60109 字节，594 行）
+   sha256: 34a11a5c47545b007b9416ed246d1c1a499168a71cfdfff2548d11d87bae98bc
+
+C. 补丁 manifest: dist/IQ_RF_LOOPBACK_FIX9R2D_PATCH_SHA256SUMS.txt
+   sha256: 0e797a41168ea886f41a4d4bc5f8c85351f825a04ffbfff49faf4e8d64c72e86
+D. 全量 manifest: dist/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2d.SHA256SUMS.txt
+   sha256: b17544280d7d13ae702fe3796d3cf3279f43f8a2061c39b40b2bfa551d0cc610
+E. 审计文档: docs/M29_RML23_STAGE_H_F_IQ_RF_LOOPBACK_FIX9R2D_AUDIT.md（9576 字节）
+   sha256: c2902f2274abb94ecdcb1d8fddd44c30f3c5eb9f5954a6fed828016459b3273a
+   （另携带 fix9r2c 可观测性审计 docs/…_FIX9R2C_OBSERVABILITY_AUDIT.md，5966 字节，
+    sha256 1f1f8d6fb7da21c9361ba441988fe4344f6f5bcdca73671a95b6c8d9dc98ddb1）
+F. 本交付清单: dist/RML23_IQ_RF_LOOPBACK_FIX9R2D_DELIVERY.txt
+
+2. 变更集（相对 fix9r2b 全量基线，11 文件 = 7 NEW + 4 MODIFIED）
+--------------------------------------------------------------------------------
+fix9r2c Phase 1（分析器修复，禁止 fix9r2d 包带回旧复数学 bug）:
+  MODIFIED scripts/analyze_fix9r2b_residuals.py    （3 复数学 bug 修复）
+  NEW      scripts/test_fix9r2c_analyzer_regression.py   （16/16 回归）
+  NEW      docs/…_FIX9R2C_OBSERVABILITY_AUDIT.md          （回放可行性 (a)/(b)）
+
+fix9r2d 诊断捕获:
+  NEW      board_package/iq_rf_fix9r2d_diagnostic.hpp     （8 切片 provenance + 捕获元数据）
+  NEW      host_tests/test_iq_rf_fix9r2d.cpp              （74 断言 host 测试）
+  NEW      scripts/analyze_fix9r2d_capture.py             （六判责 + 板端接受 fail-closed 门）
+  NEW      scripts/package_iq_rf_loopback_fix9r2d.py      （本打包器）
+  NEW      docs/…_FIX9R2D_AUDIT.md                        （审计）
+  MODIFIED board_package/iq_rf_loopback_23class_fix9r.hpp （8 波形捕获块 + 捕获 manifest 加 complete 列）
+  MODIFIED host_tests/build_host_tests.sh                 （构建 fix9r2d 测试；剥离 fix10）
+  MODIFIED host_tests/run_tests.sh                        （运行 fix9r2d 测试；剥离 fix10）
+
+核心代码字节未变: iq_rf_sync_recovery.hpp（恢复核/帧布局/同步搜索/SRO/CFO/标量估计）零改动；
+  模型/标签/24→23 合并/预处理/RTL/XDC/位流/Flash 逐一 SHA 0 变化；
+  kSafeTxCeilingDb=-40.0/kSafeTxAttenDb=-89.75 不变；
+  fix9r2d 无均衡/分数时延/保护带算法；fix10 磁盘文件从未被触碰（仅打包时剥离两共享接线脚本）。
+
+六判责 token（离线分析器 --out JSON）:
+  STABLE_LTI_CHANNEL / CYCLIC_BOUNDARY_TRANSIENT / CAPTURE_INDEX_MISMATCH /
+  CYCLE_TO_CYCLE_NONSTATIONARY / TRAINING_PAYLOAD_GAIN_MISMATCH / NOT_IDENTIFIED。
+  板端接受前置条件任一不满足 → FIX9R2D_ACCEPTANCE result=REJECTED（不给任何 token，退出码 2）。
+
+8 波形种类（每 R8 文件，2 样本 × 8 = 16 行 waveform manifest）:
+  expected_training / raw_aligned_rx_training / raw_aligned_rx_payload /
+  raw_aligned_rx_full_frame / raw_cycle_0_full_frame / raw_cycle_1_full_frame /
+  expected_payload / provisional_recovered_payload。
+  provenance: save_slice_with_provenance 独立重算内存 f32 SHA，equality=(file==mem)?1:0；
+  越界切片返回空且 equality=0。捕获元数据含 capture_sha256 / frame_index0 / frame_index1 /
+  rms / dc / peak / clip_count / cfo_est / sro_est / gain_mag / gain_phase_deg /
+  training_corr / training_residual / complete。
+
+3. 离线验证（不碰板；打包前全部跑过，打包器自检再次覆盖）
+--------------------------------------------------------------------------------
+[1] fix9r2d 核心 host 测试（WSL）: test_iq_rf_fix9r2d pass=74 fail=0（7 场景/74 断言）。
+[2] fix9r2c 分析器回归（Python -I）: 16/16 PASS。
+[3] fix9r2b 及此前相关回归: fix9 93/0 · fix9r 71/0 · fix9r2 66/0 · fix9r2a 38/0 · fix9r2b 47/0。
+[4] analyze_fix9r2d_capture.py --self-test: 7 判责用例 + acceptance-gate 6/6 = PASS
+    （STABLE_LTI / CYCLIC_BOUNDARY / CYCLE_TO_CYCLE / TRAINING_PAYLOAD_GAIN /
+     CAPTURE_INDEX / NOT_IDENTIFIED + identity 全部正确，负对照 identity → STABLE_LTI）。
+[5] syntax/build（WSL g++ -fsyntax-only）: gate7/gate9/gate10/gate9_rml23 4/4 OK
+    （iq_rf_loopback_23class_fix9r.hpp 经 board_gate9_full_chain_rml23.cpp 传递覆盖，
+     含新增 complete 列）。
+[6] content-consistency（打包器）: OK（583 fix9r2b 文件字节一致，4 修改，+7 新增）。
+[7] dependency closure（打包器 fail-closed）: OK（所有变更头文件列于 ROUTE_F_FIX9R2D_FILES）。
+[8] 独立解包 sha256sum -c（打包器自检）: patch 11/11 OK、full 594/594 OK（0 失败）。
+[9] fix10 零残留（独立 Python 对全量包遍历）: fix10 residual hits = NONE（零残留）；
+    两共享接线脚本内无 iq_external_rf_rx / pluto_external_tx。
+[10] 确定性打包: patch/full 各 1 次运行 sha256 f9716135… / 34a11a5c…（记录于 §1）。
+
+4. 板端复测命令（用户执行，我禁碰板；先 R8 落波形，再离线六判责）
+--------------------------------------------------------------------------------
+# 1) 校验全量包 SHA（应等于 34a11a5c47545b007b9416ed246d1c1a499168a71cfdfff2548d11d87bae98bc）
+sha256sum sdr_rml23_live_board_package_iq_rf_loopback_fix9r2d.tar.gz
+# 2) 解包（脚本已带 0755，直接可执行）
+tar -xzf sdr_rml23_live_board_package_iq_rf_loopback_fix9r2d.tar.gz
+cd sdr_rml23_live_board_package_iq_rf_loopback_fix9r2d
+# 3) 执行位自检 + 内容自检（应 594 个 OK，0 失败）
+test -x scripts/build_on_board.sh              && echo OK
+test -x scripts/run_gate9_rml23.sh             && echo OK
+sha256sum -c SHA256SUMS.txt
+# 4) 构建板端二进制（LIBIIO_ROOT 按持久化 libiio 0.26）
+LIBIIO_ROOT=/opt/sdr/libiio-0.26 ./scripts/build_on_board.sh
+# 5) 生成/装载精确基线（frozen-dir 内含 route_d2_rf_manifest.tsv）
+python3 -I scripts/build_route_f_fix9r_exact_baseline.py \
+    --d2-manifest <frozen>/route_d2_rf_manifest.tsv \
+    --out route_f_fix9r_exact_baseline.tsv --expect-holdout 46
+
+# 6) R8（先）: 重跑同一 2 样本诊断门（1 BPSK + 1 4ASK），本次落盘 8 波形/样本
+#    + route_f_fix9r2d_waveforms.tsv（16 数据行）+ route_f_fix9r2d_capture.tsv（2 数据行）。
+#    固定条件：center=2.4 GHz、TX atten=-40 dB、RX gain=30 dB、50Ω 同轴、无天线无放大。
+#    --rf-tx-target-rms=2048 显式给出，不依赖默认值（39e5 第 2 条）。
+LIBIIO_ROOT=/opt/sdr/libiio-0.26 \
+LD_LIBRARY_PATH=/opt/sdr/libiio-0.26/lib:/home/fmsh/ModelZoo/Deps/so \
+./scripts/run_gate9_rml23.sh --phase=iq-rf-loopback-23class-fix9r \
+    --input-kind=radioml-d2-2p56m --frozen-dir=<frozen> \
+    --baseline=route_f_fix9r_exact_baseline.tsv \
+    --diagnostic-classes=BPSK,4ASK --diagnostic-per-class=1 \
+    --center=2400000000 --rx-gain=30 --tx-atten=-40 --rf-path=direct-cable \
+    --rf-tx-target-rms=2048 \
+    > /root/rml23_route_f_fix9r2d_r8_2sample.log 2>&1
+# 7) 查看 R8 结果（诊断 token + 每样本 8 波形行 + 捕获行 + 汇总 token）
+grep -E 'ROUTE_F_FIX9R2_DIAGNOSTIC|ROUTE_F_FIX9R2D_WAVEFORM|ROUTE_F_FIX9R2D_CAPTURE|ROUTE_F_23CLASS_ACCURACY_REGRESSION' \
+    /root/rml23_route_f_fix9r2d_r8_2sample.log
+# 8) 收集波形（2 文件 × 8 波形 = 16 个 .f32 + 2 个 manifest）
+ls -1 *_rms2048__*.f32 route_f_fix9r2d_waveforms.tsv route_f_fix9r2d_capture.tsv
+#    把 16 个 .f32 + 两个 manifest 拷回主机某目录（保持相对路径）。
+
+# 9) 离线六判责（主机，Anaconda Python + numpy；在拷回目录内执行；39e5 第 3 条命令）
+python3 -I scripts/analyze_fix9r2d_capture.py \
+    --wave-manifest route_f_fix9r2d_waveforms.tsv \
+    --capture-manifest route_f_fix9r2d_capture.tsv \
+    --out route_f_fix9r2d_verdict.json
+#    输出六判责 token 之一（STABLE_LTI_CHANNEL / CYCLIC_BOUNDARY_TRANSIENT /
+#    CAPTURE_INDEX_MISMATCH / CYCLE_TO_CYCLE_NONSTATIONARY / TRAINING_PAYLOAD_GAIN_MISMATCH /
+#    NOT_IDENTIFIED）。判因后由用户批准才谈下一步最小恢复。
+
+5. 板端接受前置条件（39e5 第 5 条；判因前强制校验，任一不满足即 fail-closed）
+--------------------------------------------------------------------------------
+analyze_fix9r2d_capture.py 在判因之前强制校验，任一不满足 → FIX9R2D_ACCEPTANCE
+result=REJECTED、退出码 2、禁止给出任何六判责 token:
+  (1) waveform manifest 数据行 == 16（2 样本 × 8 波形）；
+  (2) capture manifest 数据行 == 2；
+  (3) 所有 provenance equality == 1；
+  (4) 两个样本 capture_complete == 1；
+  (5) raw_cycle_0_full_frame / raw_cycle_1_full_frame / raw_aligned_rx_full_frame /
+      raw_aligned_rx_payload 均非空且长度正确（无越界）。
+
+6. 门禁与红线
+--------------------------------------------------------------------------------
+R8 诊断门只证明「搜索 + 恢复链 + 8 波形捕获 + provenance」通了，绝不能当回归 PASS 用。
+不批准：碰板、修改 iq_rf_sync_recovery.hpp、Phase 2 补偿、46 样本。
+R9 46 样本、690 样本正式 RF、fix10 双 SDR 仍 BLOCKED（须先 R8 落盘 → 离线六判责 →
+最小修复获批准 → 重跑 R8 过门 → R9 46 样本复测 → 回归 PASS 才可逐级恢复）。
+46 样本接受门（回归 PASS 条件）不变：prediction_agreement>=0.90 且
+rf_accuracy>=exact_baseline_accuracy−5pp 且 4ASK 不退化到 0% 且无 TX/RX 削顶 且
+training estimate 46/46 有效 且 restore PASS → ROUTE_F_23CLASS_ACCURACY_REGRESSION_PASS。
+================================================================================

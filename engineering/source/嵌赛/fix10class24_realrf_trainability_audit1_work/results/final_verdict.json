@@ -1,0 +1,30 @@
+{
+  "token": "M29-RML24-REALRF-TRAINABILITY-AUDIT1-DECISION-PAUSE_AND_FIX_RECEIVE_CHAIN",
+  "task": "M29-RML24-REALRF-TRAINABILITY-AUDIT1",
+  "date": "2026-10-21",
+  "offline_only": true,
+  "decision": "PAUSE_AND_FIX_RECEIVE_CHAIN",
+  "data_gate": "MORE_RF_DATA_REQUIRED",
+  "q1_info_retained": "PARTIAL",
+  "q2_mismatch_vs_broken": "RECEIVE_CHAIN_RESIDUAL_BOTTLENECK",
+  "three_domain": {
+    "A_original_radioml": {"correct": "419/480", "accuracy": 0.872917},
+    "B_digital_recovery": {"correct": "46/48", "accuracy": 0.958333, "gate": "48/48", "residual_median": 2.7e-17},
+    "C_rf_recovery": {"correct": "1/48", "accuracy": 0.020833, "gate": "23/48", "residual_median": 0.113},
+    "C0_full24_rf": {"e2e": "10/24", "gated": "10/15", "forced": "18/24", "coverage": 0.625}
+  },
+  "data_sufficiency": "CURRENT_DATA_INSUFFICIENT_FOR_FINAL_FINETUNING",
+  "leakage_check": "TRAIN_VAL_TEST_SPLIT_IMPOSSIBLE",
+  "finetune_experiments": {
+    "E0_frozen_baseline": "COMPLETE",
+    "E1_head_finetune": "BLOCKED (red-line no-train + data insufficient)",
+    "E2_full_finetune": "BLOCKED (red-line no-train + data insufficient)",
+    "E3_train_from_scratch": "BLOCKED (red-line no-train + data insufficient)"
+  },
+  "training_authorization_required": true,
+  "red_lines_kept": [
+    "no training", "no board/SDR/transmit", "no model/protocol/gate change",
+    "24 denominator intact", "no RF_PASS / PROJECT_COMPLETE claim"
+  ],
+  "next_step": "fix receive chain first; then capture >=5 independent RF sessions per CAPTURE_PLAN.md before any authorized finetune"
+}

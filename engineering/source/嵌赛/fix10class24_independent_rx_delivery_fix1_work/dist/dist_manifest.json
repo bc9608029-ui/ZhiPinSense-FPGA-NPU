@@ -1,0 +1,35 @@
+{
+  "built_utc": "2026-10-20T05:04:27Z",
+  "honest_gap": "board C++ (radioml_independent_rx_runner.hpp + gate9_wiring.patch) \u672a\u5728 aarch64 \u4e0a\u7f16\u8bd1\uff08Windows \u4e3b\u673a\u65e0\u4ea4\u53c9\u5de5\u5177\u94fe\uff09\uff1b\u4e0a\u677f\u524d make -j1 \u539f\u751f\u6784\u5efa\u5e76\u4ee5 host \u6570\u5b57\u53c2\u8003\u6838\u9a8c 1/S \u5f52\u4e00\u5316\u3002",
+  "tarballs": {
+    "fix1_independent_rx_INPUTS.tar.gz": {
+      "bytes": 226851,
+      "note": "24 public-protocol bursts + manifest + SHA256SUMS",
+      "sha256": "cef55be5a5c773457b73802191616e863b2b1d4d254cb3aeae7f2ccc607c483c"
+    },
+    "fix1_independent_rx_PATCH.tar.gz": {
+      "bytes": 40953,
+      "files": [
+        "board_package/gate9_wiring.patch",
+        "board_package/radioml_independent_rx_runner.hpp",
+        "contract/public_protocol_amplitude_contract.json",
+        "contract/public_protocol_amplitude_contract.md",
+        "contract/waveform_correctness.json",
+        "docs/AUDIT_NOTES.md",
+        "docs/BOARDTEST.md",
+        "host_tests/run_regression.py",
+        "scripts/judge_radioml_independent_rx.py",
+        "scripts/package_fix1.py",
+        "scripts/radioml_clean_contract.py",
+        "scripts/radioml_dualsdr_burst.py",
+        "scripts/radioml_dualsdr_common.py",
+        "scripts/radioml_independent_rx_contract.py",
+        "scripts/radioml_independent_rx_replay.py",
+        "scripts/radioml_public_protocol_tx.py",
+        "scripts/radioml_waveform_correctness.py"
+      ],
+      "sha256": "dea9e391f09cad39352ee447f4e890e61fadbb772f88d2a95db771609477cef7"
+    }
+  },
+  "token": "M29-RML24-FIX10CLASS24-INDEPENDENT-RX-DELIVERY-FIX1-DIST"
+}

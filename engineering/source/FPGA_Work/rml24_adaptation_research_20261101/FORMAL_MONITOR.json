@@ -1,0 +1,116 @@
+{
+  "controller_alive": false,
+  "formal_status": {
+    "stage": "ALL_ROUNDS_COMPLETE_NOT_DEPLOYED",
+    "all_accuracy_gates": false
+  },
+  "completed_rounds": 4,
+  "results": [
+    {
+      "name": "fixed240",
+      "correct": 239,
+      "denominator": 240,
+      "missing": 0,
+      "promotion_gate_pass": true,
+      "failures": [
+        {
+          "index": 104,
+          "expected": 20,
+          "pred": 16,
+          "chosen_frame": 1526,
+          "correct": false,
+          "missing": false
+        }
+      ],
+      "score_sha256": "b3db87f9a1145a0a84720c16c12cd25fc9e1a4903da9bda5709c890089633d65"
+    },
+    {
+      "name": "search240",
+      "correct": 234,
+      "denominator": 240,
+      "missing": 0,
+      "promotion_gate_pass": false,
+      "failures": [
+        {
+          "index": 85,
+          "expected": 14,
+          "pred": 16,
+          "chosen_frame": 308,
+          "correct": false,
+          "missing": false
+        },
+        {
+          "index": 115,
+          "expected": 13,
+          "pred": 15,
+          "chosen_frame": 409,
+          "correct": false,
+          "missing": false
+        },
+        {
+          "index": 145,
+          "expected": 17,
+          "pred": -1,
+          "chosen_frame": 511,
+          "correct": false,
+          "missing": false
+        },
+        {
+          "index": 148,
+          "expected": 18,
+          "pred": -1,
+          "chosen_frame": 522,
+          "correct": false,
+          "missing": false
+        },
+        {
+          "index": 217,
+          "expected": 18,
+          "pred": -1,
+          "chosen_frame": 756,
+          "correct": false,
+          "missing": false
+        },
+        {
+          "index": 237,
+          "expected": 23,
+          "pred": 10,
+          "chosen_frame": 824,
+          "correct": false,
+          "missing": false
+        }
+      ],
+      "score_sha256": "50bb3274ded965722d0ccd8cdf0bb296e84eac45d702d15e4987cecc55910858"
+    },
+    {
+      "name": "sweep24",
+      "correct": 23,
+      "denominator": 24,
+      "missing": 0,
+      "promotion_gate_pass": true,
+      "failures": [
+        {
+          "index": 16,
+          "expected": 19,
+          "pred": 20,
+          "chosen_frame": 195,
+          "correct": false,
+          "missing": false
+        }
+      ],
+      "score_sha256": "28abaa8613ba75f1f0c1fe6a5e0bc16ad908c4a60038574cab1e3698f1f66bea"
+    },
+    {
+      "name": "wide13",
+      "correct": 13,
+      "denominator": 13,
+      "missing": 0,
+      "promotion_gate_pass": true,
+      "failures": [],
+      "score_sha256": "c775657502bfe45dde2f6344626873bf88bdc2c674bf7526640ab7a4e571eaec"
+    }
+  ],
+  "all_four_pass": false,
+  "deployed": false,
+  "action_required": false
+}

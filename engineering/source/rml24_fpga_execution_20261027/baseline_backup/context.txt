@@ -1,0 +1,46 @@
+Linux U.FMSH 5.4.52 #3 SMP Fri Mar 13 13:44:29 CST 2026 aarch64 aarch64 aarch64 GNU/Linux
+# /etc/systemd/system/rml24-ui.service
+[Unit]
+Description=RML24 verified classification spectrum waterfall and constellation UI
+After=local-fs.target systemd-udev-trigger.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/rml24-system
+ExecStartPre=/bin/bash /opt/rml24-system/startup/check-ui.sh
+ExecStart=/opt/rml24-system/bin/board_ui_live_rml24_final --sock=/run/sdr_amr_ui_rml24_final.sock --ctl-sock=/run/sdr_amr_control_rml24_final.sock --display-refresh-hz=30
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=15
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target
+
+# /etc/systemd/system/rml24-receiver.service
+[Unit]
+Description=RML24 frozen receiver waiting for PC Pluto transmitter
+Requires=rml24-ui.service
+After=rml24-ui.service rc-local.service network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash /opt/rml24-system/startup/start-receiver.sh
+Restart=always
+RestartSec=30
+KillSignal=SIGINT
+KillMode=control-group
+TimeoutStopSec=20
+
+[Install]
+WantedBy=multi-user.target
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+can0             DOWN           
+eth0             UP             192.168.126.49/24 fe80::ac59:f4ff:fe2d:3a99/64 
+sit0@NONE        DOWN           
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        26G   20G  4.7G  81% /

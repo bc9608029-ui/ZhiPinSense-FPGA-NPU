@@ -1,0 +1,53 @@
+{
+    "clock_id":  "windows-qpc-board-monotonic-v1",
+    "offset_ns":  742230262990,
+    "uncertainty_ns":  59931800,
+    "board_boot_id":  "b68cfa6b-e214-407a-8d6d-74b2e10e5221",
+    "samples":  [
+                    {
+                        "pc_before_mono_ns":  34566586527100,
+                        "pc_after_mono_ns":  34566713357300,
+                        "board_mono_ns":  33824420332180,
+                        "board_wall_ns":  "1773406311415800300",
+                        "board_boot_id":  "b68cfa6b-e214-407a-8d6d-74b2e10e5221",
+                        "offset_ns":  742229610020,
+                        "uncertainty_ns":  63415100
+                    },
+                    {
+                        "pc_before_mono_ns":  34566736471000,
+                        "pc_after_mono_ns":  34566856334600,
+                        "board_mono_ns":  33824566139810,
+                        "board_wall_ns":  "1773406311561607730",
+                        "board_boot_id":  "b68cfa6b-e214-407a-8d6d-74b2e10e5221",
+                        "offset_ns":  742230262990,
+                        "uncertainty_ns":  59931800
+                    },
+                    {
+                        "pc_before_mono_ns":  34566856549700,
+                        "pc_after_mono_ns":  34566980482600,
+                        "board_mono_ns":  33824688167380,
+                        "board_wall_ns":  "1773406311683635170",
+                        "board_boot_id":  "b68cfa6b-e214-407a-8d6d-74b2e10e5221",
+                        "offset_ns":  742230348770,
+                        "uncertainty_ns":  61966450
+                    },
+                    {
+                        "pc_before_mono_ns":  34566980714500,
+                        "pc_after_mono_ns":  34567102147400,
+                        "board_mono_ns":  33824814000990,
+                        "board_wall_ns":  "1773406311809469090",
+                        "board_boot_id":  "b68cfa6b-e214-407a-8d6d-74b2e10e5221",
+                        "offset_ns":  742227429960,
+                        "uncertainty_ns":  60716450
+                    },
+                    {
+                        "pc_before_mono_ns":  34567102274800,
+                        "pc_after_mono_ns":  34567243759100,
+                        "board_mono_ns":  33824958495880,
+                        "board_wall_ns":  "1773406311953963660",
+                        "board_boot_id":  "b68cfa6b-e214-407a-8d6d-74b2e10e5221",
+                        "offset_ns":  742214521070,
+                        "uncertainty_ns":  70742150
+                    }
+                ]
+}

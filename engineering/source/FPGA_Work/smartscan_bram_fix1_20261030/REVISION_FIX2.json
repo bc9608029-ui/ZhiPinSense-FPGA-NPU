@@ -1,0 +1,27 @@
+{
+  "time": "2026-10-30T17:05:07.663037",
+  "changes": [
+    {
+      "path": "smartscan_integration/rtl/user_reg_router.sv",
+      "before": "7faa2fc06a8fcd675fe2ae87de1b1ab5bd82c995053eacc784cde83b530d8c99",
+      "after": "8029912057cce5e541cd3d020026634bb1c0bf99a214f8a6ea32c4325998503d"
+    },
+    {
+      "path": "smartscan_integration/rtl/pl_ddr_mandatory_core_top_combined_smartscan.sv",
+      "before": "30717bfb47a84c93ed4116fc6e88d119b457ef764574a11dd3230e94aeba2e87",
+      "after": "6e6ffd354d8ae27d9c0cf716efde26cd17bce551cb725339532e0ff6a1de7a99"
+    },
+    {
+      "path": "smartscan_integration/rtl/user_ddr_read_arbiter.sv",
+      "before": "a6d77f711ffe1e8e2abb3e8a1fcf35e2889366e6761429970f01d3073b7af2f5",
+      "after": "627fb24eefa31d4c9078798a78ce17172e4d31cd0d191093e0a7c2e6076f4ecd"
+    },
+    {
+      "path": "pl_ddr_integration_v1/deps/adapters/async_fifo_gray.sv",
+      "before": "610d60ebe001531d65c987bc844e1d3f9bb82f7fefd377f75aca1ae35cc8902b",
+      "after": "68767e44c463412ce37ab2b46247c3f35716aaa3edfca8f1aefc6b291c19deaf"
+    }
+  ],
+  "board_touched": false,
+  "bitstream_generated": false
+}

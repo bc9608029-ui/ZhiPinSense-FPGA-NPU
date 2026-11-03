@@ -1,0 +1,108 @@
+================================================================================
+ M29 RML23 Stage G 追加硬要求 — D 路 RadioML round-trip preprocess — 最终交付
+================================================================================
+状态: M29-RML23-SYNTHETIC-IQ-INJECTION-READY-FOR-BOARD-TEST
+      （最高允许状态；D 路为判责仪表，只测量混淆/round-trip 保真，不设准确率
+       门、不判「分类修复完成」；本轮未碰板、未训练、
+       未写任何 *_PASS / PROJECT_COMPLETE / FINAL_*）
+
+基线（本交付的相对基准）:
+  sdr_rml23_live_board_package_synthetic_iq.tar.gz
+      sha256 6c3258a77e5ee8fa554983e05b581f2f1e48790a9c9ed989429c6206236e1346
+      （Stage G A/B/C 三路合成IQ注入 合并全量板端包，511 文件）
+
+--------------------------------------------------------------------------------
+ 两份最终工件（均含 SHA256SUMS manifest，已独立解包 sha256sum -c 校验通过）
+--------------------------------------------------------------------------------
+
+[DIFF] Stage G D 路独立补丁（8 文件，相对 synthetic_iq 6c3258a7… 基线）
+    dist/sdr_rml23_live_synthetic_iq_route_d_patch.tar.gz
+      8 文件  sha256 71b52125dfc77b75763f96d48e80f86b105199dc412b0a6ee8d2bb2a1b95caf3
+      manifest: SYNTHETIC_IQ_ROUTE_D_PATCH_SHA256SUMS.txt  (8 内容)
+      校验: sha256sum -c  => 8 OK / 0 FAIL
+
+[MERGE] 合并全量板端测试包（synthetic_iq 基线 + D 路）
+    dist/sdr_rml23_live_board_package_synthetic_iq_route_d.tar.gz
+      514 文件  sha256 5a4c4d3ab7d892cfab3b2237cc714daee4bc896246fc3b46bd91ff90acedd688
+      manifest: sdr_rml23_live_board_package_synthetic_iq_route_d.SHA256SUMS.txt (514 内容)
+      校验: sha256sum -c  => 514 OK / 0 FAIL
+
+  确定性: package_synthetic_iq_route_d.py 固定 uid/gid=0、mtime=0、GNU tar、
+          gzip mtime=0；.sh/.py 保留可执行位。
+  历史包未覆盖: A/B/C synthetic_iq 补丁/全量（1158dbfd…/6c3258a7…）及此前全部
+                correctness_fix / rf_fix / heartbeat / UI / live-rx / integrated /
+                integrated_live_rx / diag_errata_39e5 原样保留。
+
+--------------------------------------------------------------------------------
+ 文件差异证明（baseline = synthetic_iq 6c3258a7… vs merged，全量递归）
+--------------------------------------------------------------------------------
+模型 / 标签 / golden / 预处理契约 / RTL / XDC / 位流 / Flash 全部未变化。
+D 路不触碰 A/B/C 语义，仅复用 A 路的 extract_radioml_stage_g.py 产物目录。
+
+  新增（3）:
+    board_package/synthetic_iq_roundtrip.hpp      D 路确定性 polyphase ×20 插值 +
+                                                  显式统一幅度映射 + int16 量化 +
+                                                  guard 边缘策略 + round-trip 度量
+    host_tests/test_synthetic_iq_roundtrip.cpp   host 48 断言
+    scripts/analyze_roundtrip_stage_g.py         host 逐帧独立判责分析器（自检 2/2）
+
+  修改（5，均为 .cpp/.sh/.py/.md，无模型/数据）:
+    board_package/board_gate9_full_chain_rml23.cpp  run_route_d_roundtrip + D 路 dispatch
+    host_tests/build_host_tests.sh                 增 roundtrip 构建目标
+    host_tests/run_tests.sh                        增 roundtrip 运行入口
+    scripts/run_gate9_rml23.sh                     头注释补 route D 用法
+    docs/M29_RML23_STAGE_G_SYNTHETIC_IQ_INJECTION_AUDIT.md  D 路 §3.4 + 判责表
+
+--------------------------------------------------------------------------------
+ D 路调用链（不打开 IIO/SDR、不启动 TX）
+--------------------------------------------------------------------------------
+  ./run_gate9_rml23.sh --phase=synthetic-iq --source=radioml \
+      --inject-point=raw-rx-reconstructed \
+      --radioml-bin-dir DIR --roundtrip-out-dir DIR \
+      [--interpolation-factor 20] [--raw-complex-rms-counts 16] \
+      [--rec-scale ..] [--edge-policy zero|reflect]
+
+  RadioML [2,1024] fp32@128kSPS -> 组合 complex IQ -> 正规 20 倍 polyphase 有理
+  插值至 2.56 MSPS -> 显式统一幅度映射(signal 段 RMS=16 counts) -> RX 交错 int16
+  量化 -> 复用 live-rx 生产 PreprocessChain -> pull_tensor 恢复 [2,1024] -> NPU24
+  -> merge23 -> result。A(原始 tensor)与 D(恢复 tensor)同帧双跑，model-input 入口
+  逐位重放一致（memcmp）。逐帧产出 6 工件 + roundtrip_manifest.tsv(13 列)。
+
+  5 判责规则 + 2 补充（attribute lambda）:
+    RADIOML_ROUNDTRIP_EDGE_INCONCLUSIVE (nmse_center>0.1, 先判)
+    PREPROCESS_PRESERVES_RADIOML_DOMAIN
+    PREPROCESS_ROUNDTRIP_MISMATCH (nmse_center>0.01)
+    MODEL_INPUT_SENSITIVITY (数值接近但 D 翻转)
+    MODEL_FAILS_ON_RADIOML_HELDOUT (A/D 都错)
+    补充: PRESERVED_LABEL_BUT_LOGITS_SHIFTED / D_IMPROVED_OVER_A
+
+  硬要求落实:
+    R1 A/D 同一冻结 test 目录(load_route_a 复用) R2 复用生产 PreprocessChain(非近似)
+    R3 FIR/polyphase(禁线性插值) R4 插值身份/长度/群延迟/频响记录 R5 guard 边缘策略
+    + 全/中心双区间 NMSE R6 延迟/增益/相位/NMSE/EVM/相关/RMS/DC/PAPR/PSD/OBW/swap/共轭
+    R7 6 类工件 + SHA256 R8 A/D top1/logits max_abs/mean_abs/cosine/merged 一致
+    R9 D 独立混淆矩阵 + 按 SNR 统计 R10 model-input 重放逐位一致
+
+--------------------------------------------------------------------------------
+ 离线验证（本轮已执行，未碰板）
+--------------------------------------------------------------------------------
+  1. host_tests/test_synthetic_iq_roundtrip   48/48 PASS
+     （FIR 身份/每相 DC≈1/对称 2.2e-16/插值确定性/align 精确恢复/双音+QPSK
+       roundtrip NMSE<0.001、corr>0.999、gain≈0 dB/edge policy/fail-closed）
+  2. scripts/analyze_roundtrip_stage_g.py --self-test   2/2 PASS
+     （中心载波 OBW99=1 bin、merge_24_to_23 AM-SSB logaddexp+shift）
+  3. run_tests.sh 全量 => ALL HOST TESTS PASSED
+     （build_host_tests.sh 产出含 test_synthetic_iq_roundtrip；test_board_build.sh
+      24/24、test_rml23_build.sh 7/7）
+  4. bash -n syntax check gate9 全绿
+  5. 打包独立解包 sha256sum -c => patch 8 OK / full 514 OK
+
+  host 自洽全绿 ≠ 板端判定；D 路判责结论只能由用户上板观测（我禁碰板、禁训练）。
+  板端复测建议:
+    run_gate9_rml23.sh --phase=synthetic-iq --source=radioml \
+        --inject-point=raw-rx-reconstructed \
+        --radioml-bin-dir DIR --roundtrip-out-dir DIR --edge-policy zero
+  随后 host 分析:
+    python -I scripts/analyze_roundtrip_stage_g.py \
+        --out-dir DIR --json DIR/roundtrip_judgment.json --log DIR/roundtrip.log
+================================================================================

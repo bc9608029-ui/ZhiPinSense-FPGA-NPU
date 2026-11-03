@@ -1,0 +1,15 @@
+usage: extract_radioml_stage_g.py [-h] --dataset-hdf5 DATASET_HDF5
+                                  --split-npz SPLIT_NPZ [--classes CLASSES]
+                                  [--snr-db SNR_DB] [--count COUNT]
+                                  --out-dir OUT_DIR
+
+Stage G route-A RadioML test-frame extraction
+
+options:
+  -h, --help            show this help message and exit
+  --dataset-hdf5 DATASET_HDF5
+  --split-npz SPLIT_NPZ
+  --classes CLASSES
+  --snr-db SNR_DB
+  --count COUNT
+  --out-dir OUT_DIR

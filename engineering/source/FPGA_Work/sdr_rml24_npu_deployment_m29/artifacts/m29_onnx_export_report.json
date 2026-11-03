@@ -1,0 +1,49 @@
+{
+  "onnx_path": "F:\\FPGA_Work\\sdr_rml24_npu_deployment_m29\\work\\onnx\\rml24_24class_opset17.onnx",
+  "checkpoint": "F:\\FPGA_Work\\24class_results\\rml24_seed2027_best.pt",
+  "checkpoint_sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+  "checkpoint_epoch": 50,
+  "model_name": "RML2018_24_BENCHMARK",
+  "class_count": 24,
+  "opset": 17,
+  "ir_version": 8,
+  "input": {
+    "name": "iq",
+    "dims": [
+      1,
+      2,
+      1024
+    ],
+    "dtype": "float32"
+  },
+  "output": {
+    "name": "logits",
+    "dims": [
+      1,
+      24
+    ],
+    "dtype": "float32"
+  },
+  "op_types": {
+    "Add": 12,
+    "Conv": 28,
+    "Gemm": 2,
+    "ReduceMean": 1,
+    "Relu": 24
+  },
+  "unexpected_operators": [],
+  "ort_parity": {
+    "zeros": {
+      "max_abs_diff": 0.0003662109375,
+      "mean_abs_diff": 9.117523586610332e-05,
+      "allclose_1e-4": true
+    },
+    "random": {
+      "max_abs_diff": 7.62939453125e-05,
+      "mean_abs_diff": 2.209345439041499e-05,
+      "allclose_1e-4": true
+    }
+  },
+  "parameter_count": 280584,
+  "npu_graph_claim": "operator-compatible only; vendor compilation and board parity remain required"
+}

@@ -1,0 +1,35 @@
+{
+  "groups": [
+    {
+      "gain": -60,
+      "denominator": 24,
+      "candidate_correct": 23,
+      "original_path_correct": 23,
+      "missing": 0
+    },
+    {
+      "gain": -65,
+      "denominator": 24,
+      "candidate_correct": 24,
+      "original_path_correct": 24,
+      "missing": 0
+    },
+    {
+      "gain": -67.5,
+      "denominator": 24,
+      "candidate_correct": 22,
+      "original_path_correct": 9,
+      "missing": 0
+    },
+    {
+      "gain": -70,
+      "denominator": 24,
+      "candidate_correct": 15,
+      "original_path_correct": 0,
+      "missing": 0
+    }
+  ],
+  "no_tx_captures": 20,
+  "no_tx_false_accept": 0,
+  "not_deployed": true
+}

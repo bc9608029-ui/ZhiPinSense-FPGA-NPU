@@ -1,0 +1,14 @@
+{
+  "root": "/root/rml24_test_setup_w1QsCF/rml24_test_readiness_20261030",
+  "python": "/root/miniconda3/envs/torch_v2.0.1_aarch64/bin/python3",
+  "radio": "/root/amr_rescue_20261025/pluto_link_probe.py",
+  "npu": "/root/amr_rescue_20261025/build/npu_stream",
+  "model": "/root/realrf_finetune_pilot1_test_1773373090/model_rml24_bf16",
+  "recovery": "/opt/rml24-system/rml24_final/recovery/candidate_two_dc.py",
+  "rx_uri": "usb:1.4.5",
+  "receiver_original_state": "active",
+  "receiver_was_active": true,
+  "free_bytes": 2981281792,
+  "npu_sha": "cc88cb0bf5cde766937d011978314b7dafd1122d0f18e1cbda731ec2f7a440d8",
+  "tx_uri": "usb:1.7.5"
+}

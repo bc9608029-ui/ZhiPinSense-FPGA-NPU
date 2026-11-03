@@ -1,0 +1,45 @@
+{
+  "objective": "Expand receiver operating envelope while preserving original nominal performance; minimize unnecessary conventions",
+  "formal_baseline": {
+    "fixed": "235/240",
+    "search": "237/240",
+    "sweep": "24/24"
+  },
+  "gainfreeze_candidate_formal": {
+    "fixed": "239/240",
+    "search": "234/240",
+    "sweep": "23/24",
+    "wide_coordinated_bpsk": "13/13",
+    "promoted": false
+  },
+  "tracks": [
+    {
+      "name": "Receiver gain settle then freeze",
+      "evidence": "same-waveform weak gain paired test improved0/24 to24/24; formal search gate not yet passed",
+      "next": "isolate locked detector fallback, then frozen full regression only after user approval"
+    },
+    {
+      "name": "TX precision",
+      "evidence": "6-waveform targeted improvement;24 existing class0 sources51/51 captures correct",
+      "next": "keep optional, generic peak-only scale and analog attenuation compensation; cannot require every external TX to use this"
+    },
+    {
+      "name": "Fewer repeated payloads",
+      "evidence": "prior actual1-repeat22/24 vs8-repeat24/24",
+      "next": "paired prefix1/2/4/8 from unaveraged IQ, then actual shortened-frame RF if eligible"
+    },
+    {
+      "name": "Timing rate and clock adaptation",
+      "evidence": "synthetic only",
+      "next": "defer deployment pending real RF classification and false acceptance tests"
+    }
+  ],
+  "invariants": [
+    "No model or bitstream changes",
+    "No lower gates or denominator changes",
+    "No per-class tuning or best-prediction selection",
+    "Public head/tail verification remains",
+    "Autostart baseline remains until explicit validated promotion",
+    "No fresh240-item RF run before required user consent"
+  ]
+}

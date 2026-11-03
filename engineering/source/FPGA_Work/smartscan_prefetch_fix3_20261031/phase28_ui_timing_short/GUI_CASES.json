@@ -1,0 +1,173 @@
+[
+  {
+    "index": 0,
+    "config": {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40,
+      "class_index": 3
+    },
+    "source_sha": "1562575bbedd6e815535726f16de6752da0f7441ea609acd3cb2cf6be529c0f8",
+    "tx_start_pc_ns": 1793453767091144900,
+    "stop_request_pc_ns": 1793453773096110900,
+    "run_dir": "E:\\FPGA_Work\\rml24_tx_console_timing_update_20261031\\console\\runs\\20261031_213604_148100",
+    "result": {
+      "real": true,
+      "count": 1,
+      "error": null,
+      "restore_errors": [],
+      "restore_readback": [
+        {
+          "role": "tx",
+          "key": "hardwaregain",
+          "expected": "-10.000000",
+          "actual": "-10.000000",
+          "ok": true
+        },
+        {
+          "role": "tx",
+          "key": "sampling_frequency",
+          "expected": "30720000",
+          "actual": "30720000",
+          "ok": true
+        },
+        {
+          "role": "tx",
+          "key": "rf_bandwidth",
+          "expected": "18000000",
+          "actual": "18000000",
+          "ok": true
+        },
+        {
+          "role": "tlo",
+          "key": "frequency",
+          "expected": "2450000000",
+          "actual": "2450000000",
+          "ok": true
+        },
+        {
+          "role": "tlo",
+          "key": "powerdown",
+          "expected": "0",
+          "actual": "0",
+          "ok": true
+        }
+      ],
+      "restore_status": "READBACK_RESTORE_OK"
+    }
+  },
+  {
+    "index": 1,
+    "config": {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40,
+      "class_index": 4
+    },
+    "source_sha": "ae8c10796933951b2ec39bba22c4ff1f8b244ab3dff1818290f663cfc83701b8",
+    "tx_start_pc_ns": 1793453776651668100,
+    "stop_request_pc_ns": 1793453782666439300,
+    "run_dir": "E:\\FPGA_Work\\rml24_tx_console_timing_update_20261031\\console\\runs\\20261031_213613_165900",
+    "result": {
+      "real": true,
+      "count": 1,
+      "error": null,
+      "restore_errors": [],
+      "restore_readback": [
+        {
+          "role": "tx",
+          "key": "hardwaregain",
+          "expected": "-10.000000",
+          "actual": "-10.000000",
+          "ok": true
+        },
+        {
+          "role": "tx",
+          "key": "sampling_frequency",
+          "expected": "30720000",
+          "actual": "30720000",
+          "ok": true
+        },
+        {
+          "role": "tx",
+          "key": "rf_bandwidth",
+          "expected": "18000000",
+          "actual": "18000000",
+          "ok": true
+        },
+        {
+          "role": "tlo",
+          "key": "frequency",
+          "expected": "2450000000",
+          "actual": "2450000000",
+          "ok": true
+        },
+        {
+          "role": "tlo",
+          "key": "powerdown",
+          "expected": "0",
+          "actual": "0",
+          "ok": true
+        }
+      ],
+      "restore_status": "READBACK_RESTORE_OK"
+    }
+  },
+  {
+    "index": 2,
+    "config": {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40,
+      "class_index": 3
+    },
+    "source_sha": "1562575bbedd6e815535726f16de6752da0f7441ea609acd3cb2cf6be529c0f8",
+    "tx_start_pc_ns": 1793453786100130900,
+    "stop_request_pc_ns": 1793453792148342400,
+    "run_dir": "E:\\FPGA_Work\\rml24_tx_console_timing_update_20261031\\console\\runs\\20261031_213622_667800",
+    "result": {
+      "real": true,
+      "count": 1,
+      "error": null,
+      "restore_errors": [],
+      "restore_readback": [
+        {
+          "role": "tx",
+          "key": "hardwaregain",
+          "expected": "-10.000000",
+          "actual": "-10.000000",
+          "ok": true
+        },
+        {
+          "role": "tx",
+          "key": "sampling_frequency",
+          "expected": "30720000",
+          "actual": "30720000",
+          "ok": true
+        },
+        {
+          "role": "tx",
+          "key": "rf_bandwidth",
+          "expected": "18000000",
+          "actual": "18000000",
+          "ok": true
+        },
+        {
+          "role": "tlo",
+          "key": "frequency",
+          "expected": "2450000000",
+          "actual": "2450000000",
+          "ok": true
+        },
+        {
+          "role": "tlo",
+          "key": "powerdown",
+          "expected": "0",
+          "actual": "0",
+          "ok": true
+        }
+      ],
+      "restore_status": "READBACK_RESTORE_OK"
+    }
+  }
+]

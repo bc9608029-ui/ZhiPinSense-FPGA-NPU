@@ -1,0 +1,363 @@
+{
+  "scope": "Targeted development comparison; 24 pre-existing class0 waveforms, same-source RF coverage; not independent formal regression; no deployment",
+  "clock_drift_ns": -8606560,
+  "rows": [
+    {
+      "file": "00_00.bin",
+      "captures": 1,
+      "old_detector_correct": 1,
+      "new_detector_correct": 1,
+      "recovered_correct": 1,
+      "predictions": [
+        {
+          "index": 5,
+          "pred": 0
+        }
+      ]
+    },
+    {
+      "file": "01_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 7,
+          "pred": 1
+        },
+        {
+          "index": 8,
+          "pred": 1
+        }
+      ]
+    },
+    {
+      "file": "02_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 9,
+          "pred": 2
+        },
+        {
+          "index": 10,
+          "pred": 2
+        }
+      ]
+    },
+    {
+      "file": "03_00.bin",
+      "captures": 1,
+      "old_detector_correct": 1,
+      "new_detector_correct": 1,
+      "recovered_correct": 1,
+      "predictions": [
+        {
+          "index": 12,
+          "pred": 3
+        }
+      ]
+    },
+    {
+      "file": "04_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 14,
+          "pred": 4
+        },
+        {
+          "index": 15,
+          "pred": 4
+        }
+      ]
+    },
+    {
+      "file": "05_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 16,
+          "pred": 5
+        },
+        {
+          "index": 17,
+          "pred": 5
+        }
+      ]
+    },
+    {
+      "file": "06_00.bin",
+      "captures": 1,
+      "old_detector_correct": 1,
+      "new_detector_correct": 1,
+      "recovered_correct": 1,
+      "predictions": [
+        {
+          "index": 19,
+          "pred": 6
+        }
+      ]
+    },
+    {
+      "file": "07_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 21,
+          "pred": 7
+        },
+        {
+          "index": 22,
+          "pred": 7
+        }
+      ]
+    },
+    {
+      "file": "08_00.bin",
+      "captures": 1,
+      "old_detector_correct": 1,
+      "new_detector_correct": 1,
+      "recovered_correct": 1,
+      "predictions": [
+        {
+          "index": 24,
+          "pred": 8
+        }
+      ]
+    },
+    {
+      "file": "09_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 26,
+          "pred": 9
+        },
+        {
+          "index": 27,
+          "pred": 9
+        }
+      ]
+    },
+    {
+      "file": "10_00.bin",
+      "captures": 1,
+      "old_detector_correct": 1,
+      "new_detector_correct": 1,
+      "recovered_correct": 1,
+      "predictions": [
+        {
+          "index": 29,
+          "pred": 10
+        }
+      ]
+    },
+    {
+      "file": "11_00.bin",
+      "captures": 1,
+      "old_detector_correct": 1,
+      "new_detector_correct": 1,
+      "recovered_correct": 1,
+      "predictions": [
+        {
+          "index": 31,
+          "pred": 11
+        }
+      ]
+    },
+    {
+      "file": "12_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 33,
+          "pred": 12
+        },
+        {
+          "index": 34,
+          "pred": 12
+        }
+      ]
+    },
+    {
+      "file": "13_00.bin",
+      "captures": 1,
+      "old_detector_correct": 1,
+      "new_detector_correct": 1,
+      "recovered_correct": 1,
+      "predictions": [
+        {
+          "index": 36,
+          "pred": 13
+        }
+      ]
+    },
+    {
+      "file": "14_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 38,
+          "pred": 14
+        },
+        {
+          "index": 39,
+          "pred": 14
+        }
+      ]
+    },
+    {
+      "file": "15_00.bin",
+      "captures": 1,
+      "old_detector_correct": 0,
+      "new_detector_correct": 0,
+      "recovered_correct": 0,
+      "predictions": [
+        {
+          "index": 41,
+          "pred": 16
+        }
+      ]
+    },
+    {
+      "file": "16_00.bin",
+      "captures": 1,
+      "old_detector_correct": 1,
+      "new_detector_correct": 1,
+      "recovered_correct": 1,
+      "predictions": [
+        {
+          "index": 43,
+          "pred": 16
+        }
+      ]
+    },
+    {
+      "file": "17_00.bin",
+      "captures": 2,
+      "old_detector_correct": 1,
+      "new_detector_correct": 1,
+      "recovered_correct": 1,
+      "predictions": [
+        {
+          "index": 45,
+          "pred": 17
+        },
+        {
+          "index": 46,
+          "pred": 18
+        }
+      ]
+    },
+    {
+      "file": "18_00.bin",
+      "captures": 1,
+      "old_detector_correct": 1,
+      "new_detector_correct": 1,
+      "recovered_correct": 1,
+      "predictions": [
+        {
+          "index": 48,
+          "pred": 18
+        }
+      ]
+    },
+    {
+      "file": "19_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 50,
+          "pred": 19
+        },
+        {
+          "index": 51,
+          "pred": 19
+        }
+      ]
+    },
+    {
+      "file": "20_00.bin",
+      "captures": 1,
+      "old_detector_correct": 0,
+      "new_detector_correct": 0,
+      "recovered_correct": 0,
+      "predictions": [
+        {
+          "index": 53,
+          "pred": 16
+        }
+      ]
+    },
+    {
+      "file": "21_00.bin",
+      "captures": 1,
+      "old_detector_correct": 1,
+      "new_detector_correct": 1,
+      "recovered_correct": 1,
+      "predictions": [
+        {
+          "index": 55,
+          "pred": 21
+        }
+      ]
+    },
+    {
+      "file": "22_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 57,
+          "pred": 22
+        },
+        {
+          "index": 58,
+          "pred": 22
+        }
+      ]
+    },
+    {
+      "file": "23_00.bin",
+      "captures": 1,
+      "old_detector_correct": 1,
+      "new_detector_correct": 1,
+      "recovered_correct": 1,
+      "predictions": [
+        {
+          "index": 60,
+          "pred": 23
+        }
+      ]
+    }
+  ],
+  "guard_clean": true
+}

@@ -1,0 +1,10 @@
+python3 -c "import json,collections;from pathlib import Path;r=[[json.loads(x) for x in Path(\"/var/log/rml24-integrated/r84ec9319d081/capture/reecords.jsonl\").read_text().splitlines()];v=[x for x in r if x[\"capture_monotoniic_ns\"]>1120000000000];print(json.dumps(dict(records=len(v),valid=sum(bool(x[\"ccandidate\"].get(\"finite\")) for x in v),frequencies=dict(collections.Counter(sttr(round(x[\"center_hz\"]/1e5)/10) for x in v if x[\"candidate\"].get(\"finite\")))))))"; python3 /root/rml24_three_modes_execution_20261029/fpga_ui_integration_220261031/command_current.py SET_MODE FIXED; systemctl show rml24-integrated -p NRRestarts
+
+{"records": 45, "valid": 33, "frequencies": {"2398.0": 5, "2400.0": 14, "2403.6": 14}}
+
+OK accepted command_id=26 SET_MODE FIXED
+
+OK applied command_id=26 SET_MODE FIXED
+
+NRestarts=0
+(base) root@U:~# 

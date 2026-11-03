@@ -1,0 +1,80 @@
+# RadioML2018.01A strict 24-class closed-set baseline.
+#
+# Trains the shared ADAMRV11Net with num_classes=24 on audited RadioML indices.
+# RadioML has no clean reference signal, so reconstruction_weight=0.0 (the
+# denoiser branch acts only as a feature regularizer, never a reconstruction).
+
+seed: 3407
+device: auto
+output_root: runs/rml24_base
+
+public_data:
+  hdf5_path: data/radioml2018/GOLD_XYZ_OSC.0001_1024.hdf5
+  classes_path: data/radioml2018/classes.txt
+  audit_path: data/radioml2018/audit.json
+  index_path: data/radioml2018/rml24_split_indices.npz
+  split_ratios: [0.6, 0.2, 0.2]
+  split_seed: 20261003
+  audit_chunk_size: 65536
+  x_audit_chunk_size: 2048
+  expected_samples: 2555904
+  expected_snr_values: [-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+  expected_per_stratum: 4096
+
+model:
+  denoiser_channels: 24
+  denoiser_blocks: 3
+  feature_channels: [32, 48, 64, 96]
+  classifier_hidden: 128
+  dropout: 0.15
+
+training:
+  epochs: 80
+  batch_size: 256
+  learning_rate: 1.0e-3
+  weight_decay: 1.0e-4
+  scheduler_factor: 0.5
+  scheduler_patience: 5
+  minimum_lr: 1.0e-6
+  minimum_epochs_before_stopping: 30
+  early_stopping_patience: 12
+  min_delta: 1.0e-4
+  gradient_clip_norm: 2.0
+  reconstruction_weight: 0.0
+  amp: true
+  amp_dtype: bfloat16
+  snr_weighting:
+    very_low_snr_weight: 0.35
+    rated_snr_weight: 1.25
+    zero_db_extra_weight: 1.20
+
+v2:
+  loss: cross_entropy
+  label_smoothing: 0.1
+  focal_gamma: 2.0
+  optimizer: adamw
+  sgd_momentum: 0.9
+  class_sampling: balanced
+
+dataset:
+  num_workers: 0
+  snr_values: [-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+
+evaluation:
+  samples: 262144
+  batch_size: 512
+
+signal:
+  sample_rate: 128000.0
+  symbol_rate: 16000.0
+  samples_per_symbol: 8
+  sample_length: 1024
+  amplitude: 1.0
+  modulations: ["OOK", "4ASK", "8ASK", "BPSK", "QPSK", "8PSK", "16PSK", "32PSK",
+                "16APSK", "32APSK", "64APSK", "128APSK", "16QAM", "32QAM", "64QAM",
+                "128QAM", "256QAM", "AM-SSB-WC", "AM-SSB-SC", "AM-DSB-WC",
+                "AM-DSB-SC", "FM", "GMSK", "OQPSK"]
+
+rml24:
+  model_name: RML2018_24_BENCHMARK
+  apply_channel_augmentation: false

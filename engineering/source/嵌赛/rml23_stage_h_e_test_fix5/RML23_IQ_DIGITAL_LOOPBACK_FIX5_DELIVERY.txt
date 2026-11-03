@@ -1,0 +1,127 @@
+================================================================================
+RML23 Stage H-E / Route E fix5 交付报告
+任意 cyclic IQ 全周期同步 + scale-independent 保真判定
+================================================================================
+
+状态：M29-RML23-IQ-DIGITAL-LOOPBACK-READY-FOR-BOARD-TEST
+基线：fix4 全量 sdr_rml23_live_board_package_iq_digital_loopback_fix4.tar.gz
+       sha256 48334de20bd2a3c7c6fc6adc17879b264f269f22e6a30d2c8112eff0e90da151
+本轮：不碰板；由用户执行板端验收。
+
+--------------------------------------------------------------------------------
+1. 修复的 fix4 遗留缺陷清单 + 代码位置
+--------------------------------------------------------------------------------
+  #1  有界整数延迟搜索无法覆盖全周期任意 cyclic 相位。
+       fix4 find_correct_rx_shift 只在 [0, delay_margin) 内搜整数延迟，53760-sample
+       周期内的任意起始相位搜不到 -> corr 塌到 ~0.095，与板测 corr=0/rms_rx≈0/分类1/8
+       一致。修复：board_package/iq_digital_loopback_sync.hpp 的 circular_cross_corr
+       + circular_sync，对全部 P 个 circular shift 做 FFT 圆相关。
+  #2  NMSE/EVM 分母用 TX 能量，低相关可显示低 EVM。
+       fix4 NMSE 分母 sum|x|^2（TX），RX=TX/16 时 err/TX ~ 0.004，corr ~ 0.095 仍打印
+       NMSE~0.004/EVM~6.6%。修复：measure_fidelity_fix5 的 normalized_residual =
+       ||y-a.x||^2 / ||y||^2（分母 RX），并与 1-|corr|^2 一致（nmse_evm_consistent）。
+  #3  无“实际交给 iio_buffer_push 的字节”证据，无法区分 stale-leak 与调制失真。
+       修复：pluto_device.hpp/.cpp 的 tx_dma_payload_sha（push 前读回 TX buffer 字节
+       SHA）+ transfer.hpp 的 tx_dma_payload_ok + runner 的 TX_DMA_PAYLOAD_MISMATCH。
+
+--------------------------------------------------------------------------------
+2. 官方 libiio/AD936x 语义对照（A–H 结论摘要）
+--------------------------------------------------------------------------------
+  A 数字回环在 BBP 数字域闭合（TX FIR 后、DAC 前 -> RX BBP、RX FIR 前），不经过
+    DAC/ADC/RF 混频，TX/RX 共享样本时钟。
+  B TX 16-bit 容器 -> 12-bit DAC 的位截断发生在 HDL；主机侧整数即逻辑值。
+  C RX 12-bit -> 16-bit 容器，fully_defined=true 时不额外掩码/符号扩展。
+  D TX/RX FIR 引入群延迟 + 带内波纹；fix5 用全周期圆相关吸收群延迟，用残差度量波纹。
+  E iio_buffer_push 不提供与 RX 捕获起点的相位对齐；cyclic 起始相位对 RX 未知。
+  F destroy/recreate buffer 后第一次 refill 才从新 sample-0 开始（fix2 已实现）。
+  G push/refill 无精确相位/时间戳契约；fix5 在 push 前锚定 DMA 字节 SHA。
+  H 项目实际：TX 16b/16b shift0 signed fully_defined；RX 16b/12b shift0 signed
+    fully_defined（fix4 板测确认）；I/Q 交错。
+
+--------------------------------------------------------------------------------
+3. 判定优先级（fidelity_verdict_fix5，严格顺序）
+--------------------------------------------------------------------------------
+  TX_DMA_PAYLOAD_MISMATCH（runner 覆盖） > INSUFFICIENT_EVIDENCE(rx<1024) >
+  CAPTURE_TOO_SHORT > RX_ALL_ZERO > RX_LOW_AMPLITUDE(rms<2) >
+  CIRCULAR_SYNC_AMBIGUOUS(peak_ratio<2) > DIGITAL_LOOPBACK_DISTORTS_IQ(corr<0.9) >
+  DIGITAL_LOOPBACK_PRESERVES_IQ(corr>=0.9 且无削顶且 normalized_gain±3dB 且
+  nmse_evm_consistent) > DIGITAL_LOOPBACK_CAPABILITY_NOT_PROVEN。
+  全部冻结文件达 PRESERVES_IQ 才跑 24 类，否则 INVALID_DUE_TO_FIDELITY_GATE。
+
+--------------------------------------------------------------------------------
+4. host 测试逐项结果（本轮离线）
+--------------------------------------------------------------------------------
+  test_iq_digital_loopback_sync    pass=51 fail=0
+  build_host_tests.sh              51 个测试二进制全部编译通过（-Wall -Wextra -Werror）
+  run_tests.sh                     ALL HOST TESTS PASSED
+  （test_iq_digital_loopback / _sequence / _sweep / route_e_raw_rx_output_fields /
+    board_build / cli_override / rml23_build 均无回归）
+
+--------------------------------------------------------------------------------
+5. 打包自检
+--------------------------------------------------------------------------------
+  dependency-closure audit          OK（所有改动头均列入 ROUTE_E_FIX5_FILES）
+  两跑确定性                        两次打包 SHA 一致
+  独立解包 sha256sum -c             patch 10/10 OK；full 538/538 OK
+
+--------------------------------------------------------------------------------
+6. 2 工件（路径/字节/文件数/manifest 行数/64-hex SHA）
+--------------------------------------------------------------------------------
+  [独立补丁]
+  dist/sdr_rml23_live_iq_digital_loopback_fix5_patch.tar.gz
+    字节 57473  文件 10  manifest 10 行
+    sha256 ba2ff33d6b39273005309350b3023e9a4e0863c351bd956e60a918754169139a
+    manifest dist/IQ_DIGITAL_LOOPBACK_FIX5_PATCH_SHA256SUMS.txt (1063 字节)
+  [合并全量 fix4+fix5]
+  dist/sdr_rml23_live_board_package_iq_digital_loopback_fix5.tar.gz
+    字节 3787431  文件 538  manifest 538 行
+    sha256 8239285c91aa0e75c2c2483ec5a010d043bf2301fdd825d573240b40733dcb57
+    manifest dist/sdr_rml23_live_board_package_iq_digital_loopback_fix5.SHA256SUMS.txt (53946 字节)
+
+--------------------------------------------------------------------------------
+7. 文件差异（相对 fix4 全量 48334de2… 基线）
+--------------------------------------------------------------------------------
+  新增 4：board_package/iq_digital_loopback_sync.hpp、
+          host_tests/test_iq_digital_loopback_sync.cpp、
+          scripts/package_iq_digital_loopback_fix5.py、
+          docs/M29_RML23_STAGE_H_E_IQ_DIGITAL_LOOPBACK_FIX5_AUDIT.md
+  修改 6：sdr_adapter/pluto_device.hpp、sdr_adapter/pluto_device_libiio.cpp、
+          board_package/iq_digital_loopback_transfer.hpp、
+          board_package/iq_digital_loopback_runner.hpp、
+          host_tests/build_host_tests.sh、host_tests/run_tests.sh
+  不改：模型 json/raw、标签、PreprocessChain、RTL/XDC、位流、Flash、read_rx 生产
+        libiio 路径、sweep 判责 A→G、Stage G A/B/C/D 语义。
+
+--------------------------------------------------------------------------------
+8. 历史包未覆盖证明
+--------------------------------------------------------------------------------
+  dist/ 下 fix1..fix4 及原始 iq_digital_loopback 包全部保留（ls 确认存在）。
+  fix5 两份工件为新增文件名，未覆盖任何历史包。
+
+--------------------------------------------------------------------------------
+9. 板端复测命令（用户执行；本轮不写死 ip）
+--------------------------------------------------------------------------------
+  ./scripts/run_gate9_rml23.sh --phase=iq-digital-loopback --center=2400000000 \
+    --rx-gain=10 --tx-atten=-40 --frozen-dir=DIR \
+    --input-kind=radioml-reconstructed-2p56m \
+    > /root/rml23_route_e_fix5_loopback.log 2>&1
+  预期观测：
+    IQ_DIGITAL_LOOPBACK_FORMAT dir=tx 16b/16b shift0 signed fully_defined
+    IQ_DIGITAL_LOOPBACK_FORMAT dir=rx 16b/12b shift0 signed fully_defined
+    IQ_DIGITAL_LOOPBACK_TX_DMA_PAYLOAD ok=1
+    fidelity= 为 TX_DMA_PAYLOAD_MISMATCH / CAPTURE_TOO_SHORT /
+               CIRCULAR_SYNC_AMBIGUOUS / DISTORTS_IQ / PRESERVES_IQ / NOT_PROVEN 之一
+    gain_db=-24.08(count) 且 gain_normalized_db≈0(TX16/RX12 尺度，非衰减)
+    nmse_evm_consistent=1
+  仅当全部冻结文件达 PRESERVES_IQ 才扩展 24 类分类。
+
+--------------------------------------------------------------------------------
+10. 结论
+--------------------------------------------------------------------------------
+  host 侧证明：全周期 FFT 圆相关 + scale-independent NMSE/EVM + TX DMA payload SHA
+  的判责仪表正确（51 项 host 测试全绿、全套件无回归、打包确定性 + 依赖闭包 + 独立
+  解包校验全 OK）。
+  host 测试不产生、也不声称 DIGITAL_LOOPBACK_CAPABILITY 已 PROVEN；回环保真
+  PRESERVES_IQ 只在板端出现。状态保持 READY-FOR-BOARD-TEST，不写任何 *_PASS /
+  PROJECT_COMPLETE / FINAL_* / BOARD_TEST_PASS。
+================================================================================

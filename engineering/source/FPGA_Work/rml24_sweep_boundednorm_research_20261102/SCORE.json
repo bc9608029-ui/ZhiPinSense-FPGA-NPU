@@ -1,0 +1,40 @@
+{
+  "scores": {
+    "pure_original": {
+      "correct": 240,
+      "denominator": 240,
+      "errors": []
+    },
+    "pure_bounded": {
+      "correct": 240,
+      "denominator": 240,
+      "errors": []
+    },
+    "target_original": {
+      "correct": 10,
+      "denominator": 12,
+      "errors": [
+        {
+          "index": 74,
+          "pred": 20,
+          "expected": 19
+        },
+        {
+          "index": 75,
+          "pred": 20,
+          "expected": 19
+        }
+      ]
+    },
+    "target_bounded": {
+      "correct": 12,
+      "denominator": 12,
+      "errors": []
+    }
+  },
+  "npu_stop": [
+    "NPU_STREAM_STOP frames=4032 apply=1 reset=4031 discipline=1"
+  ],
+  "diagnostic_only": true,
+  "not_deployed": true
+}

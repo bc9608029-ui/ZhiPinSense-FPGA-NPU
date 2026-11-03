@@ -1,0 +1,111 @@
+# AD-AMR V1.1: ten-class, single-model, NPU-operator-compatible student.
+seed: 2026
+device: auto
+output_root: outputs/ad_amr_v1_1/formal/seed2026
+
+teachers:
+  v2: init/v2_time_power_phase_best.pt
+  v1:
+    - init/ad_amr_v1_seed2026_best.pt
+    - init/ad_amr_v1_seed2027_best.pt
+
+signal:
+  sample_rate: 128000.0
+  symbol_rate: 16000.0
+  samples_per_symbol: 8
+  sample_length: 1024
+  amplitude: 1.0
+  frequency_offset: 0.0
+  phase_offset: 0.0
+  pulse_shape: {type: rrc, rolloff: 0.35, span_symbols: 8}
+  analog:
+    message_bandwidth_hz: [2500.0, 7000.0]
+    am_modulation_index: [0.35, 0.9]
+    fm_deviation_hz: [10000.0, 22000.0]
+  gfsk: {bt: [0.3, 0.7], modulation_index: [0.45, 0.55], span_symbols: 4}
+  ofdm: {fft_length: 256, cyclic_prefix: 64, active_subcarriers: 48, subcarrier_modulation: QPSK}
+  modulations: [AM-DSB, WBFM, 2FSK, GFSK, BPSK, QPSK, 8PSK, 16QAM, 64QAM, OFDM]
+
+channel:
+  domain_randomization: true
+  awgn: {enabled: true, probability: 1.0, snr_db: [-20.0, 20.0]}
+  rayleigh: {enabled: true, probability: 0.10}
+  rician: {enabled: true, probability: 0.10, k_factor: [3.0, 10.0]}
+  multipath: {enabled: true, probability: 0.12, num_taps: [2, 4], max_delay: 10}
+  cfo: {enabled: true, probability: 0.55, hz: [-1200.0, 1200.0]}
+  phase_offset: {enabled: true, probability: 0.65, radians: [-3.14159, 3.14159]}
+  phase_noise: {enabled: true, probability: 0.10, std_rad: [0.0001, 0.003]}
+  sfo: {enabled: true, probability: 0.08, ppm: [-60.0, 60.0]}
+  iq_imbalance: {enabled: true, probability: 0.12, gain_db: [-1.0, 1.0], phase_deg: [-5.0, 5.0]}
+  dc_offset: {enabled: true, probability: 0.08, magnitude: [0.0, 0.05]}
+  amplitude_scaling: {enabled: true, probability: 0.5, scale: [0.7, 1.3]}
+  clipping: {enabled: true, probability: 0.06, level_rms: [1.5, 2.5]}
+  narrowband_interference: {enabled: false, probability: 0.0, sir_db: [8.0, 25.0]}
+  burst_interference: {enabled: false, probability: 0.0, sir_db: [5.0, 20.0], duty_cycle: [0.05, 0.2]}
+
+dataset:
+  # Exactly balanced: 21 SNR x 10 classes x repetitions.
+  train_samples: 31500
+  val_samples: 6300
+  snr_values: [-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+  num_workers: 4
+
+model:
+  denoiser_channels: 24
+  denoiser_blocks: 3
+  feature_channels: [32, 48, 64, 96]
+  classifier_hidden: 128
+  dropout: 0.15
+
+training:
+  epochs: 100
+  batch_size: 128
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  scheduler_factor: 0.5
+  scheduler_patience: 5
+  minimum_lr: 0.000001
+  early_stopping_patience: 12
+  minimum_epochs_before_stopping: 30
+  min_delta: 0.0001
+  gradient_clip_norm: 2.0
+  amp: true
+  # RTX 30/40/50-class CUDA devices support BF16. Its FP32-like exponent range
+  # avoids the full-SNR FP16 backward overflow seen at deep negative SNR.
+  amp_dtype: bfloat16
+  reconstruction_weight: 0.02
+  snr_weighting:
+    very_low_snr_weight: 0.35
+    rated_snr_weight: 1.25
+    zero_db_extra_weight: 1.20
+  distillation:
+    enabled: true
+    temperature: 3.0
+    v2_weight: 0.15
+    v1_weight: 0.25
+
+evaluation:
+  batch_size: 256
+  samples: 6300
+  ood_samples: 2100
+
+pilot:
+  # Long enough to avoid V1's demonstrated 15-epoch misranking.
+  stage_a_epochs: 30
+  formal_epochs: 100
+  seeds: [2026, 2027]
+  variants: [student_only, v1_distill, dual_distill]
+
+acceptance:
+  seeds_required: 2
+  gates:
+    mean_full_macro_f1: 0.72
+    mean_full_accuracy: 0.72
+    mean_rated_0_20_accuracy: 0.90
+    mean_high_10_20_accuracy: 0.95
+    each_seed_snr_0_accuracy: 0.85
+    each_seed_min_rated_class_accuracy: 0.75
+    max_ood_macro_f1_drop: 0.08
+    onnx_max_abs_diff: 0.001
+    fake_int8_accuracy_drop: 0.03
+    unexpected_operators: 0

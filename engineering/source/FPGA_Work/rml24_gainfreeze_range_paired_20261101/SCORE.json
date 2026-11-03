@@ -1,0 +1,1170 @@
+[
+  {
+    "mode": "manual_bw5",
+    "denominator": 48,
+    "correct": 24,
+    "missing": 0,
+    "rows": [
+      {
+        "expected": 1,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14133952632970,
+          "ok": true,
+          "pred": 1,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 13,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14138499618290,
+          "ok": true,
+          "pred": 13,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 10,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14142283760270,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 19,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14146208966850,
+          "ok": true,
+          "pred": 19,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 17,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14150670123230,
+          "ok": true,
+          "pred": 17,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 9,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14154376402270,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 21,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14158278206110,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 16,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14162157797180,
+          "ok": true,
+          "pred": 16,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 3,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14166831073590,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 14,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14170722960100,
+          "ok": true,
+          "pred": 14,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 17,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14175405237690,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 11,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14179427053780,
+          "ok": true,
+          "pred": 11,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 12,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14183019784340,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 9,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14186868941280,
+          "ok": true,
+          "pred": 9,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 7,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14191500714760,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 20,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14195571499450,
+          "ok": true,
+          "pred": 20,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 0,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14199182854720,
+          "ok": true,
+          "pred": 0,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 3,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14203817597310,
+          "ok": true,
+          "pred": 3,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 18,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14207335988410,
+          "ok": true,
+          "pred": 18,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 21,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14212125891430,
+          "ok": true,
+          "pred": 21,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 22,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14215823897430,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 23,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14220238616750,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 11,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14223260791730,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 10,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14227435552400,
+          "ok": true,
+          "pred": 10,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 0,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14232341365850,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 2,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14235340568200,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 4,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14240482491720,
+          "ok": true,
+          "pred": 4,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 5,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14244303760390,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 19,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14248874317490,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 13,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14253069496940,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 8,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14256012400250,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 16,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14260379110450,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 15,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14264837476350,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 12,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14268961562160,
+          "ok": true,
+          "pred": 12,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 1,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14272731148470,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 8,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14277061046060,
+          "ok": true,
+          "pred": 8,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 6,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14280636302360,
+          "ok": true,
+          "pred": 6,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 14,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14285430221490,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 6,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14288452433680,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 22,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14292654558030,
+          "ok": true,
+          "pred": 22,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 15,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14297397146500,
+          "ok": true,
+          "pred": 15,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 4,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14301201327400,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 20,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14305566929540,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 18,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14308689233050,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 23,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14312925569720,
+          "ok": true,
+          "pred": 23,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 5,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14317753076800,
+          "ok": true,
+          "pred": 5,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 2,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14321289081940,
+          "ok": true,
+          "pred": 2,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 7,
+        "chosen": {
+          "mode": "manual_bw5",
+          "m": 14324882838030,
+          "ok": true,
+          "pred": 7,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      }
+    ]
+  },
+  {
+    "mode": "gainfreeze_bw5",
+    "denominator": 48,
+    "correct": 48,
+    "missing": 0,
+    "rows": [
+      {
+        "expected": 1,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14385813957790,
+          "ok": true,
+          "pred": 1,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 13,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14389743942770,
+          "ok": true,
+          "pred": 13,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 10,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14393884024770,
+          "ok": true,
+          "pred": 10,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 19,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14399103978600,
+          "ok": true,
+          "pred": 19,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 17,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14403014874110,
+          "ok": true,
+          "pred": 17,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 9,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14407084155500,
+          "ok": true,
+          "pred": 9,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 21,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14410874256260,
+          "ok": true,
+          "pred": 21,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 16,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14414944411160,
+          "ok": true,
+          "pred": 16,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 3,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14419124988640,
+          "ok": true,
+          "pred": 3,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 14,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14422954577720,
+          "ok": true,
+          "pred": 14,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 17,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14426794992110,
+          "ok": true,
+          "pred": 17,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 11,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14430924747400,
+          "ok": true,
+          "pred": 11,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 12,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14434814868330,
+          "ok": true,
+          "pred": 12,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 9,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14438954912340,
+          "ok": true,
+          "pred": 9,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 7,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14443074965080,
+          "ok": true,
+          "pred": 7,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 20,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14447025076230,
+          "ok": true,
+          "pred": 20,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 0,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14450914955150,
+          "ok": true,
+          "pred": 0,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 3,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14454965137990,
+          "ok": true,
+          "pred": 3,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 18,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14458884990160,
+          "ok": true,
+          "pred": 18,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 21,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14462915290380,
+          "ok": true,
+          "pred": 21,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 22,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14467995454080,
+          "ok": true,
+          "pred": 22,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 23,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14472015577410,
+          "ok": true,
+          "pred": 23,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 11,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14476045275870,
+          "ok": true,
+          "pred": 11,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 10,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14480185665470,
+          "ok": true,
+          "pred": 10,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 0,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14484135657740,
+          "ok": true,
+          "pred": 0,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 2,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14488285837310,
+          "ok": true,
+          "pred": 2,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 4,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14492325868860,
+          "ok": true,
+          "pred": 4,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 5,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14496565673830,
+          "ok": true,
+          "pred": 5,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 19,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14500746218380,
+          "ok": true,
+          "pred": 19,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 13,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14503576424660,
+          "ok": true,
+          "pred": 13,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 8,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14507876171990,
+          "ok": true,
+          "pred": 8,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 16,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14512106040490,
+          "ok": true,
+          "pred": 16,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 15,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14516296122410,
+          "ok": true,
+          "pred": 15,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 12,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14520336202770,
+          "ok": true,
+          "pred": 12,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 1,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14524426467350,
+          "ok": true,
+          "pred": 1,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 8,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14528736534360,
+          "ok": true,
+          "pred": 8,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 6,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14532896543920,
+          "ok": true,
+          "pred": 6,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 14,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14536986873270,
+          "ok": true,
+          "pred": 14,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 6,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14541046793330,
+          "ok": true,
+          "pred": 6,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 22,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14544976884550,
+          "ok": true,
+          "pred": 22,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 15,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14549266616290,
+          "ok": true,
+          "pred": 15,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 4,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14553477149960,
+          "ok": true,
+          "pred": 4,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 20,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14557827010970,
+          "ok": true,
+          "pred": 20,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 18,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14560577104860,
+          "ok": true,
+          "pred": 18,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 23,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14564787180020,
+          "ok": true,
+          "pred": 23,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 5,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14568897259060,
+          "ok": true,
+          "pred": 5,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 2,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14573247865590,
+          "ok": true,
+          "pred": 2,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 7,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 14577597195170,
+          "ok": true,
+          "pred": 7,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      }
+    ]
+  }
+]

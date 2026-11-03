@@ -1,0 +1,1424 @@
+{
+  "time": "2026-10-31T00:35:24.077768+08:00",
+  "tests": [
+    {
+      "image": "original_bit",
+      "arm": "full25",
+      "denominator": 240,
+      "correct": {
+        "1": 176,
+        "2": 205,
+        "4": 216,
+        "8": 223
+      },
+      "percent": {
+        "1": 73.3333,
+        "2": 85.4167,
+        "4": 90.0,
+        "8": 92.9167
+      },
+      "valid": true
+    },
+    {
+      "image": "original_bit",
+      "arm": "full35",
+      "denominator": 240,
+      "correct": {
+        "1": 231,
+        "2": 236,
+        "4": 237,
+        "8": 239
+      },
+      "percent": {
+        "1": 96.25,
+        "2": 98.3333,
+        "4": 98.75,
+        "8": 99.5833
+      },
+      "valid": true
+    },
+    {
+      "image": "original_bit",
+      "arm": "full45",
+      "denominator": 240,
+      "correct": {
+        "1": 235,
+        "2": 233,
+        "4": 233,
+        "8": 238
+      },
+      "percent": {
+        "1": 97.9167,
+        "2": 97.0833,
+        "4": 97.0833,
+        "8": 99.1667
+      },
+      "valid": true
+    },
+    {
+      "image": "original_bit",
+      "arm": "fullAGC",
+      "denominator": 240,
+      "correct": {
+        "1": 187,
+        "2": 214,
+        "4": 221,
+        "8": 220
+      },
+      "percent": {
+        "1": 77.9167,
+        "2": 89.1667,
+        "4": 92.0833,
+        "8": 91.6667
+      },
+      "valid": true
+    },
+    {
+      "image": "original_bit",
+      "arm": "smoke25",
+      "denominator": 24,
+      "correct": {
+        "1": 16,
+        "2": 22,
+        "4": 22,
+        "8": 23
+      },
+      "percent": {
+        "1": 66.6667,
+        "2": 91.6667,
+        "4": 91.6667,
+        "8": 95.8333
+      },
+      "valid": true
+    },
+    {
+      "image": "original_bit",
+      "arm": "smoke35",
+      "denominator": 24,
+      "correct": {
+        "1": 23,
+        "2": 23,
+        "4": 24,
+        "8": 24
+      },
+      "percent": {
+        "1": 95.8333,
+        "2": 95.8333,
+        "4": 100.0,
+        "8": 100.0
+      },
+      "valid": true
+    },
+    {
+      "image": "original_bit",
+      "arm": "smoke45",
+      "denominator": 24,
+      "correct": {
+        "1": 24,
+        "2": 24,
+        "4": 24,
+        "8": 24
+      },
+      "percent": {
+        "1": 100.0,
+        "2": 100.0,
+        "4": 100.0,
+        "8": 100.0
+      },
+      "valid": true
+    },
+    {
+      "image": "original_bit",
+      "arm": "smokeAGC",
+      "denominator": 24,
+      "correct": {
+        "1": 14,
+        "2": 23,
+        "4": 23,
+        "8": 21
+      },
+      "percent": {
+        "1": 58.3333,
+        "2": 95.8333,
+        "4": 95.8333,
+        "8": 87.5
+      },
+      "valid": true
+    }
+  ],
+  "same_capture_repeat_comparison": {
+    "original_bit/full25": {
+      "1": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 5,
+            "label": 22,
+            "prediction": 17
+          },
+          {
+            "opportunity": 6,
+            "label": 15,
+            "prediction": 11
+          },
+          {
+            "opportunity": 12,
+            "label": 2,
+            "prediction": 17
+          },
+          {
+            "opportunity": 13,
+            "label": 15,
+            "prediction": 16
+          },
+          {
+            "opportunity": 17,
+            "label": 5,
+            "prediction": 8
+          },
+          {
+            "opportunity": 26,
+            "label": 8,
+            "prediction": 9
+          },
+          {
+            "opportunity": 31,
+            "label": 14,
+            "prediction": 1
+          },
+          {
+            "opportunity": 36,
+            "label": 5,
+            "prediction": 8
+          },
+          {
+            "opportunity": 49,
+            "label": 23,
+            "prediction": 8
+          },
+          {
+            "opportunity": 54,
+            "label": 6,
+            "prediction": 8
+          },
+          {
+            "opportunity": 63,
+            "label": 7,
+            "prediction": 8
+          },
+          {
+            "opportunity": 66,
+            "label": 22,
+            "prediction": 17
+          },
+          {
+            "opportunity": 72,
+            "label": 23,
+            "prediction": 6
+          },
+          {
+            "opportunity": 73,
+            "label": 3,
+            "prediction": 0
+          },
+          {
+            "opportunity": 76,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 81,
+            "label": 23,
+            "prediction": 13
+          },
+          {
+            "opportunity": 87,
+            "label": 14,
+            "prediction": 15
+          },
+          {
+            "opportunity": 95,
+            "label": 10,
+            "prediction": 11
+          },
+          {
+            "opportunity": 98,
+            "label": 7,
+            "prediction": 6
+          },
+          {
+            "opportunity": 107,
+            "label": 13,
+            "prediction": 11
+          },
+          {
+            "opportunity": 114,
+            "label": 8,
+            "prediction": 9
+          },
+          {
+            "opportunity": 121,
+            "label": 16,
+            "prediction": 14
+          },
+          {
+            "opportunity": 129,
+            "label": 13,
+            "prediction": 11
+          },
+          {
+            "opportunity": 133,
+            "label": 22,
+            "prediction": 8
+          },
+          {
+            "opportunity": 144,
+            "label": 7,
+            "prediction": 6
+          },
+          {
+            "opportunity": 147,
+            "label": 15,
+            "prediction": 11
+          },
+          {
+            "opportunity": 153,
+            "label": 2,
+            "prediction": 17
+          },
+          {
+            "opportunity": 155,
+            "label": 22,
+            "prediction": 17
+          },
+          {
+            "opportunity": 156,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 157,
+            "label": 13,
+            "prediction": 9
+          },
+          {
+            "opportunity": 160,
+            "label": 13,
+            "prediction": 9
+          },
+          {
+            "opportunity": 161,
+            "label": 15,
+            "prediction": 16
+          },
+          {
+            "opportunity": 176,
+            "label": 18,
+            "prediction": 17
+          },
+          {
+            "opportunity": 177,
+            "label": 22,
+            "prediction": 17
+          },
+          {
+            "opportunity": 180,
+            "label": 8,
+            "prediction": 9
+          },
+          {
+            "opportunity": 192,
+            "label": 9,
+            "prediction": 11
+          },
+          {
+            "opportunity": 197,
+            "label": 14,
+            "prediction": 16
+          },
+          {
+            "opportunity": 199,
+            "label": 23,
+            "prediction": 10
+          },
+          {
+            "opportunity": 205,
+            "label": 16,
+            "prediction": 14
+          },
+          {
+            "opportunity": 211,
+            "label": 22,
+            "prediction": 17
+          },
+          {
+            "opportunity": 213,
+            "label": 10,
+            "prediction": 11
+          },
+          {
+            "opportunity": 221,
+            "label": 21,
+            "prediction": 20
+          },
+          {
+            "opportunity": 225,
+            "label": 7,
+            "prediction": 9
+          },
+          {
+            "opportunity": 227,
+            "label": 14,
+            "prediction": 15
+          },
+          {
+            "opportunity": 228,
+            "label": 16,
+            "prediction": 14
+          },
+          {
+            "opportunity": 229,
+            "label": 12,
+            "prediction": 14
+          },
+          {
+            "opportunity": 230,
+            "label": 23,
+            "prediction": 10
+          }
+        ],
+        "fixes_vs8": []
+      },
+      "2": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 5,
+            "label": 22,
+            "prediction": 17
+          },
+          {
+            "opportunity": 31,
+            "label": 14,
+            "prediction": 9
+          },
+          {
+            "opportunity": 54,
+            "label": 6,
+            "prediction": 8
+          },
+          {
+            "opportunity": 63,
+            "label": 7,
+            "prediction": 6
+          },
+          {
+            "opportunity": 81,
+            "label": 23,
+            "prediction": 15
+          },
+          {
+            "opportunity": 121,
+            "label": 16,
+            "prediction": 14
+          },
+          {
+            "opportunity": 133,
+            "label": 22,
+            "prediction": 17
+          },
+          {
+            "opportunity": 156,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 157,
+            "label": 13,
+            "prediction": 9
+          },
+          {
+            "opportunity": 177,
+            "label": 22,
+            "prediction": 17
+          },
+          {
+            "opportunity": 180,
+            "label": 8,
+            "prediction": 9
+          },
+          {
+            "opportunity": 199,
+            "label": 23,
+            "prediction": 10
+          },
+          {
+            "opportunity": 205,
+            "label": 16,
+            "prediction": 14
+          },
+          {
+            "opportunity": 211,
+            "label": 22,
+            "prediction": 17
+          },
+          {
+            "opportunity": 213,
+            "label": 10,
+            "prediction": 11
+          },
+          {
+            "opportunity": 221,
+            "label": 21,
+            "prediction": 14
+          },
+          {
+            "opportunity": 225,
+            "label": 7,
+            "prediction": 8
+          },
+          {
+            "opportunity": 230,
+            "label": 23,
+            "prediction": 10
+          }
+        ],
+        "fixes_vs8": []
+      },
+      "4": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 31,
+            "label": 14,
+            "prediction": 16
+          },
+          {
+            "opportunity": 87,
+            "label": 14,
+            "prediction": 16
+          },
+          {
+            "opportunity": 133,
+            "label": 22,
+            "prediction": 17
+          },
+          {
+            "opportunity": 177,
+            "label": 22,
+            "prediction": 17
+          },
+          {
+            "opportunity": 205,
+            "label": 16,
+            "prediction": 14
+          },
+          {
+            "opportunity": 213,
+            "label": 10,
+            "prediction": 11
+          },
+          {
+            "opportunity": 221,
+            "label": 21,
+            "prediction": 8
+          },
+          {
+            "opportunity": 225,
+            "label": 7,
+            "prediction": 8
+          }
+        ],
+        "fixes_vs8": [
+          {
+            "opportunity": 172,
+            "label": 15,
+            "prediction8": 16
+          }
+        ]
+      }
+    },
+    "original_bit/full35": {
+      "1": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 0,
+            "label": 8,
+            "prediction": 9
+          },
+          {
+            "opportunity": 85,
+            "label": 14,
+            "prediction": 16
+          },
+          {
+            "opportunity": 97,
+            "label": 17,
+            "prediction": 18
+          },
+          {
+            "opportunity": 147,
+            "label": 15,
+            "prediction": 16
+          },
+          {
+            "opportunity": 159,
+            "label": 17,
+            "prediction": 18
+          },
+          {
+            "opportunity": 183,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 205,
+            "label": 16,
+            "prediction": 14
+          },
+          {
+            "opportunity": 211,
+            "label": 22,
+            "prediction": 17
+          }
+        ],
+        "fixes_vs8": []
+      },
+      "2": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 57,
+            "label": 23,
+            "prediction": 15
+          },
+          {
+            "opportunity": 183,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 205,
+            "label": 16,
+            "prediction": 14
+          }
+        ],
+        "fixes_vs8": []
+      },
+      "4": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 183,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 205,
+            "label": 16,
+            "prediction": 14
+          }
+        ],
+        "fixes_vs8": []
+      }
+    },
+    "original_bit/full45": {
+      "1": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 31,
+            "label": 14,
+            "prediction": 16
+          },
+          {
+            "opportunity": 57,
+            "label": 23,
+            "prediction": 15
+          },
+          {
+            "opportunity": 115,
+            "label": 13,
+            "prediction": 15
+          },
+          {
+            "opportunity": 124,
+            "label": 19,
+            "prediction": 20
+          }
+        ],
+        "fixes_vs8": [
+          {
+            "opportunity": 183,
+            "label": 19,
+            "prediction8": 20
+          }
+        ]
+      },
+      "2": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 5,
+            "label": 22,
+            "prediction": 16
+          },
+          {
+            "opportunity": 7,
+            "label": 22,
+            "prediction": 1
+          },
+          {
+            "opportunity": 31,
+            "label": 14,
+            "prediction": 16
+          },
+          {
+            "opportunity": 57,
+            "label": 23,
+            "prediction": 15
+          },
+          {
+            "opportunity": 115,
+            "label": 13,
+            "prediction": 15
+          },
+          {
+            "opportunity": 124,
+            "label": 19,
+            "prediction": 20
+          }
+        ],
+        "fixes_vs8": [
+          {
+            "opportunity": 183,
+            "label": 19,
+            "prediction8": 20
+          }
+        ]
+      },
+      "4": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 5,
+            "label": 22,
+            "prediction": 16
+          },
+          {
+            "opportunity": 7,
+            "label": 22,
+            "prediction": 1
+          },
+          {
+            "opportunity": 107,
+            "label": 13,
+            "prediction": 15
+          },
+          {
+            "opportunity": 115,
+            "label": 13,
+            "prediction": 15
+          },
+          {
+            "opportunity": 124,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 177,
+            "label": 22,
+            "prediction": 16
+          }
+        ],
+        "fixes_vs8": [
+          {
+            "opportunity": 183,
+            "label": 19,
+            "prediction8": 20
+          }
+        ]
+      }
+    },
+    "original_bit/fullAGC": {
+      "1": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 0,
+            "label": 8,
+            "prediction": 10
+          },
+          {
+            "opportunity": 2,
+            "label": 23,
+            "prediction": 15
+          },
+          {
+            "opportunity": 6,
+            "label": 15,
+            "prediction": 16
+          },
+          {
+            "opportunity": 13,
+            "label": 15,
+            "prediction": 16
+          },
+          {
+            "opportunity": 20,
+            "label": 11,
+            "prediction": 16
+          },
+          {
+            "opportunity": 23,
+            "label": 14,
+            "prediction": 16
+          },
+          {
+            "opportunity": 27,
+            "label": 10,
+            "prediction": 14
+          },
+          {
+            "opportunity": 31,
+            "label": 14,
+            "prediction": 16
+          },
+          {
+            "opportunity": 41,
+            "label": 11,
+            "prediction": 15
+          },
+          {
+            "opportunity": 49,
+            "label": 23,
+            "prediction": 15
+          },
+          {
+            "opportunity": 54,
+            "label": 6,
+            "prediction": 13
+          },
+          {
+            "opportunity": 57,
+            "label": 23,
+            "prediction": 7
+          },
+          {
+            "opportunity": 69,
+            "label": 20,
+            "prediction": 16
+          },
+          {
+            "opportunity": 72,
+            "label": 23,
+            "prediction": 15
+          },
+          {
+            "opportunity": 76,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 88,
+            "label": 7,
+            "prediction": 13
+          },
+          {
+            "opportunity": 101,
+            "label": 21,
+            "prediction": 17
+          },
+          {
+            "opportunity": 105,
+            "label": 20,
+            "prediction": 16
+          },
+          {
+            "opportunity": 111,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 115,
+            "label": 13,
+            "prediction": 15
+          },
+          {
+            "opportunity": 118,
+            "label": 14,
+            "prediction": 16
+          },
+          {
+            "opportunity": 124,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 137,
+            "label": 22,
+            "prediction": 8
+          },
+          {
+            "opportunity": 145,
+            "label": 17,
+            "prediction": 18
+          },
+          {
+            "opportunity": 147,
+            "label": 15,
+            "prediction": 16
+          },
+          {
+            "opportunity": 150,
+            "label": 5,
+            "prediction": 13
+          },
+          {
+            "opportunity": 160,
+            "label": 13,
+            "prediction": 15
+          },
+          {
+            "opportunity": 161,
+            "label": 15,
+            "prediction": 16
+          },
+          {
+            "opportunity": 169,
+            "label": 21,
+            "prediction": 10
+          },
+          {
+            "opportunity": 173,
+            "label": 15,
+            "prediction": 16
+          },
+          {
+            "opportunity": 174,
+            "label": 4,
+            "prediction": 14
+          },
+          {
+            "opportunity": 178,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 180,
+            "label": 8,
+            "prediction": 10
+          },
+          {
+            "opportunity": 181,
+            "label": 13,
+            "prediction": 15
+          },
+          {
+            "opportunity": 190,
+            "label": 11,
+            "prediction": 16
+          },
+          {
+            "opportunity": 202,
+            "label": 15,
+            "prediction": 16
+          },
+          {
+            "opportunity": 203,
+            "label": 5,
+            "prediction": 8
+          },
+          {
+            "opportunity": 225,
+            "label": 7,
+            "prediction": 8
+          },
+          {
+            "opportunity": 226,
+            "label": 14,
+            "prediction": 16
+          },
+          {
+            "opportunity": 227,
+            "label": 14,
+            "prediction": 16
+          },
+          {
+            "opportunity": 230,
+            "label": 23,
+            "prediction": 15
+          },
+          {
+            "opportunity": 237,
+            "label": 23,
+            "prediction": 15
+          }
+        ],
+        "fixes_vs8": [
+          {
+            "opportunity": 7,
+            "label": 22,
+            "prediction8": 16
+          },
+          {
+            "opportunity": 34,
+            "label": 7,
+            "prediction8": 14
+          },
+          {
+            "opportunity": 60,
+            "label": 10,
+            "prediction8": 9
+          },
+          {
+            "opportunity": 77,
+            "label": 10,
+            "prediction8": 9
+          },
+          {
+            "opportunity": 97,
+            "label": 17,
+            "prediction8": 18
+          },
+          {
+            "opportunity": 102,
+            "label": 21,
+            "prediction8": 14
+          },
+          {
+            "opportunity": 117,
+            "label": 21,
+            "prediction8": 14
+          },
+          {
+            "opportunity": 120,
+            "label": 17,
+            "prediction8": 18
+          },
+          {
+            "opportunity": 211,
+            "label": 22,
+            "prediction8": 16
+          }
+        ]
+      },
+      "2": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 6,
+            "label": 15,
+            "prediction": 16
+          },
+          {
+            "opportunity": 13,
+            "label": 15,
+            "prediction": 16
+          },
+          {
+            "opportunity": 47,
+            "label": 20,
+            "prediction": 16
+          },
+          {
+            "opportunity": 69,
+            "label": 20,
+            "prediction": 16
+          },
+          {
+            "opportunity": 72,
+            "label": 23,
+            "prediction": 13
+          },
+          {
+            "opportunity": 88,
+            "label": 7,
+            "prediction": 8
+          },
+          {
+            "opportunity": 105,
+            "label": 20,
+            "prediction": 16
+          },
+          {
+            "opportunity": 115,
+            "label": 13,
+            "prediction": 15
+          },
+          {
+            "opportunity": 124,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 145,
+            "label": 17,
+            "prediction": 18
+          },
+          {
+            "opportunity": 159,
+            "label": 17,
+            "prediction": 18
+          },
+          {
+            "opportunity": 160,
+            "label": 13,
+            "prediction": 15
+          },
+          {
+            "opportunity": 178,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 226,
+            "label": 14,
+            "prediction": 16
+          }
+        ],
+        "fixes_vs8": [
+          {
+            "opportunity": 7,
+            "label": 22,
+            "prediction8": 16
+          },
+          {
+            "opportunity": 34,
+            "label": 7,
+            "prediction8": 14
+          },
+          {
+            "opportunity": 60,
+            "label": 10,
+            "prediction8": 9
+          },
+          {
+            "opportunity": 77,
+            "label": 10,
+            "prediction8": 9
+          },
+          {
+            "opportunity": 102,
+            "label": 21,
+            "prediction8": 14
+          },
+          {
+            "opportunity": 117,
+            "label": 21,
+            "prediction8": 14
+          },
+          {
+            "opportunity": 120,
+            "label": 17,
+            "prediction8": 18
+          },
+          {
+            "opportunity": 197,
+            "label": 14,
+            "prediction8": 16
+          }
+        ]
+      },
+      "4": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 13,
+            "label": 15,
+            "prediction": 16
+          },
+          {
+            "opportunity": 47,
+            "label": 20,
+            "prediction": 16
+          },
+          {
+            "opportunity": 72,
+            "label": 23,
+            "prediction": 13
+          },
+          {
+            "opportunity": 115,
+            "label": 13,
+            "prediction": 15
+          }
+        ],
+        "fixes_vs8": [
+          {
+            "opportunity": 7,
+            "label": 22,
+            "prediction8": 16
+          },
+          {
+            "opportunity": 34,
+            "label": 7,
+            "prediction8": 14
+          },
+          {
+            "opportunity": 60,
+            "label": 10,
+            "prediction8": 9
+          },
+          {
+            "opportunity": 102,
+            "label": 21,
+            "prediction8": 14
+          },
+          {
+            "opportunity": 117,
+            "label": 21,
+            "prediction8": 14
+          }
+        ]
+      }
+    },
+    "original_bit/smoke25": {
+      "1": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 3,
+            "label": 6,
+            "prediction": 9
+          },
+          {
+            "opportunity": 5,
+            "label": 22,
+            "prediction": 17
+          },
+          {
+            "opportunity": 14,
+            "label": 9,
+            "prediction": 1
+          },
+          {
+            "opportunity": 16,
+            "label": 19,
+            "prediction": 20
+          },
+          {
+            "opportunity": 18,
+            "label": 16,
+            "prediction": 14
+          },
+          {
+            "opportunity": 19,
+            "label": 21,
+            "prediction": 10
+          },
+          {
+            "opportunity": 20,
+            "label": 7,
+            "prediction": 8
+          }
+        ],
+        "fixes_vs8": []
+      },
+      "2": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 3,
+            "label": 6,
+            "prediction": 9
+          }
+        ],
+        "fixes_vs8": []
+      },
+      "4": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 3,
+            "label": 6,
+            "prediction": 8
+          }
+        ],
+        "fixes_vs8": []
+      }
+    },
+    "original_bit/smoke35": {
+      "1": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 5,
+            "label": 22,
+            "prediction": 17
+          }
+        ],
+        "fixes_vs8": []
+      },
+      "2": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 5,
+            "label": 22,
+            "prediction": 17
+          }
+        ],
+        "fixes_vs8": []
+      },
+      "4": {
+        "new_errors_vs8": [],
+        "fixes_vs8": []
+      }
+    },
+    "original_bit/smoke45": {
+      "1": {
+        "new_errors_vs8": [],
+        "fixes_vs8": []
+      },
+      "2": {
+        "new_errors_vs8": [],
+        "fixes_vs8": []
+      },
+      "4": {
+        "new_errors_vs8": [],
+        "fixes_vs8": []
+      }
+    },
+    "original_bit/smokeAGC": {
+      "1": {
+        "new_errors_vs8": [
+          {
+            "opportunity": 2,
+            "label": 23,
+            "prediction": 15
+          },
+          {
+            "opportunity": 3,
+            "label": 6,
+            "prediction": 13
+          },
+          {
+            "opportunity": 7,
+            "label": 12,
+            "prediction": 14
+          },
+          {
+            "opportunity": 10,
+            "label": 4,
+            "prediction": 8
+          },
+          {
+            "opportunity": 13,
+            "label": 13,
+            "prediction": 15
+          },
+          {
+            "opportunity": 15,
+            "label": 14,
+            "prediction": 16
+          },
+          {
+            "opportunity": 21,
+            "label": 20,
+            "prediction": 16
+          },
+          {
+            "opportunity": 22,
+            "label": 17,
+            "prediction": 18
+          }
+        ],
+        "fixes_vs8": [
+          {
+            "opportunity": 19,
+            "label": 21,
+            "prediction8": 14
+          }
+        ]
+      },
+      "2": {
+        "new_errors_vs8": [],
+        "fixes_vs8": [
+          {
+            "opportunity": 17,
+            "label": 10,
+            "prediction8": 14
+          },
+          {
+            "opportunity": 19,
+            "label": 21,
+            "prediction8": 14
+          }
+        ]
+      },
+      "4": {
+        "new_errors_vs8": [],
+        "fixes_vs8": [
+          {
+            "opportunity": 17,
+            "label": 10,
+            "prediction8": 14
+          },
+          {
+            "opportunity": 19,
+            "label": 21,
+            "prediction8": 14
+          }
+        ]
+      }
+    }
+  },
+  "status": {
+    "STATUS.json": {
+      "stage": "PARAMETER_TESTS_COMPLETE",
+      "time": "2026-10-31T00:27:50.804960+08:00",
+      "pid": 14636,
+      "scores": {
+        "smoke35": {
+          "1": 23,
+          "2": 23,
+          "4": 24,
+          "8": 24
+        },
+        "smoke25": {
+          "1": 16,
+          "2": 22,
+          "4": 22,
+          "8": 23
+        },
+        "smokeAGC": {
+          "1": 14,
+          "2": 23,
+          "4": 23,
+          "8": 21
+        },
+        "smoke45": {
+          "1": 24,
+          "2": 24,
+          "4": 24,
+          "8": 24
+        },
+        "full35": {
+          "1": 231,
+          "2": 236,
+          "4": 237,
+          "8": 239
+        },
+        "full25": {
+          "1": 176,
+          "2": 205,
+          "4": 216,
+          "8": 223
+        },
+        "fullAGC": {
+          "1": 187,
+          "2": 214,
+          "4": 221,
+          "8": 220
+        },
+        "full45": {
+          "1": 235,
+          "2": 233,
+          "4": 233,
+          "8": 238
+        }
+      }
+    },
+    "RESUME_STATUS.json": {
+      "stage": "FPGA_ONLY_ENDED",
+      "time": "2026-10-31T00:34:28.420653+08:00",
+      "pid": 16880,
+      "rc": 1
+    },
+    "fpga_execution/STATUS.json": {
+      "stage": "JTAG_ENUMERATION_NO_PROGRAMMING",
+      "time": "2026-10-31T00:34:17.437748+08:00"
+    }
+  },
+  "production_promoted": false,
+  "scope": "Frozen generated-clean IQ, fixed coax configuration; no arbitrary-RF claim",
+  "shortened_transmit_frame_tested": false,
+  "agc_results_do_not_prove_within_frame_gain_constancy": true,
+  "waveform_sources_reused_across_gain_arms": true,
+  "single_session_generalization_proven": false
+}

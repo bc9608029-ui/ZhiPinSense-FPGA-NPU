@@ -1,0 +1,86 @@
+{
+  "project": "AD-AMR Net V1 (independent ICC 2024 line)",
+  "status": "ready-for-cuda-preflight",
+  "not_ready_for_formal_training": true,
+  "date": "2026-10-02",
+  "final_blind_data_accessed": false,
+  "formal_training_started": false,
+  "board_sdr_fpga_touched": false,
+  "v2_v3_modified": false,
+  "npu_deployment_claimed": false,
+  "reference": {
+    "paper": "Adaptive Denoising With Efficient Channel Attention for Automatic Modulation Recognition (ICC 2024)",
+    "v2_checkpoint": "init/v2_time_power_phase_best.pt",
+    "v2_checkpoint_sha256": "f9e4b5e5513f60907aa69416df3374353848272e14744cb193a46d06b02d71a6",
+    "v2_frozen_test_metrics": {
+      "accuracy": 0.705476,
+      "macro_f1": 0.697538,
+      "qam_mean": 0.464762
+    },
+    "class_order": ["BPSK", "QPSK", "8PSK", "16QAM", "64QAM", "2FSK", "CPFSK", "OFDM"]
+  },
+  "model": {
+    "parameters": 288236,
+    "neural_macs": 32525014,
+    "neural_flops": 65050028,
+    "input": [2, 1024],
+    "loss_variants": ["P0", "P1"],
+    "p0_p1_identical_except_mse_target": true
+  },
+  "implementation_assumptions": "A1-A13 (see docs/implementation_assumptions.md)",
+  "data": {
+    "seed": 2026,
+    "split_sizes": {"train": 25200, "val": 5040, "test": 8400},
+    "snr_points": 21,
+    "namespace": "ad_amr_train / ad_amr_validation / ad_amr_test",
+    "split_leakage_found": false
+  },
+  "cpu_tests": {
+    "passed": 33,
+    "failed": 0,
+    "warnings": 8,
+    "duration_sec": 14.75
+  },
+  "single_batch_overfit": {
+    "num_samples": 32,
+    "num_classes": 8,
+    "iterations": 500,
+    "learning_rate": 0.001,
+    "augmentation_during_loop": "off (batch generated once, held fixed)",
+    "P0": {"initial_loss": 3.7857, "final_loss": 1.1636, "initial_accuracy": 0.125, "final_accuracy": 1.0, "final_ce": 0.00022},
+    "P1": {"initial_loss": 2.1524, "final_loss": 0.0602, "initial_accuracy": 0.125, "final_accuracy": 1.0, "final_ce": 0.00756},
+    "gradient_health": {"adm": "34/34 finite & non-zero", "eca": "12/12 finite & non-zero", "fem": "43/43 finite & non-zero", "head": "4/4 finite & non-zero"},
+    "result": "pass — loss decreases clearly and accuracy reaches 100% for both P0 and P1"
+  },
+  "cpu_smoke": {
+    "train": "best_epoch=1 best_val_macro_f1=0.027778 params=288236",
+    "eval_validation": {
+      "accuracy": 0.125,
+      "macro_f1": 0.027777777777777776,
+      "cohen_kappa": 0.0,
+      "qam_mean": 0.0,
+      "accuracy_0_10db": 0.125,
+      "denoising_mse_to_clean": 0.7061359882354736,
+      "denoising_mse_to_noisy": 13.667562484741211
+    },
+    "onnx_ort_parity": {"status": "ok", "max_abs_diff": 1.1175870895385742e-08}
+  },
+  "deployment_gap": {
+    "whitelist": ["Add", "BatchNormalization", "Concat", "Conv", "Gemm", "Mul", "ReduceMean", "Relu"],
+    "ops_outside_whitelist": ["Abs", "Constant", "Resize", "Sigmoid", "Sign", "Squeeze", "Sub", "Unsqueeze"],
+    "npu_deployable_under_current_policy": false
+  },
+  "package": {
+    "archive": "dist/ad_amr_v1_autodl.zip",
+    "sha256": "52b00d453bbfb9ecd0771b99c23e566216068ccd625cc7757d73e977d131e9ae",
+    "sha256_sidecar": "dist/ad_amr_v1_autodl.zip.sha256",
+    "size_bytes": 895940,
+    "manifest_entries": 48,
+    "manifest_lf_only": true,
+    "manifest_no_bom": true,
+    "manifest_digest_mismatches": 0,
+    "zip_crc_ok": true,
+    "residue": []
+  },
+  "next_action": "bash autodl_ad_amr_v1/run_preflight.sh  (GPU host only)"
+}

@@ -1,0 +1,50 @@
+{
+  "experiment": "E2",
+  "seed": 2027,
+  "best_val_acc": 0.12083333333333333,
+  "trainable_params": 89624,
+  "curve": [
+    {
+      "epoch": 0,
+      "train_acc": 0.12890625,
+      "val_acc": 0.06666666666666667
+    },
+    {
+      "epoch": 1,
+      "train_acc": 0.12890625,
+      "val_acc": 0.07083333333333333
+    },
+    {
+      "epoch": 2,
+      "train_acc": 0.130859375,
+      "val_acc": 0.09583333333333334
+    },
+    {
+      "epoch": 3,
+      "train_acc": 0.14453125,
+      "val_acc": 0.12083333333333333
+    },
+    {
+      "epoch": 4,
+      "train_acc": 0.11328125,
+      "val_acc": 0.12083333333333333
+    },
+    {
+      "epoch": 5,
+      "train_acc": 0.134765625,
+      "val_acc": 0.10416666666666667
+    },
+    {
+      "epoch": 6,
+      "train_acc": 0.134765625,
+      "val_acc": 0.11666666666666667
+    },
+    {
+      "epoch": 7,
+      "train_acc": 0.12890625,
+      "val_acc": 0.1125
+    }
+  ],
+  "checkpoint": "line_c\\results_early_s1_s2_20261022\\E2_seed2027_best.pt",
+  "checkpoint_sha256": "1718a2146f57161e887a5d5cc1787e49360c2879f44846e5dc6d447b5104062d"
+}

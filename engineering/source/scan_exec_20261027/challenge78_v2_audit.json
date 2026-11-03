@@ -1,0 +1,79 @@
+{
+  "records": 78,
+  "signal_denominator": 72,
+  "signal_correct": 68,
+  "signal_accuracy": 0.9444444444444444,
+  "signal_missing": [],
+  "signal_invalid": [],
+  "max_signal_frequency_error_hz": 73.80908203125,
+  "hop_evidence": [
+    {
+      "seq": 0,
+      "target_hz": 2397400000,
+      "signal_hz": 2397399931.170837,
+      "rescan": true,
+      "locked_miss_before_rescan": false,
+      "elapsed_ms": 20837.924999999814
+    },
+    {
+      "seq": 24,
+      "target_hz": 2403600000,
+      "signal_hz": 2403599929.444145,
+      "rescan": true,
+      "locked_miss_before_rescan": true,
+      "elapsed_ms": 21150.991770000473
+    },
+    {
+      "seq": 48,
+      "target_hz": 2397400000,
+      "signal_hz": 2397399928.4218616,
+      "rescan": true,
+      "locked_miss_before_rescan": true,
+      "elapsed_ms": 21253.60965999971
+    }
+  ],
+  "muted_denominator": 6,
+  "muted_pass": 6,
+  "muted_details": [
+    {
+      "seq": 72,
+      "pass": true,
+      "pred": -1,
+      "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+    },
+    {
+      "seq": 73,
+      "pass": true,
+      "pred": -1,
+      "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+    },
+    {
+      "seq": 74,
+      "pass": true,
+      "pred": -1,
+      "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+    },
+    {
+      "seq": 75,
+      "pass": true,
+      "pred": -1,
+      "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+    },
+    {
+      "seq": 76,
+      "pass": true,
+      "pred": -1,
+      "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+    },
+    {
+      "seq": 77,
+      "pass": true,
+      "pred": -1,
+      "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+    }
+  ],
+  "note": "Predeclared 72 signal and 6 muted diagnostic frames; repeats of 24 sources, not independent new-waveform validation.",
+  "end_to_end_muted_rejections": 6,
+  "false_muted_classifications": 0,
+  "public_discovery_false_hits": []
+}

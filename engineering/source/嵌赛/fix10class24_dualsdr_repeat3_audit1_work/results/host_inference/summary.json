@@ -1,0 +1,22 @@
+{
+  "baseline_agreement": "36/49",
+  "diagnostic_gate_bypass": 1,
+  "finite": "49/49",
+  "frozen_model_json_sha": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+  "frozen_model_raw_sha": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+  "label_correct": "36/49",
+  "merge_marker": "HYBRID_BOARD_GATED_PLUS_HOST_FORCED",
+  "note": "Host BF16 inference on gate-rejected samples is a DIAGNOSTIC bypass (residual gate only); it is not a board NPU measurement and is not a production gate change.",
+  "phase": "C_host_inference",
+  "production_gate_modified": 0,
+  "repeat_argmax_deterministic": "49/49",
+  "repeat_logits_byte_identical": "49/49",
+  "result_layer": "HOST_BF16_FORCED_CLASSIFICATION",
+  "rounds": [
+    "dual_bf16_rms2048_run1",
+    "dual_bf16_rms2048_run2",
+    "dual_bf16_rms2048_run3"
+  ],
+  "sample_count": 49,
+  "task_id": "fix10class24-dualsdr-repeat3-audit1"
+}

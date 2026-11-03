@@ -1,0 +1,1027 @@
+--- /mnt/f/嵌赛/fix10prep3_work/sdr_rml23_live_board_package_pc_tx_board_rx_fix10prep3/board_package/iq_pc_tx_board_rx_23class_fix10.hpp	2026-10-17 15:58:14.000000000 +0800
++++ /mnt/f/嵌赛/fix10class24_dualsdr1_work/sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24/board_package/iq_pc_tx_board_rx_24class_bf16_fix10.hpp	2026-10-17 16:31:22.000000000 +0800
+@@ -1,42 +1,29 @@
+ #pragma once
+ 
+-// iq_pc_tx_board_rx_23class_fix10.hpp -- fix10prep2: the REAL dual-SDR 23-class
+-// runner, RX-only on the BOARD side.
++// iq_pc_tx_board_rx_24class_bf16_fix10.hpp -- fix10class24-dualsdr1 §9 (Phase 4):
++// the REAL dual-SDR 24-class BF16 runner, RX-only on the BOARD side.
+ //
+-// Topology: the Windows PC owns the TX SDR (periodically emits the frozen CI16 burst
+-// over 50-ohm coax) and the board owns the RX SDR (capture -> coarse CFO -> fine
+-// sync/gain recovery -> D2 restore -> NPU24 -> 24->23 merge -> frozen baseline).
+-// The two ends exchange ONLY control messages + sample identity + SHA over a TCP
+-// control channel (iq_pc_tx_board_rx_transfer_fix10.hpp) -- never real-time IQ over
+-// the network.  This runner contains NO TX API: it never calls make_device(tx_uri),
+-// tx_start_cyclic, set_tx_lo, or set_tx_attenuation.  It only captures RX.
++// Topology (identical to fix10prep2, but the 24-class UNMERGED deployment): the
++// Windows PC owns the TX SDR (periodically emits the frozen CI16 burst over 50-ohm
++// coax) and the board owns the RX SDR (capture -> coarse CFO -> fine sync/gain
++// recovery -> D2 restore -> NPU24 -> RAW-24 argmax, NO AM-SSB merge -> frozen BF16
++// baseline).  The two ends exchange ONLY control messages + sample identity + SHA
++// over a TCP control channel (iq_pc_tx_board_rx_transfer_fix10.hpp) -- never
++// real-time IQ.  This runner contains NO TX API.
+ //
+-// Signal path (RED-LINE recovery math untouched):
+-//   1. board builds the SAME burst the PC transmits, from the frozen ci16 + target_rms
+-//      (iq_pc_tx_board_rx_transfer_fix10.hpp::build_tx_burst_from_frozen) -- this is
+-//      the board's independent provenance expectation, not a TX.
+-//   2. negative control: RX-only noise-floor capture while the PC's TX is off (the
+-//      control-channel state machine guarantees TX-off at this point; the board has
+-//      no TX device to stop).
+-//   3. PREPARE -> PREPARED -> START -> READY (PC builds/verifies, then transmits).
+-//   4. RX capture (>= 2 full burst periods + margin).
+-//   5. recover_payload_with_coarse_cfo (iq_dual_sdr_coarse_cfo_recovery.hpp): robust
+-//      coarse CFO (LS-gain phase diff preamble-vs-training-block, +/-625 Hz) then the
+-//      fine estimate/apply from iq_rf_sync_recovery.hpp.
+-//   6. fidelity gate -> chain -> D2 restore -> reference-aligned window -> NPU24 ->
+-//      merge23 -> frozen-baseline comparison.
++// The DIFFERENCE vs iq_pc_tx_board_rx_23class_fix10.hpp: there is no 24->23 merge.
++// The NPU's raw 24-dim logits are classified by rml24::raw24_predict, so AM-SSB-WC
++// (raw 17) and AM-SSB-SC (raw 18) stay TWO independent classes, and the per-sample
++// correctness label is the RAW 24-class index fz.source_class (0..23), never the
++// 23-class deployed_class.  The comparison baseline is the 7-column raw24 BF16
++// baseline (rml24bf16::load_baseline), read by stable source_index key.
+ //
+-// Output (MEASUREMENT only -- never RF_PASS / RF_PATH_PROVEN / FIX10_READY /
+-// PROJECT_COMPLETE / FINAL_* / ROUTE_F_23CLASS_ACCURACY_REGRESSION_PASS):
+-//   * route_f_fix10prep2_pc_tx_board_rx_results.tsv
+-//   * route_f_fix10prep2_pc_tx_board_rx_confusion_23.csv
+-//   * route_f_fix10prep2_pc_tx_board_rx_per_class.json
+-//   * route_f_fix10prep2_pc_tx_board_rx_summary.json / .log
+-//
+-// The two-sample (BPSK + 4ASK) acceptance is a MEASUREMENT the operator reads; this
+-// runner does not auto-unlock the 46-sample run.  If the dual-SDR CFO exceeds the
+-// coarse CFO unambiguous range (+/-625 Hz) on the first real board test, the runner
+-// stops and reports the real failure -- it never widens a gate or guesses a fix.
++// The two-sample acceptance (Gate C1, --diagnostic-classes=BPSK,4ASK) and the full
++// 24-sample run (Gate C2) are MEASUREMENTS the operator reads; this runner never
++// promotes RF_PASS / RF_PATH_PROVEN / FIX10_READY / PROJECT_COMPLETE / FINAL_* /
++// ROUTE_F_23CLASS_ACCURACY_REGRESSION_PASS, and never auto-unlocks the next gate.
++// If the dual-SDR CFO exceeds the coarse CFO unambiguous range (+/-625 Hz), the
++// runner stops and reports the real failure -- it never widens a gate or guesses.
+ 
+ #include "chain_common.hpp"
+ #include "npu_classifier24.hpp"
+@@ -47,16 +34,15 @@
+ #include "iq_rf_frame_layout.hpp"
+ #include "iq_rf_loopback_transfer.hpp"         // iqrfloop_run::kRfDiscard* / kRfNoise*
+ #include "iq_dual_sdr_coarse_cfo_recovery.hpp" // iqdual23fix10::recover_payload_with_coarse_cfo
+-#include "iq_rf_fix9r_baseline.hpp"            // iqrffix9r::load_baseline / BaselineRow
+ #include "iq_rf_fix9r2a_diagnostic.hpp"        // iqrffix9r2a::select_diagnostic_holdout
+ #include "iq_pc_tx_board_rx_transfer_fix10.hpp"// iqpctbrx::* state machine + build burst
+ #include "iq_fix10_canonical_frame.hpp"         // fix10canonical::buildTxBurstFromFrozen
+-#include "rml23_merged.hpp"
++#include "rml24_raw.hpp"                        // rml24::raw24_predict (NO merge)
++#include "rml24_bf16_baseline.hpp"              // rml24bf16::load_baseline / BaselineRow
+ #include "../sdr_adapter/latency_stats.hpp"
+ #include "../sdr_adapter/resource_snapshot.hpp"
+ #include "../sdr_adapter/pluto_device.hpp"
+ #include "../sdr_adapter/tcp_control_client.hpp"
+-#include "../sdr_adapter/sha256.hpp"
+ 
+ #include <sys/stat.h>
+ 
+@@ -79,13 +65,15 @@
+ #include <string>
+ #include <vector>
+ 
+-namespace iqpcbtrx23fix10 {
++namespace iqpcbtrx24bf16fix10 {
+ 
+ using Clock = std::chrono::steady_clock;
+ 
+-// fix10prep2 tokens (measurement, never a regression PASS).
+-constexpr const char* kMeasurementComplete = "FIX10PREP2_MEASUREMENT_COMPLETE";
+-constexpr const char* kMeasurementIncomplete = "FIX10PREP2_MEASUREMENT_INCOMPLETE";
++// fix10class24-dualsdr1 24-class dual-SDR tokens (measurement, never a PASS).
++constexpr const char* kMeasurementComplete =
++    "FIX10CLASS24_BF16_DUAL_SDR_MEASUREMENT_COMPLETE";
++constexpr const char* kMeasurementIncomplete =
++    "FIX10CLASS24_BF16_DUAL_SDR_MEASUREMENT_INCOMPLETE";
+ 
+ constexpr double kFidelityTrainingCorrMin = 0.9;   // preamble peak corr floor
+ constexpr std::size_t kDelayMarginDefault = 8192;  // capture margin past 2 periods
+@@ -129,21 +117,6 @@
+     return dir + "/" + name;
+ }
+ 
+-inline void write_ci16_le(const std::string& path,
+-                          const std::vector<std::int16_t>& samples) {
+-    std::ofstream f(path, std::ios::binary | std::ios::trunc);
+-    if (!f) throw std::runtime_error("cannot create failed-RX dump: " + path);
+-    for (std::int16_t sample : samples) {
+-        const std::uint16_t u = static_cast<std::uint16_t>(sample);
+-        const char bytes[2] = {
+-            static_cast<char>(u & 0xffu),
+-            static_cast<char>((u >> 8) & 0xffu)};
+-        f.write(bytes, sizeof bytes);
+-    }
+-    f.close();
+-    if (!f) throw std::runtime_error("cannot finish failed-RX dump: " + path);
+-}
+-
+ inline std::string random_hex(std::size_t nbytes) {
+     std::random_device rd;
+     std::string out;
+@@ -157,16 +130,6 @@
+     return out;
+ }
+ 
+-// Local merge + argmax (identical to the single-SDR runner).
+-inline std::vector<float> merge23(const std::vector<float>& raw24) {
+-    if (raw24.size() != static_cast<std::size_t>(rml23::kNpuOutputDim))
+-        throw std::runtime_error("rml23: raw logits width != 24");
+-    float m23[rml23::kDeployedClassCount];
+-    if (!rml23::merge_logits_23(raw24.data(), m23))
+-        throw std::runtime_error("rml23: merge fail-closed (non-finite logits)");
+-    return std::vector<float>(m23, m23 + rml23::kDeployedClassCount);
+-}
+-
+ inline int argmax_of(const std::vector<float>& v) {
+     if (v.empty()) return -1;
+     int best = 0;
+@@ -198,9 +161,9 @@
+ }
+ 
+ // ---------------------------------------------------------------------------
+-// RX-only negative control (mirrors the single-SDR TX-off noise round WITHOUT any
+-// TX device: the board has no TX to stop; the control-channel state machine
+-// guarantees the PC's TX is off at this point).
++// RX-only negative control (identical to the 23-class dual-SDR runner: the board
++// has no TX to stop; the control-channel state machine guarantees the PC's TX is
++// off at this point).
+ // ---------------------------------------------------------------------------
+ struct NegativeControl {
+     bool capture_ok = false;
+@@ -216,7 +179,6 @@
+ inline NegativeControl run_rx_negative_control(pluto::Device& dev,
+                                                std::size_t noise_complex) {
+     NegativeControl nc;
+-    // drain stale DMA with >= kRfDiscardRefills discard refills
+     for (std::size_t d = 0; d < iqrfloop_run::kRfDiscardRefills; ++d) {
+         dev.recreate_rx_buffer();
+         const iio::RawChunk c = dev.read_rx(iqrfloop_run::kRfDiscardComplex, 1000);
+@@ -256,9 +218,9 @@
+ }
+ 
+ // ---------------------------------------------------------------------------
+-// PcTxBoardRx23Fix10RunReport
++// PcTxBoardRx24Bf16Fix10RunReport
+ // ---------------------------------------------------------------------------
+-struct PcTxBoardRx23Fix10RunReport {
++struct PcTxBoardRx24Bf16Fix10RunReport {
+     std::string input_kind;
+     std::string frozen_dir;
+     std::string model_sha;
+@@ -279,7 +241,8 @@
+     bool restore_ok = false;
+     std::string restore_report;
+ 
+-    // baseline pairing (identity check on source_index + original_sha256 + class + role)
++    // baseline pairing (identity check on source_index + original_sha256 +
++    // raw24_class + modulation + split_role)
+     std::uint64_t baseline_rows = 0;
+     bool baseline_identity_ok = false;
+     std::string baseline_identity_report;
+@@ -292,7 +255,7 @@
+     double training_residual_max = 0.0;
+     double training_residual_avg = 0.0;
+ 
+-    // scoring
++    // scoring (24-class RAW, no merge)
+     std::uint64_t scored = 0;
+     std::uint64_t rf_excluded = 0;
+     std::uint64_t total_valid = 0;
+@@ -300,19 +263,21 @@
+     std::vector<std::uint64_t> class_total;
+     std::vector<std::uint64_t> class_correct;
+     std::vector<std::uint64_t> confusion;
+-    std::uint64_t ask4_total = 0;
+-    std::uint64_t ask4_correct = 0;
++    std::uint64_t wc_total = 0, wc_correct = 0;   // AM-SSB-WC (raw 17)
++    std::uint64_t sc_total = 0, sc_correct = 0;   // AM-SSB-SC (raw 18)
++    std::uint64_t nan_or_inf = 0;                 // non-finite logits (fail-closed)
++    std::uint64_t repeat_deterministic = 0;       // 2nd infer agrees with 1st
+     std::map<std::string, std::uint64_t> rf_exclude_reasons;
+     bool any_tx_clip = false;
+     bool any_rx_clip = false;
+ 
+-    // prediction agreement vs the frozen baseline (stable source_index key)
++    // prediction agreement vs the frozen BF16 baseline (stable source_index key)
+     std::uint64_t r8_prediction_agreement = 0;
+     std::uint64_t r8_label_correct = 0;
+ 
+     // negative control + TX restore (across all samples)
+-    bool negative_control_ok = false;      // every sample's noise floor stable + clean
+-    bool tx_restore_ok = false;            // every sample's STOPPED.tx_restore_ok == true
++    bool negative_control_ok = false;
++    bool tx_restore_ok = false;
+ 
+     // CFO capture range (constants) + per-sample aggregate
+     double coarse_cfo_search_min_hz = 0.0;
+@@ -351,31 +316,31 @@
+ };
+ 
+ // ---------------------------------------------------------------------------
+-// run_iq_pc_tx_board_rx_23class_fix10
++// run_iq_pc_tx_board_rx_24class_bf16_fix10
+ // ---------------------------------------------------------------------------
+-inline PcTxBoardRx23Fix10RunReport run_iq_pc_tx_board_rx_23class_fix10(
++inline PcTxBoardRx24Bf16Fix10RunReport run_iq_pc_tx_board_rx_24class_bf16_fix10(
+         chain::NpuClassifier24& npu, m22::StageTiming& timing, int argc, char** argv,
+         const std::function<void(const rf::ResultFrame&)>& on_frame) {
+-    PcTxBoardRx23Fix10RunReport rep;
++    PcTxBoardRx24Bf16Fix10RunReport rep;
+ 
+     // ---- args ----
+     rep.input_kind = board::get_opt(argc, argv, "--input-kind", "radioml-d2-2p56m");
+     rep.frozen_dir = board::get_opt(argc, argv, "--frozen-dir", "");
+     if (rep.frozen_dir.empty())
+-        throw std::runtime_error("iq-pc-tx-board-rx-23class-fix10 requires "
++        throw std::runtime_error("iq-pc-tx-board-rx-24class-bf16-fix10 requires "
+                                  "--frozen-dir=<D2 artifacts dir>");
+     rep.model_sha = board::get_opt(argc, argv, "--model-sha", "");
+     rep.baseline_path = board::get_opt(argc, argv, "--baseline", "");
+     if (rep.baseline_path.empty())
+-        throw std::runtime_error("iq-pc-tx-board-rx-23class-fix10 requires "
+-                                 "--baseline=<route_f_fix9r_exact_baseline.tsv>");
++        throw std::runtime_error("iq-pc-tx-board-rx-24class-bf16-fix10 requires "
++                                 "--baseline=<clean24_smoke_raw24_bf16_baseline.tsv>");
+     rep.tx_control = board::get_opt(argc, argv, "--tx-control", "");
+     if (rep.tx_control.empty())
+-        throw std::runtime_error("iq-pc-tx-board-rx-23class-fix10 requires "
++        throw std::runtime_error("iq-pc-tx-board-rx-24class-bf16-fix10 requires "
+                                  "--tx-control=tcp://<PC_IP>:39010");
+     const std::string rx_uri = board::get_opt(argc, argv, "--rx-uri", "");
+     if (rx_uri.empty())
+-        throw std::runtime_error("iq-pc-tx-board-rx-23class-fix10 requires "
++        throw std::runtime_error("iq-pc-tx-board-rx-24class-bf16-fix10 requires "
+                                  "--rx-uri=<board RX device uri>");
+     const std::uint64_t center_hz =
+         board::opt_u64(argc, argv, "--center", 2400000000ULL);
+@@ -390,43 +355,40 @@
+     const std::uint64_t max_files =
+         board::opt_u64(argc, argv, "--max-files", 0);
+     const std::string out_dir = board::get_opt(argc, argv, "--out-dir", "");
+-    const bool dump_failed_rx = opt_flag(argc, argv, "--dump-failed-rx");
+     rep.diagnostic_classes = board::get_opt(argc, argv, "--diagnostic-classes", "");
+     const std::uint64_t diagnostic_per_class =
+         board::opt_u64(argc, argv, "--diagnostic-per-class", 1);
+ 
+-    // RF safety: both ends must be on the 50-ohm direct cable (the PC enforces its
+-    // own copy; the board enforces its own).  No antenna / amplifier ever.
++    // RF safety: both ends must be on the 50-ohm direct cable.
+     const std::string rf_path = board::get_opt(argc, argv, "--rf-path", "");
+     if (rf_path != "direct-cable")
+         throw std::runtime_error(
+-            "iq-pc-tx-board-rx-23class-fix10 requires --rf-path=direct-cable (50-ohm "
++            "iq-pc-tx-board-rx-24class-bf16-fix10 requires --rf-path=direct-cable (50-ohm "
+             "SMA coax, no antenna, no amplifier).  Got '" + rf_path + "'.");
+     if (rep.input_kind != "radioml-d2-2p56m")
+         throw std::runtime_error(
+-            "iq-pc-tx-board-rx-23class-fix10 requires --input-kind=radioml-d2-2p56m "
++            "iq-pc-tx-board-rx-24class-bf16-fix10 requires --input-kind=radioml-d2-2p56m "
+             "(got '" + rep.input_kind + "').");
+     if (!rep.diagnostic_classes.empty() && max_files > 0)
+         throw std::runtime_error(
+-            "iq-pc-tx-board-rx-23class-fix10: --diagnostic-classes and --max-files "
++            "iq-pc-tx-board-rx-24class-bf16-fix10: --diagnostic-classes and --max-files "
+             "are mutually exclusive (use --diagnostic-classes=BPSK,4ASK for the "
+             "two-sample acceptance).");
+ 
+-    // out-dir auto-create (fail-closed on a real mkdir error)
+     if (!out_dir.empty() && ::mkdir(out_dir.c_str(), 0777) != 0 && errno != EEXIST)
+-        throw std::runtime_error("iq-pc-tx-board-rx-23class-fix10: cannot create "
++        throw std::runtime_error("iq-pc-tx-board-rx-24class-bf16-fix10: cannot create "
+                                  "--out-dir " + out_dir + ": " + std::strerror(errno));
+ 
+-    rep.results_path = join_path(out_dir, "route_f_fix10prep2_pc_tx_board_rx_results.tsv");
+-    rep.confusion_path = join_path(out_dir, "route_f_fix10prep2_pc_tx_board_rx_confusion_23.csv");
+-    rep.per_class_path = join_path(out_dir, "route_f_fix10prep2_pc_tx_board_rx_per_class.json");
+-    rep.summary_path = join_path(out_dir, "route_f_fix10prep2_pc_tx_board_rx_summary.json");
+-    rep.log_path = join_path(out_dir, "route_f_fix10prep2_pc_tx_board_rx_summary.log");
+-
+-    rep.class_total.assign(rml23::kDeployedClassCount, 0);
+-    rep.class_correct.assign(rml23::kDeployedClassCount, 0);
+-    rep.confusion.assign(static_cast<std::size_t>(rml23::kDeployedClassCount) *
+-                             rml23::kDeployedClassCount, 0);
++    rep.results_path = join_path(out_dir, "route_f_fix10class24_bf16_pc_tx_board_rx_results.tsv");
++    rep.confusion_path = join_path(out_dir, "route_f_fix10class24_bf16_pc_tx_board_rx_confusion_24.csv");
++    rep.per_class_path = join_path(out_dir, "route_f_fix10class24_bf16_pc_tx_board_rx_per_class.json");
++    rep.summary_path = join_path(out_dir, "route_f_fix10class24_bf16_pc_tx_board_rx_summary.json");
++    rep.log_path = join_path(out_dir, "route_f_fix10class24_bf16_pc_tx_board_rx_summary.log");
++
++    rep.class_total.assign(rml24::kClassCount, 0);
++    rep.class_correct.assign(rml24::kClassCount, 0);
++    rep.confusion.assign(static_cast<std::size_t>(rml24::kClassCount) *
++                             rml24::kClassCount, 0);
+ 
+     // CFO capture-range constants (task book §8)
+     rep.coarse_cfo_search_min_hz = iqpctbrx::coarse_cfo_search_min_hz();
+@@ -434,13 +396,13 @@
+     rep.coarse_cfo_unambiguous_range_hz = iqpctbrx::coarse_cfo_unambiguous_range_hz();
+     rep.fine_cfo_range_hz = iqpctbrx::fine_cfo_range_hz();
+ 
+-    const cat::Contract contract = chain::contract_23();
++    const cat::Contract contract = chain::contract_24();
+ 
+-    // ---- load frozen D2 sidecar + exact baseline ----
++    // ---- load frozen D2 sidecar + the 7-column raw24 BF16 baseline ----
+     std::vector<iqdloop::FrozenIq> frozen =
+         iqdloop::load_frozen_iq(rep.frozen_dir, rep.input_kind);
+-    const std::map<std::uint64_t, iqrffix9r::BaselineRow> baseline =
+-        iqrffix9r::load_baseline(rep.baseline_path, rml23::kDeployedClassCount);
++    const std::map<std::uint64_t, rml24bf16::BaselineRow> baseline =
++        rml24bf16::load_baseline(rep.baseline_path, rml24::kClassCount);
+     rep.baseline_rows = static_cast<std::uint64_t>(baseline.size());
+ 
+     std::vector<iqdloop::FrozenIq> calib, holdout;
+@@ -489,7 +451,8 @@
+     rep.full_run = (rep.holdout_files == rep.baseline_rows);
+     rep.two_sample_mode = (rep.holdout_files == 2);
+ 
+-    // ---- baseline identity check (fail-closed) ----
++    // ---- baseline identity check (fail-closed): source_index + original_sha256 +
++    //      raw24_class + modulation + split_role ----
+     {
+         bool ok = true;
+         std::string report;
+@@ -498,9 +461,10 @@
+             if (it == baseline.end()) {
+                 ok = false;
+                 report += "missing:" + fz.file_name + ";";
+-            } else if (it->second.sha256 != fz.original_sha256 ||
+-                       it->second.deployed_class != fz.deployed_class ||
+-                       it->second.split_role != "holdout") {
++            } else if (it->second.original_sha256 != fz.original_sha256 ||
++                       it->second.raw24_class != fz.source_class ||
++                       it->second.modulation != fz.modulation ||
++                       it->second.split_role != fz.split_role) {
+                 ok = false;
+                 report += "mismatch:" + fz.file_name + ";";
+             }
+@@ -509,7 +473,7 @@
+         rep.baseline_identity_report = report;
+     }
+ 
+-    std::printf("FIX10PREP2_PC_TX_BOARD_RX input_kind=%s frozen_dir=%s "
++    std::printf("FIX10CLASS24_BF16_PC_TX_BOARD_RX input_kind=%s frozen_dir=%s "
+                 "frozen_files=%llu holdout_files=%llu baseline_rows=%llu "
+                 "baseline_identity_ok=%d two_sample_mode=%d diagnostic_classes=%s "
+                 "tx_control=%s rx_uri=%s center_hz=%llu rx_gain=%.3f "
+@@ -524,7 +488,7 @@
+                 gain_db, target_rms, out_dir.empty() ? "." : out_dir.c_str());
+     std::fflush(stdout);
+ 
+-    std::printf("FIX10PREP2_CFO_RANGE coarse_cfo_search_min_hz=%.3f "
++    std::printf("FIX10CLASS24_BF16_CFO_RANGE coarse_cfo_search_min_hz=%.3f "
+                 "coarse_cfo_search_max_hz=%.3f coarse_cfo_unambiguous_range_hz=%.3f "
+                 "fine_cfo_range_hz=%.3f\n",
+                 rep.coarse_cfo_search_min_hz, rep.coarse_cfo_search_max_hz,
+@@ -553,7 +517,7 @@
+         sess.manifest_sha256 =
+             sdr::sha256_hex_file(iqpctbrx::d2_manifest_path(rep.frozen_dir), &ok);
+         if (!ok)
+-            throw std::runtime_error("iq-pc-tx-board-rx-23class-fix10: cannot hash "
++            throw std::runtime_error("iq-pc-tx-board-rx-24class-bf16-fix10: cannot hash "
+                                      "frozen manifest " +
+                                      iqpctbrx::d2_manifest_path(rep.frozen_dir));
+     }
+@@ -568,11 +532,11 @@
+         std::uint16_t port = iqpctbrx::kDefaultPort;
+         std::string perr;
+         if (!iqpctbrx::parse_tx_control_url(rep.tx_control, host, port, &perr))
+-            throw std::runtime_error("iq-pc-tx-board-rx-23class-fix10: " + perr);
++            throw std::runtime_error("iq-pc-tx-board-rx-24class-bf16-fix10: " + perr);
+         client.host = host;
+         client.port = port;
+         if (!client.connect(&perr))
+-            throw std::runtime_error("iq-pc-tx-board-rx-23class-fix10: connect to " +
++            throw std::runtime_error("iq-pc-tx-board-rx-24class-bf16-fix10: connect to " +
+                                      rep.tx_control + " failed: " + perr);
+     }
+ 
+@@ -582,20 +546,17 @@
+         iqpctbrx::HelloAckInfo ack;
+         if (!iqpctbrx::send_hello(client, sess, &perr) ||
+             !iqpctbrx::recv_hello_ack(client, sess, ack, &perr)) {
+-            // Preserve the primary HELLO/recv failure reason; the ABORT best-effort
+-            // cleanup must NOT overwrite it (a peer that already dropped the link
+-            // makes send_abort fail with "not connected", masking the real cause).
+             const std::string primary_error = perr;
+             std::string cleanup_error;
+             iqpctbrx::send_abort(client, sess, "hello_failed", &cleanup_error);
+             client.close();
+             if (!cleanup_error.empty())
+-                std::printf("FIX10PREP3_HELLO_ABORT_CLEANUP_ERROR=%s (primary=%s)\n",
++                std::printf("FIX10CLASS24_BF16_HELLO_ABORT_CLEANUP_ERROR=%s (primary=%s)\n",
+                             cleanup_error.c_str(), primary_error.c_str());
+-            throw std::runtime_error("iq-pc-tx-board-rx-23class-fix10: HELLO failed: " +
++            throw std::runtime_error("iq-pc-tx-board-rx-24class-bf16-fix10: HELLO failed: " +
+                                      primary_error);
+         }
+-        std::printf("FIX10PREP2_HELLO_ACK tx_serial=%s tx_uri=%s tx_atten_db=%.3f "
++        std::printf("FIX10CLASS24_BF16_HELLO_ACK tx_serial=%s tx_uri=%s tx_atten_db=%.3f "
+                     "configuration_verified=%d\n",
+                     ack.tx_serial.c_str(), ack.tx_uri.c_str(), ack.tx_atten_db,
+                     ack.configuration_verified ? 1 : 0);
+@@ -607,8 +568,7 @@
+     try {
+         guard.reset(new pluto::DeviceStateGuard(*dev));
+ 
+-        // ---- sample rate (RX only): force 2560000, fail-closed abs(delta) <= 5 Hz.
+-        //      The TX sample rate is the PC's job (reported via READY.readback).
++        // ---- sample rate (RX only): force 2560000, fail-closed abs(delta) <= 5 Hz ----
+         const long long requested = static_cast<long long>(iqdloop::kFrozenFsIn);
+         {
+             m22::StageTiming::Timer rf_t(timing, m22::StageId::RfConfig);
+@@ -634,7 +594,7 @@
+             dev->set_rx_gain(gain_db);
+         }
+         const pluto::DataFormatInfo rx_fmt = dev->rx_data_format();
+-        std::printf("FIX10PREP2_RX_FORMAT %s\n",
++        std::printf("FIX10CLASS24_BF16_RX_FORMAT %s\n",
+                     pluto::describe_data_format(rx_fmt).c_str());
+         std::fflush(stdout);
+         const int rx_pos_rail = iqdloop_sync::rail_positive(
+@@ -660,30 +620,27 @@
+         // ---- single pass over the selected holdout (per-file recovery, no retry) ----
+         std::ofstream results(rep.results_path, std::ios::binary);
+         if (!results)
+-            throw std::runtime_error("iq-pc-tx-board-rx-23class-fix10: cannot open " +
++            throw std::runtime_error("iq-pc-tx-board-rx-24class-bf16-fix10: cannot open " +
+                                      rep.results_path);
+-        results << "file_name\tsource_index\traw24_class\tdeployed23_class\t"
+-                << "modulation\tsnr_db\tsplit_role\tvalid\traw24_pred\t"
+-                << "merged23_pred\tcorrect\ttraining_corr\ttraining_residual\t"
+-                << "timing_offset\tgain_mag\tphase_deg\tcoarse_cfo_hz\tfine_cfo_hz\t"
+-                << "total_cfo_hz\tsro_ppm\trf_verdict\n";
++        results << "file_name\tsource_index\traw24_class\tmodulation\tsnr_db\t"
++                << "split_role\tvalid\traw24_pred\tbaseline_pred\tcorrect\t"
++                << "prediction_agreement\trepeat_deterministic\ttraining_corr\t"
++                << "training_residual\ttiming_offset\tgain_mag\tphase_deg\t"
++                << "coarse_cfo_hz\tfine_cfo_hz\ttotal_cfo_hz\tsro_ppm\trf_verdict\n";
+ 
+         for (const auto& fz : holdout) {
+             if (board::g_stop_requested) break;
+ 
+-            std::printf("FIX10PREP2_FILE file=%s input_kind=%s source_index=%lld "
+-                        "source_class=%d deployed_class=%d modulation=%s "
+-                        "frozen_complex=%llu split_role=%s\n",
++            std::printf("FIX10CLASS24_BF16_FILE file=%s input_kind=%s source_index=%lld "
++                        "source_class=%d modulation=%s frozen_complex=%llu split_role=%s\n",
+                         fz.file_name.c_str(), rep.input_kind.c_str(),
+                         static_cast<long long>(fz.source_index), fz.source_class,
+-                        fz.deployed_class, fz.modulation.c_str(),
++                        fz.modulation.c_str(),
+                         static_cast<unsigned long long>(fz.complex_count),
+                         fz.split_role.c_str());
+             std::fflush(stdout);
+ 
+-            // board's INDEPENDENT burst expectation (the provenance the PC must match);
+-            // fix10canonical assembles the training frame from the aarch64-frozen
+-            // components so the board's expectation is byte-identical to the PC's TX.
++            // board's INDEPENDENT burst expectation (the provenance the PC must match).
+             const iqpctbrx::TxBurstBuild expected =
+                 fix10canonical::buildTxBurstFromFrozen(
+                     fz.path, fz.complex_count, fz.sha256, target_rms);
+@@ -720,19 +677,16 @@
+             const bool neg_pass = neg.capture_ok && !noise_clipped && neg.stable;
+             if (!neg_pass) neg_any_fail = true;
+             all_capture_ok = all_capture_ok && neg.capture_ok;
+-            std::printf("FIX10PREP2_NEGATIVE_CONTROL file=%s refills=%zu windows=%zu "
+-                        "rms_min=%.4f rms_median=%.4f rms_max=%.4f stability_ratio=%.4f "
+-                        "noise_stable=%d noise_clipped=%d pass=%d\n",
++            std::printf("FIX10CLASS24_BF16_NEGATIVE_CONTROL file=%s refills=%zu "
++                        "windows=%zu rms_min=%.4f rms_median=%.4f rms_max=%.4f "
++                        "stability_ratio=%.4f noise_stable=%d noise_clipped=%d pass=%d\n",
+                         fz.file_name.c_str(), iqrfloop_run::kRfDiscardRefills,
+                         iqrfloop_run::kRfNoiseWindows, neg.rms_min, neg.rms_median,
+                         neg.rms_max, neg.stability_ratio, neg.stable ? 1 : 0,
+                         noise_clipped ? 1 : 0, neg_pass ? 1 : 0);
+             std::fflush(stdout);
+ 
+-            // ---- 2. PREPARE -> PREPARED (PC builds + verifies the burst, no TX).
+-            //      Provenance is NOT checked here: PREPARED carries only the PC's
+-            //      build claims; the authoritative check runs at READY via
+-            //      check_readiness_provenance(expected, prepared, ready, tol). ----
++            // ---- 2. PREPARE -> PREPARED (PC builds + verifies the burst, no TX) ----
+             if (!iqpctbrx::send_prepare(client, sess, smp, &ctrl_err)) {
+                 ctrl = iqpctbrx::ControlOutcome::PrepareFailed;
+             } else if (!iqpctbrx::recv_prepared(client, sess, smp, prepared, &ctrl_err)) {
+@@ -753,8 +707,6 @@
+             board::Continuity rxcont;
+             std::vector<std::int16_t> rx_int16;
+             if (ctrl == iqpctbrx::ControlOutcome::Ok) {
+-                // verify READY provenance (payload/burst SHA + tx_scale) vs the board's
+-                // independent rebuild before trusting the capture.
+                 const iqpctbrx::ProvenanceCheck pc =
+                     iqpctbrx::check_readiness_provenance(expected, prepared, ready, 1e-6);
+                 if (!pc.ok) {
+@@ -806,10 +758,6 @@
+             iqrfrec::EstimateConfig rec_cfg;
+             rec_cfg.min_corr = kFidelityTrainingCorrMin;
+             rec_cfg.max_residual = iqrfrec::kPayloadTrainingResidualMax;
+-            // The fine CFO must be a SMALL residual after the robust coarse CFO: its
+-            // unambiguous range is +/-fs/(2*kTailStart) ~ +/-21.7 Hz.  A residual
+-            // beyond that means the true dual-SDR CFO exceeded the coarse range
+-            // (+/-625 Hz) -- an infra failure, never a widened gate.
+             rec_cfg.max_cfo_hz = iqpctbrx::fine_cfo_range_hz();
+             rec_cfg.max_sro_ppm = 30.0;
+             rec_cfg.search_limit = 0;   // full capture
+@@ -837,32 +785,21 @@
+             if (cfo_finite && std::fabs(total_cfo_hz) > rep.total_cfo_abs_max_hz)
+                 rep.total_cfo_abs_max_hz = std::fabs(total_cfo_hz);
+ 
+-            std::printf("FIX10PREP2_CFO file=%s coarse_cfo_search_min_hz=%.3f "
++            std::printf("FIX10CLASS24_BF16_CFO file=%s coarse_cfo_search_min_hz=%.3f "
+                         "coarse_cfo_search_max_hz=%.3f coarse_cfo_unambiguous_range_hz=%.3f "
+                         "fine_cfo_range_hz=%.3f coarse_cfo_hz=%.3f fine_cfo_hz=%.3f "
+                         "total_cfo_hz=%.3f fractional_timing_samples=%.6f "
+                         "fractional_corr_before=%.6f fractional_corr_after=%.6f "
+-                        "payload_fractional_corr_before=%.6f "
+-                        "payload_fractional_corr_after=%.6f "
+-                        "payload_best_fractional_timing_samples=%.6f "
+-                        "payload_best_fractional_corr=%.6f "
+-                        "payload_best_fractional_preamble_corr=%.6f "
+                         "cfo_finite=%d cfo_in_range=%d\n",
+                         fz.file_name.c_str(), rep.coarse_cfo_search_min_hz,
+                         rep.coarse_cfo_search_max_hz, rep.coarse_cfo_unambiguous_range_hz,
+                         rep.fine_cfo_range_hz, coarse_cfo_hz, fine_cfo_hz, total_cfo_hz,
+                         ccr.fractional_timing_samples, ccr.fractional_corr_before,
+                         ccr.fractional_corr_after,
+-                        ccr.payload_fractional_corr_before,
+-                        ccr.payload_fractional_corr_after,
+-                        ccr.payload_best_fractional_timing_samples,
+-                        ccr.payload_best_fractional_corr,
+-                        ccr.payload_best_fractional_preamble_corr,
+                         cfo_finite ? 1 : 0, cfo_in_range ? 1 : 0);
+             std::fflush(stdout);
+ 
+             // ---- 7. fidelity gate (RX-only; the TX infra is the PC's job) ----
+-            // RX clip: any railed sample in the burst capture.
+             rx_clipped = false;
+             for (std::size_t k = 0; k + 1 < rx_int16.size(); k += 2) {
+                 const int i = rx_int16[k];
+@@ -890,12 +827,13 @@
+             }
+ 
+             const iqrfrec::PerFileRecovery& rec = ccr.rec;
+-            std::printf("FIX10PREP2_RECOVERY file=%s computed=%d valid=%d failure=%s "
+-                        "timing=%zu gain_mag=%.6f phase_deg=%.3f fine_cfo_hz=%.3f "
+-                        "sro_ppm=%.3f training_corr=%.6f training_residual=%.6f "
+-                        "payload_gain_mag=%.6f payload_rms_gain_mag=%.6f "
+-                        "payload_phase_deg=%.3f payload_training_corr=%.6f "
+-                        "payload_training_residual=%.6f fidelity=%s rx_clipped=%d\n",
++            std::printf("FIX10CLASS24_BF16_RECOVERY file=%s computed=%d valid=%d "
++                        "failure=%s timing=%zu gain_mag=%.6f phase_deg=%.3f "
++                        "fine_cfo_hz=%.3f sro_ppm=%.3f training_corr=%.6f "
++                        "training_residual=%.6f payload_gain_mag=%.6f "
++                        "payload_rms_gain_mag=%.6f payload_phase_deg=%.3f "
++                        "payload_training_corr=%.6f payload_training_residual=%.6f "
++                        "fidelity=%s rx_clipped=%d\n",
+                         fz.file_name.c_str(), rec.computed ? 1 : 0, rec.valid ? 1 : 0,
+                         iqrfrec::failure_token(rec.failure), rec.timing_offset,
+                         rec.gain_mag, rec.phase_deg, rec.cfo_hz, rec.sro_ppm,
+@@ -923,62 +861,16 @@
+ 
+             gate_ok = (rf_verdict == "RF_PRESERVES_IQ");
+             if (!gate_ok) {
+-                if (dump_failed_rx) {
+-                    const std::string stem = "failed_rx_" +
+-                        std::to_string(fz.source_index);
+-                    const std::string raw_path = join_path(out_dir, stem + ".ci16");
+-                    const std::string meta_path = join_path(out_dir, stem + ".json");
+-                    write_ci16_le(raw_path, rx_int16);
+-                    bool raw_sha_ok = false;
+-                    const std::string raw_sha =
+-                        sdr::sha256_hex_file(raw_path, &raw_sha_ok);
+-                    if (!raw_sha_ok)
+-                        throw std::runtime_error("cannot hash failed-RX dump: " + raw_path);
+-                    std::ofstream meta(meta_path, std::ios::binary | std::ios::trunc);
+-                    if (!meta)
+-                        throw std::runtime_error("cannot create failed-RX metadata: " +
+-                                                 meta_path);
+-                    meta << "{\n"
+-                         << "  \"format\":\"interleaved_ci16_le\",\n"
+-                         << "  \"source_index\":" << fz.source_index << ",\n"
+-                         << "  \"file_name\":\"" << json_escape(fz.file_name) << "\",\n"
+-                         << "  \"modulation\":\"" << json_escape(fz.modulation) << "\",\n"
+-                         << "  \"complex_count\":" << (rx_int16.size() / 2) << ",\n"
+-                         << "  \"byte_count\":" << (rx_int16.size() * 2) << ",\n"
+-                         << "  \"sha256\":\"" << raw_sha << "\",\n"
+-                         << "  \"failure\":\""
+-                         << iqrfrec::failure_token(rec.failure) << "\",\n"
+-                         << "  \"coarse_cfo_hz\":" << coarse_cfo_hz << ",\n"
+-                         << "  \"fine_cfo_hz\":" << fine_cfo_hz << ",\n"
+-                         << "  \"fractional_timing_samples\":"
+-                         << ccr.fractional_timing_samples << ",\n"
+-                         << "  \"payload_best_fractional_timing_samples\":"
+-                         << ccr.payload_best_fractional_timing_samples << ",\n"
+-                         << "  \"payload_best_fractional_corr\":"
+-                         << ccr.payload_best_fractional_corr << ",\n"
+-                         << "  \"payload_training_residual\":"
+-                         << rec.payload_training_residual << "\n"
+-                         << "}\n";
+-                    meta.close();
+-                    if (!meta)
+-                        throw std::runtime_error("cannot finish failed-RX metadata: " +
+-                                                 meta_path);
+-                    std::printf("FIX10PREP3_FAILED_RX_DUMP file=%s raw=%s metadata=%s "
+-                                "sha256=%s\n",
+-                                fz.file_name.c_str(), raw_path.c_str(), meta_path.c_str(),
+-                                raw_sha.c_str());
+-                    std::fflush(stdout);
+-                }
+                 ++rep.rf_excluded;
+                 ++rep.rf_exclude_reasons[rf_verdict];
+-                std::printf("FIX10PREP2_FILE file=%s classification=SKIPPED "
++                std::printf("FIX10CLASS24_BF16_FILE file=%s classification=SKIPPED "
+                             "reason=fidelity_gate fidelity=%s\n",
+                             fz.file_name.c_str(), rf_verdict.c_str());
+                 std::fflush(stdout);
+                 results << fz.file_name << "\t" << fz.source_index << "\t"
+-                        << fz.source_class << "\t" << fz.deployed_class << "\t"
+-                        << fz.modulation << "\t" << fz.snr_db << "\t"
+-                        << fz.split_role << "\t0\t-1\t-1\t-1\t"
++                        << fz.source_class << "\t" << fz.modulation << "\t"
++                        << fz.snr_db << "\t" << fz.split_role
++                        << "\t0\t-1\t-1\t-1\t-1\t-1\t"
+                         << rec.training_corr << "\t" << rec.training_residual << "\t"
+                         << (rec.valid ? static_cast<long long>(rec.timing_offset) : -1)
+                         << "\t" << rec.gain_mag << "\t" << rec.phase_deg << "\t"
+@@ -988,7 +880,8 @@
+                 continue;
+             }
+ 
+-            // ---- 8. chain -> D2 restore -> reference window -> NPU24 -> merge23 ----
++            // ---- 8. chain -> D2 restore -> reference window -> NPU24 -> RAW-24 (no
++            //      merge) ----
+             const std::vector<std::complex<double>> payload = ccr.payload;
+             std::vector<std::int16_t> payload_iq(payload.size() * 2);
+             for (std::size_t k = 0; k < payload.size(); ++k) {
+@@ -1026,9 +919,9 @@
+                 ++rep.rf_excluded;
+                 ++rep.rf_exclude_reasons["RF_NO_VALID_WINDOW"];
+                 results << fz.file_name << "\t" << fz.source_index << "\t"
+-                        << fz.source_class << "\t" << fz.deployed_class << "\t"
+-                        << fz.modulation << "\t" << fz.snr_db << "\t"
+-                        << fz.split_role << "\t0\t-1\t-1\t-1\t"
++                        << fz.source_class << "\t" << fz.modulation << "\t"
++                        << fz.snr_db << "\t" << fz.split_role
++                        << "\t0\t-1\t-1\t-1\t-1\t-1\t"
+                         << rec.training_corr << "\t" << rec.training_residual << "\t"
+                         << static_cast<long long>(rec.timing_offset) << "\t"
+                         << rec.gain_mag << "\t" << rec.phase_deg << "\t"
+@@ -1044,60 +937,85 @@
+             const double classify_us = elapsed_us(t0);
+             timing.record(m22::StageId::NpuInfer, classify_us);
+ 
+-            const std::vector<float> m23 = merge23(raw24);
+-            const int raw_top = argmax_of(raw24);
+-            const int merged_top = argmax_of(m23);
+-            const bool correct = (merged_top == fz.deployed_class);
++            // Repeat-determinism (§8/§9 gate field): a second inference on the SAME
++            // aligned tensor must produce the same raw-24 argmax.
++            std::vector<float> raw24b;
++            const auto t1 = Clock::now();
++            npu.infer(cw.aligned_tensor.data(), raw24b);
++            const double classify2_us = elapsed_us(t1);
++            timing.record(m22::StageId::NpuInfer, classify2_us);
++
++            rml24::RML24Result pr, pr2;
++            const bool ok = rml24::raw24_predict(raw24.data(), &pr);
++            const bool ok2 = rml24::raw24_predict(raw24b.data(), &pr2);
++            const bool finite = ok && ok2;
++            if (!finite) ++rep.nan_or_inf;
++
++            const int raw_top = ok ? pr.raw_24_top1 : -1;
++            const int raw_top_b = ok2 ? pr2.raw_24_top1 : -1;
++            const bool repeat_det = finite && (raw_top == raw_top_b);
++            if (repeat_det) ++rep.repeat_deterministic;
++
++            const bool correct = finite && (raw_top == fz.source_class);
+ 
+             int baseline_pred = -1;
+             bool baseline_pred_found = false;
+             {
+                 const auto bit = baseline.find(static_cast<std::uint64_t>(fz.source_index));
+                 if (bit != baseline.end()) {
+-                    baseline_pred = bit->second.frozen_baseline_pred;
++                    baseline_pred = bit->second.frozen_bf16_raw24_pred;
+                     baseline_pred_found = true;
+                 }
+             }
+             const bool prediction_agreement =
+-                baseline_pred_found && (merged_top == baseline_pred);
++                finite && baseline_pred_found && (raw_top == baseline_pred);
+             const bool label_correct = correct;
+             if (prediction_agreement) ++rep.r8_prediction_agreement;
+             if (label_correct) ++rep.r8_label_correct;
+-            std::printf("FIX10PREP2_CLASSIFY file=%s baseline_pred=%d rf_pred=%d "
+-                        "source_label=%d prediction_agreement=%d label_correct=%d\n",
+-                        fz.file_name.c_str(), baseline_pred, merged_top, fz.source_class,
+-                        prediction_agreement ? 1 : 0, label_correct ? 1 : 0);
++            std::printf("FIX10CLASS24_BF16_CLASSIFY file=%s baseline_pred=%d rf_pred=%d "
++                        "source_label=%d prediction_agreement=%d label_correct=%d "
++                        "repeat_deterministic=%d finite=%d\n",
++                        fz.file_name.c_str(), baseline_pred, raw_top, fz.source_class,
++                        prediction_agreement ? 1 : 0, label_correct ? 1 : 0,
++                        repeat_det ? 1 : 0, finite ? 1 : 0);
+             std::fflush(stdout);
+ 
+             ++global_frame_id;
+             rf::ResultFrame r;
+             r.frame_id = global_frame_id;
+             r.timestamp_us = global_frame_id * 8000ULL;
+-            r.source = "iq_pc_tx_board_rx_23class_fix10";
++            r.source = "iq_pc_tx_board_rx_24class_bf16_fix10";
+             r.mock = false;
+-            chain::fill_result_rml23(r, raw24, m23, contract, rep.model_sha,
++            chain::fill_result_rml24(r, raw24, contract, rep.model_sha,
+                                      std::numeric_limits<double>::quiet_NaN());
+             r.classify_us = classify_us;
+-            r.e2e_us = classify_us;
++            r.e2e_us = classify_us + classify2_us;
+             on_frame(r);
+ 
+             ++rep.scored;
+             ++rep.total_valid;
+             if (correct) ++rep.total_correct;
+-            ++rep.confusion[static_cast<std::size_t>(fz.deployed_class) *
+-                                rml23::kDeployedClassCount + merged_top];
+-            ++rep.class_total[static_cast<std::size_t>(fz.deployed_class)];
+-            if (correct) ++rep.class_correct[static_cast<std::size_t>(fz.deployed_class)];
+-            if (fz.deployed_class == 1) {
+-                ++rep.ask4_total;
+-                if (correct) ++rep.ask4_correct;
++            if (finite && raw_top >= 0 && raw_top < rml24::kClassCount) {
++                ++rep.confusion[static_cast<std::size_t>(fz.source_class) *
++                                    rml24::kClassCount + raw_top];
++            }
++            ++rep.class_total[static_cast<std::size_t>(fz.source_class)];
++            if (correct) ++rep.class_correct[static_cast<std::size_t>(fz.source_class)];
++            if (fz.source_class == rml24::kAmSsbWc) {
++                ++rep.wc_total;
++                if (correct) ++rep.wc_correct;
++            } else if (fz.source_class == rml24::kAmSsbSc) {
++                ++rep.sc_total;
++                if (correct) ++rep.sc_correct;
+             }
+ 
+             results << fz.file_name << "\t" << fz.source_index << "\t"
+-                    << fz.source_class << "\t" << fz.deployed_class << "\t"
+-                    << fz.modulation << "\t" << fz.snr_db << "\t"
+-                    << fz.split_role << "\t1\t" << raw_top << "\t" << merged_top
++                    << fz.source_class << "\t" << fz.modulation << "\t"
++                    << fz.snr_db << "\t" << fz.split_role << "\t"
++                    << (finite ? 1 : 0) << "\t" << raw_top << "\t" << baseline_pred
+                     << "\t" << (correct ? 1 : 0) << "\t"
++                    << (prediction_agreement ? 1 : 0) << "\t"
++                    << (repeat_det ? 1 : 0) << "\t"
+                     << rec.training_corr << "\t" << rec.training_residual << "\t"
+                     << static_cast<long long>(rec.timing_offset) << "\t"
+                     << rec.gain_mag << "\t" << rec.phase_deg << "\t"
+@@ -1105,10 +1023,10 @@
+                     << total_cfo_hz << "\t" << rec.sro_ppm << "\t"
+                     << rf_verdict << "\n";
+ 
+-            std::printf("FIX10PREP2_FILE file=%s frames=1 correct=%d deployed=%d "
+-                        "source=%d raw24_pred=%d merged23_pred=%d\n",
+-                        fz.file_name.c_str(), correct ? 1 : 0, fz.deployed_class,
+-                        fz.source_class, raw_top, merged_top);
++            std::printf("FIX10CLASS24_BF16_FILE file=%s frames=1 correct=%d "
++                        "source=%d raw24_pred=%d repeat_det=%d\n",
++                        fz.file_name.c_str(), correct ? 1 : 0, fz.source_class,
++                        raw_top, repeat_det ? 1 : 0);
+             std::fflush(stdout);
+         }
+         results.close();
+@@ -1163,12 +1081,12 @@
+           static_cast<double>(rep.total_valid) : 0.0;
+     rep.prediction_agreement = overall_acc;
+     rep.rf_accuracy = overall_acc;
+-    rep.accuracy_delta_pp = 100.0 * (rep.rf_accuracy - 0.0);   // no fixed baseline pp here
++    rep.accuracy_delta_pp = 100.0 * (rep.rf_accuracy - 0.0);
+ 
+     double macro_acc = 0.0;
+     {
+         std::size_t seen = 0;
+-        for (int c = 0; c < rml23::kDeployedClassCount; ++c) {
++        for (int c = 0; c < rml24::kClassCount; ++c) {
+             if (rep.class_total[static_cast<std::size_t>(c)] == 0) continue;
+             ++seen;
+             macro_acc += static_cast<double>(
+@@ -1178,35 +1096,35 @@
+         if (seen > 0) macro_acc /= static_cast<double>(seen);
+     }
+ 
+-    // Confusion CSV.
++    // Confusion CSV (24x24).
+     {
+         std::ofstream f(rep.confusion_path, std::ios::binary);
+         if (!f) throw std::runtime_error("cannot open " + rep.confusion_path);
+         f << "true\\pred";
+-        for (int c = 0; c < rml23::kDeployedClassCount; ++c)
+-            f << "," << rml23::kLabelOrder23[c];
++        for (int c = 0; c < rml24::kClassCount; ++c)
++            f << "," << rml24::kLabelOrder24[c];
+         f << "\n";
+-        for (int t = 0; t < rml23::kDeployedClassCount; ++t) {
+-            f << rml23::kLabelOrder23[t];
+-            for (int p = 0; p < rml23::kDeployedClassCount; ++p)
++        for (int t = 0; t < rml24::kClassCount; ++t) {
++            f << rml24::kLabelOrder24[t];
++            for (int p = 0; p < rml24::kClassCount; ++p)
+                 f << "," << rep.confusion[static_cast<std::size_t>(t) *
+-                                              rml23::kDeployedClassCount + p];
++                                              rml24::kClassCount + p];
+             f << "\n";
+         }
+     }
+ 
+-    // Per-class JSON.
++    // Per-class JSON (24).
+     {
+         std::ofstream f(rep.per_class_path, std::ios::binary);
+         if (!f) throw std::runtime_error("cannot open " + rep.per_class_path);
+         f << "[\n";
+-        for (int c = 0; c < rml23::kDeployedClassCount; ++c) {
++        for (int c = 0; c < rml24::kClassCount; ++c) {
+             const std::uint64_t tot = rep.class_total[static_cast<std::size_t>(c)];
+             const std::uint64_t corr = rep.class_correct[static_cast<std::size_t>(c)];
+             const double acc = tot > 0 ? static_cast<double>(corr) /
+                                          static_cast<double>(tot) : 0.0;
+             f << (c == 0 ? "  " : " ,") << "{\"index\":" << c
+-              << ",\"name\":\"" << rml23::kLabelOrder23[c] << "\""
++              << ",\"name\":\"" << rml24::kLabelOrder24[c] << "\""
+               << ",\"total\":" << tot << ",\"correct\":" << corr
+               << ",\"accuracy\":" << acc << "}\n";
+         }
+@@ -1221,8 +1139,10 @@
+             (rep.error.empty() && rep.sample_rate_ok) ? kMeasurementComplete
+                                                       : kMeasurementIncomplete;
+         f << "{\n";
+-        f << "  \"token\":\"FIX10PREP2_MEASUREMENT\",\n";
++        f << "  \"token\":\"FIX10CLASS24_BF16_DUAL_SDR_MEASUREMENT\",\n";
+         f << "  \"measurement_token\":\"" << measurement_token << "\",\n";
++        f << "  \"deployment_mode\":\"" << rml24::kDeploymentMode << "\",\n";
++        f << "  \"model_mode\":\"" << rml24::kModelMode << "\",\n";
+         f << "  \"input_kind\":\"" << json_escape(rep.input_kind) << "\",\n";
+         f << "  \"frozen_dir\":\"" << json_escape(rep.frozen_dir) << "\",\n";
+         f << "  \"model_sha\":\"" << rep.model_sha << "\",\n";
+@@ -1241,6 +1161,12 @@
+         f << "  \"rf_excluded\":" << rep.rf_excluded << ",\n";
+         f << "  \"prediction_agreement\":" << rep.r8_prediction_agreement << ",\n";
+         f << "  \"label_correct\":" << rep.r8_label_correct << ",\n";
++        f << "  \"wc_total\":" << rep.wc_total << ",\n";
++        f << "  \"wc_correct\":" << rep.wc_correct << ",\n";
++        f << "  \"sc_total\":" << rep.sc_total << ",\n";
++        f << "  \"sc_correct\":" << rep.sc_correct << ",\n";
++        f << "  \"nan_or_inf\":" << rep.nan_or_inf << ",\n";
++        f << "  \"repeat_deterministic\":" << rep.repeat_deterministic << ",\n";
+         f << "  \"training_estimates\":" << rep.training_estimates << ",\n";
+         f << "  \"training_measured\":" << rep.training_measured << ",\n";
+         f << "  \"training_corr_min\":" << rep.training_corr_min << ",\n";
+@@ -1275,12 +1201,19 @@
+         const std::string measurement_token =
+             (rep.error.empty() && rep.sample_rate_ok) ? kMeasurementComplete
+                                                       : kMeasurementIncomplete;
+-        f << "token=FIX10PREP2_MEASUREMENT measurement=" << measurement_token
++        f << "token=FIX10CLASS24_BF16_DUAL_SDR_MEASUREMENT measurement=" << measurement_token
++          << " deployment=" << rml24::kDeploymentMode
+           << " holdout=" << rep.holdout_files
+           << " scored=" << rep.scored
+           << " rf_excluded=" << rep.rf_excluded
+           << " prediction_agreement=" << rep.r8_prediction_agreement
+           << "/" << rep.holdout_files
++          << " label_correct=" << rep.r8_label_correct
++          << "/" << rep.holdout_files
++          << " wc=" << rep.wc_correct << "/" << rep.wc_total
++          << " sc=" << rep.sc_correct << "/" << rep.sc_total
++          << " nan_or_inf=" << rep.nan_or_inf
++          << " repeat_deterministic=" << rep.repeat_deterministic
+           << " training_estimates=" << rep.training_estimates
+           << "/" << rep.holdout_files
+           << " negative_control=" << (rep.negative_control_ok ? "PASS" : "FAIL")
+@@ -1289,35 +1222,56 @@
+           << " cfo_finite=" << (rep.cfo_all_finite ? 1 : 0)
+           << " cfo_in_range=" << (rep.cfo_all_in_range ? 1 : 0)
+           << " total_cfo_abs_max_hz=" << rep.total_cfo_abs_max_hz
+-          << " 4ask=" << rep.ask4_correct << "/" << rep.ask4_total
+           << "\n";
+     }
+ 
+     // ---- the two-sample / measurement result line (the §13-B fields the operator
+     //      reads; never a regression PASS token) ----
+     if (rep.two_sample_mode) {
+-        std::printf("FIX10PREP2_TWO_SAMPLE_RESULT scored=%llu rf_excluded=%llu "
+-                    "prediction_agreement=%llu/%llu tx_restore_ok=%d rx_restore_ok=%d "
++        std::printf("FIX10CLASS24_BF16_TWO_SAMPLE_RESULT scored=%llu rf_excluded=%llu "
++                    "prediction_agreement=%llu/%llu label_correct=%llu/%llu "
++                    "wc=%llu/%llu sc=%llu/%llu nan_or_inf=%llu "
++                    "repeat_deterministic=%llu/%llu tx_restore_ok=%d rx_restore_ok=%d "
+                     "negative_control=%s cfo_finite=%d cfo_in_range=%d "
+                     "training_estimate_valid=%llu/%llu\n",
+                     static_cast<unsigned long long>(rep.scored),
+                     static_cast<unsigned long long>(rep.rf_excluded),
+                     static_cast<unsigned long long>(rep.r8_prediction_agreement),
+                     static_cast<unsigned long long>(rep.holdout_files),
++                    static_cast<unsigned long long>(rep.r8_label_correct),
++                    static_cast<unsigned long long>(rep.holdout_files),
++                    static_cast<unsigned long long>(rep.wc_correct),
++                    static_cast<unsigned long long>(rep.wc_total),
++                    static_cast<unsigned long long>(rep.sc_correct),
++                    static_cast<unsigned long long>(rep.sc_total),
++                    static_cast<unsigned long long>(rep.nan_or_inf),
++                    static_cast<unsigned long long>(rep.repeat_deterministic),
++                    static_cast<unsigned long long>(rep.holdout_files),
+                     rep.tx_restore_ok ? 1 : 0, rep.restore_ok ? 1 : 0,
+                     rep.negative_control_ok ? "PASS" : "FAIL",
+                     rep.cfo_all_finite ? 1 : 0, rep.cfo_all_in_range ? 1 : 0,
+                     static_cast<unsigned long long>(rep.training_estimates),
+                     static_cast<unsigned long long>(rep.holdout_files));
+     } else {
+-        std::printf("FIX10PREP2_MEASUREMENT_RESULT scored=%llu rf_excluded=%llu "
+-                    "prediction_agreement=%llu/%llu training_estimate_valid=%llu/%llu "
++        std::printf("FIX10CLASS24_BF16_MEASUREMENT_RESULT scored=%llu rf_excluded=%llu "
++                    "prediction_agreement=%llu/%llu label_correct=%llu/%llu "
++                    "wc=%llu/%llu sc=%llu/%llu nan_or_inf=%llu "
++                    "repeat_deterministic=%llu/%llu training_estimate_valid=%llu/%llu "
+                     "negative_control=%s cfo_finite=%d cfo_in_range=%d "
+                     "tx_restore_ok=%d rx_restore_ok=%d\n",
+                     static_cast<unsigned long long>(rep.scored),
+                     static_cast<unsigned long long>(rep.rf_excluded),
+                     static_cast<unsigned long long>(rep.r8_prediction_agreement),
+                     static_cast<unsigned long long>(rep.holdout_files),
++                    static_cast<unsigned long long>(rep.r8_label_correct),
++                    static_cast<unsigned long long>(rep.holdout_files),
++                    static_cast<unsigned long long>(rep.wc_correct),
++                    static_cast<unsigned long long>(rep.wc_total),
++                    static_cast<unsigned long long>(rep.sc_correct),
++                    static_cast<unsigned long long>(rep.sc_total),
++                    static_cast<unsigned long long>(rep.nan_or_inf),
++                    static_cast<unsigned long long>(rep.repeat_deterministic),
++                    static_cast<unsigned long long>(rep.holdout_files),
+                     static_cast<unsigned long long>(rep.training_estimates),
+                     static_cast<unsigned long long>(rep.holdout_files),
+                     rep.negative_control_ok ? "PASS" : "FAIL",
+@@ -1329,20 +1283,25 @@
+     const bool infra_ok = rep.error.empty() && rep.sample_rate_ok &&
+                           !frozen.empty() && all_capture_ok &&
+                           rep.baseline_identity_ok;
+-    // Two-sample / measurement acceptance (issue #3): every selected holdout sample
+-    // must be scored, none RF-excluded, all predictions agree with the frozen
+-    // baseline, the negative control passed, both TX and RX restored, every CFO
+-    // finite and in-range, and every training estimate valid -- never merely
+-    // "some sample scored".
++    // Two-sample / measurement acceptance: every selected holdout sample must be
++    // scored, none RF-excluded, all predictions agree with the frozen BF16 baseline,
++    // every label correct, WC/SC correct, no NaN/Inf, every repeat deterministic,
++    // the negative control passed, both TX and RX restored, every CFO finite and
++    // in-range, and every training estimate valid -- never merely "some scored".
+     const bool scoring_ok = (rep.scored == rep.holdout_files) &&
+                             (rep.rf_excluded == 0) &&
+-                            (rep.r8_prediction_agreement == rep.holdout_files);
++                            (rep.r8_prediction_agreement == rep.holdout_files) &&
++                            (rep.r8_label_correct == rep.holdout_files);
++    const bool raw24_integrity_ok = (rep.nan_or_inf == 0) &&
++                                    (rep.repeat_deterministic == rep.holdout_files);
++    const bool wc_sc_ok = (rep.wc_correct == rep.wc_total) &&
++                          (rep.sc_correct == rep.sc_total);
+     const bool control_ok = rep.negative_control_ok && rep.tx_restore_ok &&
+                             rep.restore_ok;
+     const bool cfo_ok = rep.cfo_all_finite && rep.cfo_all_in_range;
+     const bool training_ok = (rep.training_estimates == rep.holdout_files);
+-    rep.functional_pass = infra_ok && scoring_ok && control_ok && cfo_ok &&
+-                          training_ok;
++    rep.functional_pass = infra_ok && scoring_ok && raw24_integrity_ok && wc_sc_ok &&
++                          control_ok && cfo_ok && training_ok;
+ 
+     std::string detail = "input_kind=" + rep.input_kind +
+                          " frozen_files=" + std::to_string(rep.frozen_files) +
+@@ -1353,6 +1312,16 @@
+                          " prediction_agreement=" +
+                              std::to_string(rep.r8_prediction_agreement) +
+                          "/" + std::to_string(rep.holdout_files) +
++                         " label_correct=" +
++                             std::to_string(rep.r8_label_correct) +
++                         "/" + std::to_string(rep.holdout_files) +
++                         " wc=" + std::to_string(rep.wc_correct) + "/" +
++                             std::to_string(rep.wc_total) +
++                         " sc=" + std::to_string(rep.sc_correct) + "/" +
++                             std::to_string(rep.sc_total) +
++                         " nan_or_inf=" + std::to_string(rep.nan_or_inf) +
++                         " repeat_deterministic=" +
++                             std::to_string(rep.repeat_deterministic) +
+                          " training_estimates=" + std::to_string(rep.training_estimates) +
+                          " negative_control=" +
+                              (rep.negative_control_ok ? "PASS" : "FAIL") +
+@@ -1371,4 +1340,4 @@
+     return rep;
+ }
+ 
+-}  // namespace iqpcbtrx23fix10
++}  // namespace iqpcbtrx24bf16fix10

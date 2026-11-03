@@ -1,0 +1,9 @@
+python3 -c "import json;from pathlib import Path;d=json.loads(Paath(\"/root/rml24_repeat_agc_experiment_20261101/CAPTURE_RESULT.json\").read_textt());r=d[\"rows\"];keys=sorted(set((x[\"mode\"],str(x[\"requested_gain\"]),x[\"b andwidth\"]) for x in r));print(json.dumps(dict(restore_errors=d[\"restore_errorss\"],groups=[dict(mode=k[0],gain=k[1],bw=k[2],total=sum((x[\"mode\"],str(x[\"requuested_gain\"]),x[\"bandwidth\"])==k for x in r),recovered=sum(x[\"recovered\"] aand (x[\"mode\"],str(x[\"requested_gain\"]),x[\"bandwidth\"])==k for x in r)) forr k in keys])))"; tail -n 2 /root/rml24_agc_capture.log; systemctl show rml24-inttegrated -p ActiveState -p NRestarts
+
+{"restore_errors": [], "groups": [{"mode": "fast_attack", "gain": "None", "bw": "18000000", "total": 5, "recovered": 5}, {"mode": "fast_attack", "gain": "None", "bw": "3000000", "total": 5, "recovered": 5}, {"mode": "fast_attack", "gain": "None", "bw": "5000000", "total": 5, "recovered": 5}, {"mode": "manual", "gain": "0", "bw": "18000000", "total": 5, "recovered": 0}, {"mode": "manual", "gain": "15", "bw": "18000000", "total": 5, "recovered": 0}, {"mode": "manual", "gain": "35", "bw": "18000000", "total": 5, "recovered": 5}, {"mode": "manual", "gain": "55", "bw": "18000000", "total": 5, "recovered": 5}, {"mode": "manual", "gain": "65", "bw": "18000000", "total": 5, "recovered": 5}, {"mode": "slow_attack", "gain": "None", "bw": "18000000", "total": 5, "recovered": 5}, {"mode": "slow_attack", "gain": "None", "bw": "3000000", "total": 5, "recovered": 5}, {"mode": "slow_attack", "gain": "None", "bw": "5000000", "total": 5, "recovered": 5}]}
+[1]+  Done                    nohup python3 /root/rml24_three_modes_execution_20261029/fpga_ui_integration_20261031/run_capture.py > /root/rml24_agc_capture.log 2>&1 < /dev/null
+CAPTURE_DONE 55 []
+ORIGINAL_SERVICE_RESTORED
+NRestarts=0
+ActiveState=active
+(base) root@U:~# 

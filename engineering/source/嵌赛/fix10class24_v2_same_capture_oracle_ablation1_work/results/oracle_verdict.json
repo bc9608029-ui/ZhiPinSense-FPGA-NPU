@@ -1,0 +1,109 @@
+{
+  "token": "M29-RML24-V2-SAME-CAPTURE-ORACLE-ABLATION1-JUDGE-AFFINE_CORRECTION_INSUFFICIENT_MODEL_DOMAIN_SHIFT_UNRESOLVED",
+  "task": "M29-RML24-V2-SAME-CAPTURE-ORACLE-ABLATION1",
+  "date": "2026-10-21",
+  "offline_only": true,
+  "terminal_state": "AFFINE_CORRECTION_INSUFFICIENT_MODEL_DOMAIN_SHIFT_UNRESOLVED",
+  "terminal_note": "固定仿射修正（含窗+尺度+直流+广线性，真正交叉验证 O5）不足以把真实 RF 载荷恢复到数字基线：fix2 O5=5/24、old O5=2/24，远低于数字基线上界 23/24，且窗(O1)/尺度(O2)无增益、直流(O3)仅次要贡献。数字基线 23/24 只证明模型对数字 v2域健康，不能排除模型对真实 RF 残余失真失效，故 H5(模型 RF 域失配)保持未决。 次要贡献：直流(O3)修回若干帧，但非主要瓶颈。",
+  "sessions": {
+    "rf_fix2_target": {
+      "session": "rf_fix2_target",
+      "agree_by_level": {
+        "O0": 2,
+        "O1": 2,
+        "O2": 2,
+        "O3": 5,
+        "O4": 4,
+        "O5": 5
+      },
+      "label_by_level": {
+        "O0": 2,
+        "O1": 2,
+        "O2": 2,
+        "O3": 6,
+        "O4": 4,
+        "O5": 5
+      },
+      "nrmse_median_by_level": {
+        "O0": 3.60977,
+        "O1": 3.60977,
+        "O2": 3.29624,
+        "O3": 0.759047,
+        "O4": 0.603388,
+        "O5": 0.600723
+      },
+      "delta_agree_vs_O0": {
+        "window_O1": 0,
+        "scale_O2": 0,
+        "dc_O3": 3,
+        "combined_O4": 2
+      },
+      "affine_ceiling_agree": 5,
+      "digital_baseline_upper_bound": 23,
+      "h1_window_estimation_error": "NOT_SUPPORTED",
+      "h2_per_sample_scale": "NOT_PRIMARY",
+      "h3_legitimate_dc_unrecoverable": "SECONDARY_CONTRIBUTOR",
+      "h4_fixed_affine_insufficient": "SUPPORTED",
+      "h5_model_domain_shift": "UNRESOLVED_CANNOT_EXCLUDE"
+    },
+    "rf_independent_v2": {
+      "session": "rf_independent_v2",
+      "agree_by_level": {
+        "O0": 1,
+        "O1": 1,
+        "O2": 2,
+        "O3": 2,
+        "O4": 2,
+        "O5": 2
+      },
+      "label_by_level": {
+        "O0": 1,
+        "O1": 1,
+        "O2": 2,
+        "O3": 2,
+        "O4": 2,
+        "O5": 2
+      },
+      "nrmse_median_by_level": {
+        "O0": 4.30995,
+        "O1": 4.30995,
+        "O2": 3.79256,
+        "O3": 2.1294,
+        "O4": 0.830652,
+        "O5": 1.20021
+      },
+      "delta_agree_vs_O0": {
+        "window_O1": 0,
+        "scale_O2": 1,
+        "dc_O3": 1,
+        "combined_O4": 1
+      },
+      "affine_ceiling_agree": 2,
+      "digital_baseline_upper_bound": 23,
+      "h1_window_estimation_error": "NOT_SUPPORTED",
+      "h2_per_sample_scale": "NOT_PRIMARY",
+      "h3_legitimate_dc_unrecoverable": "SECONDARY_CONTRIBUTOR",
+      "h4_fixed_affine_insufficient": "SUPPORTED",
+      "h5_model_domain_shift": "UNRESOLVED_CANNOT_EXCLUDE"
+    }
+  },
+  "superseded_conclusions": [
+    "1/24 主要是门控产物 -> SUPERSEDED：强制 O0 仅 2/24 与数字基线一致，且 oracle 仿射上界也仅若干帧，问题在恢复后残余失真不在门控。",
+    "接收链残差是唯一硬瓶颈 -> SUPERSEDED：窗/尺度/直流均可由 oracle 修正，但修正后仍远低于数字基线，瓶颈是盲恢复无法观测的载荷内残余失真。",
+    "不是模型域失配 -> 撤回为『未决』：数字基线 23/24 仅证数字域健康，不能排除模型对真实 RF 残余失真失效（H5 UNRESOLVED）。"
+  ],
+  "retained": [
+    "MORE_RF_DATA_REQUIRED",
+    "TRAIN_VAL_TEST_SPLIT_IMPOSSIBLE",
+    "暂不正式微调"
+  ],
+  "red_lines_kept": [
+    "no training",
+    "no board/SDR/transmit",
+    "no production recovery/gate change",
+    "24 denominator intact",
+    "oracle 不进入生产恢复",
+    "不按标签挑选逐帧最优 oracle",
+    "C0(18/24) 未并入 v2 统计"
+  ]
+}

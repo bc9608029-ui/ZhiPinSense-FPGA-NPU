@@ -1,0 +1,7 @@
+# 候选 C：CFO tail + multipath tail + composite（全部开启，即主配置 train_channel）。
+_base: configs/ad_amr_v1_1_data_v4_12class_robust.yaml
+
+output_root: outputs/ad_amr_v1_1_data_v4_12class_robust/pilot/candidate_C_seed2026
+
+robust:
+  candidate: C

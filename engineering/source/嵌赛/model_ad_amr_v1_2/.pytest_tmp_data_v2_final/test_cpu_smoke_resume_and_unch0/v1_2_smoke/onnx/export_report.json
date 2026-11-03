@@ -1,0 +1,35 @@
+{
+  "track": "ad_amr_v1_2",
+  "onnx_path": "F:\\嵌赛\\model_ad_amr_v1_2\\.pytest_tmp_data_v2_final\\test_cpu_smoke_resume_and_unch0\\v1_2_smoke\\onnx\\ad_amr_v1_2_opset17.onnx",
+  "checkpoint": "F:\\嵌赛\\model_ad_amr_v1_2\\.pytest_tmp_data_v2_final\\test_cpu_smoke_resume_and_unch0\\v1_2_smoke\\checkpoints\\best.pt",
+  "checkpoint_epoch": 2,
+  "inspection": {
+    "checker_passed": true,
+    "opset": 17,
+    "op_types": {
+      "Add": 12,
+      "Conv": 28,
+      "Gemm": 2,
+      "ReduceMean": 1,
+      "Relu": 24
+    },
+    "unexpected_operators": []
+  },
+  "ort_parity": {
+    "status": "ok",
+    "max_abs_diff": 3.725290298461914e-08,
+    "mean_abs_diff": 2.1047890541581182e-08
+  },
+  "profile": {
+    "parameters": 278778,
+    "trainable_parameters": 278778,
+    "neural_macs": 46544128,
+    "neural_flops": 93088256,
+    "fp32_parameter_size_mb": 1.0634536743164062,
+    "state_dict_size_mb": 1.0740966796875,
+    "serialized_state_dict_mb": 1.124436378479004,
+    "input_contract": "iq[N,2,1024] -> logits[N,10]",
+    "operator_policy": "Conv/BatchNormalization/Relu/Add/ReduceMean/Gemm only"
+  },
+  "npu_graph_claim": "operator-compatible only; vendor compilation and board parity remain required"
+}

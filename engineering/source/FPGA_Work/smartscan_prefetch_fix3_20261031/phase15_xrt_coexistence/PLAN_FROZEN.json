@@ -1,0 +1,10 @@
+{
+  "cases": [
+    "16 NPU baseline",
+    "8 NPU then XRT probe then8 NPU",
+    "8 NPU then XRT execute/allocate then8 NPU"
+  ],
+  "same_model": true,
+  "noRF": true,
+  "root_cause_hypothesis": "independent XRT owner resets device or overlaps DDR"
+}

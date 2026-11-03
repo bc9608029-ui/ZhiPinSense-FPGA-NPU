@@ -1,0 +1,48 @@
+[
+  {
+    "dominant_cause": "DC_IQ_IMBALANCE",
+    "file_name": "quantized_d2_2p56m_000002.ci16",
+    "payload": {
+      "computed": true,
+      "corr": 0.9985543691604485,
+      "nmse": 2.316964347970805
+    },
+    "training": {
+      "amplitude_ripple_db_pp": 7.623192355652789,
+      "boundary_error_ratio": 1.0755063839390648,
+      "central_training_residual": 1.9622872232495676,
+      "dc_iq_residual": 0.2176295867674196,
+      "dc_offset_rel": 0.00012388101547520434,
+      "fractional_delay_residual": 1.9990049746071052,
+      "fractional_delay_samples": 0.048974162608584025,
+      "frequency_equalized_residual": 0.06403973657089225,
+      "group_delay_ripple_samples": 62.29319199753529,
+      "image_rejection_db": 27.197370445712764,
+      "phase_ripple_deg_pp": 27.780494187600027,
+      "scalar_only_residual": 2.000357650712204
+    }
+  },
+  {
+    "dominant_cause": "DC_IQ_IMBALANCE",
+    "file_name": "quantized_d2_2p56m_000006.ci16",
+    "payload": {
+      "computed": true,
+      "corr": 0.9968919353374137,
+      "nmse": 2.776983279220843
+    },
+    "training": {
+      "amplitude_ripple_db_pp": 8.514567737590372,
+      "boundary_error_ratio": 1.078793981102807,
+      "central_training_residual": 1.9605475413506666,
+      "dc_iq_residual": 0.22342657339640135,
+      "dc_offset_rel": 0.00038252122352275134,
+      "fractional_delay_residual": 1.9990200067511072,
+      "fractional_delay_samples": 0.04877813723245507,
+      "frequency_equalized_residual": 0.10210537438235003,
+      "group_delay_ripple_samples": 66.87117749355102,
+      "image_rejection_db": 22.63176607222467,
+      "phase_ripple_deg_pp": 30.294715059884872,
+      "scalar_only_residual": 2.000286149503655
+    }
+  }
+]

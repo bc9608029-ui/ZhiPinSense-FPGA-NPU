@@ -1,0 +1,43 @@
+{
+  "status": "POST_JTAG_DISPLAY_NORMAL_RF_REVALIDATION_RUNNING",
+  "model_changed": false,
+  "recovery_changed": false,
+  "formal_runs": [
+    {
+      "correct": 234,
+      "total": 240,
+      "accuracy": 0.975,
+      "missing_sequences": [],
+      "failure_count": 0
+    },
+    {
+      "correct": 232,
+      "total": 240,
+      "accuracy": 0.9666666666666667,
+      "missing_sequences": [],
+      "failure_count": 0
+    }
+  ],
+  "combined_correct": 466,
+  "combined_total": 480,
+  "combined_accuracy": 0.9708333333333333,
+  "historical_raw_replay": {
+    "passed": 480,
+    "total": 480
+  },
+  "ui_same_tensor": {
+    "passed": 480,
+    "total": 480
+  },
+  "hdmi_physical": "User confirmed normal single complete UI after temporary Program FPGA load; spectrum/constellation page verification pending",
+  "network_override": "Both endpoints use supported explicit 192.168.126.50 argument; .10 alias addition denied by Windows; original IP unchanged",
+  "board_root": "/root/rml24_stage7_execution_20261027/final",
+  "pc_root": "E:\\瀹撳矁绂孿\rml24_stage7_execution_20261027",
+  "new_capture_archive": {
+    "sha256": "afa1d8d7a42dd2ae54baeb5329a73f3ac89eddaee61e7027930a01ce4b979331",
+    "raw_count": 504,
+    "tensor_count": 504,
+    "verified": true
+  },
+  "persistent_boot": "NOT_IMPLEMENTED; user confirmed Program FPGA / .bit, not Program Flash"
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "seed": "0",
+    "checkpoint": "F:\\FPGA_Work\\model_v3_3\\.pytest_tmp\\test_acceptance_script_exits_n0\\seed0\\best.pt",
+    "accuracy": 0.0,
+    "macro_f1": 0.0,
+    "qam_mean_accuracy": 0.0,
+    "per_class_accuracy": {
+      "BPSK": 0.0,
+      "QPSK": 0.0,
+      "8PSK": 0.0,
+      "16QAM": 0.0,
+      "64QAM": 0.0,
+      "2FSK": 0.0,
+      "CPFSK": 0.0,
+      "OFDM": 0.0
+    },
+    "snr_accuracy": {
+      "0": 0.0,
+      "10": 0.0,
+      "20": 0.0
+    },
+    "fpga_sim_accuracy_gap": 0.0,
+    "fpga_sim_macro_f1_gap": 0.0
+  },
+  {
+    "seed": "1",
+    "checkpoint": "F:\\FPGA_Work\\model_v3_3\\.pytest_tmp\\test_acceptance_script_exits_n0\\seed1\\best.pt",
+    "accuracy": 0.0,
+    "macro_f1": 0.0,
+    "qam_mean_accuracy": 0.0,
+    "per_class_accuracy": {
+      "BPSK": 0.0,
+      "QPSK": 0.0,
+      "8PSK": 0.0,
+      "16QAM": 0.0,
+      "64QAM": 0.0,
+      "2FSK": 0.0,
+      "CPFSK": 0.0,
+      "OFDM": 0.0
+    },
+    "snr_accuracy": {
+      "0": 0.0,
+      "10": 0.0,
+      "20": 0.0
+    },
+    "fpga_sim_accuracy_gap": 0.0,
+    "fpga_sim_macro_f1_gap": 0.0
+  },
+  {
+    "seed": "2",
+    "checkpoint": "F:\\FPGA_Work\\model_v3_3\\.pytest_tmp\\test_acceptance_script_exits_n0\\seed2\\best.pt",
+    "accuracy": 0.0,
+    "macro_f1": 0.0,
+    "qam_mean_accuracy": 0.0,
+    "per_class_accuracy": {
+      "BPSK": 0.0,
+      "QPSK": 0.0,
+      "8PSK": 0.0,
+      "16QAM": 0.0,
+      "64QAM": 0.0,
+      "2FSK": 0.0,
+      "CPFSK": 0.0,
+      "OFDM": 0.0
+    },
+    "snr_accuracy": {
+      "0": 0.0,
+      "10": 0.0,
+      "20": 0.0
+    },
+    "fpga_sim_accuracy_gap": 0.0,
+    "fpga_sim_macro_f1_gap": 0.0
+  }
+]

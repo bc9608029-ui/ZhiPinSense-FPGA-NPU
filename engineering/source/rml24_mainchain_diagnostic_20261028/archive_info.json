@@ -1,0 +1,16 @@
+{
+  "archive": "/root/rml24_mainchain_diagnostic_20261028/diag_fixed01_evidence.tar.gz",
+  "bytes": 220891440,
+  "sha256": "101b23c474a0740ea9f4a2f95cc631c0236dca4c59fec340b07d07b05b03e09f",
+  "traces": 842,
+  "final": {
+    "valid": 613,
+    "rejected": 229,
+    "records": 842,
+    "no_tcp": true,
+    "no_tx_handshake": true,
+    "restore_errors": [],
+    "ui_sent": 0,
+    "ui_failed": 0
+  }
+}

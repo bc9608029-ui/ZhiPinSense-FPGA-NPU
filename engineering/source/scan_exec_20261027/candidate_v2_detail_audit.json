@@ -1,0 +1,76 @@
+{
+  "centered_narrow_v2": {
+    "centering_count": 5,
+    "centering_readback_max_error_hz": 3,
+    "centering_max_abs_residual_hz": 4.606014057543419,
+    "centering_min_public_score": 0.10214462520680684,
+    "full_scan_rows": [
+      0,
+      64,
+      65,
+      97,
+      120
+    ],
+    "errors": [
+      {
+        "seq": 85,
+        "truth": "64QAM",
+        "pred": "256QAM"
+      },
+      {
+        "seq": 120,
+        "truth": "AM-SSB-WC",
+        "pred": "AM-SSB-SC"
+      },
+      {
+        "seq": 156,
+        "truth": "AM-DSB-WC",
+        "pred": "AM-DSB-SC"
+      },
+      {
+        "seq": 183,
+        "truth": "AM-DSB-WC",
+        "pred": "AM-DSB-SC"
+      }
+    ],
+    "latency_median_ms": 1626.3419949996205,
+    "latency_p95_ms": 1710.942731500063
+  },
+  "centered_wide_v2": {
+    "centering_count": 5,
+    "centering_readback_max_error_hz": 3,
+    "centering_max_abs_residual_hz": 4.2375091123473085,
+    "centering_min_public_score": 0.1491658420361259,
+    "full_scan_rows": [
+      0,
+      64,
+      145,
+      187,
+      232
+    ],
+    "errors": [
+      {
+        "seq": 25,
+        "truth": "AM-DSB-WC",
+        "pred": "AM-DSB-SC"
+      },
+      {
+        "seq": 85,
+        "truth": "64QAM",
+        "pred": "256QAM"
+      },
+      {
+        "seq": 156,
+        "truth": "AM-DSB-WC",
+        "pred": "AM-DSB-SC"
+      },
+      {
+        "seq": 237,
+        "truth": "OQPSK",
+        "pred": "64APSK"
+      }
+    ],
+    "latency_median_ms": 1620.8485299998756,
+    "latency_p95_ms": 1728.9299165001921
+  }
+}

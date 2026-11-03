@@ -1,0 +1,13 @@
+import numpy as np,json,hashlib,subprocess,sys
+from pathlib import Path
+root=Path(sys.argv[1]);root.mkdir();p=Path('/root/rml24_fix3_1793425824/vectors/23.i16');assert hashlib.sha256(p.read_bytes()).hexdigest()=='3ff37e7087187d9a5d8179adba6f6ffef7108ec966406bbb617e242034586f72'
+a=np.fromfile(p,dtype='<i2').astype(np.int64);out=[]
+for scale in [1,2,4,8,16,32,64,128,256]:
+ x=a*scale;assert np.max(x)<=32767 and np.min(x)>=-32768;q=root/('s'+str(scale)+'.i16');x.astype('<i2').tofile(q);hashes=[]
+ for rep in range(4):
+  dest=root/('s'+str(scale)+'r'+str(rep));cmd=[sys.executable,'-I','/root/rml24_test_setup_w1QsCF/rml24_test_readiness_20261030/fpga/same_iq.py','--iq',str(q),'--out',str(dest),'--backend','fpga','--driver','/root/rml24_fpga_diag_1793380588/scan_xrt']
+  with (root/(dest.name+'.log')).open('w') as f:r=subprocess.run(cmd,stdout=f,stderr=subprocess.STDOUT)
+  v=json.loads((dest/'result.json').read_text());h=hashlib.sha256((dest/'fpga.u64').read_bytes()).hexdigest() if (dest/'fpga.u64').exists() else None;hashes.append(h);out.append(dict(scale=scale,rep=rep,rc=r.returncode,psd_sha=h,result=v))
+  if v.get('driver_rc')!=0:raise RuntimeError('Hardware fault; stop amplitude diagnosis')
+summary=dict(expected=36,executed=len(out),passed=sum(x['result']['ok'] for x in out),scales=[dict(scale=k,stable=len(set(x['psd_sha'] for x in out if x['scale']==k))==1,relative_l1=[x['result'].get('comparison',{}).get('relative_l1') for x in out if x['scale']==k]) for k in [1,2,4,8,16,32,64,128,256]],results=out)
+(root/'SUMMARY.json').write_text(json.dumps(summary,indent=2));print(json.dumps(summary));print('REAL_IQ_MATRIX_DONE',flush=True)

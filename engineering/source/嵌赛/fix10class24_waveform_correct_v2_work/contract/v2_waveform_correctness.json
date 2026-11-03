@@ -1,0 +1,82 @@
+{
+  "am_dsb": {
+    "AM-DSB-SC": {
+      "carrier_power": 82.08464344569796,
+      "carrier_sideband_db": -41.063039984224304,
+      "class": "AM-DSB-SC",
+      "dsb_symmetry": 5.551178642181179e-17,
+      "mean_real": 0.0016913317370916526,
+      "seed": 3000020,
+      "sideband_power": 1048493.9153223103
+    },
+    "AM-DSB-WC": {
+      "carrier_power": 1045088.8110670814,
+      "carrier_sideband_db": 24.766777207706756,
+      "class": "AM-DSB-WC",
+      "dsb_symmetry": 0.0,
+      "mean_real": 0.0004691176124547114,
+      "seed": 3000019,
+      "sideband_power": 3487.188929956057
+    }
+  },
+  "am_ssb": {
+    "AM-SSB-SC": {
+      "carrier_sideband_db": -40.01956542886624,
+      "class": "AM-SSB-SC",
+      "dc_power": 6403.740975900841,
+      "hilbert_ortho_identity": 1.0,
+      "hilbert_ortho_true": -2.4288571769954056e-17,
+      "mean_real": 0.05525886036480904,
+      "neg_energy": 3.221553489667024e-24,
+      "neg_frac": 5.008123694385003e-32,
+      "pos_energy": 64326555.93708594,
+      "seed": 3000018
+    },
+    "AM-SSB-WC": {
+      "carrier_sideband_db": 21.411296627018572,
+      "class": "AM-SSB-WC",
+      "dc_power": 143466395.4579509,
+      "hilbert_ortho_identity": 1.0000000000000002,
+      "hilbert_ortho_true": 1.7642093776262983e-18,
+      "mean_real": 8.271040340115324,
+      "neg_energy": 3.839022266992421e-24,
+      "neg_frac": 3.703395605211107e-30,
+      "pos_energy": 1036622.2451607579,
+      "seed": 3000017
+    }
+  },
+  "checks": [
+    {
+      "criterion": "<a,H{a}>\u22480 (<1e-6)",
+      "id": "C1-hilbert-orthogonal",
+      "measured": "ortho(true)=1.76e-18 (identity=1.00)",
+      "verdict": "PASS"
+    },
+    {
+      "criterion": "SSB-SC \u8d1f\u9891\u5360\u6bd4 \u22480 (USB)",
+      "id": "C2-ssb-one-sided-usb",
+      "measured": "SSB-SC neg_frac=5.008e-32  SSB-WC neg_frac=3.703e-30",
+      "verdict": "PASS"
+    },
+    {
+      "criterion": "DSB-SC \u6b63/\u8d1f\u8fb9\u5e26 |pos-neg|/(pos+neg)\u22480",
+      "id": "C3-dsb-symmetric",
+      "measured": "DSB-SC sym=5.551e-17  DSB-WC sym=0.000e+00",
+      "verdict": "PASS"
+    },
+    {
+      "criterion": "SSB-SC/DSB-SC \u8f7d\u6ce2/\u8fb9\u5e26 < -30 dB",
+      "id": "C4-sc-carrier-suppressed",
+      "measured": "SSB-SC -40.0 dB  DSB-SC -41.1 dB",
+      "verdict": "PASS"
+    },
+    {
+      "criterion": "SSB-WC/DSB-WC \u8f7d\u6ce2/\u8fb9\u5e26 > +10 dB",
+      "id": "C5-wc-carrier-present",
+      "measured": "SSB-WC +21.4 dB  DSB-WC +24.8 dB",
+      "verdict": "PASS"
+    }
+  ],
+  "token": "M29-RML24-FIX10CLASS24-WAVEFORM-CORRECT-V2",
+  "verdict": "v2 \u4fee\u590d F1(.imag)/F2(\u771fUSB)/F3(SC \u771f\u6291\u5236\u8f7d\u6ce2) \u5e76\u8986\u76d6 DSB-SC\uff1b\u4ec5 AM 4 \u7c7b\u53d8\u66f4\uff0c\u5176\u4f59 20 \u7c7b\u9010\u5b57\u590d\u7528\u51bb\u7ed3\u751f\u6210\u5668\uff1bv1 \u5386\u53f2\u4e0d\u52a8\u3002"
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "nominal24",
+    "denominator": 24,
+    "correct": 24,
+    "missing": 0,
+    "minimum_correct": 24,
+    "clock_drift_ns": -1118530,
+    "candidate_identity_sha256": "fa1e6d82884b6b580df62d6776005c199d3c3a26e11593515079de1fe5ec7b24",
+    "gate_pass": true
+  },
+  {
+    "name": "sweep6",
+    "denominator": 6,
+    "correct": 5,
+    "missing": 0,
+    "minimum_correct": 6,
+    "clock_drift_ns": -3232450,
+    "candidate_identity_sha256": "fa1e6d82884b6b580df62d6776005c199d3c3a26e11593515079de1fe5ec7b24",
+    "gate_pass": false
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "checkpoint": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\outputs\\qam_aware_v3\\smoke\\checkpoints\\best.pt",
+  "checkpoint_epoch": 1,
+  "final_blind_test_accessed": false,
+  "suites": {
+    "v3_robust": {
+      "suite": "v3_robust",
+      "scope": "development-only; v3_final_blind_test was not accessed",
+      "exact_v2_test_namespace": false,
+      "samples": 256,
+      "accuracy": 0.1171875,
+      "macro_f1": 0.02697841726618705,
+      "qam_mean_accuracy": 0.0,
+      "per_class_accuracy": {
+        "BPSK": 0.0,
+        "QPSK": 0.9375,
+        "8PSK": 0.0,
+        "16QAM": 0.0,
+        "64QAM": 0.0,
+        "2FSK": 0.0,
+        "CPFSK": 0.0,
+        "OFDM": 0.0
+      },
+      "per_class_f1": {
+        "BPSK": 0.0,
+        "QPSK": 0.2158273381294964,
+        "8PSK": 0.0,
+        "16QAM": 0.0,
+        "64QAM": 0.0,
+        "2FSK": 0.0,
+        "CPFSK": 0.0,
+        "OFDM": 0.0
+      }
+    },
+    "v2_compatible": {
+      "suite": "v2_compatible",
+      "scope": "development-only; v3_final_blind_test was not accessed",
+      "exact_v2_test_namespace": true,
+      "samples": 256,
+      "accuracy": 0.125,
+      "macro_f1": 0.027777777777777776,
+      "qam_mean_accuracy": 0.0,
+      "per_class_accuracy": {
+        "BPSK": 0.0,
+        "QPSK": 1.0,
+        "8PSK": 0.0,
+        "16QAM": 0.0,
+        "64QAM": 0.0,
+        "2FSK": 0.0,
+        "CPFSK": 0.0,
+        "OFDM": 0.0
+      },
+      "per_class_f1": {
+        "BPSK": 0.0,
+        "QPSK": 0.2222222222222222,
+        "8PSK": 0.0,
+        "16QAM": 0.0,
+        "64QAM": 0.0,
+        "2FSK": 0.0,
+        "CPFSK": 0.0,
+        "OFDM": 0.0
+      }
+    }
+  }
+}

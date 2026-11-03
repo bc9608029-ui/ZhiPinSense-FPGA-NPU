@@ -1,0 +1,27 @@
+# V3.3 smoke config — a tiny full-pipeline rehearsal (2 epochs, 3 SNR points).
+#
+# Keeps the exact V3.3 model schema, contract and class order, but shrinks the
+# dataset/SNR set so a full train -> eval -> ONNX-export pass finishes in seconds
+# on CPU or GPU.  The 2-epoch evaluation uses this config's own 3-SNR suite
+# (``evaluate_v3_3`` detects ``epochs <= 2`` and switches to the reduced suite).
+# The multi-seed promotion gate is NOT applied here (it is a formal-stage gate).
+
+experiment_config: configs/qam_aware_v3_3.yaml
+output_root: outputs/qam_aware_v3_3/smoke
+
+seed: 2026
+dataset:
+  train_samples: 480
+  val_samples: 192
+  test_samples: 240
+  snr_values: [0, 10, 20]
+
+training:
+  epochs: 2
+  batch_size: 32
+  minimum_epochs_before_stopping: 1
+
+evaluation:
+  batch_size: 64
+  samples_per_modulation_per_snr: 40
+  snr_values: [0, 10, 20]

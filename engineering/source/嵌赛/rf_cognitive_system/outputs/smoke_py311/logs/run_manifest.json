@@ -1,0 +1,30 @@
+{
+  "seed": 2026,
+  "config_file": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\smoke_py311.yaml",
+  "git_commit": null,
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "torch": "2.14.0+cpu",
+    "cuda_available": false,
+    "torch_cuda_version": null,
+    "cudnn_version": null,
+    "cuda_devices": []
+  },
+  "selected_device": "cpu",
+  "model_profile": {
+    "parameters": 9672,
+    "trainable_parameters": 9672,
+    "model_size_mb_fp32": 0.036895751953125,
+    "approx_macs": 1163776,
+    "approx_flops": 2327552
+  },
+  "epochs_completed": 3,
+  "best_epoch": 3,
+  "training_time_sec": 5.092792399998871,
+  "peak_process_rss_mb": 427.51171875,
+  "started_at_utc": "2026-09-06T04:03:46.216303+00:00",
+  "finished_at_utc": "2026-09-06T04:03:51.626678+00:00"
+}

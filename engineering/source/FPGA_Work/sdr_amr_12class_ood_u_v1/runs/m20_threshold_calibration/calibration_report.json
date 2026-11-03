@@ -1,0 +1,69 @@
+{
+  "run_id": "m20_20261008T132234Z_754276",
+  "step": "threshold_calibration",
+  "score_method": "logit_margin",
+  "temperature": 1.0,
+  "threshold": -0.15274411201477073,
+  "target_operating_point": "id_accept_99",
+  "working_points": {
+    "id_accept_95": {
+      "threshold": -0.48299052715301544,
+      "id_accept_rate": 0.95,
+      "id_frr": 0.05,
+      "near_reject_rate": 0.15384615384615385,
+      "far_reject_rate": 0.29333333333333333
+    },
+    "id_accept_99": {
+      "threshold": -0.15274411201477073,
+      "id_accept_rate": 0.99,
+      "id_frr": 0.011111111111111112,
+      "near_reject_rate": 0.05897435897435897,
+      "far_reject_rate": 0.07666666666666666
+    },
+    "far_ood_target": {
+      "threshold": -15.238977313041687,
+      "far_reject_rate": 0.95,
+      "id_accept_rate": 0.11944444444444445,
+      "near_reject_rate": 1.0,
+      "id_frr": 0.8805555555555555
+    }
+  },
+  "method_ranks": {
+    "msp": 5,
+    "entropy": 9,
+    "max_logit": 19,
+    "logit_margin": 4,
+    "energy": 23
+  },
+  "calibration_dataset_sha256": "06e1b2110e83ba9ff4f0291fd67d957408eefff5165272ce80f37e7bf14ee93b",
+  "calibration_split_sha256": "b7c2f001c9a2fa3b26f73a5fab656d43f917d0397a7efafeda87741ae542ddbf",
+  "manifest_sha256": "ca02ea3087413dfbae21f980c806217dceb14a814e2c44cf3f25193a9f21101c",
+  "manifest_path": "runs\\m20_threshold_calibration\\ood_u_threshold_manifest.json",
+  "benchmark_summary": {
+    "msp": {
+      "overall_auroc": 0.787051183127572,
+      "fpr95": 0.6041666666666666,
+      "impaired_id_accept_at_99pct": 1.0
+    },
+    "entropy": {
+      "overall_auroc": 0.7800411522633744,
+      "fpr95": 0.6041666666666666,
+      "impaired_id_accept_at_99pct": 0.9958333333333333
+    },
+    "max_logit": {
+      "overall_auroc": 0.7506610082304527,
+      "fpr95": 0.7388888888888889,
+      "impaired_id_accept_at_99pct": 0.9875
+    },
+    "logit_margin": {
+      "overall_auroc": 0.788326903292181,
+      "fpr95": 0.6013888888888889,
+      "impaired_id_accept_at_99pct": 0.9958333333333333
+    },
+    "energy": {
+      "overall_auroc": 0.7500192901234568,
+      "fpr95": 0.7388888888888889,
+      "impaired_id_accept_at_99pct": 0.9875
+    }
+  }
+}

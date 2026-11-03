@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "frame_id": 3,
+  "stage": "RECOVERED_PAYLOAD",
+  "dtype": "<f4",
+  "layout": "planar",
+  "complex_count": 1024,
+  "sample_rate_hz": 2560000,
+  "source_index": 1500,
+  "modulation": "BPSK",
+  "predicted_class": "BPSK",
+  "baseline_class": "BPSK",
+  "confidence": 0.98,
+  "cfo_hz": 0.0,
+  "sro_ppm": 0.0,
+  "gain_mag": 0.98077767,
+  "symbol_timing_valid": false,
+  "payload_sha256": "38ba788a3bcbe20c16d91b3dbed1835c7b8697d8f575a1c5b20da96303bd2f79",
+  "iq_file": "bpsk_recovered_payload.f32"
+}

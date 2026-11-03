@@ -1,0 +1,11 @@
+{
+  "allowed": true,
+  "scope": [
+    "sweep24"
+  ],
+  "plan_sha256": "2c2c595909cb2d3dd4ad2e7a06d56f0b3575158ed2e9b80981e0fd0658018ee9",
+  "helpers_sha256": "0cf52d5aad2063b11251efc19fc740200fa00251d4f141c8a97ccae3cde66772",
+  "source": "User explicitly asked fix timing and history together then test, subsequently instructed continue testing toward final deployment. Existing fixed/search240 results retained; only invalid-telemetry sweep24 is repeated.",
+  "short_receipt_sha256": "0c9d1effab0ee6101d891ab9e94f5d8efee622c7d4f8c29a167b1cad442bc0ad",
+  "recorded": "2026-10-31T23:08:12.330633"
+}

@@ -1,0 +1,6 @@
+device=/dev/mmcblk0p1
+parent=mmcblk0
+sysfs_dir=/sys/block/mmcblk0/mmcblk0p1
+sectors=2097152
+capacity_bytes=1073741824
+test_mode=0

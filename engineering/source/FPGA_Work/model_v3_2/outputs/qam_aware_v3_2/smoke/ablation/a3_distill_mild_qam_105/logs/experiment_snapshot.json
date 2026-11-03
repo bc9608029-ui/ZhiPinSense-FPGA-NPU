@@ -1,0 +1,51 @@
+{
+  "track": "qam_aware_v3_2",
+  "experiment_config": "F:\\FPGA_Work\\model_v3_2\\configs\\qam_aware_v3_2_smoke_full.yaml",
+  "requested_config": "F:\\FPGA_Work\\model_v3_2\\outputs\\qam_aware_v3_2\\smoke\\ablation\\a3_distill_mild_qam_105_config.yaml",
+  "baseline_config": "F:\\FPGA_Work\\model_v3_2\\configs\\baseline.yaml",
+  "git_commit": null,
+  "seed": 2026,
+  "device": "cpu",
+  "classes": [
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "2FSK",
+    "CPFSK",
+    "OFDM"
+  ],
+  "final_blind_test_accessed": false,
+  "v2_checkpoint": "init/v2_time_power_phase_best.pt",
+  "init_logits_match_v2": true,
+  "init_logits_max_abs_diff": 0.0,
+  "init_gate": 0.0,
+  "distillation": {
+    "enabled": true,
+    "temperature": 4.0,
+    "alpha": 0.7
+  },
+  "model_profile": {
+    "parameters": 72031,
+    "trainable_parameters": 72025,
+    "neural_macs": 9836864,
+    "neural_flops": 19673728,
+    "fp32_parameter_size_mb": 0.2747764587402344,
+    "checkpoint_tensor_state_size_mb": 0.2789955139160156,
+    "serialized_state_dict_mb": 0.3136453628540039,
+    "input_contract": "iq[N,2,1024] + physical[N,3,1024] -> logits[N,8]",
+    "operator_policy": "Conv/BatchNorm/ReLU/Add/Concat/ReduceMean/Mul/Gemm only"
+  },
+  "environment": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "torch": "2.12.0+cpu",
+    "cuda_available": false,
+    "torch_cuda_version": null,
+    "cudnn_version": null,
+    "cuda_devices": []
+  }
+}

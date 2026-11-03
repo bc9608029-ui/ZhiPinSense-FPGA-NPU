@@ -1,0 +1,265 @@
+{
+  "frozen_constants": {
+    "adc_full_scale": 2048.0,
+    "max_lround_ci16_abs": 1599,
+    "max_peak": 13.576670230134553,
+    "rx_scale": 17.37813789457223,
+    "seed_base": 3000000,
+    "shuffle_seed": 20261020,
+    "tx_scale": 117.84922023433009
+  },
+  "negative_control": {
+    "meaning": "TX off (no transmission, no payload file)",
+    "source_index": 0
+  },
+  "order_permutation": [
+    21,
+    23,
+    22,
+    18,
+    15,
+    0,
+    16,
+    2,
+    20,
+    10,
+    17,
+    14,
+    8,
+    1,
+    19,
+    9,
+    6,
+    7,
+    13,
+    3,
+    4,
+    12,
+    5,
+    11
+  ],
+  "per_class": {
+    "128APSK": {
+      "class_index": 11,
+      "max_lround_abs": 206,
+      "original_sha256": "2b5cef3c9c3b47f11c61a5d4e4b4f3e3c9da1f97bf17c4ca0f48d580f726529f",
+      "peak_abs": 1.7521782712435645,
+      "seed": 3000011,
+      "source_index": 24,
+      "tx_payload_sha256": "6ba8451a383a9ba5a28947b97b030e586016028c0287b86297dd4ea7fb8a48d2"
+    },
+    "128QAM": {
+      "class_index": 15,
+      "max_lround_abs": 211,
+      "original_sha256": "b41d422bc7c5f7767c6e590d782076018e31c69052e9db7017ea2be8e8606f8a",
+      "peak_abs": 1.7946691011753408,
+      "seed": 3000015,
+      "source_index": 5,
+      "tx_payload_sha256": "ac96893cb6fbcb0510e4ca61ec1259917b74b2b979c84f136e023fa2067506d9"
+    },
+    "16APSK": {
+      "class_index": 8,
+      "max_lround_abs": 209,
+      "original_sha256": "1624675bbf4df9bdae06504dabd4cb8aeb563e9f2ed784e509e257500f25bbd2",
+      "peak_abs": 1.774967123305488,
+      "seed": 3000008,
+      "source_index": 13,
+      "tx_payload_sha256": "b6874e1df36651654c5f293abb1224642b5ca2fd927810a48947c2ef3bd495f9"
+    },
+    "16PSK": {
+      "class_index": 6,
+      "max_lround_abs": 197,
+      "original_sha256": "07b3fa4c49098a89302e54065c08379cbf10fc1b25ee3dbdfecd105e3adf3678",
+      "peak_abs": 1.6771803094526332,
+      "seed": 3000006,
+      "source_index": 17,
+      "tx_payload_sha256": "8f922324575916d01a14d996afd84aafb590142ddb0018e7e3b7ed9ade948c2f"
+    },
+    "16QAM": {
+      "class_index": 12,
+      "max_lround_abs": 238,
+      "original_sha256": "1f08ed0dfa6b2fd2e39cce2786517e90a0f8ec8d533b890a88731a8720946847",
+      "peak_abs": 2.0262013804584686,
+      "seed": 3000012,
+      "source_index": 22,
+      "tx_payload_sha256": "1f9a1c1886ec9652626d8aae55d8163051ea68e28a2416f576820ae080187058"
+    },
+    "256QAM": {
+      "class_index": 16,
+      "max_lround_abs": 240,
+      "original_sha256": "c4f1c3301fb83b47ba7ab2309487bc0ce2d9503f0f7d3ba0327c24daad3cd447",
+      "peak_abs": 2.035372226728583,
+      "seed": 3000016,
+      "source_index": 7,
+      "tx_payload_sha256": "16037d077e6d89c76a8a1986316ac5624e6ccfa24427f4604ba4e81811c642a4"
+    },
+    "32APSK": {
+      "class_index": 9,
+      "max_lround_abs": 212,
+      "original_sha256": "3c8880a40a0f7380791f59acb40beea930d4969fff55fdbeccba16cb6daeb199",
+      "peak_abs": 1.796297135855661,
+      "seed": 3000009,
+      "source_index": 16,
+      "tx_payload_sha256": "cf0377d1ba020f24ee1a02ad3e1dfc7aa5c9efd872ce33f5414fcf9436e3eb3c"
+    },
+    "32PSK": {
+      "class_index": 7,
+      "max_lround_abs": 188,
+      "original_sha256": "4ed04ca22b8c170413b06640987c1837efddae5b19289e22b0e8623e7d923eac",
+      "peak_abs": 1.5981443182496362,
+      "seed": 3000007,
+      "source_index": 18,
+      "tx_payload_sha256": "291ac4535cc615e2fe61f634e7ccdf2b48da4b04005cba01e605f596c7bd6a62"
+    },
+    "32QAM": {
+      "class_index": 13,
+      "max_lround_abs": 232,
+      "original_sha256": "939c2ad3a00a90be62dbc9993a4597a129f17cad667a81bc924c9cad826e6a76",
+      "peak_abs": 1.9780820599764433,
+      "seed": 3000013,
+      "source_index": 19,
+      "tx_payload_sha256": "89fc6d519dd24e28fc9cbe17a9f0bbff271feeda0ae9b1608823c2d929639f45"
+    },
+    "4ASK": {
+      "class_index": 1,
+      "max_lround_abs": 424,
+      "original_sha256": "f482adc3267fcc4e532e6bacef1ccfb977a5da06cf3dc1f2e8f192cb825a20e4",
+      "peak_abs": 3.6001799063275186,
+      "seed": 3000001,
+      "source_index": 14,
+      "tx_payload_sha256": "99c05c8c75eefc2ebbadc76d83eae6b9f29a8b5064c16c71ff469c669bb878db"
+    },
+    "64APSK": {
+      "class_index": 10,
+      "max_lround_abs": 236,
+      "original_sha256": "96aef84881811a39c91f5bfaabd94720dbfb6b6b903dd2f12f8408a9ce4265ba",
+      "peak_abs": 2.0093491260593273,
+      "seed": 3000010,
+      "source_index": 10,
+      "tx_payload_sha256": "89fa0abe409c2cc5523edb4c086a890f7b5d1b5892cbcd653c81c68ff47e5428"
+    },
+    "64QAM": {
+      "class_index": 14,
+      "max_lround_abs": 272,
+      "original_sha256": "bba06518765282a23d37ecb96bcbe9be82b61c33eb98a661e68fdeb2b1e291d7",
+      "peak_abs": 2.3056623708022648,
+      "seed": 3000014,
+      "source_index": 12,
+      "tx_payload_sha256": "a2ee47c8457bf33041c721aa57fbbcc6179668a26a51b9d398a888115cb8febd"
+    },
+    "8ASK": {
+      "class_index": 2,
+      "max_lround_abs": 445,
+      "original_sha256": "7afa4ae55dfcd0a997255eb1aae8c9e4322bc503bd04ce2bf46deb41712a6c51",
+      "peak_abs": 3.7773691445999535,
+      "seed": 3000002,
+      "source_index": 8,
+      "tx_payload_sha256": "3249d8c48074062b9c31224990e428d2ef37dcaebb1a9cfe8cfd6ca1909da48f"
+    },
+    "8PSK": {
+      "class_index": 5,
+      "max_lround_abs": 199,
+      "original_sha256": "1fa3395b1f598c91f37f0a3464634c21c22a015d723a6484e92ca6de7bc48830",
+      "peak_abs": 1.689840154916248,
+      "seed": 3000005,
+      "source_index": 23,
+      "tx_payload_sha256": "4446baf36a8ff6b67089b02a6d17a61401f27358ac260fc98d89d15aea34cbaa"
+    },
+    "AM-DSB-SC": {
+      "class_index": 20,
+      "max_lround_abs": 190,
+      "original_sha256": "fddd3a71b021dbfa3a41cc4cead304172b312bb29d751a1ba4e94cd1c68c6062",
+      "peak_abs": 1.6141293388915745,
+      "seed": 3000020,
+      "source_index": 9,
+      "tx_payload_sha256": "18fcad87983965a473ee1e6dc194881c577a5a816d81b8fe815f36083443964a"
+    },
+    "AM-DSB-WC": {
+      "class_index": 19,
+      "max_lround_abs": 182,
+      "original_sha256": "13cf26334760c9177a12cd45357f26a5fbff3c65725e43fb9397822819815f0d",
+      "peak_abs": 1.5499810286352544,
+      "seed": 3000019,
+      "source_index": 15,
+      "tx_payload_sha256": "18776c4c4652bf62e347c9600ef5804dbe2ff17831e3729ae327636ff93a01cb"
+    },
+    "AM-SSB-SC": {
+      "class_index": 18,
+      "max_lround_abs": 1159,
+      "original_sha256": "3f78bc3d3af37546213a50479062488efa7bcce26bf1f63c24336d410e0b8c8b",
+      "peak_abs": 9.835636493902033,
+      "seed": 3000018,
+      "source_index": 4,
+      "tx_payload_sha256": "7781d19afe02fe27317b74046a51b9d66756aa37b30c2cbb625c6bcffbc7626b"
+    },
+    "AM-SSB-WC": {
+      "class_index": 17,
+      "max_lround_abs": 1599,
+      "original_sha256": "d6033c98de8311d83258196d58b665752b351982badcfae8686cc1351e6ce44a",
+      "peak_abs": 13.576670230134553,
+      "seed": 3000017,
+      "source_index": 11,
+      "tx_payload_sha256": "5047393e9dfc8566328ea48347122354dd9e0aaf38e66ee0674b817ae3b392f1"
+    },
+    "BPSK": {
+      "class_index": 3,
+      "max_lround_abs": 207,
+      "original_sha256": "56ded905a625458b503c31140d1d2bbaba1506fb8a72c44264e1581be11ee694",
+      "peak_abs": 1.7582068869783631,
+      "seed": 3000003,
+      "source_index": 20,
+      "tx_payload_sha256": "87213997413151ad3b88385ddb7b0fde9edc92eb19e7971fd800ecccd139bf11"
+    },
+    "FM": {
+      "class_index": 21,
+      "max_lround_abs": 118,
+      "original_sha256": "5d55a4155234d0c5e4877e683a4f1c35fa9b92918d339b6478786fd71e182ff9",
+      "peak_abs": 0.9999999999990001,
+      "seed": 3000021,
+      "source_index": 1,
+      "tx_payload_sha256": "0f6a7935282741e7fcd6aa0a5db1b54e815d12d62e9d300a9f7660b6dc16b8f0"
+    },
+    "GMSK": {
+      "class_index": 22,
+      "max_lround_abs": 118,
+      "original_sha256": "fefdb61372eb7cc91b05008858e9579f6e9a277f93cae48d622c3af9dbc84072",
+      "peak_abs": 0.9999999999990001,
+      "seed": 3000022,
+      "source_index": 3,
+      "tx_payload_sha256": "b3042a8da7378580f6f7339057c4d9c424fd8c94d3faed233ddd19aa4709424b"
+    },
+    "OOK": {
+      "class_index": 0,
+      "max_lround_abs": 356,
+      "original_sha256": "d491c11387d1ebadd2c035306abe1df01d2ddb52f45debde6acfbb9410f66e6b",
+      "peak_abs": 3.018533976649809,
+      "seed": 3000000,
+      "source_index": 6,
+      "tx_payload_sha256": "bc4879fc4dbd8cb7c242ff9733e1490c17260de8a71d0078085176beae52e75c"
+    },
+    "OQPSK": {
+      "class_index": 23,
+      "max_lround_abs": 167,
+      "original_sha256": "f30efa38a54a780619f6f0c792f9ff4de9a8038bee91d6084b244b32e9d868ff",
+      "peak_abs": 1.4204615931240063,
+      "seed": 3000023,
+      "source_index": 2,
+      "tx_payload_sha256": "80caabb34743f92eafe37bca6567f87b5abbe26416f452aae0daae2de7ac081b"
+    },
+    "QPSK": {
+      "class_index": 4,
+      "max_lround_abs": 191,
+      "original_sha256": "412796968849cab2901387235bf7d6472d40a94bdc383573f8816c72c67311fd",
+      "peak_abs": 1.6210357932727213,
+      "seed": 3000004,
+      "source_index": 21,
+      "tx_payload_sha256": "7fb3792084e0b0fde21b773aedab152d10a8f6f83107308e39890955fed8f9e8"
+    }
+  },
+  "token": "M29-RML24-FIX10CLASS24-DUALSDR-BLIND-CLEAN1-TX-PACKAGE",
+  "verification": {
+    "max_lround_abs_matches_frozen": true,
+    "n_payload_files": 24,
+    "no_clip": true
+  }
+}

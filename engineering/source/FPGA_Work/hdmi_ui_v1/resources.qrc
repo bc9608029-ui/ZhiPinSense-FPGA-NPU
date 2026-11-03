@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="/">
+    <file>config/qtquickcontrols2.conf</file>
+  </qresource>
+  <qresource prefix="/qml">
+    <file>qml/Main.qml</file>
+    <file>qml/theme/Theme.qml</file>
+    <file>qml/theme/qmldir</file>
+    <file>qml/components/PanelFrame.qml</file>
+    <file>qml/components/StatusBadge.qml</file>
+    <file>qml/components/StatusPanel.qml</file>
+    <file>qml/components/ActionButton.qml</file>
+    <file>qml/components/ClassHeader.qml</file>
+    <file>qml/components/ProbabilityBars.qml</file>
+    <file>qml/components/SpectrumView.qml</file>
+    <file>qml/components/LatencyPanel.qml</file>
+    <file>qml/components/CountersPanel.qml</file>
+    <file>qml/components/EventLog.qml</file>
+    <file>qml/components/SourceBar.qml</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,113 @@
+# V3.3 Stage-1 controlled ablations (A0-A3) on two selection seeds.
+#
+# Each trainable candidate shares the same frozen-V2 backbone and differs only in
+# (a) which train-only heads are enabled and (b) which train-only losses are
+# active.  A0 is not a training run: the frozen V2 checkpoint is loaded and
+# *re-inferred* on the same two validation seeds (FP32 + FPGA-sim) as A1-A3, so
+# A0 can genuinely win or lose selection.
+#
+# Candidate ranking is strictly over the VALIDATION namespace (v3_3_validation,
+# data-seeded by each selection seed) plus the synthetic OOD domains.  The
+# development test ("test") and the final blind set (v3_3_final_blind_test) are
+# never instantiated during selection — a split-access guard enforces this and an
+# access audit is saved as proof.
+
+experiment_config: configs/qam_aware_v3_3.yaml
+output_root: outputs/qam_aware_v3_3/ablation
+ablation_epochs: 15
+selection_seeds: [2026, 2027]
+
+# Pre-formal PILOT hard gates.  A trained candidate is promoted (enters the
+# expensive three-seed formal run) only if ALL of the following hold, each
+# measured against the same-seed A0 (frozen V2) baseline on the validation
+# namespace:
+#   #1 two-seed mean validation macro-F1 improves over A0 by >= threshold;
+#   #2 every seed's macro-F1 is not below the same-seed A0;
+#   #3 every seed's worst-domain OOD macro-F1 drops at most maximum_ood_regression;
+#   #4 every seed, every class drops at most maximum_per_class_accuracy_drop;
+#   #5 every seed's FPGA-sim accuracy gap <= maximum_fpga_sim_accuracy_gap;
+#   #6 every seed's FPGA-sim macro-F1 gap <= maximum_fpga_sim_macro_f1_gap;
+#   #7 no NaN / Inf / timeout / missing metric.
+# Any failure -> promoted=false (V2 stays champion).
+pilot:
+  minimum_improvement_threshold: 0.01
+  maximum_ood_regression: 0.01
+  maximum_per_class_accuracy_drop: 0.03
+  maximum_fpga_sim_accuracy_gap: 0.03
+  maximum_fpga_sim_macro_f1_gap: 0.03
+
+# Synthetic OOD participates in validation selection only (never test/blind).
+ood:
+  enabled: true
+  samples: 5040
+
+# Budget-controlled narrow search over the expert's own knobs, on the two fixed
+# validation seeds + synthetic OOD.  It runs by default, but only on the actual
+# Stage-1 winning mechanism and only if that trained winner cleared the
+# preliminary improvement threshold.  The best point is re-confirmed at the full
+# ablation epoch count (15) on both seeds, and its winning config is frozen into
+# selected_candidate (never a reference-only side output).  Never touches test.
+narrow_search:
+  enabled: true
+  max_trials: 8
+  epochs_per_trial: 6
+  random_seed: 2026
+
+# Pre-written selection rule (fixed, never tuned against a test set).  Ranked
+# lexicographically; A0 (frozen V2) participates and may win.
+selection:
+  scope: validation namespace only (v3_3_validation + synthetic OOD)
+  forbid_peek: [test, v3_3_final_blind_test]
+  ranking:
+    1: two_seed_mean_macro_f1
+    2: worst_seed_macro_f1
+    3: worst_domain_macro_f1
+    4: two_seed_mean_accuracy
+    5: two_seed_mean_qam_mean_accuracy
+    6: worst_class_regression_vs_v2
+    7: fpga_sim_accuracy_gap
+
+variants:
+  a0_frozen_v2:
+    description: "frozen V2 champion; no residual expert (real re-inference on validation, never trained)"
+    trained: false
+    model:
+      residual_expert: {enabled: false}
+      family_aux: {enabled: false}
+    training:
+      residual_penalty_weight: 0.0
+      family_aux_loss_weight: 0.0
+      domain_consistency: {enabled: false, weight: 0.0, mechanism: consistency}
+
+  a1_bounded_residual:
+    description: "frozen V2 + zero-init bounded residual expert (plain CE)"
+    trained: true
+    model:
+      residual_expert: {enabled: true, moment_order: 4, hidden: 32, gate_init: 0.0, residual_bound: 1.0}
+      family_aux: {enabled: false}
+    training:
+      residual_penalty_weight: 0.01
+      family_aux_loss_weight: 0.0
+      domain_consistency: {enabled: false, weight: 0.0, mechanism: consistency}
+
+  a2_family_multitask:
+    description: "A1 + train-only PSK/QAM/FSK/OFDM family head"
+    trained: true
+    model:
+      residual_expert: {enabled: true, moment_order: 4, hidden: 32, gate_init: 0.0, residual_bound: 1.0}
+      family_aux: {enabled: true, hidden: 16}
+    training:
+      residual_penalty_weight: 0.01
+      family_aux_loss_weight: 1.0
+      domain_consistency: {enabled: false, weight: 0.0, mechanism: consistency}
+
+  a3_domain_consistency:
+    description: "A2 + dual numeric-domain consistency (FP32 vs FPGA-sim, MSE logits)"
+    trained: true
+    model:
+      residual_expert: {enabled: true, moment_order: 4, hidden: 32, gate_init: 0.0, residual_bound: 1.0}
+      family_aux: {enabled: true, hidden: 16}
+    training:
+      residual_penalty_weight: 0.01
+      family_aux_loss_weight: 1.0
+      domain_consistency: {enabled: true, weight: 1.0, mechanism: consistency}

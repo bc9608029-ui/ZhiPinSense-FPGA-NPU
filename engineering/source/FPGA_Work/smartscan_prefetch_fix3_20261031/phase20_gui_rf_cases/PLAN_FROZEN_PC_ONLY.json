@@ -1,0 +1,43 @@
+{
+  "kind": "GUI button functional RF cases, not formal regression",
+  "class_index_pc_only": 3,
+  "center_hz": 2400000000,
+  "cases": [
+    {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40
+    },
+    {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -50
+    },
+    {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -60
+    },
+    {
+      "bank": 1,
+      "message": 1,
+      "gain_db": -40
+    },
+    {
+      "bank": 1,
+      "message": 2,
+      "gain_db": -40
+    },
+    {
+      "bank": 1,
+      "message": 1,
+      "gain_db": -50
+    }
+  ],
+  "hold_after_first_tx_event_sec": 6,
+  "fixed_denominator": 6,
+  "selection": "first capture in TX event+1.5s to stop request-0.3s; retain missing/rejected",
+  "rx_mode": "FIXED",
+  "rx_gain": 35,
+  "model_unchanged": true
+}

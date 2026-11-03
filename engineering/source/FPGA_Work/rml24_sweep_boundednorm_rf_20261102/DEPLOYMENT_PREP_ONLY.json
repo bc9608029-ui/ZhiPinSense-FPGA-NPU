@@ -1,0 +1,11 @@
+{
+  "status": "PREPARED_NOT_EXECUTABLE_UNTIL_REAL_GATES_CREATED",
+  "requires": [
+    "new_sweep24 allcorrect",
+    "new_allmode_smokes allcorrect",
+    "old_full_results minimumgates",
+    "board exact source-scope verifier",
+    "productionpost24 andcleanrestart"
+  ],
+  "no_bit_model_boot_writes": true
+}

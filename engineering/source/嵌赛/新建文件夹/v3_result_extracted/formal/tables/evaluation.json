@@ -1,0 +1,65 @@
+{
+  "checkpoint": "/root/autodl-tmp/qam_aware_v3_autodl/outputs/qam_aware_v3/formal/checkpoints/best.pt",
+  "checkpoint_epoch": 4,
+  "final_blind_test_accessed": false,
+  "suites": {
+    "v3_robust": {
+      "suite": "v3_robust",
+      "scope": "development-only; v3_final_blind_test was not accessed",
+      "exact_v2_test_namespace": false,
+      "samples": 16800,
+      "accuracy": 0.6418452380952381,
+      "macro_f1": 0.6366906161575999,
+      "qam_mean_accuracy": 0.44285714285714284,
+      "per_class_accuracy": {
+        "BPSK": 0.7080952380952381,
+        "QPSK": 0.45,
+        "8PSK": 0.5419047619047619,
+        "16QAM": 0.4776190476190476,
+        "64QAM": 0.4080952380952381,
+        "2FSK": 0.7876190476190477,
+        "CPFSK": 0.88,
+        "OFDM": 0.8814285714285715
+      },
+      "per_class_f1": {
+        "BPSK": 0.7412761714855434,
+        "QPSK": 0.5958385876418664,
+        "8PSK": 0.611006711409396,
+        "16QAM": 0.45956471935853377,
+        "64QAM": 0.49451817657241776,
+        "2FSK": 0.8315736551030669,
+        "CPFSK": 0.6746987951807228,
+        "OFDM": 0.6850481125092525
+      }
+    },
+    "v2_compatible": {
+      "suite": "v2_compatible",
+      "scope": "development-only; v3_final_blind_test was not accessed",
+      "exact_v2_test_namespace": true,
+      "samples": 8400,
+      "accuracy": 0.6738095238095239,
+      "macro_f1": 0.6703496391200632,
+      "qam_mean_accuracy": 0.46904761904761905,
+      "per_class_accuracy": {
+        "BPSK": 0.7304761904761905,
+        "QPSK": 0.5228571428571429,
+        "8PSK": 0.5942857142857143,
+        "16QAM": 0.4980952380952381,
+        "64QAM": 0.44,
+        "2FSK": 0.8257142857142857,
+        "CPFSK": 0.8980952380952381,
+        "OFDM": 0.8809523809523809
+      },
+      "per_class_f1": {
+        "BPSK": 0.7497556207233627,
+        "QPSK": 0.6606498194945848,
+        "8PSK": 0.674959437533802,
+        "16QAM": 0.4878731343283582,
+        "64QAM": 0.532258064516129,
+        "2FSK": 0.8546081813701331,
+        "CPFSK": 0.6789056875449964,
+        "OFDM": 0.7237871674491393
+      }
+    }
+  }
+}

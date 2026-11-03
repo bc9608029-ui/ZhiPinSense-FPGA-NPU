@@ -1,0 +1,282 @@
+{
+  "b_d2_to_c_per_class": {
+    "128APSK": {
+      "median_corr": 0.9964737405632628,
+      "median_gain_mag": 0.9974105064216395,
+      "median_nmse": 0.007040084367859553,
+      "n": 3
+    },
+    "128QAM": {
+      "median_corr": 0.995588672569524,
+      "median_gain_mag": 0.985397862265366,
+      "median_nmse": 0.008803195051253697,
+      "n": 3
+    },
+    "16APSK": {
+      "median_corr": 0.996133795501381,
+      "median_gain_mag": 0.9839926741286819,
+      "median_nmse": 0.0077174614600141744,
+      "n": 3
+    },
+    "16PSK": {
+      "median_corr": 0.9953736711985779,
+      "median_gain_mag": 0.9933635621363489,
+      "median_nmse": 0.009231228533905421,
+      "n": 4
+    },
+    "16QAM": {
+      "median_corr": 0.9946409189267205,
+      "median_gain_mag": 0.9899632047153195,
+      "median_nmse": 0.010689177156557903,
+      "n": 2
+    },
+    "256QAM": {
+      "median_corr": 0.9948507016362722,
+      "median_gain_mag": 0.9932924374565693,
+      "median_nmse": 0.010272081453817524,
+      "n": 3
+    },
+    "32APSK": {
+      "median_corr": 0.994702499964093,
+      "median_gain_mag": 1.004607556336142,
+      "median_nmse": 0.01056693656518402,
+      "n": 1
+    },
+    "32PSK": {
+      "median_corr": 0.9946288823797613,
+      "median_gain_mag": 0.9953264514006092,
+      "median_nmse": 0.010713386335987932,
+      "n": 3
+    },
+    "32QAM": {
+      "median_corr": 0.995762234055081,
+      "median_gain_mag": 0.9964722304050064,
+      "median_nmse": 0.008457573229635204,
+      "n": 3
+    },
+    "4ASK": {
+      "median_corr": 0.9987570645051149,
+      "median_gain_mag": 1.0319332102482603,
+      "median_nmse": 0.0024843261011265904,
+      "n": 3
+    },
+    "64APSK": {
+      "median_corr": 0.9954378383842397,
+      "median_gain_mag": 0.9900291454272501,
+      "median_nmse": 0.009103509912913116,
+      "n": 1
+    },
+    "64QAM": {
+      "median_corr": 0.9939526190769072,
+      "median_gain_mag": 0.9942007104277912,
+      "median_nmse": 0.01205819103015824,
+      "n": 3
+    },
+    "8ASK": {
+      "median_corr": 0.9991868866396133,
+      "median_gain_mag": 1.0168376705446367,
+      "median_nmse": 0.0016255655674376713,
+      "n": 3
+    },
+    "AM-DSB-SC": {
+      "median_corr": 0.9967537748580122,
+      "median_gain_mag": 1.065112628234608,
+      "median_nmse": 0.006481912306304646,
+      "n": 1
+    },
+    "AM-DSB-WC": {
+      "median_corr": 0.9955899786715959,
+      "median_gain_mag": 1.0140399500017017,
+      "median_nmse": 0.0088005943686928,
+      "n": 1
+    },
+    "AM-SSB-SC": {
+      "median_corr": 0.9999401612614393,
+      "median_gain_mag": 1.0055105549382928,
+      "median_nmse": 0.00011967389645107447,
+      "n": 3
+    },
+    "AM-SSB-WC": {
+      "median_corr": 0.9999750323307235,
+      "median_gain_mag": 1.0029333547877126,
+      "median_nmse": 4.993471497705681e-05,
+      "n": 4
+    },
+    "BPSK": {
+      "median_corr": 0.9964961841305322,
+      "median_gain_mag": 1.0122675693929337,
+      "median_nmse": 0.006994483354135534,
+      "n": 4
+    },
+    "FM": {
+      "median_corr": 0.9936956935644867,
+      "median_gain_mag": 0.9992316616548278,
+      "median_nmse": 0.012563731495921144,
+      "n": 2
+    },
+    "GMSK": {
+      "median_corr": 0.9897220234951252,
+      "median_gain_mag": 1.010910885192653,
+      "median_nmse": 0.020450316208717057,
+      "n": 1
+    },
+    "OOK": {
+      "median_corr": 0.9980712179255595,
+      "median_gain_mag": 1.0210709294822988,
+      "median_nmse": 0.0038538032054117465,
+      "n": 4
+    },
+    "OQPSK": {
+      "median_corr": 0.994235413722669,
+      "median_gain_mag": 0.9960220904636633,
+      "median_nmse": 0.01149594209971533,
+      "n": 3
+    }
+  },
+  "cross_reference": {
+    "task2_original_radioml_accuracy1": {
+      "bf16": "419/480 = 87.29%",
+      "fp32": "424/480 = 88.33%",
+      "gmsk": "20/20",
+      "implication": "RF-chain persistent misclassifications are B->C-introduced, not model-inherent",
+      "oqpsk": "20/20",
+      "qam_errors": "confined to 0 dB, scattered (NOT 256QAM collapse)"
+    }
+  },
+  "date": "2026-10-19",
+  "domain_counts": {
+    "A_sampled_per_class": 400,
+    "B_d2_frames": 24,
+    "B_source_frames_per_class": 500,
+    "C_by_round": {
+      "dual_bf16_rms2048_run1": 17,
+      "dual_bf16_rms2048_run2": 15,
+      "dual_bf16_rms2048_run3": 17,
+      "full24_r1": 9
+    },
+    "C_recovered_samples": 58
+  },
+  "focus_class_decoupling": [
+    {
+      "class": "AM-SSB-SC",
+      "gen_dc_delta": 0.411,
+      "gen_flatness_ratio": "2e-08",
+      "gen_papr_delta_db": 0.384,
+      "gen_rms_rel_delta": 0.04644,
+      "rf_category": "RECOVERABLE_CORRECT",
+      "rf_median_nmse": 0.00012
+    },
+    {
+      "class": "AM-SSB-WC",
+      "gen_dc_delta": 0.1747,
+      "gen_flatness_ratio": "2e-08",
+      "gen_papr_delta_db": 0.364,
+      "gen_rms_rel_delta": 0.01696,
+      "rf_category": "ROUND_FLUCTUATION",
+      "rf_median_nmse": 5e-05
+    },
+    {
+      "class": "GMSK",
+      "gen_dc_delta": 0.0212,
+      "gen_flatness_ratio": "0.0004",
+      "gen_papr_delta_db": 1.662,
+      "gen_rms_rel_delta": 0.00257,
+      "rf_category": "ROUND_FLUCTUATION",
+      "rf_median_nmse": 0.02045
+    },
+    {
+      "class": "OQPSK",
+      "gen_dc_delta": 0.0117,
+      "gen_flatness_ratio": "0.00018",
+      "gen_papr_delta_db": 1.239,
+      "gen_rms_rel_delta": 0.00249,
+      "rf_category": "ROUND_FLUCTUATION",
+      "rf_median_nmse": 0.0115
+    },
+    {
+      "class": "64QAM",
+      "gen_dc_delta": 0.0011,
+      "gen_flatness_ratio": "0.00039",
+      "gen_papr_delta_db": 0.023,
+      "gen_rms_rel_delta": 0.00432,
+      "rf_category": "PERSISTENT_MISCLASSIFIED_SAME_CLASS",
+      "rf_median_nmse": 0.01206
+    },
+    {
+      "class": "128QAM",
+      "gen_dc_delta": 0.0034,
+      "gen_flatness_ratio": "0.00041",
+      "gen_papr_delta_db": 0.103,
+      "gen_rms_rel_delta": 0.00215,
+      "rf_category": "PERSISTENT_MISCLASSIFIED_SAME_CLASS",
+      "rf_median_nmse": 0.0088
+    },
+    {
+      "class": "256QAM",
+      "gen_dc_delta": 0.0023,
+      "gen_flatness_ratio": "0.00041",
+      "gen_papr_delta_db": 0.079,
+      "gen_rms_rel_delta": 0.00168,
+      "rf_category": "RECOVERABLE_CORRECT",
+      "rf_median_nmse": 0.01027
+    }
+  ],
+  "hypothesis_rank": {
+    "H1_generation": "secondary",
+    "H2_digital": "negligible",
+    "H3_rf": "primary trigger",
+    "H5_insufficient_data": "rejected"
+  },
+  "judgment": "H4 (multiple factors), ordered H3 > H1 >> H2; H5 rejected. H3 (RF perturbation at model input) is the direct trigger: B_d2<->C residual is class-dependent (median nmse 0.008, range ~5e-5..0.020, corr 0.996), and it is the only leg that separates the clean holdout (24/24 clean NPU) from the RF outcome (merged 55/72 = 76.4%). H1 (generation A<->B) is a secondary, class-specific contributor: aggregate RMS/bw gap is small (0.004 rel RMS, 0.0029 bw99) but the pulse shape differs (spectral flatness ratio ~2500x), and GMSK/OQPSK PAPR/bw and AM-SSB RMS/DC differ (DC delta up to 0.411) \u2014 yet those high-generation-gap classes still classify correctly, while 64QAM/128QAM (small generation gap) collapse deterministically under RF. H2 (digital D2) is negligible (nmse 1.8e-04). The 64QAM/128QAM->256QAM collapse is a model-sensitivity x RF-residual interaction on the highest-order QAM (tightest decision boundary), not a gross domain shift: the parallel original-RadioML audit (task2, 419/480 BF16) shows those classes fail only at 0 dB and scattered, never collapsed. Data sufficient to reject H5 (58 recovered tensors + 72-sample classification + 480-frame original baseline).",
+  "leg_distances": {
+    "A<->B_source": {
+      "max_dc_delta": 0.41099913830108026,
+      "max_rel_rms_delta": 0.0464414087090963,
+      "mean_bw99_delta": 0.0028686726888020827,
+      "mean_dc_delta": 0.027568030288026794,
+      "mean_rel_rms_delta": 0.004460765909622198,
+      "note": "generation-config gap (windowed-sinc vs training pulse; TARGET_RMS per class; unipolar DC)"
+    },
+    "B_d2<->C": {
+      "max_nmse": 0.020450316208717057,
+      "median_corr": 0.9958622218865774,
+      "median_gain_mag": 0.998179804965518,
+      "median_nmse": 0.008258425021564555,
+      "note": "real RF + wide-linear recovery residual at model input"
+    },
+    "B_source<->B_d2": {
+      "max_nmse": 0.0006956051340751635,
+      "median_corr": 0.9999106358463126,
+      "median_nmse": 0.0001787203208098643,
+      "note": "digital D2 build/quantize/restore (no RF)"
+    }
+  },
+  "rf_category_by_class": {
+    "0": "RECOVERABLE_CORRECT",
+    "1": "ROUND_FLUCTUATION",
+    "2": "RECOVERABLE_CORRECT",
+    "3": "RECOVERABLE_CORRECT",
+    "4": "ALWAYS_GATED_CORRECT",
+    "5": "ALWAYS_GATED_CORRECT",
+    "6": "ROUND_FLUCTUATION",
+    "7": "RECOVERABLE_CORRECT",
+    "8": "RECOVERABLE_CORRECT",
+    "9": "ALWAYS_GATED_CORRECT",
+    "10": "ROUND_FLUCTUATION",
+    "11": "ROUND_FLUCTUATION",
+    "12": "RECOVERABLE_CORRECT",
+    "13": "RECOVERABLE_CORRECT",
+    "14": "PERSISTENT_MISCLASSIFIED_SAME_CLASS",
+    "15": "PERSISTENT_MISCLASSIFIED_SAME_CLASS",
+    "16": "RECOVERABLE_CORRECT",
+    "17": "ROUND_FLUCTUATION",
+    "18": "RECOVERABLE_CORRECT",
+    "19": "ROUND_FLUCTUATION",
+    "20": "RECOVERABLE_CORRECT",
+    "21": "RECOVERABLE_CORRECT",
+    "22": "ROUND_FLUCTUATION",
+    "23": "ROUND_FLUCTUATION"
+  },
+  "status": "M29-RML24-FIX10CLASS24-THREEDOMAIN-PAIRWISE-AUDIT1-COMPLETE",
+  "task_id": "fix10class24-threedomain-pairwise-audit1"
+}

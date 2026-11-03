@@ -1,0 +1,12 @@
+# 候选 A：仅 CFO tail（核心 ±1200 + tail ±2500）。
+# 关闭 multipath tail 与 composite 分支；phase_noise / iq_imbalance 保持核心范围不增大。
+_base: configs/ad_amr_v1_1_data_v4_12class_robust.yaml
+
+output_root: outputs/ad_amr_v1_1_data_v4_12class_robust/pilot/candidate_A_seed2026
+
+robust:
+  candidate: A
+  train_channel:
+    multipath:
+      tail: {probability: 0.0}
+    composite: {enabled: false, probability: 0.0}

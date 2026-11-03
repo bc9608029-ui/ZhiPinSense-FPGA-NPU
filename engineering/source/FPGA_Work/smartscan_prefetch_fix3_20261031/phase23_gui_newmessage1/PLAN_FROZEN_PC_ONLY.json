@@ -1,0 +1,12 @@
+{
+  "message_bank": "new_seed",
+  "message_index": 1,
+  "classes": 24,
+  "denominator": 24,
+  "gain_db": -40,
+  "center_hz": 2400000000,
+  "hold_sec": 6,
+  "selection": "first capture between TX start+1.5s and muted-0.3s; reject/missing count wrong",
+  "model_change": false,
+  "temporary_only": true
+}

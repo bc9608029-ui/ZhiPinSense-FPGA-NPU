@@ -1,0 +1,57 @@
+{
+  "experiment_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\dual_domain_v1.yaml",
+  "baseline_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\baseline.yaml",
+  "baseline_git_commit": "2bd657983c062582450b8da871f87df9345264d6",
+  "current_git_commit": "f1b07f31a2076115a21b59cccb0001261e71d53b",
+  "variant": "dual",
+  "seed": 2026,
+  "model": {
+    "base_channels": 16,
+    "wide_base_channels": 23,
+    "fusion_features": 64,
+    "dropout": 0.1,
+    "fft_length": 256
+  },
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "torch": "2.14.0+cpu",
+    "cuda_available": false,
+    "torch_cuda_version": null,
+    "cudnn_version": null,
+    "cuda_devices": []
+  },
+  "epochs_completed": 40,
+  "best_epoch": 39,
+  "training_time_sec": 3468.4167532,
+  "peak_process_rss_mb": 499.75390625,
+  "model_profile": {
+    "parameters": 71768,
+    "trainable_parameters": 71768,
+    "parameter_size_mb_fp32": 0.273773193359375,
+    "fixed_non_trainable_state_elements": 132302,
+    "fixed_non_trainable_state_mb": 0.5047454833984375,
+    "frontend_fixed_state_elements": 131072,
+    "frontend_fixed_state_mb": 0.5,
+    "neural_macs": 6035968,
+    "neural_flops": 12071936,
+    "frontend_macs_pc_reference": 1048576,
+    "frontend_flops_pc_reference": 2097152,
+    "total_software_macs": 7084544,
+    "total_software_flops": 14169088,
+    "checkpoint_tensor_state_size_mb": 0.7785186767578125,
+    "serialized_state_dict_mb": 0.8076372146606445,
+    "projected_npu_model_size_mb": 0.2785186767578125,
+    "hardware_partition_status": "PLANNED ONLY: fixed DFT/power frontend is intended for FPGA; no hardware performance is claimed.",
+    "approx_macs": 7084544,
+    "approx_flops": 14169088
+  },
+  "resume": {
+    "source_checkpoint_version": 2,
+    "legacy_state_reconstructed": false,
+    "completed_epoch": 28,
+    "next_epoch": 29
+  }
+}

@@ -1,0 +1,112 @@
+================================================================================
+RML23 Stage H-F / Route F — IQ RF 回环 fix7 交付
+================================================================================
+日期          : 2026-10-13
+基线          : sdr_rml23_live_board_package_iq_digital_loopback_fix6.tar.gz
+                sha256 = 713c93b4…（540 文件）
+状态          : M29-RML23-IQ-RF-LOOPBACK-READY-FOR-BOARD-TEST
+                （未取得板端证据前不变；不写 RF_PASS / RF_PATH_PROVEN /
+                  PROJECT_COMPLETE / FINAL_* / BOARD_TEST_PASS）
+
+fix7 = 三个相互隔离的子任务：
+  Task A  内存（逐文件大缓冲释放）+ 总 GATE 折叠 M22/分类（不提高/不关闭 RSS 阈值）
+  Task B  --phase=iq-rf-loopback 物理 TX->RX RF 自回环（loopback=0 + readback，
+          --rf-path=direct-cable，--tx-atten=-40 天花板，50Ω SMA 直连，无天线/功放，
+          TX-off 负对照，唯一全局增益，逐文件 RF 保真 token）
+  Task C  Route D2 非训练 4ASK 消融（D0/D1/D2/D3，全局 K 仅由无标签重构误差选择）
+
+--------------------------------------------------------------------------------
+1. 2 工件（独立补丁 + 合并全量）
+--------------------------------------------------------------------------------
+（1）独立补丁（fix7 相对 fix6 基线，仅 14 文件）
+  路径      : dist/sdr_rml23_live_iq_rf_loopback_fix7_patch.tar.gz
+  字节      : 93637
+  文件数    : 14
+  manifest  : dist/IQ_RF_LOOPBACK_FIX7_PATCH_SHA256SUMS.txt（14 行）
+  sha256    : c7b2424d8637899561cae90526e8d7166ef38ee3bfa6b9540cbd0ffa4abc2094
+
+（2）合并全量（fix6 全量 + fix7，相对 fix6 为 540 -> 548 文件）
+  路径      : dist/sdr_rml23_live_board_package_iq_rf_loopback_fix7.tar.gz
+  字节      : 3834018
+  文件数    : 548
+  manifest  : dist/sdr_rml23_live_board_package_iq_rf_loopback_fix7.SHA256SUMS.txt（548 行）
+  sha256    : 20d843c20f71109de843a1021f0f683687158a6a07911b749507cac7c1d4f947
+
+  两 tarball 均自包含（顶层目录 + 仓库 `HASH *relpath` 约定 SHA256SUMS），独立解包
+  `sha256sum -c` 已全 OK（patch 14/14，全量 548/548），确定性重打包一致。
+
+--------------------------------------------------------------------------------
+2. 差异证明（相对 fix6 713c93b4… 基线）
+--------------------------------------------------------------------------------
+6 改 + 8 新，无模型/标签映射/NPU 二进制/RTL/XDC/位流/Flash 改动：
+
+  [改] board_package/board_gate9_full_chain_rml23.cpp
+       --phase=iq-rf-loopback 分发 + run_iq_rf_loopback 包装 + M22 折叠进总闸
+  [改] board_package/gate9_phase.hpp             phase 表新增 iq-rf-loopback
+  [改] board_package/iq_digital_loopback_runner.hpp   push_file_summary 内存 sink + 5 处替换
+  [改] sdr_adapter/pluto_device.hpp              get_loopback readback override + RF 回波钩子
+  [改] host_tests/build_host_tests.sh            构建 test_iq_rf_loopback（链接 pluto_tx.cpp）
+  [改] host_tests/run_tests.sh                   运行 test_iq_rf_loopback
+  [新] board_package/iq_rf_loopback.hpp          纯逻辑：负对照/RF 保真判据/全局增益
+  [新] board_package/iq_rf_loopback_report.hpp   每文件 summary + push_rf_file_summary
+  [新] board_package/iq_rf_loopback_transfer.hpp 每文件物理 RF 传输（板/host 逐字共享）
+  [新] board_package/iq_rf_loopback_runner.hpp   板端编排（校准+held-out 分类+三判决+总闸）
+  [新] host_tests/test_iq_rf_loopback.cpp        host RF 测试（48 检查）
+  [新] scripts/analyze_route_d2_4ask.py          Route D2 非训练 4ASK 消融
+  [新] scripts/package_iq_rf_loopback_fix7.py    打包器（dependency closure fail-closed）
+  [新] docs/M29_RML23_STAGE_H_F_IQ_RF_LOOPBACK_FIX7_AUDIT.md  本审计
+
+  红线合规：不重训/不微调；不改标签；不用逐文件 oracle 幅度归一；不新增 4ASK 专用规则；
+  不修改任何 fix6 工件；物理 RF 明确关数字回环并 readback 验证；-40 dB 天花板不变；现有
+  数字回环安全行为未受影响；API 未连接/未操作板卡。历史包（fix6 713c93b4… 及更早）原样保留。
+
+--------------------------------------------------------------------------------
+3. 离线验证（本轮，不碰板）
+--------------------------------------------------------------------------------
+  [1] host_tests/build_host_tests.sh                      OK（含 test_iq_rf_loopback 链接）
+  [2] host_tests/run_tests.sh                             ALL HOST TESTS PASSED
+      （新增 test_iq_rf_loopback = pass 48 / fail 0）
+  [3] host_tests/syntax_check.sh                          gate7/gate9/gate10/gate9_rml23: syntax OK
+  [4] scripts/analyze_route_d2_4ask.py --self-test        7/7 correct
+  [5] 打包器 audit_dependency_closure                     OK（所有改动头已列入 ROUTE_F_FIX7_FILES）
+  [6] 两 tarball 独立解包 sha256sum -c                     patch 14/14 + 全量 548/548 全 OK
+
+--------------------------------------------------------------------------------
+4. 板端复测（用户执行；本交付不写死 ip、不强制）
+--------------------------------------------------------------------------------
+  第一步（物理 RF 回环，负对照 + 校准观测）：
+    ./scripts/run_gate9_rml23.sh --phase=iq-rf-loopback --center=2400000000 \
+      --rx-gain=10 --tx-atten=-40 --rf-path=direct-cable --rf-calib-count=8 \
+      --input-kind=generated-2p56m --frozen-dir=DIR > /root/rml23_route_f_fix7.log 2>&1
+  预期观测：FORMAT dir=tx/rx、NEGATIVE_CONTROL capture_ok=1、BUFFER loopback=0
+  tx_atten_readback_db≈-40、每文件 fidelity token、CALIBRATION valid=1。
+  RF_PRESERVES_IQ 仅由板端运行建立；host 测试永不升级 RF_PATH_NOT_PROVEN。
+
+  第二步（Route F 的 D vs D2 A/B 交织，判 D2 非训练 4ASK 是否成立）：
+  由 Route D2 消融脚本在板端 recovered 输出上复算，D 路与 D2 路交织；仅当保真门全达
+  RF_PRESERVES_IQ 才把分类判据作为测量记录，绝不判分类修复完成。
+
+--------------------------------------------------------------------------------
+5. 12 项最终回报
+--------------------------------------------------------------------------------
+  1. Task A 内存修复：push_file_summary（数字侧）/ push_rf_file_summary（RF 侧）swap 释放
+     aligned_rx，summary 只留标量+短 SHA；数字 runner 5 处 push 全替换。
+  2. Task A 总闸：classification_ok 三 token 排除；functional_pass = infra ∧ fidelity ∧
+     classification；M22 经 finish_m22_runtime 折叠进 final_gate_pass。
+  3. Task B 新 phase：iq-rf-loopback（gate9_phase.hpp + 分发），不复用 iq-digital-loopback。
+  4. Task B RF 安全：loopback=0 + readback !=0 throw；--rf-path=direct-cable 强制；-40 dB
+     天花板；50Ω 直连；无自动提功率；RAII DeviceStateGuard 恢复失败 fail-closed。
+  5. Task B 负对照：TX-off tx_stop + recreate_rx_buffer + 单次连续噪声底采集，逐文件记录。
+  6. Task B RF 保真 token 序（A→G）：INSUFFICIENT_EVIDENCE → RF_CAPTURE_TOO_SHORT →
+     RF_RX_ALL_ZERO → RF_RX_TOO_LOW → RF_RX_CLIPPED → RF_SYNC_NOT_FOUND →
+     RF_DISTORTS_IQ → RF_PRESERVES_IQ；同步用 fix6 全周期 FFT 圆相关。
+  7. Task B 无 oracle：分类只用 estimate_global_gain（幅度中位数+相位圆均值）的唯一全局
+     增益，逐文件最优拟合只用于测量/校准收集，从不进分类。
+  8. Task C：analyze_route_d2_4ask.py D0/D1/D2/D3 + 全局 K 仅无标签选择 + 独立 holdout；
+     结论 RECONSTRUCTION_IMPROVED_BY_ROUTE_D2_NON_RETRAINING（合成）；分类级救回需板端。
+  9. 离线验证：build/run_tests（48/0 RF）/syntax/analyzer 7/7/dependency closure/独立解包
+     全 OK。
+  10. 2 工件路径/字节/文件数/manifest 行数/64-hex SHA 见第 1 节。
+  11. 历史包未覆盖证明：fix6 713c93b4… 及更早全保留，未删除/未覆盖。
+  12. 状态仍 READY-FOR-BOARD-TEST，不声称板端 RF 回环保真已通过。
+================================================================================

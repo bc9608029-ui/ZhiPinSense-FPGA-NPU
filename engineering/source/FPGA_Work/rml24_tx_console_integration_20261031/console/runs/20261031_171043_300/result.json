@@ -1,0 +1,44 @@
+{
+  "real": true,
+  "count": 24,
+  "error": null,
+  "restore_errors": [],
+  "restore_readback": [
+    {
+      "role": "tx",
+      "key": "hardwaregain",
+      "expected": "-10.000000",
+      "actual": "-10.000000",
+      "ok": true
+    },
+    {
+      "role": "tx",
+      "key": "sampling_frequency",
+      "expected": "30720000",
+      "actual": "30720000",
+      "ok": true
+    },
+    {
+      "role": "tx",
+      "key": "rf_bandwidth",
+      "expected": "18000000",
+      "actual": "18000000",
+      "ok": true
+    },
+    {
+      "role": "tlo",
+      "key": "frequency",
+      "expected": "2450000000",
+      "actual": "2450000000",
+      "ok": true
+    },
+    {
+      "role": "tlo",
+      "key": "powerdown",
+      "expected": "0",
+      "actual": "0",
+      "ok": true
+    }
+  ],
+  "restore_status": "READBACK_RESTORE_OK"
+}

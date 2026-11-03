@@ -1,0 +1,11 @@
+{
+  "parameters": 506882,
+  "trainable_parameters": 506872,
+  "neural_macs": 55044608,
+  "neural_flops": 110089216,
+  "fp32_parameter_size_mb": 1.9336013793945312,
+  "checkpoint_tensor_state_size_mb": 1.9462966918945312,
+  "serialized_state_dict_mb": 1.9981012344360352,
+  "input_contract": "iq[N,2,1024] + physical[N,3,1024] -> logits[N,8]",
+  "operator_policy": "Conv/BatchNorm/ReLU/Add/Concat/ReduceMean/Mul/Gemm only"
+}

@@ -1,0 +1,2 @@
+set_device JFMQL30TAI676H
+increment_bit_cfg_v3  F:/FPGA_Work/sdr_full_chain_12class_combined_v1/fpga/npu_base/fpai_demo_vivado.runs/impl_1/pl_ddr_mandatory_core_top_combined.bit F:/FPGA_Work/sdr_full_chain_12class_combined_v1/fpga/npu_base/fpai_demo_vivado.runs/impl_1/pl_ddr_mandatory_core_top_combined_disable_icap.bit -disable_icap

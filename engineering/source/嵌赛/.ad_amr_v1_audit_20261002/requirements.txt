@@ -1,0 +1,9 @@
+# Non-torch dependencies.  torch with CUDA is provided by the AutoDL GPU image
+# and is intentionally NOT listed/reinstalled here (see autodl_ad_amr_v1/setup_env.sh).
+numpy
+scipy
+pyyaml
+scikit-learn
+onnx
+onnxruntime
+pytest

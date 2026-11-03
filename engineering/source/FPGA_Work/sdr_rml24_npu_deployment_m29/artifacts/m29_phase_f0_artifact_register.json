@@ -1,0 +1,151 @@
+{
+  "phase": "M29-Phase-F0-artifact-inventory",
+  "read_only": true,
+  "test_split_touched": false,
+  "candidates": {
+    "d384_int8": {
+      "desc": "Phase D 384-baseline full-INT8 (op179 int8)",
+      "json_path": "F:\\FPGA_Work\\_tmp_24class_adapt_generate_384_20261010\\jsonraw\\model_24class_ZG.json",
+      "raw_path": "F:\\FPGA_Work\\_tmp_24class_adapt_generate_384_20261010\\jsonraw\\model_24class_ZG.raw",
+      "json_sha256": "e09f1549ff973763dfad67198536596d9c9ae7b8b6a814369a02ef53b43be06e",
+      "raw_sha256": "5e7be89471147a642d40ef2f880e607014d913f48b279a79c93e324567dd82f5",
+      "json_meta": {
+        "params_md5": "3171971f31a7bb0e1f2e2338cd6cd5e5",
+        "ai_target": "@zhuget(330)",
+        "name": "model_24class"
+      },
+      "logits": {
+        "path": "F:\\FPGA_Work\\sdr_rml24_npu_deployment_m29\\work\\eval_quant\\quant_logits.npy",
+        "shape": [
+          1536,
+          24
+        ],
+        "dtype": "float32",
+        "size": 36864,
+        "bytes": 147584
+      },
+      "preds": {
+        "path": "F:\\FPGA_Work\\sdr_rml24_npu_deployment_m29\\work\\eval_quant\\quant_preds.npy",
+        "shape": [
+          1536
+        ],
+        "dtype": "int64",
+        "size": 1536,
+        "bytes": 12416
+      }
+    },
+    "expA_bf16_head": {
+      "desc": "Phase D.1 experiment A: front INT8 + classification head (op179) BF16",
+      "json_path": "F:\\FPGA_Work\\_tmp_24class_expA_bf16_head_384_20261010\\jsonraw\\model_24class_ZG.json",
+      "raw_path": "F:\\FPGA_Work\\_tmp_24class_expA_bf16_head_384_20261010\\jsonraw\\model_24class_ZG.raw",
+      "json_sha256": "d43a22848fad56195265fc98f9009039e4e9d9e8da7f58fc5042fb2a602edb2d",
+      "raw_sha256": "2425d990dbac0761cfcdb578c2225795e3b700c4afc6800a0b544ff4d50e0cba",
+      "json_meta": {
+        "params_md5": "7966a4829fc713b2e8ea6c04168be263",
+        "ai_target": "@zhuget(330)",
+        "name": "model_24class"
+      },
+      "logits": {
+        "path": "F:\\FPGA_Work\\_tmp_24class_expA_bf16_head_384_20261010_eval_result\\expA_logits.npy",
+        "shape": [
+          1536,
+          24
+        ],
+        "dtype": "float32",
+        "size": 36864,
+        "bytes": 147584
+      },
+      "preds": {
+        "path": "F:\\FPGA_Work\\_tmp_24class_expA_bf16_head_384_20261010_eval_result\\expA_preds.npy",
+        "shape": [
+          1536
+        ],
+        "dtype": "int64",
+        "size": 1536,
+        "bytes": 12416
+      }
+    },
+    "dra384_int8": {
+      "desc": "Phase D.3 dynamic-range-aware recalibration, 384 full-INT8",
+      "json_path": "F:\\FPGA_Work\\_tmp_24class_dra_384_20261011\\jsonraw\\model_24class_ZG.json",
+      "raw_path": "F:\\FPGA_Work\\_tmp_24class_dra_384_20261011\\jsonraw\\model_24class_ZG.raw",
+      "json_sha256": "654c2f3d97c76c5724cdd3b5c0da352e07aa830dde4ae3993125a6500cff68c4",
+      "raw_sha256": "a588814e718ecc97745692647ebed945ae556e60d3d0219c5841d15b5be526b2",
+      "json_meta": {
+        "params_md5": "185cdf381e6a5df055ce394b03b6adb7",
+        "ai_target": "@zhuget(330)",
+        "name": "model_24class"
+      },
+      "logits": {
+        "path": "F:\\FPGA_Work\\_tmp_24class_dra_384_20261011_eval_result\\dra384_logits.npy",
+        "shape": [
+          1536,
+          24
+        ],
+        "dtype": "float32",
+        "size": 36864,
+        "bytes": 147584
+      },
+      "preds": {
+        "path": "F:\\FPGA_Work\\_tmp_24class_dra_384_20261011_eval_result\\dra384_preds.npy",
+        "shape": [
+          1536
+        ],
+        "dtype": "int64",
+        "size": 1536,
+        "bytes": 12416
+      }
+    }
+  },
+  "subset": {
+    "path": "F:\\FPGA_Work\\sdr_rml24_npu_deployment_m29\\work\\eval_full\\subset_index.npz",
+    "sha256": "49668c731cb8186d2eb488f3d0a0865406cf9c5e65d97012d56f741973d5b53b",
+    "arrays": {
+      "sub_indices": {
+        "shape": [
+          1536
+        ],
+        "dtype": "int64"
+      },
+      "sub_labels": {
+        "shape": [
+          1536
+        ],
+        "dtype": "int64"
+      },
+      "sub_snrs": {
+        "shape": [
+          1536
+        ],
+        "dtype": "float32"
+      },
+      "sub_fp32": {
+        "shape": [
+          1536
+        ],
+        "dtype": "int64"
+      },
+      "sub_int8": {
+        "shape": [
+          1536
+        ],
+        "dtype": "int64"
+      }
+    },
+    "note": "sub_fp32/sub_int8 are int64 ARGMAX preds, NOT raw logits; FP32 raw 24-dim logits are NOT saved on disk"
+  },
+  "fp32_source": {
+    "checkpoint": {
+      "path": "F:\\FPGA_Work\\24class_results\\rml24_seed2027_best.pt",
+      "sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d"
+    },
+    "onnx": {
+      "path": "F:\\FPGA_Work\\sdr_rml24_npu_deployment_m29\\work\\onnx\\rml24_24class_opset17.onnx",
+      "sha256": "976618a131e75f23bd46e04e71a114cbbea245d6afdd4c7ea7fa008e0ce9ed51"
+    },
+    "frozen_label_contract": {
+      "path": "F:\\FPGA_Work\\sdr_rml24_npu_deployment_m29\\_frozen\\contracts\\rml24_contract.py",
+      "sha256": "164b216d05ea1c491794bc098fc9d2c03a77f3a1db4b335074ed42ffabb9c3bb"
+    }
+  }
+}

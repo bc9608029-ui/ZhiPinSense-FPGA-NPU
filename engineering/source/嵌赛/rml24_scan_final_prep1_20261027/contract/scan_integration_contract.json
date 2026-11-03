@@ -1,0 +1,39 @@
+{
+  "contract": "RML24_FINAL_FIXED_AND_BAND_SCAN_PREP1",
+  "version": 1,
+  "status": "PC_PREP_COMPLETE_PENDING_BOARD_BUILD_AND_RF_TEST",
+  "frozen_stage7_prerequisites": {
+    "runtime/receiver_core.py": "cb529824a80e9fa2aea6aaa31375c8d560f117c36b9644862cb459f6c39cd79a",
+    "recovery/candidate_two_dc.py": "e0aa12029e9c5aa670a9340d9c078814b10dcfb0ee82c580adaad4f55affcf3a",
+    "board_runtime/rml24_final_receiver.py": "46ba0e06f916b47604f25c77a7abfbdf6e850cf4a891348c79499fc5a986a719",
+    "runtime/ui_event.py": "41c475b040ffa9d69f688cf7e253ddc6746508d20c51e63ff781c273951f9167",
+    "board_ui_overlay/board_package/board_ui_live_rml24_final.cpp": "c776f993403433740de072fd3092aea7fbf86bec0c64b86a7681941fbddb7b5d",
+    "board_ui_overlay/ui_sw/ui_render.cpp": "e1e00cb2554dfa00abc85cc5f53534ccf81e7410cb5ec4d1451bf2393300c39f",
+    "base_ui/board_package/touch_geometry.hpp": "0f968379e7aa6f938ef4045af86766b5f217e279dee87b20e515d770f3a81b33"
+  },
+  "fixed_mode": {
+    "center_hz": 2400000000,
+    "sample_rate_hz": 2560000,
+    "bandwidth_hz": 18000000,
+    "recovery_changed": false,
+    "model_changed": false,
+    "verified_stage7_reference": "475/480 = 98.96%"
+  },
+  "band_scan_defaults": {
+    "start_hz": 2395000000,
+    "stop_hz": 2405000000,
+    "step_hz": 1000000,
+    "public_score_threshold": 0.1,
+    "lo_readback_tolerance_hz": 5000,
+    "flush_captures": 2,
+    "lock_after_detection": true
+  },
+  "hard_rules": [
+    "No class label, expected prediction, source payload or per-sample private parameter enters the receiver.",
+    "The public repeated training block alone provides scan detection and coarse CFO.",
+    "The frozen two-DC recovery and frozen 24-class NPU model remain the classifier path.",
+    "AUTO_LOCK is not implemented and must be rejected fail-closed.",
+    "No board/RF result may be claimed until independent board tests complete."
+  ]
+}
+

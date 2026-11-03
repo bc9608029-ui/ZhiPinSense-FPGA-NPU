@@ -1,0 +1,138 @@
+{
+  "checkpoint": "F:\\嵌赛\\model_ad_amr_v1_fixed\\outputs\\ad_amr_v1\\smoke\\checkpoints\\best.pt",
+  "checkpoint_epoch": 1,
+  "loss_variant": "P0",
+  "split": "ad_amr_validation",
+  "num_samples": 64,
+  "class_order": [
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "2FSK",
+    "CPFSK",
+    "OFDM"
+  ],
+  "eval_time_sec": 0.16550650000135647,
+  "metrics": {
+    "accuracy": 0.125,
+    "macro_f1": 0.027777777777777776,
+    "cohen_kappa": 0.0,
+    "per_class_accuracy": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "confusion_matrix": [
+      [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "qam_mean": 0.0,
+    "accuracy_0_10db": 0.125,
+    "denoising_mse_to_clean": 0.7061359882354736,
+    "denoising_mse_to_noisy": 13.667562484741211
+  },
+  "per_snr_accuracy": {
+    "-20": 0.125,
+    "-10": 0.125,
+    "0": 0.125,
+    "10": 0.125,
+    "20": 0.125
+  },
+  "profile": {
+    "parameters": 288236,
+    "trainable_parameters": 288236,
+    "neural_macs": 32525014,
+    "neural_flops": 65050028,
+    "fp32_parameter_size_mb": 1.0995330810546875,
+    "state_dict_size_mb": 1.1058120727539062,
+    "serialized_state_dict_mb": 1.1504812240600586
+  },
+  "final_blind_test_accessed": false,
+  "sample_ids_min": 1478804836000000,
+  "sample_ids_max": 1478804836000063
+}

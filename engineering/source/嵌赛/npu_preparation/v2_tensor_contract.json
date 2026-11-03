@@ -1,0 +1,52 @@
+{
+  "contract_version": 1,
+  "status": "logical_and_fpga_reference_aligned_compiled_model_pending",
+  "source_model": {
+    "path": "rf_cognitive_system/outputs/deployment_prep/time_power_phase/time_power_phase_npu_partition_opset17.onnx",
+    "sha256": "2e50146503bbe3df564b244515e0ed74d23d6f06f44e3cd715194a3bdd50051d",
+    "onnx_ir_version": 8,
+    "opset": 17
+  },
+  "frame_length": 1024,
+  "frame_bytes": 5120,
+  "inputs": [
+    {
+      "name": "iq",
+      "shape": [1, 2, 1024],
+      "logical_layout": "NCL",
+      "channel_order": ["I", "Q"],
+      "storage_dtype": "SInt8",
+      "reference_scale": 0.007874015748031496,
+      "reference_zero_point": 0,
+      "frame_byte_offset": 0,
+      "frame_byte_count": 2048
+    },
+    {
+      "name": "physical_features",
+      "shape": [1, 3, 1024],
+      "logical_layout": "NCL",
+      "channel_order": ["power", "lag1_real", "lag1_imag"],
+      "storage_dtype": "SInt8",
+      "reference_scale": 0.015748031496062992,
+      "reference_zero_point": 0,
+      "frame_byte_offset": 2048,
+      "frame_byte_count": 3072
+    }
+  ],
+  "output": {
+    "name": "logits",
+    "shape": [1, 8],
+    "class_order": ["BPSK", "QPSK", "8PSK", "16QAM", "64QAM", "2FSK", "CPFSK", "OFDM"]
+  },
+  "pl_ddr_frame_layout": [
+    {"plane": "I", "offset": 0, "bytes": 1024},
+    {"plane": "Q", "offset": 1024, "bytes": 1024},
+    {"plane": "power", "offset": 2048, "bytes": 1024},
+    {"plane": "lag1_real", "offset": 3072, "bytes": 1024},
+    {"plane": "lag1_imag", "offset": 4096, "bytes": 1024}
+  ],
+  "compiled_model_gate": {
+    "required": true,
+    "note": "The final iCraft JSON/RAW must be inspected. Its input storage dtype, physical layout, scale and zero-point override no values silently. If they differ from this FPGA reference contract, calibration and/or an explicit repacker is required before direct FPGA-to-NPU handoff."
+  }
+}

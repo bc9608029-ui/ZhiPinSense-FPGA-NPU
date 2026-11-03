@@ -1,0 +1,6 @@
+# fix9r2d1 offline-analyzer hot-update — SHA256 + byte count
+# Generated 2026-10-14.  This manifest lists the three delivered content files;
+# it does NOT list itself (avoids a self-referential hash).
+25e5443eee0e3484b53cee53295224e0dcde5f7efd5f1c15d4811741fc9acf06  34918  scripts/analyze_fix9r2d_capture.py
+021e9fb0a5a77626d993ff19db5680727bf973c40c232676fa4c9e5c4157c608  16133  scripts/test_fix9r2d1_analyzer_manifest.py
+2d62fe9794c5edaf17be8ee9832c339944356311102e120734062a2660125ee0  7565  docs/M29_RML23_FIX9R2D1_ANALYZER_HOTFIX_AUDIT.md

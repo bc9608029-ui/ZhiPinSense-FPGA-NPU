@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rml24-final-ui-event-v1",
+  "title": "RML24 final UI event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type", "version", "frame_id", "timestamp_us", "state", "class_count",
+    "prediction", "model_input_sha256", "measurements", "iq_valid",
+    "iq_i16_interleaved", "iq_units_per_count", "spectrum_valid",
+    "spectrum_db_rel_x4", "self_test"
+  ],
+  "properties": {
+    "type": {"const": "rml24_ui_frame"},
+    "version": {"const": "rml24-final-ui-v1"},
+    "frame_id": {"type": "integer", "minimum": 0},
+    "timestamp_us": {"type": "integer", "minimum": 0},
+    "state": {
+      "enum": ["ACQUIRING", "IDENTIFIED", "LOW_CONFIDENCE", "RECOVERY_FAILED", "NO_SIGNAL", "STOPPED"]
+    },
+    "class_count": {"const": 24},
+    "prediction": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["index", "class_name", "confidence", "top3", "probabilities"],
+      "properties": {
+        "index": {"type": "integer", "minimum": 0, "maximum": 23},
+        "class_name": {"type": "string"},
+        "confidence": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+        "top3": {"type": "array", "minItems": 3, "maxItems": 3},
+        "probabilities": {"type": "array", "minItems": 24, "maxItems": 24}
+      }
+    },
+    "model_input_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "measurements": {"type": "object"},
+    "iq_valid": {"type": "boolean"},
+    "iq_i16_interleaved": {
+      "type": ["array", "null"],
+      "minItems": 512,
+      "maxItems": 512,
+      "items": {"type": "integer", "minimum": -30000, "maximum": 30000}
+    },
+    "iq_units_per_count": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "spectrum_valid": {"type": "boolean"},
+    "spectrum_db_rel_x4": {
+      "type": ["array", "null"],
+      "minItems": 256,
+      "maxItems": 256,
+      "items": {"type": "integer", "minimum": -320, "maximum": 0}
+    },
+    "self_test": {"type": ["object", "null"]}
+  }
+}
+

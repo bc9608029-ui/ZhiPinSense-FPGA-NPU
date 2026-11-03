@@ -1,0 +1,35 @@
+{
+  "state": "PLAN_ONLY_NOT_IN_ACTIVE_FORMAL_CANDIDATE",
+  "objective": "Check whether clip-aware receiver headroom improves actual1-repeat reception without harming8-repeat baseline",
+  "prerequisite": "Read exact actual1-repeat raw ADC rail/peak statistics from queued post-formal replay; do not infer clipping from fitted pilot gain alone",
+  "hypotheses": [
+    {
+      "name": "payload boundary equalization",
+      "evidence": "72 synthetic cases60 improved; heldout18/18 fidelity improved; actual35-capture frozen-NPU replay queued",
+      "risk": "fidelity improvement may not improve classification; some synthetic development cases regressed"
+    },
+    {
+      "name": "gain headroom",
+      "evidence": "one AM-SSB failed capture has ideal peak proxy4115 counts; historical same-parser strong captures lie below2048",
+      "risk": "proxy excludes phase/DC/channel; current actual raw clipping not yet checked; cannot explain other two lower-peak failures"
+    }
+  ],
+  "if_clipping_confirmed": {
+    "receiver_only": true,
+    "outline": [
+      "Use measured native ADC format/rail limits, not int16 container width",
+      "Keep old gain unchanged if adequate headroom",
+      "For rail-limited captures, bounded gain backoff and reacquisition, then existing public verification",
+      "Log gain before/after, peak, rail count, elapsed time and rejected captures",
+      "Never pick gain using expected class, source payload or best classification confidence"
+    ],
+    "required_controls": [
+      "same transmitter and waveform, original8 repeats at nominal and weak levels",
+      "actual1-repeat high-crest and ordinary waveforms",
+      "no-signal and non-public interference",
+      "fresh fixed denominators and capture timing"
+    ]
+  },
+  "further_full_rf_requires_user_consent": true,
+  "model_bit_autostart_unchanged": true
+}

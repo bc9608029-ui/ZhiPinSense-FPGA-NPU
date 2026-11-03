@@ -1,0 +1,4 @@
+WNS=4.438
+WHS=0.062
+SETUP_PATH=u_ps_ai_wrapper/ps_ai_i/processing_system7_0/inst/PS7_i/PS7_inst/MAXIGP1ACLK -> u_ps_ai_wrapper/ps_ai_i/axi_interconnect_1/xbar/inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_multi_thread.active_id_reg[62]/CE
+HOLD_PATH=u_ps_ai_wrapper/ps_ai_i/axi_interconnect_0/xbar/inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_no_arbiter.m_mesg_i_reg[1]/C -> u_gp0_io/axi_to_mna_u0/rid_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg_0_63_0_2/RAMB/I

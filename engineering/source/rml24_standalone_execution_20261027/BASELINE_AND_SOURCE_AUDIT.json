@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "file": "/etc/systemd/system/rml24-ui.service",
+      "expected": "6ee4461dfae6f1b513e1ae136dc489982ab95318e6aa3b8213654a17e2b8e00e",
+      "actual": "6ee4461dfae6f1b513e1ae136dc489982ab95318e6aa3b8213654a17e2b8e00e",
+      "passed": true
+    },
+    {
+      "file": "/etc/systemd/system/rml24-receiver.service",
+      "expected": "febdfe0940585b56d6725f04fdcad1a8a71b9fd703a3a4bc5fc6493b34229c7e",
+      "actual": "febdfe0940585b56d6725f04fdcad1a8a71b9fd703a3a4bc5fc6493b34229c7e",
+      "passed": true
+    },
+    {
+      "file": "/opt/rml24-system/bin/board_ui_live_rml24_final",
+      "expected": "3950201f64f4575755840df2d98879b5d3e44a109372192366d67a90652adaf6",
+      "actual": "3950201f64f4575755840df2d98879b5d3e44a109372192366d67a90652adaf6",
+      "passed": true
+    },
+    {
+      "file": "/root/realrf_finetune_pilot1_test_1773373090/model_rml24_bf16/rml24_adamrv11_bf16.json",
+      "expected": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+      "actual": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+      "passed": true
+    },
+    {
+      "file": "/root/realrf_finetune_pilot1_test_1773373090/model_rml24_bf16/rml24_adamrv11_bf16.raw",
+      "expected": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+      "actual": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+      "passed": true
+    },
+    {
+      "file": "/root/rml24_standalone_execution_20261027/candidate/rml24_final/board_runtime/standalone_receiver.py",
+      "expected": "4448eda5b943ed2f883631f938cd7dfa94bbcc660494ff34d0d9463ffa0ff85e",
+      "actual": "4448eda5b943ed2f883631f938cd7dfa94bbcc660494ff34d0d9463ffa0ff85e",
+      "passed": true
+    },
+    {
+      "file": "/root/rml24_standalone_execution_20261027/candidate/rml24_final/runtime/standalone_control.py",
+      "expected": "522aeaaa10d5a7e0472478a088ab04c38855876fcbf4eeb0592800cc52de6799",
+      "actual": "522aeaaa10d5a7e0472478a088ab04c38855876fcbf4eeb0592800cc52de6799",
+      "passed": true
+    },
+    {
+      "file": "/root/rml24_standalone_execution_20261027/candidate/rml24_final/runtime/receiver_core.py",
+      "expected": "cb529824a80e9fa2aea6aaa31375c8d560f117c36b9644862cb459f6c39cd79a",
+      "actual": "cb529824a80e9fa2aea6aaa31375c8d560f117c36b9644862cb459f6c39cd79a",
+      "passed": true
+    },
+    {
+      "file": "/root/rml24_standalone_execution_20261027/candidate/rml24_final/recovery/candidate_two_dc.py",
+      "expected": "e0aa12029e9c5aa670a9340d9c078814b10dcfb0ee82c580adaad4f55affcf3a",
+      "actual": "e0aa12029e9c5aa670a9340d9c078814b10dcfb0ee82c580adaad4f55affcf3a",
+      "passed": true
+    },
+    {
+      "check": "native_ui_is_aarch64",
+      "passed": true
+    }
+  ],
+  "passed": 10,
+  "total": 10
+}

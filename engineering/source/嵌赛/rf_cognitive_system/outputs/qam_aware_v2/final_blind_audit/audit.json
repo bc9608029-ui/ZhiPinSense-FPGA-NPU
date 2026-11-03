@@ -1,0 +1,97 @@
+{
+  "policy": "BALANCE/PROVENANCE AUDIT ONLY. No model inference or performance metrics were computed.",
+  "samples": 8400,
+  "modulations": [
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "2FSK",
+    "CPFSK",
+    "OFDM"
+  ],
+  "snr_values": [
+    -20.0,
+    -18.0,
+    -16.0,
+    -14.0,
+    -12.0,
+    -10.0,
+    -8.0,
+    -6.0,
+    -4.0,
+    -2.0,
+    0.0,
+    2.0,
+    4.0,
+    6.0,
+    8.0,
+    10.0,
+    12.0,
+    14.0,
+    16.0,
+    18.0,
+    20.0
+  ],
+  "samples_per_modulation_snr": 50,
+  "class_counts": {
+    "BPSK": 1050,
+    "QPSK": 1050,
+    "8PSK": 1050,
+    "16QAM": 1050,
+    "64QAM": 1050,
+    "2FSK": 1050,
+    "CPFSK": 1050,
+    "OFDM": 1050
+  },
+  "snr_counts": {
+    "-20.0": 400,
+    "-18.0": 400,
+    "-16.0": 400,
+    "-14.0": 400,
+    "-12.0": 400,
+    "-10.0": 400,
+    "-8.0": 400,
+    "-6.0": 400,
+    "-4.0": 400,
+    "-2.0": 400,
+    "0.0": 400,
+    "2.0": 400,
+    "4.0": 400,
+    "6.0": 400,
+    "8.0": 400,
+    "10.0": 400,
+    "12.0": 400,
+    "14.0": 400,
+    "16.0": 400,
+    "18.0": 400,
+    "20.0": 400
+  },
+  "balanced": true,
+  "provenance_namespaces": {
+    "train": {
+      "base_seed": 2026,
+      "split": "train",
+      "split_code": 1663561789
+    },
+    "validation": {
+      "base_seed": 2026,
+      "split": "validation",
+      "split_code": 3389696523
+    },
+    "test": {
+      "base_seed": 2026,
+      "split": "test",
+      "split_code": 1468818841
+    },
+    "final_blind_test": {
+      "base_seed": 26090831,
+      "split": "final_blind_test",
+      "split_code": 319301478
+    }
+  },
+  "seed_or_split_namespace_overlap": [],
+  "leakage_found": false,
+  "generation_rule": "SyntheticModulationDataset + frozen signal/channel config; fixed epoch=0 for non-train split."
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "24 existing waveform GUI cycle RF smoke, not formal240 regression",
+  "denominator": 24,
+  "order": "class0..23 existing message1",
+  "frequency_hz": 2400000000,
+  "gain_db": -40,
+  "hold_sec": 6,
+  "gap_sec": 0.25,
+  "receiver_duration_sec": 240,
+  "selection": "first capture in actual TX start+1.5s to muted event-0.3s; missing/rejected count wrong",
+  "model_unchanged": true
+}

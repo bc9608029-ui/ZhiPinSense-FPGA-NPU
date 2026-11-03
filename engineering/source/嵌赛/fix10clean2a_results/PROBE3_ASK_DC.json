@@ -1,0 +1,35 @@
+{
+  "OOK": {
+    "real_R_inf": 0.5366,
+    "wsinc": {
+      "R_inf": 0.5438,
+      "recall": 1.0
+    },
+    "rrc": {
+      "R_inf": 0.502,
+      "recall": 1.0
+    }
+  },
+  "4ASK": {
+    "real_R_inf": 0.6816,
+    "wsinc": {
+      "R_inf": 0.681,
+      "recall": 1.0
+    },
+    "rrc": {
+      "R_inf": 0.6437,
+      "recall": 0.235
+    }
+  },
+  "8ASK": {
+    "real_R_inf": 0.7341,
+    "wsinc": {
+      "R_inf": 0.735,
+      "recall": 1.0
+    },
+    "rrc": {
+      "R_inf": 0.7014,
+      "recall": 0.99
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "input_shape": [1, 2, 1024],
+  "dtype": "float32",
+  "layout": "planar [real, imag] via raw.T from [1024, 2] I/Q pairs",
+  "normalization": "none (RadioML2018.01A samples are per-sample unit-RMS, measured ~1.0002 +/- 0.0125)",
+  "output_dim": 24,
+  "output_kind": "raw_logits_no_softmax",
+  "operator_policy": "Conv/BatchNormalization/Relu/Add/ReduceMean/Gemm only",
+  "deployment_note": "matches the 12-class board RMS-1.0 planar-IQ contract"
+}

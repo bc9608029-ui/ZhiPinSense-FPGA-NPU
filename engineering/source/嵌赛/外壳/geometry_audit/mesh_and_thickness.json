@@ -1,0 +1,180 @@
+{
+  "meshes": [
+    {
+      "file": "shell_original.stl",
+      "triangles": 3872,
+      "min": [
+        -108.0003433227539,
+        0.0,
+        0.0
+      ],
+      "max": [
+        207.99964904785156,
+        150.0,
+        196.0
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "connected_components": [
+        {
+          "vertices": 1858,
+          "min": [
+            -108.0003433227539,
+            0.0,
+            0.0
+          ],
+          "max": [
+            207.99964904785156,
+            150.0,
+            196.0
+          ]
+        }
+      ]
+    },
+    {
+      "file": "body_dovetail_v1.stl",
+      "triangles": 3920,
+      "min": [
+        -108.0003433227539,
+        0.0,
+        0.0
+      ],
+      "max": [
+        207.99964904785156,
+        150.0,
+        196.0
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "connected_components": [
+        {
+          "vertices": 1882,
+          "min": [
+            -108.0003433227539,
+            0.0,
+            0.0
+          ],
+          "max": [
+            207.99964904785156,
+            150.0,
+            196.0
+          ]
+        }
+      ]
+    },
+    {
+      "file": "lid_dovetail_v1.stl",
+      "triangles": 3940,
+      "min": [
+        -107.65034484863281,
+        0.35000038146972656,
+        5.722046125811175e-07
+      ],
+      "max": [
+        207.649658203125,
+        149.64999389648438,
+        9.350000381469727
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "connected_components": [
+        {
+          "vertices": 1888,
+          "min": [
+            -107.65034484863281,
+            0.35000038146972656,
+            5.722046125811175e-07
+          ],
+          "max": [
+            207.649658203125,
+            149.64999389648438,
+            9.350000381469727
+          ]
+        }
+      ]
+    }
+  ],
+  "axis_line_probes": [
+    {
+      "label": "front_back_upper",
+      "axis": 1,
+      "point": [
+        50,
+        180
+      ],
+      "intersections_mm": [
+        0.0,
+        3.5,
+        146.5,
+        150.0
+      ]
+    },
+    {
+      "label": "left_right_upper",
+      "axis": 0,
+      "point": [
+        75,
+        180
+      ],
+      "intersections_mm": [
+        -108.0003,
+        -104.5003,
+        204.4996,
+        207.9996
+      ]
+    },
+    {
+      "label": "floor_rear_right",
+      "axis": 2,
+      "point": [
+        180,
+        125
+      ],
+      "intersections_mm": [
+        0.0,
+        3.5
+      ]
+    },
+    {
+      "label": "floor_rear_left",
+      "axis": 2,
+      "point": [
+        -80,
+        125
+      ],
+      "intersections_mm": [
+        0.0,
+        3.5
+      ]
+    },
+    {
+      "label": "floor_center",
+      "axis": 2,
+      "point": [
+        50,
+        75
+      ],
+      "intersections_mm": [
+        0.0,
+        3.5
+      ]
+    },
+    {
+      "label": "screen_center",
+      "axis": 1,
+      "point": [
+        50,
+        100
+      ],
+      "intersections_mm": [
+        18.0,
+        21.5,
+        146.5,
+        150.0
+      ]
+    }
+  ]
+}

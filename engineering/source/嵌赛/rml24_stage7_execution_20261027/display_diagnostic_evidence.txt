@@ -1,0 +1,5 @@
+[DFB] udmabuf phys=0x30100000 size=134217728 frame_bytes=1843200 total=3686400
+[DFB] frame_ctrl version = 0x20230218 (expect 0x20230218)
+[DFB] msync unsupported (EINVAL) by udmabuf0; using driver sync node
+[DFB] sync_for_device requested
+STATIC_PATTERN_READY 1280x720 top_left=red top_right=green bottom_left=blue bottom_right=white border=yellow both_buffers_identical=YES

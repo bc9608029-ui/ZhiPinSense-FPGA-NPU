@@ -1,0 +1,243 @@
+{
+  "kind": "CLEAN_INPUT_DIRECT_NPU_DIAGNOSTIC_NOT_RF",
+  "n": 33,
+  "correct": 33,
+  "am_dsb_wc_n": 10,
+  "am_dsb_wc_correct": 10,
+  "npu_stop": [
+    "NPU_STREAM_STOP frames=264 apply=1 reset=263 discipline=1"
+  ],
+  "rows": [
+    {
+      "index": 0,
+      "source_file": "08_05.bin",
+      "expected": 8,
+      "pred": 8,
+      "correct": true
+    },
+    {
+      "index": 1,
+      "source_file": "15_04.bin",
+      "expected": 15,
+      "pred": 15,
+      "correct": true
+    },
+    {
+      "index": 2,
+      "source_file": "23_07.bin",
+      "expected": 23,
+      "pred": 23,
+      "correct": true
+    },
+    {
+      "index": 3,
+      "source_file": "06_08.bin",
+      "expected": 6,
+      "pred": 6,
+      "correct": true
+    },
+    {
+      "index": 4,
+      "source_file": "00_07.bin",
+      "expected": 0,
+      "pred": 0,
+      "correct": true
+    },
+    {
+      "index": 5,
+      "source_file": "22_04.bin",
+      "expected": 22,
+      "pred": 22,
+      "correct": true
+    },
+    {
+      "index": 6,
+      "source_file": "01_01.bin",
+      "expected": 1,
+      "pred": 1,
+      "correct": true
+    },
+    {
+      "index": 7,
+      "source_file": "12_05.bin",
+      "expected": 12,
+      "pred": 12,
+      "correct": true
+    },
+    {
+      "index": 8,
+      "source_file": "02_04.bin",
+      "expected": 2,
+      "pred": 2,
+      "correct": true
+    },
+    {
+      "index": 9,
+      "source_file": "11_01.bin",
+      "expected": 11,
+      "pred": 11,
+      "correct": true
+    },
+    {
+      "index": 10,
+      "source_file": "04_04.bin",
+      "expected": 4,
+      "pred": 4,
+      "correct": true
+    },
+    {
+      "index": 11,
+      "source_file": "05_00.bin",
+      "expected": 5,
+      "pred": 5,
+      "correct": true
+    },
+    {
+      "index": 12,
+      "source_file": "03_02.bin",
+      "expected": 3,
+      "pred": 3,
+      "correct": true
+    },
+    {
+      "index": 13,
+      "source_file": "13_09.bin",
+      "expected": 13,
+      "pred": 13,
+      "correct": true
+    },
+    {
+      "index": 14,
+      "source_file": "09_09.bin",
+      "expected": 9,
+      "pred": 9,
+      "correct": true
+    },
+    {
+      "index": 15,
+      "source_file": "14_01.bin",
+      "expected": 14,
+      "pred": 14,
+      "correct": true
+    },
+    {
+      "index": 16,
+      "source_file": "19_00.bin",
+      "expected": 19,
+      "pred": 19,
+      "correct": true
+    },
+    {
+      "index": 17,
+      "source_file": "10_09.bin",
+      "expected": 10,
+      "pred": 10,
+      "correct": true
+    },
+    {
+      "index": 18,
+      "source_file": "16_00.bin",
+      "expected": 16,
+      "pred": 16,
+      "correct": true
+    },
+    {
+      "index": 19,
+      "source_file": "21_00.bin",
+      "expected": 21,
+      "pred": 21,
+      "correct": true
+    },
+    {
+      "index": 20,
+      "source_file": "07_09.bin",
+      "expected": 7,
+      "pred": 7,
+      "correct": true
+    },
+    {
+      "index": 21,
+      "source_file": "20_05.bin",
+      "expected": 20,
+      "pred": 20,
+      "correct": true
+    },
+    {
+      "index": 22,
+      "source_file": "17_01.bin",
+      "expected": 17,
+      "pred": 17,
+      "correct": true
+    },
+    {
+      "index": 23,
+      "source_file": "18_03.bin",
+      "expected": 18,
+      "pred": 18,
+      "correct": true
+    },
+    {
+      "index": 24,
+      "source_file": "19_08.bin",
+      "expected": 19,
+      "pred": 19,
+      "correct": true
+    },
+    {
+      "index": 25,
+      "source_file": "19_02.bin",
+      "expected": 19,
+      "pred": 19,
+      "correct": true
+    },
+    {
+      "index": 26,
+      "source_file": "19_04.bin",
+      "expected": 19,
+      "pred": 19,
+      "correct": true
+    },
+    {
+      "index": 27,
+      "source_file": "19_09.bin",
+      "expected": 19,
+      "pred": 19,
+      "correct": true
+    },
+    {
+      "index": 28,
+      "source_file": "19_06.bin",
+      "expected": 19,
+      "pred": 19,
+      "correct": true
+    },
+    {
+      "index": 29,
+      "source_file": "19_01.bin",
+      "expected": 19,
+      "pred": 19,
+      "correct": true
+    },
+    {
+      "index": 30,
+      "source_file": "19_07.bin",
+      "expected": 19,
+      "pred": 19,
+      "correct": true
+    },
+    {
+      "index": 31,
+      "source_file": "19_05.bin",
+      "expected": 19,
+      "pred": 19,
+      "correct": true
+    },
+    {
+      "index": 32,
+      "source_file": "19_03.bin",
+      "expected": 19,
+      "pred": 19,
+      "correct": true
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "status": "PREPARED_NOT_EXECUTED_ON_DEPLOYED_RELEASE",
+  "sequence": "Deploy accepted release first, then run this matrix",
+  "scope": "Targeted system/control acceptance, not240 per combination",
+  "nominal": {
+    "fs": 2560000,
+    "bw": 18000000,
+    "gain": -40,
+    "rx_gain": 35,
+    "public_frame": "unchanged8repeats"
+  },
+  "restore": {
+    "mode": "FIXED",
+    "fixed_hz": 2400000000,
+    "start_hz": 2395000000,
+    "stop_hz": 2405000000,
+    "step_hz": 1000000
+  },
+  "cases": [
+    {
+      "id": "TX01",
+      "group": "TX GUI",
+      "action": "Known BPSK message1,2400MHz,-40dB,start/stop",
+      "expected": "ActualTX event, RX valid class3, stop restores five attributes with independent readback",
+      "manual": false
+    },
+    {
+      "id": "TX02",
+      "group": "TX GUI",
+      "action": "Switch BPSK existing messages1/10 and new-seed messages1/2",
+      "expected": "Source SHAs change as planned; same class; retain all results without cherry-picking",
+      "manual": false
+    },
+    {
+      "id": "TX03",
+      "group": "TX GUI",
+      "action": "24 classes cycle,6s each,2400MHz,-40dB",
+      "expected": "Complete24 events and no silent truncation; source identity and restore PASS; report errors separately",
+      "manual": false
+    },
+    {
+      "id": "TX04",
+      "group": "TX gain diagnostic",
+      "action": "Same BPSK,-40/-50/-60dB,6s each",
+      "expected": "Readback matches; weak-signal rejection recorded honestly; no claim all gains retain nominal accuracy",
+      "manual": false
+    },
+    {
+      "id": "TX05",
+      "group": "RF tuning",
+      "action": "2398/2400/2403.6MHz, known BPSK; search/sweep40-45s holds",
+      "expected": "Correct LO/readback and captured centre; no stale prior-frequency result",
+      "manual": false
+    },
+    {
+      "id": "RX01",
+      "group": "RX screen",
+      "action": "FIXED2401 APPLY then2400 APPLY",
+      "expected": "Accepted then applied ACK, matching actual LO; screen keyboard/touch requires user",
+      "manual": true
+    },
+    {
+      "id": "RX02",
+      "group": "RX range",
+      "action": "2396..2404MHz step2",
+      "expected": "scan_points5,progress cycles1..5",
+      "manual": true
+    },
+    {
+      "id": "RX03",
+      "group": "RX range",
+      "action": "2395..2405MHz step0.5",
+      "expected": "scan_points21; restore default2395..2405 step1 =>11",
+      "manual": true
+    },
+    {
+      "id": "RX04",
+      "group": "RX endpoint",
+      "action": "2395..2405MHz step1.5",
+      "expected": "Final endpoint appended,scan_points8",
+      "manual": true
+    },
+    {
+      "id": "RX05",
+      "group": "RX invalid",
+      "action": "step0,start>=stop,step>2.304MHz,>101points,out-of-range,sub-Hz number",
+      "expected": "Rejected; applied settings unchanged; no false APPLIED",
+      "manual": true
+    },
+    {
+      "id": "RX06",
+      "group": "RX controls",
+      "action": "FIXED/SEARCH LOCK/SWEEP,STOP/START",
+      "expected": "Mode/actualLO/status correspond; stopped frames pause and resume;no stale ACK",
+      "manual": true
+    },
+    {
+      "id": "GRAPH01",
+      "group": "Spectrum/waterfall",
+      "action": "Positive/negative tone golden, amplitude-scaled same waveform",
+      "expected": "Frequency sign/fftshift correct;0dB peak high and bright; per-frame relative normalization disclosed",
+      "manual": false
+    },
+    {
+      "id": "GRAPH02",
+      "group": "IQ scatter",
+      "action": "I/Q sign fixtures plus real BPSK/QPSK/AM carriers",
+      "expected": "+I right,+Q up;256recovered unsynchronized samples; autoscale; no promise ideal symbol clusters",
+      "manual": false
+    },
+    {
+      "id": "GRAPH03",
+      "group": "Data freshness",
+      "action": "StopTX,STOP RX,retune,disconnect/reconnect",
+      "expected": "No fabricated new rows;last/stale/NoSignal marked;new centre clears incompatible graph history",
+      "manual": true
+    },
+    {
+      "id": "HIST01",
+      "group": "History",
+      "action": "Same-frequencyBPSK/QPSK/BPSK underSWEEP",
+      "expected": "Three truthful observation episodes; same class increments; fixed/search still3confirm;max10,5/page",
+      "manual": true
+    }
+  ]
+}

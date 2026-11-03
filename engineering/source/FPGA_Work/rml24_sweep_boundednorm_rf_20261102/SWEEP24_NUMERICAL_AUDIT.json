@@ -1,0 +1,12 @@
+{
+  "correct": 24,
+  "denominator": 24,
+  "missing": 0,
+  "selected_calibrated": 19,
+  "guard_clean": true,
+  "restored": true,
+  "npu_stop": [
+    "NPU_STREAM_STOP frames=904 apply=1 reset=903 discipline=1"
+  ],
+  "not_deployed": true
+}

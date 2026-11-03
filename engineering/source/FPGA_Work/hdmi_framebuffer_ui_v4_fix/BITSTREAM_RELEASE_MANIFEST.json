@@ -1,0 +1,67 @@
+{
+  "manifest": "BITSTREAM_RELEASE_MANIFEST",
+  "task_id": "39e5",
+  "project_dir": "F:/FPGA_Work/hdmi_framebuffer_ui_v4_fix",
+  "vivado_version": "2018.3",
+  "vivado_bin": "D:/Xilinx2018.3/Vivado/2018.3/bin/vivado.bat",
+  "target_device": {
+    "part": "xc7z030ffg676-2",
+    "procise_device": "JFMQL30TAI676H",
+    "board": "FMQL30TAI (悟净)"
+  },
+  "top_module": "hdmi_framebuffer_720p_top",
+  "generation_method": {
+    "normal_bit": "Vivado 2018.3 run-step write_bitstream (FMSH write_bitstream_pre.tcl / write_bitstream_post.tcl hooks applied; BITSTREAM.CONFIG.USERID set from FMSH ip_patch)",
+    "disable_icap_bit": "Procise increment_bit_cfg_v3 ... -disable_icap (FMSH post hook auto-generates call_procise_disable_icap.bat)"
+  },
+  "fmsh_patch_version": "53180205",
+  "fmsh_patch_evidence": {
+    "log": "fpga/logfiles/procise.log",
+    "key_line": "IP Patch version: 53180205",
+    "first_run_log": "fpga/logfiles/procise_1.log (recorded 0XFFFFFFFF before the fix)"
+  },
+  "bitstreams": {
+    "normal_bit": {
+      "path": "fpga/vivado_prj/hdmi_framebuffer_720p.runs/impl_1/hdmi_framebuffer_720p_top.bit",
+      "size_bytes": 5980035,
+      "sha256": "9282f98ae785131e29f38ecb85762400fc2096cb2de604b7a4e4e094390eecd3",
+      "note": "原始位流，不上板"
+    },
+    "disable_icap_bit": {
+      "path": "fpga/vivado_prj/hdmi_framebuffer_720p.runs/impl_1/hdmi_framebuffer_720p_top_disable_icap.bit",
+      "size_bytes": 5980619,
+      "sha256": "df8a0c669812835f7e6698ae0db0bb8524e6681bb211dfd1255bffe4ad1551b7",
+      "note": "唯一有效上板位流（JTAG 临时加载，禁写 Flash）"
+    }
+  },
+  "timing": {
+    "WNS_ns": 2.308,
+    "WHS_ns": 0.084,
+    "TNS_ns": 0.0,
+    "THS_ns": 0.0,
+    "WPWS_ns": 1.100
+  },
+  "drc": {
+    "error_count": 0,
+    "warning_count": 25,
+    "warning_breakdown": {
+      "REQP-1839": 20,
+      "PORTPROP-2": 2,
+      "RTSTAT-10": 1,
+      "CHECK-1": 1,
+      "CHECK-3": 1
+    }
+  },
+  "build_time": "2026-10-04",
+  "source_hash": {
+    "note": "not a git repository",
+    "key_rtl_sha256": "5a181a799afc5c469a908f7416ee637824941ef5f15aea0978d50cceac485246",
+    "key_rtl_file": "fpga/rtl/display/aq_axi_master.v (39e5 读路径半字反转修复)"
+  },
+  "release_status": "READY-FOR-HARDWARE-TEST",
+  "revoked_bitstreams": {
+    "note": "见 deprecated_manual_no_patch/README.md",
+    "status": "REVOKED_DO_NOT_PROGRAM",
+    "reason": "IP Patch version 0XFFFFFFFF (write_bitstream_manual.tcl 绕过 run 管理器，缺 FMSH patch)"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "status": "SD_PERSISTENCE_COLD_BOOT_AUTOSTART_VERIFIED",
+  "date": "2026-10-27",
+  "method": "Existing vendor BOOT.bin -> U-Boot imports uEnv -> fatload mmc0:1 download.bit -> fpga loadb -> existing Linux -> enabled UI and RX services",
+  "boot_bin_changed": false,
+  "kernel_changed": false,
+  "qspi_written": false,
+  "working_bit_sha256": "22fec95c64f3db727dd250e5768cdadec82f4c4d2de088392980b95a632932e9",
+  "uenv_sha256": "b81563447febf35023b7c99a918bd204270518a87ea9cff169a11fbf26d1f4a9",
+  "backup_archive_sha256": "44fcdd2bd7704e9e24a6fa7421913ff2d52125d448c2279cb8f04ea7983d7503",
+  "backup_independent_checks": 14,
+  "soft_reboot_user_confirmed_display": true,
+  "soft_reboot_pc_tx_completed_frames": 24,
+  "board_login_during_soft_reboot_validation": false,
+  "stability_test": "Deferred by explicit user request; not performed",
+  "cold_power_cycle": "USER_CONFIRMED_PHYSICAL_OFF_ON; normal UI automatically appeared",
+  "cold_boot_uart_pl_load": true,
+  "cold_boot_uart_ui_and_rx_autostart": true,
+  "cold_boot_pc_tx_completed_frames": 24,
+  "cold_boot_login_or_manual_start_required": false,
+  "long_stability_test_performed": false
+}

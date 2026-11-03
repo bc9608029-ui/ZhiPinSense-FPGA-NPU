@@ -1,0 +1,109 @@
+================================================================================
+ M29 RML23 LIVE-RX 诊断勘误 39e5 — 最终交付（根因审计 + 12 硬要求修订）
+================================================================================
+状态: M29-RML23-LIVE-RX-DIAGNOSTIC-ERRATA-READY-FOR-BOARD-TEST
+      （最高允许状态；板端最终验收由用户执行；本轮未碰板，未写任何 *_PASS /
+       PROJECT_COMPLETE / FINAL_*）
+
+基线（本交付的相对基准）:
+  sdr_rml23_live_board_package_integrated_live_rx.tar.gz
+      sha256 5167649b89b0b588194b4590814adf091451de592d8f412d820a7bb56fb1cccf
+      （Task A 心跳 + Task B UI + Task C live-rx 合并全量板端包）
+
+--------------------------------------------------------------------------------
+ 两份最终工件（均含 SHA256SUMS manifest，且已独立解包 sha256sum -c 校验通过）
+--------------------------------------------------------------------------------
+
+[DIFF] 诊断勘误独立补丁（22 文件，相对 integrated_live_rx 基线）
+    dist/sdr_rml23_live_diagnostic_errata_39e5_patch.tar.gz
+      22 文件  sha256 73774ef9cf9e9a273c40a61f67ea307b0531eebc2509b5e1e26057c9e946a796
+      manifest: DIAGNOSTIC_ERRATA_39E5_PATCH_SHA256SUMS.txt  (22 内容)
+      校验: sha256sum -c  => 22 OK / 0 FAIL
+
+[MERGE] 合并全量板端测试包（integrated_live_rx 基线 + 上述 22 文件）
+    dist/sdr_rml23_live_board_package_diag_errata_39e5.tar.gz
+      504 文件  sha256 77a56eb32028b3772587a2757739b678676e95d2816e352d092fe495f0ced13f
+      manifest: sdr_rml23_live_board_package_diag_errata_39e5.SHA256SUMS.txt (504 内容)
+      校验: sha256sum -c  => 504 OK / 0 FAIL
+
+  确定性: package_diagnostic_errata_39e5.py 连跑两次，两个 tar.gz SHA 逐字节一致
+          （固定 uid/gid=0、mtime=0、GNU tar、gzip mtime=0）。.sh/.py 均 0755 可执行。
+  历史包未覆盖: correctness_fix / rf_fix / heartbeat / UI / live-rx / integrated /
+                integrated_live_rx 全部原样保留，dist_hist 未动。
+
+--------------------------------------------------------------------------------
+ 文件差异证明（baseline = integrated_live_rx vs merged，全量递归 diff）
+--------------------------------------------------------------------------------
+模型 / 标签 / golden / 预处理契约 / RTL / XDC / 位流 / Flash 全部未变化：
+
+  未变化（diff 逐字节一致）:
+    model_rml23/model_24class_ZG.json   sha256 d43a22848fad56195265fc98f9009039e4e9d9e8da7f58fc5042fb2a602edb2d
+    model_rml23/model_24class_ZG.raw    sha256 2425d990dbac0761cfcdb578c2225795e3b700c4afc6800a0b544ff4d50e0cba
+    deployment_golden/  (240 input_N.bin + expected_argmax.tsv + expected_logits* + manifest.json
+                         + coverage_report.json + coverage_supplemental/)
+    contracts/  sdr_adapter/preprocess.hpp  signal_presence.hpp  dsp_measure.hpp  nco.hpp  categories.hpp
+    board_package/rml23_merged.hpp  producer_12class.hpp
+    （包内不含 RTL/XDC/位流/Flash，此类资产冻结于工程外，本交付未触碰）
+
+  changed（12，均为 .cpp/.hpp/.sh，无模型/数据）:
+    board_package/board_gate9_full_chain_rml23.cpp   #3 反向控制 socket + 捕获 + logits 导出接线
+    board_package/board_ui_live_rml23.cpp            #4 UI freshness 四变量拆分
+    board_package/chain_common.hpp                   #1 PreScaleCapture + #10 model_scale 注释
+    board_package/npu_classifier24.hpp               #2 D 级输入传输 SHA 审计
+    board_package/result_frame_v2_parse.hpp          #3(d) state version 参数化
+    host_tests/build_host_tests.sh                   #新增测试编译行
+    host_tests/run_tests.sh                          #新增测试运行行
+    host_tests/test_chain_common.cpp                 #1 test_pre_scale_capture
+    scripts/start_all_rml23.sh                       #11 参数去重 + 有效配置打印
+    sdr_adapter/resampler.hpp                        #1 out_index()/current_phase()
+    ui_sw/ui_render.cpp  ui_sw/ui_render.hpp         #4 新增状态值渲染映射（非布局改动）
+
+  added（10，仅新增文件）:
+    board_package/capture_hook.hpp                   #阶段 C 原子张量捕获
+    board_package/logits_export.hpp                  #阶段 E 板端 logits 导出
+    docs/M29_RML23_LIVE_RX_DIAGNOSTIC_ERRATA_39e5_AUDIT.md
+    host_tests/test_capture_hook.cpp                 #阶段 C 测试
+    host_tests/test_control_socket_process.cpp       #3 控制服务测试
+    host_tests/test_tx_audit_rml23.cpp               #9 TX A/B 测试
+    host_tests/test_ui_live_rx_process.cpp           #4 UI 进程测试
+    scripts/analyze_live_rx_capture.py               #阶段 D 分析工具
+    scripts/compare_three_backends.py                #阶段 E 三后端比较
+    scripts/export_fp32_onnx.py                      #阶段 E fp32 ONNX 导出
+
+--------------------------------------------------------------------------------
+ 12 硬要求覆盖（根因审计表见 docs/M29_RML23_LIVE_RX_DIAGNOSTIC_ERRATA_39e5_AUDIT.md）
+--------------------------------------------------------------------------------
+  #1  B 级抓取点        chain_common.hpp PreScaleCapture/PreScaleObserver + 测试
+  #2  D 级 not_available npu_classifier24.hpp audit_input（先取证后声明，接口证据见审计表）
+  #3  control STOP 仍心跳 board_gate9_full_chain_rml23.cpp 反向 socket + 1000ms steady 心跳
+  #4  UI freshness       四变量拆分 + 显示规则（WAITING/ACQUIRING/SIGNAL_PRESENT/STOPPED）
+  #5  occupied_bw        分析工具理论 90/95/99% 占带宽 + DC 保留/去除 + 双边谱
+  #6  capture 原子写     capture_hook.hpp（同目录 .tmp + 长度+SHA 校验 + rename）
+  #7  三后端比较         compare_three_backends.py（同 input SHA + model identity 才比；缺失即 UNAVAILABLE）
+  #8  host≠板端          只声明 READY-FOR-BOARD-TEST；board_npu 显式 UNAVAILABLE
+  #9  TX A/B 拆分        test_tx_audit_rml23.cpp（A=真实 CW 缓冲；B=8ASK 标签非缓冲）
+  #10 model_scale 字段    值 1.0 正确（receiver_scale 单独施加，绝不相乘），补注释
+  #11 start_all 去重      start_all_rml23.sh 单一有效配置 + LIVE_RX_EFFECTIVE_CONFIG 9 字段
+  #12 顺序 A→B→C→D→E→F  各阶段独立验证后合并，本轮收口
+
+--------------------------------------------------------------------------------
+ 离线验证结果（本轮全绿，未碰板）
+--------------------------------------------------------------------------------
+  host_tests:      build_host_tests.sh  OK（WSL g++，含 test_chain_common 33/33 新增 #1 用例）
+                   run_tests.sh  => ALL HOST TESTS PASSED（BUILD_EXIT=0 TEST_EXIT=0）
+                   test_board_build.sh 24 passed / 0 failed
+                   test_rml23_build.sh  7 passed / 0 failed
+  board 语法:       board_gate7/gate9/gate10/gate9_rml23  -fsyntax-only -Wall -Wextra -Werror OK
+                   （gate9_rml23 含 npu_classifier24.hpp #2 audit_input 编译通过）
+  shell:            bash -n start_all_rml23.sh OK；去重逻辑独立冒烟 4 例（空/重复 last-wins/未知透传）全过
+  打包:             package_diagnostic_errata_39e5.py 自校验 22/22 + 504/504 PASS；独立 sha256sum -c 全 OK；
+                   两跑 SHA 一致（确定性）；冻结身份 d43a2284…/2425d990… 复核一致
+  三后端实测:       fp32 vs host_quantized 240 帧 merged-23 argmax agree 180/240（量化本身可致 QPSK↔QAM 跳变，
+                    诚实记录；board_npu 待板导出后补第三后端）
+
+  板端最终验收（只能由用户执行，我禁碰板）:
+    ./scripts/run_gate9_rml23.sh --phase=offline --count=240   （期望 ≥0.90）
+    ./scripts/start_all_rml23.sh --ui-sock=… -- --phase=live-rx --rx-lo=… --rx-bw=…
+                                                              （真屏复测 UI freshness + STOP 心跳）
+  本交付只可声明 READY-FOR-BOARD-TEST。
+================================================================================

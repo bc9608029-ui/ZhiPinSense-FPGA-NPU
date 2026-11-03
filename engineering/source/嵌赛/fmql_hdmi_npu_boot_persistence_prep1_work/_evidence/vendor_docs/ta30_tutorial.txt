@@ -1,0 +1,140 @@
+
+===== PAGE 1 =====
+30TAI使用教程
+一. 安装时序库
+1.1 解压工具包
+解压JFM_Kits.zip到一个英文路径（路径中不要有中文、空格和特殊字符）。解压后的目录结构如
+下图所示。
+图1
+1.2 设置用户环境变量
+关闭Vivado，新建下图所示的用户环境变量。变量名：JFM_PATH; 变量值：工具包的解压位置。
+以图1为例，变量值为E:\JFM_Kits，即IP_PATCH文件夹的上一级目录。
+注：重启Vivado，在TCL Console中使用命令puts $::env(JFM_PATH)，可查看环境变量是否设置成
+功。
+1.3 关闭IP cache
+打开Vivado工程的设置界面，将Project Settings -> IP -> IP Cache -> Cache scope选项设置为
+Disabled。
+
+===== PAGE 2 =====
+1.4 综合所有IP
+确保工程中的每个IP完成单独综合。即在生成IP时，将IP的综合选项设置为Out of context per IP
+而非Global，点击Generate而非Skip。如下图所示：
+
+===== PAGE 3 =====
+在Design Runs中，每个IP应如下图所示，显示为Synth_design Complete!
+如果现有的IP没有综合结果，可以按以下步骤执行操作，完成IP的综合。
+
+===== PAGE 4 =====
+1.5 加载工具包
+在Vivado的Tcl Console中，输入以下命令，并按回车完成工具的加载。下图中，路径的红色部分
+为步骤1.2的用户环境变量。
+
+===== PAGE 5 =====
+若以图1为例，命令应为：source E:/JFM_Kits/ip_patch/run.tcl。注意命令中不要出现反斜杠。
+1.6 加载脚本
+在Vivado的Tcl Console中，输入以下命令：add_hook_tcl_to_prj，再按回车键，执行脚本加载。
+1.7 加载时序库
+首次使用30TAI时序库，需在Vivado的Tcl Console中，输入以下命令：replace_7z030ai_file，再按
+回车键，执行时序库加载。
+注：使用非30TAI器件时，如果已经执行过步骤1.7，需要通过命令reset_database_to_default恢复
+时序库。执行命令前，需完成步骤1.5，否则找不到命令。恢复时序库后，若再次使用30TAI器
+件，需要重新加载时序库。
+二. Vivado开发
+2.1 安装时序库
+在使用30TAI器件前，确保已经完成时序库以及Procise的安装。
+2.2 新建Vivado工程
+（1）Vivado版本：2018.03
+（2）器件：xc7z030ffg676-2
+（3）执行步骤1.3，关闭IP cache。
+2.3 添加源文件及约束
+
+===== PAGE 6 =====
+（1）点击add sources，选择design sources，将文件夹fpai_demo_fpga\rtl下的所有文件加入工
+程。
+（2）点击add sources，选择constraints，将文件夹fpai_demo_fpga\constrs_1下的所有文件加入
+工程。
+（3）导入fpai_demo_vivado.srcs\sources_1\bd文件夹中的block design
+（4）新建IP时，确保每个IP完成单独综合。
+（5）如下图，设置Project Settings -> IP -> Repository，添加fpai_demo_fpga\PS_AI IP文件夹所
+在路径。
+2.4 加载工具包和脚本
+在Vivado的Tcl Console中，按步骤1.5和步骤1.6依次执行：
+source $::env(JFM_PATH)/ip_patch/run.tcl
+add_hook_tcl_to_prj
+注：$::env(JFM_PATH)即为环境变量JFM_PATH的值。
+2.5 生成位流
+点击Vivado的Flow Navigator -> PROGRAM AND DEBUG -> Generate Bitstream，等待位流生
+成。
+注：按流程依次点击Run Synthesis, Run Implemention和Generate Bitstream步骤可能存在问题。
+建议跳过前两个步骤，直接点击Generate Bitstream。
+三. 生成BOOT.bin
+
+===== PAGE 7 =====
+3.1 修改bif文件
+解压BOOT_Gen.zip，用文本程序（如VS Code）打开BOOT_Gen/7030ai_psin.bif。
+修改上图中的红框，将路径替换为解压目录。确保修改后的路径不要出现反斜杠，且能找到各个
+文件。
+3.2 Create BOOT Image
+将Vivado生成的位流文件（后缀为bit）拷贝到解压目录，并确保位流文件名与bif文件的位流文件
+名保持一致。
+打开Procise，按下图依次点击。
+
+===== PAGE 8 =====
+单击Create Image，可生成bin文件。生成的bin文件位于解压目录下。
+3.3 替换BOOT.bin
+替换BOOT.bin有两种方法。
+（1）读卡器
+将SD卡插入读卡器，直接替换FAT分区中的BOOT.bin。注意不要格式化磁盘。
+（2）SSH连接
+通过SSH远程连接开发板（登录账户需为root）。
+若BOOT.bin所在的磁盘分区已挂载至目录/root/bits下，可直接替换其中的BOOT.bin文件。完成
+替换后，执行reboot命令重启开发板。重启系统后位流生效。
+
+===== PAGE 9 =====
+若未挂载，需手动完成挂载。在ubuntu终端输入命令fdisk -l，确认系统已正确识别分区。
+输入以下命令：mount /dev/mmcblk0p1 /root/bits，将分区挂载到目录下。挂载并刷新后，目
+录/root/bits下应有BOOT.bin等文件。注意：若未挂载分区，并直接将BOOT.bin等文件拷贝至目
+录/root/bits下，位流将不会生效。
+四. 示例PS程序
+4.1 安装Icraft
+交叉编译环境安装Icraft_3.XX及CustomOp_3.XX。
+4.2 编译PS程序
+示例PS程序存放在目录fpai_demo_app\examples\1_single_input+ai\PLin+SingleNet+HDMI下。
+将整个fpai_demo_app文件夹（包含依赖库deps）拷贝至交叉编译环境中，按步骤编译PS程序。
+注意不要在30TAI板载系统上进行编译。
+编译步骤可参考：
+fpai_demo_app\examples\1_single_input+ai\PLin+SingleNet+HDMI\README.md，编译30TAI
+（ZG）版本。
+4.3 adder_demo
+将步骤4.2编译得到的可执行程序adder_demo拷贝至30TAI开发板的ubuntu系统中。
+确保文件adder_demo具有执行权限并执行。将得到以下输出结果：
+
+===== PAGE 10 =====
+4.4 sdicamera+yolov5+hdmi
+将整个fpai_demo_app\examples\1_single_input+ai\PLin+SingleNet+HDMI文件夹拷贝至30TAI开
+发板的ubuntu系统中。
+确保下图中的文件及文件夹存在。
+|—— configs                        
+    |—— ZG
+        |—— sdicamera+yolov5+hdmi.yaml   // 配置文件
+|—— imodel
+    |—— ZG
+        |—— yolov5s_352x640_ZG.json      // 网络模型json，文件名与yaml文件的配置保持一致
+        |—— yolov5s_352x640_ZG.raw       // 网络模型raw
+|—— names         
+    |—— coco.names                      // 数据集标签
+|—— sdicamera+yolov5+hdmi               // 可执行程序
+4.4.1 无SDI
+修改configs/ZG/sdicamera+yolov5+hdmi.yaml，将pipeline -> camera -> vtc修改为true，保
+存。
+
+===== PAGE 11 =====
+在断电状态下将HDMI接入开发板，上电启动。确保文件sdicamera+yolov5+hdmi具有执行权
+限，在文件所在目录下执行./sdicamera+yolov5+hdmi
+./configs/ZG/sdicamera+yolov5+hdmi.yaml。在HDMI显示器中查看滚动的灰度图。
+4.4.1 接入SDI
+修改configs/ZG/sdicamera+yolov5+hdmi.yaml，将pipeline -> camera -> vtc修改为false，保
+存。
+在断电状态下将SDI摄像头和HDMI接入开发板，上电启动。确保文件sdicamera+yolov5+hdmi具
+有执行权限，在文件所在目录下执行./sdicamera+yolov5+hdmi
+./configs/ZG/sdicamera+yolov5+hdmi.yaml。在HDMI显示器中查看yolov5的运行结果。

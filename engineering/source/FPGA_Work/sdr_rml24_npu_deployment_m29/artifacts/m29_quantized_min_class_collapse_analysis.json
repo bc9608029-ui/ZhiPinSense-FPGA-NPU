@@ -1,0 +1,23 @@
+{
+  "phase": "M29-Phase-D-min-class-collapse-attribution",
+  "subset": {"per_class": 64, "size": 1536, "seed": 2028, "split": "radioml2018_validation"},
+  "min_per_class_accuracy": {
+    "fp32": {"value": 0.40625, "class_index": 10, "class_name": "64APSK"},
+    "fake_int8_weights_only": {"value": 0.421875, "class_index": 10, "class_name": "64APSK"},
+    "vendor_int8_full": {"value": 0.078125, "class_index": 18, "class_name": "AM-SSB-SC"}
+  },
+  "am_ssb_sc_class_18": {
+    "fp32_accuracy": {"correct": 33, "total": 64, "value": 0.515625},
+    "fake_int8_accuracy": {"correct": 29, "total": 64, "value": 0.453125},
+    "vendor_int8_accuracy": {"correct": 5, "total": 64, "value": 0.078125},
+    "at_snr_ge_12": {
+      "fp32": {"correct": 17, "total": 20, "value": 0.85},
+      "fake_int8": {"correct": 16, "total": 20, "value": 0.8},
+      "vendor_int8": {"correct": 2, "total": 20, "value": 0.1}
+    },
+    "vendor_int8_prediction_distribution": {"AM-SSB-WC(17)": 39, "OOK(0)": 14, "AM-SSB-SC(18)": 5, "BPSK(3)": 3, "4ASK(1)": 2, "8ASK(2)": 1},
+    "vendor_int8_logit_margin_median": 0.0
+  },
+  "conclusion": "AM-SSB-SC collapse is introduced by activation + output-layer INT8 quantization (weights-only fake-INT8 does NOT collapse it). Collapse is SNR-independent (present at SNR>=12), systematic, not low-SNR near-tie noise. Most suspicious point = 24-dim output-layer INT8 quantization erasing the small near-tied logits of AM-SSB-SC vs AM-SSB-WC.",
+  "accuracy_gate": "FAIL on min_class (-32.8pp) and rated_0_20 (-1.74pp); overall -1.50pp; macro-F1 flat; snr0 flat. 384 product NOT promoted to final NPU candidate in current form (Plan D rule #7)."
+}

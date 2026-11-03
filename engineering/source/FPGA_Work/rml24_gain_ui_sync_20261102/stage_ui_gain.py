@@ -1,0 +1,12 @@
+from pathlib import Path
+import shutil,json,hashlib,subprocess
+src=Path('/root/rml24_sweep_boundednorm_20261102/candidate');dst=Path('/root/rml24_gain_ui_sync_20261102/candidate');assert not dst.exists();assert shutil.disk_usage('/').free>int(1.05*1024**3)+25*1024**2;dst.parent.mkdir();shutil.copytree(src,dst);b=dst/'candidate/rml24_final/board_runtime';f=b/'standalone_receiver.py';oldsha=hashlib.sha256(f.read_bytes()).hexdigest();s=f.read_text();anchor='                    if result is not None:ui.send(result)';assert s.count(anchor)==1
+replacement="""                    if result is not None:
+                        from ui_gain_telemetry import apply_gain_telemetry
+                        result=apply_gain_telemetry(result,getattr(radio,'gain_freeze_last',{}),arm.get('input_calibration'))
+                        arm.update(ui_rf_gain_db=result['rf_gain_db'],ui_level_mode=result['level_mode'],ui_model_scale=result['model_scale'])
+                        ui.send(result)""";f.write_text(s.replace(anchor,replacement));m=b/'ui_gain_telemetry.py';shutil.copyfile(Path(__file__).parent/'ui_gain_telemetry.py',m);w=b/'receiver_repeat_mean_gapfix1.py';s=w.read_text();assert oldsha in s;w.write_text(s.replace(oldsha,hashlib.sha256(f.read_bytes()).hexdigest()));i=dst/'evidence/CANDIDATE_SOURCE_IDENTITY.json';d=json.loads(i.read_text())
+for item in (f,m,w):d[str(item.relative_to(dst))]=hashlib.sha256(item.read_bytes()).hexdigest()
+i.write_text(json.dumps(d,indent=2));rfile=dst/'PROMOTED_RELEASE.json';r=json.loads(rfile.read_text());r['all_promotion_gates_passed']=False;r['promotion_scope']='Candidate only: actual RF gain telemetry and sweep bounded input calibration. UI short RF pending.'
+for item in (f,m,w,i):r['files'][str(item.relative_to(dst))]=hashlib.sha256(item.read_bytes()).hexdigest()
+rfile.write_text(json.dumps(r,indent=2));py='/root/miniconda3/envs/torch_v2.0.1_aarch64/bin/python3';subprocess.run([py,'-m','py_compile',str(f),str(m),str(w)],check=True);subprocess.run([py,'-c','import sys;sys.path.insert(0,'+repr(str(b))+');import receiver_repeat_mean_gapfix1 as m;m.verify_base();print("UI_GAIN_FROZEN_DEPENDENCIES_PASS")'],check=True);meta=dict(identity=d,identity_sha256=hashlib.sha256(i.read_bytes()).hexdigest(),source=str(src),candidate=str(dst),not_deployed=True);(dst.parent/'STAGING_RESULT.json').write_text(json.dumps(meta,indent=2));print('UI_GAIN_STAGED '+meta['identity_sha256'])

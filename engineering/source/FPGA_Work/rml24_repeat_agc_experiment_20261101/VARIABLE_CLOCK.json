@@ -1,0 +1,53 @@
+{
+  "clock_id": "windows-qpc-board-monotonic-v1",
+  "offset_ns": 3430165221500,
+  "uncertainty_ns": 63293450,
+  "board_boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+  "samples": [
+    {
+      "pc_before_mono_ns": 4875555331100,
+      "pc_after_mono_ns": 4875730637200,
+      "board_mono_ns": 1445496994740,
+      "board_wall_ns": "1773373932498633860",
+      "board_boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "offset_ns": 3430145989410,
+      "uncertainty_ns": 87653050
+    },
+    {
+      "pc_before_mono_ns": 4875752739200,
+      "pc_after_mono_ns": 4875918194600,
+      "board_mono_ns": 1445676073880,
+      "board_wall_ns": "1773373932677713670",
+      "board_boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "offset_ns": 3430159393020,
+      "uncertainty_ns": 82727700
+    },
+    {
+      "pc_before_mono_ns": 4875919022600,
+      "pc_after_mono_ns": 4876136701000,
+      "board_mono_ns": 1445903121560,
+      "board_wall_ns": "1773373932904760310",
+      "board_boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "offset_ns": 3430124740240,
+      "uncertainty_ns": 108839200
+    },
+    {
+      "pc_before_mono_ns": 4876137359200,
+      "pc_after_mono_ns": 4876292316600,
+      "board_mono_ns": 1446058981650,
+      "board_wall_ns": "1773373933060621030",
+      "board_boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "offset_ns": 3430155856250,
+      "uncertainty_ns": 77478700
+    },
+    {
+      "pc_before_mono_ns": 4876292624900,
+      "pc_after_mono_ns": 4876419211800,
+      "board_mono_ns": 1446190696850,
+      "board_wall_ns": "1773373933192335810",
+      "board_boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "offset_ns": 3430165221500,
+      "uncertainty_ns": 63293450
+    }
+  ]
+}

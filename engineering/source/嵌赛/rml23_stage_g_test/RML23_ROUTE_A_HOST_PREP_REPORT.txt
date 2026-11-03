@@ -1,0 +1,147 @@
+================================================================================
+ M29 RML23 Stage G Route A — 主机侧板测工件导出与样本准备报告
+================================================================================
+生成时间: 2026-10-12
+性质: 仅主机侧落盘/完整性校验/独立测试样本准备。未上板、未启动 SDR TX/RX、
+      未发射射频、未训练、未修改模型/标签/golden。
+
+--------------------------------------------------------------------------------
+ 0. 最终状态
+--------------------------------------------------------------------------------
+  RML23-STAGE-G-ROUTE-A-HOST-DATA-READY-FOR-BOARD-TEST
+  （主机侧全部检查通过；未写 ROUTE_A_PASS / CLASSIFICATION_PASS /
+   PROJECT_COMPLETE / MODEL_FIXED / BOARD_TEST_PASS —— 本任务未跑 NPU 分类、未上板）
+
+--------------------------------------------------------------------------------
+ 1. F 盘三个关键路径
+--------------------------------------------------------------------------------
+  完整包:   F:\嵌赛\rml23_stage_g_test\sdr_rml23_live_board_package_synthetic_iq_route_d.tar.gz
+  解包根:   F:\嵌赛\rml23_stage_g_test\sdr_rml23_live_board_package_synthetic_iq_route_d\
+  样本目录: F:\嵌赛\rml23_stage_g_test\radioml_route_a_test\
+  （附加: 交付说明 RML23_SYNTHETIC_IQ_ROUTE_D_DELIVERY.txt、
+         报告本文件 RML23_ROUTE_A_HOST_PREP_REPORT.txt、
+         extract_radioml_stage_g_help.txt）
+
+--------------------------------------------------------------------------------
+ 2. 完整包完整性
+--------------------------------------------------------------------------------
+  文件:       sdr_rml23_live_board_package_synthetic_iq_route_d.tar.gz
+  大小:       3666792 字节
+  完整 SHA256:
+      5a4c4d3ab7d892cfab3b2237cc714daee4bc896246fc3b46bd91ff90acedd688
+  与原始交付记录比对:
+      完整包 SHA256 取自 dist/RML23_SYNTHETIC_IQ_ROUTE_D_DELIVERY.txt 第 26 行原文
+      （64 hex，非截断），与本机 sha256sum 实测值逐字节一致 => MATCH
+  独立补丁(参考, 未复制):
+      sdr_rml23_live_synthetic_iq_route_d_patch.tar.gz  51745 字节
+      sha256 71b52125dfc77b75763f96d48e80f86b105199dc412b0a6ee8d2bb2a1b95caf3
+  解包:        tar -xzf 已展开到解包根（mtime=0 致 Git-Bash 报 Cannot utime 为
+               Windows 时间戳告警，内容无损，已由 SHA256SUMS 复核确认）
+  包内 SHA256SUMS 校验:  sha256sum -c SHA256SUMS.txt => 514 OK / 0 FAIL
+  普通文件数:  514（内容文件；磁盘另含 SHA256SUMS.txt 自身，共 515 个普通文件）
+  extract 脚本: sdr_rml23_live_board_package_synthetic_iq_route_d/scripts/extract_radioml_stage_g.py
+               （存在，可执行，--help 见 §4）
+
+  完整包内容要求逐项确认（§三）:
+    scripts/extract_radioml_stage_g.py             存在 ✓
+    --phase=synthetic-iq 支持                      存在（board_gate9_full_chain_rml23.cpp）
+    --source=radioml 支持                          存在
+    --inject-point=model-input 支持（Route A）      存在
+    RadioML .bin + manifest 输入读取                存在（extract 脚本 + 板端 loader fail-closed）
+    23 类 merge/result 输出                         存在（rml23_merged.hpp / result_frame_rml23）
+    NPU Open 一次 / Apply 多次 / Close 一次         存在（NPU 纪律审计，非本任务改动）
+    Route D 相关实现与测试                          存在（synthetic_iq_roundtrip.hpp +
+                                                    test_synthetic_iq_roundtrip.cpp）
+    包内 SHA256SUMS                                存在（514 条，已全量复核）
+  结论: 为 514 文件全量包，非 8 文件补丁冒充。✓
+
+--------------------------------------------------------------------------------
+ 3. 数据集与 split 身份
+--------------------------------------------------------------------------------
+  HDF5:  F:\datasets\RadioML2018\GOLD_XYZ_OSC.0001_1024.hdf5
+        大小 21449148312 字节
+        sha256 e3dd0bef66a3426959ee66a1709a8c0a95d4f8395d18aaf6f1214bdbc763bd38
+        （== 冻结 HDF5 e3dd0bef…，与 manifest/golden 身份一致）
+        keys:  X shape=(2555904,1024,2) dtype=float32
+               Y shape=(2555904,24)     dtype=int64   (one-hot)
+               Z shape=(2555904,1)      dtype=int64   (SNR dB)
+  split: F:\FPGA_Work\sdr_amr_rml24_ood_v1_1\data\radioml2018\rml24_split_indices.npz
+        大小 6110549 字节
+        sha256 9a035841baef299ac918ae64294d59ba2298c5f20852862d3dd4069547330335
+        keys:  train_indices/labels/snrs      (1533168)
+               validation_indices/labels/snrs (511056)
+               test_indices/labels/snrs       (511680)
+        test_indices 数量 = 511680（24 类，labels 覆盖 0..23，SNR -20..30 步 2 dB）
+  约束说明: 未使用 deployment_golden / validation / train 索引；仅用冻结 test_indices；
+           未临时随机划分、未自行生成信号、未改样本值/归一化/IQ/滤波/重采样/标签。
+
+--------------------------------------------------------------------------------
+ 4. extract_radioml_stage_g.py --help 输出（原文）
+--------------------------------------------------------------------------------
+usage: extract_radioml_stage_g.py [-h] --dataset-hdf5 DATASET_HDF5
+                                  --split-npz SPLIT_NPZ [--classes CLASSES]
+                                  [--snr-db SNR_DB] [--count COUNT]
+                                  --out-dir OUT_DIR
+
+Stage G route-A RadioML test-frame extraction
+
+options:
+  -h, --help            show this help message and exit
+  --dataset-hdf5 DATASET_HDF5
+  --split-npz SPLIT_NPZ
+  --classes CLASSES
+  --snr-db SNR_DB
+  --count COUNT
+  --out-dir OUT_DIR
+（已另存为 extract_radioml_stage_g_help.txt）
+
+--------------------------------------------------------------------------------
+ 5. 实际抽取命令
+--------------------------------------------------------------------------------
+cd <解包根>
+python -I scripts/extract_radioml_stage_g.py \
+    --dataset-hdf5 "F:/datasets/RadioML2018/GOLD_XYZ_OSC.0001_1024.hdf5" \
+    --split-npz "F:/FPGA_Work/sdr_amr_rml24_ood_v1_1/data/radioml2018/rml24_split_indices.npz" \
+    --classes "BPSK,QPSK,4ASK,16QAM" \
+    --snr-db "20,22,24,26,28,30" \
+    --count 60 \
+    --out-dir "F:/嵌赛/rml23_stage_g_test/radioml_route_a_test"
+
+参数语义（据脚本源码，非猜测）:
+  --count = 每类总帧数，脚本在 --snr-db 各 SNR 上均分（余数补最低 SNR）。
+  本例 --count 60、--snr-db 6 个值 => 每类每 SNR 10 帧，4 类 x 60 = 240 帧。
+  与任务建议「每类每 SNR 10 帧」一致；数据每类每 SNR 有 820 测试帧，充足。
+脚本输出: hdf5_sha256=e3dd0bef…  split_npz_sha256=9a035841…
+          selected 240 frames (4 classes x 60)
+          == extract_radioml_stage_g: PASS ==
+
+--------------------------------------------------------------------------------
+ 6. 抽取后验证（逐项）
+--------------------------------------------------------------------------------
+  [1] 240 个 source index 全部属于冻结 test_indices:        True
+  [2] 与 deployment_golden 使用 source index 重叠:          0（golden 240 个唯一
+      hdf5_index，交集为空；golden 来自 validation 子集，与 test 天然不相交，已实测）
+  [3] 每个 .bin 恰好 8192 字节:                              0 违例 / 240
+  [4] 全部值 finite:                                         0 违例 / 240
+  [5] .bin 字节 == HDF5 原位置原始切片(.T 后)字节:           0 失配 / 240
+      （逐帧重读 .bin 与 X[source_index].T 逐字节比较；另 .bin SHA256 == manifest bin_sha256）
+  [6] 类别/SNR 分布: 4 类 x 6 SNR 各 10 帧，共 240（16QAM/4ASK/BPSK/QPSK 各 60）
+  [7] manifest 无重复 index:                                 240 唯一 source_index
+  [8] 无 .tmp / .partial 文件:                               0
+
+--------------------------------------------------------------------------------
+ 7. 字节一致性（.bin 与 HDF5 原始字节）
+--------------------------------------------------------------------------------
+  契约: X[hdf5_idx] (1024,2) -> .T (2,1024) planar（plane0=I, plane1=Q）->
+        8192 字节 fp32 little-endian；无归一化、无 I/Q 交换、无额外预处理。
+  校验: 240 帧全部逐字节一致（file == HDF5 切片）；manifest bin_sha256 与文件实测一致。
+  结论: 导出 .bin 是 HDF5 原始样本的逐位副本，未做任何改动。
+
+--------------------------------------------------------------------------------
+ 8. 限制与后续
+--------------------------------------------------------------------------------
+  本报告仅为「主机数据就绪」，不是任何分类/硬件判定。板测 Route A 需由用户在板端执行:
+    run_gate9_rml23.sh --phase=synthetic-iq --source=radioml \
+        --inject-point=model-input --radioml-bin-dir "F:/嵌赛/rml23_stage_g_test/radioml_route_a_test"
+  禁止写 *_PASS / PROJECT_COMPLETE / FINAL_* / 分类通过 / 项目完成。
+================================================================================

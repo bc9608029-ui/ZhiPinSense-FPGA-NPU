@@ -1,0 +1,50 @@
+# SHA-256 manifest — sdr_adapter system layer (任务 39e5b：SDR 到货前系统集成准备)
+# Generated 2026-10-04 after the system-integration additions (batch 2):
+#   * 三层类别契约 categories.hpp（冻结8/当前10/目标12，不写死8类）
+#   * 部署预处理 preprocess.hpp（physical 前端 float 参考）
+#   * 分类接口 classify.hpp（MockClassifier，明确 MOCK logits）
+#   * result_frame.hpp + ui::result_frame_line + ui::Sink/UnixSocketSink
+#   * Pluto 接口层 pluto.hpp / iio_backend.hpp / mock_iio.hpp（可选编译 libiio）
+#   * 离线端到端链 offline_chain.hpp / offline_e2e_main.cpp
+#   * config.hpp + config/sdr_adapter_config.conf（pluto_* 运行时字段，0/""=未指定）
+#   * contracts/sampling_and_iq_contract.md（§9 类别契约 + §10 Pluto）
+#   * tests/test_all.cpp + run_tests.sh（212 pass / 0 fail，零告警）
+# 状态 = READY-FOR-HARDWARE-TEST（离线就绪；待上板 / 待 Pluto / 待最终模型，见 REPORT Q）
+# 本清单 2026-10-04 追加 Task 3（libiio 构建门）：pluto_libiio.cpp / libiio_gate.cpp /
+#   build_libiio_gate.sh（分别实编译 SDR_ADAPTER_HAVE_LIBIIO=0/1，=1 链接 libiio 0.26
+#   且无 Pluto 时 4ms 报 device not found、exit 2）。libiio 离线资产在 libiio_offline/
+#   （自有一份 sha256_manifest.txt）。
+# 2026-10-05：12 类契约统一 —— target_12() "GFSK/GMSK" → "GFSK"（权威顺序
+#   OOK,4ASK,AM-DSB,WBFM,2FSK,GFSK,BPSK,QPSK,8PSK,16QAM,64QAM,OFDM）；同步
+#   test_all.cpp 与 contracts/sampling_and_iq_contract.md；categories.hpp /
+#   sampling_and_iq_contract.md / test_all.cpp 哈希已更新。
+# 板级包 board_package/ 与冻结数据**未改**（其清单见 ../board_package/sha256_manifest.txt）。
+# 校验（在 sdr_adapter/ 目录内）：  sha256sum -c sha256_manifest.txt
+cd3f336d043ec8fabece7b6bae837b6d5288aff999b24419748581d11bfc55a6 *categories.hpp
+d80c2aedd423696c58f0f37216a7dd68fd96943b7b9d9f9c2c1094471b832674 *classify.hpp
+6a27f26c1c68a313945794c5cb10926e5bb5dbc95e6beecc4f8dfdb5f54e6621 *config.hpp
+6c0e8724bde7ca16e80a2fd1d9971113cea7310c033d737e5668eb61c4fac09d *iio_backend.hpp
+18d237d2e1e77126e8786c39edf908c33898d4caaf64a3d6827074c843e83919 *iq_frame.hpp
+03ef043c8785ab1090952d345548202a5c51a7f75c5e4862f7f3b450f269e9e0 *iq_source.cpp
+41afcead0989013df6d92a11c8c30f96edafc3d1817af58ce6f23619408ead2d *iq_source.hpp
+68feeadf0df2a0a569faab6c2631dc83ade8f0b7ffb97f02fb3ce2297d0b60dc *logging.hpp
+94877719860fbd3406f027df8359a9565b667367f71d9993fa728de3ecf5d454 *mock_iio.hpp
+a4e9d32fa9b61e9efbc6b2aa35f45210a374930fa24625320b9800cfe9ac69b7 *offline_chain.hpp
+d243a25f7fcac6e670e8647c700e17f2376ad0f26602daeb943e57d786c315c7 *offline_e2e_main.cpp
+0a591200aeaba320a0933c0b42843f6a7b244c535449ea5cd32fc505f1919445 *perf_stats.hpp
+6f72d60c4d06f219b911011bdc365c1ad8d51299bd4991a81d0a15bda46043c6 *pipeline.hpp
+13e0c012fcf39b18e9a16647026d7732d9bfee0dbd7e95a3d5b5168c346fb1df *pluto.hpp
+44575662d5730a0655d54f434950b8281295aeeb70b7dbde9787b93698bfb5de *pluto_libiio.cpp
+9272ae699a2e6087ee528a640b0133a1f65ab167a52d797b2670e9b2f4ab55c1 *preprocess.hpp
+a16f2efaf02e84f4983ff5ebe769034047e815f5d6516432a9ac7a23d1d5a311 *result_frame.hpp
+68c22ed11fdd400cce128372a7b7e35eae93d66cb3c647ada302610673198694 *sequence_monitor.hpp
+bccf83e2e9fe7904c9d74c5e155fd53170bc1900595822d2545671ac04578515 *ui_report.hpp
+83fb3d3d62b098a092d47e685df40d70cec90a4817ae5b877287635dc1584706 *unix_socket_sink.hpp
+bcdc5d4ba9a6a7b65acdd256bc222de031f97c7724b48a380d15d08ea479630c *README.md
+3eb15313e764788ecd1dc6b726f3e0fcd6bf56b56c8b1eb6457c2778acfaf39f *build_libiio_gate.sh
+51cad8b3d42183b763ee6de9ac75cb14884c25e02fd942b8f66dbaf8d8e8b2b1 *libiio_gate.cpp
+085aa15f97f62d5e58c7eb44d57768ae57591974acd8877460e6bbf4b28e5bc9 *../config/sdr_adapter_config.conf
+7e9b332799f944cf75b2ec2d3ee61417faaeb08bf18901e1f1bc520ef78aa194 *../contracts/sampling_and_iq_contract.md
+1767d202c3a44f7a20f47f56ca2cb9fe6d5108f3dfe58e40f3fa58ebea1ccc1c *../tests/test_all.cpp
+cef56d2c56c0d43edb7d6915c9327ecd85533dd7f4ad18665832e67ab0e0c649 *../tests/run_tests.sh
+9282041b1f5e99b42f6f8286d002308b30c771242b94c33252c94ff9827a93e0 *../tests/offline_algo_check.py

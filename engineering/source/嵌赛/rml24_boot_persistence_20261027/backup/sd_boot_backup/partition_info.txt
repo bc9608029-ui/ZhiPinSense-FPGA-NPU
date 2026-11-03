@@ -1,0 +1,15 @@
+=== blkid -o export /dev/mmcblk0p1 ===
+DEVNAME=/dev/mmcblk0p1
+SEC_TYPE=msdos
+LABEL=FAT
+UUID=F8B8-C948
+TYPE=vfat
+PARTUUID=370deffb-01
+
+=== lsblk -f /dev/mmcblk0p1 ===
+NAME      FSTYPE LABEL UUID FSAVAIL FSUSE% MOUNTPOINT
+mmcblk0p1                    950.9M     7% /root/rml24_boot_persistence_20261027/sd_boot_backup/mnt_ro
+
+=== lsblk -b -o NAME,SIZE,FSTYPE,UUID,LABEL /dev/mmcblk0p1 ===
+NAME            SIZE FSTYPE UUID LABEL
+mmcblk0p1 1073741824             

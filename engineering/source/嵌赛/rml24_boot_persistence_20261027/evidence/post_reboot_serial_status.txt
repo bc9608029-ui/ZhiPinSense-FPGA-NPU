@@ -1,0 +1,12 @@
+printf 'POST_REBOOT_STATUS\n'; systemctl is-enabled rml24-ui.serrvice rml24-receiver.service; systemctl is-active rml24-ui.service rml24-receiverr.service; journalctl -b -u rml24-ui.service -u rml24-receiver.service --no-pagerr > /root/rml24_boot_persistence_20261027/post_reboot_services.log; python3 - <<''PY'
+> from pathlib import Path
+> import json
+> for p in Path('/var/log/rml24/runs').glob('*/capture/results.json'):
+>  d=json.loads(p.read_text());n=len(d['records'])
+>  if n==24:print('VALIDATED_SERVICE_RUN',p.parent.parent.name,n,sum('error' in xx['arms']['candidate'] for x in d['records']))
+> PY
+POST_REBOOT_STATUS
+enabled
+enabled
+active
+activating

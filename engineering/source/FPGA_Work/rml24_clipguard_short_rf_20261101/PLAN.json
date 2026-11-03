@@ -1,0 +1,15 @@
+{
+  "scope": "30-item short paired raw acquisition;24 actual1-repeat class0 and6 actual8-repeat controls; unknown repeat count inferred from public tail",
+  "tx_gain_db": -40,
+  "tx_scale": 68.46059377833956,
+  "sample_rate_hz": 2560000,
+  "tx_bandwidth_hz": 18000000,
+  "rx_bandwidth_hz": 5000000,
+  "center_hz": 2403600000,
+  "hold_sec": 8,
+  "gap_sec": 0.5,
+  "capture_sec": 330,
+  "selection": "First eligible pair by initial timestamp, both initial/final within TX start+1.5s to end-.3s, never by prediction",
+  "gain_rule": "First freeze AGC; if ADC peak>=.9*2048, step down6dB for hard saturation or ceil20log10(peak/(.8*2048)) otherwise; at most3 bounded recaptures",
+  "deployment": false
+}

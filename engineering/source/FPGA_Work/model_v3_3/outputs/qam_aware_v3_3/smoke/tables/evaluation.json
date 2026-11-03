@@ -1,0 +1,49 @@
+{
+  "checkpoint": "F:\\FPGA_Work\\model_v3_3\\outputs\\qam_aware_v3_3\\smoke\\checkpoints\\best.pt",
+  "checkpoint_epoch": 1,
+  "final_blind_test_accessed": false,
+  "suites": {
+    "v2_compatible": {
+      "suite": "v2_compatible",
+      "split": "test",
+      "scope": "development-only; v3_3_final_blind_test was not accessed",
+      "exact_v2_test_namespace": true,
+      "seed": 2026,
+      "samples": 240,
+      "accuracy": 0.9083333333333333,
+      "macro_f1": 0.9078810229537948,
+      "qam_mean_accuracy": 0.6833333333333333,
+      "per_class_accuracy": {
+        "BPSK": 1.0,
+        "QPSK": 1.0,
+        "8PSK": 0.9,
+        "16QAM": 0.7,
+        "64QAM": 0.6666666666666666,
+        "2FSK": 1.0,
+        "CPFSK": 1.0,
+        "OFDM": 1.0
+      },
+      "per_class_f1": {
+        "BPSK": 1.0,
+        "QPSK": 0.9375,
+        "8PSK": 0.9473684210526315,
+        "16QAM": 0.6885245901639344,
+        "64QAM": 0.6896551724137931,
+        "2FSK": 1.0,
+        "CPFSK": 1.0,
+        "OFDM": 1.0
+      }
+    }
+  },
+  "fpga_sim_gap": {
+    "scope": "FP32 vs FPGA Mandatory-Core emulation; not a real-board measurement",
+    "split": "test",
+    "seed": 2026,
+    "fp32_accuracy": 0.9083333333333333,
+    "fp32_macro_f1": 0.9078810229537948,
+    "fpga_sim_accuracy": 0.8208333333333333,
+    "fpga_sim_macro_f1": 0.7784227538935098,
+    "accuracy_gap": 0.08750000000000002,
+    "macro_f1_gap": 0.12945826906028501
+  }
+}

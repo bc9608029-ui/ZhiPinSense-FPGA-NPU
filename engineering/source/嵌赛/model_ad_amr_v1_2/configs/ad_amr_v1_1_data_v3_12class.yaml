@@ -1,0 +1,54 @@
+_base: configs/ad_amr_v1_1_data_v2.yaml
+
+# Twelve-class V1.1 target.  RadioML2018.01A remains a 24-class trunk
+# pretraining source; the target head is newly initialized and fine-tuned on a
+# balanced, single-source synthetic dataset containing OOK and 4ASK.
+output_root: outputs/ad_amr_v1_1_data_v3_12class/formal/seed2026
+
+signal:
+  modulations: [OOK, 4ASK, AM-DSB, WBFM, 2FSK, GFSK, BPSK, QPSK, 8PSK, 16QAM, 64QAM, OFDM]
+
+dataset:
+  # Exactly balanced: 21 SNR x 12 classes x 150/30 repetitions.
+  train_samples: 37800
+  val_samples: 7560
+
+training:
+  # Exact-name distillation only.  In particular, CPFSK is not relabelled as
+  # GFSK.  OOK and 4ASK learn from supervised targets, not unrelated teachers.
+  distillation:
+    class_aliases: null
+
+evaluation:
+  samples: 7560
+  ood_samples: 2520
+
+public_pretraining:
+  output_root: outputs/ad_amr_v1_1_data_v3_12class/public_pretrain
+
+initialization:
+  public_checkpoint: outputs/ad_amr_v1_1_data_v3_12class/public_pretrain/checkpoints/best.pt
+
+data_v3_pilot:
+  epochs: 30
+  seed: 2026
+  variants: [scratch, radioml_pretrained]
+  focus_ood_domains: [cfo_strong, multipath, multi_impairment]
+  gates:
+    min_macro_f1_gain: 0.005
+    min_rated_0_20_gain: -0.005
+    min_snr_0_gain: -0.02
+    min_rated_class_delta: -0.03
+    max_focus_ood_drop_increase: 0.01
+
+data_v3_formal:
+  seeds: [2026, 2027]
+  epochs: 100
+  minimum_epochs_before_stopping: 30
+
+acceptance:
+  gates:
+    # Existing absolute gates are intentionally retained for the harder
+    # twelve-class task.  New ASK classes receive an additional explicit floor.
+    each_seed_new_ask_rated_accuracy: 0.75
+

@@ -1,0 +1,24 @@
+test_actual_assets_two_three_four_all_combinations (__main__.CoreTests.test_actual_assets_two_three_four_all_combinations) ... ok
+test_each_lane_payload_recoverable_from_four_lane_sum (__main__.CoreTests.test_each_lane_payload_recoverable_from_four_lane_sum) ... ok
+test_fourth_lane_clipping_rejected_not_normalized (__main__.CoreTests.test_fourth_lane_clipping_rejected_not_normalized) ... ok
+test_invalid_frequency_and_nan_rejected (__main__.CoreTests.test_invalid_frequency_and_nan_rejected) ... ok
+test_two_lane_matches_frozen_resample_shift (__main__.CoreTests.test_two_lane_matches_frozen_resample_shift) ... ok
+test_all_attribute_tolerance_boundaries (__main__.WorkerTests.test_all_attribute_tolerance_boundaries) ... ok
+test_config_readback_failure_does_not_send_and_restores (__main__.WorkerTests.test_config_readback_failure_does_not_send_and_restores) ... ok
+test_device_context_open_failure_not_success (__main__.WorkerTests.test_device_context_open_failure_not_success) ... ok
+test_invalid_scene_command_stops_and_restores (__main__.WorkerTests.test_invalid_scene_command_stops_and_restores) ... ok
+test_observed_device_rounding_combination_reaches_send (__main__.WorkerTests.test_observed_device_rounding_combination_reaches_send) ... ok
+test_offline_never_imports_radio (__main__.WorkerTests.test_offline_never_imports_radio) ... ok
+test_one_hz_rate_rounding_accepted_but_two_hz_rejected (__main__.WorkerTests.test_one_hz_rate_rounding_accepted_but_two_hz_rejected) ... ok
+test_real_silence_opens_no_transmit_buffer (__main__.WorkerTests.test_real_silence_opens_no_transmit_buffer) ... ok
+test_restore_failure_not_success (__main__.WorkerTests.test_restore_failure_not_success) ... ok
+test_send_failure_closes_context_and_restores (__main__.WorkerTests.test_send_failure_closes_context_and_restores) ... ok
+test_stop_before_start_opens_no_device (__main__.WorkerTests.test_stop_before_start_opens_no_device) ... ok
+test_stop_failure_not_success (__main__.WorkerTests.test_stop_failure_not_success) ... ok
+test_switch_stop_then_restore_and_independent_readback (__main__.WorkerTests.test_switch_stop_then_restore_and_independent_readback) ... ok
+test_unknown_uri_opens_no_device (__main__.WorkerTests.test_unknown_uri_opens_no_device) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 11.670s
+
+OK

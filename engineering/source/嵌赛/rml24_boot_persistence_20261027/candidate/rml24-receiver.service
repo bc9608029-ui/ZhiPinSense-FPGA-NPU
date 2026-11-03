@@ -1,0 +1,18 @@
+[Unit]
+Description=RML24 frozen receiver waiting for PC Pluto transmitter
+Requires=rml24-ui.service
+After=rml24-ui.service rc-local.service network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash /opt/rml24-system/startup/start-receiver.sh
+Restart=always
+RestartSec=30
+KillSignal=SIGINT
+KillMode=control-group
+TimeoutStopSec=20
+
+[Install]
+WantedBy=multi-user.target

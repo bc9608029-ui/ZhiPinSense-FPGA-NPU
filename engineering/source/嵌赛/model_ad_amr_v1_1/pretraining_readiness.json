@@ -1,0 +1,46 @@
+{
+  "project": "AD-AMR V1.1 ten-class deployable student",
+  "status": "ready-for-cuda-preflight",
+  "ready_to_run_cuda_preflight": true,
+  "ready_for_formal_training": false,
+  "formal_gpu_training_started": false,
+  "final_blind_data_accessed": false,
+  "frozen_assets_modified": false,
+  "classes": ["AM-DSB", "WBFM", "2FSK", "GFSK", "BPSK", "QPSK", "8PSK", "16QAM", "64QAM", "OFDM"],
+  "input_contract": "iq[N,2,1024] -> logits[N,10]",
+  "single_deployed_model": true,
+  "student_parameters": 278778,
+  "teacher_assets": {
+    "v2_sha256": "f9e4b5e5513f60907aa69416df3374353848272e14744cb193a46d06b02d71a6",
+    "v1_seed2026_sha256": "01132536803052e2b28618c0426485ee7274ba1e8f69b9e24e571df496938f83",
+    "v1_seed2027_sha256": "5f629d563e9c0e3f169e9419f528e6aee819b9b5473e673b5dc95f4912f99dba"
+  },
+  "deployment": {
+    "onnx_opset": 17,
+    "allowed_ops": ["Add", "BatchNormalization", "Conv", "Gemm", "ReduceMean", "Relu"],
+    "unexpected_ops_in_cpu_smoke": [],
+    "vendor_compile_and_board_parity_still_required": true
+  },
+  "training": {
+    "pilot_epochs": 30,
+    "pilot_variants": ["student_only", "v1_distill", "dual_distill"],
+    "formal_max_epochs": 100,
+    "formal_seeds": [2026, 2027],
+    "minimum_epochs_before_stopping": 30,
+    "early_stopping_patience": 12,
+    "cuda_amp_dtype": "bfloat16",
+    "checkpoint_selection": "gate-aware composite"
+  },
+  "local_verification": {
+    "pytest": "45 passed, 2 skipped before final packaging rerun",
+    "skips": "CUDA-only on local CPU host",
+    "cpu_train_resume": "pass",
+    "fixed_batch_overfit": "250 steps, loss 2.288789 -> 0.0000298, accuracy 1.0, finite gradients",
+    "onnx_checker_whitelist_runtime_parity": "pass",
+    "smoke_onnx_ops": {"Add": 12, "Conv": 28, "Gemm": 2, "ReduceMean": 1, "Relu": 24},
+    "smoke_ort_max_abs_diff": 0.0000057220458984375,
+    "shell_files": "LF-only/no-BOM; bash executable unavailable locally, bash -n reruns in AutoDL preflight context"
+  },
+  "archive_sha256_record": "dist/ad_amr_v1_1_autodl.zip.sha256 (external sidecar; archive cannot contain its own stable hash)",
+  "next_action": "bash autodl_ad_amr_v1_1/run_preflight.sh"
+}

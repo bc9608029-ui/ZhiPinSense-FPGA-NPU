@@ -1,0 +1,127 @@
+{
+  "kind": "RF_SOURCE_RELATIVE_BAND_ENERGY_NOT_SPECTRUM_ANALYZER_CALIBRATION",
+  "captures": 151,
+  "raw_sha_failures": [],
+  "rx_restore": [],
+  "tx_config_ok": true,
+  "tx_restore_ok": {
+    "tx.hardwaregain": true,
+    "tx.sampling_frequency": true,
+    "tx.rf_bandwidth": true,
+    "tlo.frequency": true,
+    "tlo.powerdown": true
+  },
+  "tx_restore_errors": [],
+  "clock_uncertainty_ms": 58,
+  "band_halfwidth_hz": 1150000,
+  "phases": [
+    {
+      "phase": "silence",
+      "start_ns": 1793270581770203500,
+      "end_ns": 1793270627510930300,
+      "captures": 21,
+      "max_clip": 0.0,
+      "median_band_energy": {
+        "A": 3529613.7712612636,
+        "B": 3525130.66898416,
+        "A_plus_fs": 246355625.7021624,
+        "A_minus_fs": 66667955.743741445,
+        "B_plus_fs": 67241262.79268533,
+        "B_minus_fs": 246293746.04667425
+      },
+      "B_over_A_db": -0.005519652368209447
+    },
+    {
+      "phase": "a_only",
+      "start_ns": 1793270627576677700,
+      "end_ns": 1793270673339589500,
+      "captures": 20,
+      "max_clip": 0.0,
+      "median_band_energy": {
+        "A": 6227244932.301391,
+        "B": 3583069.640326039,
+        "A_plus_fs": 240951363.8781996,
+        "A_minus_fs": 65406139.565863706,
+        "B_plus_fs": 65898104.99223527,
+        "B_minus_fs": 5074742959.765032
+      },
+      "B_over_A_db": -32.400406987189974,
+      "A_image_band_ratios_db": {
+        "A_plus_fs": -14.123665589691266,
+        "A_minus_fs": -19.786774311479764
+      }
+    },
+    {
+      "phase": "b_only",
+      "start_ns": 1793270673406090400,
+      "end_ns": 1793270719271675300,
+      "captures": 20,
+      "max_clip": 0.0,
+      "median_band_energy": {
+        "A": 3613325.778612663,
+        "B": 6259922214.320193,
+        "A_plus_fs": 5312377766.87525,
+        "A_minus_fs": 65116913.884509385,
+        "B_plus_fs": 64943998.57295908,
+        "B_minus_fs": 224882658.6599759
+      },
+      "B_over_A_db": 32.38661817245349,
+      "B_image_band_ratios_db": {
+        "B_plus_fs": -19.840299122783282,
+        "B_minus_fs": -14.446129696618243
+      }
+    },
+    {
+      "phase": "both",
+      "start_ns": 1793270719345958900,
+      "end_ns": 1793270765157052900,
+      "captures": 20,
+      "max_clip": 0.0,
+      "median_band_energy": {
+        "A": 6064318850.365569,
+        "B": 6038374885.333611,
+        "A_plus_fs": 5064414382.141113,
+        "A_minus_fs": 65676879.77805195,
+        "B_plus_fs": 65802674.80715898,
+        "B_minus_fs": 4927512559.610157
+      },
+      "B_over_A_db": -0.01861955421970341
+    },
+    {
+      "phase": "a_only",
+      "start_ns": 1793270765226417300,
+      "end_ns": 1793270811166279900,
+      "captures": 20,
+      "max_clip": 0.0,
+      "median_band_energy": {
+        "A": 6194744320.02046,
+        "B": 3594507.930500296,
+        "A_plus_fs": 193998230.72204882,
+        "A_minus_fs": 66131199.58245249,
+        "B_plus_fs": 65615549.82434522,
+        "B_minus_fs": 4995992389.816223
+      },
+      "B_over_A_db": -32.363839400196014,
+      "A_image_band_ratios_db": {
+        "A_plus_fs": -15.042256169934934,
+        "A_minus_fs": -19.716169855135565
+      }
+    },
+    {
+      "phase": "silence",
+      "start_ns": 1793270811236733100,
+      "end_ns": 1793270857041312500,
+      "captures": 20,
+      "max_clip": 0.0,
+      "median_band_energy": {
+        "A": 3560060.473745741,
+        "B": 3578964.9064815263,
+        "A_plus_fs": 171552124.069502,
+        "A_minus_fs": 69435036.30144373,
+        "B_plus_fs": 69134399.79794648,
+        "B_minus_fs": 171339850.71033934
+      },
+      "B_over_A_db": 0.023000646652791345
+    }
+  ]
+}

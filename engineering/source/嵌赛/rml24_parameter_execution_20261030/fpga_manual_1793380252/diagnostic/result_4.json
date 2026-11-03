@@ -1,0 +1,16 @@
+{
+  "iq_sha256": "1b5059fe34bb38c6ca9070250e2cccd51655e28048fd3808895c861c1b5302e0",
+  "requested": "fpga",
+  "backend_used": "fpga",
+  "ok": true,
+  "fallback_reason": null,
+  "driver_rc": 0,
+  "elapsed_seconds": 0.04768793999994614,
+  "comparison": {
+    "pass_": true,
+    "relative_l1": 0.0,
+    "peak_power_relative_error": 0.0,
+    "peak_ok": true,
+    "peak_bin": 0
+  }
+}

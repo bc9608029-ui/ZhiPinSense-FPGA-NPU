@@ -1,0 +1,15 @@
+printf 'POST_TEST_EVIDENCE\n''; for d in /root/amr_pair_validation_20261026_r1 /root/amr_pair_validation_202611026_r2 /root/amr_pair_development_20261026_r3; do echo "$d"; grep -ao 'NPU_STRE AM_STOP[^[:cntrl:]]*' "$d/npu.log"; cat "$d/capture/restore.json" 2>/dev/null; doone; sha256sum /root/amr_rescue_20261025/pilot_recovery.py /root/amr_rescue_202611025/board_live_rx.py /root/amr_rescue_20261025/pluto_link_probe.py /root/amr_resscue_20261025/run_board.sh /root/realrf_finetune_pilot1_test_1773373090/model_rmll24_bf16/rml24_adamrv11_bf16.json /root/realrf_finetune_pilot1_test_1773373090/moodel_rml24_bf16/rml24_adamrv11_bf16.raw; pgrep -af 'npu_stream|paired_board|replaay_candidate' || true
+POST_TEST_EVIDENCE
+/root/amr_pair_validation_20261026_r1
+[01;31m[KNPU_STREAM_STOP frames=3840 apply=1 reset=3839 discipline=1[m[K
+[]/root/amr_pair_validation_20261026_r2
+[01;31m[KNPU_STREAM_STOP frames=3840 apply=1 reset=3839 discipline=1[m[K
+[]/root/amr_pair_development_20261026_r3
+[01;31m[KNPU_STREAM_STOP frames=384 apply=1 reset=383 discipline=1[m[K
+d7538a1e27b65cd6b712607b485f1e07de447467bbfdbb04ce67143f9d797713  /root/amr_rescue_20261025/pilot_recovery.py
+2baa4523ff4ae500b10e6fe239f2d3c24bbfbb3185868e202319de3e0eb95107  /root/amr_rescue_20261025/board_live_rx.py
+1b248f8f391976513c35ca54f31d7daef3fa363e2d095940f9ff17d4d60126a2  /root/amr_rescue_20261025/pluto_link_probe.py
+f3c720dbac3f991bc786fc43067938001139f4bb6442765aca5d4bb27800c797  /root/amr_rescue_20261025/run_board.sh
+28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42  /root/realrf_finetune_pilot1_test_1773373090/model_rml24_bf16/rml24_adamrv11_bf16.json
+c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151  /root/realrf_finetune_pilot1_test_1773373090/model_rml24_bf16/rml24_adamrv11_bf16.raw
+(base) root@U:~/amr_rescue_gmsk_candidate_20261026# 

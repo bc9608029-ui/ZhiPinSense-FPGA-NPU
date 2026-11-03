@@ -1,0 +1,132 @@
+{
+  "not_deployed": true,
+  "failures": [
+    {
+      "score": {
+        "index": 2,
+        "expected": 23,
+        "pred": 10,
+        "chosen_frame": 41,
+        "correct": false,
+        "missing": false
+      },
+      "source": "23_07.bin",
+      "seconds_after_tx_start": 7.44358415,
+      "seconds_before_tx_end": 32.55559935,
+      "gain": {
+        "selected_gain_db": 60.0,
+        "readback_gain_db": 60.0,
+        "settle_buffers": 3,
+        "initial_adc_stats": {
+          "peak": 826.0,
+          "rail_count": 0
+        },
+        "final_adc_stats": {
+          "peak": 826.0,
+          "rail_count": 0
+        },
+        "final_gain_db": 60.0,
+        "backoff_steps": [],
+        "headroom_resolved": true
+      },
+      "scan": [
+        {
+          "scan_index": 9,
+          "scan_points": 11,
+          "sweep_cycle": 3,
+          "lo_hz": 2403000000,
+          "public_score": 0.8368072418745472,
+          "cfo_hz": 599929.6731361991,
+          "captured_ns": 1773415660822830320,
+          "captured_monotonic_ns": 43173821199500,
+          "accepted": true,
+          "centred_fallback_used": false,
+          "primary_confirmed_score": 0.9710153924729372,
+          "primary_confirmed_cfo_hz": 1.3281744338404822,
+          "confirmed_lo_hz": 2403599928,
+          "confirmed_ns": 1773415663062369670,
+          "confirmed_monotonic_ns": 43176060738760,
+          "confirmed_score": 0.9710153924729372,
+          "confirmed_cfo_hz": 1.3281744338404822,
+          "reason": "CENTRED_PUBLIC_FRAME"
+        }
+      ],
+      "next_frames": [
+        {
+          "frame": 42,
+          "pred": 23,
+          "center_hz": 2403599927
+        },
+        {
+          "frame": 43,
+          "pred": -1,
+          "center_hz": 2404999998
+        }
+      ]
+    },
+    {
+      "score": {
+        "index": 16,
+        "expected": 19,
+        "pred": 20,
+        "chosen_frame": 195,
+        "correct": false,
+        "missing": false
+      },
+      "source": "19_00.bin",
+      "seconds_after_tx_start": 14.63970026,
+      "seconds_before_tx_end": 25.36982744,
+      "gain": {
+        "selected_gain_db": 60.0,
+        "readback_gain_db": 60.0,
+        "settle_buffers": 3,
+        "initial_adc_stats": {
+          "peak": 724.0,
+          "rail_count": 0
+        },
+        "final_adc_stats": {
+          "peak": 724.0,
+          "rail_count": 0
+        },
+        "final_gain_db": 60.0,
+        "backoff_steps": [],
+        "headroom_resolved": true
+      },
+      "scan": [
+        {
+          "scan_index": 9,
+          "scan_points": 11,
+          "sweep_cycle": 17,
+          "lo_hz": 2403000000,
+          "public_score": 0.8689811724629097,
+          "cfo_hz": 599941.2801205014,
+          "captured_ns": 1773416231852975290,
+          "captured_monotonic_ns": 43744851344090,
+          "accepted": true,
+          "centred_fallback_used": false,
+          "primary_confirmed_score": 0.8629606833517407,
+          "primary_confirmed_cfo_hz": -2.46038210331398,
+          "confirmed_lo_hz": 2403599940,
+          "confirmed_ns": 1773416234072762780,
+          "confirmed_monotonic_ns": 43747071131970,
+          "confirmed_score": 0.8629606833517407,
+          "confirmed_cfo_hz": -2.46038210331398,
+          "reason": "CENTRED_PUBLIC_FRAME"
+        }
+      ],
+      "next_frames": [
+        {
+          "frame": 196,
+          "pred": 19,
+          "center_hz": 2403599942
+        },
+        {
+          "frame": 197,
+          "pred": -1,
+          "center_hz": 2404999998
+        }
+      ]
+    }
+  ],
+  "conclusion": "Both selected captures have correct center, strong public confirmation, no ADC rail or headroom backoff. Raw/recovered/model-input evidence is required after controller releases devices; not enough evidence to attribute to gain alone. No scoring or candidate changes."
+}

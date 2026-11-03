@@ -1,0 +1,95 @@
+================================================================================
+ M29 RML23 Stage G — RadioML/合成IQ 无射频三路数字注入判责 — 最终交付
+================================================================================
+状态: M29-RML23-SYNTHETIC-IQ-INJECTION-READY-FOR-BOARD-TEST
+      （最高允许状态；板端真实混淆率由用户上板观测；本轮未碰板、未训练、
+       未写任何 *_PASS / PROJECT_COMPLETE / FINAL_*）
+
+基线（本交付的相对基准）:
+  sdr_rml23_live_board_package_diag_errata_39e5.tar.gz
+      sha256 77a56eb32028b3772587a2757739b678676e95d2816e352d092fe495f0ced13f
+      （诊断勘误 39e5 合并全量板端包，504 文件）
+
+--------------------------------------------------------------------------------
+ 两份最终工件（均含 SHA256SUMS manifest，已独立解包 sha256sum -c 校验通过）
+--------------------------------------------------------------------------------
+
+[DIFF] Stage G 独立补丁（12 文件，相对 diag_errata_39e5 基线）
+    dist/sdr_rml23_live_synthetic_iq_patch.tar.gz
+      12 文件  sha256 1158dbfd815b0420e1fde0bbed37620d22f4f991d4fe87af7ebfd63a504f276e
+      manifest: SYNTHETIC_IQ_PATCH_SHA256SUMS.txt  (12 内容)
+      校验: sha256sum -c  => 12 OK / 0 FAIL
+
+[MERGE] 合并全量板端测试包（diag_errata_39e5 基线 + Stage G）
+    dist/sdr_rml23_live_board_package_synthetic_iq.tar.gz
+      511 文件  sha256 6c3258a77e5ee8fa554983e05b581f2f1e48790a9c9ed989429c6206236e1346
+      manifest: sdr_rml23_live_board_package_synthetic_iq.SHA256SUMS.txt (511 内容)
+      校验: sha256sum -c  => 511 OK / 0 FAIL
+
+  确定性: package_synthetic_iq.py 固定 uid/gid=0、mtime=0、GNU tar、gzip mtime=0；
+          .sh/.py 保留可执行位。
+  历史包未覆盖: correctness_fix / rf_fix / heartbeat / UI / live-rx / integrated /
+                integrated_live_rx / diag_errata_39e5 全部原样保留。
+
+--------------------------------------------------------------------------------
+ 文件差异证明（baseline = diag_errata_39e5 vs merged，全量递归 diff）
+--------------------------------------------------------------------------------
+模型 / 标签 / golden / 预处理契约 / RTL / XDC / 位流 / Flash 全部未变化：
+
+  未变化（diff 逐字节一致）:
+    model_rml23/model_24class_ZG.json   sha256 d43a22848fad56195265fc98f9009039e4e9d9e8da7f58fc5042fb2a602edb2d
+    model_rml23/model_24class_ZG.raw    sha256 2425d990dbac0761cfcdb578c2225795e3b700c4afc6800a0b544ff4d50e0cba
+    deployment_golden/  (240 input_N.bin + expected_argmax.tsv + expected_logits* +
+                         manifest.json + coverage_report.json + coverage_supplemental/)
+    contracts/  sdr_adapter/preprocess.hpp  signal_presence.hpp  dsp_measure.hpp  nco.hpp  categories.hpp
+    board_package/rml23_merged.hpp  producer_12class.hpp  live_rx_gating.hpp  capture_hook.hpp
+    （包内不含 RTL/XDC/位流/Flash，此类资产冻结于工程外，本交付未触碰）
+
+  新增（7）:
+    board_package/synthetic_iq_generator.hpp      确定性 RRC 成形调制生成器（BPSK/QPSK/4ASK/16QAM）
+    board_package/synthetic_iq_runner.hpp         三路 tensor 源 + A 路 manifest 解析/fail-closed
+    host_tests/test_synthetic_iq_generator.cpp    host 47 断言
+    host_tests/test_synthetic_iq_runner.cpp       host 39 断言（含 B-vs-C 保真）
+    scripts/extract_radioml_stage_g.py            A 路前置：冻结 test split -> .bin + manifest
+    scripts/verify_radioml_stage_g.py             A 路独立字节一致性校验器
+    docs/M29_RML23_STAGE_G_SYNTHETIC_IQ_INJECTION_AUDIT.md
+
+  修改（5，均为 .cpp/.hpp/.sh，无模型/数据）:
+    board_package/gate9_phase.hpp                 valid_phase() 增 "synthetic-iq"
+    board_package/board_gate9_full_chain_rml23.cpp  run_synthetic_iq_phase + dispatch
+    host_tests/build_host_tests.sh                增 2 个构建目标
+    host_tests/run_tests.sh                       增 2 个运行入口
+    scripts/run_gate9_rml23.sh                    头注释补 --phase=synthetic-iq 用法
+
+--------------------------------------------------------------------------------
+ 三路注入（均不打开 IIO/SDR、不启动 TX）
+--------------------------------------------------------------------------------
+  A  --source=radioml    --inject-point=model-input  --radioml-bin-dir DIR
+     （真实 RadioML2018.01A 冻结 test split，host 先跑 extract_radioml_stage_g.py）
+  B  --source=generated  --inject-point=model-input  --modulation .. --norm ..
+     （128 kSPS / 8 sps RRC 成形，直接切窗进 NPU）
+  C  --source=generated  --inject-point=raw-rx       --modulation .. --norm ..
+     （2.56 MSPS / 160 sps int16，走真实生产 PreprocessChain；最终 tensor 经
+       model-input 路径逐位重放一致）
+
+  GATE_RESULT 为「注入机制健全」判定（processed>0 && valid==processed &&
+  replay_mismatch==0 && npu_discipline），恒带
+  measurement=model_confusion_no_accuracy_threshold；逐帧/逐源类混淆为测量值，
+  不进 PASS 判定。
+
+--------------------------------------------------------------------------------
+ 离线验证（本轮已执行，未碰板）
+--------------------------------------------------------------------------------
+  1. host_tests/test_synthetic_iq_generator   47/47 PASS
+  2. host_tests/test_synthetic_iq_runner      39/39 PASS
+     （B-vs-C 保真: align_nmse<0.005, offset==-585, gain≈0 dB）
+  3. run_tests.sh 全量  =>  ALL HOST TESTS PASSED
+     （test_board_build.sh 24/24, test_rml23_build.sh 7/7, test_cli_override.sh PASSED）
+  4. bash -n syntax check gate9 全绿
+  5. 打包独立解包 sha256sum -c  =>  patch 11 OK / full 511 OK
+
+  host 自洽全绿 ≠ 板端判定；真实混淆率只能由用户上板观测（我禁碰板）。
+  板端复测建议:
+    run_gate9_rml23.sh --phase=synthetic-iq --source=radioml  --inject-point=model-input --radioml-bin-dir DIR
+    run_gate9_rml23.sh --phase=synthetic-iq --source=generated --inject-point=model-input
+    run_gate9_rml23.sh --phase=synthetic-iq --source=generated --inject-point=raw-rx

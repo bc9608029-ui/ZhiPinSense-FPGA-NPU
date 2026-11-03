@@ -1,0 +1,11 @@
+{
+  "status": "READY_FOR_BOARD_BUILD_AND_RF_RETEST",
+  "python_compile": "PASS",
+  "scan_lock_policy": "PASS",
+  "standalone_control_contract": "PASS",
+  "static_audit": "PASS_16_OF_16",
+  "cpp_host_compile": "NOT_RUN_NO_WINDOWS_CPP_TOOLCHAIN",
+  "aarch64_build": "NOT_RUN",
+  "real_rf_retest": "NOT_RUN",
+  "production_promoted": false
+}

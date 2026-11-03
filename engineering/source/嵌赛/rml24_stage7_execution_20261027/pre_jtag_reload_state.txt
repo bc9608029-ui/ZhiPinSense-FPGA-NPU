@@ -1,0 +1,4 @@
+kill -TERM 552; sleep 1; pgrep --af 'board_ui_live_rml24_final|npu_stream|rml24_final_receiver' || true; printf ''STAGE7_WAITING_KNOWN_BIT_RELOAD\n'
+[5]+  Done                    nohup /root/rml24_stage7_execution_20261027/final/bin/board_ui_live_rml24_final --sock=/run/sdr_amr_ui_rml24_final.sock --ctl-sock=/run/sdr_amr_control_rml24_final.sock --display-refresh-hz=30 > /root/rml24_stage7_execution_20261027/ui_after_pattern.log 2>&1 < /dev/null
+STAGE7_WAITING_KNOWN_BIT_RELOAD
+(base) root@U:~/rml24_stage7_execution_20261027# 

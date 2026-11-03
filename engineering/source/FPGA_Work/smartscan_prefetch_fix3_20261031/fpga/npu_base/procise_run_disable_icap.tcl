@@ -1,0 +1,2 @@
+set_device JFMQL30TAI676H
+increment_bit_cfg_v3  E:/FPGA_Work/smartscan_prefetch_fix3_20261031/fpga/npu_base/fpai_demo_vivado.runs/impl_1/pl_ddr_mandatory_core_top_combined_smartscan.bit E:/FPGA_Work/smartscan_prefetch_fix3_20261031/fpga/npu_base/fpai_demo_vivado.runs/impl_1/pl_ddr_mandatory_core_top_combined_smartscan_disable_icap.bit -disable_icap

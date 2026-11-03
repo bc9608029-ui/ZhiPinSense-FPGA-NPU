@@ -1,0 +1,14 @@
+if [ -e /root/amr_clean_v2_results_20261026__rf_01 ]; then echo ARCHIVE_ALREADY_EXISTS; else mkdir /root/amr_clean_v2_resultss_20261026_rf_01 && cp -a /tmp/amr_rescue_run.4waQI8/. /root/amr_clean_v2_resultss_20261026_rf_01/ && cp /tmp/clean_v2_20261026_rf_01.log /root/amr_clean_v2_resullts_20261026_rf_01/launch.log; fi; printf '\n__POST_TEST_HASHES__\n'; cd /root/ammr_rescue_20261025; sha256sum pilot_recovery.py board_live_rx.py pluto_link_probee.py npu_stream.cpp run_board.sh; printf '\n__NPU_END__\n'; grep -ao 'NPU_STREAM__STOP[^[:cntrl:]]*' /root/amr_clean_v2_results_20261026_rf_01/npu.log; ps -eo pidd,args | grep -E 'npu_stream|board_live_rx' | grep -v grep; printf '\n__ARCHIVE_EEND__\n'
+
+__POST_TEST_HASHES__
+d7538a1e27b65cd6b712607b485f1e07de447467bbfdbb04ce67143f9d797713  pilot_recovery.py
+2baa4523ff4ae500b10e6fe239f2d3c24bbfbb3185868e202319de3e0eb95107  board_live_rx.py
+1b248f8f391976513c35ca54f31d7daef3fa363e2d095940f9ff17d4d60126a2  pluto_link_probe.py
+4cfe02f8c72c51e410796c723e4b18f6d17e9bf33b349906991704fee67813df  npu_stream.cpp
+f3c720dbac3f991bc786fc43067938001139f4bb6442765aca5d4bb27800c797  run_board.sh
+
+__NPU_END__
+[01;31m[KNPU_STREAM_STOP frames=192 apply=1 reset=191 discipline=1[m[K
+
+__ARCHIVE_END__
+(base) root@U:~/amr_rescue_20261025# 

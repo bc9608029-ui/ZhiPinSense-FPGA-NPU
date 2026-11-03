@@ -1,0 +1,12 @@
+{
+  "status": "PASS_OFFLINE_ONLY",
+  "checks": [
+    "opening does not create a worker or enable real TX",
+    "Qt start -> actual QProcess -> offline four-lane waveform plan -> acknowledgement",
+    "only A / A+B / remove B / all / individual D checkbox",
+    "all silent / cooperative stop / process finished / controls unlocked",
+    "close while running waits for worker cleanup"
+  ],
+  "real_transmission": false,
+  "screenshot": "MULTI_UI_PREVIEW.png"
+}

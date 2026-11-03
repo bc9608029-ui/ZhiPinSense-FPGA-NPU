@@ -1,0 +1,29 @@
+{
+  "kind": "RML24_PUBLIC_BW_VERIFICATION_V1",
+  "fs_hz": 2560000,
+  "note": "train/tail regenerated verbatim from candidate_two_dc.py (seed 9011); one QPSK symbol per sample => full-band",
+  "blocks": [
+    {
+      "label": "train",
+      "samples": 2048,
+      "peak_bin_db": 32.58106852934038,
+      "median_bin_db": 24.887378057017912,
+      "occupied_bw_hz_minus20db": 2557500.0,
+      "occupied_bw_frac_minus20db": 0.9990234375,
+      "bw_90pct_hz": 1727500.0,
+      "bw_99pct_hz": 2357500.0,
+      "bw_99pct_frac": 0.9208984375
+    },
+    {
+      "label": "tail",
+      "samples": 2048,
+      "peak_bin_db": 31.80571965293476,
+      "median_bin_db": 25.317028963212806,
+      "occupied_bw_hz_minus20db": 2560000.0,
+      "occupied_bw_frac_minus20db": 1.0,
+      "bw_90pct_hz": 1910000.0,
+      "bw_99pct_hz": 2427500.0,
+      "bw_99pct_frac": 0.9482421875
+    }
+  ]
+}

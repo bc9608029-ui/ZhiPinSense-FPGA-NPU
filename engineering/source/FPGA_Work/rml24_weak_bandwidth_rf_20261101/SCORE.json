@@ -1,0 +1,1170 @@
+[
+  {
+    "mode": "gainfreeze_bw3",
+    "denominator": 48,
+    "correct": 42,
+    "missing": 0,
+    "rows": [
+      {
+        "expected": 11,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13148431787100,
+          "ok": true,
+          "pred": 11,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 19,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13153551582530,
+          "ok": true,
+          "pred": 19,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 13,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13156911922770,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 6,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13160401910490,
+          "ok": true,
+          "pred": 6,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 4,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13165552051680,
+          "ok": true,
+          "pred": 4,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 16,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13168872032380,
+          "ok": true,
+          "pred": 16,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 4,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13173102098870,
+          "ok": true,
+          "pred": 4,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 11,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13177872275360,
+          "ok": true,
+          "pred": 11,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 3,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13181322387160,
+          "ok": true,
+          "pred": 3,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 10,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13186082433880,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 0,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13189482766430,
+          "ok": true,
+          "pred": 0,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 17,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13192882524340,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 5,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13197632586810,
+          "ok": true,
+          "pred": 5,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 10,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13202072660900,
+          "ok": true,
+          "pred": 10,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 19,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13205443135820,
+          "ok": true,
+          "pred": 19,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 9,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13210383135560,
+          "ok": true,
+          "pred": 9,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 7,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13213782911350,
+          "ok": true,
+          "pred": 7,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 8,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13217313010470,
+          "ok": true,
+          "pred": 8,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 14,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13221983061210,
+          "ok": true,
+          "pred": 14,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 1,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13226893452920,
+          "ok": true,
+          "pred": 1,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 9,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13229823025270,
+          "ok": true,
+          "pred": 9,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 23,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13234943288350,
+          "ok": true,
+          "pred": 23,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 18,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13238363173470,
+          "ok": true,
+          "pred": 18,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 12,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13242573463910,
+          "ok": true,
+          "pred": 12,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 2,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13246893858340,
+          "ok": true,
+          "pred": 2,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 21,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13249953534760,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 22,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13254754152860,
+          "ok": true,
+          "pred": 22,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 8,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13258113660320,
+          "ok": true,
+          "pred": 8,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 7,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13262773732290,
+          "ok": true,
+          "pred": 7,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 20,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13267553921800,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 5,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13270793901890,
+          "ok": true,
+          "pred": 5,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 21,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13275434079530,
+          "ok": true,
+          "pred": 21,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 1,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13278464083340,
+          "ok": true,
+          "pred": 1,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 22,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13282824171370,
+          "ok": true,
+          "pred": 22,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 2,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13288035054840,
+          "ok": true,
+          "pred": 2,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 23,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13291114089120,
+          "ok": true,
+          "pred": 23,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 17,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13295374599220,
+          "ok": true,
+          "pred": 17,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 16,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13298894481690,
+          "ok": true,
+          "pred": 16,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 3,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13304294293580,
+          "ok": true,
+          "pred": 3,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 0,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13307794612290,
+          "ok": true,
+          "pred": 0,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 14,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13311205102640,
+          "ok": true,
+          "pred": 14,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 13,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13316255167420,
+          "ok": true,
+          "pred": 13,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 15,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13319844788650,
+          "ok": true,
+          "pred": 15,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 15,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13324244926950,
+          "ok": true,
+          "pred": 15,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 18,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13327634917510,
+          "ok": true,
+          "pred": 18,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 12,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13331054988760,
+          "ok": true,
+          "pred": 12,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 6,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13335855063290,
+          "ok": true,
+          "pred": 7,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": false
+      },
+      {
+        "expected": 20,
+        "chosen": {
+          "mode": "gainfreeze_bw3",
+          "m": 13339805153740,
+          "ok": true,
+          "pred": 20,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      }
+    ]
+  },
+  {
+    "mode": "gainfreeze_bw5",
+    "denominator": 48,
+    "correct": 39,
+    "missing": 0,
+    "rows": [
+      {
+        "expected": 11,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13408776524100,
+          "ok": true,
+          "pred": 11,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 19,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13412826279740,
+          "ok": true,
+          "pred": 19,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 13,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13417696526520,
+          "ok": true,
+          "pred": 13,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 6,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13421186604670,
+          "ok": true,
+          "pred": 6,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 4,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13426136676560,
+          "ok": true,
+          "pred": 4,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 16,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13429297118710,
+          "ok": true,
+          "pred": 16,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 4,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13433296878470,
+          "ok": true,
+          "pred": 4,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 11,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13438296890800,
+          "ok": true,
+          "pred": 11,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 3,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13442377000590,
+          "ok": true,
+          "pred": 3,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 10,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13446617079990,
+          "ok": true,
+          "pred": 10,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 0,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13450227587170,
+          "ok": true,
+          "pred": 0,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 17,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13453397166080,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 5,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13458457330030,
+          "ok": true,
+          "pred": 5,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 10,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13461557326140,
+          "ok": true,
+          "pred": 10,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 19,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13466877405090,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 9,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13470087470900,
+          "ok": true,
+          "pred": 9,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 7,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13475437622290,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 8,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13478457549120,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 14,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13482057853810,
+          "ok": true,
+          "pred": 14,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 1,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13487347545930,
+          "ok": true,
+          "pred": 1,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 9,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13490447859840,
+          "ok": true,
+          "pred": 9,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 23,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13494858044480,
+          "ok": true,
+          "pred": 23,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 18,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13498498035280,
+          "ok": true,
+          "pred": 18,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 12,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13503108072660,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 2,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13506347868400,
+          "ok": true,
+          "pred": 2,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 21,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13511058059550,
+          "ok": true,
+          "pred": 21,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 22,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13515998307120,
+          "ok": true,
+          "pred": 22,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 8,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13519448418530,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 7,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13522958394150,
+          "ok": true,
+          "pred": 7,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 20,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13527368444970,
+          "ok": true,
+          "pred": 20,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 5,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13530968696260,
+          "ok": true,
+          "pred": 5,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 21,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13536108706100,
+          "ok": true,
+          "pred": 21,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 1,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13539238720010,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 22,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13543758582650,
+          "ok": true,
+          "pred": 22,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 2,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13548298837920,
+          "ok": true,
+          "pred": 2,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 23,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13551931332000,
+          "ok": true,
+          "pred": 10,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": false
+      },
+      {
+        "expected": 17,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13555999863640,
+          "ok": false,
+          "pred": null,
+          "repeat": null,
+          "combined": 0
+        },
+        "correct": false
+      },
+      {
+        "expected": 16,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13559309129500,
+          "ok": true,
+          "pred": 16,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 3,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13564568950190,
+          "ok": true,
+          "pred": 3,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 0,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13567999378640,
+          "ok": true,
+          "pred": 0,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 14,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13571559374490,
+          "ok": true,
+          "pred": 14,
+          "repeat": 8.0,
+          "combined": 4.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 13,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13576089430640,
+          "ok": true,
+          "pred": 13,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 15,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13580160031380,
+          "ok": true,
+          "pred": 15,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 15,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13585039557740,
+          "ok": true,
+          "pred": 15,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 18,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13588499665000,
+          "ok": true,
+          "pred": 18,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 12,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13592179556230,
+          "ok": true,
+          "pred": 12,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 6,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13596949669080,
+          "ok": true,
+          "pred": 6,
+          "repeat": 8.0,
+          "combined": 0.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 20,
+        "chosen": {
+          "mode": "gainfreeze_bw5",
+          "m": 13601269666130,
+          "ok": true,
+          "pred": 20,
+          "repeat": 8.0,
+          "combined": 3.0
+        },
+        "correct": true
+      }
+    ]
+  }
+]

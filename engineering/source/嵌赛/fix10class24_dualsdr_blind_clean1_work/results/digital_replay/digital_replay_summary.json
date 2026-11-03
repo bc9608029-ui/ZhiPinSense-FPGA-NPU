@@ -1,0 +1,15 @@
+{
+  "backend": "icraft-host-bf16",
+  "flips": {
+    "exact_to_rotated": 1,
+    "orig_to_exact": 0
+  },
+  "note": "digital no-RF three-layer: orig=clean reference (offline only), exact=quantization roundtrip, rotated=frozen-window (capture phase 0). Real RF adds analog IQ imbalance/CFO/gain/arbitrary phase, NOT reproduced here.",
+  "three_layer": {
+    "exact_correct": "24/24",
+    "orig_correct": "24/24",
+    "rotated_blind_window_correct": "23/24"
+  },
+  "token": "M29-RML24-FIX10CLASS24-DUALSDR-BLIND-CLEAN1-DIGITAL-REPLAY",
+  "window_offset": 512
+}

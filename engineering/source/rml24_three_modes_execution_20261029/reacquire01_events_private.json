@@ -1,0 +1,23 @@
+[
+  {
+    "phase": "signal_before",
+    "start_ns": 1793269819883277500,
+    "active": true,
+    "seconds": 60,
+    "end_ns": 1793269879902219800
+  },
+  {
+    "phase": "muted",
+    "start_ns": 1793269879908876800,
+    "active": false,
+    "seconds": 35,
+    "end_ns": 1793269914928379800
+  },
+  {
+    "phase": "signal_after",
+    "start_ns": 1793269914941804200,
+    "active": true,
+    "seconds": 60,
+    "end_ns": 1793269974951209800
+  }
+]

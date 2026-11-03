@@ -1,0 +1,4160 @@
+{
+  "contract": {
+    "development_only": true,
+    "label_blind_aggregation": true,
+    "inputs": "capture order plus frozen NPU logits only",
+    "denominator": 48,
+    "missing_counts_as_wrong": true
+  },
+  "capture_count_histogram": {
+    "5": 1,
+    "6": 2,
+    "7": 37,
+    "8": 8
+  },
+  "unmatched_replay_rows": 273,
+  "summary": {
+    "mean_logits_n1": {
+      "correct": 48,
+      "denominator": 48,
+      "accuracy": 1.0,
+      "available": 48,
+      "missing": 0
+    },
+    "mean_prob_n1": {
+      "correct": 48,
+      "denominator": 48,
+      "accuracy": 1.0,
+      "available": 48,
+      "missing": 0
+    },
+    "confidence_weighted_logits_n1": {
+      "correct": 48,
+      "denominator": 48,
+      "accuracy": 1.0,
+      "available": 48,
+      "missing": 0
+    },
+    "majority_n1": {
+      "correct": 48,
+      "denominator": 48,
+      "accuracy": 1.0,
+      "available": 48,
+      "missing": 0
+    },
+    "mean_logits_n2": {
+      "correct": 48,
+      "denominator": 48,
+      "accuracy": 1.0,
+      "available": 48,
+      "missing": 0
+    },
+    "mean_prob_n2": {
+      "correct": 48,
+      "denominator": 48,
+      "accuracy": 1.0,
+      "available": 48,
+      "missing": 0
+    },
+    "confidence_weighted_logits_n2": {
+      "correct": 48,
+      "denominator": 48,
+      "accuracy": 1.0,
+      "available": 48,
+      "missing": 0
+    },
+    "majority_n2": {
+      "correct": 48,
+      "denominator": 48,
+      "accuracy": 1.0,
+      "available": 48,
+      "missing": 0
+    },
+    "mean_logits_n3": {
+      "correct": 48,
+      "denominator": 48,
+      "accuracy": 1.0,
+      "available": 48,
+      "missing": 0
+    },
+    "mean_prob_n3": {
+      "correct": 48,
+      "denominator": 48,
+      "accuracy": 1.0,
+      "available": 48,
+      "missing": 0
+    },
+    "confidence_weighted_logits_n3": {
+      "correct": 48,
+      "denominator": 48,
+      "accuracy": 1.0,
+      "available": 48,
+      "missing": 0
+    },
+    "majority_n3": {
+      "correct": 48,
+      "denominator": 48,
+      "accuracy": 1.0,
+      "available": 48,
+      "missing": 0
+    }
+  },
+  "details": {
+    "mean_logits_n1": [
+      {
+        "event_index": 0,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 1,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 2,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 3,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 4,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 5,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 6,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 7,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 8,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 9,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 10,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 11,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 12,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 13,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 14,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 15,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 16,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 17,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 18,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 19,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 20,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 21,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 22,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 23,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 24,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 25,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 26,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 27,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 28,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 29,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 30,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 31,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 32,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 33,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 34,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 35,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 36,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 5,
+        "correct": true
+      },
+      {
+        "event_index": 37,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 38,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 39,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 40,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 41,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 42,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 43,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 44,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 45,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 46,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 47,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 7,
+        "correct": true
+      }
+    ],
+    "mean_prob_n1": [
+      {
+        "event_index": 0,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 1,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 2,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 3,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 4,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 5,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 6,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 7,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 8,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 9,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 10,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 11,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 12,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 13,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 14,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 15,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 16,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 17,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 18,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 19,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 20,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 21,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 22,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 23,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 24,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 25,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 26,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 27,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 28,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 29,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 30,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 31,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 32,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 33,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 34,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 35,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 36,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 5,
+        "correct": true
+      },
+      {
+        "event_index": 37,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 38,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 39,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 40,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 41,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 42,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 43,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 44,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 45,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 46,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 47,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 7,
+        "correct": true
+      }
+    ],
+    "confidence_weighted_logits_n1": [
+      {
+        "event_index": 0,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 1,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 2,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 3,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 4,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 5,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 6,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 7,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 8,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 9,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 10,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 11,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 12,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 13,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 14,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 15,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 16,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 17,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 18,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 19,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 20,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 21,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 22,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 23,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 24,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 25,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 26,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 27,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 28,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 29,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 30,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 31,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 32,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 33,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 34,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 35,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 36,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 5,
+        "correct": true
+      },
+      {
+        "event_index": 37,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 38,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 39,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 40,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 41,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 42,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 43,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 44,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 45,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 46,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 47,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 7,
+        "correct": true
+      }
+    ],
+    "majority_n1": [
+      {
+        "event_index": 0,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 1,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 2,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 3,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 4,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 5,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 6,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 7,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 8,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 9,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 10,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 11,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 12,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 13,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 14,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 15,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 16,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 17,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 18,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 19,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 20,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 21,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 22,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 23,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 24,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 25,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 26,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 27,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 28,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 29,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 30,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 31,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 32,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 33,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 34,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 35,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 36,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 5,
+        "correct": true
+      },
+      {
+        "event_index": 37,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 38,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 39,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 40,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 41,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 42,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 43,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 44,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 45,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 46,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 47,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 7,
+        "correct": true
+      }
+    ],
+    "mean_logits_n2": [
+      {
+        "event_index": 0,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 1,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 2,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 3,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 4,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 5,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 6,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 7,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 8,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 9,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 10,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 11,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 12,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 13,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 14,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 15,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 16,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 17,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 18,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 19,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 20,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 21,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 22,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 23,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 24,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 25,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 26,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 27,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 28,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 29,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 30,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 31,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 32,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 33,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 34,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 35,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 36,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 5,
+        "correct": true
+      },
+      {
+        "event_index": 37,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 38,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 39,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 40,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 41,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 42,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 43,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 44,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 45,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 46,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 47,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 7,
+        "correct": true
+      }
+    ],
+    "mean_prob_n2": [
+      {
+        "event_index": 0,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 1,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 2,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 3,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 4,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 5,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 6,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 7,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 8,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 9,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 10,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 11,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 12,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 13,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 14,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 15,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 16,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 17,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 18,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 19,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 20,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 21,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 22,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 23,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 24,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 25,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 26,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 27,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 28,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 29,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 30,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 31,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 32,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 33,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 34,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 35,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 36,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 5,
+        "correct": true
+      },
+      {
+        "event_index": 37,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 38,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 39,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 40,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 41,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 42,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 43,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 44,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 45,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 46,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 47,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 7,
+        "correct": true
+      }
+    ],
+    "confidence_weighted_logits_n2": [
+      {
+        "event_index": 0,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 1,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 2,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 3,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 4,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 5,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 6,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 7,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 8,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 9,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 10,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 11,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 12,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 13,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 14,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 15,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 16,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 17,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 18,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 19,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 20,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 21,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 22,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 23,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 24,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 25,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 26,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 27,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 28,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 29,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 30,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 31,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 32,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 33,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 34,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 35,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 36,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 5,
+        "correct": true
+      },
+      {
+        "event_index": 37,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 38,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 39,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 40,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 41,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 42,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 43,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 44,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 45,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 46,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 47,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 7,
+        "correct": true
+      }
+    ],
+    "majority_n2": [
+      {
+        "event_index": 0,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 1,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 2,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 3,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 4,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 5,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 6,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 7,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 8,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 9,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 10,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 11,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 12,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 13,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 14,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 15,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 16,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 17,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 18,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 19,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 20,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 21,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 22,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 23,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 24,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 25,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 26,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 27,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 28,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 29,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 30,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 31,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 32,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 33,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 34,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 35,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 36,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 5,
+        "correct": true
+      },
+      {
+        "event_index": 37,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 38,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 39,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 40,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 41,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 42,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 43,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 44,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 45,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 46,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 47,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 7,
+        "correct": true
+      }
+    ],
+    "mean_logits_n3": [
+      {
+        "event_index": 0,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 1,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 2,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 3,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 4,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 5,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 6,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 7,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 8,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 9,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 10,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 11,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 12,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 13,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 14,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 15,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 16,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 17,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 18,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 19,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 20,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 21,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 22,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 23,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 24,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 25,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 26,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 27,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 28,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 29,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 30,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 31,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 32,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 33,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 34,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 35,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 36,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 5,
+        "correct": true
+      },
+      {
+        "event_index": 37,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 38,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 39,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 40,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 41,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 42,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 43,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 44,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 45,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 46,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 47,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 7,
+        "correct": true
+      }
+    ],
+    "mean_prob_n3": [
+      {
+        "event_index": 0,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 1,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 2,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 3,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 4,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 5,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 6,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 7,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 8,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 9,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 10,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 11,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 12,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 13,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 14,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 15,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 16,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 17,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 18,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 19,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 20,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 21,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 22,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 23,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 24,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 25,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 26,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 27,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 28,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 29,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 30,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 31,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 32,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 33,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 34,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 35,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 36,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 5,
+        "correct": true
+      },
+      {
+        "event_index": 37,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 38,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 39,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 40,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 41,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 42,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 43,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 44,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 45,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 46,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 47,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 7,
+        "correct": true
+      }
+    ],
+    "confidence_weighted_logits_n3": [
+      {
+        "event_index": 0,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 1,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 2,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 3,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 4,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 5,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 6,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 7,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 8,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 9,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 10,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 11,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 12,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 13,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 14,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 15,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 16,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 17,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 18,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 19,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 20,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 21,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 22,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 23,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 24,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 25,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 26,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 27,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 28,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 29,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 30,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 31,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 32,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 33,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 34,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 35,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 36,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 5,
+        "correct": true
+      },
+      {
+        "event_index": 37,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 38,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 39,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 40,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 41,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 42,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 43,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 44,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 45,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 46,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 47,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 7,
+        "correct": true
+      }
+    ],
+    "majority_n3": [
+      {
+        "event_index": 0,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 1,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 2,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 3,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 4,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 5,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 6,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 7,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 8,
+        "label": 0,
+        "prediction": 0,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 9,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 10,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 11,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 12,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 13,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 14,
+        "label": 9,
+        "prediction": 9,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 15,
+        "label": 2,
+        "prediction": 2,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 16,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 17,
+        "label": 5,
+        "prediction": 5,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 18,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 19,
+        "label": 3,
+        "prediction": 3,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 20,
+        "label": 14,
+        "prediction": 14,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 21,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 22,
+        "label": 1,
+        "prediction": 1,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 23,
+        "label": 23,
+        "prediction": 23,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 24,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 6,
+        "correct": true
+      },
+      {
+        "event_index": 25,
+        "label": 16,
+        "prediction": 16,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 26,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 27,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 28,
+        "label": 6,
+        "prediction": 6,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 29,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 30,
+        "label": 20,
+        "prediction": 20,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 31,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 32,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 33,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 34,
+        "label": 10,
+        "prediction": 10,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 35,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 36,
+        "label": 19,
+        "prediction": 19,
+        "capture_count": 5,
+        "correct": true
+      },
+      {
+        "event_index": 37,
+        "label": 7,
+        "prediction": 7,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 38,
+        "label": 11,
+        "prediction": 11,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 39,
+        "label": 15,
+        "prediction": 15,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 40,
+        "label": 4,
+        "prediction": 4,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 41,
+        "label": 22,
+        "prediction": 22,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 42,
+        "label": 8,
+        "prediction": 8,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 43,
+        "label": 12,
+        "prediction": 12,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 44,
+        "label": 18,
+        "prediction": 18,
+        "capture_count": 8,
+        "correct": true
+      },
+      {
+        "event_index": 45,
+        "label": 17,
+        "prediction": 17,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 46,
+        "label": 13,
+        "prediction": 13,
+        "capture_count": 7,
+        "correct": true
+      },
+      {
+        "event_index": 47,
+        "label": 21,
+        "prediction": 21,
+        "capture_count": 7,
+        "correct": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"error": "Traceback (most recent call last):\n  File \"E:\\FPGA_Work\\rml24_final_deployment_20261031\\sweep24\\continue_device.py\", line 62, in <module>\n    if txprocess.poll() not in (None,0):raise RuntimeError('TX failed; stop round and preserve evidence')\nRuntimeError: TX failed; stop round and preserve evidence\n", "board_evidence": "/root/rml24_fix3_1793452002"}

@@ -1,0 +1,3 @@
+test -f /root/rml24_tx_precision_24rf_20261101/PROGRESS.json &&  echo DIAG_READY; tail -c 600 /root/precision24_diag_20261101.log
+DIAG_READY
+(base) root@U:~# 

@@ -1,0 +1,24 @@
+{
+  "architectures": [
+    "cldnn"
+  ],
+  "model_type": "cldnn",
+  "num_classes": 11,
+  "in_channels": 2,
+  "sample_length": 1024,
+  "input_mode": "iq",
+  "modulation_classes": [
+    "AM-DSB",
+    "AM-SSB",
+    "WBFM",
+    "QPSK",
+    "QAM16",
+    "QAM64",
+    "8PSK",
+    "BPSK",
+    "CPFSK",
+    "GFSK",
+    "PAM4"
+  ],
+  "model_version": "1.0.0"
+}

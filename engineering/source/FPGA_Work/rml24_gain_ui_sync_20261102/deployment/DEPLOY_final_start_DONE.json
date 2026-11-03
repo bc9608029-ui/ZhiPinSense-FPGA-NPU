@@ -1,0 +1,14 @@
+{
+  "software_restart_verified": true,
+  "health": {
+    "ready": true,
+    "run": "/var/log/rml24-integrated/rcf9a75ff2736",
+    "alive": {
+      "npu": true,
+      "ui": true,
+      "rx": true
+    },
+    "release": "/opt/rml24-integrated/releases/gain_ui_sync_20261102"
+  },
+  "physical_cold_boot_pending": true
+}

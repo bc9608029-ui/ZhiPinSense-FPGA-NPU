@@ -1,0 +1,4 @@
+WNS=4.155
+WHS=0.063
+SETUP_PATH=u_ps_ai_wrapper/ps_ai_i/processing_system7_0/inst/PS7_i/PS7_inst/MAXIGP1ACLK -> u_ps_ai_wrapper/ps_ai_i/axi_interconnect_1/xbar/inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_multi_thread.active_id_reg[12]/CE
+HOLD_PATH=u_smoke_regs/run_count_reg[12]/C -> u_smoke_regs/run_count_reg[24]/D

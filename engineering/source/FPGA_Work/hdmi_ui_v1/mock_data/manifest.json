@@ -1,0 +1,66 @@
+{
+  "class_order": [
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "2FSK",
+    "CPFSK",
+    "OFDM"
+  ],
+  "fps": 15.0,
+  "generator": "scripts/generate_mock_data.py",
+  "scenarios": [
+    {
+      "file": "normal.jsonl",
+      "frames": 200,
+      "scenario": "normal",
+      "sha256": "5067884de63b53cb633679bb2bb1a73f8aeb4d28a7a0b9a39aa261cc7e7fe86c"
+    },
+    {
+      "file": "modulation_switch.jsonl",
+      "frames": 200,
+      "scenario": "modulation_switch",
+      "sha256": "650fc111c0cdc04a28614599a3cdec9bf63dcb07853ca2fa22c986526bfb83e9"
+    },
+    {
+      "file": "low_confidence.jsonl",
+      "frames": 200,
+      "scenario": "low_confidence",
+      "sha256": "8f9e9f29db3f78828877b1e032645d437ce92b9ab1afcc6c472881f0eede563d"
+    },
+    {
+      "file": "sdr_disconnect.jsonl",
+      "frames": 31,
+      "scenario": "sdr_disconnect",
+      "sha256": "5ac44768ec04aafcbcd848a84a6ff9640431898a5d6953743139622607cf9ffc"
+    },
+    {
+      "file": "fpga_error.jsonl",
+      "frames": 100,
+      "scenario": "fpga_error",
+      "sha256": "620f1c6c615edba1f836dcb465ee82feac8d7205acfa58f5060fc1568f0cb4d8"
+    },
+    {
+      "file": "npu_timeout.jsonl",
+      "frames": 100,
+      "scenario": "npu_timeout",
+      "sha256": "0380fce17af080213ef061b18b806507a489024940386f0fa40f45f2b17801c9"
+    },
+    {
+      "file": "drop_overflow.jsonl",
+      "frames": 160,
+      "scenario": "drop_overflow",
+      "sha256": "d920bc4e8f044c91a3c472c0332e3d2aa7515a1e08834343ab79af3fdfb70a8f"
+    },
+    {
+      "file": "recovery.jsonl",
+      "frames": 120,
+      "scenario": "recovery",
+      "sha256": "9f14923ef8e5c30e2deefd1df019dea9db338e38ba5f794fe161b3f63997650c"
+    }
+  ],
+  "schema_version": 1,
+  "seed": 539365378
+}

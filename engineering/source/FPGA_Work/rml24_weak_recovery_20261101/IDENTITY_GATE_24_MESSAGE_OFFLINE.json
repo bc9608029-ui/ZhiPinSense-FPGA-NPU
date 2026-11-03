@@ -1,0 +1,578 @@
+[
+  {
+    "class_index": 0,
+    "name": "OOK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986178570641691,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 0,
+    "name": "OOK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.07972669685204302,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 1,
+    "name": "4ASK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9988652431259395,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 1,
+    "name": "4ASK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.0034800709877310957,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 2,
+    "name": "8ASK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9987423183281052,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 2,
+    "name": "8ASK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.04498232481903512,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 3,
+    "name": "BPSK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986374468671699,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 3,
+    "name": "BPSK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.05650813297759191,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 4,
+    "name": "QPSK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986464440523823,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 4,
+    "name": "QPSK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.06972236978129923,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 5,
+    "name": "8PSK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986827388532997,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 5,
+    "name": "8PSK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.1287886641249953,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 6,
+    "name": "16PSK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986901748984411,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 6,
+    "name": "16PSK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.055701878027264826,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 7,
+    "name": "32PSK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9985834632832524,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 7,
+    "name": "32PSK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.06034382611602982,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 8,
+    "name": "16APSK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986950832061384,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 8,
+    "name": "16APSK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.007259866036650078,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 9,
+    "name": "32APSK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986293185113335,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 9,
+    "name": "32APSK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.15935970723063764,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 10,
+    "name": "64APSK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986267662643853,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 10,
+    "name": "64APSK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.09643169496710993,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 11,
+    "name": "128APSK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986190601525544,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 11,
+    "name": "128APSK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.026143405199482182,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 12,
+    "name": "16QAM",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9987007711362119,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 12,
+    "name": "16QAM",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.07180938881451984,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 13,
+    "name": "32QAM",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986398378024925,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 13,
+    "name": "32QAM",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.010155420960358763,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 14,
+    "name": "64QAM",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986866714131664,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 14,
+    "name": "64QAM",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.03851704139301691,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 15,
+    "name": "128QAM",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.998660298608347,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 15,
+    "name": "128QAM",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.051946663682627396,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 16,
+    "name": "256QAM",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986673325502764,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 16,
+    "name": "256QAM",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.09166645596081299,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 17,
+    "name": "AM-SSB-WC",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.998507007658316,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 17,
+    "name": "AM-SSB-WC",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.2956461963318744,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 18,
+    "name": "AM-SSB-SC",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9999776752585358,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 18,
+    "name": "AM-SSB-SC",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.29431454803576534,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 19,
+    "name": "AM-DSB-WC",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986550320887906,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 19,
+    "name": "AM-DSB-WC",
+    "varying_message": true,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.994794538074854,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 20,
+    "name": "AM-DSB-SC",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986791749560702,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 20,
+    "name": "AM-DSB-SC",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.4960770688338823,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 21,
+    "name": "FM",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.99870218238556,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 21,
+    "name": "FM",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.7531262532730454,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 22,
+    "name": "GMSK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.99859928029162,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 22,
+    "name": "GMSK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.09600054999015553,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 23,
+    "name": "OQPSK",
+    "varying_message": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9986940710663346,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "class_index": 23,
+    "name": "OQPSK",
+    "varying_message": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.05660417593755536,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  }
+]

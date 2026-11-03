@@ -1,0 +1,46 @@
+{
+  "status": "OFFLINE_PASS_BOARD_PENDING",
+  "changed_existing": [
+    "candidate/board_package/board_ui_live_rml24_final.cpp",
+    "candidate/ui_sw/ui_render.hpp",
+    "candidate/ui_sw/ui_render.cpp"
+  ],
+  "added": [
+    "candidate/board_package/shutdown_action.hpp",
+    "candidate/ui_sw/shutdown_ui.hpp"
+  ],
+  "receiver_model_fpga_and_service_files_unchanged": true,
+  "original_files": 224,
+  "pixel_comparison": [
+    {
+      "page": 1,
+      "changed_pixels": 0,
+      "unchanged_outside_allowed_area": true
+    },
+    {
+      "page": 2,
+      "changed_pixels": 0,
+      "unchanged_outside_allowed_area": true
+    },
+    {
+      "page": 3,
+      "changed_pixels": 0,
+      "unchanged_outside_allowed_area": true
+    },
+    {
+      "page": 4,
+      "changed_pixels": 0,
+      "unchanged_outside_allowed_area": true
+    },
+    {
+      "page": 5,
+      "changed_pixels": 21843,
+      "unchanged_outside_allowed_area": true
+    }
+  ],
+  "ui_state_tests": 16,
+  "action_tests": 6,
+  "legacy_kernel_action_tests": 6,
+  "real_poweroff_executed": false,
+  "board_deployed": false
+}

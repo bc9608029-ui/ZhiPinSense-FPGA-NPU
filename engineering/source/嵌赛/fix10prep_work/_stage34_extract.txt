@@ -1,0 +1,194 @@
+调查完成。关键事实已核实：**树内无 23 类 clean 生成器**——`syniq`（`synthetic_iq_generator.hpp`）仅 4 类（BPSK/QPSK/4ASK/16QAM），`rf_waveform_12class.hpp` 仅 12 类且标签集不同（含 WBFM/2FSK/OFDM，非 23 类）。D2 工件来自真实 RadioML HDF5 抽取（`extract_radioml_stage_g.py`），非合成。故 clean 生成器须新建。以下提交第 21 节 10 项实现前检查点。
+
+---
+
+# fix10-prep 实现前检查点（§21）
+
+## 1. 新增文件清单
+
+| # | 文件 | 角色 |
+|---|---|---|
+| N1 | `sdr_adapter/pluto_dual_air_link.hpp` | `FakeRfLink` 共享空口 + `FakeTxDevice`/`FakeRxDevice`（`FakePlutoDevice` 子类） |
+| N2 | `board_package/iq_dual_sdr_transfer_fix10.hpp` | `DualSdrSession`（RAII 双设备）+ `DualSdrTransferResult` + `transfer_one_file_dual_sdr_fix10` |
+| N3 | `board_package/iq_dual_sdr_23class_fix10.hpp` | `run_iq_dual_sdr_23class_fix10`（双 SDR RF runner，RadioML 与 clean 共用） |
+| N4 | `board_package/iq_clean_iq_23class_fix10.hpp` | `run_iq_clean_iq_23class_fix10`（纯净数字路径 B，直送模型 + 输出 baseline TSV） |
+| N5 | `scripts/gen_generated_clean_23.py` | clean CI16 生成器（23×30=690 文件 + manifest） |
+| N6 | `scripts/predict_clean_baseline.py` | 冻结模型离线推理 → 6 列 clean baseline TSV |
+| N7 | `host_tests/test_iq_dual_sdr_fix10.cpp` | 双 SDR 25 用例（§15.B） |
+| N8 | `host_tests/test_clean_iq_23class_fix10.cpp` | clean 生成器/baseline/组合 E2E（§15.C/D/E） |
+| N9 | `scripts/package_dual_sdr_clean_iq_fix10prep.py` | 打包（patch+full） |
+| N10 | `docs/M29_RML23_FIX10_DUAL_SDR_CLEAN_IQ_PREP_AUDIT.md` | 审计文档 |
+
+## 2. 最小修改文件清单（仅接线，零重写恢复/门禁）
+
+| 文件 | 修改内容 | 是否改核心语义 |
+|---|---|---|
+| `board_package/board_gate9_full_chain_rml23.cpp`（或 `gate9_phase.hpp`） | phase dispatcher 新增 `--phase=iq-dual-sdr-23class-fix10` / `iq-clean-iq-23class-fix10` 分派到新 runner | 否（仅新增分派分支） |
+| `scripts/run_gate9_rml23.sh` | 显式转发 `--tx-uri`/`--rx-uri`/`--clean-manifest`/`--input-kind=generated-clean-23`，禁止合并成 `--uri` | 否 |
+| `host_tests/build_host_tests.sh` / `run_tests.sh` | 新增 N7/N8 编译运行行 | 否 |
+| `sdr_adapter/pluto_device.hpp` | **不改**（用子类化实现空口，比"允许的最小钩子"更干净） | 否（零改动） |
+| `board_package/CMakeLists.txt` / 板端构建脚本 | 新增双 SDR/clean 目标 | 否 |
+
+**明确不改**（§2 只读复用）：`iq_rf_training_frame.hpp` / `iq_rf_sync_recovery.hpp` / `iq_rf_fix9r2b_diagnostic.hpp` / `npu_classifier24.hpp` / `rml23_merged.hpp` / `preprocess.hpp`。`transfer_one_file_rf_fix9r(Device& dev, ...)` **原样保留**。
+
+## 3. 双 SDR 类与函数签名
+
+```cpp
+// N2: iq_dual_sdr_transfer_fix10.hpp
+namespace iqdualsdr {
+
+struct DualSdrConfig {
+    std::string tx_uri, rx_uri;
+    std::uint64_t center_hz = 2400000000ULL;
+    double rx_gain_db = 10.0;
+    double tx_atten_db = pluto::kSafeTxAttenDb;
+    double target_rms = 2048.0;
+    std::size_t delay_margin = 8192;
+    std::size_t noise_complex = 0;
+};
+
+// fail-closed：两者非空、tx_uri!=rx_uri、规范化后不同；打印最终两 URI；不依赖枚举顺序
+std::string validate_dual_uris(const std::string& tx_uri, const std::string& rx_uri);
+
+struct DualSdrSampleRateReport {
+    long long requested, tx_rate, rx_rate; bool tx_ok, rx_ok, ok;
+};
+
+class DualSdrSession {          // RAII；持有两设备所有权
+public:
+    DualSdrSession(std::unique_ptr<pluto::Device> tx_dev,
+                   std::unique_ptr<pluto::Device> rx_dev,
+                   const DualSdrConfig& cfg, m22::StageTiming* timing);
+    pluto::Device& tx_dev(); pluto::Device& rx_dev();
+    bool tx_restore_ok() const; bool rx_restore_ok() const;
+    bool restore_both();        // 任一 false → 整门 FAIL
+    const DualSdrSampleRateReport& rates() const;
+private:
+    std::unique_ptr<pluto::Device> tx_dev_, rx_dev_;
+    std::unique_ptr<pluto::DeviceStateGuard> tx_guard_;  // 先声明先构造
+    std::unique_ptr<pluto::DeviceStateGuard> rx_guard_;  // 后声明后构造
+};
+
+struct DualSdrTransferResult { /* 镜像 RfTransferResultFix9r + tx_uri/rx_uri/
+    tx_sample_rate/rx_sample_rate/tx_lo/rx_lo/tx_bw/rx_bw/tx_loopback/rx_loopback */ };
+
+DualSdrTransferResult transfer_one_file_dual_sdr_fix10(
+    pluto::Device& tx_dev, pluto::Device& rx_dev,
+    const std::string& path, std::uint64_t complex_count, const std::string& expect_sha,
+    std::uint64_t center_hz, double rx_gain_db, double tx_atten_db,
+    std::size_t delay_margin, std::size_t noise_complex,
+    m22::StageTiming* timing, double target_rms);
+}  // namespace iqdualsdr
+```
+
+```cpp
+// N3: run_iq_dual_sdr_23class_fix10
+Rf23DualSdrRunReport run_iq_dual_sdr_23class_fix10(
+    chain::NpuClassifier24& npu, m22::StageTiming& timing, int argc, char** argv,
+    const std::function<void(const rf::ResultFrame&)>& on_frame);
+
+// N4: run_iq_clean_iq_23class_fix10（路径 B，无 libiio/RF/门禁/设备）
+Rf23CleanRunReport run_iq_clean_iq_23class_fix10(
+    chain::NpuClassifier24& npu, m22::StageTiming& timing, int argc, char** argv,
+    const std::function<void(const rf::ResultFrame&)>& on_frame);
+```
+
+## 4. method ↔ device 映射表（照 §4 逐行实现，禁混用）
+
+| 操作 | TX 设备 | RX 设备 |
+|---|---|---|
+| 创建 DeviceStateGuard | ✅ | ✅ |
+| `set_sample_rate()` | ✅ | ✅ |
+| 校验 TX sample rate（`get_tx_sample_rate`） | ✅ | ❌ |
+| 校验 RX sample rate（`get_rx_sample_rate`） | ❌ | ✅ |
+| `tx_stop()` / 确认 `!tx_running()` | ✅ | ❌ |
+| TX 安全衰减 / 工作衰减（≤-40 dB） | ✅ | ❌ |
+| `set_tx_lo()` / `set_tx_bw()` | ✅ | ❌ |
+| `tx_start_cyclic()` | ✅ | ❌ |
+| TX buffer / DMA SHA（`tx_push_provenance`/`tx_raw_after_inverse`/`tx_dma_payload_sha`） | ✅ | ❌ |
+| `set_rx_gain_mode("manual")` / `set_rx_gain()` | ❌ | ✅ |
+| `set_rx_lo()` / `set_rx_bw()` | ❌ | ✅ |
+| `recreate_rx_buffer()` / `read_rx()` / capture / continuity / clip | ❌ | ✅ |
+| `set_loopback(0)` 及读回 | ✅ | ✅ |
+| 状态恢复 | ✅ | ✅ |
+
+TX 配置顺序：`tx_stop → 最大安全衰减 → set TX 采样率 → set TX 带宽 → set TX LO → 关 loopback 读回 → 工作衰减(≤-40) → 建 TX buffer → cyclic TX`。RX 顺序：`set RX 采样率 → set RX 带宽 → set RX LO → 关 loopback 读回 → manual gain 读回 → set gain 读回 → 建/刷 buffer → 丢弃旧数据 → 主捕获`。所有写读回验证。
+
+## 5. FakeRfLink 数据流
+
+```
+FakeTxDevice.tx_start_cyclic(burst)  ──► link.publish_tx(tx_uri, burst)   [写真实 DMA 波形, tx_running=true]
+FakeTxDevice.tx_stop()               ──► link.stop_tx(tx_uri)             [tx_running=false]
+FakeRxDevice.read_rx(n)              ──► link.read_rx(rx_uri, n)
+                                          ├─ tx_running==false → 只回噪声(noise_rms)
+                                          └─ tx_running==true  → 读真实 DMA 波形
+                                             → 施加 timing_offset → gain/phase
+                                             → CFO(cfo_hz 逐采样去旋) → SRO(sro_ppm 重采样)
+                                             → + noise_rms 高斯
+```
+计数器（测试断言）：`tx_fake.tx_start_count>0`、`tx_fake.main_rx_samples_requested==0`、`rx_fake.tx_start_count==0`、`rx_fake.main_rx_samples_requested>0`；link 校验 `rx_uri==tx_uri` → fail-closed（发现 URI 交换）；禁止单实例内部 echo、禁止直接塞 expected payload、禁止绕过真实 burst/DMA 格式/捕获流程。
+
+## 6. guard 构造/析构顺序
+
+- 成员声明顺序 `tx_guard_` 在 `rx_guard_` **之前**；构造顺序 `open tx_dev → open rx_dev → 构造 tx_guard → 构造 rx_guard → 配置`。
+- **`rx_guard` 构造失败（如 `save_params` 抛）→ C++ 按声明逆序析构已构造成员 → `tx_guard_` 析构 → `restore()`，TX 自动恢复**。
+- 异常路径：`tx_guard` 析构前先 `tx_stop()` + 销毁 TX buffer（DualSdrSession 析构顺序：先停 TX 会话/销毁 buffer，再两 guard restore）。
+- 正常/异常都分别恢复两设备，结果含 `tx_restore_ok`/`rx_restore_ok`，任一 false → 整门 FAIL。
+
+## 7. 单 SDR 零回归策略
+
+1. `transfer_one_file_rf_fix9r(Device&)` 及其调用点**字节级不改**（新增文件 N1–N3 完全不引用/改写它）。
+2. 复用只读核心头，不触碰其常量/语义（§2）。
+3. 完整历史 `build_host_tests.sh` + `run_tests.sh` + `syntax_check.sh` 全绿（§15.A），`test_iq_rf_loopback_23class_fix9r2g` 68/0 保持。
+4. 新增测试仅追加 `build/run` 行，不改既有测试编译行。
+5. 双 SDR/clean 与单 SDR 共用纯函数（`load_ci16`/`build_burst`/`verify_frame`/`iqrfrec`），新增断言 `transfer_one_file_dual_sdr_fix10` 与单 SDR 对同一输入产出**字节一致 `burst_sha`**（因复用同一纯函数 + 同一缩放算术）。
+
+## 8. clean 生成器 23 类来源表
+
+**诚实结论**：树内无 23 类 clean 生成器。`syniq` 仅 4 类、`rf_waveform_12class` 仅 12 类且标签不同。**clean 23 类为新建**，复用 `syniq` 的 RRC/星座原语 + `rf_waveform_12class` 的 AM/FM/GFSK/OOK 算法参考 + D2 `build_one` 的 AC-去除/x20 插值/int16 K=2048 量化合同；高阶星座（8ASK、16/32PSK、16/32/64/128APSK、32/128/256QAM、OQPSK、AM-SSB、AM-DSB-WC/SC）为新增合成，逐类冻结参数文档化。
+
+| # | deployed_class | 合成来源（复用/新） | 实现要点 |
+|---|---|---|---|
+| 0 | OOK | 参考 12 类 OOK（新重建） | 门控载波，单位功率 |
+| 1 | 4ASK | 复用 `syniq::map_symbol(ASK4)` | RRC 成形 |
+| 2 | 8ASK | **新** | 8 电平 {±1,±3,±5,±7}/√21 |
+| 3 | BPSK | 复用 `syniq::map_symbol(BPSK)` | RRC |
+| 4 | QPSK | 复用 `syniq::map_symbol(QPSK)` | RRC |
+| 5 | 8PSK | **新** | 8 点单位圆 |
+| 6 | 16PSK | **新** | 16 点单位圆 |
+| 7 | 32PSK | **新** | 32 点单位圆 |
+| 8 | 16APSK | **新** | 4+12 环（DVB-S2 类） |
+| 9 | 32APSK | **新** | 4+12+16 环 |
+| 10 | 64APSK | **新** | 同心环 |
+| 11 | 128APSK | **新** | 同心环 |
+| 12 | 16QAM | 复用 `syniq::map_symbol(QAM16)` | RRC |
+| 13 | 32QAM | **新** | 十字星座 |
+| 14 | 64QAM | 参考 12 类 64QAM（新重建单位功率） | 方阵 |
+| 15 | 128QAM | **新** | 十字星座 |
+| 16 | 256QAM | **新** | 方阵 |
+| 17 | AM-SSB | **新**（需冻结：SC 或 WC 单源） | 单边带，拟用 SSB-SC 抑制载波，**待确认** |
+| 18 | AM-DSB-WC | **新**（参考 12 类 AM-DSB 参数） | 带载波 DSB |
+| 19 | AM-DSB-SC | **新** | 抑制载波 DSB |
+| 20 | FM | 参考 12 类 WBFM 连续相位（新重建，标签 FM） | 连续相位 FM |
+| 21 | GMSK | 参考 12 类 GFSK 高斯脉冲连续相位（GMSK=MSK+高斯 BT=0.5） | 连续相位 |
+| 22 | OQPSK | **新** | Q 支路延迟半符号 |
+
+输出合同（复用 D2 `build_one`）：1024 复@128kSPS 清洁基带 → AC 去除 → x20 插值 → **53760 复@2.56MSPS** → int16 交错 CI16（215040 字节）@ 全局 K=2048 复 RMS。每类 30，固定 seed，两次生成字节一致。**AM-SSB（#17）的 SC/WC 单源选择需你确认后冻结。**
+
+## 9. clean 数字 baseline 格式
+
+- **Manifest**（§11，TSV，690 行）：`source_index, file_name, modulation, source_class, deployed_class, complex_samples, sample_rate, component_rms, sha256, seed, split_role`。稳定唯一键、每类 30、SHA 真实、缺失/重复/越界/未知类别 fail-closed。
+- **baseline TSV**（6 列，同 fix9r2g1 合同）：`source_index, file_name, sha256, deployed_class, split_role, frozen_baseline_pred`。
+- `frozen_baseline_pred` = 冻结离线模型（复用 `predict_fix9r_frozen_baseline.py` 的 checkpoint `96cd25f8…` 确定性推理）对 clean 预处理张量的真实推理 argmax(merge_23)；**禁止用 `deployed_class` 回填**，即使预测==标签也存真实推理证据；缺失/重复键/SHA 不一致 fail-closed。
+
+## 10. clean 双 SDR 复用同一 CI16 的证明方法
+
+不重新生成第二批。证明 = **运行时 SHA 恒等断言（fail-closed）**：
+1. clean manifest 记录每文件 `sha256`（生成器产物）。
+2. 路径 B（数字 baseline）读文件 → 校验 `sha256_file == manifest.sha256` → 预处理 → 推理 → 写 baseline TSV（同一 `sha256` 列）。
+3. 路径 C（双 SDR）`transfer_one_file_dual_sdr_fix10` 加载同一文件 → `r.tx_sha_pre`（缩放前 payload SHA，`verify_loaded_tx` 计算）→ **断言 `r.tx_sha_pre == manifest.sha256`**，不一致即 throw。
+4. 故 `数字baseline文件SHA == 双SDR发送文件SHA` 由单一批文件 + 双重 SHA 校验强制，非靠约定。
+
+---
+
+以上 10 项齐备。其中需你拍板的一点：**§8 的 AM-SSB（部署类 17）clean 单源选 SC 还是 WC**（我拟用 SSB-SC 抑制载波）。确认检查点 + 该决策后我再开始编码。

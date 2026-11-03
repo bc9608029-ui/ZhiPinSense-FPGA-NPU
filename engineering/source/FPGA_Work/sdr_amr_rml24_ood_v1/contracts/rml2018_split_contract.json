@@ -1,0 +1,9 @@
+{
+  "split_ratios": [0.6, 0.2, 0.2],
+  "split_seed": 20261003,
+  "stratification": "per (class, snr) stratum; 24 classes x 26 SNR = 624 strata",
+  "shuffle": "per-stratum SeedSequence([seed, label, snr+128])",
+  "leakage_free": true,
+  "overlap": {"train_validation": 0, "train_test": 0, "validation_test": 0},
+  "final_blind_test": "test split accessed exactly once at final evaluation"
+}

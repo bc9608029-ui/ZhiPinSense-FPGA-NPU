@@ -1,0 +1,54 @@
+{
+  "state": "BITSTREAM_CANDIDATE_GENERATED_TARGET_ACCEPTANCE_PENDING",
+  "time": "2026-10-30T19:23:06.682990+08:00",
+  "routed_dcp_sha256": "3079f04b4500f750e56eb9f8649a48962ce4b5b795b830342abbb6c09023f07b",
+  "artifacts": {
+    "smartscan_fix2_raw.bit": {
+      "bytes": 5980054,
+      "sha256": "741190560e8ee68128e00d10300a1296f7bd39cf5759341b0325ea894cd1862c"
+    },
+    "smartscan_fix2_vendor_auto_disable_icap.bit": {
+      "bytes": 5980638,
+      "sha256": "47b9e1fd2154104bb1bf34e247af07db6908f70436e2ec68845d617e47514ccd"
+    },
+    "smartscan_fix2_disable_icap.bit": {
+      "bytes": 5980638,
+      "sha256": "47b9e1fd2154104bb1bf34e247af07db6908f70436e2ec68845d617e47514ccd"
+    }
+  },
+  "inherited_baseline_exception": {
+    "state": "INHERITED_BASELINE_EXCEPTION_MATCHES_CONTROLLED_CANDIDATE_GENERATION_ALLOWED",
+    "baseline_bit_sha256": "22fec95c64f3db727dd250e5768cdadec82f4c4d2de088392980b95a632932e9",
+    "baseline_report_sha256": "f4aad30695345a234784d2cc5af4bffc0647995a101e6fc5f368c0affb19f4d3",
+    "candidate_report_sha256": "bdf0e6bfc6708d6155e0bb2677897d751c8c4a293c1bb1e620ab716d766409f0",
+    "violations": [
+      {
+        "type": "Min Period",
+        "lib_pin": "BUFG/I",
+        "required": 1.409,
+        "actual": 1.0,
+        "slack": -0.409,
+        "pin": "u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/clkout1_buf/I"
+      },
+      {
+        "type": "Min Period",
+        "lib_pin": "PLLE2_ADV/CLKOUT0",
+        "required": 1.071,
+        "actual": 1.0,
+        "slack": -0.071,
+        "pin": "u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKOUT0"
+      }
+    ],
+    "full_sta_pass": false,
+    "manufacturer_waiver_obtained": false,
+    "board_loading_authorized_by_this_receipt": false,
+    "production_release": false,
+    "policy_evidence": "F:/FPGA_Work/sdr_full_chain_12class_smartscan_candidate_v1/docs/CDC_FALSE_PATH_EXCEPTION_AUDIT.md section 8"
+  },
+  "automatic_and_explicit_conversion_byte_identical": true,
+  "full_sta_pass": false,
+  "production_release": false,
+  "board_tested": false,
+  "fpga_programmed": false,
+  "boot_changed": false
+}

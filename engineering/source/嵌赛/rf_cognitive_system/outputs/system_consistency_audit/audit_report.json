@@ -1,0 +1,128 @@
+{
+  "scope": "Validation sample index 0 and deterministic SDR-like vectors only; final_blind_test not constructed or accessed.",
+  "sample_trace": {
+    "split": "validation",
+    "index": 0,
+    "class_index": 0,
+    "modulation": "BPSK",
+    "seed_key": [
+      2026,
+      3389696523,
+      0,
+      0
+    ],
+    "assigned_snr_db": -20.0,
+    "clean": {
+      "mean_power": 1.0,
+      "rms": 1.0,
+      "peak_magnitude": 1.554777979850769
+    },
+    "channel_output": {
+      "mean_power": 91.04542541503906,
+      "rms": 9.541772842407227,
+      "peak_magnitude": 28.522377014160156
+    },
+    "dataset_reconstruction_max_abs_error": 0.0,
+    "effects": [
+      "amplitude_scaling",
+      "awgn"
+    ],
+    "signal_metadata": {
+      "modulation": "BPSK",
+      "sample_rate": 128000.0,
+      "symbol_rate": 16000.0,
+      "samples_per_symbol": 8,
+      "sample_length": 1024,
+      "amplitude_rms": 1.0,
+      "frequency_offset_hz": 0.0,
+      "phase_offset_rad": 0.0,
+      "pulse_shape": "RRC",
+      "constellation_size": 2,
+      "record_timing_offset_samples": 6,
+      "symbol_center_offset_samples": 2,
+      "occupied_bandwidth_hz_approx": 21600.0,
+      "rrc_warmup_symbols_before_record": 8
+    },
+    "channel_metadata": {
+      "effects": [
+        "amplitude_scaling",
+        "awgn"
+      ],
+      "amplitude_scale": 0.948636421272864,
+      "desired_signal_power_before_interference_noise": 0.8999110460281372,
+      "awgn": {
+        "target_snr_db": -20.0,
+        "measured_snr_db": -20.0,
+        "signal_power": 0.8999110460281372,
+        "noise_power": 89.99110460281372
+      },
+      "output_power": 91.04542541503906
+    },
+    "tensor": {
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "physical": {
+      "shape": [
+        1,
+        3,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "channel_order": [
+        "power",
+        "lag1_real",
+        "lag1_imag"
+      ]
+    },
+    "network": {
+      "checkpoint_epoch": 39,
+      "output_shape": [
+        1,
+        8
+      ],
+      "finite": true,
+      "prediction_values_intentionally_omitted": true
+    }
+  },
+  "normalization": {
+    "clean_generator_formula": "x *= amplitude / sqrt(mean(abs(x)**2))",
+    "clean_amplitude": 1.0,
+    "epsilon": 2.220446049250313e-16,
+    "post_channel_per_record_normalization": false,
+    "network_input_batchnorm": false,
+    "physical_branch_input_batchnorm": {
+      "affine": false,
+      "eps": 1e-05,
+      "momentum": 0.1,
+      "evaluation_uses_running_statistics": true
+    }
+  },
+  "fixed_point_consistency": {
+    "contract": {
+      "adc_lsb": 3.0517578125e-05,
+      "iq_int8_scale": 0.007874015748031496,
+      "power_int8_scale": 0.015748031496062992,
+      "correlation_int8_scale": 0.015748031496062992,
+      "quant_min": -127,
+      "quant_max": 127
+    },
+    "metrics": {
+      "iq_float_max_abs_error": 0.0,
+      "iq_float_rmse": 0.0,
+      "physical_float_max_abs_error": 0.0,
+      "physical_float_rmse": 0.0,
+      "iq_int8_exact_match": true,
+      "physical_int8_exact_match": true,
+      "iq_int8_dequant_rmse": 0.0022688848518158332,
+      "iq_int8_dequant_max_abs_error": 0.003933403435654528,
+      "physical_int8_dequant_rmse": 0.004561913493124041,
+      "physical_int8_dequant_max_abs_error": 0.00787379965186119,
+      "iq_saturation_count": 0,
+      "physical_saturation_count": 0
+    }
+  }
+}

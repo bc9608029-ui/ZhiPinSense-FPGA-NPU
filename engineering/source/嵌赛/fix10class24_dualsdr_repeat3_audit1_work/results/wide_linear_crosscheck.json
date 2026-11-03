@@ -1,0 +1,8 @@
+{
+  "crosscheck": "wide_linear_host_vs_board_runlog",
+  "mismatches": 0,
+  "note": "Host-recomputed wide-linear (scalar_validation_residual, validation_residual, image_ratio, enabled) matches the board run.log FIX10CLASS24_BF16_WIDE_LINEAR lines to <=1e-5 for all 49 forced samples, confirming the host diagnostic recovery used the same wide-linear path as the board runtime.",
+  "result": "PASS",
+  "samples_checked": 49,
+  "task_id": "fix10class24-dualsdr-repeat3-audit1"
+}

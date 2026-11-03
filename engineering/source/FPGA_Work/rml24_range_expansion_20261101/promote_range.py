@@ -1,0 +1,9 @@
+from pathlib import Path
+import json,hashlib,shutil,subprocess,os
+root=Path('/root/rml24_range_expansion_20261101');g=json.loads((root/'EXPANSION_GATES.json').read_text());assert g['rf_frequency_cases']==13 and g['rf_frequency_pass']==13 and g['gain_no_rf_readback_pass']
+pid=int(subprocess.check_output(['systemctl','show','rml24-range-test','-p','MainPID','--value']).strip());args=Path('/proc/%d/cmdline'%pid).read_bytes().decode().strip('\0').split('\0');run=Path(args[args.index('--run')+1]);b=json.loads((run/'POSTDEPLOY_PARAMETER_TEST.json').read_text());assert b['passed'] and not b.get('restore_error')
+src=root/'candidate';dst=Path('/opt/rml24-integrated/releases/range_20261101');assert not dst.exists();shutil.copytree(src,dst);q=dst/'PROMOTED_RELEASE.json';d=json.loads(q.read_text());d['range_candidate_pending']=False;d['range_expansion_gates']=g;d['promotion_scope']='Prior formal RF plus 13-frequency BPSK diagnostic and backend boundary tests; not all-class full-band accuracy';q.write_text(json.dumps(d,indent=2))
+for name,digest in d['files'].items():assert hashlib.sha256((Path(name) if Path(name).is_absolute() else dst/name).read_bytes()).hexdigest()==digest,name
+current=Path('/opt/rml24-integrated/current');old=os.readlink(str(current));(root/'PREVIOUS_CURRENT.txt').write_text(old)
+subprocess.run(['systemctl','stop','rml24-range-test'],check=True);assert not Path('/var/lib/rml24-fpga-shared-guard/reset_required.json').exists()
+tmp=current.with_name('current.range-next');assert not tmp.exists();os.symlink(str(dst),str(tmp));os.replace(str(tmp),str(current));subprocess.run(['systemctl','start','rml24-integrated'],check=True);subprocess.run(['sync'],check=True);(root/'RANGE_ACTIVATED.json').write_text(json.dumps(dict(release=str(dst),previous=old,bitstream_unchanged=True,physical_ui_pending=True),indent=2));print('RANGE_RELEASE_ACTIVATED')

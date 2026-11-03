@@ -1,0 +1,230 @@
+{
+  "task": "fix10clean2a",
+  "phase": "PHASE0",
+  "checkpoint": {
+    "path": "F:\\FPGA_Work\\sdr_rml24_npu_deployment_m29\\_frozen\\runs\\rml24_base\\formal\\t002_losscross_entropy_optadamw\\seed2027\\checkpoints\\best.pt",
+    "exists": true,
+    "sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+    "sha256_matches_spec": true,
+    "expected_sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d"
+  },
+  "hdf5": {
+    "path": "F:\\datasets\\RadioML2018\\GOLD_XYZ_OSC.0001_1024.hdf5",
+    "exists": true,
+    "size_bytes": 21449148312,
+    "sha256": "e3dd0bef66a3426959ee66a1709a8c0a95d4f8395d18aaf6f1214bdbc763bd38",
+    "X": {
+      "shape": [
+        2555904,
+        1024,
+        2
+      ],
+      "dtype": "float32"
+    },
+    "Y": {
+      "shape": [
+        2555904,
+        24
+      ],
+      "dtype": "int64"
+    },
+    "Z": {
+      "shape": [
+        2555904,
+        1
+      ],
+      "dtype": "int64"
+    },
+    "top_level_keys": [
+      "X",
+      "Y",
+      "Z"
+    ],
+    "shape_contract_ok": true
+  },
+  "hdf5_snr_strata": {
+    "snr_values": [
+      -20.0,
+      -18.0,
+      -16.0,
+      -14.0,
+      -12.0,
+      -10.0,
+      -8.0,
+      -6.0,
+      -4.0,
+      -2.0,
+      0.0,
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0
+    ],
+    "samples_per_snr": {
+      "-20": 98304,
+      "-18": 98304,
+      "-16": 98304,
+      "-14": 98304,
+      "-12": 98304,
+      "-10": 98304,
+      "-8": 98304,
+      "-6": 98304,
+      "-4": 98304,
+      "-2": 98304,
+      "0": 98304,
+      "2": 98304,
+      "4": 98304,
+      "6": 98304,
+      "8": 98304,
+      "10": 98304,
+      "12": 98304,
+      "14": 98304,
+      "16": 98304,
+      "18": 98304,
+      "20": 98304,
+      "22": 98304,
+      "24": 98304,
+      "26": 98304,
+      "28": 98304,
+      "30": 98304
+    },
+    "samples_per_class_total": [
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496,
+      106496
+    ],
+    "n_classes": 24
+  },
+  "model_source": {
+    "models/rml24_net.py": "7fad6b3624e6dab9f7e72abe0cd4b3e9934e76c611efc155d6a68397bec56fc3",
+    "models/ad_amr_v1_1_net.py": "b9f76276d99bdb2150655a9b77a254f3353ac5fea47f5f5c685456bfbf12aa8c",
+    "contracts/rml24_contract.py": "164b216d05ea1c491794bc098fc9d2c03a77f3a1db4b335074ed42ffabb9c3bb",
+    "training/utils.py": "ce1cba6eb29d5a46a8c28df4d7c0dfe3d702c485a84beb41740528b29cede490"
+  },
+  "model_root": "F:\\FPGA_Work\\sdr_amr_12class_ood_u_v1",
+  "config": {
+    "path": "F:\\FPGA_Work\\sdr_rml24_npu_deployment_m29\\_frozen\\configs\\rml24_base.yaml",
+    "sha256": "1f767f981641ee8717f5fb5525d0e0748f17d064d25d67ccde0601e7edb22b8f"
+  },
+  "environment": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "numpy": "2.1.3",
+    "scipy": "1.16.3",
+    "h5py": "3.12.1",
+    "torch": "2.12.0+cpu",
+    "torch_cuda_available": false,
+    "torch_device": "cpu",
+    "deterministic_backend": true
+  },
+  "model": {
+    "label_order_24": [
+      "OOK",
+      "4ASK",
+      "8ASK",
+      "BPSK",
+      "QPSK",
+      "8PSK",
+      "16PSK",
+      "32PSK",
+      "16APSK",
+      "32APSK",
+      "64APSK",
+      "128APSK",
+      "16QAM",
+      "32QAM",
+      "64QAM",
+      "128QAM",
+      "256QAM",
+      "AM-SSB-WC",
+      "AM-SSB-SC",
+      "AM-DSB-WC",
+      "AM-DSB-SC",
+      "FM",
+      "GMSK",
+      "OQPSK"
+    ],
+    "input_shape": [
+      1,
+      2,
+      1024
+    ],
+    "output_dim": 24,
+    "output_kind": "raw_logits_no_softmax",
+    "checkpoint_model_name": "RML2018_24_BENCHMARK",
+    "checkpoint_class_names": [
+      "OOK",
+      "4ASK",
+      "8ASK",
+      "BPSK",
+      "QPSK",
+      "8PSK",
+      "16PSK",
+      "32PSK",
+      "16APSK",
+      "32APSK",
+      "64APSK",
+      "128APSK",
+      "16QAM",
+      "32QAM",
+      "64QAM",
+      "128QAM",
+      "256QAM",
+      "AM-SSB-WC",
+      "AM-SSB-SC",
+      "AM-DSB-WC",
+      "AM-DSB-SC",
+      "FM",
+      "GMSK",
+      "OQPSK"
+    ],
+    "checkpoint_best_epoch": 50,
+    "checkpoint_best_selection_score": 0.890984015984016,
+    "state_dict_missing": [],
+    "state_dict_unexpected": [],
+    "state_dict_loads_strict": true,
+    "forward_output_shape": [
+      1,
+      24
+    ],
+    "forward_logits_finite": true,
+    "forward_output_dim_ok": true
+  },
+  "gate": {
+    "result": "PASS",
+    "failures": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "token": "M29-RML24-FIX10CLASS24-INDEPENDENT-RX-ADAPTIVE-TRACKER-FIX4-REVIEW-R1-VERDICT",
+  "verdict": "MARGINAL_ONLY",
+  "rf_fix2_target_best": {
+    "tracker": "T6_best_alternate",
+    "e2e_correct": 3,
+    "n": 24
+  },
+  "old_rf_session_best": {
+    "tracker": "C1_settle_dc_constant",
+    "e2e_correct": 2,
+    "n": 24
+  },
+  "digital_baseline": {
+    "correct": 23,
+    "n": 24
+  },
+  "digital_no_new_flips_measured": true,
+  "digital_no_new_flips_per_tracker": {
+    "C1_settle_dc_constant": 0,
+    "T1_blockwise_linear": 0,
+    "T2_exp_transient": 0,
+    "T3_hermite": 0,
+    "T4_kalman": 0,
+    "T5_kalman_crossframe": 0,
+    "T6_best_alternate": 0
+  },
+  "board_patch_allowed": false,
+  "per_tracker": {
+    "T0_baseline": {
+      "target_e2e": 1,
+      "old_e2e": 1
+    },
+    "C1_settle_dc_constant": {
+      "target_e2e": 2,
+      "old_e2e": 2
+    },
+    "T1_blockwise_linear": {
+      "target_e2e": 2,
+      "old_e2e": 2
+    },
+    "T2_exp_transient": {
+      "target_e2e": 2,
+      "old_e2e": 2
+    },
+    "T3_hermite": {
+      "target_e2e": 2,
+      "old_e2e": 2
+    },
+    "T4_kalman": {
+      "target_e2e": 2,
+      "old_e2e": 2
+    },
+    "T5_kalman_crossframe": {
+      "target_e2e": 2,
+      "old_e2e": 2
+    },
+    "T6_best_alternate": {
+      "target_e2e": 3,
+      "old_e2e": 2
+    }
+  }
+}

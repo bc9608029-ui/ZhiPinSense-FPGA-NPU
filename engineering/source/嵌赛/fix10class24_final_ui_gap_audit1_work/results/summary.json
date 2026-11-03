@@ -1,0 +1,84 @@
+{
+  "task": "fix10class24-final-ui-gap-audit1",
+  "status": "M29-RML24-FIX10CLASS24-FINAL-UI-GAP-AUDIT1-COMPLETE",
+  "status_meaning": "offline read-only audit complete only; does NOT assert UI/runtime integration or project completion",
+  "date": "2026-10-19",
+  "scope": "read-only; no board, no SDR, no training, no production code changes",
+  "baseline_tree": "F:\\嵌赛\\fix10class24_tx_rms_sweep1_work\\sdr_rml24_fix10class24_tx_rms_sweep1",
+  "frozen_facts_verified": {
+    "label_order_24": "OOK,4ASK,8ASK,BPSK,QPSK,8PSK,16PSK,32PSK,16APSK,32APSK,64APSK,128APSK,16QAM,32QAM,64QAM,128QAM,256QAM,AM-SSB-WC,AM-SSB-SC,AM-DSB-WC,AM-DSB-SC,FM,GMSK,OQPSK",
+    "bf16_model_json": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+    "bf16_model_raw": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+    "bf16_model_ckpt": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+    "production_verdict_24": "rml24::raw24_predict (WC=17/SC=18 independent, no merge)"
+  },
+  "three_lists": {
+    "available_with_current_evidence": [
+      "START/STOP 控制 + 状态心跳（UI 显示 STOPPED 非 STALE）",
+      "顶部状态栏 + info 条（SNR/LATENCY/FRAME/SOURCE）+ staleness 检测",
+      "NO_SIGNAL/ACQUIRING 状态徽章 + Error(overflow/dropped/discontinuity/short_frame) 处理",
+      "非阻塞 UI socket（满则丢弃，不阻塞分类）",
+      "23 类合并链（expA + rml23-chain-v2 + merge_logits_23）Host 验证与部分板端验证",
+      "冻结 BF16 24 类模型资产与 raw24 判读（板测 phase，Host/板测证据）",
+      "运维脚本（verify_package/rollback/stop/mode_ctl/check_live_result）与结果日志/TSV"
+    ],
+    "prepared_but_not_wired_or_not_board_verified": [
+      "冻结 BF16 24 类 raw24 → LIVE/UI 链（仅板测 phase，UI server 无法解析 rml24-chain-v1）",
+      "SIGNAL_LOST/INVALID 卡死修复 B1（nosignal 树，未并入基线）",
+      "NO_SIGNAL 隐藏残留旧分类修复 B2（nosignal 树，未并入基线）",
+      "瀑布图（waterfall 树，host-only READY-FOR-INTEGRATION）",
+      "实时频谱曲线（仅标量卡片；曲线在 waterfall 树未集成）",
+      "星座点云（离线 FileIqFrameSource 桌面验证，无实时源）",
+      "AUTO_LOCK / BAND_SCAN 消费（状态机+UI 已接，live-rx 硬编码 FIXED）",
+      "passive_scan（并行任务 prepare-only，未接入，红线不合并）"
+    ],
+    "missing": [
+      "运行时频率/增益/带宽设置命令（控制通道无 SET_FREQ/SET_GAIN/SET_BW）",
+      "BAND_SCAN LO 扫描（sequencer 未 compose；scan 列表 UI 页缺失）",
+      "UI 参数编辑页（PARAMETERS 页仅显示测量标量）",
+      "中文字形（字符集 ASCII 32..126）",
+      "7 英寸目标屏分辨率适配证据（当前固定 1280x720）"
+    ]
+  },
+  "gap_closure_plan": {
+    "P0_correctness_control_result_truth": [
+      "live-rx 换 rml24::raw24_predict + fill_result_rml24；UI server 加 rml24-chain-v1 解析 + classes_24 + class_count=24；禁用 merge_logits_23",
+      "一键脚本指向 model_rml24_bf16（冻结 BF16）",
+      "合并 nosignal 树 B1（signal_presence 时限恢复）与 B2（NO_SIGNAL 隐藏残留分类）"
+    ],
+    "P1_basic_operation_display_maintenance": [
+      "live-rx 接 WorkModeEngine（FIXED/AUTO_LOCK/BAND_SCAN 真正消费）",
+      "控制通道加 SET_FREQ/SET_GAIN/SET_BW + 设备写读回 fail-closed",
+      "BAND_SCAN LO 扫描 compose；瀑布图并入板端 UI"
+    ],
+    "P2_polish": [
+      "实时频谱曲线渲染（复用 waterfall FFT）",
+      "星座实时源或板端星座渲染",
+      "扫频列表 UI 页",
+      "中文/7 英寸屏适配（需求确认后）",
+      "板端 FPS 实测"
+    ]
+  },
+  "boundary": {
+    "did_not_claim": "no UI/integration work completed; no RF_PASS/SMOKE_PASS/PROJECT_COMPLETE/FINAL_*; no board verification for gaps marked 待确认/未上板验证",
+    "parallel_trees_untouched": [
+      "fix10class24_original_radioml_npu_ab1_work",
+      "fix10class24_ac_input_detailed_audit1_work",
+      "fix10class24_passive_scan_prep1_work"
+    ],
+    "divergent_trees": {
+      "ui_state_map.hpp": "tx_rms 3e8259ec / waterfall 81674aea / nosignal 1ab851e0",
+      "signal_presence.hpp": "tx_rms=waterfall 44ac2e49 (old) / nosignal 2ec93753 (fixed)",
+      "board_ui_live_rml23.cpp": "tx_rms=waterfall b192254c / nosignal c94c42ab"
+    }
+  },
+  "deliverables": [
+    "results/feature_status.tsv",
+    "results/evidence_index.tsv",
+    "results/runtime_paths.md",
+    "results/control_paths.md",
+    "results/missing_or_unverified.tsv",
+    "results/summary.json",
+    "docs/M29_RML24_FIX10CLASS24_FINAL_UI_GAP_AUDIT1_REPORT.md"
+  ]
+}

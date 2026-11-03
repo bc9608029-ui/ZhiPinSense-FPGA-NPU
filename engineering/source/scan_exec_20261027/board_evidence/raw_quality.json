@@ -1,0 +1,31 @@
+{
+  "fixed_r1": {
+    "raw_captures": 240,
+    "rms_median": 30.821521759033203,
+    "max_component": 872.0,
+    "samples_near_12bit_limit": 0
+  },
+  "fixed_r2": {
+    "raw_captures": 240,
+    "rms_median": 30.63868808746338,
+    "max_component": 864.0,
+    "samples_near_12bit_limit": 0
+  },
+  "legacy_control_r1": {
+    "raw_captures": 240,
+    "rms_median": 30.62640953063965,
+    "max_component": 892.0,
+    "samples_near_12bit_limit": 0
+  },
+  "rx_uris": [
+    "usb:1.4.5"
+  ],
+  "rx_readback": {
+    "gain_control_mode": "slow_attack",
+    "hardwaregain": "71.000000 dB",
+    "sampling_frequency": "30720000",
+    "rf_bandwidth": "18000000",
+    "frequency": "2400000000"
+  },
+  "probe_restore_errors": []
+}

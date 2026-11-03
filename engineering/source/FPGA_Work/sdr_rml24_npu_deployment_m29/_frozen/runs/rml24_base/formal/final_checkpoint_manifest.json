@@ -1,0 +1,13 @@
+{
+  "candidate_signature": "b87720465f0a0fe42c863da96bc350eb50185390d30c60e197a3067bee56e0cf",
+  "selected_seed": 2027,
+  "checkpoint_path": "runs/rml24_base/formal/t002_losscross_entropy_optadamw/seed2027/checkpoints/best.pt",
+  "checkpoint_sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+  "model_name": "RML2018_24_BENCHMARK",
+  "class_count": 24,
+  "label_contract_sha256": "3e1382d1242a206dae3f73535deba30b461e8573889b60004db9d2ce055fa549",
+  "config_sha256": "edbe6e01a314239eab05c6126dc74f989f9a6b25031a26bb73b806a73e1d56c1",
+  "dataset_sha256": "e3dd0bef66a3426959ee66a1709a8c0a95d4f8395d18aaf6f1214bdbc763bd38",
+  "selection_metric": "rated_0_20_accuracy",
+  "selection_value": 0.890997890997891
+}

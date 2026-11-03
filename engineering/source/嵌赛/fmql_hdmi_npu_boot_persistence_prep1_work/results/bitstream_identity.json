@@ -1,0 +1,46 @@
+{
+  "schema": "bitstream_identity_v1",
+  "status": "OFFLINE_IDENTITY_VERIFIED_PARTIAL",
+  "primary_bitstream": {
+    "path": "F:/FPGA_Work/sdr_full_chain_12class_combined_v1/outputs/smoke_v1/bitstream/combined_npu_hdmi_disable_icap.bit",
+    "sha256": "22fec95c64f3db727dd250e5768cdadec82f4c4d2de088392980b95a632932e9",
+    "size_bytes": 5980628,
+    "design_name": "jpl_ddr_mandatory_core_top_combined;UserID=0000",
+    "part_string": "7z030",
+    "sync_word": "0xAA995566 (file bytes aa 99 55 66 at offset 216)",
+    "disable_icap_variant": true
+  },
+  "sibling_bitstreams": [
+    {
+      "file": "combined_npu_hdmi_raw.bit",
+      "sha256": "bc58f4f1204784fc74ea47eff1e5080f79479d3707369cc1bd7d85888dcfdcbb",
+      "size": 5980044,
+      "note": "raw (ICAP enabled) variant"
+    },
+    {
+      "file": "combined_npu_hdmi_raw_pre_fix.bit",
+      "sha256": "d62c3d4e3f33a1073ade293496e2063b5f6993a76f2d98c727e8ca727a3003c0",
+      "size": 5980044,
+      "note": "raw pre-fix variant"
+    }
+  ],
+  "address_map_from_combined_project": {
+    "source": "sdr_full_chain_12class_combined_v1/docs/ADDRESS_MAP_AUDIT.md + board_package/pl_ddr_register_map.hpp",
+    "npu_control": "0x40000000 (512K) iCraft npu=",
+    "npu_dma": "0x80000000 (512K) iCraft dma=",
+    "hdmi_frame_ctrl": "0x40080000 (512K) version @+0x0C=0x20230218, framebuffer @+0x50/+0x54",
+    "user_gp1_reserved": "0x80080000 (512K)",
+    "pl_ddr_mandatory_core": "0x400C0000 (VERSION @+0x00=0x20260929)",
+    "udmabuf_framebuffer": "0x30100000 (128 MiB)"
+  },
+  "compatibility_with_24class_chain": {
+    "verdict": "CONSISTENT_AT_CONTRACT_LEVEL",
+    "evidence": [
+      "24-class rml24 package (fix10class24_dualsdr2_work) pl_ddr_register_map.hpp is identical contract: VERSION_VALUE=0x20260929, User_Reg base 0x400C0000",
+      "rml24 common_rml23.sh pins BITSTREAM_SHA=22fec95c... ('Same bitstream as the 12-class chain')",
+      "board capture runtime: frame_ctrl 0x40080000+0x0C==0x20230218 and udmabuf0 phys 0x30100000 match UI (UI_VERSION_CHECK ok=YES, UI_FB_READY phys=0x30100000)"
+    ],
+    "cannot_verify": "bit-level internal NPU netlist / DMA microarchitecture inside the .bit (would require re-running Vivado/Procise synthesis+implementation from RTL and byte-comparing, or the design DCP). RTL provenance anchored in SOURCE_PROVENANCE_SHA256.txt (pl_ddr_mandatory_core_v1 + hdmi_framebuffer_ui_v4_fix, ps_ai.bd byte-identical 78f5599b...)."
+  },
+  "old_12_or_23_class_mapping_present": "NOT_PRESENT_AT_THIS_LEVEL: '12class' in project dir name is a naming artifact; the bitstream is the shared NPU+HDMI combined design used by both 12-class and 24-class chains (README + common_rml23.sh). No old 23-class mapping artifact found in any local source."
+}

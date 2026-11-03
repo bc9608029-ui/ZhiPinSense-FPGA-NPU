@@ -1,0 +1,23 @@
+[Unit]
+Description=FMQL FPGA/HDMI readiness gate (verify only, never re-programs PL)
+# 只做「位流是否已在位」的只读校验。绝不加载位流、绝不写 Flash、绝不写 FPGA Manager。
+# 方案 A（BOOT.bin 固化）下，PL 已由 FSBL 在开机时编程；本服务只做版本门 + udmabuf 可用性门。
+# 校验脚本 /opt/sdr/bin/fmql_fpga_hdmi_check.sh 只读：
+#   1) /sys/class/u-dma-buf/udmabuf0/phys_addr 可读（帧缓冲存在）
+#   2) frame_ctrl 0x4008000C == 0x20230218（合并位流在位）
+# 失败 fail-closed：不启动 UI、不无限重试（Restart=no）、保留串口/SSH、不自动重启系统。
+After=local-fs.target
+Wants=local-fs.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/opt/sdr/bin/fmql_fpga_hdmi_check.sh
+# 失败不自动重启、不循环（fail-closed）
+Restart=no
+TimeoutStartSec=30
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

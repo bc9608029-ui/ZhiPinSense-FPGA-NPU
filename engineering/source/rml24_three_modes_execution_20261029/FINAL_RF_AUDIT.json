@@ -1,0 +1,46 @@
+{
+  "status": "AUTHORIZED_THREE_MODE_RF_TESTS_COMPLETE_NOT_PROMOTED",
+  "audited_utc": "2026-10-29T12:54:59.156695+00:00",
+  "results": [
+    {
+      "name": "formal_fixed01",
+      "denominator": 240,
+      "correct": 233,
+      "missing": 0,
+      "rejected": 0,
+      "misclassified": 7,
+      "method": "ORIGINAL_FIRST_CAPTURE_WINDOW"
+    },
+    {
+      "name": "formal_lock01",
+      "denominator": 240,
+      "correct": 235,
+      "missing": 0,
+      "rejected": 3,
+      "misclassified": 2,
+      "method": "ORIGINAL_FIRST_CAPTURE_WINDOW"
+    },
+    {
+      "name": "formal_sweep24_02",
+      "denominator": 24,
+      "correct": 23,
+      "missing": 0,
+      "rejected": 1,
+      "misclassified": 0,
+      "method": "FIRST_COVERAGE_OPPORTUNITY_WITHIN_1152KHZ_REGARDLESS_DETECTION_OR_PREDICTION"
+    }
+  ],
+  "sweep_clean_stop": true,
+  "sweep_finalization_accounting_verified": true,
+  "original_services_restored": {
+    "rml24-ui": "active",
+    "rml24-receiver": "active"
+  },
+  "previous_failed_sweep_preserved": true,
+  "formal_version_autostart_bitstream_unchanged": true,
+  "limitations": [
+    "Existing frozen waveforms, not unseen waveform generalization",
+    "Sweep uses 24 first-coverage opportunities, not 240-frame regression",
+    "Fixed 233/240 below historical 235/240 gate; do not promote"
+  ]
+}

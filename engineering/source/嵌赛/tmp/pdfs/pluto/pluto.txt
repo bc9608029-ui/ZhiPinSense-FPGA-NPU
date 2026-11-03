@@ -1,0 +1,132 @@
+ADALM Pluto SDR
+SDR Active Learning Module
+
+
+
+Graham Cottew                                                   @zenmountainman
+github.com/zendata/SDR
+ Acknowledgement and thanks to Google and Analog Devices for many of the images used in this presentation
+     the essential features
+         Full Duplex
+
+         325 - 3800 MHz (more about this later)
+
+         12 bit ADC
+
+         61.44 MSPS sampling rate
+
+         20MHz bandwidth
+
+         US$99 if you are lucky
+
+ADALM-PLUTO September 2017 Graham Cottew @zenmountainman
+     Block functionality
+
+
+                                                             AD9363
+                                                            2 x 2 TXCR
+
+
+                                                            ZYNQXC7Z010
+                                                           FPGA, CPU, ADC
+
+
+ADALM-PLUTO September 2017 Graham Cottew @zenmountainman
+     Let’s hack it :)
+       The AD9363 can be convinced it is an AD9364
+     From your favourite serial application, just open a serial connection to the PlutoSDR.
+     The username is root and the password is analog.
+
+     This will be the default (based on the AD9363):
+
+     # fw_printenv attr_name
+     ## Error: "attr_name" not defined
+     # fw_printenv attr_val
+     ## Error: "attr_val" not defined
+     #
+
+     To change things to the AD9364 configuration:
+
+     # fw_setenv attr_name compatible
+     # fw_setenv attr_val “ad9364”
+     # pluto_reboot reset
+
+
+       Coverage now 70MHz to 6GHz and max bandwidth abut 60 Mhz
+
+
+
+
+ADALM-PLUTO September 2017 Graham Cottew @zenmountainman
+     The downsides
+
+         Plastic case and no shielding
+
+         No TXCO so expect about +/- 25 ppm
+
+         Limited filtering and selectivity
+
+         Primarily a learning device
+
+         Documentation is early days - like LimeSDR
+
+
+ADALM-PLUTO September 2017 Graham Cottew @zenmountainman
+     60MHz bandwidth
+
+
+
+
+ADALM-PLUTO September 2017 Graham Cottew @zenmountainman
+     60MHz bandwidth
+
+
+
+
+ADALM-PLUTO September 2017 Graham Cottew @zenmountainman
+Software
+ GNURadio & Matlab supported
+
+ GQRX, SDR#, and others now available
+
+ Only PYBOMBS GNURadio works for me
+
+ Nothing working for me on Mac OS X yet
+
+ Windows has an Software ADI IIO Oscilliscope
+ program
+     Performance
+
+         Good sensitivity
+
+         Wide bandwidth and Full Duplex TX/RX
+
+         Poor out of band imaging (lack of filtering)
+
+         IIP3 spec on AD9363 chip is only -18dDm at max gain
+
+
+
+ADALM-PLUTO September 2017 Graham Cottew @zenmountainman
+Relevant links
+ https://wiki.analog.com/university/tools/pluto?force_rev=1
+
+ https://au.mathworks.com/hardware-support/adalm-pluto-
+ radio.html
+
+ https://www.gnuradio.org/blog/pybombs-the-what-the-how-
+ and-the-why/
+
+ https://wiki.analog.com/university/tools/pluto/drivers/osx
+
+ https://wiki.analog.com/resources/tools-software/linux-
+ software/iio_oscilloscope
+ADALM Pluto SDR
+SDR Active Learning Module
+
+
+
+Graham Cottew                                                   @zenmountainman
+github.com/zendata/SDR
+ Acknowledgement and thanks to Google and Analog Devices for many of the images used in this presentation
+

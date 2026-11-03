@@ -1,0 +1,141 @@
+{
+  "kind": "SIX_GUI_FUNCTIONAL_CASES_NOT_24CLASS_ACCURACY",
+  "denominator": 6,
+  "correct": 5,
+  "missing": 0,
+  "clock_uncertainty_ms": 58.5,
+  "gui_start_stop_and_restore_pass": true,
+  "receiver_summary": {
+    "rc": 0,
+    "supervisor": {
+      "mode": "FIXED",
+      "rf_tx": false,
+      "candidate_only": true,
+      "normal_npu_eof_before_rx_reap": true,
+      "finalization_accounting_verified": true,
+      "stop_errors": [],
+      "rx_restore": [],
+      "clean_stop": true
+    },
+    "final": {
+      "valid": 118,
+      "rejected": 423,
+      "records": 541,
+      "no_tcp": true,
+      "no_tx_handshake": true,
+      "restore_errors": [],
+      "ui_sent": 660,
+      "ui_failed": 0
+    },
+    "pred_counts": {
+      "3": 118
+    },
+    "backend_counts": {
+      "fpga": 118
+    }
+  },
+  "results": [
+    {
+      "index": 0,
+      "config": {
+        "bank": 0,
+        "message": 1,
+        "gain_db": -40
+      },
+      "chosen_frame": {
+        "frame_id": 58,
+        "capture_time_ns": 1773389875213204240,
+        "pred": 3,
+        "finite": true
+      },
+      "correct": true,
+      "missing": false,
+      "source_sha": "1562575bbedd6e815535726f16de6752da0f7441ea609acd3cb2cf6be529c0f8"
+    },
+    {
+      "index": 1,
+      "config": {
+        "bank": 0,
+        "message": 1,
+        "gain_db": -50
+      },
+      "chosen_frame": {
+        "frame_id": 91,
+        "capture_time_ns": 1773389884391070170,
+        "pred": 3,
+        "finite": true
+      },
+      "correct": true,
+      "missing": false,
+      "source_sha": "1562575bbedd6e815535726f16de6752da0f7441ea609acd3cb2cf6be529c0f8"
+    },
+    {
+      "index": 2,
+      "config": {
+        "bank": 0,
+        "message": 1,
+        "gain_db": -60
+      },
+      "chosen_frame": {
+        "frame_id": 123,
+        "capture_time_ns": 1773389894006786790,
+        "pred": -1,
+        "finite": false
+      },
+      "correct": false,
+      "missing": false,
+      "source_sha": "1562575bbedd6e815535726f16de6752da0f7441ea609acd3cb2cf6be529c0f8"
+    },
+    {
+      "index": 3,
+      "config": {
+        "bank": 1,
+        "message": 1,
+        "gain_db": -40
+      },
+      "chosen_frame": {
+        "frame_id": 149,
+        "capture_time_ns": 1773389903255140910,
+        "pred": 3,
+        "finite": true
+      },
+      "correct": true,
+      "missing": false,
+      "source_sha": "9aba09a24cdb03ca4820fa6eca08814d27b8ec53b4eb17bc5111761b82e8d233"
+    },
+    {
+      "index": 4,
+      "config": {
+        "bank": 1,
+        "message": 2,
+        "gain_db": -40
+      },
+      "chosen_frame": {
+        "frame_id": 182,
+        "capture_time_ns": 1773389912634369650,
+        "pred": 3,
+        "finite": true
+      },
+      "correct": true,
+      "missing": false,
+      "source_sha": "04d67b525d37a53a55b92da708ccb6dc8d4a531e12a57ef2012ae86f3375402a"
+    },
+    {
+      "index": 5,
+      "config": {
+        "bank": 1,
+        "message": 1,
+        "gain_db": -50
+      },
+      "chosen_frame": {
+        "frame_id": 215,
+        "capture_time_ns": 1773389921834481090,
+        "pred": 3,
+        "finite": true
+      },
+      "correct": true,
+      "missing": false,
+      "source_sha": "9aba09a24cdb03ca4820fa6eca08814d27b8ec53b4eb17bc5111761b82e8d233"
+    }
+  ]
+}

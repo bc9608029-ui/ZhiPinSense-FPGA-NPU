@@ -1,0 +1,24 @@
+十二类调制识别模型鲁棒性增强 —— 基线来源 ZIP 与 SHA-256 冻结记录
+=====================================================================
+
+本文件冻结本工程（ad_amr_data_v4_12class_robust）的解包来源及其内容绑定哈希。
+以下 SHA-256 于 2026-10-05 在本地复算，与各 dist 目录下的 *.zip.sha256 侧车文件
+逐一一致。
+
+[1] 十二类正式基线（本工程解包来源，只读，不再改动）
+------------------------------------------------------
+ZIP 文件:   F:\嵌赛\model_ad_amr_v1_2\dist\ad_amr_v1_1_data_v3_12class_autodl.zip
+字节数:     7,538,546 字节
+SHA-256:    ff2b3fb3661f6b7dd6ae21b20cb78ed1801d300d177dd49b2e4c50053197f044
+AutoDL 解包运行目录(约定): /root/autodl-tmp/ad_amr_data_v3_12class_ff2b3fb3_run
+解包文件数: 140（含 sha256_manifest.txt 自身；见 BASELINE_FILE_MANIFEST.txt）
+
+[2] V1.1 十类基线（对照用，只读，仅作资产审计，不冒充十二类）
+--------------------------------------------------------------
+ZIP 文件:   F:\嵌赛\model_ad_amr_v1_1\dist\ad_amr_v1_1_autodl.zip
+字节数:     7,469,704 字节
+SHA-256:    abe1344203106f66dc70cb0b0fcd62cf455cec274c798182f30412b4df529096
+
+复算命令（供复核）:
+  sha256sum "F:\嵌赛\model_ad_amr_v1_2\dist\ad_amr_v1_1_data_v3_12class_autodl.zip"
+  sha256sum "F:\嵌赛\model_ad_amr_v1_1\dist\ad_amr_v1_1_autodl.zip"

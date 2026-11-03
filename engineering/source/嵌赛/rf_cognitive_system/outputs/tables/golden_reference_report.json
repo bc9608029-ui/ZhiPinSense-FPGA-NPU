@@ -1,0 +1,29 @@
+{
+  "interface": {
+    "iq_input_format": "interleaved signed int16: [I0,Q0,I1,Q1,...]",
+    "sample_length": 1024,
+    "fft_length": 1024,
+    "window": "Hann, coefficients Q1.15",
+    "normalization": "DC removal then block-RMS gain; gain supplied/configured by CPU",
+    "output_format": "FFT complex signed values plus uint32/uint64 power bins"
+  },
+  "fixed_point_recommendation": {
+    "adc_bits": 16,
+    "coefficient_fractional_bits": 15,
+    "fir_accumulator_bits": 40,
+    "fft_internal_bits": 24,
+    "fft_scaling": "block floating point or 1-bit/stage; retain exponent metadata",
+    "rationale": "For signed Q1.15 input and coefficients, each product is ~Q2.30. A 65-tap FIR needs ceil(log2(65))=7 guard bits plus sign, so 40 bits prevents worst-case accumulation overflow. FFT growth is log2(N) bits; do not freeze the final width until RTL scaling and crest-factor tests exist."
+  },
+  "filtered_comparison": {
+    "mse": 2.0310031190277203e-09,
+    "relative_error": 9.16796837712195e-05,
+    "quantization_snr_db": 80.75453786753616
+  },
+  "fft_comparison": {
+    "mse": 8.284141332029222e-07,
+    "relative_error": 9.332367991050431e-05,
+    "quantization_snr_db": 80.60016289149704
+  },
+  "note": "TODO-HARDWARE: compare these arrays with Procise RTL simulation and FMQL30TAI captures."
+}

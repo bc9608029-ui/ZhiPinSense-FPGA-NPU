@@ -1,0 +1,113 @@
+================================================================================
+RML23 Stage H-F / Route F — IQ RF 回环 fix9r1 交付清单（打包权限修复 + 46 样本板测）
+================================================================================
+状态: M29-RML23-IQ-RF-LOOPBACK-FIX9R1-READY-FOR-BOARD-TEST（待用户上板 46 样本复测）
+      FIX9R_ALGORITHM=DELIVERED  FIX9R_PACKAGING_PERMISSION=DEFECT(已修复)
+      FIX9R1_WORK=DELIVERED  FIX9R1_BOARD_TEST=PENDING
+      DUAL_SDR_WORK=PAUSED（fix10 双 SDR 文件全保留）  FORMAL_690_RF_RUN=BLOCKED
+      不写 RF_PASS / RF_PATH_PROVEN / NPU_PASS / PROJECT_COMPLETE / FINAL_*；
+      ROUTE_F_23CLASS_ACCURACY_REGRESSION_PASS 仅由板端 46 样本合法复测建立。
+基线: sdr_rml23_live_board_package_iq_rf_loopback_fix9r.tar.gz  3642caffac4d…（570 内容文件）
+================================================================================
+
+1. 工件（6 份；fix9r 旧包 SHA 不变，未覆盖任何历史包）
+--------------------------------------------------------------------------------
+A. 独立补丁（fix9r1 增量，自包含）
+   路径: dist/sdr_rml23_live_iq_rf_loopback_fix9r1_patch.tar.gz
+   字节: 7992
+   文件数: 2（scripts/package_iq_rf_loopback_fix9r1.py + docs/…_FIX9R1_AUDIT.md）
+   manifest: dist/IQ_RF_LOOPBACK_FIX9R1_PATCH_SHA256SUMS.txt（2 行）
+   sha256: 50a77e86202844fb50b87796f00561c40d80aa2351c8218170432aa1372f57b0
+
+B. 合并全量（fix9r 全量 + fix9r1，脚本已带 0755）
+   路径: dist/sdr_rml23_live_board_package_iq_rf_loopback_fix9r1.tar.gz
+   字节: 3946136
+   内容文件数: 572（570 fix9r 字节一致 + 2 fix9r1 新增；SHA256SUMS.txt 重生成）
+   manifest: dist/sdr_rml23_live_board_package_iq_rf_loopback_fix9r1.SHA256SUMS.txt（572 行）
+   sha256: 306873e100a8238e0adfe8c38b8a202be4adc4a542144f3b966ee91c50b0a93d
+
+C. 补丁 manifest: dist/IQ_RF_LOOPBACK_FIX9R1_PATCH_SHA256SUMS.txt（229 字节）
+   sha256: 2d8bbfabdee47f75818ddf574a1d718df96fdd25e0f7970e032f999433f53f05
+D. 全量 manifest: dist/sdr_rml23_live_board_package_iq_rf_loopback_fix9r1.SHA256SUMS.txt（57665 字节）
+   sha256: b7c62f1b53a373d8baf8a8a2f917dc327714588b8d23026cb7b6463e62d2357a
+E. 审计文档: docs/M29_RML23_STAGE_H_F_IQ_RF_LOOPBACK_FIX9R1_AUDIT.md（8215 字节）
+   sha256: db0e163d237c419d72947ca1588389e3fc7866b8bbac9b57db5f9ab3b5af25b2
+F. 本交付清单: dist/RML23_IQ_RF_LOOPBACK_FIX9R1_DELIVERY.txt
+
+2. 缺陷与修复（权限变化 vs 内容变化，分开报告）
+--------------------------------------------------------------------------------
+缺陷: fix9r 全量包 571 个 tar 文件成员 mode 全为 -rw-rw-rw-（0666），0 个目录成员；
+      板端 scripts/*.sh、board_package/*.sh 无执行位 → ./scripts/build_on_board.sh 报
+      Permission denied。根因 = fix9r 打包器 make_tar() 未显式覆盖 tarfile.gettarinfo()
+      的 info.mode（Windows 无 Unix 执行位，全部被报为 0666）。
+修复: fix9r1 打包器对每个 tar 成员显式赋 mode —— 目录 0755、*.sh 0755、其余 0644；
+      显式产出目录成员；绝不用 0666/0777；uid=0/gid=0/uname=""/gname=""/mtime=0/gzip mtime=0。
+权限变化: 571 文件 0666 → 13 目录 0755 + 60 *.sh 0755 + 其余 0644（只改 tar 元数据）。
+内容变化: 仅 2 新增文件（本打包器 + fix9r1 审计）；570 个 fix9r 内容文件字节完全一致。
+核心代码字节未变: iq_rf_training_frame.hpp / iq_rf_per_frame_recovery.hpp /
+  iq_rf_loopback_23class*.hpp / board_gate9_full_chain_rml23.cpp / sdr_adapter/* /
+  model_rml23/* 逐一 SHA-256 比对 0 变化。fix9r 算法未动、fix10 未恢复。
+
+3. 离线验证（10 项，不碰板）
+--------------------------------------------------------------------------------
+[1] fix9r 核心 host 测试（WSL 重跑）: test_iq_rf_loopback_23class_fix9r pass=71 fail=0；
+    test_iq_rf_loopback_23class（fix9 无回归）pass=93 fail=0。
+    test_iq_external_rf_rx_23class（fix10）→ SKIPPED_PAUSED_FIX10（不计入 pass）。
+[2] syntax check（内容字节一致，结转 fix9r）: gate7/gate9/gate10/gate9_rml23 全 OK。
+[3] analyze_iq_rf_loopback_recovery.py --self-test : 9/9。
+[4] build_route_f_fix9r_exact_baseline.py --self-test : 5/5。
+[5] dependency closure（内容字节一致，结转 fix9r）: OK（fix9r1 不改任何 C/C++）。
+[6] 2× 确定性打包: patch/full 两次运行 sha256 逐字节一致。
+[7] 独立解包 sha256sum -c: full 572/572 OK、patch 2/2 OK（0 失败）。
+[8] tar mode 审计（独立 Python）:
+    TAR_MODE_AUDIT patch directories_0755=3 shell_scripts_0755=0 bad_directories=0
+      bad_shell_scripts=0 bad_other_files=0 forbidden_0666_0777=0 result=PASS
+    TAR_MODE_AUDIT full directories_0755=13 shell_scripts_0755=60 bad_directories=0
+      bad_shell_scripts=0 bad_other_files=0 forbidden_0666_0777=0 result=PASS
+[9] WSL/Linux 独立解包执行位审计: find scripts/*.sh + board_package/*.sh ! -perm -111
+    → 零输出（non-exec .sh count=0）；test -x scripts/build_on_board.sh → 0；
+    test -x board_package/build_npu_on_board.sh → 0；./scripts/build_on_board.sh --help
+    正常执行（非 Permission denied）。
+[10] fix10 零残留: 0 个 fix10 代码文件；board_gate9/gate9_phase/build/run/pluto_device
+    共 10/10 无 fix10 代码；0 处 #include fix10 头。仅注释/打包器移除逻辑/审计文档
+    含 "fix10" 字样（非代码残留）。
+
+4. 板端复测命令（用户执行，我禁碰板；全程无需 chmod +x）
+--------------------------------------------------------------------------------
+# 0) 校验全量包 SHA（应等于 306873e100a8238e0adfe8c38b8a202be4adc4a542144f3b966ee91c50b0a93d）
+sha256sum sdr_rml23_live_board_package_iq_rf_loopback_fix9r1.tar.gz
+# 1) 解包（脚本已带 0755，直接可执行）
+tar -xzf sdr_rml23_live_board_package_iq_rf_loopback_fix9r1.tar.gz
+cd sdr_rml23_live_board_package_iq_rf_loopback_fix9r1
+# 2) 执行位自检（应全部返回 0）
+test -x scripts/build_on_board.sh        && echo OK
+test -x board_package/build_npu_on_board.sh && echo OK
+sha256sum -c SHA256SUMS.txt              # 应 572 个 OK（0 失败）
+# 3) 构建板端二进制（producer board_gate9_full_chain_rml23 + UI server）
+LIBIIO_ROOT=/tmp/sdr_pluto_gate1_5/libiio-arm64 ./scripts/build_on_board.sh
+# 4) 使用既有 Route A 23 类数据（frozen-dir 内含 route_d2_rf_manifest.tsv，无需重造）
+#    生成/装载 46 样本精确基线：
+python3 -I scripts/build_route_f_fix9r_exact_baseline.py \
+    --d2-manifest <frozen>/route_d2_rf_manifest.tsv \
+    --out route_f_fix9r_exact_baseline.tsv --expect-holdout 46
+# 5) 同机 Pluto 46 样本 RF 复测（50Ω 同轴直连，无天线无放大器；tx-atten≤-40）
+./run_gate9_rml23.sh --phase=iq-rf-loopback-23class-fix9r \
+    --input-kind=radioml-d2-2p56m --frozen-dir=<frozen> \
+    --baseline=route_f_fix9r_exact_baseline.tsv \
+    --center=2400000000 --rx-gain=10 --tx-atten=-40 --rf-path=direct-cable \
+    > /root/rml23_route_f_fix9r1_23class.log 2>&1
+# 6) 提取结果（回归 token + 46 样本字段）
+grep -E 'ROUTE_F_23CLASS_ACCURACY_REGRESSION|training_estimate_valid|rf_valid|rf_excluded' \
+    /root/rml23_route_f_fix9r1_23class.log
+
+5. 46 样本接受门（§11）
+--------------------------------------------------------------------------------
+须输出: training_estimate_valid=46/46, rf_valid=46/46, rf_excluded=0,
+  baseline_correct=, rf_correct=, baseline_accuracy=, rf_accuracy=,
+  prediction_agreement=, accuracy_delta_pp=, 4ask_baseline=, 4ask_rf=,
+  restore_result=PASS。
+仅当: prediction_agreement>=0.90 且 rf_accuracy>=exact_baseline_accuracy−5pp
+  且 4ASK 不退化到 0% 且无 TX/RX 削顶 且 training estimate 46/46 有效 且 restore PASS
+  → ROUTE_F_23CLASS_ACCURACY_REGRESSION_PASS；否则 ROUTE_F_23CLASS_ACCURACY_REGRESSION_FAIL。
+回归 PASS 后，fix10（双 SDR）才可恢复（以 fix9r1 全量为基线）。690 样本正式 RF 仍 BLOCKED。
+================================================================================

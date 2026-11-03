@@ -1,0 +1,23 @@
+# SHA-256 manifest — sdr_preparation_v1/board_package
+# Generated 2026-10-01 (offline preparation; no board, no SDR driver installed).
+# Format: <sha256>  <filename>   (compute with: sha256sum -c sha256_manifest.txt)
+#
+# Frozen files (iq_input.bin, expected_tensor_plddr.bin, model.json, model.raw,
+# reference_argmax.txt, pl_ddr_register_map.hpp) were byte-verified IDENTICAL to
+# fpga_npu_joint_v1/board_package originals before this manifest was written.
+403d3d569b7fd6540ff60039c2d266535a80e8910c5aac98ab249a0c6e39a4b3  CMakeLists.txt
+15c938fda9cc99880837d1f768296d78831f56e525736b176659e57d8e45fd40  README.md
+e0d41aff4bce3204191c8450b35cea1e6ae2d0af4f1a4df38bebcff6255f0278  build_on_board.sh
+2d47177c15ff254f2c4ee94190ad940c426e45699c6014693f8b20a5dfa1605a  continuous_joint_stress.cpp
+7f4bce133fd00cbd6161eb278ad4f2506e12d74fc223fbda0afb664fc8fe2af5  expected_tensor_plddr.bin
+eb8d9f1320f731b886eaf284e2334af562636f56e0dad0628db4ff97b0099d35  file_iq_source.cpp
+c5945d4da94ba0df9067b93c18496f74da8ce2d58c20346c6f0a346fda7d6003  iq_input.bin
+8ec092d200cf29ec2cc873a6d7922bd79f2f190b8a6ead97825d0eb6b660ea55  iq_source.cpp
+7a7806df234d0a2b11248d0883d85eb55e8dc4b21c7434b13e7a606ac2ec5247  iq_source.hpp
+ad57fc0b4a9ec5ae6e8cd2d2c2c0c91f81ef4e5fc7898447b322dc00c349a2e4  model.json
+c48979b3ab1bc62fa2efcfb07202ee640513f424244d15d089c89a6d2260b42a  model.raw
+db9f57c8bf5c4555618779a6f1b4dbf83af8c0edb6c9f02296af40b7b88a61d4  pl_ddr_register_map.hpp
+f7019cd46d99dac52a4bfc47e8082059eaf4b63aa8d80e8af2d818d6f23b9d9e  reference_argmax.txt
+7ac718226e1e4e06df9a1132884a377f05368d96e4c0f2dbafa54deeb2a23837  run_basic.sh
+82ac7354f330efd2a547f1e6504ca7fb2a6b6dd2e34e59e700015a6bdf820591  run_smoke.sh
+3da5b425d4964fe3b66deb4e60967b269965a487a1c2f48e23d756c976665be7  run_stress.sh

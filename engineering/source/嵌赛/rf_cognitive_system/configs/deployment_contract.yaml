@@ -1,0 +1,54 @@
+contract_version: 1
+status: provisional_until_board_bringup
+
+frame:
+  complex_samples: 1024
+  sample_rate_hz_reference: 128000
+  hop_samples_initial: 1024
+  class_order: [BPSK, QPSK, 8PSK, 16QAM, 64QAM, 2FSK, CPFSK, OFDM]
+
+fpga_input:
+  layout: interleaved_iq
+  scalar_type: signed_int16
+  word_order: [I, Q]
+  binary_point: 15
+  axi_stream_tdata_bits: 32
+
+fpga_features:
+  channel_order: [power, lag1_real, lag1_imag]
+  exact_width_bits: [32, 33, 33]
+  lag1_first_sample: deterministic_zero
+  formulas:
+    power: I*I + Q*Q
+    lag1_real: I[n]*I[n-1] + Q[n]*Q[n-1]
+    lag1_imag: Q[n]*I[n-1] - I[n]*Q[n-1]
+  quantization: calibrated_symmetric_saturating_round_to_nearest
+
+npu_inputs:
+  - name: iq
+    shape: [1, 2, 1024]
+    reference_dtype: float32
+    planned_dtype: int8
+    layout: NCL
+  - name: physical_features
+    shape: [1, 3, 1024]
+    reference_dtype: float32
+    planned_dtype: int8
+    layout: NCL
+npu_output:
+  name: logits
+  shape: [1, 8]
+  class_order: [BPSK, QPSK, 8PSK, 16QAM, 64QAM, 2FSK, CPFSK, OFDM]
+
+initial_partition:
+  dc_removal_in_amr_path: bypass
+  fir_in_amr_path: bypass
+  fft_in_amr_path: false
+  fft_role: optional_monitoring_psd_and_energy_detection
+  note: Additional preprocessing changes the frozen model distribution and requires explicit validation.
+
+todo_hardware:
+  - Confirm SDR physical interface and sample clock.
+  - Confirm FMQL30TAI AXI port widths, DMA coherency, DDR allocation and interrupt routing.
+  - Confirm exact Icraft input layout, quantization conventions and supported ONNX operators.
+  - Freeze clock frequencies and fixed-point shifts only after RTL simulation and board capture.

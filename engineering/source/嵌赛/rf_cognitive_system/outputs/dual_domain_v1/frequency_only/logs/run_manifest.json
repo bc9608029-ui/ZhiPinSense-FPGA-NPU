@@ -1,0 +1,51 @@
+{
+  "experiment_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\dual_domain_v1.yaml",
+  "baseline_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\baseline.yaml",
+  "baseline_git_commit": "2bd657983c062582450b8da871f87df9345264d6",
+  "current_git_commit": "f9752063ff1768fbe80c52a1b94da3ab8e8ad777",
+  "variant": "frequency_only",
+  "seed": 2026,
+  "model": {
+    "base_channels": 16,
+    "wide_base_channels": 23,
+    "fusion_features": 64,
+    "dropout": 0.1,
+    "fft_length": 256
+  },
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "torch": "2.14.0+cpu",
+    "cuda_available": false,
+    "torch_cuda_version": null,
+    "cudnn_version": null,
+    "cuda_devices": []
+  },
+  "epochs_completed": 40,
+  "best_epoch": 39,
+  "training_time_sec": 2805.5940424,
+  "peak_process_rss_mb": 448.48046875,
+  "model_profile": {
+    "parameters": 36120,
+    "trainable_parameters": 36120,
+    "parameter_size_mb_fp32": 0.137786865234375,
+    "fixed_non_trainable_state_elements": 131687,
+    "fixed_non_trainable_state_mb": 0.5023727416992188,
+    "frontend_fixed_state_elements": 131072,
+    "frontend_fixed_state_mb": 0.5,
+    "neural_macs": 1198592,
+    "neural_flops": 2397184,
+    "frontend_macs_pc_reference": 1048576,
+    "frontend_flops_pc_reference": 2097152,
+    "total_software_macs": 2247168,
+    "total_software_flops": 4494336,
+    "checkpoint_tensor_state_size_mb": 0.6401596069335938,
+    "serialized_state_dict_mb": 0.6559629440307617,
+    "projected_npu_model_size_mb": 0.14015960693359375,
+    "hardware_partition_status": "PLANNED ONLY: fixed DFT/power frontend is intended for FPGA; no hardware performance is claimed.",
+    "approx_macs": 2247168,
+    "approx_flops": 4494336
+  }
+}

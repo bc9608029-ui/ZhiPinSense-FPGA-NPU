@@ -1,0 +1,17 @@
+{
+  "status": "PREFETCH_CANDIDATE_64_SAME_IQ_JOBS_PASS_MORE_ACCEPTANCE_PENDING",
+  "rounds": 8,
+  "vectors_per_round": 8,
+  "passed_jobs": 64,
+  "board_evidence": "/root/rml24_fix3_1793424504",
+  "bit": {
+    "file": "E:\\FPGA_Work\\smartscan_prefetch_fix3_20261031\\outputs\\smartscan_fix3_candidate\\smartscan_fix3_vendor_auto_disable_icap.bit",
+    "sha256": "f42dd12f03bf81c65978b7034b45808efd5035f6a358cc54710f2404530a057c",
+    "temporary_only": true
+  },
+  "old_failure_preserved": true,
+  "root_cause_proven": false,
+  "not_formal_RF_acceptance": true,
+  "auto_fallback_and_candidate_NPU_liveness_pending": true,
+  "production_promoted": false
+}

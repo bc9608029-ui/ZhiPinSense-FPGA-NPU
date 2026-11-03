@@ -1,0 +1,167 @@
+{
+  "rows": [
+    {
+      "index": 0,
+      "file": "14_05.bin",
+      "mode": "clean",
+      "expected": 14,
+      "source_sha256": "d0897fab50db5cf82cfa944fe0b40395c8a4f5696b1b52224dc44a1407f09664",
+      "pred": 14,
+      "confidence": 0.5774953350258454
+    },
+    {
+      "index": 1,
+      "file": "14_05.bin",
+      "mode": "tx_quant_pilot_cal",
+      "expected": 14,
+      "source_sha256": "d0897fab50db5cf82cfa944fe0b40395c8a4f5696b1b52224dc44a1407f09664",
+      "pred": 16,
+      "confidence": 0.9755768934888858
+    },
+    {
+      "index": 2,
+      "file": "14_05.bin",
+      "mode": "tx_quant_scale_cal",
+      "expected": 14,
+      "source_sha256": "d0897fab50db5cf82cfa944fe0b40395c8a4f5696b1b52224dc44a1407f09664",
+      "pred": 16,
+      "confidence": 0.5621764664098822
+    },
+    {
+      "index": 3,
+      "file": "13_01.bin",
+      "mode": "clean",
+      "expected": 13,
+      "source_sha256": "36c5b8b65605942003634f26f969785d67d971b3103ccfa7b5905b304f5c163d",
+      "pred": 13,
+      "confidence": 0.9840935681953215
+    },
+    {
+      "index": 4,
+      "file": "13_01.bin",
+      "mode": "tx_quant_pilot_cal",
+      "expected": 13,
+      "source_sha256": "36c5b8b65605942003634f26f969785d67d971b3103ccfa7b5905b304f5c163d",
+      "pred": 15,
+      "confidence": 0.826710249245549
+    },
+    {
+      "index": 5,
+      "file": "13_01.bin",
+      "mode": "tx_quant_scale_cal",
+      "expected": 13,
+      "source_sha256": "36c5b8b65605942003634f26f969785d67d971b3103ccfa7b5905b304f5c163d",
+      "pred": 13,
+      "confidence": 0.9883126932275315
+    },
+    {
+      "index": 6,
+      "file": "17_00.bin",
+      "mode": "clean",
+      "expected": 17,
+      "source_sha256": "03a887028f08b4699dc8eb52ce2384047bd6a0f1ab42d827e48b979996b9d57a",
+      "pred": 17,
+      "confidence": 0.7431680084733143
+    },
+    {
+      "index": 7,
+      "file": "17_00.bin",
+      "mode": "tx_quant_pilot_cal",
+      "expected": 17,
+      "source_sha256": "03a887028f08b4699dc8eb52ce2384047bd6a0f1ab42d827e48b979996b9d57a",
+      "pred": 17,
+      "confidence": 0.7248702760906394
+    },
+    {
+      "index": 8,
+      "file": "17_00.bin",
+      "mode": "tx_quant_scale_cal",
+      "expected": 17,
+      "source_sha256": "03a887028f08b4699dc8eb52ce2384047bd6a0f1ab42d827e48b979996b9d57a",
+      "pred": 17,
+      "confidence": 0.7371581624848246
+    },
+    {
+      "index": 9,
+      "file": "18_06.bin",
+      "mode": "clean",
+      "expected": 18,
+      "source_sha256": "996ceaa33727ae2bc26cb2d03faa7133fe466ec4f6cea7223537262c7f3f16ae",
+      "pred": 18,
+      "confidence": 0.9999999998410609
+    },
+    {
+      "index": 10,
+      "file": "18_06.bin",
+      "mode": "tx_quant_pilot_cal",
+      "expected": 18,
+      "source_sha256": "996ceaa33727ae2bc26cb2d03faa7133fe466ec4f6cea7223537262c7f3f16ae",
+      "pred": 18,
+      "confidence": 0.9999999998597366
+    },
+    {
+      "index": 11,
+      "file": "18_06.bin",
+      "mode": "tx_quant_scale_cal",
+      "expected": 18,
+      "source_sha256": "996ceaa33727ae2bc26cb2d03faa7133fe466ec4f6cea7223537262c7f3f16ae",
+      "pred": 18,
+      "confidence": 0.9999999998597366
+    },
+    {
+      "index": 12,
+      "file": "18_07.bin",
+      "mode": "clean",
+      "expected": 18,
+      "source_sha256": "919de9a33286e363afef965b60ddda37509c992c19358babdc47581dc7438756",
+      "pred": 18,
+      "confidence": 0.9999999572864668
+    },
+    {
+      "index": 13,
+      "file": "18_07.bin",
+      "mode": "tx_quant_pilot_cal",
+      "expected": 18,
+      "source_sha256": "919de9a33286e363afef965b60ddda37509c992c19358babdc47581dc7438756",
+      "pred": 18,
+      "confidence": 0.9999999515992258
+    },
+    {
+      "index": 14,
+      "file": "18_07.bin",
+      "mode": "tx_quant_scale_cal",
+      "expected": 18,
+      "source_sha256": "919de9a33286e363afef965b60ddda37509c992c19358babdc47581dc7438756",
+      "pred": 18,
+      "confidence": 0.9999999611088857
+    },
+    {
+      "index": 15,
+      "file": "23_04.bin",
+      "mode": "clean",
+      "expected": 23,
+      "source_sha256": "4096ea41c434a771d8c9e2fdb00e45d9baca881ed633e0dcef1c6b758795f2cc",
+      "pred": 23,
+      "confidence": 0.9886414677225505
+    },
+    {
+      "index": 16,
+      "file": "23_04.bin",
+      "mode": "tx_quant_pilot_cal",
+      "expected": 23,
+      "source_sha256": "4096ea41c434a771d8c9e2fdb00e45d9baca881ed633e0dcef1c6b758795f2cc",
+      "pred": 23,
+      "confidence": 0.8502116065833891
+    },
+    {
+      "index": 17,
+      "file": "23_04.bin",
+      "mode": "tx_quant_scale_cal",
+      "expected": 23,
+      "source_sha256": "4096ea41c434a771d8c9e2fdb00e45d9baca881ed633e0dcef1c6b758795f2cc",
+      "pred": 23,
+      "confidence": 0.984703166470981
+    }
+  ],
+  "guard_clean": true
+}

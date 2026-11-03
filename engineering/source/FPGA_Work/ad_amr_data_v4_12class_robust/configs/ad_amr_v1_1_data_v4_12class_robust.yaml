@@ -1,0 +1,102 @@
+# ad_amr_v1_1_data_v4_12class_robust.yaml
+#
+# data-v4 鲁棒性增强主配置（PROVISIONAL）。继承冻结的十二类契约（类别顺序 /
+# 输入 [N,2,1024] / head=12 / 正式门禁 / 双种子），**不覆盖** `signal.modulations`、
+# **不覆盖** `acceptance` 门禁、**不改** ONNX 白名单、**不改** `channel`（冻结验证/OOD
+# 信道保持不变）。唯一新增的增强信道在 `robust.train_channel`，仅用于 train split。
+#
+# `robust.status` 与 `robust.final_config_approved` 供
+# scripts/run_robust_{pilot,formal}.sh 与 formal 脚本 fail-closed 检查：
+#   - pilot  需要 `robust.status: PROVISIONAL`（或更高）且用户显式放行；
+#   - formal 需要 `robust.final_config_approved: true` + FINAL_CONFIG_APPROVED 标记。
+#
+# tail / composite 数值为候选默认值（CFO tail 0.20 / multipath tail 0.15 /
+# composite 0.10）。若 pilot 首次不达最小改善，可换用尾概率 0.30/0.25/0.15 重跑，
+# 但正式锁定前必须由用户确认，且任何改动都会改变 train_channel_sha256 与
+# release_input_hash。
+
+_base: configs/ad_amr_v1_1_data_v3_12class.yaml
+
+output_root: outputs/ad_amr_v1_1_data_v4_12class_robust/pilot/candidate_C_seed2026
+
+robust:
+  status: PROVISIONAL
+  final_config_approved: false
+  # 十二类正式 best.pt（seed 占位符，由脚本按 seed 代入）。必须真实存在，否则 fail closed。
+  init_checkpoint: outputs/ad_amr_v1_1_data_v3_12class/formal/seed{seed}/checkpoints/best.pt
+
+  # --- 训练域增强信道（仅 train split；核心 = 冻结 channel，新增 tail + composite） ---
+  train_channel:
+    domain_randomization: true
+    awgn: {enabled: true, probability: 1.0, snr_db: [-20.0, 20.0]}
+    rayleigh: {enabled: true, probability: 0.10}
+    rician: {enabled: true, probability: 0.10, k_factor: [3.0, 10.0]}
+    multipath:
+      enabled: true
+      probability: 0.12
+      num_taps: [2, 4]
+      max_delay: 10
+      tail: {probability: 0.15, num_taps: [3, 6], max_delay: 20}
+    cfo:
+      enabled: true
+      probability: 0.55
+      hz: [-1200.0, 1200.0]
+      tail: {probability: 0.20, hz: [-2500.0, 2500.0]}
+    phase_offset: {enabled: true, probability: 0.65, radians: [-3.14159, 3.14159]}
+    phase_noise: {enabled: true, probability: 0.10, std_rad: [0.0001, 0.003]}
+    sfo: {enabled: true, probability: 0.08, ppm: [-60.0, 60.0]}
+    iq_imbalance: {enabled: true, probability: 0.12, gain_db: [-1.0, 1.0], phase_deg: [-5.0, 5.0]}
+    dc_offset: {enabled: true, probability: 0.08, magnitude: [0.0, 0.05]}
+    amplitude_scaling: {enabled: true, probability: 0.5, scale: [0.7, 1.3]}
+    clipping: {enabled: true, probability: 0.06, level_rms: [1.5, 2.5]}
+    narrowband_interference: {enabled: false, probability: 0.0, sir_db: [8.0, 25.0]}
+    burst_interference: {enabled: false, probability: 0.0, sir_db: [5.0, 20.0], duty_cycle: [0.05, 0.2]}
+    composite:
+      enabled: true
+      probability: 0.10
+      effects:
+        cfo: {hz: [-1800.0, 1800.0]}
+        phase_noise: {std_rad: [0.002, 0.008]}
+        iq_imbalance: {gain_db: [-1.5, 1.5], phase_deg: [-8.0, 8.0]}
+        multipath: {num_taps: [2, 5], max_delay: 16}
+
+  pilot:
+    seed: 2026
+    epochs: 30
+    learning_rate: 0.0001
+    candidates: [A, B, C]
+    focus_ood_domains: [cfo_strong, multipath, multi_impairment]
+    # 每域最小改善（= 使 OOD macro-F1 下降回到 0.08 门禁以内所需的下降量）：
+    # cfo 0.12453-0.08≈0.0446；multipath 0.11775-0.08≈0.0378；multi 0.13218-0.08≈0.0522
+    min_improvement:
+      cfo_strong: 0.0446
+      multipath: 0.0378
+      multi_impairment: 0.0522
+    # 干净验证指标允许的最大回退（选择候选时不得超过）。
+    regression_bounds:
+      macro_f1: 0.02
+      rated_0_20_accuracy: 0.01
+      snr_0_accuracy: 0.02
+      min_rated_class_accuracy: 0.02
+
+  formal:
+    seeds: [2026, 2027]
+    epochs: 100
+    minimum_epochs_before_stopping: 30
+    learning_rate: 0.0001
+
+# 默认低学习率（pilot/formal 脚本按 robust.pilot/formal 再覆盖 epochs 等）。
+training:
+  learning_rate: 0.0001
+  epochs: 30
+  minimum_epochs_before_stopping: 30
+
+# --- 鲁棒性域规格（供 channel/robust_augment.py::build_domain_config 使用；候选/占位） ---
+robust_domains:
+  cfo_strong: {cfo: {hz: [-2500.0, 2500.0]}}
+  multipath: {multipath: {num_taps: [3, 6], max_delay: 20}}
+  multi_impairment:
+    cfo: {hz: [-1800.0, 1800.0]}
+    phase_noise: {std_rad: [0.002, 0.008]}
+    iq_imbalance: {gain_db: [-1.5, 1.5], phase_deg: [-8.0, 8.0]}
+    multipath: {num_taps: [2, 5], max_delay: 16}

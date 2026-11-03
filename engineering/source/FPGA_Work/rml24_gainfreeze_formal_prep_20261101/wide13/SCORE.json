@@ -1,0 +1,115 @@
+{
+  "name": "wide13",
+  "denominator": 13,
+  "correct": 13,
+  "missing": 0,
+  "minimum_correct": 13,
+  "clock_drift_ns": -5258790,
+  "rows": [
+    {
+      "index": 0,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 124,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 1,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 147,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 2,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 171,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 3,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 194,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 4,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 218,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 5,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 241,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 6,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 264,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 7,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 288,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 8,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 307,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 9,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 321,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 10,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 344,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 11,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 367,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 12,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 389,
+      "correct": true,
+      "missing": false
+    }
+  ],
+  "promotion_gate_pass": true
+}

@@ -1,0 +1,4 @@
+systemctl is-active rml24-integrated; readlink -f /opt/rml24-inttegrated/current
+active
+/opt/rml24-integrated/releases/range_20261101
+(base) root@U:~# 

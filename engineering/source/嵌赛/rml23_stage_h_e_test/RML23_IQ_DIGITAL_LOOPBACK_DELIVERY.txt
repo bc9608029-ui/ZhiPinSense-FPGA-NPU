@@ -1,0 +1,129 @@
+================================================================================
+ M29 RML23 Stage H-E / Route E — 同设备调制 IQ 数字回环测试准备 — 最终交付
+================================================================================
+状态: M29-RML23-IQ-DIGITAL-LOOPBACK-READY-FOR-BOARD-TEST
+      （最高允许状态；Route E 基础设施/保真/分类三判决分离，保真为观测 token、
+       arbitrary_modulated_iq_fidelity=BOARD_REQUIRED、RF_LEAKAGE_NOT_PROVEN 持续保留；
+       本轮未碰板、未训练、未写任何 *_PASS / PROJECT_COMPLETE / FINAL_*；
+       未把 DIGITAL_LOOPBACK_CAPABILITY_NOT_PROVEN 改 PROVEN）
+
+基线（本交付的相对基准）:
+  sdr_rml23_live_board_package_synthetic_iq_route_d.tar.gz
+      sha256 5a4c4d3ab7d892cfab3b2237cc714daee4bc896246fc3b46bd91ff90acedd688
+      （Stage G A/B/C/D 四路合成IQ注入 合并全量板端包，514 文件）
+
+--------------------------------------------------------------------------------
+ 两份最终工件（均含 SHA256SUMS manifest，已独立解包 sha256sum -c 校验通过）
+--------------------------------------------------------------------------------
+
+[DIFF] Stage H-E / Route E 独立补丁（12 文件，相对 route_d 5a4c4d3a… 基线）
+    dist/sdr_rml23_live_iq_digital_loopback_patch.tar.gz
+      12 文件  sha256 299467643b538581fb2025e0c22b92455d774ad5f50ec790f3f621cb62fdbc5a
+      manifest: IQ_DIGITAL_LOOPBACK_PATCH_SHA256SUMS.txt  (12 内容)
+      校验: sha256sum -c  => 12 OK / 0 FAIL
+
+[MERGE] 合并全量板端测试包（route_d 基线 + Route E）
+    dist/sdr_rml23_live_board_package_iq_digital_loopback.tar.gz
+      521 文件  sha256 2d8b8babd8a351264a92184c7b388e23936c1a9dfc494c55e509423ab1920c00
+      manifest: sdr_rml23_live_board_package_iq_digital_loopback.SHA256SUMS.txt (521 内容)
+      校验: sha256sum -c  => 521 OK / 0 FAIL
+
+  确定性: package_iq_digital_loopback.py 固定 uid/gid=0、mtime=0、GNU tar、
+          gzip mtime=0；.sh/.py 保留可执行位。
+  历史包未覆盖: synthetic_iq route_d 5a4c4d3a… / synthetic_iq 6c3258a7… /
+                A/B/C 补丁 1158dbfd… 及此前 correctness_fix / rf_fix / heartbeat /
+                UI / live-rx / integrated / integrated_live_rx / diag_errata_39e5
+                原样保留。
+
+--------------------------------------------------------------------------------
+ 文件差异证明（baseline = route_d 5a4c4d3a… vs merged，全量递归）
+--------------------------------------------------------------------------------
+模型 / 标签 / golden / 预处理契约 / RTL / XDC / 位流 / Flash 全部未变化。
+Route E 不触碰 A/B/C/D 语义；只补 Route C 持久化 + 新增 --phase=iq-digital-loopback。
+
+  新增（7）:
+    board_package/iq_digital_loopback.hpp        回环加载/对齐/度量/判决纯逻辑
+    board_package/iq_digital_loopback_runner.hpp 单进程编排（IIO→TX/RX→preprocess→NPU）
+    host_tests/test_iq_digital_loopback.cpp      host 75 断言
+    scripts/analyze_iq_digital_loopback.py       host 三判决分离分析器
+    scripts/package_iq_digital_loopback.py       Route E 打包器（patch+merged）
+    docs/M29_RML23_STAGE_H_E_IQ_DIGITAL_LOOPBACK_AUDIT.md          审计 + §8 编码记录
+    docs/M29_RML23_STAGE_H_E_IQ_DIGITAL_LOOPBACK_VERDICT_TEMPLATE.md 判决报告模板
+
+  修改（5，均为 .cpp/.hpp/.sh，无模型/数据）:
+    board_package/board_gate9_full_chain_rml23.cpp  Route C --raw-iq-out-dir 持久化
+                                                    （3-way SHA + 24 列 manifest +
+                                                    tensor/logits SHA + frozen 参考）
+                                                    + --phase=iq-digital-loopback
+                                                    dispatch + 薄包装
+    board_package/gate9_phase.hpp                   valid_phase 增 iq-digital-loopback
+    host_tests/build_host_tests.sh                  增 Route E 构建目标
+    host_tests/run_tests.sh                         增 Route E 运行入口
+    scripts/run_gate9_rml23.sh                      头注释补 C 持久化 + Route E 用法
+
+--------------------------------------------------------------------------------
+ Route C 持久化（Stage H-E 前置增量，默认关闭）
+--------------------------------------------------------------------------------
+  ./run_gate9_rml23.sh --phase=synthetic-iq --source=generated \
+      --inject-point=raw-rx --raw-iq-out-dir DIR       # route C persist
+
+  保存 push_int16() 的同一块后量化字节（outp.iq[0..pushed_complex*2)，I0,Q0,I1,Q1
+  交错 int16 LE），save 前内存 SHA / 落盘文件 SHA / 重读 SHA 三者一致；24 列
+  iq_loopback_manifest.tsv 记录 dtype/layout/sr_req+sr_act/complex/byte/seed/source/
+  mod/symrate/beta/span/sps/norm/rms/quant_scale/clip/clip_ratio/sha/tensor_sha/
+  logits_sha/frozen_frames/frozen_deployed_correct。默认 OFF，不影响 Route C 历史输出。
+
+--------------------------------------------------------------------------------
+ Route E 调用链（只读 frozen 文件，缺失 fail-closed）
+--------------------------------------------------------------------------------
+  ./run_gate9_rml23.sh --phase=iq-digital-loopback \
+      --input-kind=generated-2p56m --frozen-dir DIR              # Route C frozen
+  ./run_gate9_rml23.sh --phase=iq-digital-loopback \
+      --input-kind=radioml-reconstructed-2p56m --frozen-dir DIR   # Route D frozen
+
+  Route E 禁止重新生成波形；缺失即报 STAGE_G_FROZEN_IQ_REQUIRED。frozen 文件→
+  TX DMA→内部数字 loopback→RX DMA→preprocess→NPU→merge23；三判决分离输出：
+  基础设施（设备配置/TX/RX/同步/捕获/恢复）、信号保真（NMSE/EVM/CFO/相关 + 观测
+  token）、分类（测量-only，generated/radioml 两类不混合）。分类错误不判基础设施
+  FAIL，反之亦然。
+
+  硬要求落实:
+    R1  C 持久化保存 push_int16 同一块后量化字节，3-way SHA 一致
+    R2  持久化默认关闭（--raw-iq-out-dir 空 = 旁路）
+    R3  manifest 24 列完整记录（dtype/layout/sr/byte/seed/mod/…/SHA/tensor/logits/frozen）
+    R4  Route E 只读 frozen + Route D i16；缺失报 STAGE_G_FROZEN_IQ_REQUIRED
+    R5  旧 Route D 包与历史包不覆盖；C 持久化作为前置增量记入新 patch
+    R6  DIGITAL_LOOPBACK_CAPABILITY_NOT_PROVEN 保持，host 后不改 PROVEN
+    R7  RF_LEAKAGE_NOT_PROVEN 保持；TX 最大衰减写入+回读；不接天线/同轴；
+        ENSM 不在 Device 接口，记录 ensm=not_managed_by_this_code（未修改）
+    R8  采样率判定 abs(actual-2560000)<=5 Hz（2559999 可接受，3840000 fail-closed）；
+        PreprocessChain 仍用冻结 nominal 2560000；不据分类动态改采样率
+    R9  generated-2p56m / radioml-reconstructed-2p56m 分别跑，不混合汇总
+    R10 报告写 arbitrary_modulated_iq_fidelity=BOARD_REQUIRED（不写整能力不存在）
+    R11 基础设施/保真/分类三判决分离
+
+--------------------------------------------------------------------------------
+ 离线验证（本轮已执行，未碰板）
+--------------------------------------------------------------------------------
+  1. host_tests/test_iq_digital_loopback   75/75 PASS
+     （纯循环延迟 / +90° 旋转 / 有界延迟搜索精确恢复 delay/gain/phase/NMSE/corr/CFO
+       / 五路保真判决 / 四路分类判决 / 装载器 fail-closed（缺 manifest/未知 kind/
+       不安全文件名/错误 dtype/3840000 采样率/SHA 与尺寸失配）/ generated/radioml
+       sidecar 端到端往返）
+  2. scripts/analyze_iq_digital_loopback.py 合成日志自测通过（三判决分离输出，
+      2559999 采样率判 ok）
+  3. run_tests.sh 全量 => ALL HOST TESTS PASSED
+     （build_host_tests.sh 45 目标全 OK，含 test_iq_digital_loopback；
+       test_synthetic_iq_roundtrip 48/48）
+  4. 打包独立解包 sha256sum -c => patch 12 OK / full 521 OK
+
+  host 自洽全绿 ≠ 板端判定；回环保真与 RF 泄漏只能由用户上板观测（我禁碰板、禁训练）。
+  板端复测建议（两类分别跑，判决填 verdict 模板）:
+    run_gate9_rml23.sh --phase=iq-digital-loopback --input-kind=generated-2p56m \
+        --frozen-dir DIR
+    run_gate9_rml23.sh --phase=iq-digital-loopback \
+        --input-kind=radioml-reconstructed-2p56m --frozen-dir DIR
+  随后 host 独立复核:
+    python -I scripts/analyze_iq_digital_loopback.py --log <producer stdout> \
+        --frozen-dir DIR --input-kind <kind> --json out.json
+================================================================================

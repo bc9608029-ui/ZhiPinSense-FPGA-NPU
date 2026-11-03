@@ -1,0 +1,151 @@
+{
+  "a_reference": {
+    "per_class_snr": 100,
+    "seed": 20261019,
+    "snrs": [
+      0,
+      10,
+      20,
+      30
+    ],
+    "split": "test",
+    "total_frames": 9600
+  },
+  "c_by_class": {
+    "1": [
+      "dual_bf16_rms2048_run1",
+      "dual_bf16_rms2048_run2",
+      "dual_bf16_rms2048_run3"
+    ],
+    "14": [
+      "dual_bf16_rms2048_run1",
+      "dual_bf16_rms2048_run2",
+      "dual_bf16_rms2048_run3"
+    ],
+    "15": [
+      "dual_bf16_rms2048_run1",
+      "dual_bf16_rms2048_run2",
+      "dual_bf16_rms2048_run3"
+    ],
+    "16": [
+      "dual_bf16_rms2048_run1",
+      "dual_bf16_rms2048_run2",
+      "dual_bf16_rms2048_run3"
+    ],
+    "17": [
+      "full24_r1",
+      "dual_bf16_rms2048_run1",
+      "dual_bf16_rms2048_run2",
+      "dual_bf16_rms2048_run3"
+    ],
+    "18": [
+      "dual_bf16_rms2048_run1",
+      "dual_bf16_rms2048_run2",
+      "dual_bf16_rms2048_run3"
+    ],
+    "2": [
+      "dual_bf16_rms2048_run1",
+      "dual_bf16_rms2048_run2",
+      "dual_bf16_rms2048_run3"
+    ],
+    "22": [
+      "full24_r1"
+    ],
+    "23": [
+      "dual_bf16_rms2048_run1",
+      "dual_bf16_rms2048_run2",
+      "dual_bf16_rms2048_run3"
+    ]
+  },
+  "c_classes_covered": 22,
+  "c_tensor_count": 58,
+  "causal_attribution": "none",
+  "correct_wrong": {
+    "1": {
+      "correct": 2,
+      "n": 3,
+      "wrong": 1
+    },
+    "2": {
+      "correct": 3,
+      "n": 3,
+      "wrong": 0
+    },
+    "14": {
+      "correct": 0,
+      "n": 3,
+      "wrong": 3
+    },
+    "15": {
+      "correct": 0,
+      "n": 3,
+      "wrong": 3
+    },
+    "16": {
+      "correct": 3,
+      "n": 3,
+      "wrong": 0
+    },
+    "17": {
+      "correct": 3,
+      "n": 4,
+      "wrong": 1
+    },
+    "18": {
+      "correct": 3,
+      "n": 3,
+      "wrong": 0
+    },
+    "22": {
+      "correct": 1,
+      "n": 1,
+      "wrong": 0
+    },
+    "23": {
+      "correct": 2,
+      "n": 3,
+      "wrong": 1
+    }
+  },
+  "correlation_tested": false,
+  "identity": {
+    "a_hdf5_mtime_ns": 1791042816000000000,
+    "a_hdf5_sha256": "e3dd0bef66a3426959ee66a1709a8c0a95d4f8395d18aaf6f1214bdbc763bd38",
+    "a_hdf5_sha_method": "inherited frozen SHA + size + mtime_ns (21 GiB full rehash skipped)",
+    "a_hdf5_size_bytes": 21449148312,
+    "hdf5_X_dtype": "float32",
+    "hdf5_X_shape": [
+      2555904,
+      1024,
+      2
+    ],
+    "hdf5_Y_shape": [
+      2555904,
+      24
+    ],
+    "hdf5_Z_shape": [
+      2555904,
+      1
+    ],
+    "split_sha256": "9a035841baef299ac918ae64294d59ba2298c5f20852862d3dd4069547330335",
+    "split_sha_method": "recomputed here (small file)"
+  },
+  "metric_count": 49,
+  "phase_eps_rule": "drop |x|<0.05*median(|x|) before phase-increment",
+  "retracted_conclusions": [
+    "0 of 50 metrics correlates with the 64QAM/128QAM->256QAM collapse",
+    "class-specific domain difference excluded",
+    "misclassification attributed to decision-boundary sensitivity",
+    "all 24 classes show a universal / uniform A<->C shift",
+    "C effective SNR ~= 25 dB (spectral peak-to-outer-band used as an SNR)",
+    "all differences are small, unidirectional and within the A reference distribution"
+  ],
+  "spectral": {
+    "fft_n": 4096,
+    "floor": "reserved numeric constant 1e-12 * total_power (NOT applied to flatness)",
+    "window": "hann"
+  },
+  "status": "M29-RML24-FIX10CLASS24-AC-INPUT-DETAILED-AUDIT1-FIX1-COMPLETE",
+  "task": "fix10class24-ac-input-detailed-audit1-fix1",
+  "verdict": "AUDIT_COMPLETE_DESCRIPTIVE_ONLY"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "CANDIDATE_CODE_PREPARED_PENDING_TESTS",
+  "scope": "FPGA display spectrum only; public detection, inference, RMS/Energy/Peak remain CPU",
+  "new_quantization_contract": "display IQ peak16384 uniform per-window gain, no labels, rescale PSD back by gain squared",
+  "formal_version_changed": false,
+  "not_deployed": true
+}

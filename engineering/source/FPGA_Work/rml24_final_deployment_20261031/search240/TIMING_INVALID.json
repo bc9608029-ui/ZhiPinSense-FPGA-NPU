@@ -1,0 +1,9 @@
+{
+  "status": "WALL_CLOCK_ALIGNMENT_INVALID_NOT_MODEL_ACCURACY",
+  "original_score_preserved": "SCORE.json",
+  "original_correct": 179,
+  "denominator": 240,
+  "evidence": "Windows Kernel-General Event1 confirms -3.6368812s system clock step during item178; PC scheduling was monotonic but scoring used initial wall-clock offset",
+  "corrected_formal_score_claimed": false,
+  "next_action": "Updated QPC/board-monotonic calibration and timestamps, then new explicitly approved regression"
+}

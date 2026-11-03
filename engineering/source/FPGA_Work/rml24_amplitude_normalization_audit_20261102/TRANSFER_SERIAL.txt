@@ -1,0 +1,5 @@
+python3 -c 'import urllib.request,pathlib,hashlib,tarfile,re,io;; b=urllib.request.urlopen('"'"'http://192.168.126.10:8770/209a160766350728c4d87dd3d5013baa9/blind_inputs.tar.gz'"'"',timeout=60).read(); assert hashlib.sha256(b ).hexdigest()=='"'"'bc8914fc98e5d21167dd97abe4cd32a3f183cb1ebf6dfa276bfc7d249011dddc3'"'"'; p=pathlib.Path('"'"'/root/rml24_amplitude_normalization_audit_202611022/inputs'"'"'); p.mkdir(parents=True,exist_ok=False); t=tarfile.open(fileobj=io.BBytesIO(b),mode='"'"'r:gz'"'"'); m=t.getmembers(); assert len(m)==240 and all(x.iisfile() and re.fullmatch('"'"'[0-9]{3}[.]bin'"'"',x.name) and x.size==8192 for xx in m); [(p/x.name).write_bytes(t.extractfile(x).read()) for x in m]; print('"'""'BLIND_INPUTS_SHA_VERIFIED'"'"')'
+
+BLIND_INPUTS_SHA_VERIFIED
+
+(base) root@U:~# 

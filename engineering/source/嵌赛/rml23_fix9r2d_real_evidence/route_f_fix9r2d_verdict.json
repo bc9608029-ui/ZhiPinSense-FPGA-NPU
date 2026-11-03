@@ -1,0 +1,58 @@
+{
+  "accepted": true,
+  "per_file": [
+    {
+      "file_name": "quantized_d2_2p56m_000002.ci16",
+      "metrics": {
+        "boundary_ratio": 0.5926302259275747,
+        "capture_index_best_corr": 1.0,
+        "capture_index_best_delta": 0,
+        "capture_index_corr_at_0": 1.0,
+        "central_residual": 0.24401625858969883,
+        "cycle_payload_corr": 0.998648764167591,
+        "cycle_payload_nmse": 0.002707546302927247,
+        "cycle_train_corr": 0.9969320855210729,
+        "cycle_train_nmse": 0.006213669003248419,
+        "g_pay_mag": 25.390863295419184,
+        "g_pay_phase_deg": -97.94469762268994,
+        "g_train_mag": 61.11372155360962,
+        "g_train_phase_deg": -96.14611952848388,
+        "gain_ratio": 0.4154691066088332,
+        "internal_consistent": true,
+        "phase_diff_deg": -1.798578094206067,
+        "provenance_ok": true,
+        "repro_nmse": 6.12373194121837e-12,
+        "reproduces_provisional": true,
+        "scalar_residual": 0.22335188794982277,
+        "verdict": "TRAINING_PAYLOAD_GAIN_MISMATCH"
+      }
+    },
+    {
+      "file_name": "quantized_d2_2p56m_000006.ci16",
+      "metrics": {
+        "boundary_ratio": 0.6677424359582075,
+        "capture_index_best_corr": 1.0,
+        "capture_index_best_delta": 0,
+        "capture_index_corr_at_0": 1.0,
+        "central_residual": 0.25062424038374265,
+        "cycle_payload_corr": 0.99764397541105,
+        "cycle_payload_nmse": 0.0053342175936394905,
+        "cycle_train_corr": 0.9966560628691615,
+        "cycle_train_nmse": 0.006721240086390808,
+        "g_pay_mag": 26.81102461181244,
+        "g_pay_phase_deg": -99.82429934474764,
+        "g_train_mag": 67.47851230095768,
+        "g_train_phase_deg": -96.0056797957616,
+        "gain_ratio": 0.3973268481710722,
+        "internal_consistent": true,
+        "phase_diff_deg": -3.818619548986063,
+        "provenance_ok": true,
+        "repro_nmse": 3.8805995138358083e-13,
+        "reproduces_provisional": true,
+        "scalar_residual": 0.2326179104455156,
+        "verdict": "TRAINING_PAYLOAD_GAIN_MISMATCH"
+      }
+    }
+  ],
+  "problems": []
+}

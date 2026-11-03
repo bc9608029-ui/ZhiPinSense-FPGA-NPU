@@ -1,0 +1,5 @@
+import pathlib,json
+p=pathlib.Path(__file__).parent
+m=json.loads((p/'challenge_manifest_78.json').read_text())['records'][:24];t=json.loads((p/'challenge_truth_pc_only.json').read_text())['records'][:24]
+(p/'mode_manifest_24.json').write_text(json.dumps({'records':m},indent=2));(p/'mode_truth_pc_only.json').write_text(json.dumps({'n':24,'records':t},indent=2))
+with (p/'TEST_PLAN.md').open('a',encoding='utf-8') as f:f.write('\n\nUser-approved scope update: continue exploratory scan despite failed fixed accuracy gate; keep original startup services, skip physical UI/touch/power-cycle confirmation, no long stability. Do not claim accuracy issue fixed. Additional scheduled 78-frame diagnostic consists of 72 declared signal frames and 6 declared muted negatives. Control test uses 24 declared class-balanced waveform instances. Original 240 manifests remain unchanged.\n')

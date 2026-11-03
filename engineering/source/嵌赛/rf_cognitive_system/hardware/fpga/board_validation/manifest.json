@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "package_name": "lite_mandatory_core_bitexact_v1",
+  "source_rtl_baseline_head": "b41327b28b74db3e7f33d287a06187234ce393e7",
+  "frame_length": 1024,
+  "case_count": 19,
+  "total_samples": 19456,
+  "input": {
+    "path": "../vectors/iq_input.hex",
+    "sha256": "5b720b7725a712d0cac0ab33fb13ff2d18a4b372ed948ac20d3b0e6b824852e7",
+    "word_layout": "hex {Q[15:0], I[15:0]}"
+  },
+  "expected": {
+    "path": "../vectors/expected_core.csv",
+    "sha256": "8ee0b763597492efbce3a8ade9a30e925958818982f566cfeea06931438f0a82",
+    "contains": ["Power", "LagRe", "LagIm", "IQ_INT8", "Physical_INT8", "logical_addresses"]
+  },
+  "vector_manifest": {
+    "path": "../vectors/manifest.json",
+    "sha256": "b8568f715d5a82ad2ba3056c1dcd1fb68a393d916adf2892803b0313ce10fa16"
+  },
+  "quantizer": {
+    "iq_multiplier": 127,
+    "iq_shift": 15,
+    "physical_multiplier": 127,
+    "physical_shift": 31,
+    "rounding": "nearest, exact halves away from zero",
+    "saturation": "signed INT8 [-127,127]"
+  },
+  "final_blind_test_accessed": false
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "shared XRT owner mixed RPC diagnostic",
+  "psd_jobs": 16,
+  "npu_zero_frames": 136,
+  "sequence": "8 NPU then1PSD repeated16, then8NPU",
+  "npu_output_exact_same_before_after": true,
+  "psd_thresholds_unchanged": true,
+  "model_changed": false,
+  "noRF": true
+}

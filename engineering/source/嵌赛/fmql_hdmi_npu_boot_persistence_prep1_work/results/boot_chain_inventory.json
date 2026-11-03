@@ -1,0 +1,130 @@
+{
+  "schema": "fmql30tai_boot_chain_inventory_v1",
+  "status": "OFFLINE_EVIDENCE_ONLY",
+  "generated": "2026-10-21",
+  "board_identity": {
+    "soc": "FMSH FMQL30TAI / JFMQL30TAI676H",
+    "board_variant": "Lite (single QSPI, no eMMC; matches single n25q256a in capture)",
+    "kernel": "Linux 5.4.52 aarch64 (U.FMSH, #3 SMP Fri Mar 13 13:44:29 CST 2026)",
+    "evidence": "board_capture/boot_display_state_before_jtag.txt [uname]"
+  },
+  "boot_chain": [
+    {
+      "stage": "BootROM",
+      "evidence": "vendor Lite HW manual 4.2 (MIO2 cascade/independent; MIO3~MIO5 select JTAG/QSPI/SD; MIO6 PLL bypass)",
+      "confidence": "CONFIRMED_BY_VENDOR_DOC"
+    },
+    {
+      "stage": "FSBL",
+      "evidence": "vendor LITE zip FSBL251210_ddr400_demo.out (SHA 5501c470...)",
+      "confidence": "CONFIRMED_BY_VENDOR_ARTIFACT"
+    },
+    {
+      "stage": "BL31",
+      "evidence": "vendor LITE zip bl31.elf (SHA fdcf0af4...)",
+      "confidence": "CONFIRMED_BY_VENDOR_ARTIFACT"
+    },
+    {
+      "stage": "U-Boot",
+      "evidence": "vendor LITE zip u-boot (SHA c4570e3e...) + uEnv.txt",
+      "confidence": "CONFIRMED_BY_VENDOR_ARTIFACT"
+    },
+    {
+      "stage": "PL programming",
+      "evidence": "30TAI tutorial 3 ('replace BOOT.bin... reboot... bitstream takes effect' => FSBL programs PL from BOOT.bin); vendor LITE uEnv.txt loadbit='fpga loadb 0 0x10000000 $filesize' (U-Boot loads download.bit)",
+      "confidence": "CONFIRMED_BY_VENDOR_DOC"
+    },
+    {
+      "stage": "Linux kernel",
+      "evidence": "vendor LITE zip Image (SHA 1e40bfe9...) + uEnv.txt uenvcmd booti",
+      "confidence": "CONFIRMED_BY_VENDOR_ARTIFACT"
+    },
+    {
+      "stage": "rootfs",
+      "evidence": "board_capture /proc/cmdline root=/dev/mmcblk0p2; mount /dev/mmcblk0p2 on / ext4",
+      "confidence": "CONFIRMED_BY_BOARD_CAPTURE"
+    }
+  ],
+  "storage_devices": [
+    {
+      "device": "QSPI n25q256a (32MiB) at cadence-qspi e0000000.spi",
+      "mtd": [
+        {
+          "name": "bootloader",
+          "size": "0x00400000 (4MiB)",
+          "role": "UNCONFIRMED (possibly legacy/secondary boot image; uEnv norboot=0xE2100000 references NOR vxWorks path)"
+        },
+        {
+          "name": "kernel",
+          "size": "0x01000000 (16MiB)",
+          "role": "UNCONFIRMED"
+        },
+        {
+          "name": "rootfs",
+          "size": "0",
+          "role": "empty"
+        }
+      ],
+      "evidence": "board_capture /proc/mtd + dmesg 'cadence-qspi e0000000.spi: n25q256a (32768 Kbytes)'"
+    },
+    {
+      "device": "mmcblk0 (~62.5GB, SD)",
+      "partitions": [
+        {
+          "name": "mmcblk0p1",
+          "size": "1048576 KB (~1GiB)",
+          "fs": "FAT (vendor fatload mmc 0:1)",
+          "role": "boot partition: BOOT.bin + Image + dtb"
+        },
+        {
+          "name": "mmcblk0p2",
+          "size": "27343750 KB (~26GiB)",
+          "fs": "ext4",
+          "role": "rootfs (mounted on /)"
+        }
+      ],
+      "evidence": "board_capture /proc/partitions + mount + 30TAI tutorial 3.3 + vendor uEnv.txt"
+    }
+  ],
+  "fpga_load_interfaces": {
+    "u_boot_fpga_loadb": {
+      "accepts": ".bit (Vivado/Procise .bit format, sync word 0xAA995566)",
+      "evidence": "vendor LITE uEnv.txt loadbit='... fatload mmc 0:2 ... download.bit && fpga loadb 0 0x10000000 $filesize'",
+      "confidence": "CONFIRMED_BY_VENDOR_DOC"
+    },
+    "fsbl_from_boot_bin": {
+      "accepts": "bitstream embedded in BOOT.bin (Procise Create Image from .bif)",
+      "evidence": "30TAI tutorial 3 + BOOT.bin header magic 0xAA995566 'FMSH' (parsed this task)",
+      "confidence": "CONFIRMED_BY_VENDOR_DOC"
+    },
+    "linux_fpga_manager": {
+      "driver": "FMSH FMQL FPGA Manager (registered, state=operating)",
+      "accepts_format": "UNCONFIRMED (no driver source found locally; no /dev/xdevcfg; fpgautil absent on board)",
+      "evidence": "board_capture dmesg + /sys/class/fpga_manager/*"
+    }
+  },
+  "bitstream_format": {
+    "file": "combined_npu_hdmi_disable_icap.bit",
+    "format": "Vivado/Procise .bit with 0xAA995566 sync word (file bytes aa 99 55 66 at offset 216)",
+    "design_name": "jpl_ddr_mandatory_core_top_combined;UserID=0000",
+    "part_string": "7z030",
+    "bin_conversion_needed": "NO for U-Boot fpga loadb (consumes .bit directly, vendor-proven); .bin conversion is vendor-tool specific (no local evidence)",
+    "evidence": "parsed .bit header this task (offline)"
+  },
+  "secure_boot": {
+    "vendor_boot_bin_encryption_word": "0x00000000 (not encrypted)",
+    "actual_board_setting": "UNCONFIRMED (not captured)",
+    "evidence": "BOOT.bin header @0x28 parsed this task"
+  },
+  "recovery_paths": [
+    "JTAG PL reload (current board-proven path)",
+    "SD FAT BOOT.bin restore from backup (vendor tutorial 3.3)",
+    "SD vs QSPI boot-device selection via MIO3~MIO5 jumpers (vendor manual 4.2)",
+    "serial U-Boot console console=ttyPS0,115200n8"
+  ],
+  "stop_condition_notes": [
+    "FMQL official loading format: FOUND (vendor .bif -> Procise Create Image -> BOOT.bin; U-Boot fpga loadb consumes .bit)",
+    ".bit conversion: NOT NEEDED for U-Boot path; BOOT.bin generation requires closed Procise GUI + .bif (documented, NOT offline-generated)",
+    "secure boot/signature on actual board: NOT CAPTURED (vendor BOOT.bin unencrypted)"
+  ]
+}

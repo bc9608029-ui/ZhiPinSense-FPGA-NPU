@@ -1,0 +1,20 @@
+# Tiny CPU smoke config: 2 epochs over a handful of samples.
+# Never used for any performance claim or model selection.
+_base: configs/ad_amr_v1.yaml
+seed: 2026
+output_root: outputs/ad_amr_v1/smoke
+dataset:
+  train_samples: 128
+  val_samples: 64
+  test_samples: 32
+  snr_values: [-20, -10, 0, 10, 20]
+  num_workers: 0
+training:
+  epochs: 2
+  batch_size: 32
+  amp: false
+  minimum_epochs_before_stopping: 1
+evaluation:
+  batch_size: 64
+  samples_per_modulation_per_snr: 8
+  snr_values: [-20, -10, 0, 10, 20]

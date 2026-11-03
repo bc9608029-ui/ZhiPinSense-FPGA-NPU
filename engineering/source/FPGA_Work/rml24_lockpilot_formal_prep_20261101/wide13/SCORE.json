@@ -1,0 +1,116 @@
+{
+  "name": "wide13",
+  "denominator": 13,
+  "correct": 13,
+  "missing": 0,
+  "minimum_correct": 13,
+  "clock_drift_ns": -2239230,
+  "rows": [
+    {
+      "index": 0,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 124,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 1,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 146,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 2,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 169,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 3,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 193,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 4,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 216,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 5,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 239,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 6,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 261,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 7,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 285,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 8,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 304,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 9,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 317,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 10,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 340,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 11,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 363,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 12,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 385,
+      "correct": true,
+      "missing": false
+    }
+  ],
+  "attempt": "retry1_after_serial_abort_before_any_scored_item",
+  "promotion_gate_pass": true
+}

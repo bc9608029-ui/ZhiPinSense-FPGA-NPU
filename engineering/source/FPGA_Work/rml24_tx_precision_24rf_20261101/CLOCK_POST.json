@@ -1,0 +1,53 @@
+{
+    "clock_id":  "windows-qpc-board-monotonic-v1",
+    "offset_ns":  3429811346990,
+    "uncertainty_ns":  60275000,
+    "board_boot_id":  "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+    "samples":  [
+                    {
+                        "pc_before_mono_ns":  30816181793100,
+                        "pc_after_mono_ns":  30816306202900,
+                        "board_mono_ns":  27386430787050,
+                        "board_wall_ns":  "1773399873432426000",
+                        "board_boot_id":  "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+                        "offset_ns":  3429813210950,
+                        "uncertainty_ns":  62204900
+                    },
+                    {
+                        "pc_before_mono_ns":  30816342482900,
+                        "pc_after_mono_ns":  30816463032900,
+                        "board_mono_ns":  27386591410910,
+                        "board_wall_ns":  "1773399873593049730",
+                        "board_boot_id":  "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+                        "offset_ns":  3429811346990,
+                        "uncertainty_ns":  60275000
+                    },
+                    {
+                        "pc_before_mono_ns":  30816463293500,
+                        "pc_after_mono_ns":  30816603928300,
+                        "board_mono_ns":  27386735592550,
+                        "board_wall_ns":  "1773399873737231610",
+                        "board_boot_id":  "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+                        "offset_ns":  3429798018350,
+                        "uncertainty_ns":  70317400
+                    },
+                    {
+                        "pc_before_mono_ns":  30816604159700,
+                        "pc_after_mono_ns":  30816743525600,
+                        "board_mono_ns":  27386877109520,
+                        "board_wall_ns":  "1773399873878748460",
+                        "board_boot_id":  "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+                        "offset_ns":  3429796733130,
+                        "uncertainty_ns":  69682950
+                    },
+                    {
+                        "pc_before_mono_ns":  30816743804600,
+                        "pc_after_mono_ns":  30816882922100,
+                        "board_mono_ns":  27387014634020,
+                        "board_wall_ns":  "1773399874016272980",
+                        "board_boot_id":  "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+                        "offset_ns":  3429798729330,
+                        "uncertainty_ns":  69558750
+                    }
+                ]
+}

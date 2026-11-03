@@ -1,0 +1,19 @@
+{
+  "variant": "time_only",
+  "best_epoch": 39,
+  "overall_accuracy": 0.6919047619047619,
+  "macro_f1": 0.6848354264481544,
+  "per_class_accuracy": {
+    "BPSK": 0.7866666666666666,
+    "QPSK": 0.6466666666666666,
+    "8PSK": 0.6133333333333333,
+    "16QAM": 0.42,
+    "64QAM": 0.42,
+    "2FSK": 0.9047619047619048,
+    "CPFSK": 0.8828571428571429,
+    "OFDM": 0.8609523809523809
+  },
+  "single_sample_cpu_ms": 2.652651000003061,
+  "batch_throughput_records_per_sec": 10843.418913049525,
+  "end_to_end_records_per_sec": 359.9125864876402
+}

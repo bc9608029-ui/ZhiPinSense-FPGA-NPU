@@ -1,0 +1,37 @@
+_base: configs/ad_amr_v1_1.yaml
+
+# V1.2 is a data-only robustness candidate.  Model/class/deployment contracts
+# remain byte-for-byte compatible with V1.1.
+output_root: outputs/ad_amr_v1_2/formal/seed2026
+
+data_robustness:
+  enabled: true
+  warmup_epochs: 3
+  ramp_epochs: 12
+  start_weights: {base: 0.70, cfo_focus: 0.10, multipath_focus: 0.10, multi_impairment: 0.10}
+  target_weights: {base: 0.40, cfo_focus: 0.20, multipath_focus: 0.20, multi_impairment: 0.20}
+  profiles:
+    # Training support deliberately stops short of the held-out OOD ranges.
+    cfo_focus:
+      cfo: {enabled: true, probability: 1.0, hz: [-2200.0, 2200.0]}
+    multipath_focus:
+      multipath: {enabled: true, probability: 1.0, num_taps: [2, 5], max_delay: 16}
+    multi_impairment:
+      cfo: {enabled: true, probability: 1.0, hz: [-1600.0, 1600.0]}
+      phase_noise: {enabled: true, probability: 1.0, std_rad: [0.0015, 0.006]}
+      iq_imbalance: {enabled: true, probability: 1.0, gain_db: [-1.3, 1.3], phase_deg: [-7.0, 7.0]}
+      multipath: {enabled: true, probability: 1.0, num_taps: [2, 4], max_delay: 14}
+
+pilot:
+  stage_a_epochs: 30
+  formal_epochs: 100
+  seeds: [2026, 2027]
+  variants: [legacy_distribution, single_focus, combined_focus]
+  focus_ood_domains: [cfo_strong, multipath, multi_impairment]
+  ood_samples: 1050
+  gates:
+    min_macro_f1: 0.68
+    min_rated_0_20_accuracy: 0.90
+    min_rated_class_accuracy: 0.65
+    max_focus_ood_macro_f1_drop: 0.12
+    min_stage_a_ood_drop_improvement: 0.02

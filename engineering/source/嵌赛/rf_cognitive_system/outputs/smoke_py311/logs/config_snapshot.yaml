@@ -1,0 +1,42 @@
+seed: 2026
+device: auto
+output_dir: outputs/smoke_py311
+signal:
+  sample_rate: 128000.0
+  symbol_rate: 16000.0
+  samples_per_symbol: 8
+  sample_length: 1024
+  amplitude: 1.0
+  frequency_offset: 0.0
+  phase_offset: 0.0
+  pulse_shape: {type: rrc, rolloff: 0.35, span_symbols: 8}
+  ofdm: {fft_length: 256, cyclic_prefix: 64, active_subcarriers: 48, subcarrier_modulation: QPSK}
+  modulations: [BPSK, QPSK, 8PSK, 16QAM, 64QAM, 2FSK, CPFSK, OFDM]
+channel:
+  domain_randomization: true
+  awgn: {enabled: true, probability: 1.0, snr_db: [4.0, 20.0]}
+  rayleigh: {enabled: false, probability: 0.0}
+  rician: {enabled: false, probability: 0.0, k_factor: [3.0, 10.0]}
+  multipath: {enabled: false, probability: 0.0, num_taps: [2, 4], max_delay: 8}
+  cfo: {enabled: true, probability: 0.3, hz: [-400.0, 400.0]}
+  phase_offset: {enabled: true, probability: 0.4, radians: [-3.14159, 3.14159]}
+  phase_noise: {enabled: false, probability: 0.0, std_rad: [0.0001, 0.001]}
+  sfo: {enabled: false, probability: 0.0, ppm: [-20.0, 20.0]}
+  iq_imbalance: {enabled: false, probability: 0.0, gain_db: [-0.5, 0.5], phase_deg: [-2.0, 2.0]}
+  dc_offset: {enabled: false, probability: 0.0, magnitude: [0.0, 0.03]}
+  amplitude_scaling: {enabled: true, probability: 0.3, scale: [0.8, 1.2]}
+  clipping: {enabled: false, probability: 0.0, level_rms: [1.5, 2.0]}
+  narrowband_interference: {enabled: false, probability: 0.0, sir_db: [10.0, 20.0]}
+  burst_interference: {enabled: false, probability: 0.0, sir_db: [10.0, 20.0], duty_cycle: [0.05, 0.15]}
+dataset:
+  train_samples: 768
+  val_samples: 256
+  test_samples: 256
+  snr_values: [-10, 0, 10, 20]
+  num_workers: 0
+training: {epochs: 3, batch_size: 64, optimizer: AdamW, learning_rate: 0.002, weight_decay: 0.0001, scheduler: cosine, early_stopping_patience: 4, min_delta: 0.0001}
+model: {base_channels: 16, dropout: 0.05}
+evaluation:
+  batch_size: 128
+  samples_per_modulation_per_snr: 4
+  snr_values: [-20, -10, 0, 10, 20]

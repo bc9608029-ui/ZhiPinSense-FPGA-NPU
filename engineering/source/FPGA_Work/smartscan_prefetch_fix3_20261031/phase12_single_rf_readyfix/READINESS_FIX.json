@@ -1,0 +1,5 @@
+{
+  "old_round": "No RF emitted; ANSI-colored grep output defeated startswith readiness test",
+  "fix": "disable grep color and strip ANSI for machine parsing",
+  "model_receiver_thresholds_unchanged": true
+}

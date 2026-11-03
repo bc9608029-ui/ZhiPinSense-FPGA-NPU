@@ -1,0 +1,25 @@
+{
+  "built_note": "fix1v2 board impl1 (G1-G4 板端实装收口) PATCH，单层 gzip；输入复用 fix1/v2 INPUTS",
+  "baseline": "fix10class24_original_radioml_dc_ab1_work/board_package/",
+  "tarball": "fix1v2_board_impl1_PATCH.tar.gz",
+  "sha256": "98aa84fbbb6c4f7f89f43adf05dad6d260acff4bad08708e5d1aabf7b1656c64",
+  "bytes": 81932,
+  "members": [
+    "SHA256SUMS.txt",
+    "board_package/gate9_wiring.patch",
+    "board_package/radioml_independent_rx_loader.hpp",
+    "board_package/radioml_independent_rx_public_recovery.hpp",
+    "board_package/radioml_independent_rx_runner.hpp",
+    "dist/old_tarball_audit.json",
+    "docs/BOARDTEST.md",
+    "docs/G1G4_COMPLETION_REPORT.md",
+    "host_tests/test_pc_tx_simulated_device.py",
+    "host_tests/test_radioml_independent_rx.cpp",
+    "host_tools/fix10_tx_protocol.py",
+    "host_tools/pc_tx_sdr_fix10_public.py",
+    "scripts/audit_old_tarballs.py",
+    "scripts/digital_baseline_identity.json",
+    "scripts/judge_radioml_independent_rx_board.py",
+    "scripts/package_fix1v2_board_impl1.py"
+  ]
+}

@@ -1,0 +1,32 @@
+========================================
+✓ 打包完成!
+========================================
+版本信息:
+  - 版本: 26040701
+  - 平台: ZG
+  - iCraft: 3.36.0
+  - AI-Mate: 25122301
+  - 用途: FPAI 30TAI 参考设计示例工程: 单路PLIN+pHDMI(外置detpost)(仅限内部使用)
+
+输出文件:
+  - 目录: /home/dev/modelscope/fpai-solution/fpai_demo_package_26040701
+  - 压缩包: fpai_demo_package_26040701.zip (313M)
+  - MD5: cd2495f66072ffc992bef00917a0f4f4
+
+目录结构:
+/home/dev/modelscope/fpai-solution/fpai_demo_package_26040701
+/home/dev/modelscope/fpai-solution/fpai_demo_package_26040701/deps
+/home/dev/modelscope/fpai-solution/fpai_demo_package_26040701/deps/modelzoo_utils
+/home/dev/modelscope/fpai-solution/fpai_demo_package_26040701/deps/thirdparty
+/home/dev/modelscope/fpai-solution/fpai_demo_package_26040701/docs
+/home/dev/modelscope/fpai-solution/fpai_demo_package_26040701/examples
+/home/dev/modelscope/fpai-solution/fpai_demo_package_26040701/examples/0_datapath
+/home/dev/modelscope/fpai-solution/fpai_demo_package_26040701/examples/1_single_input+ai
+/home/dev/modelscope/fpai-solution/fpai_demo_package_26040701/icraft
+/home/dev/modelscope/fpai-solution/fpai_demo_package_26040701/tools
+
+下一步:
+  1. 验证: md5sum -c fpai_demo_package_26040701.md5
+  2. 解压: unzip fpai_demo_package_26040701.zip
+  3. 阅读: cat fpai_demo_package_26040701/README.md
+  4. 编译: cd fpai_demo_package_26040701/tools && ./build_all_examples.sh ZG

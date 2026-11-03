@@ -1,0 +1,427 @@
+{
+  "scope": "Targeted development comparison; 24 pre-existing class0 waveforms, same-source RF coverage; not independent formal regression; no deployment",
+  "clock_drift_ns": -1733950,
+  "rows": [
+    {
+      "file": "00_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 7,
+          "pred": 0
+        },
+        {
+          "index": 8,
+          "pred": 0
+        }
+      ]
+    },
+    {
+      "file": "01_00.bin",
+      "captures": 3,
+      "old_detector_correct": 3,
+      "new_detector_correct": 3,
+      "recovered_correct": 3,
+      "predictions": [
+        {
+          "index": 10,
+          "pred": 1
+        },
+        {
+          "index": 11,
+          "pred": 1
+        },
+        {
+          "index": 12,
+          "pred": 1
+        }
+      ]
+    },
+    {
+      "file": "02_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 14,
+          "pred": 2
+        },
+        {
+          "index": 15,
+          "pred": 2
+        }
+      ]
+    },
+    {
+      "file": "03_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 17,
+          "pred": 3
+        },
+        {
+          "index": 18,
+          "pred": 3
+        }
+      ]
+    },
+    {
+      "file": "04_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 21,
+          "pred": 4
+        },
+        {
+          "index": 22,
+          "pred": 4
+        }
+      ]
+    },
+    {
+      "file": "05_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 24,
+          "pred": 5
+        },
+        {
+          "index": 25,
+          "pred": 5
+        }
+      ]
+    },
+    {
+      "file": "06_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 28,
+          "pred": 6
+        },
+        {
+          "index": 29,
+          "pred": 6
+        }
+      ]
+    },
+    {
+      "file": "07_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 31,
+          "pred": 7
+        },
+        {
+          "index": 32,
+          "pred": 7
+        }
+      ]
+    },
+    {
+      "file": "08_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 35,
+          "pred": 8
+        },
+        {
+          "index": 36,
+          "pred": 8
+        }
+      ]
+    },
+    {
+      "file": "09_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 38,
+          "pred": 9
+        },
+        {
+          "index": 39,
+          "pred": 9
+        }
+      ]
+    },
+    {
+      "file": "10_00.bin",
+      "captures": 3,
+      "old_detector_correct": 3,
+      "new_detector_correct": 3,
+      "recovered_correct": 3,
+      "predictions": [
+        {
+          "index": 41,
+          "pred": 10
+        },
+        {
+          "index": 42,
+          "pred": 10
+        },
+        {
+          "index": 43,
+          "pred": 10
+        }
+      ]
+    },
+    {
+      "file": "11_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 45,
+          "pred": 11
+        },
+        {
+          "index": 46,
+          "pred": 11
+        }
+      ]
+    },
+    {
+      "file": "12_00.bin",
+      "captures": 3,
+      "old_detector_correct": 3,
+      "new_detector_correct": 3,
+      "recovered_correct": 3,
+      "predictions": [
+        {
+          "index": 48,
+          "pred": 12
+        },
+        {
+          "index": 49,
+          "pred": 12
+        },
+        {
+          "index": 50,
+          "pred": 12
+        }
+      ]
+    },
+    {
+      "file": "13_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 52,
+          "pred": 13
+        },
+        {
+          "index": 53,
+          "pred": 13
+        }
+      ]
+    },
+    {
+      "file": "14_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 55,
+          "pred": 14
+        },
+        {
+          "index": 56,
+          "pred": 14
+        }
+      ]
+    },
+    {
+      "file": "15_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 59,
+          "pred": 15
+        },
+        {
+          "index": 60,
+          "pred": 15
+        }
+      ]
+    },
+    {
+      "file": "16_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 62,
+          "pred": 16
+        },
+        {
+          "index": 63,
+          "pred": 16
+        }
+      ]
+    },
+    {
+      "file": "17_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 66,
+          "pred": 17
+        },
+        {
+          "index": 67,
+          "pred": 17
+        }
+      ]
+    },
+    {
+      "file": "18_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 69,
+          "pred": 18
+        },
+        {
+          "index": 70,
+          "pred": 18
+        }
+      ]
+    },
+    {
+      "file": "19_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 72,
+          "pred": 19
+        },
+        {
+          "index": 73,
+          "pred": 19
+        }
+      ]
+    },
+    {
+      "file": "20_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 76,
+          "pred": 20
+        },
+        {
+          "index": 77,
+          "pred": 20
+        }
+      ]
+    },
+    {
+      "file": "21_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 79,
+          "pred": 21
+        },
+        {
+          "index": 80,
+          "pred": 21
+        }
+      ]
+    },
+    {
+      "file": "22_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 83,
+          "pred": 22
+        },
+        {
+          "index": 84,
+          "pred": 22
+        }
+      ]
+    },
+    {
+      "file": "23_00.bin",
+      "captures": 2,
+      "old_detector_correct": 2,
+      "new_detector_correct": 2,
+      "recovered_correct": 2,
+      "predictions": [
+        {
+          "index": 86,
+          "pred": 23
+        },
+        {
+          "index": 87,
+          "pred": 23
+        }
+      ]
+    }
+  ],
+  "guard_clean": true
+}

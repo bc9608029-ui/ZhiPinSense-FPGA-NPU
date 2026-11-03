@@ -1,0 +1,23 @@
+from pathlib import Path
+import json,datetime
+r=Path(r'E:\rml24_gapfix_execution_20261028')
+s=(r/'run_fix2_smoke.py').read_text()
+s=s.replace("[('fix2_smoke24','BAND_SCAN',2403600000,6,280)]","[('fix2_fixed01','FIXED',2400000000,4,1120), ('fix2_scan01','BAND_SCAN',2403600000,6,1610)]")
+s=s.replace("'--mode','smoke24'","'--mode','formal240'")
+s=s.replace("str(r/'collect_fix2.ps1')","str(r/'collect_fix2_formal.ps1')").replace("str(r/'score_smoke.py')","str(r/'score_fix2_formal.py')")
+s=s.replace("phase='fix2_smoke_complete_pending_formal_approval'","phase='fix2_both_formal_rounds_complete_pending_audit'")
+s=s.replace("r/'FIX2_PROGRESS.json'","r/'FIX2_FORMAL_PROGRESS.json'").replace("root+'/ui.log'","root+'/fix2_formal_ui.log'")
+# Avoid reusing the smoke UI log; concatenate expression does not include apostrophe as part of literal.
+s=s.replace("'> '+root+'/ui.log 2>&1", "'> '+root+'/fix2_formal_ui.log 2>&1")
+(r/'run_fix2_formal.py').write_text(s,encoding='utf-8')
+s=(r/'emit_fix2.py').read_text().replace("['fix2_smoke24']","['fix2_fixed01','fix2_scan01']")
+(r/'emit_fix2_formal.py').write_text(s)
+s=(r/'collect_fix2.ps1').read_text().replace('emit_fix2.py','emit_fix2_formal.py').replace('evidence_fix2.json.gz','evidence_fix2_formal.json.gz')
+(r/'collect_fix2_formal.ps1').write_text(s)
+s=(r/'score_validation.py').read_text().replace('evidence.json.gz','evidence_fix2_formal.json.gz').replace('FROZEN_REPEAT_MEAN_V1_NEW_RF_SAME_EXISTING_240_SOURCES','FIX2_INCREMENTAL_RESCAN_NEW_RF_SAME_EXISTING_240_SOURCES')
+(r/'score_fix2_formal.py').write_text(s)
+(r/'FIX2_FORMAL_APPROVAL.md').write_text('2026-10-28 用户明确答复：同意开始两轮RF验证。范围：冻结Fix2候选，定频240+扫频240，沿用既有波形和计分；不改模型、检测门限、正式服务、自启动或位流。无需用户持续看屏幕。',encoding='utf-8')
+for name in ['run_fix2_formal.py','emit_fix2_formal.py','score_fix2_formal.py']:compile((r/name).read_text(),name,'exec')
+assert "'--mode','formal240'" in (r/'run_fix2_formal.py').read_text()
+assert 'fix2_fixed01' in (r/'run_fix2_formal.py').read_text()
+print('FORMAL_PLAN_READY 240+240')

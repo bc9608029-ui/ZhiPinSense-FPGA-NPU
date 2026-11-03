@@ -1,0 +1,223 @@
+{
+  "passed": true,
+  "cases": 36,
+  "rf_tested": false,
+  "rows": [
+    {
+      "count": 1,
+      "gain": 0.1,
+      "cfo": -400,
+      "relative_error": 0.0024577372111779456
+    },
+    {
+      "count": 1,
+      "gain": 0.1,
+      "cfo": 0,
+      "relative_error": 0.0024253739985159294
+    },
+    {
+      "count": 1,
+      "gain": 0.1,
+      "cfo": 400,
+      "relative_error": 0.002389853118802368
+    },
+    {
+      "count": 1,
+      "gain": 0.5,
+      "cfo": -400,
+      "relative_error": 0.0004913009306196865
+    },
+    {
+      "count": 1,
+      "gain": 0.5,
+      "cfo": 0,
+      "relative_error": 0.00047541345263038846
+    },
+    {
+      "count": 1,
+      "gain": 0.5,
+      "cfo": 400,
+      "relative_error": 0.0004967333020594875
+    },
+    {
+      "count": 1,
+      "gain": 2,
+      "cfo": -400,
+      "relative_error": 0.00015783239367051654
+    },
+    {
+      "count": 1,
+      "gain": 2,
+      "cfo": 0,
+      "relative_error": 0.00015445248303992034
+    },
+    {
+      "count": 1,
+      "gain": 2,
+      "cfo": 400,
+      "relative_error": 0.0001535788172192499
+    },
+    {
+      "count": 2,
+      "gain": 0.1,
+      "cfo": -400,
+      "relative_error": 0.0023834782721223855
+    },
+    {
+      "count": 2,
+      "gain": 0.1,
+      "cfo": 0,
+      "relative_error": 0.0023699089923800262
+    },
+    {
+      "count": 2,
+      "gain": 0.1,
+      "cfo": 400,
+      "relative_error": 0.0024081994145980093
+    },
+    {
+      "count": 2,
+      "gain": 0.5,
+      "cfo": -400,
+      "relative_error": 0.0004933301273644901
+    },
+    {
+      "count": 2,
+      "gain": 0.5,
+      "cfo": 0,
+      "relative_error": 0.00048410208567602046
+    },
+    {
+      "count": 2,
+      "gain": 0.5,
+      "cfo": 400,
+      "relative_error": 0.0004917722082466629
+    },
+    {
+      "count": 2,
+      "gain": 2,
+      "cfo": -400,
+      "relative_error": 0.00015505821505048146
+    },
+    {
+      "count": 2,
+      "gain": 2,
+      "cfo": 0,
+      "relative_error": 0.00015656456061434088
+    },
+    {
+      "count": 2,
+      "gain": 2,
+      "cfo": 400,
+      "relative_error": 0.00015580446911261995
+    },
+    {
+      "count": 4,
+      "gain": 0.1,
+      "cfo": -400,
+      "relative_error": 0.0023930493927553794
+    },
+    {
+      "count": 4,
+      "gain": 0.1,
+      "cfo": 0,
+      "relative_error": 0.002385334501987896
+    },
+    {
+      "count": 4,
+      "gain": 0.1,
+      "cfo": 400,
+      "relative_error": 0.002409507889338361
+    },
+    {
+      "count": 4,
+      "gain": 0.5,
+      "cfo": -400,
+      "relative_error": 0.0004961989870257644
+    },
+    {
+      "count": 4,
+      "gain": 0.5,
+      "cfo": 0,
+      "relative_error": 0.00048734808375312165
+    },
+    {
+      "count": 4,
+      "gain": 0.5,
+      "cfo": 400,
+      "relative_error": 0.0004945080231262065
+    },
+    {
+      "count": 4,
+      "gain": 2,
+      "cfo": -400,
+      "relative_error": 0.00015644962112861
+    },
+    {
+      "count": 4,
+      "gain": 2,
+      "cfo": 0,
+      "relative_error": 0.000155885984503355
+    },
+    {
+      "count": 4,
+      "gain": 2,
+      "cfo": 400,
+      "relative_error": 0.00015570178499395063
+    },
+    {
+      "count": 8,
+      "gain": 0.1,
+      "cfo": -400,
+      "relative_error": 0.002410053899068378
+    },
+    {
+      "count": 8,
+      "gain": 0.1,
+      "cfo": 0,
+      "relative_error": 0.002405644417462738
+    },
+    {
+      "count": 8,
+      "gain": 0.1,
+      "cfo": 400,
+      "relative_error": 0.0023975680196541825
+    },
+    {
+      "count": 8,
+      "gain": 0.5,
+      "cfo": -400,
+      "relative_error": 0.0004888336618253153
+    },
+    {
+      "count": 8,
+      "gain": 0.5,
+      "cfo": 0,
+      "relative_error": 0.0004883760389308628
+    },
+    {
+      "count": 8,
+      "gain": 0.5,
+      "cfo": 400,
+      "relative_error": 0.000490019896199797
+    },
+    {
+      "count": 8,
+      "gain": 2,
+      "cfo": -400,
+      "relative_error": 0.00015612478374512018
+    },
+    {
+      "count": 8,
+      "gain": 2,
+      "cfo": 0,
+      "relative_error": 0.00015528764251862516
+    },
+    {
+      "count": 8,
+      "gain": 2,
+      "cfo": 400,
+      "relative_error": 0.00015509904243409025
+    }
+  ]
+}

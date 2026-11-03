@@ -1,0 +1,13 @@
+{
+  "archives_on_disk": false,
+  "dual_repeat3_archive_sha256_truncated": "A1FE8B2B",
+  "clean_npu_archive_sha256_truncated": "6B117052",
+  "dual_repeat3_archive_sha256_captured_prefix": "A1FE8B2B075CE397978A0A0C4338E69CA107587EC30D41724EC",
+  "clean_npu_archive_sha256_captured_prefix": "6B117052BA971E8EC1A2241FFD0F551C573EEEFDA1AA7482",
+  "note": "归档文件已不在本机；仅记录截断 SHA256 前缀（当时捕获的 Hash 行本身即被截断，非完整 64 位十六进制），无法逐字节比对归档完整性。本任务未取得板端原始 SHA256 用于两端哈希比对，故不声称已完成两端一致性核验。",
+  "board_hash_comparison_claimed": false,
+  "frozen_model_json_sha": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+  "frozen_model_raw_sha": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+  "frozen_manifest": "F:\\嵌赛\\fix10class24_tx_rms_sweep1_work\\sdr_rml24_fix10class24_tx_rms_sweep1\\clean24_smoke\\route_d2_rf_manifest.tsv",
+  "frozen_baseline": "F:\\嵌赛\\fix10class24_tx_rms_sweep1_work\\sdr_rml24_fix10class24_tx_rms_sweep1\\baselines\\clean24_smoke_raw24_bf16_baseline.tsv"
+}

@@ -1,0 +1,10 @@
+BOOT_READONLY_CONTEXT
+console=ttyPS0,115200n8 earlycon=uart8250,mmio32,0xe0004000 loglevel=8 root=/dev/mmcblk0p2 rootwait rw clk_ignore_unused mem=1024M
+NAME         SIZE FSTYPE MOUNTPOINT
+mtdblock0      4M        
+mtdblock1     16M        
+mmcblk0     58.2G        
+|-mmcblk0p1    1G        
+`-mmcblk0p2 26.1G        /
+total 0
+lrwxrwxrwx 1 root root 0 Mar  2  2023 /sys/class/fpga_manager/fpga0 -> ../../devices/platform/amba-apu@0/e0040000.devcfg/fpga_manager/fpga0

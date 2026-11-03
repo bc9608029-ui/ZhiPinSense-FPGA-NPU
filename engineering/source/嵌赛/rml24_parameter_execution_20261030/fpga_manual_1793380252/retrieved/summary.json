@@ -1,0 +1,162 @@
+{
+  "expected": 8,
+  "executed": 8,
+  "passed": 7,
+  "results": [
+    {
+      "file": "zero.i16",
+      "rc": 0,
+      "result": {
+        "iq_sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+        "requested": "fpga",
+        "backend_used": "fpga",
+        "ok": true,
+        "fallback_reason": null,
+        "driver_rc": 0,
+        "elapsed_seconds": 0.048122330000012425,
+        "comparison": {
+          "pass_": true,
+          "relative_l1": 0.0,
+          "peak_ok": true
+        }
+      }
+    },
+    {
+      "file": "dc.i16",
+      "rc": 0,
+      "result": {
+        "iq_sha256": "aa72b8e1bba270c1d9beb6691aa238b279055dac175384cc6d56dba61a9a1a9b",
+        "requested": "fpga",
+        "backend_used": "fpga",
+        "ok": true,
+        "fallback_reason": null,
+        "driver_rc": 0,
+        "elapsed_seconds": 0.047887749999972584,
+        "comparison": {
+          "pass_": true,
+          "relative_l1": 0.00034102400290628214,
+          "peak_power_relative_error": 0.0,
+          "peak_ok": true,
+          "peak_bin": 512
+        }
+      }
+    },
+    {
+      "file": "plus37.i16",
+      "rc": 0,
+      "result": {
+        "iq_sha256": "4bdd29f1052bc4d88b76017b59ed1f5fdb2343dffade0641c814c03681e44ca0",
+        "requested": "fpga",
+        "backend_used": "fpga",
+        "ok": true,
+        "fallback_reason": null,
+        "driver_rc": 0,
+        "elapsed_seconds": 0.04819897999999512,
+        "comparison": {
+          "pass_": true,
+          "relative_l1": 5.307228505753992e-05,
+          "peak_power_relative_error": 4.581885450501204e-05,
+          "peak_ok": true,
+          "peak_bin": 549
+        }
+      }
+    },
+    {
+      "file": "minus37.i16",
+      "rc": 0,
+      "result": {
+        "iq_sha256": "c1927bcfe8a703a3cff69e2db743b11fadf514653359b918c07172c651722b86",
+        "requested": "fpga",
+        "backend_used": "fpga",
+        "ok": true,
+        "fallback_reason": null,
+        "driver_rc": 0,
+        "elapsed_seconds": 0.04804851000000099,
+        "comparison": {
+          "pass_": true,
+          "relative_l1": 5.0453106240777426e-05,
+          "peak_power_relative_error": 4.5819408508628315e-05,
+          "peak_ok": true,
+          "peak_bin": 475
+        }
+      }
+    },
+    {
+      "file": "edge511.i16",
+      "rc": 0,
+      "result": {
+        "iq_sha256": "00dbb17ce9718428124d1b1501fd1dcf37274bbd36dfb94ba52bc02826ebfb81",
+        "requested": "fpga",
+        "backend_used": "fpga",
+        "ok": true,
+        "fallback_reason": null,
+        "driver_rc": 0,
+        "elapsed_seconds": 0.04951112999998486,
+        "comparison": {
+          "pass_": true,
+          "relative_l1": 8.847343568473733e-05,
+          "peak_power_relative_error": 0.00011454080181719201,
+          "peak_ok": true,
+          "peak_bin": 1023
+        }
+      }
+    },
+    {
+      "file": "dual.i16",
+      "rc": 0,
+      "result": {
+        "iq_sha256": "9c2deba80670056e7ea8789244a1447ed23b8f8cb9d948edc3552f2e502a44f4",
+        "requested": "fpga",
+        "backend_used": "fpga",
+        "ok": true,
+        "fallback_reason": null,
+        "driver_rc": 0,
+        "elapsed_seconds": 0.048271650000003774,
+        "comparison": {
+          "pass_": true,
+          "relative_l1": 4.6887025103538335e-05,
+          "peak_power_relative_error": 3.0546593062432356e-05,
+          "peak_ok": true,
+          "peak_bin": 420
+        }
+      }
+    },
+    {
+      "file": "random.i16",
+      "rc": 0,
+      "result": {
+        "iq_sha256": "41f630da4f42755c2020d850f20b858c71addc02d52ff1378354427287bf2835",
+        "requested": "fpga",
+        "backend_used": "fpga",
+        "ok": true,
+        "fallback_reason": null,
+        "driver_rc": 0,
+        "elapsed_seconds": 0.04822636999995211,
+        "comparison": {
+          "pass_": true,
+          "relative_l1": 0.0018915935244409909,
+          "peak_power_relative_error": 0.0005468868204368049,
+          "peak_ok": true,
+          "peak_bin": 878
+        }
+      }
+    },
+    {
+      "file": "impulse.i16",
+      "rc": 1,
+      "result": {
+        "iq_sha256": "1b5059fe34bb38c6ca9070250e2cccd51655e28048fd3808895c861c1b5302e0",
+        "requested": "fpga",
+        "backend_used": "software",
+        "ok": false,
+        "fallback_reason": "driver_exit_1",
+        "driver_rc": 1,
+        "elapsed_seconds": 0.05033578000001171,
+        "requires_board_reset": false
+      }
+    }
+  ],
+  "complete": true,
+  "device_used": true,
+  "production_receiver_integrated": false
+}

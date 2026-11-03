@@ -1,0 +1,29 @@
+{
+  "inputs_identical": false,
+  "model_dir": "F:\\\u5d4c\u8d5b\\fix10class24_scalarwl_4way_work\\sdr_rml24_fix10class24_scalarwl_4way\\model_rml23",
+  "model_json_sha256": "d43a22848fad56195265fc98f9009039e4e9d9e8da7f58fc5042fb2a602edb2d",
+  "model_raw_sha256": "2425d990dbac0761cfcdb578c2225795e3b700c4afc6800a0b544ff4d50e0cba",
+  "network_name": "model_24class",
+  "phase": "mixed-precision",
+  "scalar": {
+    "argmax_pass1": 1,
+    "argmax_pass2": 1,
+    "finite": true,
+    "input_sha256": "927f0b035259840a1c7622d47224c901551162f75533efc287b0eac391c618e6",
+    "label_pass1": "4ASK",
+    "logits_sha256": "eba64a153a34abcc2aa1e53a0aa32498f9a00ee25732abd69a678c150e7f89e6",
+    "repeat_argmax_deterministic": 1,
+    "repeat_logits_byte_identical": 1
+  },
+  "task_id": "fix10class24-scalarwl-4way",
+  "wl": {
+    "argmax_pass1": 1,
+    "argmax_pass2": 1,
+    "finite": true,
+    "input_sha256": "7aad7dcae260f46249132b0df7fb2d6731df9a7af05ff1fbeb55b0fa8354e5a8",
+    "label_pass1": "4ASK",
+    "logits_sha256": "8d7c9a13d98b8823455cf2b2413a18af0f5015997a0b20ad7397282178b8bd72",
+    "repeat_argmax_deterministic": 1,
+    "repeat_logits_byte_identical": 1
+  }
+}

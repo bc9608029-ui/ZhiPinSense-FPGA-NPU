@@ -1,0 +1,7 @@
+python3 /root/rml24_three_modes_execution_20261029/fpga_ui_integgration_20261031/summarize_samplerate.py; python3 /root/rml24_three_modes_executiion_20261029/fpga_ui_integration_20261031/live_status.py
+
+[{"attempt": "attempt2", "effective_fs": 1280000, "hardware_fs": [2560000], "digital_only": true, "total": 5, "recovered": 5, "preds": [3, 3, 3, 3, 3]}, {"attempt": "attempt2", "effective_fs": 2560000, "hardware_fs": [2560000], "digital_only": false, "total": 5, "recovered": 5, "preds": [3, 3, 3, 3, 3]}, {"attempt": "attempt3", "effective_fs": 5119999, "hardware_fs": [5119999], "digital_only": false, "total": 5, "recovered": 5, "preds": [3, 3, 3, 3, 3]}]
+
+{"run": "/var/log/rml24-integrated/rf37c286b4ff0", "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4", "alive": {"npu": true, "ui": true, "rx": true}, "total": 52, "valid": 0, "pred_counts": {}, "method": "systemd MainPID argv --run, not filesystem wall time"}
+
+(base) root@U:~# 

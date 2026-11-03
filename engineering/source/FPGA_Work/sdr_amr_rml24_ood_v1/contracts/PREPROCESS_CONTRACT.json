@@ -1,0 +1,8 @@
+{
+  "operation": "raw [1024, 2] -> raw.T -> torch float32 [2, 1024] (planar real/imag)",
+  "normalization": "none (dataset pre-normalized to per-sample unit RMS)",
+  "finite_check": true,
+  "dtype": "float32",
+  "augmentation": "channel-domain only (ChannelPipeline); no label-shortcut transformations",
+  "train_statistics": "no mean/std computed from train (no normalization applied)"
+}

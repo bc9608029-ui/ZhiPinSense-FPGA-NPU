@@ -1,0 +1,46 @@
+reference: frozen_qam_aware_v2_time_power_phase
+source_report: outputs/qam_aware_v2/formal/time_power_phase/tables/evaluation.json
+v2:
+  accuracy: 0.7054761904761905
+  macro_f1: 0.697538161950682
+  qam_mean_accuracy: 0.46476190476190476
+  per_class_accuracy:
+    BPSK: 0.7952380952380952
+    QPSK: 0.64
+    8PSK: 0.6352380952380953
+    16QAM: 0.5076190476190476
+    64QAM: 0.4219047619047619
+    2FSK: 0.9076190476190477
+    CPFSK: 0.8771428571428571
+    OFDM: 0.8590476190476191
+  snr_accuracy:
+    "0": 0.8535
+    "10": 0.9265
+    "20": 0.933
+
+# These are promotion gates, not claims that an untrained V3.2 already passes.
+# They are identical to the V3/V3.1 gates: the acceptance bar is never lowered.
+promotion_gates:
+  minimum_accuracy_gain: 0.02
+  minimum_macro_f1_gain: 0.02
+  minimum_qam_mean_gain: 0.05
+  maximum_per_class_accuracy_drop: 0.03
+  maximum_key_snr_accuracy_drop: 0.01
+
+# The formal run is three independent seeds.  The final promotion decision is a
+# fixed rule (never lowered, never cherry-picked):
+#
+#   * improvement_on: mean    -> the three-seed MEAN of accuracy / macro-F1 /
+#                                QAM mean must clear the three minimum_*_gain
+#                                bars above.
+#   * regression_floors_on: every_seed -> EVERY seed must individually clear the
+#                                maximum_*_drop caps (per-class and 0/10/20 dB),
+#                                so no single seed may regress a class or SNR
+#                                band even if the mean is healthy.
+#
+# Final PASS = both halves hold.  Thresholds are the promotion_gates above.
+multi_seed:
+  seeds: [2026, 2027, 2028]
+  rule: mean_improvement_and_per_seed_regression_floors
+  improvement_on: mean
+  regression_floors_on: every_seed

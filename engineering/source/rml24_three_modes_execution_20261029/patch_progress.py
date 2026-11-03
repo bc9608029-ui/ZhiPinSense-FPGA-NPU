@@ -1,0 +1,6 @@
+from pathlib import Path
+import shutil,json,hashlib
+r=Path('/root/rml24_three_modes_execution_20261029');src=r/'delivery';dst=r/'delivery_progressfix1';shutil.copytree(src,dst)
+p=dst/'candidate/ui_sw/ui_render.cpp';b=p.read_bytes();s=b.decode();old='        if(!st.scan_progress.empty()) draw_text(c,st.scan_progress,650,310,th.text_secondary,b20);';assert s.count(old)==1;s=s.replace(old,'')
+a=s.index('void render_main(');marker='    outline_rect(c, 24, layout::kHeroY0, 1255, layout::kHeroY1, th.outline, 1);';i=s.index(marker,a)+len(marker);s=s[:i]+chr(10)+'    // Progress must remain visible even when NO SIGNAL returns early.'+chr(10)+old.strip().join(['    ',''])+s[i:];p.write_text(s)
+m=dst/'evidence/CANDIDATE_SOURCE_IDENTITY.json';d=json.loads(m.read_text());rel='candidate/ui_sw/ui_render.cpp';assert d[rel]==hashlib.sha256(b).hexdigest();d[rel]=hashlib.sha256(p.read_bytes()).hexdigest();m.write_text(json.dumps(d,indent=2));(r/'PROGRESS_RENDER_FIX.json').write_text(json.dumps(dict(scope='Move existing progress drawing before NO SIGNAL early return; no RX/model changes',original_tree=str(src),new_tree=str(dst),before=hashlib.sha256(b).hexdigest(),after=d[rel]),indent=2));print('PROGRESS_RENDER_FIX_PREPARED')

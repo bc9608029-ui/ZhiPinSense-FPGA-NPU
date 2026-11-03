@@ -1,0 +1,246 @@
+journalctl -u rml24-range-test -n 18 --no-pager; cat /var/log/rmml24-integrated/r62a3b02cb079/RESULT.json 2>/dev/null; systemctl is-enabled rml244-integrated; sync; reboot
+-- Logs begin at Thu 2023-03-02 12:58:02 UTC, end at Fri 2026-03-13 07:00:53 UTC. --
+Mar 13 03:59:57 U.FMSH systemd[1]: Started /root/miniconda3/envs/torch_v2.0.1_aarch64/bin/python3 /root/rml24_range_expansion_20261101/candidate/deployment_launcher.py.
+Mar 13 03:59:58 U.FMSH python3[453]: BOOT_HARDWARE_START {"boot_proof": true, "recovered": false, "probe": "[2026-03-13 03:59:58.740] [info] Device initialization successful, version information:\n[2026-03-13 03:59:58.740] [info] \ticore: FMSHZGV3TECH-AID - 24160628\n[2026-03-13 03:59:58.740] [info] \tdevice: 25122301\n[2026-03-13 03:59:58.740] [info] Device Protocol: axi\n[2026-03-13 03:59:58.740] [info] Device Name: zg330aiu\n[2026-03-13 03:59:58.740] [info] Device Parameters: \n[2026-03-13 03:59:58.740] [info] \tdma: 0x80000000\n[2026-03-13 03:59:58.740] [info] \tnpu: 0x40000000\nSMARTSCAN_PROBE version=1 idle=1 status=138 error=0 count=1024 frame=1\n"}
+Mar 13 03:59:58 U.FMSH python3[453]: EVIDENCE_RETENTION ["r59c09ebdb6f9"]
+Mar 13 03:59:59 U.FMSH pyth
+on3[453]: SWEEP_HISTORY_FAIL candidate SHA mismatch candidate/rml24_final/board_runtime/standalone_receiver.py
+Mar 13 03:59:59 U.FMSH systemd[1]: [0;1;39m[0;1;31m[0;1;39mrml24-range-test.service: Main process exited, code=exited, status=1/FAILURE[0m
+Mar 13 03:59:59 U.FMSH systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mrml24-range-test.service: Failed with result 'exit-code'.[0m
+Mar 13 04:01:16 U.FMSH systemd[1]: Sta         Stopping [0;1;39mSession 1 of user root[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-modprobe.slice[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-serial\x2dgetty.slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mGraphical Interface[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mMulti-User System[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLogin Prompts[0m.
+
+[[0;32m  OK  [0m] Stopped target [0;1;39mHost and Network Name Lookups[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mTimers[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mPeriodic ext4 Onli???ata Check for All Filesystems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDiscard unused blocks once a week[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDaily rotation of log files[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mMessage of the Day[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Time Synchronized[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Time Set[0m.
+
+         Stopping [0;1;39mRegular background program processing daemon[0m...
+         Stopping [0;1;39mGetty on tty1[0m...
+         Stopping [0;1;39mGetty on ttyPS0[0m...
+         Stopping [0;1;39mSystem Logging Service[0m...
+         Stopping [0;1;39mOpenBSD Secure Shell server[0m...
+         Stopping [0;1;39mLoad/Save Random Seed[0m...
+         Stopping [0;1;39mNetwork Name Resolution[0m...
+         Stopping [0;1;39mUnattended Upgrades Shutdown[0m...
+
+[[0;32m  OK  [0m] Stopped [0;1;39mRegular background program processing daemon[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mSystem Logging Service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUnattended Upgrades Shutdown[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mOpenBSD Secure Shell server[0m.
+
+[[0;32m  OK  [0m] Stopped [0;1;39mGetty on tty1[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mGetty on ttyPS0[0m.
+[r[H[3J[[0;32m  OK  [0m] Stopped [0;1;39mLoad/Save Random Seed[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mSession 1 of user root[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-getty.slice[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39m/etc/rc.local Compatibility[0m.
+
+         Stopping [0;1;39mLogin Service[0m...
+         Stopping [0;1;39mUser Manager for UID 0[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Manager for UID 0[0m.
+         Stopping [0;1;39mUser Runtime Directory /run/user/0[0m...
+[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/0[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLogin Service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Runtime Directory /run/user/0[0m.
+
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser Slice of UID 0[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mUnmount All Filesystems[0m.
+         Stopping [0;1;39mD-Bus System Message Bus[0m...
+         Stopping [0;1;39mPermit User Sessions[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mD-Bus System Message Bus[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mBasic System[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mPaths[0m.
+
+[[0;32m  OK  [0m] Stopped target [0;1;39mRemote File Systems[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSlices[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser and Session Slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDispatch Password ???ts to Console Directory Watch[0m.
+
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password R???uests to Wall Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSwap[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mSyslog Socket[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mApply Kernel Variables[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad Kernel Modules[0m.
+         Stopping [0;1;39mNetwork Time Synchronization[0m...
+         Stopping [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+
+[[0;32m  OK  [0m] Stopped [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Volatile Files and Directories[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems (Pre)[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate System Users[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mRemount Root and Kernel File Systems[0m.
+
+[[0;32m  OK  [0m] Reached target [0;1;39mShutdown[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mFinal Step[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mReboot[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mReboot[0m.
+
+[ 2075.020978] reboot: Restarting system
+INFO:    PSCI Power Domain Map:
+INFO:      Domain Node : Level 1, parent_node -1, State ON (0x0)
+INFO:      Domain Node : Level 0, parent_node 0, State ON (0x0)
+INFO:      Domain Node : Level 0, parent_node 0, State ON (0x0)
+INFO:      Domain Node : Level 0, parent_node 0, State ON (0x0)
+INFO:      CPU Node : MPID 0x0, parent_node 0, State ON (0x0)
+INFO:      CPU Node : MPID 0x1, parent_node 0, State ON (0x0)
+INFO:      CPU Node : MPID 0x2, parent_node 0, State ON (0x0)
+INFO:      CPU Node : MPID 0x3, parent_node 0, State ON (0x0)
+
+====PSOC FSBL BOOTING ....... ====
+====FSBL Version: 4.51 ====
+====Procise SVN Version: 31684  Release Date: 2025/09/25 14:30:00====
+====Build Date: Dec 10 2025  20:29:22 ====
+======= In BootStage 1 ======= 
+====UART initialized success!!!====
+Open lvl shifter!
+BootMode Register is : 0x00000145
+REBOOT_STATUS Register is : 0x00400000
+Cluster ID 0x9372c093
+Running on A53-0
+Boot Initialize is done at the 37.66 ms
+======= In BootStage 2 ======= 
+Preparing boot device initialization......
+SD Boot Mode 
+Preparing initialize file BOOT.bin......
+SD: rc= 00000000
+Boot device  initialization success......
+Boot device initialization is done at the 68.08 ms
+Preparing boot header search and validate......
+Multiboot register: 0x0
+Image start address: 0x0
+
+Load boot header info (offset:0x20~0x48)success!
+Image ID verified success!!!
+Checksum verified success!!!
+Boot header validate success, this is a valid image!!!
+Boot header search is done at the 95.98 ms
+Image Header Table Offset 0x8c0 
+Checksum verified success!!!
+Checksum validate success!!!
+Image Header Table Details
+Boot Gen Ver: 0x1020000 
+Number of Partitions: 0x4 
+Partition Header Address: 0x280 
+Partition Present Device: 0x0 
+Boot header validate is done at the 121.76 ms
+======= In BootStage 3 ======= 
+Partition header validate......
+Checksum verified success!!!
+Partition is unencrypted......
+Partition is unauthenticated......
+UnEncrypted data Length: 0x0016d04c 
+Data word offset: 0x0016d04c 
+Total Data word length: 0x0016d04c 
+Destination Load Address: 0xffffffff 
+Execution Address: 0x00000000 
+Data word offset: 0x0000b670 
+Partition Attributes: 0x00000020 
+Partition header validate SUCCESS!!
+Partition header validate is done at the 164.30 ms
+Prepare Copy Partition......
+
+Copy Partition success!!
+Copy Partition is done at the 531.32 ms
+Prepare downloading bitstream.....
+
+Download the PL bitstream is done at the 622.56 ms
+Partition Load Success 
+======= In BootStage 3 ======= 
+Partition header validate......
+Checksum verified success!!!
+Partition is unencrypted......
+Partition is unauthenticated......
+UnEncrypted data Length: 0x00003490 
+Data word offset: 0x00003490 
+Total Data word length: 0x00003490 
+Destination Load Address: 0xe1fe0000 
+Execution Address: 0xe1fe0000 
+Data word offset: 0x001786c0 
+Partition Attributes: 0x00000110 
+Partition header validate SUCCESS!!
+Partition header validate is done at the 667.70 ms
+Prepare Copy Partition......
+Copy Partition success!!
+Copy Partition is done at the 680.73 ms
+Download the Application is done at the 684.29 ms
+Partition Load Success 
+======= In BootStage 3 ======= 
+Partition header validate......
+Checksum verified success!!!
+Partition is unencrypted......
+Partition is unauthenticated......
+UnEncrypted data Length: 0x00030f98 
+Data word offset: 0x00030f98 
+Total Data word length: 0x00030f98 
+Destination Load Address: 0x04000000 
+Execution Address: 0x04000000 
+Data word offset: 0x0017bb50 
+Partition Attributes: 0x00000110 
+Partition header validate SUCCESS!!
+Partition header validate is done at the 729.42 ms
+Prepare Copy Partition......
+
+Copy Partition success!!
+Copy Partition is done at the 787.60 ms
+Download the Application is done at the 791.16 ms
+Partition Load Success 
+All Partitions Loaded 
+================= In BootStage 4 ============ 
+Handoff control to JTAG or FSBL...... 
+APU JTAG will be enabled.!!!
+Exit from FSBL 
+6NOTICE:  ATF running on FMQLP30TAI/0x49 v9/FAM1b.9 at 0xe1fe0000
+NOTICE:  BL31: Secure code at 0x10000000
+NOTICE:  BL31: Non secure code at 0x4000000
+NOTICE:  BL31: v2.3():44391da-dirty 
+NOTICE:  BL31: Built : 20:05:14, Dec 10 2025
+INFO:    ARM GICv2 driver initialized
+INFO:    BL31: Initializing runtime services
+INFO:    BL31: cortex_a53: CPU workaround for 855873 was applied
+INFO:    BL31: Preparing for EL3 exit to normal world
+INFO:    Entry point address = 0x4000000
+INFO:    SPSR = 0x3c9
+
+
+
+U-Boot 2020.07-gd24dcccd-dirty (Oct 31 2025 - 14:58:27 +0800)
+
+CPU: FMQL Plus FMQL30TAI, Revision Code:9
+Model: FMQLMP FMQL100TAI
+Board: FMQLMP Platform Board
+DRAM:  1 GiB
+
+EL Level:	EL2
+Flash: 0 Bytes
+NAND:  0 MiB
+MMC:   dwmmc@e0043000: 0
+Loading Environment from SPI Flash... SF: Detected n25q256a with page size 256 Bytes, erase size 64 KiB, total 32 MiB
+OK
+In:    serial@e0004000
+Out:   serial@e0004000
+Err:   serial@e0004000
+Net:   
+eth0: ethernet@e0047000
+Hit any key to stop autoboot:  3 
+ 2 
+ 1 

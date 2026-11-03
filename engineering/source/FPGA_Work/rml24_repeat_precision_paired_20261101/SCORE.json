@@ -1,0 +1,44 @@
+{
+  "scope": "Same unaveraged8-repeat raw RF; prefix-N mean then tiled8 model inputs; NOT actual shortened-frame RF",
+  "guard_clean": true,
+  "rows": [
+    {
+      "segments_used": 1,
+      "correct": 51,
+      "denominator": 51,
+      "failures": []
+    },
+    {
+      "segments_used": 2,
+      "correct": 50,
+      "denominator": 51,
+      "failures": [
+        {
+          "index": 84,
+          "file": "22_00.bin",
+          "pred": 16,
+          "expected": 22
+        }
+      ]
+    },
+    {
+      "segments_used": 4,
+      "correct": 50,
+      "denominator": 51,
+      "failures": [
+        {
+          "index": 84,
+          "file": "22_00.bin",
+          "pred": 16,
+          "expected": 22
+        }
+      ]
+    },
+    {
+      "segments_used": 8,
+      "correct": 51,
+      "denominator": 51,
+      "failures": []
+    }
+  ]
+}

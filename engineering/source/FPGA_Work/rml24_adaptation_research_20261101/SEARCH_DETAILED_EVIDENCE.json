@@ -1,0 +1,2463 @@
+{
+  "rows": [
+    {
+      "frame_id": 306,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393200743985720,
+      "capture_monotonic_ns": 20713742356250,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 20715.3182576,
+      "center_hz": 2403599943,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 17.170470065636504,
+        "training_residual": 0.7620797549290059,
+        "fir_training_residual": 0.02020989468284575,
+        "head_reference_relative_error": 0.01608896701717223,
+        "tail_reference_relative_error": 0.017460761425651995,
+        "tail_residual": 0.7166850455284441,
+        "gain": 503.0856267447079,
+        "dc": 302.22541132588685,
+        "repeat_average": 8.0,
+        "input_sha256": "10ec24c2bdaaad6138e54a4c262c6009735d8aa0e3a833cb0baa4c63de23c2e7",
+        "pred": 0,
+        "class_name": "OOK",
+        "confidence": 1.0,
+        "top3": [
+          {
+            "index": 0,
+            "class_name": "OOK",
+            "probability": 1.0
+          },
+          {
+            "index": 1,
+            "class_name": "4ASK",
+            "probability": 7.530388099325974e-17
+          },
+          {
+            "index": 3,
+            "class_name": "BPSK",
+            "probability": 1.0323853988769519e-22
+          }
+        ],
+        "window_predictions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_logits": [
+          23.625,
+          -13.5,
+          -45.75,
+          -27.0,
+          -101.5,
+          -104.5,
+          -84.5,
+          -86.0,
+          -83.5,
+          -39.75,
+          -63.5,
+          -64.5,
+          -55.75,
+          -48.0,
+          -73.0,
+          -62.5,
+          -68.0,
+          -40.0,
+          -56.25,
+          -62.5,
+          -34.25,
+          -145.0,
+          -159.0,
+          -54.75
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.7191615471971768,
+          "cfo_hz": 17.17047330596264,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1819.9016399994434
+    },
+    {
+      "frame_id": 307,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393202564155760,
+      "capture_monotonic_ns": 20715562525880,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 20717.14685723,
+      "center_hz": 2403599944,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 18.384592515950988,
+        "training_residual": 0.5302023473005022,
+        "fir_training_residual": 0.020634566004078054,
+        "head_reference_relative_error": 0.01824630540488929,
+        "tail_reference_relative_error": 0.0180875049520673,
+        "tail_residual": 0.5031388989081373,
+        "gain": 489.97067315621234,
+        "dc": 113.89766306351316,
+        "repeat_average": 8.0,
+        "input_sha256": "02b431dc6bfd0ab29056c92aa3f00f98e7323209603d45f47e7f8b65fe116ea2",
+        "pred": 16,
+        "class_name": "256QAM",
+        "confidence": 0.9362849545618628,
+        "top3": [
+          {
+            "index": 16,
+            "class_name": "256QAM",
+            "probability": 0.9362849545618628
+          },
+          {
+            "index": 14,
+            "class_name": "64QAM",
+            "probability": 0.06371499076870263
+          },
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 5.466263720333462e-08
+          }
+        ],
+        "window_predictions": [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "mean_logits": [
+          -76.5,
+          -36.75,
+          -30.375,
+          -76.5,
+          -67.0,
+          -59.75,
+          -54.0,
+          -35.5,
+          -61.0,
+          -69.5,
+          -48.25,
+          -57.75,
+          -43.5,
+          -53.75,
+          -7.40625,
+          -21.375,
+          -4.71875,
+          -61.75,
+          -65.5,
+          -115.5,
+          -65.0,
+          -95.0,
+          -54.0,
+          -42.25
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.8676240878569568,
+          "cfo_hz": 17.936944356074623,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1826.035239999328
+    },
+    {
+      "frame_id": 308,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393204394216130,
+      "capture_monotonic_ns": 20717392586540,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 20718.97710835,
+      "center_hz": 2403599944,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 17.395055519732168,
+        "training_residual": 0.3510932894563465,
+        "fir_training_residual": 0.018649562099763293,
+        "head_reference_relative_error": 0.017612836496576478,
+        "tail_reference_relative_error": 0.018163206114400646,
+        "tail_residual": 0.3341785475188959,
+        "gain": 493.51271425848336,
+        "dc": 107.54043288439674,
+        "repeat_average": 8.0,
+        "input_sha256": "a9959e178ae76ec52eef4368e9d4d9eb0f962b6bd6f9d10573ede4d21dc9ec99",
+        "pred": 16,
+        "class_name": "256QAM",
+        "confidence": 0.9964063945554764,
+        "top3": [
+          {
+            "index": 16,
+            "class_name": "256QAM",
+            "probability": 0.9964063945554764
+          },
+          {
+            "index": 14,
+            "class_name": "64QAM",
+            "probability": 0.0035936025710941264
+          },
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 2.8071388421757556e-09
+          }
+        ],
+        "window_predictions": [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "mean_logits": [
+          -78.5,
+          -34.5,
+          -28.625,
+          -81.5,
+          -69.0,
+          -61.0,
+          -56.0,
+          -35.25,
+          -65.5,
+          -75.5,
+          -51.75,
+          -60.5,
+          -46.5,
+          -58.5,
+          -10.8125,
+          -24.875,
+          -5.1875,
+          -62.25,
+          -68.0,
+          -121.5,
+          -67.0,
+          -96.5,
+          -54.5,
+          -46.75
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.9262961405296748,
+          "cfo_hz": 17.563867541746458,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1827.6394700005767
+    },
+    {
+      "frame_id": 309,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393206224131780,
+      "capture_monotonic_ns": 20719222502400,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 20720.80929522,
+      "center_hz": 2403599946,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 17.452126434144713,
+        "training_residual": 0.22979715457314304,
+        "fir_training_residual": 0.016307907558043785,
+        "head_reference_relative_error": 0.0159091769501238,
+        "tail_reference_relative_error": 0.01756309229398284,
+        "tail_residual": 0.21809036770170476,
+        "gain": 553.6213784714715,
+        "dc": 113.53839244935773,
+        "repeat_average": 8.0,
+        "input_sha256": "6b752c4a8c868500589a4093a77904e674dd057236ba9ad3febb1c8d7d82c91d",
+        "pred": 16,
+        "class_name": "256QAM",
+        "confidence": 0.9990302450056747,
+        "top3": [
+          {
+            "index": 16,
+            "class_name": "256QAM",
+            "probability": 0.9990302450056747
+          },
+          {
+            "index": 14,
+            "class_name": "64QAM",
+            "probability": 0.0009697519648447414
+          },
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 2.996052567619616e-09
+          }
+        ],
+        "window_predictions": [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "mean_logits": [
+          -77.5,
+          -34.25,
+          -28.5,
+          -81.0,
+          -69.5,
+          -61.75,
+          -56.25,
+          -35.25,
+          -65.0,
+          -75.0,
+          -52.0,
+          -60.0,
+          -46.25,
+          -57.25,
+          -11.3125,
+          -24.0,
+          -4.375,
+          -62.75,
+          -68.0,
+          -122.0,
+          -67.0,
+          -97.0,
+          -55.0,
+          -45.75
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.9579574924176559,
+          "cfo_hz": 20.43551134073434,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1829.6145200001774
+    },
+    {
+      "frame_id": 310,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393208064065050,
+      "capture_monotonic_ns": 20721062435400,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 20722.63981112,
+      "center_hz": 2403599944,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 17.271403601125222,
+        "training_residual": 0.22079943089436943,
+        "fir_training_residual": 0.01615451610602734,
+        "head_reference_relative_error": 0.015790201637401524,
+        "tail_reference_relative_error": 0.016205497021184047,
+        "tail_residual": 0.20958347914171968,
+        "gain": 708.6757503740471,
+        "dc": 154.14280685938104,
+        "repeat_average": 8.0,
+        "input_sha256": "ff378f5c92559c974cd0736d6171a5a6c406f0ce037b7cd5cafc86ec95ee359c",
+        "pred": 19,
+        "class_name": "AM-DSB-WC",
+        "confidence": 0.9511420705085697,
+        "top3": [
+          {
+            "index": 19,
+            "class_name": "AM-DSB-WC",
+            "probability": 0.9511420705085697
+          },
+          {
+            "index": 20,
+            "class_name": "AM-DSB-SC",
+            "probability": 0.048857770872401514
+          },
+          {
+            "index": 17,
+            "class_name": "AM-SSB-WC",
+            "probability": 1.5573782741935261e-07
+          }
+        ],
+        "window_predictions": [
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ],
+        "mean_logits": [
+          -18.5,
+          -22.0,
+          -22.625,
+          -15.875,
+          -18.625,
+          -15.75,
+          -18.75,
+          -19.75,
+          -13.6875,
+          -14.25,
+          -12.75,
+          -15.6875,
+          -19.125,
+          -16.5,
+          -19.0,
+          -16.25,
+          -20.25,
+          -7.25,
+          -13.5625,
+          8.375,
+          5.40625,
+          -20.0,
+          -39.0,
+          -11.9375
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.9571963092561261,
+          "cfo_hz": 17.5262799938395,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1827.125640000304
+    },
+    {
+      "frame_id": 407,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393387427454110,
+      "capture_monotonic_ns": 20900425824630,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 20902.00565694,
+      "center_hz": 2403599947,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 18.071650382943766,
+        "training_residual": 0.9640352467537464,
+        "fir_training_residual": 0.020196384511390112,
+        "head_reference_relative_error": 0.01455652013082862,
+        "tail_reference_relative_error": 0.014782400436476158,
+        "tail_residual": 0.898742902878827,
+        "gain": 658.0502260705372,
+        "dc": 178.53920350104815,
+        "repeat_average": 8.0,
+        "input_sha256": "fa0b7ee68c9d6931fb36e544a799db8cfdbb10817698eb707597c9fa604a0843",
+        "pred": 8,
+        "class_name": "16APSK",
+        "confidence": 0.9999999999977329,
+        "top3": [
+          {
+            "index": 8,
+            "class_name": "16APSK",
+            "probability": 0.9999999999977329
+          },
+          {
+            "index": 12,
+            "class_name": "16QAM",
+            "probability": 2.2671445131627196e-12
+          },
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 1.7886239494545404e-17
+          }
+        ],
+        "window_predictions": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "mean_logits": [
+          -126.5,
+          -85.0,
+          -78.5,
+          -89.0,
+          -55.25,
+          -39.25,
+          -45.75,
+          -42.25,
+          6.0625,
+          -37.25,
+          -37.25,
+          -49.0,
+          -20.75,
+          -33.75,
+          -35.75,
+          -32.5,
+          -37.0,
+          -49.5,
+          -53.0,
+          -74.5,
+          -53.25,
+          -82.5,
+          -64.5,
+          -44.75
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.7093636788625401,
+          "cfo_hz": 21.003137998956692,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1827.052980002918
+    },
+    {
+      "frame_id": 408,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393389257375470,
+      "capture_monotonic_ns": 20902255746260,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 20903.83429842,
+      "center_hz": 2403599946,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 18.416291827059904,
+        "training_residual": 0.903767058407179,
+        "fir_training_residual": 0.08744028452166801,
+        "head_reference_relative_error": 0.064935078269156,
+        "tail_reference_relative_error": 0.01914437850279372,
+        "tail_residual": 0.8415614534436447,
+        "gain": 531.0517607968573,
+        "dc": 177.7496251136333,
+        "repeat_average": 8.0,
+        "input_sha256": "69d09ee87660b61101f90cf6e0eb2b1f8a2be76ffbd7fd3e7107b4de5b581bcb",
+        "pred": 15,
+        "class_name": "128QAM",
+        "confidence": 0.9994806128879351,
+        "top3": [
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 0.9994806128879351
+          },
+          {
+            "index": 13,
+            "class_name": "32QAM",
+            "probability": 0.000519304821761172
+          },
+          {
+            "index": 11,
+            "class_name": "128APSK",
+            "probability": 8.228973019527434e-08
+          }
+        ],
+        "window_predictions": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "mean_logits": [
+          -109.5,
+          -70.5,
+          -74.0,
+          -187.0,
+          -136.0,
+          -103.0,
+          -103.5,
+          -91.5,
+          -97.5,
+          -49.25,
+          -45.5,
+          -26.625,
+          -48.0,
+          -17.875,
+          -50.25,
+          -10.3125,
+          -38.5,
+          -62.25,
+          -83.0,
+          -171.0,
+          -89.5,
+          -195.0,
+          -135.0,
+          -93.5
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.7253474736117134,
+          "cfo_hz": 19.62203182195532,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1826.0387900008936
+    },
+    {
+      "frame_id": 409,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393391087431260,
+      "capture_monotonic_ns": 20904085801610,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 20905.6600963,
+      "center_hz": 2403599944,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 18.14798011851212,
+        "training_residual": 0.637839426390068,
+        "fir_training_residual": 0.01966343540361777,
+        "head_reference_relative_error": 0.016595597416963332,
+        "tail_reference_relative_error": 0.018628845747820963,
+        "tail_residual": 0.602816012125007,
+        "gain": 769.3431041885583,
+        "dc": 215.5541532920185,
+        "repeat_average": 8.0,
+        "input_sha256": "18a08d3796c3c095183a77b4e64083cedf8c12ede16fa9ecf6427fbd09b5e253",
+        "pred": 15,
+        "class_name": "128QAM",
+        "confidence": 0.7057844616764953,
+        "top3": [
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 0.7057844616764953
+          },
+          {
+            "index": 13,
+            "class_name": "32QAM",
+            "probability": 0.2942147361521727
+          },
+          {
+            "index": 11,
+            "class_name": "128APSK",
+            "probability": 8.021699184119804e-07
+          }
+        ],
+        "window_predictions": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "mean_logits": [
+          -105.5,
+          -70.5,
+          -73.5,
+          -183.0,
+          -133.0,
+          -102.0,
+          -99.5,
+          -90.5,
+          -96.0,
+          -48.25,
+          -48.25,
+          -27.25,
+          -50.0,
+          -14.4375,
+          -54.0,
+          -13.5625,
+          -40.5,
+          -62.75,
+          -83.5,
+          -164.0,
+          -86.0,
+          -190.0,
+          -134.0,
+          -90.5
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.8216797498045958,
+          "cfo_hz": 18.14797791977283,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1823.1753299987759
+    },
+    {
+      "frame_id": 410,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393392897981590,
+      "capture_monotonic_ns": 20905896352390,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 20907.47801008,
+      "center_hz": 2403599946,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 19.7296610170134,
+        "training_residual": 0.4403813964028586,
+        "fir_training_residual": 0.01676425193244748,
+        "head_reference_relative_error": 0.015357964443452304,
+        "tail_reference_relative_error": 0.015821758538280443,
+        "tail_residual": 0.41939842136166505,
+        "gain": 648.2782680026535,
+        "dc": 170.46627462077487,
+        "repeat_average": 8.0,
+        "input_sha256": "7787fc39a7b8af0eaa33dec58efb63293e3f42253c8da02b5199d4c70929d3f5",
+        "pred": 15,
+        "class_name": "128QAM",
+        "confidence": 0.9994110549372226,
+        "top3": [
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 0.9994110549372226
+          },
+          {
+            "index": 13,
+            "class_name": "32QAM",
+            "probability": 0.0005884085028403401
+          },
+          {
+            "index": 11,
+            "class_name": "128APSK",
+            "probability": 5.365591021190395e-07
+          }
+        ],
+        "window_predictions": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "mean_logits": [
+          -108.0,
+          -69.5,
+          -74.0,
+          -185.0,
+          -136.0,
+          -104.5,
+          -105.5,
+          -93.0,
+          -100.0,
+          -47.75,
+          -44.5,
+          -24.625,
+          -47.5,
+          -17.625,
+          -49.75,
+          -10.1875,
+          -38.0,
+          -61.75,
+          -83.0,
+          -169.0,
+          -87.0,
+          -194.0,
+          -138.0,
+          -95.0
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.8918841403915395,
+          "cfo_hz": 20.107210892220866,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1815.3549000016937
+    },
+    {
+      "frame_id": 411,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393394727396300,
+      "capture_monotonic_ns": 20907725766830,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 20909.30881248,
+      "center_hz": 2403599944,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 17.42057238313533,
+        "training_residual": 0.2882920373821254,
+        "fir_training_residual": 0.017259136543747357,
+        "head_reference_relative_error": 0.016601486610257694,
+        "tail_reference_relative_error": 0.01673063084085387,
+        "tail_residual": 0.27367768499409134,
+        "gain": 549.279498019497,
+        "dc": 135.01220014228687,
+        "repeat_average": 8.0,
+        "input_sha256": "684b2f837999b7bb81ac65d31e7f609455c25f10cb70b3e4e527d3830259582d",
+        "pred": 15,
+        "class_name": "128QAM",
+        "confidence": 0.9783835792761922,
+        "top3": [
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 0.9783835792761922
+          },
+          {
+            "index": 13,
+            "class_name": "32QAM",
+            "probability": 0.021615308726454837
+          },
+          {
+            "index": 11,
+            "class_name": "128APSK",
+            "probability": 1.1119965351735676e-06
+          }
+        ],
+        "window_predictions": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "mean_logits": [
+          -106.5,
+          -70.0,
+          -74.0,
+          -185.0,
+          -135.0,
+          -104.0,
+          -103.5,
+          -93.0,
+          -99.5,
+          -47.5,
+          -46.5,
+          -25.875,
+          -49.25,
+          -16.0,
+          -52.25,
+          -12.1875,
+          -40.0,
+          -61.25,
+          -82.5,
+          -167.0,
+          -87.0,
+          -194.0,
+          -137.0,
+          -94.0
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.9360225507575402,
+          "cfo_hz": 17.522794977180837,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1828.2012800009397
+    },
+    {
+      "frame_id": 509,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393575280617540,
+      "capture_monotonic_ns": 21088278987800,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21089.86589392,
+      "center_hz": 2403599944,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 17.90583153258584,
+        "training_residual": 0.8647556735582134,
+        "fir_training_residual": 0.021665029249253714,
+        "head_reference_relative_error": 0.01640403593403543,
+        "tail_reference_relative_error": 0.018582060830900804,
+        "tail_residual": 0.8102566353452976,
+        "gain": 483.69371410255974,
+        "dc": 154.52014674251825,
+        "repeat_average": 8.0,
+        "input_sha256": "129aa4f00bc556307861d900fc14e4b9464ebddcb9d415aafe15d6d2b68d115c",
+        "pred": 7,
+        "class_name": "32PSK",
+        "confidence": 0.9999999818879229,
+        "top3": [
+          {
+            "index": 7,
+            "class_name": "32PSK",
+            "probability": 0.9999999818879229
+          },
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 9.605427649225642e-09
+          },
+          {
+            "index": 16,
+            "class_name": "256QAM",
+            "probability": 8.47676014844206e-09
+          }
+        ],
+        "window_predictions": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "mean_logits": [
+          -76.0,
+          -43.25,
+          -35.75,
+          -64.5,
+          -37.5,
+          -41.25,
+          -25.375,
+          -0.7890625,
+          -32.5,
+          -57.5,
+          -38.5,
+          -43.75,
+          -32.25,
+          -34.25,
+          -31.0,
+          -19.25,
+          -19.375,
+          -39.0,
+          -45.75,
+          -92.0,
+          -56.25,
+          -45.75,
+          -37.0,
+          -26.25
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.7369826732927593,
+          "cfo_hz": 17.90583188610668,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1836.2026499999047
+    },
+    {
+      "frame_id": 510,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393577120789500,
+      "capture_monotonic_ns": 21090119159940,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21091.49636105,
+      "center_hz": 2400000000,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "pred": -1,
+        "finite": false,
+        "error": "NO_VALID_PUBLIC_FRAME"
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.07666503466893425,
+          "cfo_hz": -722479.1218361814,
+          "locked_check": true,
+          "accepted": false
+        }
+      ],
+      "elapsed_ms": 1627.594659999886
+    },
+    {
+      "frame_id": 511,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393578881090140,
+      "capture_monotonic_ns": 21091879460440,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21093.24966637,
+      "center_hz": 2400000000,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "pred": -1,
+        "finite": false,
+        "error": "NO_VALID_PUBLIC_FRAME"
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.09550796673652942,
+          "cfo_hz": 19.455695196927103,
+          "locked_check": true,
+          "accepted": false
+        }
+      ],
+      "elapsed_ms": 1600.7400200032862
+    },
+    {
+      "frame_id": 512,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393580650892980,
+      "capture_monotonic_ns": 21093649263460,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21095.24447075,
+      "center_hz": 2403599944,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 17.962250258796384,
+        "training_residual": 0.3094238179791426,
+        "fir_training_residual": 0.07204739695040732,
+        "head_reference_relative_error": 0.06899243561474934,
+        "tail_reference_relative_error": 0.07236709625199632,
+        "tail_residual": 0.29618771666091787,
+        "gain": 68.51790468351422,
+        "dc": 248.7832225603503,
+        "repeat_average": 8.0,
+        "input_sha256": "7ce00a75bf8cbcaf1b7f52fe296ed3473434ddd5b91b91ce49f491c669200543",
+        "pred": 17,
+        "class_name": "AM-SSB-WC",
+        "confidence": 0.7248702760958103,
+        "top3": [
+          {
+            "index": 17,
+            "class_name": "AM-SSB-WC",
+            "probability": 0.7248702760958103
+          },
+          {
+            "index": 18,
+            "class_name": "AM-SSB-SC",
+            "probability": 0.27512972379242556
+          },
+          {
+            "index": 20,
+            "class_name": "AM-DSB-SC",
+            "probability": 9.551263536944484e-11
+          }
+        ],
+        "window_predictions": [
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17
+        ],
+        "mean_logits": [
+          -32.0,
+          -26.875,
+          -23.25,
+          -43.25,
+          -27.875,
+          -31.125,
+          -33.0,
+          -31.125,
+          -20.875,
+          -24.25,
+          -24.0,
+          -29.0,
+          -33.75,
+          -27.5,
+          -28.25,
+          -29.0,
+          -29.75,
+          6.125,
+          5.15625,
+          -18.5,
+          -16.625,
+          -35.0,
+          -37.75,
+          -30.625
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.2768870767386795,
+          "cfo_hz": 18.116833847969893,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1842.076500000985
+    },
+    {
+      "frame_id": 513,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393582501078320,
+      "capture_monotonic_ns": 21095499448600,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21097.14815877,
+      "center_hz": 2403599945,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 18.338104837361772,
+        "training_residual": 0.23729657691122258,
+        "fir_training_residual": 0.06354222300986827,
+        "head_reference_relative_error": 0.06192169745000342,
+        "tail_reference_relative_error": 0.06856280863117432,
+        "tail_residual": 0.23354757899730552,
+        "gain": 68.86331425591374,
+        "dc": 244.77004892433612,
+        "repeat_average": 8.0,
+        "input_sha256": "0df272641becc97757d87b859d27bc3c3d3f7c9bb042e4d3da5da6fb85e49de9",
+        "pred": 17,
+        "class_name": "AM-SSB-WC",
+        "confidence": 0.7122321841698429,
+        "top3": [
+          {
+            "index": 17,
+            "class_name": "AM-SSB-WC",
+            "probability": 0.7122321841698429
+          },
+          {
+            "index": 18,
+            "class_name": "AM-SSB-SC",
+            "probability": 0.2877678157331326
+          },
+          {
+            "index": 20,
+            "class_name": "AM-DSB-SC",
+            "probability": 8.282001809150193e-11
+          }
+        ],
+        "window_predictions": [
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17,
+          17
+        ],
+        "mean_logits": [
+          -32.5,
+          -27.25,
+          -23.75,
+          -43.75,
+          -28.125,
+          -31.375,
+          -33.0,
+          -31.375,
+          -20.875,
+          -24.625,
+          -24.125,
+          -29.125,
+          -34.0,
+          -27.75,
+          -28.5,
+          -29.25,
+          -30.25,
+          6.125,
+          5.21875,
+          -18.625,
+          -16.75,
+          -35.75,
+          -38.0,
+          -30.875
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.2790094103714112,
+          "cfo_hz": 18.936835348533233,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1900.5744700007199
+    },
+    {
+      "frame_id": 520,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393595621014650,
+      "capture_monotonic_ns": 21108619385240,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21110.25240183,
+      "center_hz": 2403599944,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 17.250234164986743,
+        "training_residual": 0.44701015932854754,
+        "fir_training_residual": 0.017314908626633877,
+        "head_reference_relative_error": 0.015822784181994176,
+        "tail_reference_relative_error": 0.016511677776416846,
+        "tail_residual": 0.42521098009803643,
+        "gain": 753.3773621985757,
+        "dc": 182.9648485184646,
+        "repeat_average": 8.0,
+        "input_sha256": "33914c290d30b36c4c3f85de9ad95b0e484e621c33087751857837111d4c66c2",
+        "pred": 15,
+        "class_name": "128QAM",
+        "confidence": 0.99997734037596,
+        "top3": [
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 0.99997734037596
+          },
+          {
+            "index": 16,
+            "class_name": "256QAM",
+            "probability": 2.229919096214483e-05
+          },
+          {
+            "index": 11,
+            "class_name": "128APSK",
+            "probability": 3.6043285243710535e-07
+          }
+        ],
+        "window_predictions": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "mean_logits": [
+          -85.5,
+          -47.25,
+          -51.25,
+          -102.5,
+          -102.0,
+          -81.5,
+          -83.5,
+          -58.25,
+          -77.5,
+          -41.5,
+          -31.375,
+          -16.5,
+          -39.5,
+          -33.0,
+          -31.875,
+          -1.6640625,
+          -12.375,
+          -65.5,
+          -81.0,
+          -148.0,
+          -72.0,
+          -134.0,
+          -100.0,
+          -58.5
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.892083142636261,
+          "cfo_hz": 17.838539871853104,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1878.8089600020612
+    },
+    {
+      "frame_id": 521,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393597501065400,
+      "capture_monotonic_ns": 21110499436020,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21112.08030512,
+      "center_hz": 2403599943,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 18.772619297959114,
+        "training_residual": 0.31085529242237814,
+        "fir_training_residual": 0.027851237748210602,
+        "head_reference_relative_error": 0.02681637097638549,
+        "tail_reference_relative_error": 0.0276966206031661,
+        "tail_residual": 0.2916718543119726,
+        "gain": 135.66761092712375,
+        "dc": 56.0860192644427,
+        "repeat_average": 8.0,
+        "input_sha256": "fdac6102cffbf647513bfc76ccb5a8dfc6b064ac6f016c1448d737ed71f7e3af",
+        "pred": 18,
+        "class_name": "AM-SSB-SC",
+        "confidence": 0.9999999999094393,
+        "top3": [
+          {
+            "index": 18,
+            "class_name": "AM-SSB-SC",
+            "probability": 0.9999999999094393
+          },
+          {
+            "index": 17,
+            "class_name": "AM-SSB-WC",
+            "probability": 9.056076988852742e-11
+          },
+          {
+            "index": 10,
+            "class_name": "64APSK",
+            "probability": 3.3850614024739885e-22
+          }
+        ],
+        "window_predictions": [
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18
+        ],
+        "mean_logits": [
+          -94.5,
+          -67.5,
+          -56.75,
+          -170.0,
+          -109.5,
+          -96.0,
+          -87.5,
+          -76.0,
+          -62.5,
+          -52.25,
+          -36.75,
+          -42.25,
+          -88.5,
+          -52.25,
+          -60.0,
+          -46.75,
+          -56.25,
+          -10.4375,
+          12.6875,
+          -81.0,
+          -75.5,
+          -86.5,
+          -78.5,
+          -93.5
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.19563502869703664,
+          "cfo_hz": 17.111435228994164,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1825.1909600003273
+    },
+    {
+      "frame_id": 522,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393599332507420,
+      "capture_monotonic_ns": 21112330877580,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21113.70831529,
+      "center_hz": 2400000000,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "pred": -1,
+        "finite": false,
+        "error": "NO_VALID_PUBLIC_FRAME"
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.10772933136386781,
+          "cfo_hz": -499980.17410029203,
+          "locked_check": true,
+          "accepted": false
+        }
+      ],
+      "elapsed_ms": 1625.1044499986165
+    },
+    {
+      "frame_id": 523,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393601111358980,
+      "capture_monotonic_ns": 21114109729560,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21115.76078924,
+      "center_hz": 2403599944,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 17.99299352129101,
+        "training_residual": 0.2548840084544538,
+        "fir_training_residual": 0.02018437067067671,
+        "head_reference_relative_error": 0.01959895967692446,
+        "tail_reference_relative_error": 0.020670463083311778,
+        "tail_residual": 0.29690925000297774,
+        "gain": 188.6763837160151,
+        "dc": 74.5268620493872,
+        "repeat_average": 8.0,
+        "input_sha256": "dfaa3df0cb00572eaf869c89a05af643678afe53ac1c11ebfd7812fd2a09a01a",
+        "pred": 18,
+        "class_name": "AM-SSB-SC",
+        "confidence": 0.9999999999784899,
+        "top3": [
+          {
+            "index": 18,
+            "class_name": "AM-SSB-SC",
+            "probability": 0.9999999999784899
+          },
+          {
+            "index": 17,
+            "class_name": "AM-SSB-WC",
+            "probability": 2.1510068243323616e-11
+          },
+          {
+            "index": 10,
+            "class_name": "64APSK",
+            "probability": 5.525960833731384e-23
+          }
+        ],
+        "window_predictions": [
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18
+        ],
+        "mean_logits": [
+          -100.0,
+          -72.5,
+          -63.75,
+          -193.0,
+          -119.5,
+          -100.5,
+          -91.0,
+          -83.0,
+          -63.75,
+          -52.5,
+          -35.75,
+          -41.25,
+          -91.0,
+          -52.25,
+          -66.5,
+          -49.5,
+          -63.5,
+          -9.0625,
+          15.5,
+          -83.5,
+          -78.5,
+          -96.0,
+          -83.5,
+          -103.5
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.9056935707472946,
+          "cfo_hz": 17.992975012759185,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1897.5774499995168
+    },
+    {
+      "frame_id": 524,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773393603011209900,
+      "capture_monotonic_ns": 21116009580570,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21117.63633248,
+      "center_hz": 2403599944,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 17.592681885150707,
+        "training_residual": 0.4015523831129826,
+        "fir_training_residual": 0.019778057313357723,
+        "head_reference_relative_error": 0.018373847420210483,
+        "tail_reference_relative_error": 0.016903163679476346,
+        "tail_residual": 0.3825044883151127,
+        "gain": 764.6747339296044,
+        "dc": 178.9731134431085,
+        "repeat_average": 8.0,
+        "input_sha256": "5e5ce07af0bff77b13c9428ac55b78dd149620ea60756bdc43b0ad8119ea16fd",
+        "pred": 19,
+        "class_name": "AM-DSB-WC",
+        "confidence": 0.9124360132806417,
+        "top3": [
+          {
+            "index": 19,
+            "class_name": "AM-DSB-WC",
+            "probability": 0.9124360132806417
+          },
+          {
+            "index": 20,
+            "class_name": "AM-DSB-SC",
+            "probability": 0.0875638253970587
+          },
+          {
+            "index": 17,
+            "class_name": "AM-SSB-WC",
+            "probability": 1.54142657115999e-07
+          }
+        ],
+        "window_predictions": [
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ],
+        "mean_logits": [
+          -16.75,
+          -20.0,
+          -21.75,
+          -14.625,
+          -17.0,
+          -14.3125,
+          -16.625,
+          -18.25,
+          -12.125,
+          -13.8125,
+          -11.75,
+          -14.3125,
+          -16.75,
+          -14.8125,
+          -17.75,
+          -14.5625,
+          -18.75,
+          -7.34375,
+          -13.0,
+          8.25,
+          5.90625,
+          -18.875,
+          -35.75,
+          -11.4375
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.9090756258247686,
+          "cfo_hz": 18.14127364125329,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1871.9325099991693
+    },
+    {
+      "frame_id": 754,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773394027178644070,
+      "capture_monotonic_ns": 21540177014510,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21541.75919462,
+      "center_hz": 2403599943,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 16.863084872559483,
+        "training_residual": 0.366328236104225,
+        "fir_training_residual": 0.017858048794950798,
+        "head_reference_relative_error": 0.016783798214796555,
+        "tail_reference_relative_error": 0.017952914448357154,
+        "tail_residual": 0.34869836461607456,
+        "gain": 533.5995672902749,
+        "dc": 110.27286548095839,
+        "repeat_average": 8.0,
+        "input_sha256": "8c62da3a78b7baf93b75edaa71136d87a8540df64c587f4a3115a307a7a9a35a",
+        "pred": 16,
+        "class_name": "256QAM",
+        "confidence": 0.9998831095594357,
+        "top3": [
+          {
+            "index": 16,
+            "class_name": "256QAM",
+            "probability": 0.9998831095594357
+          },
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 0.00011688545544276253
+          },
+          {
+            "index": 14,
+            "class_name": "64QAM",
+            "probability": 4.985081343450138e-09
+          }
+        ],
+        "window_predictions": [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "mean_logits": [
+          -72.0,
+          -43.5,
+          -41.5,
+          -82.5,
+          -72.0,
+          -65.5,
+          -55.5,
+          -39.0,
+          -47.75,
+          -58.0,
+          -42.25,
+          -37.0,
+          -30.75,
+          -35.0,
+          -19.0,
+          -8.9375,
+          0.11669921875,
+          -71.5,
+          -77.5,
+          -124.5,
+          -62.25,
+          -91.5,
+          -62.5,
+          -36.0
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.9226208426464055,
+          "cfo_hz": 16.87264705373489,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1829.3808799971885
+    },
+    {
+      "frame_id": 755,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773394029008821320,
+      "capture_monotonic_ns": 21542007192110,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21543.58157906,
+      "center_hz": 2403599945,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 18.72678528981781,
+        "training_residual": 0.25469559537896036,
+        "fir_training_residual": 0.024467392045869087,
+        "head_reference_relative_error": 0.023776869735620255,
+        "tail_reference_relative_error": 0.037154374064018184,
+        "tail_residual": 0.24074771291664784,
+        "gain": 150.69901126084176,
+        "dc": 33.354121570094684,
+        "repeat_average": 8.0,
+        "input_sha256": "155248106615b08faf99cb53f7a717e28b4ca81072feffa785dc8327bc36db11",
+        "pred": 18,
+        "class_name": "AM-SSB-SC",
+        "confidence": 0.9999999579486791,
+        "top3": [
+          {
+            "index": 18,
+            "class_name": "AM-SSB-SC",
+            "probability": 0.9999999579486791
+          },
+          {
+            "index": 17,
+            "class_name": "AM-SSB-WC",
+            "probability": 4.205132074716258e-08
+          },
+          {
+            "index": 11,
+            "class_name": "128APSK",
+            "probability": 1.112919169707525e-16
+          }
+        ],
+        "window_predictions": [
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18
+        ],
+        "mean_logits": [
+          -65.0,
+          -43.5,
+          -34.5,
+          -126.0,
+          -83.5,
+          -77.0,
+          -69.5,
+          -56.5,
+          -54.0,
+          -40.5,
+          -33.75,
+          -32.75,
+          -65.5,
+          -40.0,
+          -44.75,
+          -34.75,
+          -38.5,
+          -13.0,
+          3.984375,
+          -74.0,
+          -63.25,
+          -69.0,
+          -63.0,
+          -71.5
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.15258236822521154,
+          "cfo_hz": 18.88908277724458,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1820.024780001404
+    },
+    {
+      "frame_id": 756,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773394030828868560,
+      "capture_monotonic_ns": 21543827239120,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21545.2029598,
+      "center_hz": 2400000000,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "pred": -1,
+        "finite": false,
+        "error": "NO_VALID_PUBLIC_FRAME"
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.10233225044201291,
+          "cfo_hz": -492481.0938380997,
+          "locked_check": true,
+          "accepted": false
+        }
+      ],
+      "elapsed_ms": 1618.529330000456
+    },
+    {
+      "frame_id": 757,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773394032599169190,
+      "capture_monotonic_ns": 21545597539540,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21547.17885329,
+      "center_hz": 2403599944,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 17.8537958075419,
+        "training_residual": 0.30658418025039974,
+        "fir_training_residual": 0.023914642758517644,
+        "head_reference_relative_error": 0.022893690426202276,
+        "tail_reference_relative_error": 0.0248799077738238,
+        "tail_residual": 0.3412553326883669,
+        "gain": 152.4435891291064,
+        "dc": 32.076597584547315,
+        "repeat_average": 8.0,
+        "input_sha256": "93accff6fa00d50d896ec0fd90b50db2097cd91d5972098f40a8043a089d941c",
+        "pred": 18,
+        "class_name": "AM-SSB-SC",
+        "confidence": 0.9999999728496264,
+        "top3": [
+          {
+            "index": 18,
+            "class_name": "AM-SSB-SC",
+            "probability": 0.9999999728496264
+          },
+          {
+            "index": 17,
+            "class_name": "AM-SSB-WC",
+            "probability": 2.7150373679318463e-08
+          },
+          {
+            "index": 11,
+            "class_name": "128APSK",
+            "probability": 8.667423337786806e-17
+          }
+        ],
+        "window_predictions": [
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18
+        ],
+        "mean_logits": [
+          -64.0,
+          -43.0,
+          -34.75,
+          -129.0,
+          -85.0,
+          -79.0,
+          -70.0,
+          -58.0,
+          -54.75,
+          -40.75,
+          -34.5,
+          -33.0,
+          -66.5,
+          -39.75,
+          -46.0,
+          -35.5,
+          -39.5,
+          -13.4375,
+          3.984375,
+          -75.5,
+          -63.5,
+          -70.0,
+          -63.75,
+          -72.5
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.9376625310070281,
+          "cfo_hz": 17.853788027246775,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1823.262829999294
+    },
+    {
+      "frame_id": 758,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773394034428967770,
+      "capture_monotonic_ns": 21547427338460,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21549.00427456,
+      "center_hz": 2403599944,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 17.29843976658986,
+        "training_residual": 0.46690042614514815,
+        "fir_training_residual": 0.02623323560301174,
+        "head_reference_relative_error": 0.02381775576017413,
+        "tail_reference_relative_error": 0.026059938290052664,
+        "tail_residual": 0.4813110881652323,
+        "gain": 102.0770641859049,
+        "dc": 25.667877327431555,
+        "repeat_average": 8.0,
+        "input_sha256": "1bf555cb50fedc0a7e2cc176ac5903fc270255edb03526f1566185e0f560cb94",
+        "pred": 18,
+        "class_name": "AM-SSB-SC",
+        "confidence": 0.999999955930594,
+        "top3": [
+          {
+            "index": 18,
+            "class_name": "AM-SSB-SC",
+            "probability": 0.999999955930594
+          },
+          {
+            "index": 17,
+            "class_name": "AM-SSB-WC",
+            "probability": 4.4069405677005915e-08
+          },
+          {
+            "index": 2,
+            "class_name": "8ASK",
+            "probability": 1.1663292734715566e-16
+          }
+        ],
+        "window_predictions": [
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18
+        ],
+        "mean_logits": [
+          -65.0,
+          -42.75,
+          -33.5,
+          -126.0,
+          -84.0,
+          -78.5,
+          -70.5,
+          -56.75,
+          -55.75,
+          -42.25,
+          -35.75,
+          -34.0,
+          -67.0,
+          -41.0,
+          -45.75,
+          -35.75,
+          -38.5,
+          -13.75,
+          3.1875,
+          -78.0,
+          -64.5,
+          -69.5,
+          -63.0,
+          -71.5
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.8865854863649604,
+          "cfo_hz": 18.023305999884528,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1822.7577899997414
+    },
+    {
+      "frame_id": 822,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773394152921214200,
+      "capture_monotonic_ns": 21665919584200,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21667.57202504,
+      "center_hz": 2403599946,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 18.83934111551531,
+        "training_residual": 0.208305352767896,
+        "fir_training_residual": 0.017070105460525738,
+        "head_reference_relative_error": 0.01672862767857032,
+        "tail_reference_relative_error": 0.018583251601674282,
+        "tail_residual": 0.19765561162284545,
+        "gain": 633.151572051278,
+        "dc": 132.51588734134197,
+        "repeat_average": 8.0,
+        "input_sha256": "a24cb48330ed4dc42efdab1270e4dabcc81f0745da18a5e71ff23e064ad8ad68",
+        "pred": 4,
+        "class_name": "QPSK",
+        "confidence": 0.9999999999998783,
+        "top3": [
+          {
+            "index": 4,
+            "class_name": "QPSK",
+            "probability": 0.9999999999998783
+          },
+          {
+            "index": 5,
+            "class_name": "8PSK",
+            "probability": 1.2015425731770325e-13
+          },
+          {
+            "index": 17,
+            "class_name": "AM-SSB-WC",
+            "probability": 9.173890754178082e-16
+          }
+        ],
+        "window_predictions": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "mean_logits": [
+          -88.0,
+          -43.0,
+          -41.75,
+          -28.25,
+          14.875,
+          -14.875,
+          -20.0,
+          -25.5,
+          -29.25,
+          -68.5,
+          -34.75,
+          -46.5,
+          -24.625,
+          -41.25,
+          -31.25,
+          -39.5,
+          -45.25,
+          -19.75,
+          -31.625,
+          -33.25,
+          -26.875,
+          -74.5,
+          -54.0,
+          -34.25
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.9604103648181143,
+          "cfo_hz": 19.852284145971947,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1902.0055000000866
+    },
+    {
+      "frame_id": 823,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773394154821143520,
+      "capture_monotonic_ns": 21667819513980,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21669.46638006,
+      "center_hz": 2403599946,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 18.822508730920116,
+        "training_residual": 0.2877719609103984,
+        "fir_training_residual": 0.018709141758351797,
+        "head_reference_relative_error": 0.017999580759386166,
+        "tail_reference_relative_error": 0.019146947137044443,
+        "tail_residual": 0.2740840368022857,
+        "gain": 508.3089004432336,
+        "dc": 105.5974543873848,
+        "repeat_average": 8.0,
+        "input_sha256": "a3be100ea9b501c1c4642b6ace88bde6d68cd2e285e268acb887b30c3871f4aa",
+        "pred": 23,
+        "class_name": "OQPSK",
+        "confidence": 0.8636295399722302,
+        "top3": [
+          {
+            "index": 23,
+            "class_name": "OQPSK",
+            "probability": 0.8636295399722302
+          },
+          {
+            "index": 10,
+            "class_name": "64APSK",
+            "probability": 0.1324418794687422
+          },
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 0.0035294565373723713
+          }
+        ],
+        "window_predictions": [
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23
+        ],
+        "mean_logits": [
+          -47.0,
+          -42.5,
+          -47.75,
+          -40.0,
+          -41.0,
+          -47.0,
+          -31.875,
+          -22.0,
+          -39.0,
+          -35.5,
+          -15.5,
+          -28.75,
+          -44.25,
+          -32.5,
+          -22.0,
+          -19.125,
+          -27.75,
+          -32.75,
+          -35.75,
+          -39.0,
+          -44.0,
+          -72.5,
+          -70.0,
+          -13.625
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.9436471147655745,
+          "cfo_hz": 20.378444200270454,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1891.6713500002516
+    },
+    {
+      "frame_id": 824,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773394156721051370,
+      "capture_monotonic_ns": 21669719422230,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21671.36571141,
+      "center_hz": 2403599945,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 19.085801554804345,
+        "training_residual": 0.4444989431862229,
+        "fir_training_residual": 0.017706364243806706,
+        "head_reference_relative_error": 0.016197780177430825,
+        "tail_reference_relative_error": 0.018248271474320683,
+        "tail_residual": 0.4226439662888764,
+        "gain": 590.7501099921856,
+        "dc": 132.11535592987,
+        "repeat_average": 8.0,
+        "input_sha256": "bc458151eded5cae587e460540b9c4f14ec6ece6bcb746cb9916ce7d0b68943f",
+        "pred": 10,
+        "class_name": "64APSK",
+        "confidence": 0.5141443542905862,
+        "top3": [
+          {
+            "index": 10,
+            "class_name": "64APSK",
+            "probability": 0.5141443542905862
+          },
+          {
+            "index": 23,
+            "class_name": "OQPSK",
+            "probability": 0.4829939225923765
+          },
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 0.002534519495496285
+          }
+        ],
+        "window_predictions": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "mean_logits": [
+          -47.5,
+          -43.25,
+          -48.5,
+          -40.0,
+          -40.75,
+          -46.5,
+          -32.5,
+          -22.75,
+          -38.25,
+          -35.25,
+          -14.5625,
+          -28.875,
+          -44.25,
+          -33.25,
+          -22.5,
+          -19.875,
+          -29.0,
+          -32.0,
+          -35.5,
+          -38.25,
+          -43.5,
+          -72.0,
+          -69.5,
+          -14.625
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.8959991176004763,
+          "cfo_hz": 19.085803684454092,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1896.6523400013102
+    },
+    {
+      "frame_id": 825,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773394158621356770,
+      "capture_monotonic_ns": 21671619727410,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21673.26361131,
+      "center_hz": 2403599949,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 20.218508683820808,
+        "training_residual": 0.6546064496530309,
+        "fir_training_residual": 0.0190702463715029,
+        "head_reference_relative_error": 0.01597427549095128,
+        "tail_reference_relative_error": 0.0171873858800866,
+        "tail_residual": 0.6184494751180847,
+        "gain": 591.659173044532,
+        "dc": 151.66419307201463,
+        "repeat_average": 8.0,
+        "input_sha256": "48cea9ebfedecec897736138fcbacf039b066bb5e6192af88a43f0aac7224ed8",
+        "pred": 23,
+        "class_name": "OQPSK",
+        "confidence": 0.8904174884209058,
+        "top3": [
+          {
+            "index": 23,
+            "class_name": "OQPSK",
+            "probability": 0.8904174884209058
+          },
+          {
+            "index": 10,
+            "class_name": "64APSK",
+            "probability": 0.10634520363870624
+          },
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 0.0030167812171301802
+          }
+        ],
+        "window_predictions": [
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23
+        ],
+        "mean_logits": [
+          -46.75,
+          -41.5,
+          -47.0,
+          -39.75,
+          -41.0,
+          -46.5,
+          -30.625,
+          -21.375,
+          -39.0,
+          -37.0,
+          -14.4375,
+          -28.25,
+          -43.0,
+          -30.875,
+          -21.25,
+          -18.0,
+          -27.625,
+          -32.75,
+          -36.0,
+          -40.0,
+          -44.5,
+          -76.0,
+          -71.5,
+          -12.3125
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.8210617916134567,
+          "cfo_hz": 22.766294958551224,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1895.193999996991
+    },
+    {
+      "frame_id": 826,
+      "mode": "BAND_SCAN",
+      "capture_time_ns": 1773394160501206830,
+      "capture_monotonic_ns": 21673499577520,
+      "clock_id": "board-monotonic-v1",
+      "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+      "board_monotonic": 21675.07889253,
+      "center_hz": 2403599947,
+      "actual_lo_hz": 2403599926,
+      "candidate": {
+        "cfo_hz": 17.245944545312692,
+        "training_residual": 1.0987830784284345,
+        "fir_training_residual": 0.22249276704784657,
+        "head_reference_relative_error": 0.14983263798020535,
+        "tail_reference_relative_error": 0.15074566889302723,
+        "tail_residual": 1.002719314133271,
+        "gain": 1211.151662498379,
+        "dc": 369.9376150579797,
+        "repeat_average": 8.0,
+        "input_sha256": "8414f2d08a9337d8de68edf7785c58052e49b0a18ceba92b4167c6026dffddbf",
+        "pred": 8,
+        "class_name": "16APSK",
+        "confidence": 0.9999947845690476,
+        "top3": [
+          {
+            "index": 8,
+            "class_name": "16APSK",
+            "probability": 0.9999947845690476
+          },
+          {
+            "index": 12,
+            "class_name": "16QAM",
+            "probability": 5.214498101612556e-06
+          },
+          {
+            "index": 15,
+            "class_name": "128QAM",
+            "probability": 8.795878104147242e-10
+          }
+        ],
+        "window_predictions": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "mean_logits": [
+          -129.0,
+          -70.0,
+          -65.5,
+          -81.5,
+          -44.75,
+          -29.5,
+          -27.5,
+          -22.25,
+          1.4765625,
+          -59.5,
+          -33.0,
+          -43.5,
+          -10.6875,
+          -33.5,
+          -28.125,
+          -19.375,
+          -25.0,
+          -46.25,
+          -52.5,
+          -84.5,
+          -56.25,
+          -84.5,
+          -43.25,
+          -29.625
+        ],
+        "finite": true
+      },
+      "scan_steps": [
+        {
+          "lo_hz": 2403599926,
+          "public_score": 0.690739871188224,
+          "cfo_hz": 20.54913877027759,
+          "locked_check": true,
+          "accepted": true
+        }
+      ],
+      "elapsed_ms": 1812.7271899975312
+    }
+  ],
+  "rejects": {
+    "{\"error\": \"NO_VALID_PUBLIC_FRAME\", \"finite\": false, \"pred\": -1}": 38,
+    "{\"error\": \"RuntimeError: no usable public preamble\", \"finite\": false, \"pred\": -1}": 2
+  },
+  "rx_tail": ": 2403599947}\n{\"frame_id\": 772, \"pred\": 17, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599943}\n{\"frame_id\": 773, \"pred\": 17, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599943}\n{\"frame_id\": 774, \"pred\": 17, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599945}\n{\"frame_id\": 775, \"pred\": 17, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599944}\n{\"frame_id\": 776, \"pred\": 13, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 777, \"pred\": 13, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599949}\n{\"frame_id\": 778, \"pred\": 13, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599944}\n{\"frame_id\": 779, \"pred\": 2, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599945}\n{\"frame_id\": 780, \"pred\": 2, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 781, \"pred\": 2, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599944}\n{\"frame_id\": 782, \"pred\": 16, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599944}\n{\"frame_id\": 783, \"pred\": 7, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599945}\n{\"frame_id\": 784, \"pred\": 7, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 785, \"pred\": 7, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 786, \"pred\": 14, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599949}\n{\"frame_id\": 787, \"pred\": 14, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 788, \"pred\": 14, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599947}\n{\"frame_id\": 789, \"pred\": 14, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599949}\n{\"frame_id\": 790, \"pred\": 14, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599945}\n{\"frame_id\": 791, \"pred\": 14, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 792, \"pred\": 14, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599944}\n{\"frame_id\": 793, \"pred\": 16, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599944}\n{\"frame_id\": 794, \"pred\": 16, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599948}\n{\"frame_id\": 795, \"pred\": 16, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599947}\n{\"frame_id\": 796, \"pred\": 12, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 797, \"pred\": 12, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599947}\n{\"frame_id\": 798, \"pred\": 12, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 799, \"pred\": -1, \"mode\": \"BAND_SCAN\", \"center_hz\": 2400000000}\n{\"frame_id\": 800, \"pred\": 23, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599948}\n{\"frame_id\": 801, \"pred\": 23, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 802, \"pred\": 23, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599948}\n{\"frame_id\": 803, \"pred\": 11, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 804, \"pred\": 11, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599945}\n{\"frame_id\": 805, \"pred\": 11, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599949}\n{\"frame_id\": 806, \"pred\": 17, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 807, \"pred\": 17, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 808, \"pred\": 17, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599945}\n{\"frame_id\": 809, \"pred\": 17, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 810, \"pred\": 8, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599949}\n{\"frame_id\": 811, \"pred\": 8, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599947}\n{\"frame_id\": 812, \"pred\": 8, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599949}\n{\"frame_id\": 813, \"pred\": 6, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 814, \"pred\": 6, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599948}\n{\"frame_id\": 815, \"pred\": 6, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599949}\n{\"frame_id\": 816, \"pred\": -1, \"mode\": \"BAND_SCAN\", \"center_hz\": 2400000000}\n{\"frame_id\": 817, \"pred\": 6, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599948}\n{\"frame_id\": 818, \"pred\": 6, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599945}\n{\"frame_id\": 819, \"pred\": 6, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599947}\n{\"frame_id\": 820, \"pred\": 4, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 821, \"pred\": 4, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 822, \"pred\": 4, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 823, \"pred\": 23, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 824, \"pred\": 10, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599945}\n{\"frame_id\": 825, \"pred\": 23, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599949}\n{\"frame_id\": 826, \"pred\": 8, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599947}\n{\"frame_id\": 827, \"pred\": 8, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599947}\n{\"frame_id\": 828, \"pred\": 8, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599947}\n{\"frame_id\": 829, \"pred\": 8, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599948}\n{\"frame_id\": 830, \"pred\": 7, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 831, \"pred\": 7, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599945}\n{\"frame_id\": 832, \"pred\": 7, \"mode\": \"BAND_SCAN\", \"center_hz\": 2403599946}\n{\"frame_id\": 833, \"pred\": -1, \"mode\": \"BAND_SCAN\", \"center_hz\": 2400000000}\n{\"frame_id\": 834, \"pred\": -1, \"mode\": \"BAND_SCAN\", \"center_hz\": 2400000000}\n{\"frame_id\": 835, \"pred\": -1, \"mode\": \"BAND_SCAN\", \"center_hz\": 2400000000}\n{\"frame_id\": 836, \"pred\": -1, \"mode\": \"BAND_SCAN\", \"center_hz\": 2400000000}\nSTANDALONE_COMPLETE records=837 valid=797 rejected=40 restore_errors=0\n",
+  "final": {
+    "valid": 797,
+    "rejected": 40,
+    "records": 837,
+    "no_tcp": true,
+    "no_tx_handshake": true,
+    "restore_errors": [],
+    "ui_sent": 1647,
+    "ui_failed": 0
+  }
+}

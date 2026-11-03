@@ -1,0 +1,21 @@
+{
+  "parameters": 36120,
+  "trainable_parameters": 36120,
+  "parameter_size_mb_fp32": 0.137786865234375,
+  "fixed_non_trainable_state_elements": 131687,
+  "fixed_non_trainable_state_mb": 0.5023727416992188,
+  "frontend_fixed_state_elements": 131072,
+  "frontend_fixed_state_mb": 0.5,
+  "neural_macs": 1198592,
+  "neural_flops": 2397184,
+  "frontend_macs_pc_reference": 1048576,
+  "frontend_flops_pc_reference": 2097152,
+  "total_software_macs": 2247168,
+  "total_software_flops": 4494336,
+  "checkpoint_tensor_state_size_mb": 0.6401596069335938,
+  "serialized_state_dict_mb": 0.6559629440307617,
+  "projected_npu_model_size_mb": 0.14015960693359375,
+  "hardware_partition_status": "PLANNED ONLY: fixed DFT/power frontend is intended for FPGA; no hardware performance is claimed.",
+  "approx_macs": 2247168,
+  "approx_flops": 4494336
+}

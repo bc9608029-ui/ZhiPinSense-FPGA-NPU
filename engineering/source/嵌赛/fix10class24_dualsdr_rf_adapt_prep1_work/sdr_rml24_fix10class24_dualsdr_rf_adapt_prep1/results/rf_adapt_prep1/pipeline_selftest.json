@@ -1,0 +1,34 @@
+{
+  "all_passed": true,
+  "checks": {
+    "builder_accepted": 5,
+    "builder_contract_sha_matches": true,
+    "builder_manifest_rows": 5,
+    "builder_rejected": 1,
+    "builder_report_written": true,
+    "builder_split_counts": {
+      "pilot": 1,
+      "test": 1,
+      "train": 2,
+      "val": 1
+    },
+    "config_yaml_matches_spec": true,
+    "contract_consistent": true,
+    "plan_formal_count": 720,
+    "plan_pilot_count": 240,
+    "plan_row_count": 960,
+    "plan_source_indices_unique": true,
+    "split_leakfree": true
+  },
+  "contract_sha256": "89175c2140b593c7a4592fee2308a8adf364bd5a29dab5fad14f2c88b71218d2",
+  "frozen_identities": {
+    "bf16_json_sha256": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+    "bf16_raw_sha256": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+    "fp32_checkpoint_sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+    "label_contract_sha256": "3e1382d1242a206dae3f73535deba30b461e8573889b60004db9d2ce055fa549",
+    "onnx_sha256": "976618a131e75f23bd46e04e71a114cbbea245d6afdd4c7ea7fa008e0ce9ed51",
+    "tf32_json_sha256": "8d00a1c31835611f18064389e5b9ecab755afefa5bacd78a983119757e65fa37",
+    "tf32_raw_sha256": "f8366a109576ea53c9b3ddfd2e7b690590515ff3dfb33c6af7cf6ccafcdb392e"
+  },
+  "label_contract_sha256": "3e1382d1242a206dae3f73535deba30b461e8573889b60004db9d2ce055fa549"
+}

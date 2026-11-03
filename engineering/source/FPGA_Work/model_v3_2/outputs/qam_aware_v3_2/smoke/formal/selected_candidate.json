@@ -1,0 +1,26 @@
+{
+  "selected_variant": "a1_zero_gated_plain",
+  "selection_rule": "validation_only_macro_f1_then_accuracy",
+  "selection_scope": "train/validation only; v3_2_final_blind_test was not accessed",
+  "selection_metric": {
+    "val_macro_f1": 0.7511882400545191,
+    "val_accuracy": 0.76953125
+  },
+  "best_epoch": 1,
+  "training": {
+    "distillation": {
+      "enabled": false
+    },
+    "class_weights": {
+      "BPSK": 1.0,
+      "QPSK": 1.0,
+      "8PSK": 1.0,
+      "16QAM": 1.0,
+      "64QAM": 1.0,
+      "2FSK": 1.0,
+      "CPFSK": 1.0,
+      "OFDM": 1.0
+    }
+  },
+  "frozen_at_ablation_summary_sha256": "604871ccd88446769d5e14ec36abb469df449ef1c7973ce0dff6cf481d2efd14"
+}

@@ -1,0 +1,92 @@
+{
+  "seed": 2026,
+  "initialization": {
+    "checkpoint": "F:\\嵌赛\\model_ad_amr_v1_2\\.pytest_tmp_data_v3_core\\radioml20180\\public_training\\checkpoints\\best.pt",
+    "checkpoint_sha256": "47fa96b62673f6e8b8095a56e34f94c5df8321e5f1dbf82cd72a93b52963d4d2",
+    "source_epoch": 1,
+    "copied_tensor_count": 165,
+    "excluded_tensors": [
+      "classifier.3.bias",
+      "classifier.3.weight"
+    ]
+  },
+  "architecture_changed_from_v1_1": false,
+  "best_epoch": 1,
+  "best_selection_score": 0.05282608695652174,
+  "best_validation_macro_f1": 0.017391304347826087,
+  "best_validation_accuracy": 0.09523809523809523,
+  "best_validation_rated_0_20_accuracy": 0.1,
+  "best_validation_snr_0_accuracy": 0.1,
+  "profile": {
+    "parameters": 278778,
+    "trainable_parameters": 278778,
+    "neural_macs": 46544128,
+    "neural_flops": 93088256,
+    "fp32_parameter_size_mb": 1.0634536743164062,
+    "state_dict_size_mb": 1.0740966796875,
+    "serialized_state_dict_mb": 1.124436378479004,
+    "input_contract": "iq[N,2,1024] -> logits[N,10]",
+    "operator_policy": "Conv/BatchNormalization/Relu/Add/ReduceMean/Gemm only"
+  },
+  "teacher_sha256": {
+    "v2": "f9e4b5e5513f60907aa69416df3374353848272e14744cb193a46d06b02d71a6",
+    "v1": [
+      "01132536803052e2b28618c0426485ee7274ba1e8f69b9e24e571df496938f83",
+      "5f629d563e9c0e3f169e9419f528e6aee819b9b5473e673b5dc95f4912f99dba"
+    ]
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "learning_rate": 0.001,
+      "train_loss": 2.4570480937049504,
+      "train_accuracy": 0.0761904761904762,
+      "train_macro_f1": 0.038042802040562394,
+      "val_loss": 2.4256242343357632,
+      "val_accuracy": 0.09523809523809523,
+      "val_macro_f1": 0.017391304347826087,
+      "val_rated_0_20_accuracy": 0.1,
+      "val_high_10_20_accuracy": 0.1,
+      "val_snr_0_accuracy": 0.1,
+      "val_min_per_class_accuracy": 0.0,
+      "val_selection_score": 0.05282608695652174,
+      "val_per_class_accuracy": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9523809523809523
+      ],
+      "val_per_snr_accuracy": {
+        "-20": 0.0,
+        "-18": 0.1,
+        "-16": 0.1,
+        "-14": 0.1,
+        "-12": 0.1,
+        "-10": 0.1,
+        "-8": 0.1,
+        "-6": 0.1,
+        "-4": 0.1,
+        "-2": 0.1,
+        "0": 0.1,
+        "2": 0.1,
+        "4": 0.1,
+        "6": 0.1,
+        "8": 0.1,
+        "10": 0.1,
+        "12": 0.1,
+        "14": 0.1,
+        "16": 0.1,
+        "18": 0.1,
+        "20": 0.1
+      },
+      "epoch_time_sec": 1.5806597000046168
+    }
+  ],
+  "selection_scope": "target synthetic train/validation only; public test and final blind not accessed"
+}

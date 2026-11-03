@@ -1,0 +1,29 @@
+{
+  "kind": "three frequency GUI sweep functionality not formal accuracy",
+  "expected_class_pc_only": 3,
+  "cases": [
+    {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40,
+      "center_hz": 2398000000
+    },
+    {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40,
+      "center_hz": 2400000000
+    },
+    {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40,
+      "center_hz": 2403600000
+    }
+  ],
+  "hold_sec": 40,
+  "receiver_mode": "CONTINUOUS_SCAN",
+  "receiver_duration_sec": 240,
+  "denominator": 3,
+  "selection": "first eligible coverage opportunity abs(discovery LO - TX frequency)<=1152000Hz, irrespective of detection; final center within10kHz; missing/rejected wrong"
+}

@@ -1,0 +1,10 @@
+{
+  "iq_sha256": "1b5059fe34bb38c6ca9070250e2cccd51655e28048fd3808895c861c1b5302e0",
+  "requested": "fpga",
+  "backend_used": "software",
+  "ok": false,
+  "fallback_reason": "driver_exit_1",
+  "driver_rc": 1,
+  "elapsed_seconds": 0.05033578000001171,
+  "requires_board_reset": false
+}

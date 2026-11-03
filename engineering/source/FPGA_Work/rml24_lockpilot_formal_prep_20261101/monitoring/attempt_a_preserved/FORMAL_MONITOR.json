@@ -1,0 +1,83 @@
+{
+  "controller_alive": false,
+  "formal_status": {
+    "stage": "FORMAL_RF_RUNNING",
+    "round": "wide13"
+  },
+  "completed_rounds": 3,
+  "results": [
+    {
+      "name": "fixed240",
+      "correct": 239,
+      "denominator": 240,
+      "missing": 0,
+      "promotion_gate_pass": true,
+      "failures": [
+        {
+          "index": 200,
+          "expected": 22,
+          "pred": 16,
+          "chosen_frame": 2855,
+          "correct": false,
+          "missing": false
+        }
+      ],
+      "score_sha256": "011f527b3c6d4a46a3972891847c60c275c32a2a5506f98181ddc92a4dfb9040"
+    },
+    {
+      "name": "search240",
+      "correct": 237,
+      "denominator": 240,
+      "missing": 0,
+      "promotion_gate_pass": true,
+      "failures": [
+        {
+          "index": 85,
+          "expected": 14,
+          "pred": 16,
+          "chosen_frame": 305,
+          "correct": false,
+          "missing": false
+        },
+        {
+          "index": 104,
+          "expected": 20,
+          "pred": 16,
+          "chosen_frame": 369,
+          "correct": false,
+          "missing": false
+        },
+        {
+          "index": 115,
+          "expected": 13,
+          "pred": 15,
+          "chosen_frame": 407,
+          "correct": false,
+          "missing": false
+        }
+      ],
+      "score_sha256": "40f55148621b41a6f8b05085163a094aac5f2874f2a10185e4d352395a59e6c4"
+    },
+    {
+      "name": "sweep24",
+      "correct": 23,
+      "denominator": 24,
+      "missing": 0,
+      "promotion_gate_pass": false,
+      "failures": [
+        {
+          "index": 16,
+          "expected": 19,
+          "pred": 20,
+          "chosen_frame": 195,
+          "correct": false,
+          "missing": false
+        }
+      ],
+      "score_sha256": "c7deb19f9070e67df002ec96dcb59e83b6a1890469bf820499cc70777edb1a5f"
+    }
+  ],
+  "all_four_pass": false,
+  "deployed": false,
+  "action_required": true
+}

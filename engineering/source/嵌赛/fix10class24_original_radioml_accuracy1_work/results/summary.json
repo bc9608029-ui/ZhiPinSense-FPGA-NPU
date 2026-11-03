@@ -1,0 +1,60 @@
+{
+  "accuracy_label": "STRATIFIED-SAMPLE TEST ACCURACY (NOT entire RadioML accuracy)",
+  "backend": "HOST_BF16 (+ HOST_FP32_REFERENCE)",
+  "bf16": {
+    "accuracy": 0.872917,
+    "correct": 419,
+    "result_layer": "HOST_BF16",
+    "total": 480
+  },
+  "bf16_fp32_disagreements": 11,
+  "dataset": "RadioML2018.01A ORIGINAL independent TEST split",
+  "focus_classes_bf16": {
+    "128QAM": "15/20",
+    "64QAM": "15/20",
+    "GMSK": "20/20",
+    "OQPSK": "20/20"
+  },
+  "fp32": {
+    "accuracy": 0.883333,
+    "correct": 424,
+    "result_layer": "HOST_FP32_REFERENCE",
+    "total": 480
+  },
+  "per_class_bf16": {
+    "128APSK": "15/20",
+    "128QAM": "15/20",
+    "16APSK": "19/20",
+    "16PSK": "16/20",
+    "16QAM": "16/20",
+    "256QAM": "19/20",
+    "32APSK": "17/20",
+    "32PSK": "17/20",
+    "32QAM": "16/20",
+    "4ASK": "17/20",
+    "64APSK": "15/20",
+    "64QAM": "15/20",
+    "8ASK": "18/20",
+    "8PSK": "18/20",
+    "AM-DSB-SC": "16/20",
+    "AM-DSB-WC": "19/20",
+    "AM-SSB-SC": "16/20",
+    "AM-SSB-WC": "16/20",
+    "BPSK": "20/20",
+    "FM": "20/20",
+    "GMSK": "20/20",
+    "OOK": "20/20",
+    "OQPSK": "20/20",
+    "QPSK": "19/20"
+  },
+  "red_lines": [
+    "original RadioML HDF5 (not clean24/generated data)",
+    "test indices disjoint from train/validation (verified)",
+    "480-frame result is stratified-sample test accuracy only",
+    "backend HOST_BF16/HOST_FP32_REFERENCE, NOT board NPU",
+    "no RF_PASS / PROJECT_COMPLETE"
+  ],
+  "selection": "stratified {0,10,20,30} dB x 24 classes x 5 = 480 frames, seed 20261019",
+  "status": "M29-RML24-FIX10CLASS24-ORIGINAL-RADIOML-ACCURACY1-COMPLETE",
+  "task_id": "fix10class24-original-radioml-accuracy1"
+}

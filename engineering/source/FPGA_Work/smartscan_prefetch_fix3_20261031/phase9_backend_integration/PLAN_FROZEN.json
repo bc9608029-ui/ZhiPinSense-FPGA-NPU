@@ -1,0 +1,13 @@
+{
+  "expected": 24,
+  "input_manifest": "/root/rml24_fix3_1793428931/SUMMARY.json",
+  "window_start": 32768,
+  "length": 1024,
+  "mode": "fpga",
+  "scale": "16384/peak",
+  "relative_l1_max": 0.02,
+  "peak_power_relative_error_max": 0.02,
+  "peak_reference_ratio_min": 0.99,
+  "fallback": "only missing executable; busy/hardware failure fatal",
+  "RF": false
+}

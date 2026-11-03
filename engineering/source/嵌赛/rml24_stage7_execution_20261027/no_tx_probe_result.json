@@ -1,0 +1,32 @@
+{
+  "kind": "REAL_RX_WITH_PC_TX_CLOSED",
+  "npu_called": false,
+  "records": [
+    {
+      "seq": 0,
+      "recovery_rejected": true,
+      "error": "RuntimeError: no usable public preamble",
+      "canonical_state": "RECOVERY_FAILED",
+      "prediction": null,
+      "no_classification_sent": true
+    },
+    {
+      "seq": 1,
+      "recovery_rejected": true,
+      "error": "RuntimeError: no usable public preamble",
+      "canonical_state": "RECOVERY_FAILED",
+      "prediction": null,
+      "no_classification_sent": true
+    },
+    {
+      "seq": 2,
+      "recovery_rejected": true,
+      "error": "RuntimeError: no usable public preamble",
+      "canonical_state": "RECOVERY_FAILED",
+      "prediction": null,
+      "no_classification_sent": true
+    }
+  ],
+  "restore_errors": [],
+  "all_rejected_without_class": true
+}

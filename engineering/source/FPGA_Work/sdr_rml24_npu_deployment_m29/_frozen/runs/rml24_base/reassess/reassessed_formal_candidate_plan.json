@@ -1,0 +1,37 @@
+{
+  "candidates": [
+    {
+      "trial": "t002_losscross_entropy_optadamw",
+      "candidate_signature": "b87720465f0a0fe42c863da96bc350eb50185390d30c60e197a3067bee56e0cf",
+      "v2": {
+        "loss": "cross_entropy",
+        "optimizer": "adamw",
+        "class_sampling": "balanced"
+      },
+      "training": {
+        "epochs": 20,
+        "batch_size": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 1e-05,
+        "scheduler_factor": 0.5,
+        "scheduler_patience": 5,
+        "minimum_lr": 1e-06,
+        "minimum_epochs_before_stopping": 20,
+        "early_stopping_patience": 12,
+        "min_delta": 0.0001,
+        "gradient_clip_norm": 2.0,
+        "reconstruction_weight": 0.0,
+        "amp": true,
+        "amp_dtype": "bfloat16",
+        "snr_weighting": {
+          "very_low_snr_weight": 0.35,
+          "rated_snr_weight": 1.25,
+          "zero_db_extra_weight": 1.2
+        }
+      }
+    }
+  ],
+  "allow_second_candidate": false,
+  "reassess_source": "reassessed_pilot_ranking.json",
+  "sort_rule": "descending lexicographic key = (round(rated_0_20_accuracy / 1e-4), min_per_class_accuracy, snr_0_accuracy, macro_f1, accuracy); the primary metric is quantised to 1e-4 so near-tied (saturated) rated_0_20 values fall through to min_per_class_accuracy / snr_0_accuracy / macro_f1"
+}

@@ -1,0 +1,3 @@
+#include "direct_framebuffer_backend.hpp"
+#include <cstdio>
+int main(){dfb::Config c;dfb::RealIo io;dfb::DirectFramebufferBackend fb(c,io);if(!fb.init())return 2;const unsigned w=1280,h=720;auto p=fb.staging();for(unsigned y=0;y<h;y++)for(unsigned x=0;x<w;x++){unsigned short v=y<h/2?(x<w/2?0xf800:0x07e0):(x<w/2?0x001f:0xffff);if(x<8||y<8||x>=w-8||y>=h-8)v=0xffe0;p[y*w+x]=v;}if(!fb.set_display_enable(false))return 3;if(!fb.submit_frame(0,p,w*h)||!fb.submit_frame(1,p,w*h))return 4;if(!fb.write_reg(c.rd_addr_offset,fb.phys_addr()>>3)||!fb.write_reg(c.wr_addr_offset,0)||!fb.set_display_enable(true))return 5;printf("STATIC_PATTERN_READY 1280x720 top_left=red top_right=green bottom_left=blue bottom_right=white border=yellow both_buffers_identical=YES\n");}

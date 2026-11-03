@@ -1,0 +1,540 @@
+
+      V3.2
+
+         
+                    (86-21)6565 5050
+                    (86-21)6565 9115
+                           200433
+
+ 127  4 
+
+  I  
+              
+
+                                                     
+                                                    
+2019-01-23  1.0 PROCISE v2019.1
+2020-09-17                                           
+2021-01-04             1. 
+2023-06-14  1.1 Platform Tool                        
+
+                       2.  BBRAM                    
+                                                    
+                       PROCISE V21.1                
+            2.0 1.program  tcl consol
+
+                       2. program 
+
+                       PROCISE V23.1
+            3.0 1. spi/bpi flash 
+
+                       2. spi/bpi flash 
+
+2025-02-24  3.1 PROCISE V25.1
+2025-10-28             1.
+
+                       PROCISE V25.1
+            3.2
+
+                       1. Procise/IAR Flashloader 
+
+              II                                    
+                                                 
+
+  ............................................................................................................................................................1
+
+  ............................................................................................................................................1
+
+     ....................................................................................................................................2
+     ................................................................................................................................3
+
+      1  .............................................................................................................................................3
+      2  .............................................................................................................................................4
+
+          (1)  eFUSE  ................................................................................................4
+     MICROBLAZE ................................................................................................6
+    MCS  ..........................................................................................................................................9
+
+      1 MCS  ...........................................................................................................................................9
+    SPI FLASH  .......................................................................................................................................10
+
+      1 SPI Flash ..................................................................................................................................10
+      2 SPI Flash ..........................................................................................................................13
+      3 SPI Flash ..........................................................................................................................13
+    BPI FLASH .......................................................................................................................................15
+      1 BPI Flash  .................................................................................................................................15
+      2 BPI Flash  .........................................................................................................................17
+      3 BPI Flash  .........................................................................................................................18
+    FLASHLOADERBOOTGEN........................................................................................................................20
+      1 Procise FlashLoader ................................................................................................................................20
+
+          (1) ........................................................................................................................................21
+      2 IAR FlashLoader .....................................................................................................................................26
+
+          (1) ........................................................................................................................................28
+      3  ...........................................................................................................................................32
+
+  III  
+
+
+ Procise  MCS 
+
+
+
+
+ bit  FPGA 
+mcs  Flash/Rom 
+ GUI  Program Device
+ Tools -> Configure Device...Procise 
+
+  1  
+   
+
+1 PC  Connect to board
+
+2 FPGA  JTAG chain
+
+3 Assign New Configuration File...
+
+                                    2  
+4 BIT/NKY file  bit  bit
+ OK FPGA 
+
+5 Program 
+
+
+
+      1
+
+     Platform Tools .pdf encrypt_bit 
+
+
+            3  
+      2
+         (1)  eFUSE 
+
+ Procise  Configure Device 
+
+ FPGA  Access eFUSE Registers
+
+ Read eFUSE Registersprocise  eFUSE  console 
+
+  4                            
+ Program eFUSE Registers...
+
+ Encryption key file (.nky) only
+
+                                  5  
+"Key file..."{}\rundir {output}_efuse.nky 
+ OK  efuse efuse 
+
+eFUSE  Assign New Configuration File...
+{output}.bit Program 
+
+NOTEeFUSE  Key0startCBC  DeviceKey 
+
+
+    microblaze 
+
+1 PC  Connect to board
+
+  6  
+2 FPGA  JTAG chain
+
+3 Assign New Configuration File...
+
+                                    7  
+4 BIT/NKY file  bit  bit
+ Use customized files bmm  elf 
+
+5 OK FPGA 
+
+  8  
+6 Program 
+
+   MCS 
+      1MCS 
+
+1 Tools  Generate Memory Configuration File:
+
+2Format Custom Memory Size  FLASH 
+Filename Interface  SPIx1BPIx8
+BPIx16SMAPx8SMAPx16SMAPx32SERIALx1; Load bitstream files 
+ Load data files  OK 
+
+
+  9                                           
+   SPI Flash 
+
+      1SPI Flash 
+
+1 PC  Tools->Configure Device...
+ Connect to board  Main 
+Connect to board  FPGA 
+
+  10  
+2 SPI Flash  FPGA  Add SPI/BPI Flash...
+FPGA  SPI/BPI  Add SPI/BPI Flash... Add Configuration
+Memory Device  Flash (Manufacturer)Flash (Type)
+(Density)(Width)
+
+  11  
+3 Flash  OK Flash  Program Flash
+
+  12  
+      2SPI Flash 
+
+ Program Configuration Memory Device Memory Device 
+ Flash "Configuration File" Mcs  Bin "State of non-config
+mem I/O pins" pulluppullnone  pulldown "Address Range" Configuration File
+Only  Entire Configuration Memory Device  Flash 
+"Erase""Blank Check""Program""Verify"
+"Write Protect" SPI Flash 
+ Flash Debug  Flash
+ OK 
+
+      3SPI Flash 
+
+ Flash  Readback Flash
+
+  13                    
+ Readback Configuration Memory Device "All" Flash
+"All" Flash "Filename"
+"File Format" Mcs  Bin  "Force Overwrite"
+
+
+  14  
+   BPI Flash 
+
+      1BPI Flash 
+
+1 PC  Tools->Configure Device...
+ Connect to board  Main 
+Connect to board  FPGA 
+
+2 BPI Flash  FPGA  Add SPI/BPI Flash...
+FPGA  SPI/BPI  Add SPI/BPI Flash... Add Configuration
+Memory Device  Flash (Manufacturer)flash (Type)
+(Density)(Width)
+
+  15  
+3 Flash  OK Flash  Program Flash
+
+  16  
+      2BPI Flash 
+
+ Program Configuration Memory Device Memory Device 
+ Flash "Configuration File" Mcs  Bin "State of non-config
+mem I/O pins" pulluppullnone  pulldown "Address Range" Configuration File
+Only  Entire Configuration Memory Device  Flash 
+"Erase""Blank Check""Program""Verify"
+"RS Pins" Flash 
+ NoneDebug  Flash  OK 
+
+  17  
+      3BPI Flash 
+
+ Flash  Readback Flash
+
+ Readback Configuration Memory Device "All" Flash
+"All" Flash "Filename"
+"File Format" Mcs  Bin  "Force Overwrite"
+
+
+  18                    
+  19  
+   FlashLoaderBootgen
+
+      1Procise FlashLoader
+
+Procise FlashLoader  FMQLFMBH  PSOC Flash
+PSOC->FlashloaderBootgen 
+
+  20  
+         (1) 
+
+ Hardware Platform Default
+ Connection Local PSOC flash
+ Device program  device Auto Detect  program  device
+
+  21  
+ device Select...
+
+ Auto Detect 
+
+cable  device cable  device
+
+ Device Type device 
+
+  device fmqlfmbh
+
+ Image File.bin
+
+ Offset flash  image file
+ Flash Type flash 
+
+       flash qspi0_singleqspi1_singlenandjfm29gl256nor0nor1
+ FSBL File bootloader  flash 
+
+      bootloader 
+ Cable Speed flash  Jtag cable  3000khz flash 
+
+
+
+ Erase Timeout flash  500s
+
+
+
+ Blank check after erase() flash 
+
+      1 
+ Hardware reset, halt after delay JLINK reset  200msJLINK
+
+     reset 
+ Verify after flash() flash 
+
+                   22        
+ Scan jtag, halt after max delay() Scan Jtag  jtag 
+     
+
+ Advance
+ Use default FSBL File() bootloader "FSBL
+
+     File"
+ All info() Image File 
+
+     
+ Hardware reset() JLINK reset Hardware reset,
+
+     halt after delay 
+ Read back bin file() flash flash flash
+
+      Image File  Offset 
+      Readback 
+ Write register before program() flash  Access Qspi Register 
+     
+ Readback() flash
+
+  23  
+
+ Device Type device  type
+
+      fmqlfmbh
+ Flash Type flash  type
+
+      qspi0_singleqspi1_singlenandjfm29gl256nor0nor1
+ File Location
+ File Name
+ All() flash Start Address  Size(in bytes)
+
+     
+ Start Address flash 
+ Size(in bytes) flash 
+ Cable Speed cable  3000khz
+ Hardware reset() device  JLINK reset
+ Hardware reset, halt after delay JLINK reset  200msJLINK
+
+     reset  Hardware reset 
+     
+
+ Erase() flash
+ QSPI Operation()Qspi Flash 
+
+       QSPI Flash 
+
+QSPI FLASH   24  
+
+ 
+ Manufcturer flash 
+      FUDAN MICROGigaDeviceISSIMACRONIXMicronSPANSION
+
+ Intrduction flash 
+      WRENWRDINBPRDSR1RDSR2RDSR3UserDefine WriteReg Cmd
+          UserDefine ReadReg Cmd
+
+       CMD Value nBytes Send
+CMD  Intrduction  UserDefine WriteReg Cmd  UserDefine ReadReg Cmd CMD Value
+nBytes  flash 
+
+ CMDflash  2
+ Valueflash  Intrduction  ReadReg 
+
+      2
+ nBytes
+
+ Reset PS JLINK reset 
+ Scan Jtag Jtag  JLINK reset 
+
+      JLINK reset  100ms  jtag  Scan
+     jtag, halt after max delay 
+
+( PSOC )
+
+ JTAG scan chain with multiple target() device 
+      device 
+
+ TAP number device 
+       JTAG scan chain with multiple target 
+
+ Scan chain contains other device() device 
+      device 
+       JTAG scan chain with multiple target 
+
+ Preceding device  device  IR 
+
+  25      
+       Scan chain contains other device 
+
+      2IAR FlashLoader
+
+ PSOC->FlashloaderBootgen 
+
+  26                                      
+IAR Flashloader 
+
+PSOC     PSOC        Flash 
+
+7  PSOC  FMQL100T    qspi0_64kb_sector
+7  PSOC  JFMQL30TAI  qspi0_256kb_sector
+7  PSOC  FMQL45      qspi0_wrsr
+7  PSOC  FMQL20      qspi1_64kb_sector
+
+                27                       
+7  PSOC  FMQL15     qspi1_256kb_sector
+7  PSOC  FMQL10     qspi1_wrsr
+                    nand_2kb_page
+9  PSOC  JFMZQ28DR  nand_4kb_page
+9  PSOC  JFMZQ2EG   emmc
+                    nor0
+                    nor1
+
+                    qspi0_64kb_sector(boot mode)
+                    qspi0_256kb_sector(boot mode)
+                    qspi1_64kb_sector(mio[7-12])
+                    qspi1_256kb_sector(mio[7-12])
+                    nand_2kb_page(boot mode)
+                    nand_4kb_page(boot mode)
+                    nand_2kb_page(mio[13-22,26-28,32])
+                    nand_4kb_page(mio[13-22,26-28,32])
+                    nand_8kb_page
+                    emmc0(boot mode)
+                    emmc0(mio[38-50])
+                    emmc0(mio[64-76])
+                    emmc1(mio[39-51])
+
+         (1) 
+
+ Auto config file()
+     
+      Export export 
+
+         28         
+          
+      Import import 
+
+          
+ Image File() boot.bin 
+ Out File().out 
+
+       Use default OUT file according to the selected flash type
+          .out 
+
+      .out 
+ Target Device() PSOC 
+
+     Flash 
+
+ Flash () PSOC Flash 
+       PSOC  Flash 
+
+ Chip Erase before Program() Flash  Flash
+       79  PSOC
+       Flash 
+
+ Chip Scrub before Program(Nand only)()  Flash 
+     Flash
+       9  PSOC
+       Nand Flash 
+
+ FAT32(EMMC only)() emmc  emmc fat32
+      bin  emmc  fat32 
+     
+       9  PSOC
+       EMMC Flash 
+      offset File Name 
+
+  29  
+ Write register before program()  Flash 
+     
+
+ File Name() FAT32(EMMC only) emmc fat32 
+     
+
+ Offset() boot.bin  Flash 
+       79  PSOC
+       Flash 
+
+Jtag 
+ Cable() JTAG 
+
+       ijet ijet  79 
+       jlink jlink  9 
+ Jtag Mode()
+       cascade  independent 
+       PSOC 
+ Jtag Speed() 8000KHZ
+ Reset() Flash  Hardware 
+       HardwareSoftware  no_reset 
+ Delay() 20ms
+
+Flash 
+ Readback Config() Flash 
+
+       7  PSOC FMQL100T 
+       Flash 
+
+  30  
+
+
+ addr flash 16 
+ bytes flash 16 
+ output file flash  flash 
+
+ Erase()
+       7  PSOC FMQL100T 
+       Flash 
+
+ QSPI Operation()Qspi Flash 
+       7  PSOC FMQL100T 
+       QSPI Flash 
+
+  31  
+      QSPI FLASH 
+
+ Manufcturer flash 
+      FUDAN MICROGigaDeviceISSIMACRONIXMicronSPANSION
+
+ Intrduction flash 
+      WRENWRDINBPRDSR1RDSR2RDSR3UserDefine WriteReg Cmd
+          UserDefine ReadReg Cmd
+
+ CMD Value nBytes Send CMD
+ Intrduction  UserDefine WriteReg Cmd  UserDefine ReadReg Cmd CMD Value nBytes
+ flash 
+
+ CMDflash  2
+ Valueflash  Intrduction  ReadReg 
+
+      2
+ nBytes
+
+      3
+
+QSPI flash Procise Flashloader 
+ Procise 
+
+ Flashloader 
+Program  Cancel  Flashloader 
+
+  32  
+

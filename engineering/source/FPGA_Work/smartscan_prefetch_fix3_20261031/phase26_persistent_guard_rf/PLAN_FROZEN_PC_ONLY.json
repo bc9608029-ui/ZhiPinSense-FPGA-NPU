@@ -1,0 +1,13 @@
+{
+  "cases": [
+    {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40
+    }
+  ],
+  "denominator": 1,
+  "purpose": "Normal guarded worker runs actual FPGA PSD and NPU; not formal accuracy",
+  "center_hz": 2400000000,
+  "selection": "first frame start+1.5s to stop-.3s"
+}

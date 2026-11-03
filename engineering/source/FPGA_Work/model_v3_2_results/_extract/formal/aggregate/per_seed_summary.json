@@ -1,0 +1,68 @@
+[
+  {
+    "seed": "2026",
+    "checkpoint": "/root/autodl-tmp/v32_run_20261002_093450/qam_aware_v3_2_autodl/outputs/qam_aware_v3_2/formal/seeds/seed2026/checkpoints/best.pt",
+    "accuracy": 0.7044047619047619,
+    "macro_f1": 0.7031329078713382,
+    "qam_mean_accuracy": 0.5076190476190476,
+    "per_class_accuracy": {
+      "BPSK": 0.7866666666666666,
+      "QPSK": 0.6085714285714285,
+      "8PSK": 0.6133333333333333,
+      "16QAM": 0.5371428571428571,
+      "64QAM": 0.4780952380952381,
+      "2FSK": 0.8790476190476191,
+      "CPFSK": 0.8695238095238095,
+      "OFDM": 0.8628571428571429
+    },
+    "snr_accuracy": {
+      "0": 0.855,
+      "10": 0.9405,
+      "20": 0.9495
+    }
+  },
+  {
+    "seed": "2027",
+    "checkpoint": "/root/autodl-tmp/v32_run_20261002_093450/qam_aware_v3_2_autodl/outputs/qam_aware_v3_2/formal/seeds/seed2027/checkpoints/best.pt",
+    "accuracy": 0.7060714285714286,
+    "macro_f1": 0.7067083311669737,
+    "qam_mean_accuracy": 0.5090476190476191,
+    "per_class_accuracy": {
+      "BPSK": 0.7857142857142857,
+      "QPSK": 0.6247619047619047,
+      "8PSK": 0.6304761904761905,
+      "16QAM": 0.52,
+      "64QAM": 0.4980952380952381,
+      "2FSK": 0.9333333333333333,
+      "CPFSK": 0.8314285714285714,
+      "OFDM": 0.8247619047619048
+    },
+    "snr_accuracy": {
+      "0": 0.851,
+      "10": 0.9375,
+      "20": 0.9395
+    }
+  },
+  {
+    "seed": "2028",
+    "checkpoint": "/root/autodl-tmp/v32_run_20261002_093450/qam_aware_v3_2_autodl/outputs/qam_aware_v3_2/formal/seeds/seed2028/checkpoints/best.pt",
+    "accuracy": 0.6954761904761905,
+    "macro_f1": 0.6928306498760387,
+    "qam_mean_accuracy": 0.47000000000000003,
+    "per_class_accuracy": {
+      "BPSK": 0.7952380952380952,
+      "QPSK": 0.6485714285714286,
+      "8PSK": 0.6333333333333333,
+      "16QAM": 0.4247619047619048,
+      "64QAM": 0.5152380952380953,
+      "2FSK": 0.9552380952380952,
+      "CPFSK": 0.8,
+      "OFDM": 0.7914285714285715
+    },
+    "snr_accuracy": {
+      "0": 0.85,
+      "10": 0.9295,
+      "20": 0.931
+    }
+  }
+]

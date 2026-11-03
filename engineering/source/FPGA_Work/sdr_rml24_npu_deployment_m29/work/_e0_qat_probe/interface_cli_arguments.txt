@@ -1,0 +1,302 @@
+
+ 命令行参数 — Icraft 文档 
+ Skip to main content 
+ Back to top
+ Ctrl + K 
+ Icraft 文档 
+ Icraft 文档 
+ 快速开始 
+ 安装 
+ 编译 
+ 运行 
+ 用户接口 
+ 命令行参数 
+ API Reference 
+ 算子支持 
+ 框架支持列表 
+ 所有支持的算子 
+ Abs 
+ ACos 
+ ACosh 
+ Add 
+ AlignAxis 
+ Argmax 
+ Argmin 
+ ASin 
+ ASinh 
+ ATan 
+ ATanh 
+ AvgPool1d 
+ AvgPool2d 
+ AvgPool3d 
+ BatchNorm1d 
+ BatchNorm2d 
+ BatchNorm3d 
+ Cast 
+ ChannelShuffle 
+ ClampScalar 
+ Concat 
+ Conv1d 
+ Conv2d 
+ Conv3d 
+ ConvTranspose1d 
+ ConvTranspose2d 
+ ConvTranspose3d 
+ Copy 
+ Cos 
+ Cosh 
+ DivideScalar 
+ Einsum 
+ Equal 
+ Expand 
+ Greater 
+ GreaterEqual 
+ HardOp 
+ Hardshrink 
+ Hardsigmoid 
+ Hardswish 
+ Hardtanh 
+ InstanceNorm1d 
+ InstanceNorm2d 
+ InstanceNorm3d 
+ Less 
+ LessEqual 
+ Log 
+ LogSigmoid 
+ LogSoftmax 
+ Matmul 
+ Max 
+ Maximum 
+ MaxPool1d 
+ MaxPool2d 
+ MaxPool3d 
+ Mean 
+ Min 
+ Minimum 
+ Mish 
+ Multiply 
+ MultiYolo 
+ Neg 
+ Normalize 
+ NotEqual 
+ Pad 
+ PixelShuffle 
+ Pow 
+ PruneAxis 
+ Region 
+ Reorg 
+ Reshape 
+ Resize 
+ Roll 
+ Route 
+ Sigmoid 
+ Sin 
+ Sinh 
+ Slice 
+ Softmax 
+ Softplus 
+ Softshrink 
+ Softsign 
+ Split 
+ Sqrt 
+ Squeeze 
+ SSDOutput 
+ Stack 
+ Sum 
+ SwapOrder 
+ Swish 
+ Tan 
+ Tanh 
+ Tanhshrink 
+ Tile 
+ Transpose 
+ Unbind 
+ Unfold 
+ Unknown 
+ Unstack 
+ Unsupport 
+ Upsample 
+ Where 
+ Yolo 
+ 组件指南 
+ Icraft 组件总览 
+ 扩展机制 
+ 自定义算子 
+ 布衣架构排布说明 
+ 程序示例 
+ Icraft Demo 
+ 故障排除 
+ 故障排查 
+ 版本缺陷 
+ 版本缺陷 
+ 更新日志 
+ 更新日志 
+ 版本 
+ 复旦微AI Icraft工具更新（v3.33.0）发布通知——30TAI 
+ 复旦微AI Icraft工具更新（v3.33.0_FMQL100TAI）发布通知 
+ .rst 
+ .pdf 
+ 命令行参数 
+ 目录 
+ 一 调用方法 
+ 二 参数配置 
+ 三 参数列表 
+ 命令行参数 # 
+ 一 调用方法 # 
+ Icraft提供了CLI命令 icraft 来支持用户完成 解析 、 优化 、 量化 、 适配 、 指令生成 以及 运行 等过程。其调用方法如下： 
+Icraft CLI 命令格式 
+ icraft <command> [<config file>] [–<key> <value>]… 
+ 其中 command 表示要执行的功能命令，当前支持的命令如下： 
+ 功能 
+ 命令 
+ parse 
+ 解析 
+ optimize 
+ 优化 
+ quantize 
+ 量化 
+ adapt 
+ 适配 
+ generate 
+ 指令生成 
+ compile 
+ 编译，根据配置文件依次执行解析、优化、量化、适配和指令生成四个过程 
+ run 
+ 在指定的后端上运行编译产生的中间层网络 
+ show 
+ 打开可视化、模型分析工具icraft-show 
+ 例如，指令生成的命令行调用方法为 icraft generate [<config file>] [--<key> <value>]... 
+ 二 参数配置 # 
+ CLI命令 icraft 的参数可以在配置文件中指定，也可以通过命令行参数 --<key> <value> 的方式指定。 
+ CLI命令 icraft 的配置文件为 toml 格式。以 PPyoloe 的编译配置为例，其配置文件内容如下。 
+ 100TAI 的配置： 
+ PPyoloe_crn_s.toml 
+ 1 [parse] 
+ 2 net_name = "PPyoloe_crn_s" 
+ 3 framework = "Onnx" 
+ 4 inputs = [ 1 , 640 , 640 , 3 ,] 
+ 5 inputs_layout = "NHWC" 
+ 6 pre_method = "resize" 
+ 7 pre_scale = [ 255.0 , 255.0 , 255.0 ,] 
+ 8 pre_mean = [ 0.0 , 0.0 , 0.0 ,] 
+ 9 channel_swap = [ 2 , 1 , 0 ,] 
+ 10 network = "./ModelZoo/PPyoloe/ppyoloe_crn_s_300e_coco.onnx" 
+ 11 jr_path = "./json&raw/PPyoloe_crn_s_BY/" 
+ 12 
+ 13 [optimize] 
+ 14 json = "./json&raw/PPyoloe_crn_s_BY/PPyoloe_crn_s_parsed.json" 
+ 15 raw = "./json&raw/PPyoloe_crn_s_BY/PPyoloe_crn_s_parsed.raw" 
+ 16 jr_path = "./json&raw/PPyoloe_crn_s_BY/" 
+ 17 
+ 18 [quantize] 
+ 19 forward_mode = "image" 
+ 20 saturation = "kld" 
+ 21 forward_dir = "./images/ModelZoo_images/coco" 
+ 22 forward_list = "./ModelZoo_images/v3.0_list/coco.txt" 
+ 23 names_file = "./names/coco.names" 
+ 24 bits = 8 
+ 25 json = "./json&raw/PPyoloe_crn_s_BY/PPyoloe_crn_s_optimized.json" 
+ 26 raw = "./json&raw/PPyoloe_crn_s_BY/PPyoloe_crn_s_optimized.raw" 
+ 27 jr_path = "./json&raw/PPyoloe_crn_s_BY/" 
+ 28 per = "tensor" 
+ 29 
+ 30 [adapt] 
+ 31 json = "./json&raw/PPyoloe_crn_s_BY/PPyoloe_crn_s_quantized.json" 
+ 32 raw = "./json&raw/PPyoloe_crn_s_BY/PPyoloe_crn_s_quantized.raw" 
+ 33 jr_path = "./json&raw/PPyoloe_crn_s_BY/" 
+ 34 
+ 35 [generate] 
+ 36 json = "./json&raw/PPyoloe_crn_s_BY/PPyoloe_crn_s_adapted.json" 
+ 37 raw = "./json&raw/PPyoloe_crn_s_BY/PPyoloe_crn_s_adapted.raw" 
+ 38 jr_path = "./json&raw/PPyoloe_crn_s_BY/" 
+ 30TAI 的配置： 
+ PPyoloe_crn_s.toml 
+ 1 [parse] 
+ 2 net_name = "PPyoloe_crn_s" 
+ 3 framework = "Onnx" 
+ 4 inputs = [ 1 , 640 , 640 , 3 ,] 
+ 5 inputs_layout = "NHWC" 
+ 6 pre_method = "resize" 
+ 7 pre_scale = [ 255.0 , 255.0 , 255.0 ,] 
+ 8 pre_mean = [ 0.0 , 0.0 , 0.0 ,] 
+ 9 channel_swap = [ 2 , 1 , 0 ,] 
+ 10 network = "./ModelZoo/PPyoloe/ppyoloe_crn_s_300e_coco.onnx" 
+ 11 jr_path = "./json&raw/PPyoloe_crn_s_ZG/" 
+ 12 target = "zhuge" 
+ 13 inputs_dtype = "UInt8" 
+ 14 
+ 15 [optimize] 
+ 16 json = "./json&raw/PPyoloe_crn_s_ZG/PPyoloe_crn_s_parsed.json" 
+ 17 raw = "./json&raw/PPyoloe_crn_s_ZG/PPyoloe_crn_s_parsed.raw" 
+ 18 jr_path = "./json&raw/PPyoloe_crn_s_ZG/" 
+ 19 
+ 20 [quantize] 
+ 21 forward_mode = "image" 
+ 22 saturation = "kld" 
+ 23 forward_dir = "./images \\ 2.1ModelZoo_images/coco" 
+ 24 forward_list = "./images \\ 2.1ModelZoo_images/v3.0_list/coco.txt" 
+ 25 qdtype = "int8" 
+ 26 json = "./json&raw/PPyoloe_crn_s_ZG/PPyoloe_crn_s_optimized.json" 
+ 27 raw = "./json&raw/PPyoloe_crn_s_ZG/PPyoloe_crn_s_optimized.raw" 
+ 28 jr_path = "./json&raw/PPyoloe_crn_s_ZG/" 
+ 29 per = "tensor" 
+ 30 
+ 31 [adapt] 
+ 32 json = "./json&raw/PPyoloe_crn_s_ZG/PPyoloe_crn_s_quantized.json" 
+ 33 raw = "./json&raw/PPyoloe_crn_s_ZG/PPyoloe_crn_s_quantized.raw" 
+ 34 jr_path = "./json&raw/PPyoloe_crn_s_ZG/" 
+ 35 
+ 36 [generate] 
+ 37 json = "./json&raw/PPyoloe_crn_s_ZG/PPyoloe_crn_s_adapted.json" 
+ 38 raw = "./json&raw/PPyoloe_crn_s_ZG/PPyoloe_crn_s_adapted.raw" 
+ 39 jr_path = "./json&raw/PPyoloe_crn_s_ZG/" 
+ 备注 
+ 100TAI 的接口完全与Icraft v3.30之前的版本兼容， 30TAI 为Icraft v3.30新增支持的后端，使用上与``100TAI`` 略有差异，详见下文`《icraft 参数列表》 <./#_param_line>`_。 
+ 如上所示， 在toml文件中，方括号括起来的部分，比如 [parse] 和 [generate] 等表示一个小节， icraft使用一个小节来配置一个命令。小节的名称，即 parse 和 generate 等表示被配置的命令，小节中使用 = 表达的键值对表示该命令的参数的键和值。例如，当执行 icraft parse yolov5s.toml 时， icraft 会使用 [parse] 这一小节的键值对来配置 parse 命令。 
+ 除了使用配置文件外，CLI命令 icraft 还支持直接使用命令行来指定参数，比如上文中的 icraft parse PPyoloe_crn_s.toml ，等价于以下命令： 
+ icraft parse \ 
+--net_name PPyoloe_crn_s \ 
+--framework Onnx \ 
+--inputs 1 , 640 , 640 , 3 \ 
+--inputs_layout NHWC \ 
+--pre_method resize \ 
+--pre_scale 255 .0,255.0,255.0 \ 
+--pre_mean 0 .0,0.0,0.0 \ 
+--channel_swap 2 ,1,0 \ 
+--network ./ModelZoo/PPyoloe/ppyoloe_crn_s_300e_coco.onnx.onnx \ 
+--jr_path "./json&raw/PPyoloe_crn_s_ZG/" \ 
+ CLI命令还支持配置文件和命令行参数混用，在混用时，命令行参数中的配置将覆盖配置文件中的同名参数，比如 icraft parser PPyoloe_crn_s.toml --pre_method nop 会将配置文件中的 pre_method 改为 nop 。 
+ 备注 
+ compile 命令需要根据配置文件中各个命令的配置依次调用 parse , optimize , quantize , adapt , generate 等过程，因此不支持使用命令行来指定参数。 
+ 三 参数列表 # 
+ 目前， icraft 支持的命令及其参数如下： 
+ 组件命令行参数 # 
+ 组件名称 
+ 文档 
+ parse 
+ 《icraft parse 参数说明表》 
+ optimize 
+ 《icraft optimize 参数说明表》 
+ quantize 
+ 《icraft quantize 参数说明表》 
+ adapt 
+ 《icraft adapt 参数说明表》 
+ generate 
+ 《icraft generate 参数说明表》 
+ run 
+ 《icraft run 参数说明表》 
+ show 
+ 《icraft show 参数说明表》 
+ 上一页 
+ 运行 
+ 下一页 
+ API Reference 
+ 目录
+ 一 调用方法 
+ 二 参数配置 
+ 三 参数列表 
+作者： icrafters
+ © Copyright 2026, FMSH.
+ 最后更新于 26-08-21 17:00.
+ so the DOM is not blocked -->
+ 

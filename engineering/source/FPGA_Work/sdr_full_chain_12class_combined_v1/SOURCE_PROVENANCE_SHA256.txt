@@ -1,0 +1,42 @@
+# SOURCE_PROVENANCE_SHA256.txt — 合并位流工程（任务 39e5 最终阶段）来源文件 SHA256 清单
+#
+# 生成：2026-10-06（Phase 0 可行性审计）
+# 用途：把本工程用到的 FPGA 来源资产逐字节锚定到四个保护原工程，保证可追溯、不可篡改。
+# 保护原工程（绝不修改）：
+#   - pl_ddr_mandatory_core_v1   （NPU FPGA 工程：fpai_demo_fpga / pl_ddr_integration_v1）
+#   - hdmi_framebuffer_ui_v4_fix （HDMI 帧缓冲 FPGA 工程 + 软件）
+#   - npu_realtime_v1            （NPU 软件）
+#   - sdr_full_chain_12class_v1 / sdr_full_chain_12class_ui_v1 （十二类软件链）
+#
+# 本阶段（Phase 0）只审计 FPGA 侧来源；软件侧在后续 §七 再复制并登记。
+# 校验：cd 到 FPGA_Work 根目录后  sha256sum -c <本文件>  （相对路径形式）
+# 注意：下面条目为"相对 FPGA_Work 根"的路径 + SHA256 + 文件名，非 sha256sum 标准格式；
+#      权威机器可读校验以 sha256sum 全路径为准。
+
+## ---- NPU FPGA 工程（pl_ddr_mandatory_core_v1）----
+d0f3e356485edfa4173a70c4840e1b8bb45dffbe6018539a6fb23b4b29de859f  pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ai7030_edif_top.v
+f04ddbdf681cda2c893c9a1176cb2010c2bb847d806c2aa4815ba7b5081967f2  pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ps_ai_peripheral.sv
+61fc91949e0a864b58ad45f99e7338c9618c3bffb039dfa652227adcaee00270  pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/AI_Mate_stub.v
+38f14b4427244f49a1ff0edf9dcdfe4438d033807d76018c688aa218c491d49c  pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/edif/AI_Mate.edif
+731eb6dbc727e7116399b6c125cb08012e1cdcfbd94510649988142a33b53382  pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/edif/AI_Mate_no_detpost.edif
+78f5599b076e7f7389293606e7cf8fac5674f344a89ad86283944356a50854a4  pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ps_ai.bd
+6fd7b68da8e4e9ae30ca9a868ad38ca43a1d1ab44e3b23435cdf072fbc4b29d9  pl_ddr_mandatory_core_v1/fpai_demo_fpga/constrs_1/ai7030.xdc
+7ca36176517418511de6c34fab93a1fdfe787bf3bb560b31143988881193696f  pl_ddr_mandatory_core_v1/fpai_demo_fpga/constrs_1/impl_constraints.xdc
+1ceda4b13aff436568a4a3da60b2335b7595c47514dde3e6551f0bd772976757  pl_ddr_mandatory_core_v1/pl_ddr_integration_v1/rtl/job_domain_controller.sv
+73ed516336a8451eda13df6d99ee0a117ed439b006382a4be679d7b343981722  pl_ddr_mandatory_core_v1/pl_ddr_integration_v1/rtl/pl_ddr_mandatory_core_regs.sv
+559adc7b492df0d707ece41d09c4c30a3447015d6fc729a4330ae3583690028c  pl_ddr_mandatory_core_v1/pl_ddr_integration_v1/rtl/pl_ddr_mandatory_core_engine.sv
+a64cfe22542c21c835b109c8a7fc44bede5975971c280dbccd5bd73751005ed0  pl_ddr_mandatory_core_v1/pl_ddr_integration_v1/rtl/pl_ddr_mandatory_core_top.sv
+940d48a71fc3abea1f1b93b7740e265715a9cc2654420757c5cc8fc7345b20ec  pl_ddr_mandatory_core_v1/pl_ddr_integration_v1/pl_ddr_mandatory_core_v1.xdc
+644521844b7c66887125641aaf8f32a14096f7b8ffbf2d60423ce3adfd829f43  pl_ddr_mandatory_core_v1/pl_ddr_integration_v1/cdc_async_groups.xdc
+
+## ---- HDMI 帧缓冲 FPGA 工程（hdmi_framebuffer_ui_v4_fix）----
+257bcf75524c17aac256a91b62389599bfa1ad8d362e4a6a59883b6d9f130e0a  hdmi_framebuffer_ui_v4_fix/fpga/rtl/hdmi_framebuffer_720p_top.sv
+fb4a10daf8891317ff9f34943b1723febaa383232bfd74b11f542277ad71063c  hdmi_framebuffer_ui_v4_fix/fpga/rtl/ps_ai_wrapper.sv
+5f1c8ac860c410d8d6d4bf5ef45f61b8c159f6964855baad72788b85f710aac8  hdmi_framebuffer_ui_v4_fix/fpga/rtl/fb_read_720p.sv
+1366de826161a43910ee8d7e86cdae2f41ad2d432c8a3b258ee7b74d0cfa312a  hdmi_framebuffer_ui_v4_fix/fpga/constrs/hdmi_framebuffer_720p.xdc
+78f5599b076e7f7389293606e7cf8fac5674f344a89ad86283944356a50854a4  hdmi_framebuffer_ui_v4_fix/fpga/bd/ps_ai/ps_ai.bd
+
+## 关键一致性结论（Phase 0 审计依据）
+# 1. 两个 ps_ai.bd 的 SHA256 完全相同（78f5599b…）= PS 配置与地址图逐字节一致。
+# 2. HDMI 引脚（AC17/AA15/Y16/W16）在两工程 XDC 中完全一致（见 PIN_XDC_CONFLICT_AUDIT.md）。
+# 3. NPU = AI_Mate.edif（物理网表，非加密）+ Mandatory Core RTL（4 核心 + deps/frozen 6 + deps/adapters 7）。

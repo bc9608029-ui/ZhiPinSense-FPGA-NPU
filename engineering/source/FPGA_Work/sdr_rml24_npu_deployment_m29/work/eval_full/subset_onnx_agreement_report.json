@@ -1,0 +1,42 @@
+{
+  "phase": "M29-Phase-D-subset-onnx-agreement",
+  "subset": {
+    "per_class": 64,
+    "size": 1536,
+    "seed": 2028,
+    "fp32_accuracy": 0.5540364583333334,
+    "fake_int8_accuracy": 0.5514322916666666,
+    "fake_int8_top1_agreement_vs_fp32": 0.8313802083333334,
+    "onnx_accuracy": 0.5540364583333334,
+    "onnx_top1_agreement_vs_fp32": 1.0,
+    "onnx_top1_agreement_vs_int8": 0.8313802083333334
+  },
+  "label_order": [
+    "OOK",
+    "4ASK",
+    "8ASK",
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16PSK",
+    "32PSK",
+    "16APSK",
+    "32APSK",
+    "64APSK",
+    "128APSK",
+    "16QAM",
+    "32QAM",
+    "64QAM",
+    "128QAM",
+    "256QAM",
+    "AM-SSB-WC",
+    "AM-SSB-SC",
+    "AM-DSB-WC",
+    "AM-DSB-SC",
+    "FM",
+    "GMSK",
+    "OQPSK"
+  ],
+  "split": "radioml2018_validation",
+  "test_split_touched": false
+}

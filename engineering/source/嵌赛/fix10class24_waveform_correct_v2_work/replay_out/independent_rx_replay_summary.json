@@ -1,0 +1,25 @@
+{
+  "backend": "icraft-host-bf16",
+  "counterexample": {
+    "fixed_512_rotation_flips": [
+      "AM-SSB-WC:17->18",
+      "AM-DSB-SC:16->20"
+    ],
+    "public_protocol_recovered_flips": []
+  },
+  "honest_note": "orig \u662f v2 \u4fee\u6b63\u6ce2\u5f62\u7684\u6570\u5b57\u76f4\u9001\uff08\u65e0 RF/\u65e0\u6062\u590d\u8bef\u5dee\uff09\u3002\u82e5 orig \u8bef\u5206\u7c7b\uff0c\u5982\u5b9e\u8bb0\u5f55\u4e3a\u300e\u6a21\u578b\u4e0e\u65b0\u6ce2\u5f62\u57df\u4e0d\u5339\u914d\u300f\uff0c\u4e0d\u63a9\u76d6\u3001\u4e0d\u5f52\u56e0 RF\uff0c\u4e5f\u4e0d\u53cd\u5411\u6539\u6ce2\u5f62\u51d1 24/24\u3002",
+  "model_vs_new_waveform_domain_mismatch": true,
+  "orig_misclassified": [
+    {
+      "class": "AM-DSB-SC",
+      "pred": 16
+    }
+  ],
+  "three_layer": {
+    "orig_correct": "23/24",
+    "recovered_correct": "23/24",
+    "rotated_fixed_window_correct": "23/24"
+  },
+  "token": "M29-RML24-FIX10CLASS24-WAVEFORM-CORRECT-V2-REPLAY",
+  "window": "first 1024 of recovered payload (public-reference located)"
+}

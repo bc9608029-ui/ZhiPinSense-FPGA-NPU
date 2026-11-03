@@ -1,0 +1,27 @@
+[Unit]
+Description=RML24 integrated receiver UI and guarded FPGA display PSD
+After=local-fs.target systemd-udev-trigger.service
+Conflicts=rml24-ui.service rml24-receiver.service
+StartLimitIntervalSec=120
+StartLimitBurst=3
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/rml24-integrated/current
+ExecStart=/root/miniconda3/envs/torch_v2.0.1_aarch64/bin/python3 /opt/rml24-integrated/current/deployment_launcher.py
+Restart=always
+RestartPreventExitStatus=78
+RestartSec=5
+KillSignal=SIGTERM
+KillMode=mixed
+SendSIGKILL=no
+TimeoutStopSec=120
+Environment=HOME=/root
+Environment=PATH=/root/miniconda3/envs/torch_v2.0.1_aarch64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=OMP_NUM_THREADS=1
+
+[Install]
+WantedBy=multi-user.target

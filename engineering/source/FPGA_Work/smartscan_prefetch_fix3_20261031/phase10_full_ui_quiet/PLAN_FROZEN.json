@@ -1,0 +1,13 @@
+{
+  "mode": "FIXED",
+  "duration_sec": 20,
+  "RF_TX": false,
+  "checks": [
+    "full candidate identity",
+    "NPU/UI/RX ready",
+    "control socket",
+    "clean stop",
+    "RX restore",
+    "original bit rollback"
+  ]
+}

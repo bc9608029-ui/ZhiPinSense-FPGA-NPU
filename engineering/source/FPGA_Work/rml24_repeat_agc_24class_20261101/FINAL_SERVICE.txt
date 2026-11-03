@@ -1,0 +1,4 @@
+systemctl show rml24-integrated -p ActiveState -p NRestarts
+NRestarts=0
+ActiveState=active
+(base) root@U:~# 

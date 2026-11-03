@@ -1,0 +1,87 @@
+{
+  "activation_values": {
+    "plain": {
+      "@fp(32)": 2
+    },
+    "quantized_expressed": {
+      "@fp(32)": 117
+    },
+    "quantized_storage": {
+      "@tf(32)": 117
+    },
+    "unique_count": 119
+  },
+  "ai_target": "@zhuget(330)",
+  "audit": "M29-RML24-FIX10CLASS24-TF32-NETWORK-AUDIT",
+  "bf16_tensors": 0,
+  "compile_target": {
+    "@hostt": 2,
+    "@zhuget(330)": 118
+  },
+  "deployability": {
+    "host_ops": 2,
+    "npu_ops": 118,
+    "verdict": "DEPLOYABLE_FULL_NETWORK_TF32"
+  },
+  "framework_kind": "ONNX",
+  "framework_version": "opset17",
+  "hard_op_node_types": {
+    "icraft::xir::AddNode": 12,
+    "icraft::xir::CastNode": 3,
+    "icraft::xir::Conv2dNode": 28,
+    "icraft::xir::MatmulNode": 2,
+    "icraft::xir::MeanNode": 1,
+    "icraft::xir::PruneAxisNode": 1,
+    "icraft::xir::ReshapeNode": 37,
+    "icraft::xir::TransposeNode": 34
+  },
+  "host_ops": 2,
+  "icraft_version": "v3.39.0",
+  "icraft_xir_version": "3.39.0.0",
+  "int8_tensors": 0,
+  "model_json_sha256": "8d00a1c31835611f18064389e5b9ecab755afefa5bacd78a983119757e65fa37",
+  "model_name": "rml24_adamrv11_tf32",
+  "model_raw_sha256": "f8366a109576ea53c9b3ddfd2e7b690590515ff3dfb33c6af7cf6ccafcdb392e",
+  "network_io": {
+    "input_dtype": "fp32",
+    "input_shape": [
+      1,
+      2,
+      1024
+    ],
+    "output_dtype": "fp32",
+    "output_shape": [
+      1,
+      24
+    ]
+  },
+  "network_name": "model_24class",
+  "npu_resident_ops": 118,
+  "op_inventory": {
+    "hard_op": 118,
+    "input": 1,
+    "output": 1,
+    "total": 120
+  },
+  "params": {
+    "count": 177,
+    "plain": {
+      "@uint(64)": 118
+    },
+    "quantized_expressed": {
+      "@fp(32)": 59
+    },
+    "quantized_storage": {
+      "@tf(32)": 59
+    }
+  },
+  "params_bytes": 1423004,
+  "params_md5": "e48e59f5a2da56a99875ade883d508da",
+  "source_checkpoint_sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+  "source_label_contract_sha256": "3e1382d1242a206dae3f73535deba30b461e8573889b60004db9d2ce055fa549",
+  "source_onnx_sha256": "976618a131e75f23bd46e04e71a114cbbea245d6afdd4c7ea7fa008e0ce9ed51",
+  "tags": {
+    "bgr_order": true,
+    "stage": "quantized"
+  }
+}

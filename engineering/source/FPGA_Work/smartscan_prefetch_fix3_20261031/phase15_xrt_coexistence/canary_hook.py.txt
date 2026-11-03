@@ -1,0 +1,32 @@
+
+import subprocess,socket,time,struct,json,sys,os
+from pathlib import Path
+npu,model,folder=sys.argv[1:];folder=Path(folder);folder.mkdir()
+log=(folder/'npu.log').open('w')
+p=subprocess.Popen([npu,model+'/rml24_adamrv11_bf16.json',model+'/rml24_adamrv11_bf16.raw',str(folder/'npu.sock')],stdout=log,stderr=subprocess.STDOUT)
+try:
+ for i in range(200):
+  if (folder/'npu.sock').exists():break
+  assert p.poll() is None,'NPU exited';time.sleep(.1)
+ with socket.socket(socket.AF_UNIX,socket.SOCK_STREAM) as s:
+  s.settimeout(30);s.connect(str(folder/'npu.sock'));answers=[]
+  for i in range(16):
+   if i==8:
+    print('FIRST_EIGHT_NPU_PASS',flush=True)
+    mode=os.environ.get('DIAG_HOOK','baseline')
+    cmd=['/root/rml24_fpga_diag_1793380588/scan_xrt','--probe'] if mode=='probe' else ['/root/rml24_fpga_diag_1793380588/scan_xrt','--execute','/root/rml24_manual_fpga_1793380256/vectors/plus37.i16',str(folder/'psd.u64'),str(folder/'psd.json')]
+    if mode!='baseline':
+     h=subprocess.run(cmd,capture_output=True,text=True);(folder/'hook.log').write_text(h.stdout+h.stderr);print('HOOK_RC',h.returncode,flush=True)
+     if h.returncode:raise RuntimeError('hook failed '+str(h.returncode))
+   s.sendall(bytes(8192));data=b''
+   while len(data)<96:
+    b=s.recv(96-len(data));assert b,'NPU EOF';data+=b
+   values=struct.unpack('<24f',data)
+   assert all(__import__('math').isfinite(v) for v in values),'nonfinite canary'
+   answers.append(max(range(24),key=lambda k:values[k]))
+ print(json.dumps(dict(kind='ZERO_INPUT_NPU_LIVENESS_ONLY',finite=16,total=16,pred=answers)))
+finally:
+ p.terminate()
+ try:p.wait(timeout=15)
+ except subprocess.TimeoutExpired:p.kill();p.wait();raise RuntimeError('NPU cleanup required hard kill')
+ log.close()

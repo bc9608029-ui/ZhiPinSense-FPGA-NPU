@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "skills": {
+    "bsp-bringup": {
+      "source": "issacs83/claude-dev-forge",
+      "sourceType": "github",
+      "skillPath": "skills/bsp-bringup/SKILL.md",
+      "computedHash": "aedf33724b1d3f3fb0f886ffdd8578df0a255eafa9294d34214297471d32b107"
+    },
+    "cpp": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "cpp/SKILL.md",
+      "computedHash": "6d95355dd1347d4bc4025222efcc2c67f4fda371e032a5dc84dad40a1e9b1762"
+    },
+    "data-visualization": {
+      "source": "seb1n/awesome-ai-agent-skills",
+      "sourceType": "github",
+      "skillPath": "data-and-analytics/data-visualization/SKILL.md",
+      "computedHash": "35676157ced1c4e38752280a3a532560037fd0afc2f8bfc148687ec58e78dbe2"
+    },
+    "fact-checking": {
+      "source": "seb1n/awesome-ai-agent-skills",
+      "sourceType": "github",
+      "skillPath": "research-and-knowledge/fact-checking/SKILL.md",
+      "computedHash": "3967f218601d4f1023693b7453f5a16ef89183857c6607d17c27c8e956452399"
+    },
+    "hyperparameter-tuning": {
+      "source": "param087/agent-ml-skills",
+      "sourceType": "github",
+      "skillPath": "skills/hyperparameter-tuning/SKILL.md",
+      "computedHash": "36ece4ca26b75ec5566768e42211d36451b1ee11ff455345efda281d172aecec"
+    },
+    "ml-training-recipes": {
+      "source": "OpenRaiser/NanoResearch",
+      "sourceType": "github",
+      "skillPath": "skills/vendor-ai-research/ml-training-recipes/SKILL.md",
+      "computedHash": "784a856332e5ab566a9f1c752e3e258d27dad9e55f1da12b0a6cbd2ea145de4a"
+    },
+    "pytorch": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "pytorch/SKILL.md",
+      "computedHash": "10be97afa3db48bbe64ee9c507809fe9e56be8b651d179d9d48bb0e5bacf9c9c"
+    },
+    "qt-qml": {
+      "source": "theqtcompanyrnd/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/qt-qml/SKILL.md",
+      "computedHash": "a8460d9e28e512b2e300cec64b0d990f82114e5e45f1f84e2be97dadf43a27d0"
+    },
+    "qt-ui-design": {
+      "source": "theqtcompanyrnd/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/qt-ui-design/SKILL.md",
+      "computedHash": "0d310f2237bddd15e5e9f63979ff42083d9523c7ec3cd622589a890c89eb077b"
+    },
+    "report-generation": {
+      "source": "seb1n/awesome-ai-agent-skills",
+      "sourceType": "github",
+      "skillPath": "communication/report-generation/SKILL.md",
+      "computedHash": "d09f3ca2112ea85ba652d186f783c0d9bf1c04729459e4e5c4c6f4a94588bb63"
+    },
+    "signal-processing": {
+      "source": "xjtulyc/awesome-rosetta-skills",
+      "sourceType": "github",
+      "skillPath": "skills/06-engineering/signal-processing/SKILL.md",
+      "computedHash": "0825e0db2f1ccf2c9d4d67b8e4852b5ed2416fbf5e4942e38d72d559fc18ac0a"
+    },
+    "technical-writing": {
+      "source": "seb1n/awesome-ai-agent-skills",
+      "sourceType": "github",
+      "skillPath": "writing-and-content/technical-writing/SKILL.md",
+      "computedHash": "627e20e347161ff8c64eac511a6f9527dc3247e2b96785ce495f705e058cc103"
+    },
+    "vivado-analysis": {
+      "source": "Shinei-Nouzen-Arch/FPGA-Agent",
+      "sourceType": "github",
+      "skillPath": "vivado-analysis/SKILL.md",
+      "computedHash": "cf9abb071390080d2109e102f415026e9bd05f496f86defff2f0f4ea96852a85"
+    },
+    "vivado-constraints": {
+      "source": "Shinei-Nouzen-Arch/FPGA-Agent",
+      "sourceType": "github",
+      "skillPath": "vivado-constraints/SKILL.md",
+      "computedHash": "b26b715bac4c67899ab4afc32421c17045c57df6d8ede8f3ebb4e3249e1c799c"
+    },
+    "vivado-debug": {
+      "source": "Shinei-Nouzen-Arch/FPGA-Agent",
+      "sourceType": "github",
+      "skillPath": "vivado-debug/SKILL.md",
+      "computedHash": "dc17dd54ba524f9a3c86508d15a8279062d9b6147bda29afa8d6b017c136b917"
+    },
+    "vivado-impl": {
+      "source": "Shinei-Nouzen-Arch/FPGA-Agent",
+      "sourceType": "github",
+      "skillPath": "vivado-impl/SKILL.md",
+      "computedHash": "9480853e87b66ab2b4ae28ad3ec77015c018f3b8bc18e42bed4e54bc09fa530d"
+    },
+    "vivado-sim": {
+      "source": "Shinei-Nouzen-Arch/FPGA-Agent",
+      "sourceType": "github",
+      "skillPath": "vivado-sim/SKILL.md",
+      "computedHash": "413ddfa400068f4b604c0e320c2e451fdd8a0afea713e2ddc1975fd06b75e235"
+    },
+    "vivado-synth": {
+      "source": "Shinei-Nouzen-Arch/FPGA-Agent",
+      "sourceType": "github",
+      "skillPath": "vivado-synth/SKILL.md",
+      "computedHash": "0a2dc2637af7e447fd2a15fdab5b365d03f1d5e8067418492999782ce426ea56"
+    }
+  }
+}

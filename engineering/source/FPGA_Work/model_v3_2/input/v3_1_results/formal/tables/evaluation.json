@@ -1,0 +1,97 @@
+{
+  "checkpoint": "/root/autodl-tmp/v31_final_run/qam_aware_v3_1_autodl_final/outputs/qam_aware_v3_1/formal/checkpoints/best.pt",
+  "checkpoint_epoch": 7,
+  "final_blind_test_accessed": false,
+  "suites": {
+    "v3_1_robust": {
+      "suite": "v3_1_robust",
+      "scope": "development-only; v3_1_final_blind_test was not accessed",
+      "exact_v2_test_namespace": false,
+      "report_only": false,
+      "samples": 16800,
+      "accuracy": 0.6861904761904762,
+      "macro_f1": 0.7010618921402803,
+      "qam_mean_accuracy": 0.5897619047619047,
+      "per_class_accuracy": {
+        "BPSK": 0.73,
+        "QPSK": 0.4828571428571429,
+        "8PSK": 0.6557142857142857,
+        "16QAM": 0.5366666666666666,
+        "64QAM": 0.6428571428571429,
+        "2FSK": 0.9,
+        "CPFSK": 0.7933333333333333,
+        "OFDM": 0.7480952380952381
+      },
+      "per_class_f1": {
+        "BPSK": 0.7859523199179698,
+        "QPSK": 0.6407582938388625,
+        "8PSK": 0.6710526315789473,
+        "16QAM": 0.5807781499613501,
+        "64QAM": 0.43324775353016687,
+        "2FSK": 0.8411214953271028,
+        "CPFSK": 0.8214990138067061,
+        "OFDM": 0.8340854791611362
+      }
+    },
+    "v2_compatible": {
+      "suite": "v2_compatible",
+      "scope": "development-only; v3_1_final_blind_test was not accessed",
+      "exact_v2_test_namespace": true,
+      "report_only": false,
+      "samples": 8400,
+      "accuracy": 0.6895238095238095,
+      "macro_f1": 0.7038866780742465,
+      "qam_mean_accuracy": 0.6028571428571429,
+      "per_class_accuracy": {
+        "BPSK": 0.7219047619047619,
+        "QPSK": 0.4961904761904762,
+        "8PSK": 0.6466666666666666,
+        "16QAM": 0.5371428571428571,
+        "64QAM": 0.6685714285714286,
+        "2FSK": 0.8952380952380953,
+        "CPFSK": 0.7942857142857143,
+        "OFDM": 0.7561904761904762
+      },
+      "per_class_f1": {
+        "BPSK": 0.7770374167093798,
+        "QPSK": 0.650843222985634,
+        "8PSK": 0.6608272506082725,
+        "16QAM": 0.5856697819314641,
+        "64QAM": 0.4495677233429395,
+        "2FSK": 0.8445642407906558,
+        "CPFSK": 0.8237037037037037,
+        "OFDM": 0.8388800845219229
+      }
+    },
+    "sdr_robust": {
+      "suite": "sdr_robust",
+      "scope": "development-only; v3_1_final_blind_test was not accessed",
+      "exact_v2_test_namespace": false,
+      "report_only": true,
+      "samples": 16800,
+      "accuracy": 0.58,
+      "macro_f1": 0.5912807222303493,
+      "qam_mean_accuracy": 0.520952380952381,
+      "per_class_accuracy": {
+        "BPSK": 0.5957142857142858,
+        "QPSK": 0.29523809523809524,
+        "8PSK": 0.5242857142857142,
+        "16QAM": 0.49523809523809526,
+        "64QAM": 0.5466666666666666,
+        "2FSK": 0.7361904761904762,
+        "CPFSK": 0.7071428571428572,
+        "OFDM": 0.7395238095238095
+      },
+      "per_class_f1": {
+        "BPSK": 0.6839803171131766,
+        "QPSK": 0.4434907010014306,
+        "8PSK": 0.5355058365758755,
+        "16QAM": 0.45276447540269915,
+        "64QAM": 0.37206287473667154,
+        "2FSK": 0.7455992283578491,
+        "CPFSK": 0.7578463893850472,
+        "OFDM": 0.7389959552700452
+      }
+    }
+  }
+}

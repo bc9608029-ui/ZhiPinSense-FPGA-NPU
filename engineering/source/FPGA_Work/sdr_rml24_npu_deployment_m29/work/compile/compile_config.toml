@@ -1,0 +1,64 @@
+# iCraft 3.39 compile configuration for the RML2018 24-class raw-I/Q NPU partition.
+#
+# Target: ZG330 (FMQL30TAI "Zhuge"/"ZHUGE"). Framework: Onnx (opset 17, ir 8).
+#
+# Mirrors the twelve-class `model_12class/compile/compile_config.toml` gate-for-gate;
+# the ONLY differences are the ONNX (24-class head, output [1,24]) and the
+# validation-only calibration set (24 classes x 26 SNR = 624 samples, NOT test).
+#
+#   iq     [1,2,1024] FP32  layout FD
+#   logits [1,24]
+#
+# Frozen constraints honoured (same as eight/twelve-class):
+#   * no model-structure/operator deletion or replacement
+#   * no math change, no silent HostBackend fallback
+#   * non-image input: no_transinput / no_imagemake disabled
+#   * calibration from the REAL RadioML2018 validation split only (never test)
+
+[parse]
+net_name = "model_24class"
+framework = "Onnx"
+network = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/onnx/rml24_24class_opset17.onnx"
+inputs = "1,2,1024"
+inputs_layout = "FD"
+inputs_dtype = "fp32"
+pre_method = "nop"
+pre_scale = "nop"
+pre_mean = "nop"
+channel_swap = "nop"
+target = "zhuge"
+jr_path = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/jsonraw/"
+
+[optimize]
+target = "ZHUGE"
+json = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/jsonraw/model_24class_parsed.json"
+raw = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/jsonraw/model_24class_parsed.raw"
+jr_path = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/jsonraw/"
+
+[quantize]
+target = "zhuge"
+qdtype = "int8"
+bits = 8
+saturation = "kld"
+per = "channel"
+no_transinput = true
+no_imagemake = true
+forward_dir = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/calibration/cal_data"
+forward_list = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/calibration/forward_list.txt"
+json = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/jsonraw/model_24class_optimized.json"
+raw = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/jsonraw/model_24class_optimized.raw"
+jr_path = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/jsonraw/"
+
+[adapt]
+target = "ZHUGE"
+json = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/jsonraw/model_24class_quantized.json"
+raw = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/jsonraw/model_24class_quantized.raw"
+jr_path = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/jsonraw/"
+
+[generate]
+json = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/jsonraw/model_24class_adapted.json"
+raw = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/jsonraw/model_24class_adapted.raw"
+jr_path = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/jsonraw/"
+log_path = "F:/FPGA_Work/sdr_rml24_npu_deployment_m29/work/compile/logs/"
+rows = 4
+cols = 4

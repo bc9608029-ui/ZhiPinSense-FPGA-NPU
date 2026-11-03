@@ -1,0 +1,9 @@
+{
+  "sweep_applied": true,
+  "responses": [
+    "OK accepted command_id=1 SET_SCAN_RANGE_HZ 2395000000 2405000000 1000000",
+    "OK command_id=1 requested_start_hz=2395000000 requested_stop_hz=2405000000 requested_step_hz=1000000 scan_points=11",
+    "OK accepted command_id=2 SET_MODE CONTINUOUS_SCAN",
+    "OK applied command_id=2 SET_MODE CONTINUOUS_SCAN"
+  ]
+}

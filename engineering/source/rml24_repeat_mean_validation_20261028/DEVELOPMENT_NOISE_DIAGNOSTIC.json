@@ -1,0 +1,15 @@
+{
+  "kind": "EXISTING_DEVELOPMENT_DATA_ONLY_NOT_RF_VALIDATION_RESULT",
+  "groups": {
+    "True": {
+      "n": 330,
+      "median_repeat_noise_fraction": 0.008579285808061499,
+      "median_normalized_inverse_noise_gain": 1.8220554796384771
+    },
+    "False": {
+      "n": 10,
+      "median_repeat_noise_fraction": 0.07676048163094257,
+      "median_normalized_inverse_noise_gain": 10.111123192675045
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "experiment_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\dual_domain_smoke.yaml",
+  "baseline_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\baseline.yaml",
+  "baseline_git_commit": "2bd657983c062582450b8da871f87df9345264d6",
+  "current_git_commit": "cb9c14b68db473a1a6de17f1271c866bb883d2c1",
+  "variant": "time_only",
+  "seed": 2026,
+  "model": {
+    "base_channels": 8,
+    "fusion_features": 32,
+    "dropout": 0.1,
+    "fft_length": 256
+  }
+}

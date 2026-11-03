@@ -1,0 +1,221 @@
+{
+  "scope": "Concept only: chosen first-order50Hz highpass surrogate, not measured AD9361 tracking; no RF or NPU classification; RX5.12 oversampling and digital offset removal simulated",
+  "rows": [
+    {
+      "source": 14,
+      "repeats": 1,
+      "cfo": 20,
+      "zero": 0.011092169912995359,
+      "offset": 0.024597498005277225,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 14,
+      "repeats": 1,
+      "cfo": -70,
+      "zero": 0.011004711849592105,
+      "offset": 0.01585300490489251,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 14,
+      "repeats": 8,
+      "cfo": 20,
+      "zero": 0.011735596143577928,
+      "offset": 0.09025011767175771,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 14,
+      "repeats": 8,
+      "cfo": -70,
+      "zero": 0.012061920161806594,
+      "offset": 0.054015292536071714,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 15,
+      "repeats": 1,
+      "cfo": 20,
+      "zero": 0.010791151873689408,
+      "offset": 0.022367332507569896,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 15,
+      "repeats": 1,
+      "cfo": -70,
+      "zero": 0.010620317251813425,
+      "offset": 0.014784145175355179,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 15,
+      "repeats": 8,
+      "cfo": 20,
+      "zero": 0.00924674416550533,
+      "offset": 0.08135031245301455,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 15,
+      "repeats": 8,
+      "cfo": -70,
+      "zero": 0.009518062052204422,
+      "offset": 0.04847356051515416,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 17,
+      "repeats": 1,
+      "cfo": 20,
+      "zero": 0.04949640693540399,
+      "offset": 0.010878571716500494,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 17,
+      "repeats": 1,
+      "cfo": -70,
+      "zero": 0.05340800688828428,
+      "offset": 0.010753549929525921,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 17,
+      "repeats": 8,
+      "cfo": 20,
+      "zero": null,
+      "offset": 0.010408176757433898,
+      "zero_recovered": false,
+      "offset_recovered": true
+    },
+    {
+      "source": 17,
+      "repeats": 8,
+      "cfo": -70,
+      "zero": null,
+      "offset": 0.010245154322391354,
+      "zero_recovered": false,
+      "offset_recovered": true
+    },
+    {
+      "source": 18,
+      "repeats": 1,
+      "cfo": 20,
+      "zero": 0.01040413595067239,
+      "offset": 0.009573565639070528,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 18,
+      "repeats": 1,
+      "cfo": -70,
+      "zero": 0.010367281254449521,
+      "offset": 0.009445339930213015,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 18,
+      "repeats": 8,
+      "cfo": 20,
+      "zero": 0.01029319039126086,
+      "offset": 0.009280300606846618,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 18,
+      "repeats": 8,
+      "cfo": -70,
+      "zero": 0.010216468704696315,
+      "offset": 0.009184492002366691,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 19,
+      "repeats": 1,
+      "cfo": 20,
+      "zero": 0.007749314437580371,
+      "offset": 0.008002511043417468,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 19,
+      "repeats": 1,
+      "cfo": -70,
+      "zero": 0.0077648870719702456,
+      "offset": 0.008065752801649504,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 19,
+      "repeats": 8,
+      "cfo": 20,
+      "zero": 0.0017579307423033692,
+      "offset": 0.002707772820005825,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 19,
+      "repeats": 8,
+      "cfo": -70,
+      "zero": 0.00245066945884862,
+      "offset": 0.0023355202486881137,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 20,
+      "repeats": 1,
+      "cfo": 20,
+      "zero": 0.008355031046762986,
+      "offset": 0.008443087547665831,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 20,
+      "repeats": 1,
+      "cfo": -70,
+      "zero": 0.00837950085247253,
+      "offset": 0.008250860007663348,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 20,
+      "repeats": 8,
+      "cfo": 20,
+      "zero": 0.003155304732235867,
+      "offset": 0.012520391219505805,
+      "zero_recovered": true,
+      "offset_recovered": true
+    },
+    {
+      "source": 20,
+      "repeats": 8,
+      "cfo": -70,
+      "zero": 0.003713546048573348,
+      "offset": 0.0084656834615378,
+      "zero_recovered": true,
+      "offset_recovered": true
+    }
+  ]
+}

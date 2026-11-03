@@ -1,0 +1,18 @@
+{
+  "backend": "icraft-host-bf16",
+  "counterexample": {
+    "fixed_512_rotation_flips": [
+      "AM-SSB-WC:17->18"
+    ],
+    "note": "public-protocol recovery (no fixed rotation) must be 24/24; the fixed-512 rotation reproduces blind-clean1's single AM-SSB-WC->SC digital flip, proving a fixed rotation is one digital experiment, not a real unknown-phase capture.",
+    "public_protocol_no_flip": []
+  },
+  "fixed_window_offset_for_counterexample": 512,
+  "three_layer": {
+    "orig_correct": "24/24",
+    "recovered_correct": "24/24",
+    "rotated_fixed_window_correct": "23/24"
+  },
+  "token": "M29-RML24-FIX10CLASS24-INDEPENDENT-RX-DELIVERY-FIX1-REPLAY",
+  "window": "first 1024 of recovered payload (public-reference located)"
+}

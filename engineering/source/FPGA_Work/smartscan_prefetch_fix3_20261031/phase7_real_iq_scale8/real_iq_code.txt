@@ -1,0 +1,18 @@
+import numpy as np,json,hashlib,subprocess,sys
+from pathlib import Path
+root=Path(sys.argv[1]);root.mkdir();src=sorted(Path('/root/rml24_param_exec_1793366907/full45').glob('*.raw.npy'));assert len(src)>=24
+vectors=root/'vectors';vectors.mkdir();manifest=[]
+for i in range(24):
+ p=src[i*(len(src)-1)//23];a=np.load(p,allow_pickle=False);assert a.ndim==1 and np.iscomplexobj(a) and len(a)>=33792
+ w=a[32768:33792];x=np.column_stack((w.real,w.imag)).astype(np.float64)*8
+ assert np.isfinite(x).all();z=np.rint(x);clips=int(((z< -32768)|(z>32767)).sum());q=np.clip(z,-32768,32767).astype('<i2');v=vectors/(str(i)+'.i16');q.tofile(v)
+ manifest.append(dict(index=i,source=str(p),source_sha=hashlib.sha256(p.read_bytes()).hexdigest(),window_start=32768,scale=8,clipped_components=clips,vector_sha=hashlib.sha256(v.read_bytes()).hexdigest()))
+(root/'MANIFEST_FROZEN.json').write_text(json.dumps(manifest,indent=2))
+results=[]
+for i in range(24):
+ cmd=[sys.executable,'-I','/root/rml24_test_setup_w1QsCF/rml24_test_readiness_20261030/fpga/same_iq.py','--iq',str(vectors/(str(i)+'.i16')),'--out',str(root/str(i)),'--backend','fpga','--driver','/root/rml24_fpga_diag_1793380588/scan_xrt']
+ with (root/(str(i)+'.log')).open('w') as f:r=subprocess.run(cmd,stdout=f,stderr=subprocess.STDOUT)
+ v=json.loads((root/str(i)/'result.json').read_text());results.append(v)
+ if r.returncode:break
+out=dict(expected=24,executed=len(results),passed=sum(x['ok'] for x in results),clipped_components=sum(x['clipped_components'] for x in manifest),manifest=manifest,results=results)
+(root/'SUMMARY.json').write_text(json.dumps(out,indent=2));print(json.dumps(out));print('REAL_IQ_MATRIX_DONE',flush=True)

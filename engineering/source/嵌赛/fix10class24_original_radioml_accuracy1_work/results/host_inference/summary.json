@@ -1,0 +1,15 @@
+{
+  "backend": "HOST_BF16",
+  "expected_total": 480,
+  "finite": "480/480",
+  "frozen_model_json_sha": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+  "frozen_model_raw_sha": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+  "label_correct": "419/480",
+  "note": "Host (CPU) frozen BF16 reference inference on ORIGINAL RadioML test frames.  NOT a board NPU measurement.  NOT labelled board.",
+  "phase": "C_host_inference",
+  "repeat_argmax_deterministic": "480/480",
+  "repeat_logits_byte_identical": "480/480",
+  "result_layer": "HOST_BF16",
+  "sample_count": 480,
+  "task_id": "fix10class24-original-radioml-accuracy1"
+}

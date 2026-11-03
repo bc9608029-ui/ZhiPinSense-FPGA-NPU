@@ -1,0 +1,1393 @@
+{
+  "class_coverage": {
+    "ok": true,
+    "expected_classes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "present_classes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "missing": [],
+    "extra": [],
+    "repeat_short": [],
+    "min_repeat": 3
+  },
+  "hard_checks": [
+    {
+      "name": "class_coverage",
+      "ok": true,
+      "detail": "missing=[] extra=[] repeat_short=[] min_repeat=3"
+    },
+    {
+      "name": "primary_key_unique",
+      "ok": true,
+      "detail": "duplicate_capture_id=[] duplicate_(source_index,repeat_id)=[]"
+    },
+    {
+      "name": "positive_negative_not_mixed",
+      "ok": true,
+      "detail": "capture_id_overlap=[] neg_all_have_type=True neg_type_valid=True pos_has_negative_type=False"
+    },
+    {
+      "name": "all_values_finite",
+      "ok": true,
+      "detail": "nonfinite=[]"
+    },
+    {
+      "name": "baseline_identity_match",
+      "ok": true,
+      "detail": "mismatch=[]"
+    },
+    {
+      "name": "wc_sc_independent",
+      "ok": true,
+      "detail": "wc_modulations={'AM-SSB-WC'} sc_modulations={'AM-SSB-SC'}"
+    }
+  ],
+  "policy_sha256": "a1e5cb1830c0f93a7c8b18875140567fa7229a0ce24930c962e6d14f301be1a1",
+  "positive_sha256": "26898b8e5094a6fa611b59800a4c29fa156fd0e496b6c74e32b25829776b912b",
+  "negative_sha256": "f06bc12fdd62d0fb30b54b7dbe38b745875222a4c9aea1ad77fa941e2ad25fa4",
+  "frozen_model_sha256": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+  "identity_note": "identity_file_classes=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23] match=True",
+  "n_positive": 120,
+  "n_negative": 39,
+  "no_new_production_threshold": true,
+  "per_policy": [
+    {
+      "policy_id": "baseline_0100",
+      "kind": "baseline",
+      "residual_max": 0.1,
+      "n_positive": 120,
+      "positive_admitted": 120,
+      "positive_admit_rate": 1.0,
+      "positive_admit_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "false_reject_rate": 0.0,
+      "n_negative": 39,
+      "negative_false_admitted": 0,
+      "negative_false_admit_rate": 0.0,
+      "negative_false_admit_ci95": [
+        0.0,
+        0.08966685370757144
+      ],
+      "admitted_agreement_denominator": 120,
+      "admitted_agreement_numerator": 120,
+      "admitted_agreement_rate": 1.0,
+      "admitted_agreement_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "wc_n": 5,
+      "wc_admitted": 5,
+      "sc_n": 5,
+      "sc_admitted": 5,
+      "per_class": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          5,
+          5
+        ],
+        "2": [
+          5,
+          5
+        ],
+        "3": [
+          5,
+          5
+        ],
+        "4": [
+          5,
+          5
+        ],
+        "5": [
+          5,
+          5
+        ],
+        "6": [
+          5,
+          5
+        ],
+        "7": [
+          5,
+          5
+        ],
+        "8": [
+          5,
+          5
+        ],
+        "9": [
+          5,
+          5
+        ],
+        "10": [
+          5,
+          5
+        ],
+        "11": [
+          5,
+          5
+        ],
+        "12": [
+          5,
+          5
+        ],
+        "13": [
+          5,
+          5
+        ],
+        "14": [
+          5,
+          5
+        ],
+        "15": [
+          5,
+          5
+        ],
+        "16": [
+          5,
+          5
+        ],
+        "17": [
+          5,
+          5
+        ],
+        "18": [
+          5,
+          5
+        ],
+        "19": [
+          5,
+          5
+        ],
+        "20": [
+          5,
+          5
+        ],
+        "21": [
+          5,
+          5
+        ],
+        "22": [
+          5,
+          5
+        ],
+        "23": [
+          5,
+          5
+        ]
+      }
+    },
+    {
+      "policy_id": "cand_0110",
+      "kind": "threshold",
+      "residual_max": 0.11,
+      "n_positive": 120,
+      "positive_admitted": 120,
+      "positive_admit_rate": 1.0,
+      "positive_admit_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "false_reject_rate": 0.0,
+      "n_negative": 39,
+      "negative_false_admitted": 0,
+      "negative_false_admit_rate": 0.0,
+      "negative_false_admit_ci95": [
+        0.0,
+        0.08966685370757144
+      ],
+      "admitted_agreement_denominator": 120,
+      "admitted_agreement_numerator": 120,
+      "admitted_agreement_rate": 1.0,
+      "admitted_agreement_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "wc_n": 5,
+      "wc_admitted": 5,
+      "sc_n": 5,
+      "sc_admitted": 5,
+      "per_class": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          5,
+          5
+        ],
+        "2": [
+          5,
+          5
+        ],
+        "3": [
+          5,
+          5
+        ],
+        "4": [
+          5,
+          5
+        ],
+        "5": [
+          5,
+          5
+        ],
+        "6": [
+          5,
+          5
+        ],
+        "7": [
+          5,
+          5
+        ],
+        "8": [
+          5,
+          5
+        ],
+        "9": [
+          5,
+          5
+        ],
+        "10": [
+          5,
+          5
+        ],
+        "11": [
+          5,
+          5
+        ],
+        "12": [
+          5,
+          5
+        ],
+        "13": [
+          5,
+          5
+        ],
+        "14": [
+          5,
+          5
+        ],
+        "15": [
+          5,
+          5
+        ],
+        "16": [
+          5,
+          5
+        ],
+        "17": [
+          5,
+          5
+        ],
+        "18": [
+          5,
+          5
+        ],
+        "19": [
+          5,
+          5
+        ],
+        "20": [
+          5,
+          5
+        ],
+        "21": [
+          5,
+          5
+        ],
+        "22": [
+          5,
+          5
+        ],
+        "23": [
+          5,
+          5
+        ]
+      }
+    },
+    {
+      "policy_id": "cand_0120",
+      "kind": "threshold",
+      "residual_max": 0.12,
+      "n_positive": 120,
+      "positive_admitted": 120,
+      "positive_admit_rate": 1.0,
+      "positive_admit_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "false_reject_rate": 0.0,
+      "n_negative": 39,
+      "negative_false_admitted": 0,
+      "negative_false_admit_rate": 0.0,
+      "negative_false_admit_ci95": [
+        0.0,
+        0.08966685370757144
+      ],
+      "admitted_agreement_denominator": 120,
+      "admitted_agreement_numerator": 120,
+      "admitted_agreement_rate": 1.0,
+      "admitted_agreement_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "wc_n": 5,
+      "wc_admitted": 5,
+      "sc_n": 5,
+      "sc_admitted": 5,
+      "per_class": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          5,
+          5
+        ],
+        "2": [
+          5,
+          5
+        ],
+        "3": [
+          5,
+          5
+        ],
+        "4": [
+          5,
+          5
+        ],
+        "5": [
+          5,
+          5
+        ],
+        "6": [
+          5,
+          5
+        ],
+        "7": [
+          5,
+          5
+        ],
+        "8": [
+          5,
+          5
+        ],
+        "9": [
+          5,
+          5
+        ],
+        "10": [
+          5,
+          5
+        ],
+        "11": [
+          5,
+          5
+        ],
+        "12": [
+          5,
+          5
+        ],
+        "13": [
+          5,
+          5
+        ],
+        "14": [
+          5,
+          5
+        ],
+        "15": [
+          5,
+          5
+        ],
+        "16": [
+          5,
+          5
+        ],
+        "17": [
+          5,
+          5
+        ],
+        "18": [
+          5,
+          5
+        ],
+        "19": [
+          5,
+          5
+        ],
+        "20": [
+          5,
+          5
+        ],
+        "21": [
+          5,
+          5
+        ],
+        "22": [
+          5,
+          5
+        ],
+        "23": [
+          5,
+          5
+        ]
+      }
+    },
+    {
+      "policy_id": "cand_0130",
+      "kind": "threshold",
+      "residual_max": 0.13,
+      "n_positive": 120,
+      "positive_admitted": 120,
+      "positive_admit_rate": 1.0,
+      "positive_admit_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "false_reject_rate": 0.0,
+      "n_negative": 39,
+      "negative_false_admitted": 0,
+      "negative_false_admit_rate": 0.0,
+      "negative_false_admit_ci95": [
+        0.0,
+        0.08966685370757144
+      ],
+      "admitted_agreement_denominator": 120,
+      "admitted_agreement_numerator": 120,
+      "admitted_agreement_rate": 1.0,
+      "admitted_agreement_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "wc_n": 5,
+      "wc_admitted": 5,
+      "sc_n": 5,
+      "sc_admitted": 5,
+      "per_class": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          5,
+          5
+        ],
+        "2": [
+          5,
+          5
+        ],
+        "3": [
+          5,
+          5
+        ],
+        "4": [
+          5,
+          5
+        ],
+        "5": [
+          5,
+          5
+        ],
+        "6": [
+          5,
+          5
+        ],
+        "7": [
+          5,
+          5
+        ],
+        "8": [
+          5,
+          5
+        ],
+        "9": [
+          5,
+          5
+        ],
+        "10": [
+          5,
+          5
+        ],
+        "11": [
+          5,
+          5
+        ],
+        "12": [
+          5,
+          5
+        ],
+        "13": [
+          5,
+          5
+        ],
+        "14": [
+          5,
+          5
+        ],
+        "15": [
+          5,
+          5
+        ],
+        "16": [
+          5,
+          5
+        ],
+        "17": [
+          5,
+          5
+        ],
+        "18": [
+          5,
+          5
+        ],
+        "19": [
+          5,
+          5
+        ],
+        "20": [
+          5,
+          5
+        ],
+        "21": [
+          5,
+          5
+        ],
+        "22": [
+          5,
+          5
+        ],
+        "23": [
+          5,
+          5
+        ]
+      }
+    },
+    {
+      "policy_id": "cand_0140",
+      "kind": "threshold",
+      "residual_max": 0.14,
+      "n_positive": 120,
+      "positive_admitted": 120,
+      "positive_admit_rate": 1.0,
+      "positive_admit_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "false_reject_rate": 0.0,
+      "n_negative": 39,
+      "negative_false_admitted": 0,
+      "negative_false_admit_rate": 0.0,
+      "negative_false_admit_ci95": [
+        0.0,
+        0.08966685370757144
+      ],
+      "admitted_agreement_denominator": 120,
+      "admitted_agreement_numerator": 120,
+      "admitted_agreement_rate": 1.0,
+      "admitted_agreement_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "wc_n": 5,
+      "wc_admitted": 5,
+      "sc_n": 5,
+      "sc_admitted": 5,
+      "per_class": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          5,
+          5
+        ],
+        "2": [
+          5,
+          5
+        ],
+        "3": [
+          5,
+          5
+        ],
+        "4": [
+          5,
+          5
+        ],
+        "5": [
+          5,
+          5
+        ],
+        "6": [
+          5,
+          5
+        ],
+        "7": [
+          5,
+          5
+        ],
+        "8": [
+          5,
+          5
+        ],
+        "9": [
+          5,
+          5
+        ],
+        "10": [
+          5,
+          5
+        ],
+        "11": [
+          5,
+          5
+        ],
+        "12": [
+          5,
+          5
+        ],
+        "13": [
+          5,
+          5
+        ],
+        "14": [
+          5,
+          5
+        ],
+        "15": [
+          5,
+          5
+        ],
+        "16": [
+          5,
+          5
+        ],
+        "17": [
+          5,
+          5
+        ],
+        "18": [
+          5,
+          5
+        ],
+        "19": [
+          5,
+          5
+        ],
+        "20": [
+          5,
+          5
+        ],
+        "21": [
+          5,
+          5
+        ],
+        "22": [
+          5,
+          5
+        ],
+        "23": [
+          5,
+          5
+        ]
+      }
+    },
+    {
+      "policy_id": "cand_0150",
+      "kind": "threshold",
+      "residual_max": 0.15,
+      "n_positive": 120,
+      "positive_admitted": 120,
+      "positive_admit_rate": 1.0,
+      "positive_admit_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "false_reject_rate": 0.0,
+      "n_negative": 39,
+      "negative_false_admitted": 0,
+      "negative_false_admit_rate": 0.0,
+      "negative_false_admit_ci95": [
+        0.0,
+        0.08966685370757144
+      ],
+      "admitted_agreement_denominator": 120,
+      "admitted_agreement_numerator": 120,
+      "admitted_agreement_rate": 1.0,
+      "admitted_agreement_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "wc_n": 5,
+      "wc_admitted": 5,
+      "sc_n": 5,
+      "sc_admitted": 5,
+      "per_class": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          5,
+          5
+        ],
+        "2": [
+          5,
+          5
+        ],
+        "3": [
+          5,
+          5
+        ],
+        "4": [
+          5,
+          5
+        ],
+        "5": [
+          5,
+          5
+        ],
+        "6": [
+          5,
+          5
+        ],
+        "7": [
+          5,
+          5
+        ],
+        "8": [
+          5,
+          5
+        ],
+        "9": [
+          5,
+          5
+        ],
+        "10": [
+          5,
+          5
+        ],
+        "11": [
+          5,
+          5
+        ],
+        "12": [
+          5,
+          5
+        ],
+        "13": [
+          5,
+          5
+        ],
+        "14": [
+          5,
+          5
+        ],
+        "15": [
+          5,
+          5
+        ],
+        "16": [
+          5,
+          5
+        ],
+        "17": [
+          5,
+          5
+        ],
+        "18": [
+          5,
+          5
+        ],
+        "19": [
+          5,
+          5
+        ],
+        "20": [
+          5,
+          5
+        ],
+        "21": [
+          5,
+          5
+        ],
+        "22": [
+          5,
+          5
+        ],
+        "23": [
+          5,
+          5
+        ]
+      }
+    },
+    {
+      "policy_id": "cand_0160",
+      "kind": "threshold",
+      "residual_max": 0.16,
+      "n_positive": 120,
+      "positive_admitted": 120,
+      "positive_admit_rate": 1.0,
+      "positive_admit_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "false_reject_rate": 0.0,
+      "n_negative": 39,
+      "negative_false_admitted": 0,
+      "negative_false_admit_rate": 0.0,
+      "negative_false_admit_ci95": [
+        0.0,
+        0.08966685370757144
+      ],
+      "admitted_agreement_denominator": 120,
+      "admitted_agreement_numerator": 120,
+      "admitted_agreement_rate": 1.0,
+      "admitted_agreement_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "wc_n": 5,
+      "wc_admitted": 5,
+      "sc_n": 5,
+      "sc_admitted": 5,
+      "per_class": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          5,
+          5
+        ],
+        "2": [
+          5,
+          5
+        ],
+        "3": [
+          5,
+          5
+        ],
+        "4": [
+          5,
+          5
+        ],
+        "5": [
+          5,
+          5
+        ],
+        "6": [
+          5,
+          5
+        ],
+        "7": [
+          5,
+          5
+        ],
+        "8": [
+          5,
+          5
+        ],
+        "9": [
+          5,
+          5
+        ],
+        "10": [
+          5,
+          5
+        ],
+        "11": [
+          5,
+          5
+        ],
+        "12": [
+          5,
+          5
+        ],
+        "13": [
+          5,
+          5
+        ],
+        "14": [
+          5,
+          5
+        ],
+        "15": [
+          5,
+          5
+        ],
+        "16": [
+          5,
+          5
+        ],
+        "17": [
+          5,
+          5
+        ],
+        "18": [
+          5,
+          5
+        ],
+        "19": [
+          5,
+          5
+        ],
+        "20": [
+          5,
+          5
+        ],
+        "21": [
+          5,
+          5
+        ],
+        "22": [
+          5,
+          5
+        ],
+        "23": [
+          5,
+          5
+        ]
+      }
+    },
+    {
+      "policy_id": "joint_resid_0110_corr099",
+      "kind": "joint",
+      "residual_max": 0.11,
+      "n_positive": 120,
+      "positive_admitted": 120,
+      "positive_admit_rate": 1.0,
+      "positive_admit_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "false_reject_rate": 0.0,
+      "n_negative": 39,
+      "negative_false_admitted": 0,
+      "negative_false_admit_rate": 0.0,
+      "negative_false_admit_ci95": [
+        0.0,
+        0.08966685370757144
+      ],
+      "admitted_agreement_denominator": 120,
+      "admitted_agreement_numerator": 120,
+      "admitted_agreement_rate": 1.0,
+      "admitted_agreement_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "wc_n": 5,
+      "wc_admitted": 5,
+      "sc_n": 5,
+      "sc_admitted": 5,
+      "per_class": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          5,
+          5
+        ],
+        "2": [
+          5,
+          5
+        ],
+        "3": [
+          5,
+          5
+        ],
+        "4": [
+          5,
+          5
+        ],
+        "5": [
+          5,
+          5
+        ],
+        "6": [
+          5,
+          5
+        ],
+        "7": [
+          5,
+          5
+        ],
+        "8": [
+          5,
+          5
+        ],
+        "9": [
+          5,
+          5
+        ],
+        "10": [
+          5,
+          5
+        ],
+        "11": [
+          5,
+          5
+        ],
+        "12": [
+          5,
+          5
+        ],
+        "13": [
+          5,
+          5
+        ],
+        "14": [
+          5,
+          5
+        ],
+        "15": [
+          5,
+          5
+        ],
+        "16": [
+          5,
+          5
+        ],
+        "17": [
+          5,
+          5
+        ],
+        "18": [
+          5,
+          5
+        ],
+        "19": [
+          5,
+          5
+        ],
+        "20": [
+          5,
+          5
+        ],
+        "21": [
+          5,
+          5
+        ],
+        "22": [
+          5,
+          5
+        ],
+        "23": [
+          5,
+          5
+        ]
+      }
+    },
+    {
+      "policy_id": "joint_resid_0160_corr099",
+      "kind": "joint",
+      "residual_max": 0.16,
+      "n_positive": 120,
+      "positive_admitted": 120,
+      "positive_admit_rate": 1.0,
+      "positive_admit_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "false_reject_rate": 0.0,
+      "n_negative": 39,
+      "negative_false_admitted": 0,
+      "negative_false_admit_rate": 0.0,
+      "negative_false_admit_ci95": [
+        0.0,
+        0.08966685370757144
+      ],
+      "admitted_agreement_denominator": 120,
+      "admitted_agreement_numerator": 120,
+      "admitted_agreement_rate": 1.0,
+      "admitted_agreement_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "wc_n": 5,
+      "wc_admitted": 5,
+      "sc_n": 5,
+      "sc_admitted": 5,
+      "per_class": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          5,
+          5
+        ],
+        "2": [
+          5,
+          5
+        ],
+        "3": [
+          5,
+          5
+        ],
+        "4": [
+          5,
+          5
+        ],
+        "5": [
+          5,
+          5
+        ],
+        "6": [
+          5,
+          5
+        ],
+        "7": [
+          5,
+          5
+        ],
+        "8": [
+          5,
+          5
+        ],
+        "9": [
+          5,
+          5
+        ],
+        "10": [
+          5,
+          5
+        ],
+        "11": [
+          5,
+          5
+        ],
+        "12": [
+          5,
+          5
+        ],
+        "13": [
+          5,
+          5
+        ],
+        "14": [
+          5,
+          5
+        ],
+        "15": [
+          5,
+          5
+        ],
+        "16": [
+          5,
+          5
+        ],
+        "17": [
+          5,
+          5
+        ],
+        "18": [
+          5,
+          5
+        ],
+        "19": [
+          5,
+          5
+        ],
+        "20": [
+          5,
+          5
+        ],
+        "21": [
+          5,
+          5
+        ],
+        "22": [
+          5,
+          5
+        ],
+        "23": [
+          5,
+          5
+        ]
+      }
+    },
+    {
+      "policy_id": "joint_resid_0160_corr099_noclip_cfo",
+      "kind": "joint",
+      "residual_max": 0.16,
+      "n_positive": 120,
+      "positive_admitted": 120,
+      "positive_admit_rate": 1.0,
+      "positive_admit_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "false_reject_rate": 0.0,
+      "n_negative": 39,
+      "negative_false_admitted": 0,
+      "negative_false_admit_rate": 0.0,
+      "negative_false_admit_ci95": [
+        0.0,
+        0.08966685370757144
+      ],
+      "admitted_agreement_denominator": 120,
+      "admitted_agreement_numerator": 120,
+      "admitted_agreement_rate": 1.0,
+      "admitted_agreement_ci95": [
+        0.9689808335812966,
+        1.0
+      ],
+      "wc_n": 5,
+      "wc_admitted": 5,
+      "sc_n": 5,
+      "sc_admitted": 5,
+      "per_class": {
+        "0": [
+          5,
+          5
+        ],
+        "1": [
+          5,
+          5
+        ],
+        "2": [
+          5,
+          5
+        ],
+        "3": [
+          5,
+          5
+        ],
+        "4": [
+          5,
+          5
+        ],
+        "5": [
+          5,
+          5
+        ],
+        "6": [
+          5,
+          5
+        ],
+        "7": [
+          5,
+          5
+        ],
+        "8": [
+          5,
+          5
+        ],
+        "9": [
+          5,
+          5
+        ],
+        "10": [
+          5,
+          5
+        ],
+        "11": [
+          5,
+          5
+        ],
+        "12": [
+          5,
+          5
+        ],
+        "13": [
+          5,
+          5
+        ],
+        "14": [
+          5,
+          5
+        ],
+        "15": [
+          5,
+          5
+        ],
+        "16": [
+          5,
+          5
+        ],
+        "17": [
+          5,
+          5
+        ],
+        "18": [
+          5,
+          5
+        ],
+        "19": [
+          5,
+          5
+        ],
+        "20": [
+          5,
+          5
+        ],
+        "21": [
+          5,
+          5
+        ],
+        "22": [
+          5,
+          5
+        ],
+        "23": [
+          5,
+          5
+        ]
+      }
+    }
+  ]
+}

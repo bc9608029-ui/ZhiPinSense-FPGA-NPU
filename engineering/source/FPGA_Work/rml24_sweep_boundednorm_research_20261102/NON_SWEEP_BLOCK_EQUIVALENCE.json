@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "non_sweep_mode_input_cases": 480,
+  "scope": "Behavioral contract for exact injected stage block and saved input bytes; full board-source file diff and staging hashes still require receipt audit",
+  "stage_script_sha256": "aa66a6a4c75d1cbfeb9179b877b1b3638e598e0936d20a11c445805b7e11b496",
+  "module_sha256": "ebf380600d7dd9ea9ae1780b1d8d490f2cdd41b5257d7a6c0d0fb4d6677ea196",
+  "input_paths_unchanged": [
+    "FIXED",
+    "BAND_SCAN"
+  ],
+  "not_a_new_rf_result": true
+}

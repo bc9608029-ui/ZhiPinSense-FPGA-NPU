@@ -1,0 +1,67 @@
+# iCraft 3.39 compile configuration for the twelve-class raw-I/Q NPU partition.
+#
+# Target: ZG330 (30TAI "Zhuge"/"ZHUGE"). Framework: Onnx (opset 17, ir 8).
+#
+# KEY DIFFERENCE vs the eight-class rfnet_npu partition:
+#   eight-class = TWO FP32 inputs (iq[1,2,1024] + physical_features[1,3,1024]),
+#                 fed from the FPGA Mandatory Core dequantized domain.
+#   twelve-class = ONE FP32 input (iq[1,2,1024]) of RAW training-domain I/Q
+#                 (RMS 1.0 after ChannelPipeline); no FPGA feature extraction,
+#                 no dequantization.  The model computes its own features.
+#
+#   iq     [1,2,1024] FP32  layout FD
+#   logits [1,12]
+#
+# Frozen constraints honoured here (same as eight-class):
+#   * no model-structure/operator deletion or replacement
+#   * no math change, no silent HostBackend fallback
+#   * non-image input: no_transinput / no_imagemake disabled
+#   * calibration from frozen train split only (split ad_amr_v1_1_train)
+
+[parse]
+net_name = "model_12class"
+framework = "Onnx"
+network = "F:/FPGA_Work/_tmp_ad_amr_results_verify/ad_amr_data_v3_12class_ff2b3fb3_run/outputs/ad_amr_v1_1_data_v3_12class/formal/export/onnx/ad_amr_v1_1_opset17.onnx"
+inputs = "1,2,1024"
+inputs_layout = "FD"
+inputs_dtype = "fp32"
+pre_method = "nop"
+pre_scale = "nop"
+pre_mean = "nop"
+channel_swap = "nop"
+target = "zhuge"
+jr_path = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/jsonraw/"
+
+[optimize]
+target = "ZHUGE"
+json = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/jsonraw/model_12class_parsed.json"
+raw = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/jsonraw/model_12class_parsed.raw"
+jr_path = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/jsonraw/"
+
+[quantize]
+target = "zhuge"
+qdtype = "int8"
+bits = 8
+saturation = "kld"
+per = "channel"
+no_transinput = true
+no_imagemake = true
+forward_dir = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/calibration/cal_data"
+forward_list = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/calibration/forward_list.txt"
+json = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/jsonraw/model_12class_optimized.json"
+raw = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/jsonraw/model_12class_optimized.raw"
+jr_path = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/jsonraw/"
+
+[adapt]
+target = "ZHUGE"
+json = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/jsonraw/model_12class_quantized.json"
+raw = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/jsonraw/model_12class_quantized.raw"
+jr_path = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/jsonraw/"
+
+[generate]
+json = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/jsonraw/model_12class_adapted.json"
+raw = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/jsonraw/model_12class_adapted.raw"
+jr_path = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/jsonraw/"
+log_path = "F:/FPGA_Work/sdr_full_chain_12class_v1/model_12class/compile/logs/"
+rows = 4
+cols = 4

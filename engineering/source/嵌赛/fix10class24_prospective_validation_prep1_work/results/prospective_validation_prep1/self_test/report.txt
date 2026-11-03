@@ -1,0 +1,29 @@
+PROSPECTIVE_VALIDATION_CHECKER (task 39e5 prep1)
+policy_sha256=a1e5cb1830c0f93a7c8b18875140567fa7229a0ce24930c962e6d14f301be1a1
+positive_sha256=26898b8e5094a6fa611b59800a4c29fa156fd0e496b6c74e32b25829776b912b
+negative_sha256=f06bc12fdd62d0fb30b54b7dbe38b745875222a4c9aea1ad77fa941e2ad25fa4
+frozen_model_sha256=28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42
+n_positive=120 n_negative=39
+identity=identity_file_classes=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23] match=True
+
+HARD CHECKS:
+  [PASS] class_coverage: missing=[] extra=[] repeat_short=[] min_repeat=3
+  [PASS] primary_key_unique: duplicate_capture_id=[] duplicate_(source_index,repeat_id)=[]
+  [PASS] positive_negative_not_mixed: capture_id_overlap=[] neg_all_have_type=True neg_type_valid=True pos_has_negative_type=False
+  [PASS] all_values_finite: nonfinite=[]
+  [PASS] baseline_identity_match: mismatch=[]
+  [PASS] wc_sc_independent: wc_modulations={'AM-SSB-WC'} sc_modulations={'AM-SSB-SC'}
+
+PER-CANDIDATE (informational; NO threshold recommendation):
+  baseline_0100                      admit=120/120 (100.0%) false_reject=0.0% neg_false_admit=0/39 (0.0%) agree=120/120 (100.0%) wc=5/5 sc=5/5
+  cand_0110                          admit=120/120 (100.0%) false_reject=0.0% neg_false_admit=0/39 (0.0%) agree=120/120 (100.0%) wc=5/5 sc=5/5
+  cand_0120                          admit=120/120 (100.0%) false_reject=0.0% neg_false_admit=0/39 (0.0%) agree=120/120 (100.0%) wc=5/5 sc=5/5
+  cand_0130                          admit=120/120 (100.0%) false_reject=0.0% neg_false_admit=0/39 (0.0%) agree=120/120 (100.0%) wc=5/5 sc=5/5
+  cand_0140                          admit=120/120 (100.0%) false_reject=0.0% neg_false_admit=0/39 (0.0%) agree=120/120 (100.0%) wc=5/5 sc=5/5
+  cand_0150                          admit=120/120 (100.0%) false_reject=0.0% neg_false_admit=0/39 (0.0%) agree=120/120 (100.0%) wc=5/5 sc=5/5
+  cand_0160                          admit=120/120 (100.0%) false_reject=0.0% neg_false_admit=0/39 (0.0%) agree=120/120 (100.0%) wc=5/5 sc=5/5
+  joint_resid_0110_corr099           admit=120/120 (100.0%) false_reject=0.0% neg_false_admit=0/39 (0.0%) agree=120/120 (100.0%) wc=5/5 sc=5/5
+  joint_resid_0160_corr099           admit=120/120 (100.0%) false_reject=0.0% neg_false_admit=0/39 (0.0%) agree=120/120 (100.0%) wc=5/5 sc=5/5
+  joint_resid_0160_corr099_noclip_cfo admit=120/120 (100.0%) false_reject=0.0% neg_false_admit=0/39 (0.0%) agree=120/120 (100.0%) wc=5/5 sc=5/5
+
+no_new_production_threshold=1 (informational only; production 0.100 unchanged)

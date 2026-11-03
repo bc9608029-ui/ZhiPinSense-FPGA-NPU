@@ -1,0 +1,27 @@
+# SHA-256 manifest — hdmi_framebuffer_ui_v2 (Phase 1B/1C/2/3 deliverable set)
+# Generated 2026-10-04 after the Phase 1B PL rebuild PASSED with the buffer-select CDC fix
+# (WNS=3.427 / WHS=0.037 / DRC 0 Error; CDC-2/CDC-5/CDC-6 & TIMING-10/28 eliminated, see docs/CDC_WAIVERS.md).
+# Verify on Windows host:  cd /d F:\FPGA_Work\hdmi_framebuffer_ui_v2 && sha256sum -c SHA256SUMS.txt
+# (On the board, only the sw/* files are copied; verify with `sha256sum -c` against the sw/ subset.)
+fdc93f10fba78364cdce605108d8210c0b7c716891e4979b50ef790862427725 *fpga/vivado_prj/hdmi_framebuffer_720p.runs/impl_1/hdmi_framebuffer_720p_top.bit
+686bb1e312ccf2ac8d2d0eeb05c0e6654485611d21de09d7671ff8098b8be0b9 *fpga/vivado_prj/hdmi_framebuffer_720p.runs/impl_1/hdmi_framebuffer_720p_top_disable_icap.bit
+f2d664b825e42a17789660d82eab21b69365c14eb416ace26f175fffd77f20f5 *fpga/build_phase1b.tcl
+1366de826161a43910ee8d7e86cdae2f41ad2d432c8a3b258ee7b74d0cfa312a *fpga/constrs/hdmi_framebuffer_720p.xdc
+cd8c24fefc00a20127c1994c58b8457ee4ca305a754a7cef3933bed429a54adf *fpga/program_phase1b_jtag.tcl
+a6d78e36e3bd95efc50f0d588f9470c2a7ac39aca6c066377782880017923979 *fpga/procise_run_disable_icap.tcl
+fcad296b7b97635434f5e1c23923f8a32e758b664bbfbce9c0c68a91d9c6f7aa *fpga/call_procise_disable_icap.bat
+4be29904839062233a24c5cf422246d80bbb43ab942f0de14d635a93ee98aa07 *sw/phase1b_doublebuf_test.cpp
+4f367a85524afe81a65ca86416be51f36ea98addf62d2d45f1ec85d906d7eeb0 *sw/phase1c_dynamic_test.cpp
+3197d8494d00c8ebf7546fd02b520dd2b5bb718a67bb88c83054147ba9087810 *sw/phase2_ui_render.cpp
+ce4861584abd487dc907336319a38ec015be757b5760799cfc38ba285e8f6950 *sw/phase3_touch_test.cpp
+2549e95a70c2b67affb49f1ab8877cc517a7c162b3112e7d3312bf44e0a40c77 *sw/CMakeLists.txt
+bb4f24e980aeecf7920599bbcff600b836f51cda5f418b60d6e1934df58d78af *sw/build_on_board.sh
+5ac79c24fc7c170e5f547420b8287b5dcd855ef792a45953338743644ce97574 *sw/collect_logs.sh
+a21d8658288f4a99cddcacb3452b3bc2f0c901a05479080c1d9f377b7c73f5c7 *docs/MASTER_MANUAL.md
+4fd2f67b41b90b0ab848437a15a27957c759dabece09865c32007d382e5f98b3 *docs/PHASE1B_BRINGUP.md
+665e713dd43c08f3267c9332532e9df4def614e12597cf08ce1f07970f2aea89 *docs/PHASE1C_BRINGUP.md
+7a9de25c6e9f8b3dc0d143e188c56514e485975f72a5a349cec164a70e601922 *docs/PHASE2_BRINGUP.md
+2c46e447afe63d2fc07a298fa4c9d0148ea4e02dcf631122f690118d88d7eac9 *docs/PHASE3_BRINGUP.md
+6a3c68a2272d1820078c9351bfc5e1e900b51162218af03ab08e5602a5f69d1a *docs/BUILD_RESULTS.md
+791bd2ebb6b3f56e95f71037973d0b2a009acac17051f4eed5f0e33474f2528d *docs/CDC_WAIVERS.md
+5315d0519293441dc762f42aa963dc13366fe04e72dc3abb3c0ac019aa93dac0 *docs/HDMI_WORK_REPORT.md

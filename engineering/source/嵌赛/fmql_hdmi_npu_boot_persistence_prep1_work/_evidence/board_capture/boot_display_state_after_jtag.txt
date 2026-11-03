@@ -1,0 +1,133 @@
+===== [0] 采集元信息 =====
+hostname=U.FMSH
+date=2026-03-13T03:33:44Z
+uname=Linux U.FMSH 5.4.52 #3 SMP Fri Mar 13 13:44:29 CST 2026 aarch64 aarch64 aarch64 GNU/Linux
+id=uid=0(root) gid=0(root) groups=0(root)
+
+===== [A] 磁盘上的启动文件 =====
+--- /proc/cmdline ---
+console=ttyPS0,115200n8 earlycon=uart8250,mmio32,0xe0004000 loglevel=8 root=/dev/mmcblk0p2 rootwait rw clk_ignore_unused mem=1024M
+
+--- /proc/mtd ---
+dev:    size   erasesize  name
+mtd0: 00400000 00010000 "bootloader"
+mtd1: 01000000 00010000 "kernel"
+mtd2: 00000000 00010000 "rootfs"
+
+--- /proc/partitions ---
+major minor  #blocks  name
+
+   1        0      65536 ram0
+   1        1      65536 ram1
+   1        2      65536 ram2
+   1        3      65536 ram3
+   1        4      65536 ram4
+   1        5      65536 ram5
+   1        6      65536 ram6
+   1        7      65536 ram7
+   1        8      65536 ram8
+   1        9      65536 ram9
+   1       10      65536 ram10
+   1       11      65536 ram11
+   1       12      65536 ram12
+   1       13      65536 ram13
+   1       14      65536 ram14
+   1       15      65536 ram15
+  31        0       4096 mtdblock0
+  31        1      16384 mtdblock1
+ 179        0   61069312 mmcblk0
+ 179        1    1048576 mmcblk0p1
+ 179        2   27343750 mmcblk0p2
+
+--- mount (根/启动介质) ---
+/dev/mmcblk0p2 on / type ext4 (rw,relatime)
+
+--- 块设备符号链接 ---
+brw------- 1 root root 179, 0 Jan  1  1970 /dev/mmcblk0
+brw------- 1 root root 179, 1 Jan  1  1970 /dev/mmcblk0p1
+brw------- 1 root root 179, 2 Jan  1  1970 /dev/mmcblk0p2
+crw------- 1 root root  90, 0 Jan  1  1970 /dev/mtd0
+crw------- 1 root root  90, 1 Jan  1  1970 /dev/mtd0ro
+crw------- 1 root root  90, 2 Jan  1  1970 /dev/mtd1
+crw------- 1 root root  90, 3 Jan  1  1970 /dev/mtd1ro
+crw------- 1 root root  90, 4 Jan  1  1970 /dev/mtd2
+crw------- 1 root root  90, 5 Jan  1  1970 /dev/mtd2ro
+brw------- 1 root root  31, 0 Jan  1  1970 /dev/mtdblock0
+brw------- 1 root root  31, 0 Jan  1  1970 /dev/mtdblock0
+brw------- 1 root root  31, 1 Jan  1  1970 /dev/mtdblock1
+brw------- 1 root root  31, 1 Jan  1  1970 /dev/mtdblock1
+brw------- 1 root root  31, 2 Jan  1  1970 /dev/mtdblock2
+brw------- 1 root root  31, 2 Jan  1  1970 /dev/mtdblock2
+(无 mmc/mtd/ubi 设备节点)
+
+--- 候选启动/位流文件（路径+大小+SHA256）---
+>>> /boot
+>>> /lib/firmware
+>>> /media
+>>> /mnt
+>>> /run/media (不存在)
+>>> /opt/sdr
+
+--- /sys/class/fpga* 目录 ---
+drwxr-xr-x 2 root root 0 Mar 13 03:31 /sys/class/fpga_bridge
+drwxr-xr-x 2 root root 0 Mar  2  2023 /sys/class/fpga_manager
+drwxr-xr-x 2 root root 0 Mar  2  2023 /sys/class/fpga_manager
+drwxr-xr-x 2 root root 0 Mar 13 03:31 /sys/class/fpga_region
+
+===== [B] 开机实际使用的启动/FPGA 加载记录 =====
+--- dmesg: FSBL/u-boot/FPGA/bitstream/devcfg/PCAP ---
+[    0.000000] earlycon: uart8250 at MMIO32 0x00000000e0004000 (options '')
+[    0.000000] Kernel command line: console=ttyPS0,115200n8 earlycon=uart8250,mmio32,0xe0004000 loglevel=8 root=/dev/mmcblk0p2 rootwait rw clk_ignore_unused mem=1024M
+[    1.589073] FPGA manager framework
+[    1.728900] jffs2: version 2.2. (NAND) \xc2\xa9 2001-2006 Red Hat, Inc.
+[    1.821287] e0004000.serial: ttyPS0 at MMIO 0xe0004000 (irq = 26, base_baud = 12500000) is a 16550A
+[    1.886891] cadence-qspi e0000000.spi: n25q256a (32768 Kbytes)
+[    2.468271] fpga_manager fpga0: FMSH FMQL FPGA Manager registered
+
+--- systemd 单元（是否已有 fpga/ui/sdr 相关自启服务）---
+(无相关 systemd 单元 或 systemctl 不可用)
+
+--- 已启用单元 ---
+(无已启用相关单元)
+
+===== [C] 当前已加载的 FPGA 配置与运行态 =====
+--- frame_ctrl 版本寄存器 (0x40080000+0x0C) ---
+SKIP devmem (命令不存在)
+
+--- FPGA 重配接口（只读枚举，不加载）---
+>>> /sys/class/fpga_manager/fpga0
+  name=FMSH FMQL FPGA Manager
+  state=operating
+>>> /sys/class/fpga_manager/fpga0
+  name=FMSH FMQL FPGA Manager
+  state=operating
+(无 /dev/xdevcfg 设备节点)
+
+--- NPU 设备可识别（仅列设备节点，不操作）---
+crw------- 1 root root  10, 62 Jan  1  1970 /dev/udmabuf
+crw------- 1 root root 242,  0 Mar  2  2023 /dev/udmabuf0
+
+/dev/input:
+total 0
+crw------- 1 root root 13, 64 Mar  2  2023 event0
+(无 npu/udmabuf 设备节点)
+
+--- udmabuf0 sysfs（帧缓冲物理地址/容量）---
+/sys/class/u-dma-buf/udmabuf0/phys_addr=0x0000000030100000
+/sys/class/u-dma-buf/udmabuf0/size=134217728
+
+--- /dev/mem /dev/udmabuf0 /dev/xdevcfg 节点 ---
+crw------- 1 root root   1, 1 Jan  1  1970 /dev/mem
+crw------- 1 root root 242, 0 Mar  2  2023 /dev/udmabuf0
+(部分设备节点不存在)
+
+--- UI 服务端进程与 socket（RML23）---
+276 /root/rml23_route_f_fix9r1_test_1773373592/sdr_rml23_live_board_package_iq_rf_loopback_fix9r1/bin/board_ui_live_rml23 --sock=/run/sdr_amr_ui_rml23.sock --ctl-sock=/run/sdr_amr_control_rml23.sock --display-refresh-hz=30
+srwxr-xr-x 1 root root 0 Mar 13 03:32 /run/sdr_amr_ui_rml23.sock
+(无 socket/pid/log 残留)
+
+--- UI 日志末 20 行（若有）---
+(无 UI 日志)
+
+===== [采集结束] =====
+collect_boot_display_state.sh DONE (read-only; 无任何写入/加载/kill 副作用)

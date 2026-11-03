@@ -1,0 +1,767 @@
+
+ Icraft HostBackend — Icraft HostBackend 3.39.0.0 文档 
+ Skip to main content 
+ Back to top
+ Ctrl + K 
+ Icraft HostBackend 3.39.0.0 文档 
+ C++ API reference 
+ Namespace icraft 
+ Namespace icraft::hostbackend 
+ Namespace icraft::hostbackend::common 
+ Namespace icraft::hostbackend::common::detail 
+ Namespace icraft::hostbackend::port 
+ Namespace icraft::hostbackend::utils 
+ Namespace icraft::xir 
+ Namespace icraft::xrt 
+ Namespace std::chrono 
+ Namespace std::chrono_literals 
+ Struct AxisDistribution 
+ Struct BinarySpec 
+ Struct ConvSpec 
+ Struct ConvTransposeSpec 
+ Struct AxisKey 
+ Struct EinsumSubscript 
+ Struct LogicalCoordinate 
+ Struct RuntimeDistribution 
+ Struct RuntimeTensor 
+ Struct GridSampleSpec 
+ Struct PoolSpec 
+ Struct Quantization 
+ Struct ReductionSpec 
+ Struct Status 
+ Struct TensorDesc 
+ Struct UnarySpec 
+ Struct UnfoldSpec 
+ Struct PreparedOutput 
+ Class CustomDecoder 
+ Class CudaDevice 
+ Class CudaDeviceNode 
+ Class CudaMemRegion 
+ Class CudaMemRegionNode 
+ Class HostBackend 
+ Class HostBackendCudaUtils 
+ Class HostBackendNode 
+ Class HostBkndCudaUtils_impl 
+ Class HostBkndOpFuncManager 
+ Class HostBkndOpFuncRegister 
+ Enum BinaryKind 
+ Enum ErrorCode 
+ Enum InvalidValue 
+ Enum PaddingKind 
+ Enum PadKind 
+ Enum PoolKind 
+ Enum ReductionKind 
+ Enum ResizeKind 
+ Enum RoundingMode 
+ Enum ScatterReduction 
+ Enum StorageType 
+ Enum UnaryKind 
+ Function for(auto&input :sub_network.) 
+ Function for(auto&entry :output_tensors) 
+ Function for(auto&op :sub_network->) 
+ Function for(auto&output :sub_network.) 
+ Function GetCustomDecoder 
+ Function icraft::hostbackend::common::alignAxis 
+ Function icraft::hostbackend::common::binaryElementwise 
+ Function icraft::hostbackend::common::cast 
+ Function icraft::hostbackend::common::causalMask 
+ Function icraft::hostbackend::common::channelAffine 
+ Function icraft::hostbackend::common::channelShuffle 
+ Function icraft::hostbackend::common::concatenate 
+ Function icraft::hostbackend::common::convolution 
+ Function icraft::hostbackend::common::convTranspose 
+ Function icraft::hostbackend::common::detail::applyBinaryValue 
+ Function icraft::hostbackend::common::detail::applyPruneMapping 
+ Function icraft::hostbackend::common::detail::applyScatterReduction 
+ Function icraft::hostbackend::common::detail::applyUnaryValue 
+ Function icraft::hostbackend::common::detail::axisKey 
+ Function icraft::hostbackend::common::detail::bfloat16ToFloat 
+ Function icraft::hostbackend::common::detail::bitsToFloat 
+ Function icraft::hostbackend::common::detail::buildRuntimeDistribution 
+ Function icraft::hostbackend::common::detail::channelLastActivationLayout 
+ Function icraft::hostbackend::common::detail::checkedMultiply 
+ Function icraft::hostbackend::common::detail::clampFinite 
+ Function icraft::hostbackend::common::detail::coefficientForCoordinate 
+ Function icraft::hostbackend::common::detail::combinedAxisCoordinate 
+ Function icraft::hostbackend::common::detail::combinedAxisExtent 
+ Function icraft::hostbackend::common::detail::convTransposeOutputExtent 
+ Function icraft::hostbackend::common::detail::coordinateIsValid 
+ Function icraft::hostbackend::common::detail::correspondingAxis 
+ Function icraft::hostbackend::common::detail::cubicWeight 
+ Function icraft::hostbackend::common::detail::decodeIndex 
+ Function icraft::hostbackend::common::detail::distributionForAxis 
+ Function icraft::hostbackend::common::detail::findUniqueLayoutAxis 
+ Function icraft::hostbackend::common::detail::flattenAxes 
+ Function icraft::hostbackend::common::detail::float16ToFloat 
+ Function icraft::hostbackend::common::detail::floatToBfloat16 
+ Function icraft::hostbackend::common::detail::floatToBits 
+ Function icraft::hostbackend::common::detail::floatToFloat16 
+ Function icraft::hostbackend::common::detail::fromLogical 
+ Function icraft::hostbackend::common::detail::fromLogicalBroadcast 
+ Function icraft::hostbackend::common::detail::gridSourceCoordinate 
+ Function icraft::hostbackend::common::detail::layoutEquals 
+ Function icraft::hostbackend::common::detail::loadDenseExpressedValues 
+ Function icraft::hostbackend::common::detail::loadRaw 
+ Template Function icraft::hostbackend::common::detail::loadValue 
+ Function icraft::hostbackend::common::detail::logicalValue 
+ Function icraft::hostbackend::common::detail::mapPaddedCoordinate 
+ Function icraft::hostbackend::common::detail::mapSymmetricCoordinate 
+ Function icraft::hostbackend::common::detail::normalizeAxis 
+ Function icraft::hostbackend::common::detail::normalizeDistributionAxes 
+ Function icraft::hostbackend::common::detail::parseEinsumSubscript 
+ Function icraft::hostbackend::common::detail::physicalElementCount 
+ Function icraft::hostbackend::common::detail::quantizationIndex 
+ Function icraft::hostbackend::common::detail::quantizationParameters 
+ Function icraft::hostbackend::common::detail::readBroadcastValue 
+ Function icraft::hostbackend::common::detail::readChannelParameter 
+ Function icraft::hostbackend::common::detail::readExpressed 
+ Function icraft::hostbackend::common::detail::readIndex 
+ Function icraft::hostbackend::common::detail::reflectGridCoordinate 
+ Function icraft::hostbackend::common::detail::resizeCoordinate 
+ Function icraft::hostbackend::common::detail::rowMajorIndex 
+ Function icraft::hostbackend::common::detail::stableSigmoid 
+ Function icraft::hostbackend::common::detail::stableSoftplus 
+ Function icraft::hostbackend::common::detail::storeDenseExpressedValues 
+ Function icraft::hostbackend::common::detail::storedIndex 
+ Function icraft::hostbackend::common::detail::storeRaw 
+ Template Function icraft::hostbackend::common::detail::storeValue 
+ Function icraft::hostbackend::common::detail::toLogical 
+ Function icraft::hostbackend::common::detail::transform 
+ Template Function icraft::hostbackend::common::detail::transformCoordinates 
+ Function icraft::hostbackend::common::detail::uncoveredSuffixElements 
+ Function icraft::hostbackend::common::detail::validateTensor 
+ Function icraft::hostbackend::common::detail::validScatterReduction 
+ Function icraft::hostbackend::common::detail::writeExpressed 
+ Function icraft::hostbackend::common::einsum 
+ Function icraft::hostbackend::common::elementSize 
+ Function icraft::hostbackend::common::embedding 
+ Function icraft::hostbackend::common::gather 
+ Function icraft::hostbackend::common::gatherElements 
+ Function icraft::hostbackend::common::gridSample2d 
+ Function icraft::hostbackend::common::indexSelect 
+ Function icraft::hostbackend::common::instanceNorm 
+ Function icraft::hostbackend::common::layerNorm 
+ Function icraft::hostbackend::common::linearCopy 
+ Function icraft::hostbackend::common::matmul 
+ Function icraft::hostbackend::common::matmulNBits 
+ Function icraft::hostbackend::common::normalizeLp 
+ Function icraft::hostbackend::common::pad 
+ Function icraft::hostbackend::common::pixelShuffle 
+ Function icraft::hostbackend::common::pool 
+ Function icraft::hostbackend::common::prelu 
+ Function icraft::hostbackend::common::pruneAxis 
+ Function icraft::hostbackend::common::reduce 
+ Function icraft::hostbackend::common::reorderAxis 
+ Function icraft::hostbackend::common::resize2d(const TensorDesc&, TensorDesc&, ResizeKind, bool) 
+ Function icraft::hostbackend::common::resize2d(const TensorDesc&, TensorDesc&, bool) 
+ Function icraft::hostbackend::common::roll 
+ Function icraft::hostbackend::common::ropeDynamic 
+ Function icraft::hostbackend::common::roundValue 
+ Function icraft::hostbackend::common::scatterElement 
+ Function icraft::hostbackend::common::scatterND 
+ Function icraft::hostbackend::common::slice 
+ Function icraft::hostbackend::common::sliceDynamic 
+ Function icraft::hostbackend::common::softmax 
+ Function icraft::hostbackend::common::split 
+ Function icraft::hostbackend::common::stack 
+ Function icraft::hostbackend::common::tile 
+ Function icraft::hostbackend::common::topK 
+ Function icraft::hostbackend::common::transpose 
+ Function icraft::hostbackend::common::unaryElementwise 
+ Function icraft::hostbackend::common::unfold 
+ Function icraft::hostbackend::common::unstack 
+ Function icraft::hostbackend::common::update 
+ Function icraft::hostbackend::common::where 
+ Template Function icraft::hostbackend::port::binarySpec(const Op&, common::BinaryKind) 
+ Function icraft::hostbackend::port::binarySpec(const xir::Add&, common::BinaryKind) 
+ Function icraft::hostbackend::port::convSpec(const xir::Conv1d&) 
+ Function icraft::hostbackend::port::convSpec(const xir::Conv2d&) 
+ Function icraft::hostbackend::port::convSpec(const xir::Conv3d&) 
+ Function icraft::hostbackend::port::convTransposeSpec(const xir::ConvTranspose1d&) 
+ Function icraft::hostbackend::port::convTransposeSpec(const xir::ConvTranspose2d&) 
+ Function icraft::hostbackend::port::convTransposeSpec(const xir::ConvTranspose3d&) 
+ Function icraft::hostbackend::port::describeInputOutput 
+ Function icraft::hostbackend::port::describeTensor 
+ Function icraft::hostbackend::port::forwardAlignAxis 
+ Template Function icraft::hostbackend::port::forwardBatchNorm 
+ Template Function icraft::hostbackend::port::forwardBinary 
+ Function icraft::hostbackend::port::forwardCast 
+ Function icraft::hostbackend::port::forwardCausalMask 
+ Function icraft::hostbackend::port::forwardChannelShuffle 
+ Function icraft::hostbackend::port::forwardConcat 
+ Template Function icraft::hostbackend::port::forwardConvolution 
+ Template Function icraft::hostbackend::port::forwardConvTranspose 
+ Function icraft::hostbackend::port::forwardEinsum 
+ Function icraft::hostbackend::port::forwardEmbedding 
+ Function icraft::hostbackend::port::forwardGather 
+ Function icraft::hostbackend::port::forwardGatherElements 
+ Template Function icraft::hostbackend::port::forwardGatherImpl 
+ Function icraft::hostbackend::port::forwardGridNSample 
+ Function icraft::hostbackend::port::forwardIndexSelect 
+ Template Function icraft::hostbackend::port::forwardInstanceNorm 
+ Function icraft::hostbackend::port::forwardLayerNorm 
+ Template Function icraft::hostbackend::port::forwardLinearCopy 
+ Function icraft::hostbackend::port::forwardLogSoftmax 
+ Function icraft::hostbackend::port::forwardMatmul 
+ Function icraft::hostbackend::port::forwardMatmulNBits 
+ Function icraft::hostbackend::port::forwardNormalize 
+ Function icraft::hostbackend::port::forwardPad 
+ Function icraft::hostbackend::port::forwardPixelShuffle 
+ Template Function icraft::hostbackend::port::forwardPool 
+ Function icraft::hostbackend::port::forwardPReLU 
+ Function icraft::hostbackend::port::forwardPruneAxis 
+ Template Function icraft::hostbackend::port::forwardReduction 
+ Function icraft::hostbackend::port::forwardResize 
+ Function icraft::hostbackend::port::forwardRoll 
+ Function icraft::hostbackend::port::forwardRopeDynamic 
+ Template Function icraft::hostbackend::port::forwardScatter 
+ Function icraft::hostbackend::port::forwardScatterElement 
+ Function icraft::hostbackend::port::forwardScatterND 
+ Function icraft::hostbackend::port::forwardSimplifiedLayerNorm 
+ Function icraft::hostbackend::port::forwardSlice 
+ Function icraft::hostbackend::port::forwardSliceDynamic 
+ Function icraft::hostbackend::port::forwardSoftmax 
+ Template Function icraft::hostbackend::port::forwardSoftmaxImpl 
+ Function icraft::hostbackend::port::forwardSplit 
+ Function icraft::hostbackend::port::forwardStack 
+ Function icraft::hostbackend::port::forwardSwapOrder 
+ Function icraft::hostbackend::port::forwardTile 
+ Function icraft::hostbackend::port::forwardTopK 
+ Function icraft::hostbackend::port::forwardTranspose 
+ Template Function icraft::hostbackend::port::forwardUnary 
+ Function icraft::hostbackend::port::forwardUnfold 
+ Function icraft::hostbackend::port::forwardUnstack 
+ Function icraft::hostbackend::port::forwardUpdate 
+ Function icraft::hostbackend::port::forwardUpsample 
+ Function icraft::hostbackend::port::forwardWhere 
+ Function icraft::hostbackend::port::isCpuAddressable 
+ Function icraft::hostbackend::port::materializeInputs 
+ Template Function icraft::hostbackend::port::optionalReductionSpec 
+ Function icraft::hostbackend::port::paddingKind 
+ Function icraft::hostbackend::port::padKind 
+ Function icraft::hostbackend::port::poolSpec(const xir::MaxPool1d&, common::PoolKind) 
+ Function icraft::hostbackend::port::poolSpec(const xir::MaxPool2d&, common::PoolKind) 
+ Function icraft::hostbackend::port::poolSpec(const xir::MaxPool3d&, common::PoolKind) 
+ Function icraft::hostbackend::port::poolSpec(const xir::AvgPool1d&, common::PoolKind) 
+ Function icraft::hostbackend::port::poolSpec(const xir::AvgPool2d&, common::PoolKind) 
+ Function icraft::hostbackend::port::poolSpec(const xir::AvgPool3d&, common::PoolKind) 
+ Function icraft::hostbackend::port::prepareOutput 
+ Function icraft::hostbackend::port::publishOutput 
+ Function icraft::hostbackend::port::reductionSpec(const xir::Sum&, common::ReductionKind) 
+ Function icraft::hostbackend::port::reductionSpec(const xir::Mean&, common::ReductionKind) 
+ Function icraft::hostbackend::port::reductionSpec(const xir::Max&, common::ReductionKind) 
+ Function icraft::hostbackend::port::reductionSpec(const xir::Min&, common::ReductionKind) 
+ Function icraft::hostbackend::port::reductionSpec(const xir::Argmax&, common::ReductionKind) 
+ Function icraft::hostbackend::port::reductionSpec(const xir::Argmin&, common::ReductionKind) 
+ Function icraft::hostbackend::port::roundingMode 
+ Function icraft::hostbackend::port::scalarValue 
+ Function icraft::hostbackend::port::scalarValues 
+ Function icraft::hostbackend::port::scatterReduction 
+ Function icraft::hostbackend::port::storageType 
+ Function icraft::hostbackend::port::synchronizeInput 
+ Template Function icraft::hostbackend::port::unarySpec(const Op&, common::UnaryKind) 
+ Function icraft::hostbackend::port::unarySpec(const xir::ClampScalar&, common::UnaryKind) 
+ Function icraft::hostbackend::port::unarySpec(const xir::DivideScalar&, common::UnaryKind) 
+ Function icraft::hostbackend::port::unarySpec(const xir::ELU&, common::UnaryKind) 
+ Function icraft::hostbackend::port::unarySpec(const xir::Hardshrink&, common::UnaryKind) 
+ Function icraft::hostbackend::port::unarySpec(const xir::Hardsigmoid&, common::UnaryKind) 
+ Function icraft::hostbackend::port::unarySpec(const xir::Hardswish&, common::UnaryKind) 
+ Function icraft::hostbackend::port::unarySpec(const xir::Hardtanh&, common::UnaryKind) 
+ Function icraft::hostbackend::port::unarySpec(const xir::ReLU&, common::UnaryKind) 
+ Function icraft::hostbackend::port::unarySpec(const xir::Softplus&, common::UnaryKind) 
+ Function icraft::hostbackend::port::unarySpec(const xir::Softshrink&, common::UnaryKind) 
+ Function icraft::hostbackend::utils::Cast 
+ Function icraft::hostbackend::utils::DecodeWithDecoder 
+ Function icraft::hostbackend::utils::Ftmp2Tensor 
+ Function icraft::hostbackend::utils::Image2Tensor(const std::string&, int, int) 
+ Function icraft::hostbackend::utils::Image2Tensor(const std::string&, const xir::Value&, bool) 
+ Function ICRAFT_ADD_OP_TO_BACKEND(Input, HostBackend) 
+ Function ICRAFT_ADD_OP_TO_BACKEND(AlignAxis, HostBackend) 
+ Function ICRAFT_ADD_OP_TO_BACKEND(PruneAxis, HostBackend) 
+ Function ICRAFT_ADD_OP_TO_BACKEND(Cast, HostBackend) 
+ Function ICRAFT_ADD_OP_TO_BACKEND(Output, HostBackend) 
+ Function ICRAFT_CHECK 
+ Function ICRAFT_REGISTER_FFUNC_TO_BACKEND 
+ Function ICRAFT_REGISTER_NODE 
+ Function ICRAFT_REGISTER_PORTABLE_BINARY(Add, kAdd) 
+ Function ICRAFT_REGISTER_PORTABLE_BINARY(Div, kDivide) 
+ Function ICRAFT_REGISTER_PORTABLE_BINARY(Equal, kEqual) 
+ Function ICRAFT_REGISTER_PORTABLE_BINARY(Greater, kGreater) 
+ Function ICRAFT_REGISTER_PORTABLE_BINARY(GreaterEqual, kGreaterEqual) 
+ Function ICRAFT_REGISTER_PORTABLE_BINARY(Less, kLess) 
+ Function ICRAFT_REGISTER_PORTABLE_BINARY(LessEqual, kLessEqual) 
+ Function ICRAFT_REGISTER_PORTABLE_BINARY(Maximum, kMaximum) 
+ Function ICRAFT_REGISTER_PORTABLE_BINARY(Minimum, kMinimum) 
+ Function ICRAFT_REGISTER_PORTABLE_BINARY(Multiply, kMultiply) 
+ Function ICRAFT_REGISTER_PORTABLE_BINARY(NotEqual, kNotEqual) 
+ Function ICRAFT_REGISTER_PORTABLE_BINARY(Pow, kPow) 
+ Function ICRAFT_REGISTER_PORTABLE_CONVOLUTION(Conv1d) 
+ Function ICRAFT_REGISTER_PORTABLE_CONVOLUTION(Conv2d) 
+ Function ICRAFT_REGISTER_PORTABLE_CONVOLUTION(Conv3d) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Copy, forwardLinearCopy) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Reshape, forwardLinearCopy) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Squeeze, forwardLinearCopy) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Transpose, forwardTranspose) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(SwapOrder, forwardSwapOrder) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Softmax, forwardSoftmax) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(LogSoftmax, forwardLogSoftmax) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Matmul, forwardMatmul) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(MatmulNBits, forwardMatmulNBits) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Einsum, forwardEinsum) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Resize, forwardResize) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Upsample, forwardUpsample) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Unfold, forwardUnfold) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(GridNSample, forwardGridNSample) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Concat, forwardConcat) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Split, forwardSplit) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Gather, forwardGather) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(GatherElements, forwardGatherElements) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(IndexSelect, forwardIndexSelect) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Slice, forwardSlice) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Embedding, forwardEmbedding) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(TopK, forwardTopK) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(ScatterElement, forwardScatterElement) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(ScatterND, forwardScatterND) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(CausalMask, forwardCausalMask) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(RopeDynamic, forwardRopeDynamic) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(SliceDynamic, forwardSliceDynamic) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Update, forwardUpdate) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Where, forwardWhere) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Tile, forwardTile) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Pad, forwardPad) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Roll, forwardRoll) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(ChannelShuffle, forwardChannelShuffle) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(PixelShuffle, forwardPixelShuffle) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Stack, forwardStack) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Unstack, forwardUnstack) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(Normalize, forwardNormalize) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(LayerNorm, forwardLayerNorm) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(SimplifiedLayerNorm, forwardSimplifiedLayerNorm) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(BatchNorm1d, forwardBatchNorm) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(BatchNorm2d, forwardBatchNorm) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(BatchNorm3d, forwardBatchNorm) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(InstanceNorm1d, forwardInstanceNorm) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(InstanceNorm2d, forwardInstanceNorm) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(InstanceNorm3d, forwardInstanceNorm) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(PReLU, forwardPReLU) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(ConvTranspose1d, forwardConvTranspose) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(ConvTranspose2d, forwardConvTranspose) 
+ Function ICRAFT_REGISTER_PORTABLE_FORWARD(ConvTranspose3d, forwardConvTranspose) 
+ Function ICRAFT_REGISTER_PORTABLE_POOL(MaxPool1d, kMaximum) 
+ Function ICRAFT_REGISTER_PORTABLE_POOL(MaxPool2d, kMaximum) 
+ Function ICRAFT_REGISTER_PORTABLE_POOL(MaxPool3d, kMaximum) 
+ Function ICRAFT_REGISTER_PORTABLE_POOL(AvgPool1d, kAverage) 
+ Function ICRAFT_REGISTER_PORTABLE_POOL(AvgPool2d, kAverage) 
+ Function ICRAFT_REGISTER_PORTABLE_POOL(AvgPool3d, kAverage) 
+ Function ICRAFT_REGISTER_PORTABLE_REDUCTION(Sum, kSum) 
+ Function ICRAFT_REGISTER_PORTABLE_REDUCTION(Mean, kMean) 
+ Function ICRAFT_REGISTER_PORTABLE_REDUCTION(Max, kMaximum) 
+ Function ICRAFT_REGISTER_PORTABLE_REDUCTION(Min, kMinimum) 
+ Function ICRAFT_REGISTER_PORTABLE_REDUCTION(Argmax, kArgMaximum) 
+ Function ICRAFT_REGISTER_PORTABLE_REDUCTION(Argmin, kArgMinimum) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Abs, kAbs) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(ACos, kAcos) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(ACosh, kAcosh) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(ASin, kAsin) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(ASinh, kAsinh) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(ATan, kAtan) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(ATanh, kAtanh) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Cos, kCos) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Cosh, kCosh) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(ClampScalar, kHardTanh) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(DivideScalar, kDivideScalar) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(ELU, kElu) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Expand, kIdentity) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(GELU, kGelu) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Hardshrink, kHardShrink) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Hardsigmoid, kHardSigmoid) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Hardswish, kHardSwish) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Hardtanh, kHardTanh) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Log, kLog) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(LogSigmoid, kLogSigmoid) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Mish, kMish) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Neg, kNeg) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Not, kNot) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(ReLU, kRelu) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Sigmoid, kSigmoid) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(SiLU, kSilu) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Sin, kSin) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Sinh, kSinh) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Softplus, kSoftplus) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Softshrink, kSoftshrink) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Softsign, kSoftsign) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Sqrt, kSqrt) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Tan, kTan) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Tanh, kTanh) 
+ Function ICRAFT_REGISTER_PORTABLE_UNARY(Tanhshrink, kTanhShrink) 
+ Variable backend 
+ Variable currIdx 
+ Variable device 
+ Variable input_index 
+ Variable input_tensors 
+ Variable output_tensors 
+ Variable outputs 
+ Variable priority 
+ Variable t 
+ Variable tensor_map 
+ Define CUSTOM_API 
+ Define HOSTBKND_BACKEND_PCH_GUARD 
+ Define HOSTBKND_DECODE_CUSTOM_PCH_GUARD 
+ Define HOSTBKND_UTILS_PCH_GUARD 
+ Define ICRAFT_ADD_HOSTBKND_OP 
+ Define ICRAFT_HOSTBKND_REG_OP_FUNC_VAR_DEF 
+ Define ICRAFT_REGISTER_PORTABLE_BINARY 
+ Define ICRAFT_REGISTER_PORTABLE_CONVOLUTION 
+ Define ICRAFT_REGISTER_PORTABLE_FORWARD 
+ Define ICRAFT_REGISTER_PORTABLE_POOL 
+ Define ICRAFT_REGISTER_PORTABLE_REDUCTION 
+ Define ICRAFT_REGISTER_PORTABLE_UNARY 
+ Define REGISTER_CUDAUTILS 
+ Define REGISTER_CUSTOM_DECODER 
+ Typedef icraft::xrt::HostFForwardOp 
+ Typedef icraft::xrt::HostFInitOp 
+ 更新日志 
+ 更新日志 
+ .rst 
+ .pdf 
+ Icraft HostBackend 
+ 目录 
+ 一 简介 
+ 二 接口说明 
+ 2.1 C++接口使用说明 
+ 2.1.1 创建基于HostDevice或CudaDevice的Session 
+ 2.1.2 fakeQf模式 
+ 2.1.3 Utils使用方法 
+ 2.2 Python接口使用说明 
+ 2.2.1 创建基于HostDevice或CudaDevice的Session 
+ 2.2.2 fakeQf模式 
+ 2.2.3 Utils使用方法 
+ 2.3 其他HostBackend接口 
+ 三 算子说明 
+ 四 错误码 errorcode 
+ 4.1 错误码说明 
+ 五 License 
+ 六 索引 
+ 七 注意事项 
+ Icraft HostBackend # 
+ 一 简介 # 
+ Icraft HostBackend(以下简称HostBackend)是Icraft XRT的计算后端之一，主要负责Host(CPU)和Cuda(NvidiaGpu)计算资源的初始化和前向计算。 
+ 从用户角度上，HostBackend模块包括HostBackend、CudaDevice、CudaMemRegion三个数据结构（因为其特殊性，HostDevice和HostMemRegion由XRT直接定义和管理），分别是XRT的Backend、Device、MemRegion在CPU和CUDA
+计算资源上的具体实现。用户可以通过C++或Python的API实例化并使用HostBackend、HostDevice、CudaDevice，具体用法请见文档API说明和下文中的代码用例。 
+ 在内部实现上，HostBackend负责Icraft算子在CPU和CUDA后端硬件上的初始化和前向计算。 
+ 此外，为了方便用户和开发者，HostBackend提供了一个Utils接口，提供了若干功能函数，包括Image2Tensor、Ftmp2Tensor、Cast、DecodeWithDecoder，使用方法请见文档API说明和下文中的代码用例。 
+ 二 接口说明 # 
+ 下面的代码说明了如何使用HostBackend、HostDevice和CudaDevice。 
+ 2.1 C++接口使用说明 # 
+ 2.1.1 创建基于HostDevice或CudaDevice的Session # 
+ auto json_file = "D:/Workspace/V3.0/SSD_BY.json" ; 
+ auto raw_file = "D:/Workspace/V3.0/SSD_BY.raw" ; 
+ // 初始化设备 
+ auto host_device = HostDevice :: Default (); 
+ auto cuda_device = CudaDevice :: Default (); 
+ // 加载网络 
+ auto network = Network :: CreateFromJsonFile ( json_file ); 
+ network . loadParamsFromFile ( raw_file ); 
+ // 创建基于CudaDevice的Session, 
+ // 仅限于有Cuda设备的环境里，否则无法运行; 
+ // 在某些无法运行在Cuda设备上的算子会自动跳转到host_device上运行； 
+ auto sess_cuda = Session :: Create < HostBackend > ( network , { cuda_device }); 
+ // 创建基于HostDevice的Session 
+ auto sess_host = Session :: Create < HostBackend > ( network , { host_device }); 
+ // 创建Session2 
+ // 如果不适用模板Create方法，也可以使用CreateByOrder方法 
+ auto sess_cuda1 = Session :: CreateByOrder ( network , { host_backend }, { cuda_device }); 
+ auto sess_host1 = Session :: CreateByOrder ( network , { host_backend }, { host_device }); 
+ 2.1.2 fakeQf模式 # 
+ // 创建Backend对象 
+ auto host_backend = HostBackend :: Init (); 
+ // HostBackend有两个独有的接口：setFakeQf和getFakeQf。通过它们可以设置和查询HostBackend算子定点前向（数据类型非FP32的前向）是否以fake模式进行。 
+ // fakeQf是fake quantize forward的简称，该模式下定点前向过程中不做截位和饱和操作， 
+ // 因此可以直接对比HostBackend的指令前向结果和adapted模型的前向结果 
+ host_backend . setFakeQf ( true ); // 激活fakeQF模式 
+ bool fakeQf = host_backend . getFakeQf (); // 查询fakeQF模式 
+ if ( fakeQf ){ 
+ printf ( "Xrt HostBackend FakeQf mode on. \n " ); 
+ } 
+ host_backend . setFakeQf ( false ); // 关闭fakeQF模式 
+ fakeQf = host_backend . getFakeQf (); // 查询fakeQF模式 
+ if ( ! fakeQf ){ 
+ printf ( "Xrt HostBackend FakeQf mode off. \n " ); 
+ } 
+ 2.1.3 Utils使用方法 # 
+ // Image2Tensor使用方法
+// 读取image(opencv支持的图片类型，如png,jpg,jpng等）转为xrt::Tensor
+auto img_file = "D:/Workspace/imgs/cat224.png";
+// 读取img_file路径上的图片转为Tensor，高和宽均为原图大小
+auto img_tensor_orig = Image2Tensor(img_file);
+// 读取img_file路径上的图片转为Tensor，height resize为300, width保留原图大小
+auto img_tensor_300_224 = Image2Tensor(img_file, 300, -1）
+// 读取img_file路径上的图片转为Tensor，height保留原图大小, width resize为300
+auto img_tensor_224_300 = Image2Tensor(img_file, -1, 300）
+// Ftmp2Tensor使用方法
+// 读取ftmp二进制文件转为xrt::Tensor
+auto ftmp_file = "D:/Workspace/ftmp/value0.ftmp";
+// 读取ftmp_file路径下的ftmp二进制文件转为value对应的Tensor, value为xir的Value类数据
+// 根据value创建一个Tensor，把读取自ftmp_file的数据绑定到该Tensor上
+auto v_tensor = Ftmp2Tensor(ftmp_file, value);
+// Cast使用方法
+// 输出的Tensor是输入Tensor的数据类型(int8_t, float32等)和Layout(NHWC等)
+// 从input_dtype转为output_dtype的结果。需要注意，数据类型的转换需要由data_type提供normratio。
+// auto tensor_new = Cast(tensor_old, tensor_old_dtype, tensor_new_dtype, host_backend);
+// DecodeWithDecoder使用方法
+// 将数据文件使用用户提供的CustomDecoder模块解析为HostDevice上的Xrt Tensor
+// tensor_new = DecodeWithDecoder(dll_path, file_path, data_type);
+ 2.2 Python接口使用说明 # 
+ 2.2.1 创建基于HostDevice或CudaDevice的Session # 
+ import xir 
+ from xrt import * 
+ from host_backend import * 
+ import unittest 
+ import os 
+ json_file = "D:\debugs\hostbknd\jr\optimized\Resnet18_optimized.json" 
+ raw_file = "D:\debugs\hostbknd\jr\optimized\Resnet18_optimized.raw" 
+ img_file = "D:\debugs\hostbknd\imgs\cat224.png" 
+ # 初始化设备 
+ host_device = HostDevice . Default () 
+ cuda_device = CudaDevice . Default () 
+ # 加载网络 
+ network = xir . Network . CreateFromJsonFile ( json_file ) 
+ network . loadParamsFromFile ( raw_file ) 
+ # 创建基于CudaDevice的Session, 
+ # 仅限于有Cuda设备的环境里，否则无法运行; 
+ # 在某些无法运行在Cuda设备上的算子会自动跳转到host_device上运行； 
+ sess_cuda = Session . Create ([ HostBackend ], network . view ( 0 ), [ cuda_device ]) 
+ # 创建基于HostDevice的Session 
+ sess_host = Session . Create ([ HostBackend ], network . view ( 0 ), [ host_device ]) 
+ # 创建Session2 
+ # 如果不适用模板Create方法，也可以使用CreateByOrder方法 
+ sess_cuda1 = Session . CreateByOrder ( network . view ( 0 ), [ HostBackend . Init ()], [ CudaDevice . Default ()]) 
+ sess_host1 = Session . CreateByOrder ( network . view ( 0 ), [ HostBackend . Init ()], [ HostDevice . Default ()]) 
+ 2.2.2 fakeQf模式 # 
+ # 创建Backend对象 
+ host_backend = HostBackend . Init () 
+ # fakeQF模式 
+ # HostBackend有两个独有的接口：setFakeQf和getFakeQf。通过它们可以设置和查询HostBackend算子定点前向（数据类型非FP32的前向）是否以fake模式进行。 
+ # fakeQf模式下定点前向过程中不做截位和饱和操作，因此可以直接对比HostBackend的指令前向结果和adapted模型的前向结果 
+ host_bknd = HostBackend . Init () 
+ host_bknd . setFakeQf ( True ) # 激活fakeQF模式 
+ fakeQf = host_bknd . getFakeQf () # 查询fakeQF模式 
+ if fakeQf : 
+ print ( "HostBackend fakeQf mode is on." ) 
+ host_bknd . setFakeQf ( False ) # 关闭fakeQF模式 
+ fakeQf = host_bknd . getFakeQf () # 查询fakeQF模式 
+ if not fakeQf : 
+ print ( "HostBackend fakeQf mode is off." ) 
+ 2.2.3 Utils使用方法 # 
+ # Image2Tensor使用方法
+# 读取image(opencv支持的图片类型，如png,jpg,jpng等）转为xrt::Tensor
+img_file = "D:/Workspace/imgs/cat224.png";
+# 读取img_file路径上的图片转为Tensor，高和宽均为原图大小
+img_tensor_orig = Image2Tensor(img_file);
+# 读取img_file路径上的图片转为Tensor，height resize为300, width保留原图大小
+img_tensor_300_224 = Image2Tensor(img_file, 300, -1）
+# 读取img_file路径上的图片转为Tensor，height保留原图大小, width resize为300
+img_tensor_224_300 = Image2Tensor(img_file, -1, 300）
+# Ftmp2Tensor使用方法
+# 读取ftmp二进制文件转为xrt::Tensor
+ftmp_file = "D:/Workspace/ftmp/value0.ftmp";
+# 读取ftmp_file路径下的ftmp二进制文件转为value对应的Tensor, value为xir的Value类数据
+# 根据value创建一个Tensor，把读取自ftmp_file的数据绑定到该Tensor上
+v_tensor = Ftmp2Tensor(ftmp_file, value);
+# Cast使用方法
+# 输出的Tensor是输入Tensor的数据类型(int8_t, float32等)和Layout(NHWC等)
+# 从input_dtype转为output_dtype的结果。需要注意，数据类型的转换需要由data_type提供normratio。
+#tensor_new = Cast(tensor_old, tensor_old_dtype, tensor_new_dtype, host_backend);
+# DecodeWithDecoder使用方法
+# 将数据文件使用用户提供的CustomDecoder模块解析为HostDevice上的Xrt Tensor
+#tensor_new = DecodeWithDecoder(dll_path, file_path, data_type);
+ 2.3 其他HostBackend接口 # 
+ 除了上述几个接口之外，HostBackend还提供了若干其他接口，c++/Python接口使用方法和fakeQf模式类似，这里不再赘述，具体请参考API文档。 
+ 三 算子说明 # 
+ HostBackend主要实现内容是Icraft所有算子在HostBackend上的初始化、前向计算以及相关数据管理。
+目前实现了所有Icraft算子在HostDevice(CPU)上的实现，由于一些约束，部分计算尚未支持CUDA，在前向计算过程中CUDA不支持时会自动回落到Host上进行计算。
+下表是HostBackend支持的算子以及支持情况。 
+ 算子名称 
+ CPU支持 
+ CUDA支持 
+ 备注 
+ add 
+ √ 
+ √ 
+ align_axis 
+ √ 
+ √ 
+ avg_pool2d 
+ √ 
+ 部分支持 
+ 仅在左右pad相等且上下pad相等时支持CUDA 
+ batchnorm 
+ √ 
+ √ 
+ cast 
+ √ 
+ √ 
+ concat 
+ √ 
+ √ 
+ conv2d 
+ √ 
+ √ 
+ conv2d_transpose 
+ √ 
+ √ 
+ copy 
+ √ 
+ √ 
+ divide_scalar 
+ √ 
+ √ 
+ elu 
+ √ 
+ √ 
+ gelu 
+ √ 
+ √ 
+ hardop 
+ √ 
+ x 
+ hardop是硬件指令前向，暂不支持CUDA 
+ hardsigmoid 
+ √ 
+ 部分支持 
+ 仅当alpha参数为3时支持CUDA 
+ hardswish 
+ √ 
+ √ 
+ input 
+ x 标记算子，无需计算 
+ x 标记算子，无需计算 
+ layernorm 
+ √ 
+ √ 
+ matmul 
+ √ 
+ √ 
+ maxpool 
+ √ 
+ √ 
+ mish 
+ √ 
+ √ 
+ multiply 
+ √ 
+ √ 
+ output 
+ x 标记算子，无需计算 
+ x 标记算子，无需计算 
+ pad 
+ √ 
+ √ 
+ pixel_shuffle 
+ √ 
+ √ 
+ prelu 
+ 尚未支持定点前向 
+ 尚未支持定点前向 
+ prune_axis 
+ √ 
+ √ 
+ relu 
+ √ 
+ 部分支持 
+ max_value != DBL_MAX 或 threshold != 0时不支持CUDA计算 
+ reshape 
+ √ 
+ √ 
+ resize 
+ √ 
+ x 
+ 通过opencv实现，暂不支持CUDA计算 
+ sigmoid 
+ √ 
+ √ 
+ silu 
+ √ 
+ √ 
+ slice 
+ √ 
+ √ 
+ softmax 
+ √ 
+ √ 
+ split 
+ √ 
+ √ 
+ squeeze 
+ √ 
+ x 
+ 只是维度信息的更新，不需要CUDA加速 
+ swap_order 
+ √ 
+ √ 
+ tanh 
+ √ 
+ √ 
+ transpose 
+ √ 
+ √ 
+ upsample 
+ √ 
+ √ 
+ 四 错误码 errorcode # 
+ 4.1 错误码说明 # 
+ 12000: 
+ argueparse解析报错 
+ 12001: 
+ 缺少必须参数 
+ 12002: 
+ 文件或路径不存在 
+ 12003: 
+ 参数超出范围、格式错误 
+ 12004-12009: 
+ 预留错误码 
+ 12010: 
+ Dll加载相关错误 
+ 12011: 
+ 参数类型或值错误 
+ 12012: 
+ 文件加载失败 
+ 五 License # 
+ This project includes the following third-party libraries: 
+ [MNN]( alibaba/MNN ): Licensed under the Apache License 2.0. See the LICENSE file in the third-party library. 
+ [Libtorch]( pytorch/pytorch ): Licensed under the BSD-style. See the LICENSE file in the third-party library. 
+ 六 索引 # 
+ 索引 
+ C++ API reference 
+ Page Hierarchy 
+ Class Hierarchy 
+ File Hierarchy 
+ Full API 
+ 七 注意事项 # 
+ 在3.8版本开始支持Buyi和Zhuge两种Target，在算子实现内部添加了一个checkTarget接口，用来保证算子前向时input tensor是符合op绑定的target的。
+但是，目前有一个数据类型uint8处于悬空状态，它在网络初始阶段出现，为了兼容它，形变算子/cast/resize算子跳过了检查。
+后续需要定位清楚uint8在编译体系中的位置，然后再针对性地调整代码。 
+ 下一页 
+ API 
+ 目录
+ 一 简介 
+ 二 接口说明 
+ 2.1 C++接口使用说明 
+ 2.1.1 创建基于HostDevice或CudaDevice的Session 
+ 2.1.2 fakeQf模式 
+ 2.1.3 Utils使用方法 
+ 2.2 Python接口使用说明 
+ 2.2.1 创建基于HostDevice或CudaDevice的Session 
+ 2.2.2 fakeQf模式 
+ 2.2.3 Utils使用方法 
+ 2.3 其他HostBackend接口 
+ 三 算子说明 
+ 四 错误码 errorcode 
+ 4.1 错误码说明 
+ 五 License 
+ 六 索引 
+ 七 注意事项 
+作者： linzhengnan
+ © Copyright 2023, FMSH.
+ so the DOM is not blocked -->
+ 

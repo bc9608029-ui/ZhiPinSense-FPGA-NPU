@@ -1,0 +1,31 @@
+{
+  "schema": "candidate_image_manifest_v1",
+  "status": "OFFLINE_CANDIDATE_INPUTS_ONLY",
+  "generated": "2026-10-21",
+  "recommended_solution": "A (BOOT.bin 固化) 为目标; 离线仅交付方案B候选载荷(.bit 即 download.bit) + 方案A输入物与配方",
+  "candidate_b_download_bit": {
+    "description": "方案B候选: 合并位流按字节复制为 download.bit, 供 U-Boot fpga loadb 使用 (需板端确认 uEnv 实际路径)",
+    "generation": "byte copy of combined_npu_hdmi_disable_icap.bit",
+    "reproducible": true,
+    "source_sha256": "22fec95c64f3db727dd250e5768cdadec82f4c4d2de088392980b95a632932e9",
+    "source_size": 5980628
+  },
+  "candidate_a_boot_bin": {
+    "description": "方案A候选 BOOT.bin: Procise Create Image (闭源GUI) + .bif + FSBL + bl31 + u-boot + .bit",
+    "offline_generatable": false,
+    "blocker": "Procise 为闭源 GUI; .bif 位于 BOOT_Gen.rar (本地无 7z/unrar 无法解压); 板实际 FSBL 未采集",
+    "delivered": "input artifacts + documented procedure (docs/BOOT_PERSISTENCE_OPTIONS.md, scripts/build_candidate_image.sh 仅只读校验+配方输出, 不生成 .bin)"
+  },
+  "vendor_reference_artifacts": {
+    "dir": "_evidence/vendor_docs/vendor_lite_boot/",
+    "BOOT_bin_sha256": "ff350477e624c50d2f8180fb4b9130ec7688fbc7ca553412ed7c3dd2a68b31ef",
+    "standalone_BOOT_bin_sha256": "c87b7959cd9980520324b2c17688d9b7c1e85358bfcef085b1b00bd5a4d2f121",
+    "ai7030_top_disable_icap_bit_sha256": "6818b7f8dea8e0f9dbda1b0d11127255ee1ba8876326bc7708a633641784f72e",
+    "fsbl_sha256": "5501c470e07537a8fb369ae40641c20c16ab403fad558e65e0a4bbf380f2396f",
+    "bl31_sha256": "fdcf0af48a7f9716f73a477c3cc1b4cd90c914fe0e5ad7acc5ab282660802303",
+    "u_boot_sha256": "c4570e3e51128211905bdf20c7b7e0ea9cb7ca1492652a070ebdd985bc213e97",
+    "image_sha256": "1e40bfe97ae8eb638c15078eda28c57b4f6474872ce2753cf09be7d9238bfbed",
+    "dtb_sha256": "4e690cf065424e28ad7e39e0dc87a72f4c593f5bd4d99c11f7c4e892feee3038",
+    "uEnv_txt_sha256": "a13c985eb5031d75ec7069333897cae38944ba5fbadd509828b63e6a48408560"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "checkpoint": "/root/autodl-tmp/v31_final_run/qam_aware_v3_1_autodl_final/outputs/qam_aware_v3_1/formal/checkpoints/best.pt",
+  "checkpoint_epoch": 7,
+  "e2e": {
+    "checker_passed": true,
+    "opset": 17,
+    "op_types": {
+      "Add": 11,
+      "BatchNormalization": 3,
+      "Ceil": 3,
+      "Clip": 3,
+      "Concat": 8,
+      "Constant": 47,
+      "Conv": 24,
+      "Div": 2,
+      "Floor": 3,
+      "Gemm": 2,
+      "GreaterOrEqual": 3,
+      "Mul": 14,
+      "ReduceMean": 6,
+      "Relu": 22,
+      "Slice": 6,
+      "Sub": 4,
+      "Where": 3
+    },
+    "io": {
+      "inputs": [
+        {
+          "name": "iq",
+          "elem_type": 1,
+          "dtype": "FLOAT",
+          "shape": [
+            1,
+            2,
+            1024
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "logits",
+          "elem_type": 1,
+          "dtype": "FLOAT",
+          "shape": [
+            1,
+            8
+          ]
+        }
+      ]
+    },
+    "file_size_bytes": 2055828
+  },
+  "npu_partition": {
+    "checker_passed": true,
+    "opset": 17,
+    "op_types": {
+      "Add": 6,
+      "BatchNormalization": 3,
+      "Concat": 5,
+      "Conv": 24,
+      "Gemm": 2,
+      "Mul": 4,
+      "ReduceMean": 6,
+      "Relu": 22
+    },
+    "io": {
+      "inputs": [
+        {
+          "name": "iq",
+          "elem_type": 1,
+          "dtype": "FLOAT",
+          "shape": [
+            1,
+            2,
+            1024
+          ]
+        },
+        {
+          "name": "physical_features",
+          "elem_type": 1,
+          "dtype": "FLOAT",
+          "shape": [
+            1,
+            3,
+            1024
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "logits",
+          "elem_type": 1,
+          "dtype": "FLOAT",
+          "shape": [
+            1,
+            8
+          ]
+        }
+      ]
+    },
+    "file_size_bytes": 2037381
+  },
+  "allowed_operator_policy": [
+    "Add",
+    "BatchNormalization",
+    "Concat",
+    "Conv",
+    "Gemm",
+    "Mul",
+    "ReduceMean",
+    "Relu"
+  ],
+  "npu_partition_unexpected_operators": []
+}

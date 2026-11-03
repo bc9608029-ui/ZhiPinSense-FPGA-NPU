@@ -1,0 +1,18 @@
+_base: configs/ad_amr_v1_1.yaml
+device: cpu
+output_root: outputs/ad_amr_v1_1/smoke
+dataset:
+  train_samples: 420
+  val_samples: 420
+  num_workers: 0
+training:
+  epochs: 2
+  batch_size: 32
+  minimum_epochs_before_stopping: 2
+  early_stopping_patience: 2
+  distillation:
+    enabled: false
+evaluation:
+  batch_size: 64
+  samples: 420
+  ood_samples: 210

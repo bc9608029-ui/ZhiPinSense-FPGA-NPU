@@ -1,0 +1,7 @@
+{
+  "scope": "Paired prefix1/2/4/8 averaging from the SAME UNAVERAGED actual8-repeat captures; does not shorten TX frame; original frozen model; no RF or autostart changes",
+  "captures": 51,
+  "model_cases": 204,
+  "selection": "fixed first N recovered segments, no oracle selection",
+  "source_root": "/root/rml24_tx_precision_24rf_20261101"
+}

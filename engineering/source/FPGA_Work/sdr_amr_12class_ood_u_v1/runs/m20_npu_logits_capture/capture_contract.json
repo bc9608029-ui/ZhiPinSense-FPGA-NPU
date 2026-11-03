@@ -1,0 +1,47 @@
+{
+  "run_id": "m20_20261008T132316Z_796568",
+  "step": "npu_logits_capture",
+  "capture_tool": "tools/capture_npu_logits",
+  "input": {
+    "path": "parity_iq.bin",
+    "dtype": "float32",
+    "layout": "planar_iq_c_order",
+    "shape": [
+      31,
+      2,
+      1024
+    ],
+    "sha256": "a4b389ff2c9abb3c2b4b6dd299589c0b950d98a75189825be7587a92f8a9fa90"
+  },
+  "model_sha256": "2ae95275fe362bdc463e1ded5dfc974b5d77eaae5ce2d2184beebdb5dad7ec2c",
+  "label_order": [
+    "OOK",
+    "4ASK",
+    "AM-DSB",
+    "WBFM",
+    "2FSK",
+    "GFSK",
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "OFDM"
+  ],
+  "expected_output": {
+    "schema": "capture_npu_logits",
+    "fields": [
+      "n",
+      "output_dim",
+      "logits"
+    ],
+    "logits_numeric_type": "fp32",
+    "logits_kind": "raw_logits_no_softmax",
+    "note": "logits[i] is the 12-d raw logit vector for parity_iq.bin sample i"
+  },
+  "board_execution": {
+    "who": "user (ZG330 FMQL30TAI)",
+    "how": "run tools/capture_npu_logits on parity_iq.bin, then save its JSON output as npu_logits.json",
+    "then": "scripts/run_m20_logits_parity.sh --npu-logits npu_logits.json --manifest runs/m20_threshold_calibration/ood_u_threshold_manifest.json"
+  }
+}

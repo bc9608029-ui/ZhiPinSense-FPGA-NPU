@@ -1,0 +1,335 @@
+
+
+<pasted_content id="39e5">
+
+# M29-AMSSB-WC-SC-RAW24-DISTINGUISHABILITY-AUDIT
+
+## 1. 目标
+
+对 AM-SSB-WC 与 AM-SSB-SC 做专项判别测试，分别回答：
+
+1. 冻结 FP32 PyTorch 模型能否区分？
+2. host BF16/量化后是否退化？
+3. 板端 NPU 对完全相同输入能否区分？
+4. 经过双 SDR 同轴链路后，raw24 输出还能否区分？
+5. 如果不能，损失发生在模型、量化、板端NPU还是RF恢复环节？
+
+正式部署输出继续保持23类：
+
+WC + SC → AM-SSB
+
+本任务只增加诊断证据，不改变UI和正式分类口径。
+
+## 2. 基线与限制
+
+基线使用：
+
+- 模型 checkpoint：96cd25f8…
+- 板端 raw 模型：2425d990…
+- 24→23 合并契约：f9f7f381…
+- fix10prep2/clean2b 当前冻结模型、标签和预处理
+- clean2a RadioML兼容纯净数据
+- 当前 PC-TX/Board-RX 双 SDR 拓扑
+
+禁止：
+
+- 改模型、权重、标签顺序和预处理；
+- 重训或重新量化；
+- 改 WC/SC 信号生成参数；
+- 使用标签参与同步、CFO、增益恢复；
+- 取消正式23类合并；
+- 降低同步、残差、削顶、CFO/SRO门限；
+- 用不同输入比较不同后端；
+- 将 host BF16 冒充真实板端NPU；
+- 在 BPSK＋4ASK 基线链路通过前运行真实双SDR专项测试。
+
+## 3. 新工作目录
+
+F:\嵌赛\amssb_wc_sc_audit_work\
+
+交付：
+
+scripts/audit_amssb_wc_sc_raw24.py
+scripts/compare_amssb_three_backends.py
+board_package/iq_amssb_raw24_diagnostic.hpp
+host_tests/test_amssb_raw24_diagnostic.cpp
+docs/M29_RML23_AMSSB_WC_SC_RAW24_DISTINGUISHABILITY_AUDIT.md
+results/amssb_wc_sc/
+
+不得修改冻结模型目录。
+
+## 4. 样本设计
+
+不得只挑1个高置信度样本。
+
+### 4.1 纯净样本
+
+从 clean2a formal12000 中固定选取：
+
+- WC：100个；
+- SC：100个；
+- 固定 sample ID和seed；
+- 不按预测结果或置信度筛选。
+
+记录：
+
+- source_index；
+- seed；
+- source SHA256；
+- tensor SHA256；
+- 真实 raw24 标签。
+
+### 4.2 RadioML受损样本
+
+从冻结 RadioML 数据中固定选取 WC、SC：
+
+- 每个可用 SNR 档每类相同数量；
+- 至少覆盖低、中、高 SNR；
+- 每类总数不少于100；
+- 相同样本必须在各后端逐帧用 SHA 配对。
+
+### 4.3 板端与双 SDR 烟测
+
+先只选：
+
+- WC × 5；
+- SC × 5。
+
+不得按置信度挑样。10个样本通过后才允许扩大。
+
+## 5. 必须输出的 raw24 证据
+
+每个样本、每个后端都记录：
+
+source_index
+file_name
+input_tensor_sha256
+true_raw24_class
+raw24_top1
+raw24_top2
+wc_logit
+sc_logit
+wc_minus_sc_margin
+raw24_correct
+wc_sc_pair_correct
+deployed23_top1
+
+其中：
+
+wc_sc_pair_correct =
+  WC样本且wc_logit>sc_logit
+  或
+  SC样本且sc_logit>wc_logit
+
+类别索引必须从冻结标签合同读取并断言，不允许凭记忆硬编码；如合同不是预期 WC/SC 索引，立即停止。
+
+正式 deployed23_top1 仍按冻结合并逻辑计算。
+
+## 6. Phase A：FP32纯净数据测试
+
+使用冻结 PyTorch FP32模型运行200个纯净样本。
+
+输出：
+
+- WC recall；
+- SC recall；
+- WC↔SC混淆数；
+- 错到其他类别的数量；
+- balanced accuracy；
+- wc_logit-sc_logit 分布；
+- raw24与deployed23混淆矩阵。
+
+判定：
+
+FP32_CLEAN_WC_SC_STABLE
+
+建议门槛：
+
+- WC recall ≥ 0.95；
+- SC recall ≥ 0.95；
+- balanced accuracy ≥ 0.95；
+- excluded=0；
+- NaN/Inf=0。
+
+低于门槛只报告，不改模型。
+
+## 7. Phase B：FP32与host量化逐帧对照
+
+对相同输入SHA运行：
+
+- FP32 PyTorch；
+- host量化/BF16参考后端。
+
+逐帧比较：
+
+- raw24 top1；
+- WC/SC顺序；
+- logits cosine；
+- max absolute difference；
+- WC↔SC翻转数；
+- merged23翻转数。
+
+必须分别报告：
+
+FP32本身错误
+FP32→量化新增错误
+WC↔SC量化翻转
+错到其他类别的量化翻转
+
+禁止只报告总体准确率。
+
+## 8. Phase C：真实板端NPU直注
+
+由用户执行，API不得碰板。
+
+输入必须是Phase A/B完全相同的D2恢复tensor，按SHA逐帧核对。板端必须导出原始24维 logits，不得只保存合并后的23类结果。
+
+先运行 WC×5、SC×5。
+
+比较三个后端：
+
+FP32
+host量化参考
+board NPU
+
+只有满足以下条件才允许归因板端NPU：
+
+- 三端 input tensor SHA完全相同；
+- 标签合同SHA相同；
+- 24维logits完整；
+- 样本逐帧一一配对；
+- 板端NPU与host量化结果确有新增差异。
+
+没有真实板端数据时必须写：
+
+BOARD_NPU_ATTRIBUTION_NOT_PROVEN
+
+## 9. Phase D：双 SDR 同轴链路
+
+前置条件：
+
+fix10prep2 BPSK+4ASK：
+scored=2
+prediction_agreement=2/2
+negative_control=PASS
+tx_restore_ok=1
+rx_restore_ok=1
+
+当前 PREPARE→PREPARED 超时必须先修好，禁止绕过或把2秒超时放宽。
+
+然后运行 WC×5、SC×5：
+
+PC纯净IQ
+→ TX Pluto
+→ 50Ω同轴
+→ RX Pluto
+→ CFO/SRO/同步/增益恢复
+→ recovered tensor
+→ 板端NPU raw24 logits
+→ 24→23合并
+
+每个样本额外记录：
+
+payload_sha_pre
+payload_sha_post
+burst_sha
+recovered_tensor_sha256
+training_corr
+training_residual
+coarse_cfo_hz
+fine_cfo_hz
+total_cfo_hz
+SRO
+clip_count
+raw24_top1
+wc_logit
+sc_logit
+deployed23_top1
+
+恢复失败的样本不得送入模型。
+
+## 10. 分层归因规则
+
+### 模型问题
+
+若FP32对同一输入已经错误：
+
+MODEL_OR_DATA_DOMAIN_LIMITATION
+
+### host量化问题
+
+若FP32正确、host量化错误：
+
+HOST_QUANTIZATION_ADDED_ERROR
+
+### 板端NPU问题
+
+若FP32和host量化正确、同SHA板端NPU错误：
+
+BOARD_NPU_ADDED_ERROR
+
+### RF/恢复问题
+
+若NPU直注正确，但双SDR恢复tensor变化后错误：
+
+RF_RECOVERY_DOMAIN_SHIFT
+
+### 证据不足
+
+任何输入SHA、合同SHA或logits不齐：
+
+ATTRIBUTION_NOT_PROVEN
+
+## 11. 验收输出
+
+必须给出四张2×2或扩展混淆矩阵：
+
+1. FP32 clean；
+2. FP32 RadioML受损；
+3. host量化；
+4. board NPU；
+5. 双 SDR（完成后追加）。
+
+还必须给出以下汇总：
+
+WC_recall
+SC_recall
+balanced_accuracy
+WC_to_SC
+SC_to_WC
+WC_or_SC_to_other
+quantization_added_errors
+board_npu_added_errors
+rf_recovery_added_errors
+
+## 12. 状态限制
+
+离线Phase A/B完成后最高只能写：
+
+M29-RML23-AMSSB-WC-SC-HOST-AUDIT-COMPLETE
+
+真实板端NPU完成后才能写：
+
+M29-RML23-AMSSB-WC-SC-BOARD-NPU-AUDITED
+
+真实双SDR完成后才能写：
+
+M29-RML23-AMSSB-WC-SC-DUAL-SDR-AUDITED
+
+禁止写 24CLASS_PASS，除非真实链路下预先规定的样本量和门槛全部通过。
+
+## 13. 停止点
+
+先完成Phase A和Phase B并停下汇报：
+
+- WC/SC各自召回率；
+- 兄弟互换数量；
+- 错到其他类数量；
+- FP32→量化新增错误；
+- 逐帧输入SHA一致性；
+- 唯一可支持的归因结论。
+
+暂不修改模型，暂不碰板，暂不运行双SDR。
+
+———
+</pasted_content id="39e5">

@@ -1,0 +1,73 @@
+baseline_config: configs/baseline.yaml
+output_root: outputs/qam_aware_v3_2/formal
+
+# Frozen V2 champion checkpoint: source of the backbone initialization AND the
+# distillation teacher.  It is only read, never modified.
+v2_checkpoint: init/v2_time_power_phase_best.pt
+
+model_contract:
+  iq_channels: 2
+  physical_channels: 3
+  sample_length: 1024
+  class_order: [BPSK, QPSK, 8PSK, 16QAM, 64QAM, 2FSK, CPFSK, OFDM]
+
+model:
+  # Full precision, exactly as the frozen V2 was trained/evaluated.  This is
+  # what makes "initial V3.2 logits == V2 logits" verifiable end-to-end and
+  # keeps the promotion comparison apples-to-apples.  The quantized
+  # DeploymentInputEmulator path remains available and unchanged.
+  simulate_hardware_inputs: false
+  time_base_channels: 22
+  physical_base_channels: 8
+  fusion_features: 64
+  dropout: 0.1
+  delta_hidden: 16
+  moment_order: 4
+
+# Channel, signal and dataset are inherited unchanged from baseline.yaml (the
+# exact V2-mild impairment set, 8 modulations, 1024 samples, 21 SNR points,
+# 25200/5040/8400 split).  No overrides: V3.2 trains on the same distribution
+# as the frozen champion it must preserve.
+
+training:
+  epochs: 60
+  batch_size: 128
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  scheduler: cosine
+  early_stopping_patience: 12
+  min_delta: 0.0001
+  # Select the checkpoint on macro-F1 (aligned with the acceptance bar), and
+  # allow enough epochs for the zero-gated delta branch to learn, but do NOT
+  # force the full trajectory (V3.1's forced-60 overfit is the anti-pattern).
+  minimum_epochs_before_stopping: 10
+  checkpoint_metric: val_macro_f1
+  checkpoint_mode: max
+  # No QAM reweighting of the base classifier — the V3.1 failure mode.  All
+  # classes carry weight 1.0; the QAM improvement must come from the delta
+  # branch alone, and only if it does not regress other classes (promotion gate).
+  class_weights: {BPSK: 1.0, QPSK: 1.0, 8PSK: 1.0, 16QAM: 1.0, 64QAM: 1.0, 2FSK: 1.0, CPFSK: 1.0, OFDM: 1.0}
+  label_smoothing: 0.0
+  gradient_clip_norm: 5.0
+  amp: true
+  # Knowledge distillation anchors the learnable V2 backbone to the frozen V2
+  # teacher, so the delta branch can only add a correction, never drift the
+  # preserved logit path.  At init student == teacher, so the KL term is zero.
+  distillation:
+    enabled: true
+    temperature: 4.0
+    alpha: 0.7
+
+evaluation:
+  batch_size: 256
+  samples_per_modulation_per_snr: 250
+  snr_values: [-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+  comparison_config: configs/qam_aware_v2.yaml
+
+# Reserved until model/hyperparameters are frozen.  Training and development
+# scripts must never instantiate this namespace.
+final_blind_test:
+  seed: 26093032
+  split: v3_2_final_blind_test
+  samples: 16800

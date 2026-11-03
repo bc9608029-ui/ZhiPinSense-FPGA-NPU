@@ -1,0 +1,421 @@
+{
+  "run_dir": "E:\\FPGA_Work\\rml24_tx_console_integration_20261031\\console\\runs\\20261031_173356_447000",
+  "result": {
+    "real": true,
+    "count": 24,
+    "error": null,
+    "restore_errors": [],
+    "restore_readback": [
+      {
+        "role": "tx",
+        "key": "hardwaregain",
+        "expected": "-10.000000",
+        "actual": "-10.000000",
+        "ok": true
+      },
+      {
+        "role": "tx",
+        "key": "sampling_frequency",
+        "expected": "30720000",
+        "actual": "30720000",
+        "ok": true
+      },
+      {
+        "role": "tx",
+        "key": "rf_bandwidth",
+        "expected": "18000000",
+        "actual": "18000000",
+        "ok": true
+      },
+      {
+        "role": "tlo",
+        "key": "frequency",
+        "expected": "2450000000",
+        "actual": "2450000000",
+        "ok": true
+      },
+      {
+        "role": "tlo",
+        "key": "powerdown",
+        "expected": "0",
+        "actual": "0",
+        "ok": true
+      }
+    ],
+    "restore_status": "READBACK_RESTORE_OK"
+  },
+  "events": [
+    {
+      "event": "prepared",
+      "time_ns": 1793439238302726200,
+      "frames": 24,
+      "real": true
+    },
+    {
+      "event": "configured",
+      "time_ns": 1793439239057718200,
+      "uri": "usb:1.9.5",
+      "center_hz": 2400000000,
+      "gain_db": -40.0
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439239064723300,
+      "name": "OOK",
+      "index": 0,
+      "source_sha256": "d2771826f8dffc698be6f256f11a4801db210f77e8a58120822e3fab994c772d",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439245081708800,
+      "index": 0
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439245335874700,
+      "name": "4ASK",
+      "index": 1,
+      "source_sha256": "373cb06b42e6aa080d94315ebe695324883ae8332253f93c6f4affd41086525b",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439251345239200,
+      "index": 1
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439251599625400,
+      "name": "8ASK",
+      "index": 2,
+      "source_sha256": "ba5a4cfe4743aaebc1213f2c5548e6aa6ef9b5ea9355fea5660b44071ba0f218",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439257619390900,
+      "index": 2
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439257873931300,
+      "name": "BPSK",
+      "index": 3,
+      "source_sha256": "04d67b525d37a53a55b92da708ccb6dc8d4a531e12a57ef2012ae86f3375402a",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439263873361800,
+      "index": 3
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439264128359700,
+      "name": "QPSK",
+      "index": 4,
+      "source_sha256": "5eeea9c809631b2c297bcb7622c0a98366d98c7f76869631fb747d92a5231ba3",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439270119756400,
+      "index": 4
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439270371581300,
+      "name": "8PSK",
+      "index": 5,
+      "source_sha256": "3ba97b039246cbb960a2da906441fb0bed1921df912f7ba9244f85144f4b1087",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439276365101800,
+      "index": 5
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439276634324700,
+      "name": "16PSK",
+      "index": 6,
+      "source_sha256": "d6e95d8df2043788f5fcee0ec8fb35353470f11912480616d2399f8d6ee3a931",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439282653787700,
+      "index": 6
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439282910109900,
+      "name": "32PSK",
+      "index": 7,
+      "source_sha256": "f24bcf38bb0a9c099385c685982fb1178254fe68d32155469a5a9b258432e2ec",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439288920661200,
+      "index": 7
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439289177147100,
+      "name": "16APSK",
+      "index": 8,
+      "source_sha256": "e06d6a643df9b26124e91beed03c2f7ba4db56ce48191cffcb4e84868b644ce1",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439295179294900,
+      "index": 8
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439295463996000,
+      "name": "32APSK",
+      "index": 9,
+      "source_sha256": "cea5071a0ccb3b9b0c1f4899b0167f0ce0317506f674fc8a50777c57f5aae285",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439301461433000,
+      "index": 9
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439301717184500,
+      "name": "64APSK",
+      "index": 10,
+      "source_sha256": "b2c068214280fe0b251afa217e14afe15a7a2bd94039744546c5cfd60718c422",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439307718344300,
+      "index": 10
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439307972436000,
+      "name": "128APSK",
+      "index": 11,
+      "source_sha256": "927b881dda6237a7245a93b433942c154c048b88b307987c63bbb928e42d1337",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439313962682900,
+      "index": 11
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439314217194000,
+      "name": "16QAM",
+      "index": 12,
+      "source_sha256": "0a615699b917c7603bc6453aa15a77f5cdd7d2136a1db8329757f16f630cd22e",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439320223414000,
+      "index": 12
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439320480354400,
+      "name": "32QAM",
+      "index": 13,
+      "source_sha256": "614c4e521fcf7299331f2297295aa46e0ba8af758c7634803fd520cdbb7b91df",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439326486585400,
+      "index": 13
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439326738424600,
+      "name": "64QAM",
+      "index": 14,
+      "source_sha256": "11f679eee5e954e4734ce90e87a7bd58b8a52955862e07ff183ff953ad4d0c40",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439332743832600,
+      "index": 14
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439332999379100,
+      "name": "128QAM",
+      "index": 15,
+      "source_sha256": "3987a8b29f93a836c4072efd047f8f34ffbd1a45a84642e8fdc4a847ff0f6578",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439339003956700,
+      "index": 15
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439339287168400,
+      "name": "256QAM",
+      "index": 16,
+      "source_sha256": "722f22f49b8cddc9022be6e709cf07ad2021f13f7c557823ee160c2e511a2b1a",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439345289515700,
+      "index": 16
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439345544367800,
+      "name": "AM-SSB-WC",
+      "index": 17,
+      "source_sha256": "ac9f96482f95f4c5ed60e27e2f7f4a67d9da188d176126e150f6abf1b63f6377",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439351546291100,
+      "index": 17
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439351799944300,
+      "name": "AM-SSB-SC",
+      "index": 18,
+      "source_sha256": "ba49b99434e6b31cf15e806de7d8cd2a066f6f6bb9fc06d351ac665727996850",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439357797670500,
+      "index": 18
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439358051900000,
+      "name": "AM-DSB-WC",
+      "index": 19,
+      "source_sha256": "4fc273dc8102a48b279a04ef1d9649b7663ff1ae8b0697fa07f3190fa9929df2",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439364068137600,
+      "index": 19
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439364323850300,
+      "name": "AM-DSB-SC",
+      "index": 20,
+      "source_sha256": "61696a74527d9ce347939fa695de1e46f563f548e8a8c5594c67a17b68d8900d",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439370341744200,
+      "index": 20
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439370598350700,
+      "name": "FM",
+      "index": 21,
+      "source_sha256": "36457ce121a23280be4f01335e891299e94dc0c86128a370902c0abaf3a9fe70",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439376597654500,
+      "index": 21
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439376852046500,
+      "name": "GMSK",
+      "index": 22,
+      "source_sha256": "616f2894970483e2e9805a9ca92e8f56b74d6135d03bdb52e6a11b9448645852",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439382867838400,
+      "index": 22
+    },
+    {
+      "event": "transmitting",
+      "time_ns": 1793439383124268000,
+      "name": "OQPSK",
+      "index": 23,
+      "source_sha256": "403848adfeb929ed32be42692805f14fca973e0361c73f13364e3e9d4c53127e",
+      "center_hz": 2400000000
+    },
+    {
+      "event": "muted",
+      "time_ns": 1793439389129706900,
+      "index": 23
+    },
+    {
+      "event": "finished",
+      "time_ns": 1793439389336626700,
+      "real": true,
+      "count": 24,
+      "error": null,
+      "restore_errors": [],
+      "restore_readback": [
+        {
+          "role": "tx",
+          "key": "hardwaregain",
+          "expected": "-10.000000",
+          "actual": "-10.000000",
+          "ok": true
+        },
+        {
+          "role": "tx",
+          "key": "sampling_frequency",
+          "expected": "30720000",
+          "actual": "30720000",
+          "ok": true
+        },
+        {
+          "role": "tx",
+          "key": "rf_bandwidth",
+          "expected": "18000000",
+          "actual": "18000000",
+          "ok": true
+        },
+        {
+          "role": "tlo",
+          "key": "frequency",
+          "expected": "2450000000",
+          "actual": "2450000000",
+          "ok": true
+        },
+        {
+          "role": "tlo",
+          "key": "powerdown",
+          "expected": "0",
+          "actual": "0",
+          "ok": true
+        }
+      ],
+      "restore_status": "READBACK_RESTORE_OK"
+    }
+  ],
+  "start_stop_verified": true
+}

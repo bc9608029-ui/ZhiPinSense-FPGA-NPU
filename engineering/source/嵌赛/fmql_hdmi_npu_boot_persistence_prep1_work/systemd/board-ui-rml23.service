@@ -1,0 +1,25 @@
+[Unit]
+Description=RML23 LIVE UI server (board_ui_live_rml23) on HDMI framebuffer
+# 依赖顺序：FPGA/HDMI 就绪门成功（版本 ok + udmabuf 可用）→ 才启动 UI。
+# 本服务本身不重配 FPGA；位流是否在位由 fmql-fpga-hdmi-load.service 只读校验。
+Requires=fmql-fpga-hdmi-load.service
+After=fmql-fpga-hdmi-load.service local-fs.target
+Wants=local-fs.target
+
+[Service]
+# 前台托管：systemd 直接托管二进制进程（Type=simple）。
+# 二进制版本门失败/帧缓冲初始化失败即非零退出，systemd 记 failed；不假报成功。
+# 绝不用 Type=oneshot + RemainAfterExit=no + 后台 nohup &（子进程会被 systemd 清理）。
+Type=simple
+ExecStart=/opt/sdr/bin/board_ui_live_rml23 --sock=/run/sdr_amr_ui_rml23.sock --ctl-sock=/run/sdr_amr_control_rml23.sock --display-refresh-hz=30
+# 就绪判据（人读 journal）：进程存活 且 UI_VERSION_CHECK ... ok=YES 且 UI_FB_READY phys=...，
+# 不是只看 UI_LIVE_READY（它在帧缓冲 init 之前打印）。
+# 失败=UI_LIVE_FAIL error=version_mismatch|framebuffer_init_failed 或进程退出 → 非零退出。
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=30
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

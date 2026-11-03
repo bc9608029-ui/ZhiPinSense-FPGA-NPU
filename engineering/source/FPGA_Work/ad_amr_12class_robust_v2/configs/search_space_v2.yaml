@@ -1,0 +1,87 @@
+# search_space_v2.yaml
+# 任务：十二类调制识别模型 V2 鲁棒性改进 · 阶段十（超参数搜索）
+# 生成：2026-10-07。搜索空间在训练前冻结；训练开始后不得根据 test 结果扩大/缩小。
+# 权威种子：pilot 2026；formal 2026 / 2027 / 2028。
+
+# 十二类标签（权威顺序，绝不动）
+label_order: [OOK, 4ASK, AM-DSB, WBFM, 2FSK, GFSK, BPSK, QPSK, 8PSK, 16QAM, 64QAM, OFDM]
+
+# 输入/输出契约（与 V1/NPU 部署一致，不改）
+contract:
+  input: [1, 2, 1024]      # fp32，RMS=1.0，[实部, 虚部]
+  output: 12               # logits
+
+# 搜索方法（规格 §十）
+search:
+  method: optuna          # optuna | random | bayesian
+  n_pilot_trials: 24      # 小规模
+  pilot_seed: 2026
+  formal_seeds: [2026, 2027, 2028]
+  pilot_epochs: 30        # 每个 trial 较小训练预算
+  selection_metric: mean_rated_0_20_accuracy   # 用 validation，绝不看 test
+
+# Phase A：V1 结构 + 新数据/训练策略（规格 §九）
+phase_a:
+  # 数据混合与课程
+  snr_curriculum:
+    - {name: none, schedule: flat}
+    - {name: very_low_first, schedule: [-20..-8 先训, 再全 SNR]}
+    - {name: linear_warmup, schedule: [低 SNR→全 SNR 线性展宽]}
+  class_sampling:
+    - natural_balanced        # V1 精确平衡（21 SNR × 12 类）
+    - class_balanced_loss     # 类别平衡加权损失
+    - hard_example_16qam_64qam   # 16QAM/64QAM 难例加权（规格 §九）
+  augmentation_group:        # 增广组组合消融（逐项，见 AUGMENTATION_ABLATION.md）
+    - [baseline]             # V1 信道域随机化，无新增
+    - [A]                    # 几何与时序
+    - [B]                    # 信道
+    - [C]                    # 硬件
+    - [D]                    # 干扰
+    - [A, C]                 # 组合
+    - [A, B, C]
+    - [A, B, C, D]
+  training_length_epochs: [60, 100]
+  optimizer:
+    - {name: adamw, lr: [1.0e-3, 3.0e-4, 1.0e-4], weight_decay: [1.0e-4, 1.0e-5]}
+    - {name: sgd_momentum, lr: [1.0e-2, 3.0e-3], momentum: 0.9, weight_decay: [1.0e-4]}
+  scheduler:
+    - {type: reduce_on_plateau, factor: 0.5, patience: 5, min_lr: 1.0e-6}   # V1 默认
+    - {type: cosine_annealing, min_lr: 1.0e-6}
+
+# Phase B：损失与采样（规格 §九）
+phase_b:
+  loss:
+    - {name: cross_entropy, label_smoothing: [0.0, 0.05, 0.1]}
+    - {name: focal, gamma: [1.0, 2.0, 3.0]}
+    - {name: cross_entropy, class_balanced: true}   # 类别平衡采样
+  # 每项单独消融；不得默认 focal loss 一定更好。
+
+# Phase C：轻量架构候选（仅 iCraft/ZG330 可支持算子；规格 §九）
+phase_c:
+  frontend:
+    - {name: v1_denoiser}                 # V1 DeployableResidualDenoiser（baseline）
+    - {name: fixed_filter}                # 固定滤波器前端（不可训练）
+    - {name: learnable_conv_frontend}     # 轻量可训练卷积前端
+  stem_block:
+    - {name: v1_residual_unit}            # V1 ResidualUnit（baseline）
+    - {name: dilated_conv, dilation: [2, 3]}
+    - {name: depthwise_separable}         # 需先确认编译器支持
+    - {name: multi_scale_1d_conv}
+  recurrent:                              # 仅当编译器确认支持才作为候选
+    - {name: none}
+    - {name: small_gru, hidden: [32, 64]}
+
+# 淘汰与推进（规格 §十）
+prune:
+  early_reject:        # 明显失败先淘汰
+    - nan_inf_any
+    - no_convergence
+    - selection_metric_below: 0.55        # 相对 V1 明显退化的硬下限（validation）
+  top_candidates: 3    # Top 候选再做完整训练
+  formal_min_seeds: 3  # formal 至少多 seed
+
+# 冻结约束（规格 §十）
+freeze:
+  # 训练开始后不得根据 test 结果扩大/缩小搜索空间。
+  # 不使用测试集调参；不使用 final holdout 选择模型。
+  locked_at: 2026-10-07

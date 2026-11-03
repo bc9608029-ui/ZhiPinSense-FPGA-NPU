@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://fmsh.hdmi-ui.local/result_frame.schema.json",
+  "title": "ResultFrame",
+  "description": "Versioned per-frame recognition result consumed by the HDMI touch UI. One object per JSON-Lines line. NaN/Inf are NOT representable in strict JSON and are rejected by the validator; producers must emit finite numbers.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "frame_id",
+    "timestamp_ns",
+    "source",
+    "class_id",
+    "class_name",
+    "confidence",
+    "probabilities",
+    "snr_db",
+    "center_frequency_hz",
+    "sample_rate_hz",
+    "latency_us",
+    "fps",
+    "counters",
+    "sdr_status",
+    "fpga_status",
+    "npu_status"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "frame_id": { "type": "integer", "minimum": 0 },
+    "timestamp_ns": { "type": "integer", "minimum": 0 },
+    "source": { "type": "string", "enum": ["MOCK", "FILE", "SDR"] },
+    "class_id": { "type": "integer", "minimum": 0, "maximum": 7 },
+    "class_name": {
+      "type": "string",
+      "enum": ["BPSK", "QPSK", "8PSK", "16QAM", "64QAM", "2FSK", "CPFSK", "OFDM"]
+    },
+    "confidence": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "probabilities": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+    },
+    "snr_db": { "type": "number" },
+    "center_frequency_hz": { "type": "number", "minimum": 0 },
+    "sample_rate_hz": { "type": "number", "minimum": 0 },
+    "latency_us": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "sdr_capture", "resample_frame", "plddr_transfer",
+        "fpga_process", "npu_infer", "end_to_end"
+      ],
+      "properties": {
+        "sdr_capture": { "type": "number", "minimum": 0 },
+        "resample_frame": { "type": "number", "minimum": 0 },
+        "plddr_transfer": { "type": "number", "minimum": 0 },
+        "fpga_process": { "type": "number", "minimum": 0 },
+        "npu_infer": { "type": "number", "minimum": 0 },
+        "end_to_end": { "type": "number", "minimum": 0 }
+      }
+    },
+    "fps": { "type": "number", "minimum": 0 },
+    "counters": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["dropped", "overflow", "duplicate", "reorder", "timeout", "error"],
+      "properties": {
+        "dropped": { "type": "integer", "minimum": 0 },
+        "overflow": { "type": "integer", "minimum": 0 },
+        "duplicate": { "type": "integer", "minimum": 0 },
+        "reorder": { "type": "integer", "minimum": 0 },
+        "timeout": { "type": "integer", "minimum": 0 },
+        "error": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "sdr_status": { "type": "string", "enum": ["ok", "warning", "error", "disconnected", "unknown"] },
+    "fpga_status": { "type": "string", "enum": ["ok", "warning", "error", "disconnected", "unknown"] },
+    "npu_status": { "type": "string", "enum": ["ok", "warning", "error", "disconnected", "unknown"] },
+    "spectrum_bins": {
+      "type": "array",
+      "items": { "type": "number" }
+    },
+    "message": { "type": "string" }
+  }
+}

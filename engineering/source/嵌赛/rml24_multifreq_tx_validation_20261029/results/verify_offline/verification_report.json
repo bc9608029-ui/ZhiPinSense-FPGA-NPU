@@ -1,0 +1,206 @@
+{
+  "kind": "OFFLINE_TX_DIGITAL_VERIFICATION",
+  "thresholds": {
+    "recover_corr_resample_min": 0.99,
+    "recover_corr_fir_min": 0.98,
+    "recover_nmse_fir_max_db": -20.0,
+    "separate_corr_fir_min": 0.98,
+    "separate_nmse_fir_max_db": -20.0,
+    "payload_corr_min": 0.98,
+    "center_err_max_hz": 20000.0,
+    "occ_bw_min_hz": 2200000.0,
+    "occ_bw_max_hz": 3000000.0,
+    "image_suppression_min_db": 20.0,
+    "guard_suppression_min_db": 20.0,
+    "int16_peak_max": 32752.0,
+    "int16_saturation_ratio_max": 0.0,
+    "quant_snr_min_db": 40.0,
+    "wrap_discontinuity_max_dbc": -30.0
+  },
+  "waveform_sha256": {
+    "a_only": "5d11ab8a61a3ed51270ca2128f3c2b4d972e3138937a92e7825943d504ee177a",
+    "b_only": "144a9a0b30c8fd243b08eb954391d56c6a72a18c3151f131f7d16e5c49d5d1a6",
+    "both": "3226f4d5a10390945af2699465ea1fc5cc4b6fe0d50e135d7a1834036569f88b",
+    "silence": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58"
+  },
+  "recovery": {
+    "A": {
+      "single_resample": {
+        "corr": 0.997762630515353,
+        "nmse_db": -23.47766740868815,
+        "lag": 0,
+        "gain": [
+          0.9888343264310804,
+          -1.845754019232153e-10
+        ]
+      },
+      "single_fir": {
+        "corr": 0.9991197010106273,
+        "nmse_db": -27.537628367224674,
+        "lag": 0,
+        "gain": [
+          0.9932073780789019,
+          -1.98270481146539e-10
+        ]
+      },
+      "from_both_resample": {
+        "corr": 0.9977627699381895,
+        "nmse_db": -23.477938954643815,
+        "lag": 0,
+        "gain": [
+          0.988833950547539,
+          2.345745906245882e-07
+        ]
+      },
+      "from_both_fir": {
+        "corr": 0.9991195986346053,
+        "nmse_db": -27.53712262638708,
+        "lag": 0,
+        "gain": [
+          0.993208086622365,
+          1.9763035331168436e-06
+        ]
+      },
+      "payload_single": {
+        "corr": 0.9999986070750886,
+        "nmse_db": -55.41314052916612,
+        "lag": 0,
+        "gain": [
+          1.000868929446878,
+          -1.8118840719702727e-06
+        ]
+      },
+      "payload_from_both": {
+        "corr": 0.9999985529222685,
+        "nmse_db": -55.25255033503186,
+        "lag": 0,
+        "gain": [
+          1.0008691044112135,
+          -2.157064130414839e-06
+        ]
+      }
+    },
+    "B": {
+      "single_resample": {
+        "corr": 0.9977617740626824,
+        "nmse_db": -23.476068945932013,
+        "lag": 0,
+        "gain": [
+          0.9888030598379391,
+          1.4440943535245454e-10
+        ]
+      },
+      "single_fir": {
+        "corr": 0.9991192787089215,
+        "nmse_db": -27.535544445580395,
+        "lag": 0,
+        "gain": [
+          0.9932014162957624,
+          1.303688164110609e-10
+        ]
+      },
+      "from_both_resample": {
+        "corr": 0.9977618623881602,
+        "nmse_db": -23.47624090747582,
+        "lag": 0,
+        "gain": [
+          0.9888026828424923,
+          -2.3483512841229378e-07
+        ]
+      },
+      "from_both_fir": {
+        "corr": 0.999119303149908,
+        "nmse_db": -27.53566509685748,
+        "lag": 0,
+        "gain": [
+          0.9932017903745601,
+          -1.719777330552289e-06
+        ]
+      },
+      "payload_single": {
+        "corr": 0.9999981392715196,
+        "nmse_db": -54.31002329239472,
+        "lag": 0,
+        "gain": [
+          1.000860573555174,
+          2.1202391799784776e-07
+        ]
+      },
+      "payload_from_both": {
+        "corr": 0.9999980772825346,
+        "nmse_db": -54.16714348321885,
+        "lag": 0,
+        "gain": [
+          1.0008602459709968,
+          3.1001732047332496e-07
+        ]
+      }
+    }
+  },
+  "spectrum": {
+    "a": {
+      "center_hz": -1808566.4233945834,
+      "center_err_hz": -8566.423394583398,
+      "inband_power": 3573.8568028767577,
+      "occupied_bw_99_hz": 2422867.153210833,
+      "alias_center_hz": 760000.0,
+      "image_suppression_dbc": -28.290915974922953
+    },
+    "b": {
+      "center_hz": 1792189.390551318,
+      "center_err_hz": -7810.609448682051,
+      "inband_power": 3592.5874842400453,
+      "occupied_bw_99_hz": 2424378.781102636,
+      "alias_center_hz": -760000.0,
+      "image_suppression_dbc": -29.163615642459114
+    },
+    "guard_suppression_dbc": -25.707144324922005,
+    "nyquist_margin_hz": 2040000.0
+  },
+  "quantization": {
+    "a_only": {
+      "label": "a_only",
+      "int16_peak": 2112,
+      "saturation_ratio": 0.0,
+      "total_rms": 58.95273571962649,
+      "float_rms": 58.956580907856626,
+      "papr_db": 7.35392049868501,
+      "quant_noise_rms": 0.35579233482802625,
+      "quant_snr_db": 44.386714038808705
+    },
+    "b_only": {
+      "label": "b_only",
+      "int16_peak": 2128,
+      "saturation_ratio": 0.0,
+      "total_rms": 58.94712153971034,
+      "float_rms": 58.95564275428053,
+      "papr_db": 7.3540587150322665,
+      "quant_noise_rms": 0.35532012675671465,
+      "quant_snr_db": 44.39811140373177
+    },
+    "both": {
+      "label": "both",
+      "int16_peak": 3408,
+      "saturation_ratio": 0.0,
+      "total_rms": 83.38156856987551,
+      "float_rms": 83.37651706589052,
+      "papr_db": 10.269767108429058,
+      "quant_noise_rms": 0.3581067968547107,
+      "quant_snr_db": 47.340623703144416
+    }
+  },
+  "wrap_discontinuity": {
+    "a_only": {
+      "abs": 0.0,
+      "dbc": null
+    },
+    "b_only": {
+      "abs": 0.0,
+      "dbc": null
+    },
+    "both": {
+      "abs": 0.0,
+      "dbc": null
+    }
+  }
+}

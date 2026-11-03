@@ -1,0 +1,102 @@
+{
+  "kind": "OFFLINE_TX_DRY_RUN",
+  "tx_center_hz": 2401800000,
+  "sample_rate_hz": 10240000,
+  "signal_centers_hz": [
+    2400000000,
+    2403600000
+  ],
+  "signal_offsets_hz": [
+    -1800000,
+    1800000
+  ],
+  "class_a": 3,
+  "class_b": 9,
+  "phases": [
+    {
+      "name": "silence",
+      "seconds": 10.0
+    },
+    {
+      "name": "a_only",
+      "seconds": 10.0
+    },
+    {
+      "name": "b_only",
+      "seconds": 10.0
+    },
+    {
+      "name": "both",
+      "seconds": 10.0
+    },
+    {
+      "name": "a_only",
+      "seconds": 10.0
+    },
+    {
+      "name": "silence",
+      "seconds": 10.0
+    }
+  ],
+  "config_would_apply": [
+    {
+      "channel": "tx",
+      "attr": "hardwaregain",
+      "value": -40.0
+    },
+    {
+      "channel": "tx",
+      "attr": "sampling_frequency",
+      "value": 10240000
+    },
+    {
+      "channel": "tx",
+      "attr": "rf_bandwidth",
+      "value": 18000000
+    },
+    {
+      "channel": "tlo",
+      "attr": "frequency",
+      "value": 2401800000
+    },
+    {
+      "channel": "tlo",
+      "attr": "powerdown",
+      "value": 0
+    }
+  ],
+  "scenarios": {
+    "a_only": {
+      "wave_sha256": "5d11ab8a61a3ed51270ca2128f3c2b4d972e3138937a92e7825943d504ee177a",
+      "device_sha256": "224b8e7e97d51444b69e0a8647fa6ab672fd45ac42ded3359f888ec736145319",
+      "int16_peak": 2112,
+      "saturated_samples": 0,
+      "rms": 58.95273571962649,
+      "n_samples": 65536
+    },
+    "b_only": {
+      "wave_sha256": "144a9a0b30c8fd243b08eb954391d56c6a72a18c3151f131f7d16e5c49d5d1a6",
+      "device_sha256": "969d4cd74c4a10866fa8c5fa76a909bf61bc79e163dfb985cea5874fac3f3da4",
+      "int16_peak": 2128,
+      "saturated_samples": 0,
+      "rms": 58.94712153971034,
+      "n_samples": 65536
+    },
+    "both": {
+      "wave_sha256": "3226f4d5a10390945af2699465ea1fc5cc4b6fe0d50e135d7a1834036569f88b",
+      "device_sha256": "f76042cb79466433c3cb8ae5d809125f62ee6e9aff9568a66a0def49440f4353",
+      "int16_peak": 3408,
+      "saturated_samples": 0,
+      "rms": 83.38156856987551,
+      "n_samples": 65536
+    },
+    "silence": {
+      "wave_sha256": "30e14955ebf1352266dc2ff8067e68104607e750abb9d3b36582b8af909fcb58",
+      "device_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+      "int16_peak": 0,
+      "saturated_samples": 0,
+      "rms": 0.0,
+      "n_samples": 65536
+    }
+  }
+}

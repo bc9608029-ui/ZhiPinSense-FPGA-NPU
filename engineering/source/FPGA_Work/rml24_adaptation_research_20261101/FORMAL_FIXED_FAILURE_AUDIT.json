@@ -1,0 +1,76 @@
+[
+  {
+    "score": {
+      "index": 104,
+      "expected": 20,
+      "pred": 16,
+      "chosen_frame": 1526,
+      "correct": false,
+      "missing": false
+    },
+    "source": {
+      "index": 104,
+      "seq": 104,
+      "file": "20_07.bin",
+      "source_sha256": "4df7e9ad789f9293db93bdc5a09142d65668ff797ce4bf1326b1bac5962c896b",
+      "label": 20
+    },
+    "nearby": [
+      {
+        "frame_id": 1524,
+        "capture_monotonic_ns": 19159724850220,
+        "clock_id": "board-monotonic-v1",
+        "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+        "pred": 16,
+        "finite": true,
+        "repeat_average": 8.0,
+        "scan_steps": [],
+        "center_hz": 2400000000
+      },
+      {
+        "frame_id": 1525,
+        "capture_monotonic_ns": 19160194831910,
+        "clock_id": "board-monotonic-v1",
+        "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+        "pred": 20,
+        "finite": true,
+        "repeat_average": 8.0,
+        "scan_steps": [],
+        "center_hz": 2400000000
+      },
+      {
+        "frame_id": 1526,
+        "capture_monotonic_ns": 19160645005940,
+        "clock_id": "board-monotonic-v1",
+        "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+        "pred": 16,
+        "finite": true,
+        "repeat_average": 8.0,
+        "scan_steps": [],
+        "center_hz": 2400000000
+      },
+      {
+        "frame_id": 1527,
+        "capture_monotonic_ns": 19161114668260,
+        "clock_id": "board-monotonic-v1",
+        "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+        "pred": 20,
+        "finite": true,
+        "repeat_average": 8.0,
+        "scan_steps": [],
+        "center_hz": 2400000000
+      },
+      {
+        "frame_id": 1528,
+        "capture_monotonic_ns": 19161564896810,
+        "clock_id": "board-monotonic-v1",
+        "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+        "pred": 16,
+        "finite": true,
+        "repeat_average": 8.0,
+        "scan_steps": [],
+        "center_hz": 2400000000
+      }
+    ]
+  }
+]

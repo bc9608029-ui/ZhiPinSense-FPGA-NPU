@@ -1,0 +1,258 @@
+{
+  "fs_hz": 2560000,
+  "fft_length": 1024,
+  "cases": [
+    {
+      "name": "zero",
+      "tones_hz": [],
+      "amplitudes": [],
+      "seed": 1,
+      "targets": []
+    },
+    {
+      "name": "one_tone",
+      "tones_hz": [
+        200000
+      ],
+      "amplitudes": [
+        0.7
+      ],
+      "seed": 2,
+      "targets": [
+        {
+          "first_bin": 591,
+          "last_bin": 593,
+          "peak_bin": 592,
+          "center_offset_hz": 200002.16927251642,
+          "bandwidth_hz": 7500.0,
+          "peak_power": 137627512464865.0,
+          "noise_floor": 137079526.5
+        }
+      ]
+    },
+    {
+      "name": "two_tone",
+      "tones_hz": [
+        -400000,
+        350000
+      ],
+      "amplitudes": [
+        0.8,
+        0.3
+      ],
+      "seed": 3,
+      "targets": [
+        {
+          "first_bin": 8,
+          "last_bin": 8,
+          "peak_bin": 8,
+          "center_offset_hz": -1260000.0,
+          "bandwidth_hz": 2500.0,
+          "peak_power": 1843834148.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 11,
+          "last_bin": 13,
+          "peak_bin": 12,
+          "center_offset_hz": -1250005.3942573336,
+          "bandwidth_hz": 7500.0,
+          "peak_power": 5811465010.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 51,
+          "last_bin": 53,
+          "peak_bin": 52,
+          "center_offset_hz": -1149711.269583324,
+          "bandwidth_hz": 7500.0,
+          "peak_power": 9150400808.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 92,
+          "last_bin": 92,
+          "peak_bin": 92,
+          "center_offset_hz": -1050000.0,
+          "bandwidth_hz": 2500.0,
+          "peak_power": 3192230900.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 228,
+          "last_bin": 228,
+          "peak_bin": 228,
+          "center_offset_hz": -710000.0,
+          "bandwidth_hz": 2500.0,
+          "peak_power": 2598545970.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 268,
+          "last_bin": 269,
+          "peak_bin": 268,
+          "center_offset_hz": -609422.2050694725,
+          "bandwidth_hz": 5000.0,
+          "peak_power": 5035006106.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 308,
+          "last_bin": 308,
+          "peak_bin": 308,
+          "center_offset_hz": -510000.0,
+          "bandwidth_hz": 2500.0,
+          "peak_power": 2134047298.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 311,
+          "last_bin": 312,
+          "peak_bin": 312,
+          "center_offset_hz": -500639.43105815636,
+          "bandwidth_hz": 5000.0,
+          "peak_power": 5020651189.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 351,
+          "last_bin": 353,
+          "peak_bin": 352,
+          "center_offset_hz": -400000.428724159,
+          "bandwidth_hz": 7500.0,
+          "peak_power": 176616741948253.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 392,
+          "last_bin": 393,
+          "peak_bin": 392,
+          "center_offset_hz": -299529.9377187826,
+          "bandwidth_hz": 5000.0,
+          "peak_power": 6945380360.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 436,
+          "last_bin": 436,
+          "peak_bin": 436,
+          "center_offset_hz": -190000.0,
+          "bandwidth_hz": 2500.0,
+          "peak_power": 2976608146.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 476,
+          "last_bin": 477,
+          "peak_bin": 476,
+          "center_offset_hz": -89189.78171140082,
+          "bandwidth_hz": 5000.0,
+          "peak_power": 3062496985.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 541,
+          "last_bin": 541,
+          "peak_bin": 541,
+          "center_offset_hz": 72500.0,
+          "bandwidth_hz": 2500.0,
+          "peak_power": 1972945514.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 612,
+          "last_bin": 612,
+          "peak_bin": 612,
+          "center_offset_hz": 250000.0,
+          "bandwidth_hz": 2500.0,
+          "peak_power": 3524489701.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 651,
+          "last_bin": 653,
+          "peak_bin": 652,
+          "center_offset_hz": 350002.4983943561,
+          "bandwidth_hz": 7500.0,
+          "peak_power": 24099200968025.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 691,
+          "last_bin": 693,
+          "peak_bin": 692,
+          "center_offset_hz": 450072.4448314068,
+          "bandwidth_hz": 7500.0,
+          "peak_power": 16702868881.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 736,
+          "last_bin": 736,
+          "peak_bin": 736,
+          "center_offset_hz": 560000.0,
+          "bandwidth_hz": 2500.0,
+          "peak_power": 3210340058.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 775,
+          "last_bin": 776,
+          "peak_bin": 776,
+          "center_offset_hz": 659384.6607521354,
+          "bandwidth_hz": 5000.0,
+          "peak_power": 5359191025.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 816,
+          "last_bin": 816,
+          "peak_bin": 816,
+          "center_offset_hz": 760000.0,
+          "bandwidth_hz": 2500.0,
+          "peak_power": 1788812365.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 951,
+          "last_bin": 953,
+          "peak_bin": 952,
+          "center_offset_hz": 1100111.0876789766,
+          "bandwidth_hz": 7500.0,
+          "peak_power": 7242912097.0,
+          "noise_floor": 133040595.0
+        },
+        {
+          "first_bin": 991,
+          "last_bin": 993,
+          "peak_bin": 992,
+          "center_offset_hz": 1200265.1880835558,
+          "bandwidth_hz": 7500.0,
+          "peak_power": 7279062485.0,
+          "noise_floor": 133040595.0
+        }
+      ]
+    },
+    {
+      "name": "edge",
+      "tones_hz": [
+        1200000
+      ],
+      "amplitudes": [
+        0.5
+      ],
+      "seed": 4,
+      "targets": [
+        {
+          "first_bin": 991,
+          "last_bin": 993,
+          "peak_bin": 992,
+          "center_offset_hz": 1199998.0018094268,
+          "bandwidth_hz": 7500.0,
+          "peak_power": 70204561286756.0,
+          "noise_floor": 122989582.5
+        }
+      ]
+    }
+  ]
+}

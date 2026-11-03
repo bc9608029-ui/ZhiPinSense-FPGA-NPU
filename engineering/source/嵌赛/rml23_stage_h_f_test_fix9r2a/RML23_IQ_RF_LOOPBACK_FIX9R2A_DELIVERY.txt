@@ -1,0 +1,141 @@
+================================================================================
+RML23 Stage H-F / Route F — IQ RF 回环 fix9r2a 交付清单（R8 2 样本诊断选择器 + 接受门）
+================================================================================
+状态: M29-RML23-IQ-RF-LOOPBACK-FIX9R2-READY-FOR-BOARD-TEST（待用户上板：先 R8 2 样本，再 R9 46 样本）
+      FIX9R2_WORK=DELIVERED  FIX9R2A_WORK=DELIVERED
+      FIX9R2_BOARD_TEST=PENDING  FIX10_DUAL_SDR=BLOCKED  FORMAL_690_RF_RUN=BLOCKED
+      不写 RF_PASS / RF_PATH_PROVEN / NPU_PASS / PROJECT_COMPLETE / FINAL_*；
+      ROUTE_F_23CLASS_ACCURACY_REGRESSION_PASS 仅由板端 46 样本合法复测建立；
+      诊断 token（ROUTE_F_FIX9R2_DIAGNOSTIC_PASS/FAIL）永远不能携带回归 PASS。
+基线: sdr_rml23_live_board_package_iq_rf_loopback_fix9r2.tar.gz  ac9ed0b8ad979fe84818f447a9e8465444191e8595c5c19b9ab143b49a12d583（578 内容文件）
+================================================================================
+
+1. 工件（6 份；fix9r2 及更早历史包 SHA 不变，未覆盖任何历史包）
+--------------------------------------------------------------------------------
+A. 独立补丁（fix9r2a 增量，自包含；4 新增 + 3 修改 = 7 内容文件）
+   路径: dist/sdr_rml23_live_iq_rf_loopback_fix9r2a_patch.tar.gz
+   字节: 30670
+   文件数: 7（4 NEW + 3 MODIFIED）
+   manifest: dist/IQ_RF_LOOPBACK_FIX9R2A_PATCH_SHA256SUMS.txt（7 行）
+   sha256: 7c1b968bdfb6054faea467df4d2c2410e90950943f354486c8a6202ac9856c4f
+
+B. 合并全量（fix9r2 全量 + fix9r2a）
+   路径: dist/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2a.tar.gz
+   字节: 3976319
+   内容文件数: 582（575 fix9r2 字节一致 + 3 修改 + 4 新增；SHA256SUMS.txt 重生成）
+   manifest: dist/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2a.SHA256SUMS.txt（582 行）
+   sha256: 611623afcf40583748ef7b8a035db9261d51bede036312afb6f34b85fe0fb9c1
+
+C. 补丁 manifest: dist/IQ_RF_LOOPBACK_FIX9R2A_PATCH_SHA256SUMS.txt（757 字节，7 行）
+   sha256: 9ceb72b2ae4bd17e02f6419877f66579edf077a10380e691830ec4e09fb746a4
+D. 全量 manifest: dist/sdr_rml23_live_board_package_iq_rf_loopback_fix9r2a.SHA256SUMS.txt（58778 字节，582 行）
+   sha256: eec3a97c415c83b4158b7b378d5be86d910a3b0dccae93e4379cbd5c75c10eee
+E. 审计文档: docs/M29_RML23_STAGE_H_F_IQ_RF_LOOPBACK_FIX9R2A_AUDIT.md（5717 字节）
+   sha256: 264a1c1fb4699a0bc85c40d02c3381d34bf27c184a85acc762489d1316966c1a
+F. 本交付清单: dist/RML23_IQ_RF_LOOPBACK_FIX9R2A_DELIVERY.txt
+
+2. 根因与修复（Task A 审计结论 → fix9r2a）
+--------------------------------------------------------------------------------
+根因: fix9r2 的 R8 2 样本步骤无法选出「1 BPSK + 1 4ASK」——--file-filter 只匹配
+      文件名（quantized_d2_2p56m_%06d.ci16 不含调制名），--max-files=2 截断前 2 个
+      holdout（000000 OOK, 000001 OOK），二者都无法表达 R8 目标集。
+修复: 新增 --diagnostic-classes=BPSK,4ASK --diagnostic-per-class=1（按 manifest
+      modulation 列在 holdout-only 子集上选择，与 --max-files/--smoke/--file-filter
+      互斥 fail-closed）；诊断模式每样本输出 ROUTE_F_FIX9R2_DIAGNOSTIC（23 字段）
+      + 汇总 token；R8 接受门（corr>=0.90 / residual<=0.10 / TX 帧验证器 + push 干净
+      / 无削顶 / restore OK）。改搜索不改 RF 数学，绝不输出回归 PASS。
+
+新增文件（4）: board_package/iq_rf_fix9r2a_diagnostic.hpp、
+  host_tests/test_iq_rf_loopback_23class_fix9r2a.cpp、
+  scripts/package_iq_rf_loopback_fix9r2a.py、docs/…_FIX9R2A_AUDIT.md。
+修改文件（3）: board_package/iq_rf_loopback_23class_fix9r.hpp（诊断模式 + 接受门）、
+  host_tests/build_host_tests.sh（fix10 剥离后）、host_tests/run_tests.sh（fix10 剥离后）。
+核心代码字节未变: 模型/标签/24→23 合并/预处理/RTL/XDC/位流/Flash 逐一 SHA 0 变化；
+  fix9 数字回环与同机 RF 路径、fix9r2 共用恢复核心仅 #include 复用；
+  kSafeTxCeilingDb=-40.0/kSafeTxAttenDb=-89.75 不变。
+
+3. 离线验证（不碰板）
+--------------------------------------------------------------------------------
+[1] fix9r2a 核心 host 测试（WSL 重跑）: test_iq_rf_loopback_23class_fix9r2a pass=38 fail=0
+    （13 场景 / 38 断言）；test_iq_rf_loopback_23class_fix9r2 pass=66 fail=0（无回归）；
+    test_iq_rf_loopback_23class_fix9r pass=71 fail=0（无回归）；
+    test_iq_rf_loopback_23class（fix9）pass=93 fail=0（无回归）。
+[2] fix9r2a-only 全量套件（剥离 fix10 测试后）: run_tests.sh ALL HOST TESTS PASSED（EXIT=0）；
+    test_board_build.sh 24/0；test_cli_override.sh PASSED；test_rml23_build.sh 7/7。
+    全量套件唯一真实失败 = fix10 RX 测试（12 失败，预期，fix10 BLOCKED_BY_FIX9R2）
+    + test_display_integrity/diagnostic 的 [DFB] FAIL 行（预期 fail-closed 输出）。
+[3] content-consistency: OK（575 fix9r2 文件字节一致，3 修改，+4 新增）。
+[4] dependency closure（fail-closed）: OK（所有 fix9r2a 变更头文件均列于
+    ROUTE_F_FIX9R2A_FILES，无未列出的变更头）。
+[5] 2× 确定性打包: patch/full 两次运行 sha256 逐字节一致（7c1b968b… / 611623af…）。
+[6] 独立解包 sha256sum -c（打包器自检）: patch 7/7 OK、full 582/582 OK（0 失败）。
+[7] tar mode 审计（独立 Python）:
+    patch  directories_0755=5  shell_scripts_0755=2  bad=0 result=PASS
+    full   directories_0755=13 shell_scripts_0755=60 bad=0 result=PASS
+    禁 0666/0777（bad=0）；目录/脚本 0755、其余 0644。
+[8] fix10 零残留（两份共享接线文件经 _FIX10_REMOVAL 剥离为 fix9r2a-only）:
+    build/run_tests.sh 无 iq_external_rf_rx/pluto_external_tx 条目；
+    pluto_device.hpp 继承 fix9r2 基线（已剥离 fix10）；fix10 磁盘文件未被触碰。
+[9] 语法检查（WSL g++ -Wall -Wextra -Werror -fsyntax-only）: gate9_rml23: syntax OK
+    （新诊断头经 board_gate9_full_chain_rml23.cpp 传递覆盖）。
+
+4. 板端复测命令（用户执行，我禁碰板；全程无需 chmod +x；12 步）
+--------------------------------------------------------------------------------
+# 1) 校验全量包 SHA（应等于 611623afcf40583748ef7b8a035db9261d51bede036312afb6f34b85fe0fb9c1）
+sha256sum sdr_rml23_live_board_package_iq_rf_loopback_fix9r2a.tar.gz
+# 2) 解包（脚本已带 0755，直接可执行）
+tar -xzf sdr_rml23_live_board_package_iq_rf_loopback_fix9r2a.tar.gz
+cd sdr_rml23_live_board_package_iq_rf_loopback_fix9r2a
+# 3) 执行位自检（应全部返回 0）+ 内容自检（应 582 个 OK，0 失败）
+test -x scripts/build_on_board.sh              && echo OK
+test -x scripts/run_gate9_rml23.sh             && echo OK
+sha256sum -c SHA256SUMS.txt
+# 4) 构建板端二进制（LIBIIO_ROOT 按持久化 libiio 0.26；禁止硬编码 /tmp/sdr_pluto_gate1_5/...）
+LIBIIO_ROOT=/opt/sdr/libiio-0.26 ./scripts/build_on_board.sh
+# 5) 生成/装载 46 样本精确基线（frozen-dir 内含 route_d2_rf_manifest.tsv）
+python3 -I scripts/build_route_f_fix9r_exact_baseline.py \
+    --d2-manifest <frozen>/route_d2_rf_manifest.tsv \
+    --out route_f_fix9r_exact_baseline.tsv --expect-holdout 46
+
+# 6) R8（先）: 2 样本诊断门（1 BPSK + 1 4ASK，验证搜索窗口修复生效）
+#    用 --diagnostic-classes=BPSK,4ASK --diagnostic-per-class=1 按调制类选择（非文件号）；
+#    固定条件：center=2.4 GHz、TX atten=-40 dB、RX gain=30 dB、50Ω 同轴、无天线无放大。
+./scripts/run_gate9_rml23.sh --phase=iq-rf-loopback-23class-fix9r \
+    --input-kind=radioml-d2-2p56m --frozen-dir=<frozen> \
+    --baseline=route_f_fix9r_exact_baseline.tsv \
+    --diagnostic-classes=BPSK,4ASK --diagnostic-per-class=1 \
+    --center=2400000000 --rx-gain=30 --tx-atten=-40 --rf-path=direct-cable \
+    > /root/rml23_route_f_fix9r2a_r8_2sample.log 2>&1
+# 7) 查看 R8 诊断结果
+grep -E 'ROUTE_F_FIX9R2_DIAGNOSTIC|ROUTE_F_23CLASS_ACCURACY_REGRESSION' \
+    /root/rml23_route_f_fix9r2a_r8_2sample.log
+# 8) R8 接受门（须全部满足才进 R9；诊断 token 为 PASS 且回归 token 为 NOT_EVALUATED）
+#    selected_classes=BPSK,4ASK、holdout_files=2、estimate_computed/valid=2、
+#    frame/training/payload_exact_match=2、tx_push_ok=2、tx_clipped=0、rx_clipped=0、
+#    training_corr_min>=0.90、training_residual_max<=0.10、restore_ok=1
+#    → ROUTE_F_FIX9R2_DIAGNOSTIC_PASS（≠ 回归 PASS）
+
+# 9) R9（后）: 46 样本回归门（同机 Pluto，50Ω 同轴直连，无天线无放大器；不带诊断参数）
+./scripts/run_gate9_rml23.sh --phase=iq-rf-loopback-23class-fix9r \
+    --input-kind=radioml-d2-2p56m --frozen-dir=<frozen> \
+    --baseline=route_f_fix9r_exact_baseline.tsv \
+    --center=2400000000 --rx-gain=30 --tx-atten=-40 --rf-path=direct-cable \
+    > /root/rml23_route_f_fix9r2_23class.log 2>&1
+# 10) 查看 R9 回归结果
+grep -E 'ROUTE_F_23CLASS_ACCURACY_REGRESSION|rf_excluded|scored=' \
+    /root/rml23_route_f_fix9r2_23class.log
+# 11) 记录结果并回传（R8 诊断 token + R9 回归 token + 逐字段）
+# 12) 回归 PASS 后 fix10（双 SDR）才可恢复，且以 fix9r2a 全量为唯一基线，
+#     复用 fix9r2 共用恢复核心 iq_rf_sync_recovery.hpp（不得维护两套训练帧/同步算法）。
+
+5. 46 样本接受门（§11）
+--------------------------------------------------------------------------------
+须输出: training_estimate_valid=46/46, rf_valid=46/46, rf_excluded=0,
+  baseline_correct=, rf_correct=, baseline_accuracy=, rf_accuracy=,
+  prediction_agreement=, accuracy_delta_pp=, 4ask_baseline=, 4ask_rf=, restore_result=PASS。
+仅当: prediction_agreement>=0.90 且 rf_accuracy>=exact_baseline_accuracy−5pp
+  且 4ASK 不退化到 0% 且无 TX/RX 削顶 且 training estimate 46/46 有效 且 restore PASS
+  → ROUTE_F_23CLASS_ACCURACY_REGRESSION_PASS；否则 ROUTE_F_23CLASS_ACCURACY_REGRESSION_FAIL。
+R8 诊断门只证明搜索+恢复链通了，绝不能当回归 PASS 用。
+690 样本正式 RF 仍 BLOCKED。
+================================================================================

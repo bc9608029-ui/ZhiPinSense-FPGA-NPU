@@ -1,0 +1,125 @@
+{
+  "run_id": "m20_20261008T132255Z_775441",
+  "step": "data_audit",
+  "model_identity": {
+    "checkpoint_sha256": "7215290b0f43f8a8cc05f4ee135f2a9524cf8a8036b71ae52b0b6c94c02aae72",
+    "onnx_sha256": "f77587152b52cda9a467b28790bc62d0eb0c639db2c39da82642c00ca8deda5a",
+    "npu_json_sha256": "51364bdf49d280944094f7af89ea4c759b3ae4d0d350be5f8c43e0c5849ab834",
+    "npu_raw_sha256": "2ae95275fe362bdc463e1ded5dfc974b5d77eaae5ce2d2184beebdb5dad7ec2c"
+  },
+  "label_order": [
+    "OOK",
+    "4ASK",
+    "AM-DSB",
+    "WBFM",
+    "2FSK",
+    "GFSK",
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "OFDM"
+  ],
+  "input_contract": {
+    "shape": [
+      1,
+      2,
+      1024
+    ]
+  },
+  "output_contract": {
+    "dim": 12,
+    "numeric_type": "fp32",
+    "kind": "raw_logits_no_softmax"
+  },
+  "count_per_class": 8,
+  "count_per_modulation": 8,
+  "snr_values": [
+    0.0,
+    10.0,
+    20.0
+  ],
+  "ood_seed": 12600,
+  "near_family": "near_12",
+  "audit": {
+    "shared_signal_domain": {
+      "sample_rate": 128000.0,
+      "symbol_rate": 16000.0,
+      "samples_per_symbol": 8,
+      "sample_length": 1024,
+      "amplitude": 1.0,
+      "frequency_offset": 0.0,
+      "phase_offset": 0.0,
+      "pulse_shape": {
+        "rolloff": 0.35,
+        "span_symbols": 8
+      }
+    },
+    "splits": {
+      "oe_aux_train": {
+        "id": {
+          "samples": 288,
+          "split_sha256": "f4d008a589e2317cb6380dba2f13a60f428a7d4a42bc4c02afdf6cece42db564"
+        },
+        "near_12": {
+          "samples": 312,
+          "split_sha256": "b0a0f1ff27293ef4670ec06d73c89bc59774f33d1d043846aae07e041bce2227"
+        },
+        "far": {
+          "samples": 120,
+          "split_sha256": "19af1f5a0b85addc5865ccb26a514efdbf53a8cbf9bbf40a4c86b7c44fa64162"
+        },
+        "ambiguous": {
+          "samples": 96,
+          "split_sha256": "7c8952d1e1525857e828d8e5f7d19764ed09295d18a58c7f11c50317a95109c1"
+        }
+      },
+      "ood_validation": {
+        "id": {
+          "samples": 288,
+          "split_sha256": "d8fdc62f3b46a44ddd5166ca1c9ff7b72e4f78b01793ddd2d0f820a0071e7bc8"
+        },
+        "near_12": {
+          "samples": 312,
+          "split_sha256": "85ea97fd0117a7ee6c2c67b56a55ea2a3deb0f21a6d65a05de8cf8911f8e2e10"
+        },
+        "far": {
+          "samples": 120,
+          "split_sha256": "ed448fa8e4e603446aed7c7baf7723b0b069ef95ceabed270a54ce65f738d6a3"
+        },
+        "ambiguous": {
+          "samples": 96,
+          "split_sha256": "9cc8b30ec04545474f7751f4cbb61a983da44b555ad82552098282efdee9fb52"
+        }
+      },
+      "ood_final_test": {
+        "id": {
+          "samples": 288,
+          "split_sha256": "3071b238a9b558fbe8c4cfff98bef2f20cabea23f1de2dbb4876a105236a7fa4"
+        },
+        "near_12": {
+          "samples": 312,
+          "split_sha256": "c712ad17516a68261c3edd73bc9ffc9797a673cba98b6b5fc634f655f675a626"
+        },
+        "far": {
+          "samples": 120,
+          "split_sha256": "961cd7a08660f559cb2eac0dd9bd65dab00a306e69f4f9f50629d40af01ce4bd"
+        },
+        "ambiguous": {
+          "samples": 96,
+          "split_sha256": "cedeaacd9ed4f932d357c7c6e08abab969b3ed299642d15155de7a570208549a"
+        }
+      }
+    },
+    "generator_shortcut": {
+      "feature_auroc": {
+        "rms_power": 0.5011895576131687,
+        "papr": 0.537061149691358,
+        "bandwidth_frac": 0.46798643261316875,
+        "spectral_centroid": 0.5522923096707819
+      },
+      "shortcut_detected": false
+    }
+  }
+}

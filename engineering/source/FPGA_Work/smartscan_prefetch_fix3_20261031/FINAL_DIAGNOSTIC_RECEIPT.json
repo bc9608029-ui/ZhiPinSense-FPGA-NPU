@@ -1,0 +1,18 @@
+{
+  "status": "ISOLATED_PREFETCH_DIAGNOSTICS_PASS_NOT_RF_ACCEPTANCE",
+  "fixed_matrix_passed": 192,
+  "fixed_matrix_total": 192,
+  "auto_fpga_passed": 8,
+  "intentional_launch_failure_software_fallback": true,
+  "candidate_zero_input_npu_finite": 8,
+  "original_bit_restored": true,
+  "root_cause_proven": false,
+  "rf_tested": false,
+  "production_promoted": false,
+  "bit": {
+    "file": "E:\\FPGA_Work\\smartscan_prefetch_fix3_20261031\\outputs\\smartscan_fix3_candidate\\smartscan_fix3_vendor_auto_disable_icap.bit",
+    "sha256": "f42dd12f03bf81c65978b7034b45808efd5035f6a358cc54710f2404530a057c",
+    "temporary_only": true
+  },
+  "board_evidence_sha256": "cc565943075a36eff5962357cc53b8c9ff696cee2b2b531d19666c614d08f127"
+}

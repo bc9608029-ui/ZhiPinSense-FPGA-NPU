@@ -1,0 +1,646 @@
+
+
+<pasted_content id="39e5">
+# 任务书：fix10class24-dualsdr1 — BF16 原始24类 NPU直注与双SDR测试准备
+
+## 1. 目标
+
+在当前 fix10prep3 双 SDR 物理链路基础上，建立独立的 24 原始调制类实验路径：
+
+1. 使用已编译的全网络 BF16 24输出模型。
+2. 保持 AM-SSB-WC 与 AM-SSB-SC 为两个独立类别，不执行24→23合并。
+3. 准备24类板端 NPU 数字直注测试。
+4. 准备24类 PC-TX → 同轴 → 板RX → 恢复 → NPU 双SDR测试。
+5. 每个原始类别固定一个样本，共24个样本。
+6. 完成全部离线代码、测试、确定性打包和用户执行命令。
+7. API 禁止操作板卡和 SDR；所有板测由用户执行。
+
+本任务不替换现有23类系统。23类合并模式仍是稳定主路径；24类 BF16 是独立、可选择的实验模式。
+
+———
+
+## 2. 前置门禁
+
+24类代码和离线交付可以立即准备，但真正执行24类双SDR板测前，必须先满足：
+
+- 当前 fix10prep3 的 BPSK+4ASK 23类双SDR烟测通过；
+- scored=2
+- rf_excluded=0
+- prediction_agreement=2/2
+- training_estimate_valid=2/2
+- cfo_finite=1
+- cfo_in_range=1
+- tx_restore_ok=1
+- rx_restore_ok=1
+- negative_control=PASS
+
+如果23类基础链路仍有同步、时序、控制协议或恢复问题，24类分支不得绕过，必须同步基础修复后重新打包。
+
+———
+
+## 3. 基线与工作树
+
+### 3.1 基线
+
+只读基线：
+
+F:\嵌赛\fix10prep3_work\sdr_rml23_live_board_package_pc_tx_board_rx_fix10prep3
+
+基线最终 full 包：
+
+dist\sdr_rml23_fix10prep3_canonical_frame_boardtest_full.tar.gz
+SHA-256:
+659c48fda6c5190e518e1b188faaa88efe04ffce63ada93fddea271b2c1804da
+
+必须包含并保留：
+
+- ARM 权威 canonical 训练帧；
+- PC预热缓存修复；
+- PREPARE时序修复；
+- 双SDR fractional timing alignment；
+- WAIT_PREPARE/TX关闭轮询修复；
+- 当前所有恢复门限及fail-closed行为。
+
+### 3.2 新工作树
+
+新建独立工作树：
+
+F:\嵌赛\fix10class24_dualsdr1_work\
+  sdr_rml24_live_board_package_pc_tx_board_rx_fix10class24\
+
+不得直接修改 fix10prep3 原树或其现有发布包。
+
+### 3.3 24类样本资产
+
+只读复用：
+
+F:\嵌赛\fix10class24_prep1_work\clean24_smoke\
+
+该目录应包含：
+
+- 24个原始类别各1个固定样本；
+- source_index = 0, 500, ..., 11500；
+- CI16 D2发射文件；
+- recovered tensor；
+- source tensor；
+- 24列或扩展manifest；
+- 样本选择与24→23映射记录。
+
+禁止根据板测结果重新挑样本。
+
+———
+
+## 4. 状态上限
+
+离线准备完成，但23类物理链路门禁尚未通过时，只允许：
+
+M29-RML24-FIX10CLASS24-BF16-DUALSDR-OFFLINE-READY-BASE-GATE-PENDING
+
+23类基础链路通过且同步检查完成后，允许：
+
+M29-RML24-FIX10CLASS24-BF16-DUALSDR-READY-FOR-BOARD-TEST
+
+仅当用户完成24类真实双SDR测试并满足全部门禁后，才允许：
+
+M29-RML24-FIX10CLASS24-BF16-DUALSDR-SMOKE-PASS
+
+禁止提前写：
+
+RF_PASS
+RF_PATH_PROVEN
+FIX10_READY
+PROJECT_COMPLETE
+FINAL_*
+
+———
+
+## 5. Phase 0：冻结BF16模型及编译证据
+
+### 5.1 定位资产
+
+查找并确认以下原始资产：
+
+- BF16模型 .json
+- BF16模型 .raw
+- iCraft编译日志
+- network precheck报告
+- Host BF16推理结果
+- 模型生成配置
+- 工具链版本
+
+不能仅以聊天中粘贴的统计结果作为冻结证据。
+
+若模型路径、版本或SHA存在歧义，必须fail-closed停止；未经授权不得重新量化或重新导出模型。
+
+### 5.2 固定模型目录
+
+复制到新树：
+
+model_rml24_bf16/
+  rml24_adamrv11_bf16.json
+  rml24_adamrv11_bf16.raw
+  model_SHA256SUMS.txt
+  compiler_metadata.json
+  network_mapping_report.json
+  network_mapping_report.md
+
+记录：
+
+- JSON SHA-256
+- RAW SHA-256
+- checkpoint SHA-256
+- 标签顺序SHA-256
+- 输入/输出形状
+- iCraft版本
+- 后端目标
+- 编译时间与来源路径
+
+### 5.3 独立审计脚本
+
+新增：
+
+scripts/audit_rml24_bf16_network.py
+
+必须验证：
+
+- 输入形状为 [1,2,1024] 或其等价布局；
+- 输出为24 logits；
+- 目标芯片为ZG330；
+- 逐算子统计compile_target；
+- 所有计算HardOp落到@zhuget(330)；
+- host目标只允许Input/Output；
+- sub_hard_ops为空；
+- 不存在CPU fallback；
+- 不存在not supported或未注册计算算子；
+- 权重/张量实际含BF16存储类型；
+- 未静默退回全INT8；
+- 未静默变成FP32软件执行。
+
+发现任何计算算子落host，停止并如实报告。
+
+BF16作为本轮唯一主测试模型。FP16仅保留为离线对照，不得在看到BF16板测结果后临时切换。
+
+———
+
+## 6. Phase 1：生成24样本BF16冻结baseline
+
+必须用iCraft编译后的BF16 Host后端运行，不能用PyTorch结果代替BF16部署baseline。
+
+输入为24个固定样本对应的：
+
+recovered_tensor_*.f32
+
+每个样本保存：
+
+- source_index
+- modulation
+- raw24_class
+- deployed23_class，仅诊断使用
+- input SHA-256
+- BF16 model SHA-256
+- 24个logits，或固定格式logits文件及其SHA
+- raw24 argmax
+- top1分数
+- top2分数
+- top1-top2 margin
+- frozen PyTorch raw24 prediction
+- BF16与PyTorch是否一致
+
+必须满足：
+
+- 24个固定样本全部执行；
+- 24/24 BF16 raw24预测正确；
+- 24/24与冻结PyTorch raw24预测一致；
+- AM-SSB-WC和AM-SSB-SC分别正确；
+- 无NaN/Inf；
+- 不允许替换失败样本。
+
+生成：
+
+clean24_smoke_raw24_bf16_baseline.tsv
+clean24_smoke_raw24_bf16_predictions.tsv
+clean24_smoke_raw24_bf16_report.json
+clean24_smoke_raw24_bf16_report.md
+
+建议baseline列：
+
+source_index
+original_sha256
+raw24_class
+modulation
+split_role
+frozen_bf16_raw24_pred
+model_sha256
+
+解析时缺列、重复source_index、SHA错误、类别越界、预测不匹配全部fail-closed。
+
+———
+
+## 7. Phase 2：建立独立raw24合同
+
+新增：
+
+contracts/rml24_raw_contract.py
+board_package/rml24_raw.hpp
+board_package/rml24_bf16_baseline.hpp
+
+合同必须固定：
+
+- 完整24类标签顺序；
+- class_count=24；
+- deployment_mode=RAW24_UNMERGED；
+- model_mode=RML24-BF16-RAW；
+- AM-SSB-WC与AM-SSB-SC使用独立索引；
+- 标签顺序SHA-256；
+- 模型JSON/RAW SHA-256。
+
+24类模式中禁止调用：
+
+merge23(raw24)
+
+24→23结果可以作为诊断列输出，但不得参与：
+
+- argmax；
+- prediction agreement；
+- label_correct；
+- PASS/FAIL判定。
+
+现有以下23类文件必须保持字节不变：
+
+contracts/rml23_merged_contract.py
+board_package/rml23_merged.hpp
+board_package/iq_rf_fix9r_baseline.hpp
+board_package/iq_clean_baseline.hpp
+
+———
+
+## 8. Phase 3：新增24类NPU数字直注路径
+
+新增phase：
+
+iq-clean-iq-24class-bf16-fix10
+
+建议新增：
+
+board_package/iq_clean_iq_24class_bf16_fix10.hpp
+
+复用：
+
+- NpuClassifier24
+- 现有输入预处理；
+- recovered tensor布局；
+- 模型加载接口；
+- 现有NPU runtime。
+
+不得经过23类merge。
+
+输出每个样本：
+
+- source_index
+- modulation
+- expected_raw24
+- predicted_raw24
+- 24 logits
+- top1/top2/margin
+- model SHA
+- input SHA
+- inference latency
+- deterministic repeat结果
+- verdict
+
+用户板测门禁：
+
+scored=24
+excluded=0
+prediction_agreement=24/24
+label_correct=24/24
+AM-SSB-WC correct=1/1
+AM-SSB-SC correct=1/1
+nan_or_inf=0
+repeat_deterministic=24/24
+
+同时记录：
+
+- NPU加载是否成功；
+- 输出维数是否为24；
+- p50/p95/max延迟；
+- RSS；
+- NPU runtime版本；
+- 是否存在CPU fallback迹象。
+
+———
+
+## 9. Phase 4：新增24类真实双SDR路径
+
+新增phase：
+
+iq-pc-tx-board-rx-24class-bf16-fix10
+
+建议新增：
+
+board_package/iq_pc_tx_board_rx_24class_bf16_fix10.hpp
+
+该路径复用fix10prep3的：
+
+- PC TX服务；
+- ARM canonical训练帧；
+- PREWARM缓存；
+- 控制协议；
+- RX采集；
+- coarse/fine CFO；
+- fractional timing alignment；
+- SRO、增益及相位恢复；
+- negative control；
+- TX/RX状态恢复；
+- fail-closed门限。
+
+禁止修改：
+
+iq_rf_training_frame.hpp
+iq_rf_sync_recovery.hpp
+iq_pc_tx_board_rx_transfer_fix10.hpp
+iq_dual_sdr_coarse_cfo_recovery.hpp
+iq_fix10_canonical_frame_data.hpp
+
+除非23类基础测试证明这些公共实现仍有缺陷；如需修改，必须先回到fix10prep3修复并完成回归，再同步进入24类树。
+
+### 9.1 样本选择
+
+必须支持两种运行规模：
+
+BPSK,4ASK                 # 2样本链路烟测
+ALL_RAW24                 # 24原始类别各1个样本
+
+完整24类运行必须包含：
+
+- AM-SSB-WC ×1
+- AM-SSB-SC ×1
+
+二者分别判定，不得合并。
+
+### 9.2 PC预热
+
+新增：
+
+scripts/build_rml24_prewarm_plan.py
+
+从冻结的selected_samples.tsv或manifest生成24个唯一source_index，检查：
+
+- 恰好24个；
+- 原始类别0～23各一次；
+- source_index无重复；
+- 文件存在；
+- SHA一致；
+- 所有样本使用相同target RMS；
+- 输出确定性的PC启动命令。
+
+所有24个burst必须在PC开始监听前预热完成。PREPARE期间不得启动WSL/g++。
+
+### 9.3 数据一致性
+
+PC与板端必须部署同一份：
+
+clean24_smoke/
+
+启动前逐文件核对SHA sidecar。
+
+板端和PC必须打印：
+
+- manifest SHA
+- model JSON SHA
+- model RAW SHA
+- label contract SHA
+- canonical frame contract SHA
+
+任意不一致立即停止。
+
+———
+
+## 10. 分阶段板测顺序
+
+API只把命令写入AUDIT，用户执行。
+
+### Gate A：23类基础双SDR
+
+先完成当前fix10prep3的BPSK+4ASK测试。
+
+未通过不得进入24类RF测试。
+
+### Gate B：BF16板端NPU数字直注
+
+先运行2样本快速检查，再运行完整24样本。
+
+完整门禁：
+
+scored=24
+excluded=0
+prediction_agreement=24/24
+label_correct=24/24
+WC=correct
+SC=correct
+
+Gate B失败时，不得运行24类双SDR。
+
+### Gate C1：24类BF16双SDR 2样本
+
+先跑：
+
+BPSK ×1
+4ASK ×1
+
+门禁与23类物理烟测等价，但判定使用raw24。
+
+### Gate C2：24类BF16双SDR全24样本
+
+最终门禁：
+
+scored=24
+rf_excluded=0
+prediction_agreement=24/24
+label_correct=24/24
+training_estimate_valid=24/24
+cfo_finite=24/24
+cfo_in_range=24/24
+tx_restore_ok=1
+rx_restore_ok=1
+negative_control=PASS
+AM-SSB-WC=correct
+AM-SSB-SC=correct
+
+失败必须报告唯一首要失败阶段及逐样本证据。
+
+———
+
+## 11. 主机测试
+
+新增至少以下测试：
+
+host_tests/test_rml24_bf16_network_audit.py
+host_tests/test_rml24_raw_contract.cpp
+host_tests/test_rml24_bf16_baseline.cpp
+host_tests/test_clean_iq_24class_bf16_fix10.cpp
+host_tests/test_pc_tx_board_rx_24class_bf16_fix10.cpp
+host_tests/test_rml24_prewarm_plan.py
+
+覆盖：
+
+1. BF16网络输入输出形状；
+2. NPU/host算子映射统计；
+3. fallback检测；
+4. 24类标签顺序与SHA；
+5. WC/SC独立索引；
+6. baseline重复、缺失、错SHA、错模型、越界拒绝；
+7. raw24路径未调用merge；
+8. 24个类别和source_index唯一；
+9. PC预热计划恰好24项；
+10. 模型SHA不一致拒绝；
+11. manifest SHA不一致拒绝；
+12. 24 logits无NaN/Inf；
+13. 23类原路径行为完全不变；
+14. fix10prep3全套测试无回归。
+
+执行：
+
+bash host_tests/build_host_tests.sh
+bash host_tests/run_tests.sh
+
+必须最终打印：
+
+ALL HOST TESTS PASSED
+
+———
+
+## 12. 构建与板端资源准备
+
+板端内存约1GB，构建任务必须显式防止OOM。
+
+AUDIT中写入：
+
+if [ -f /swapfile_fix10prep2 ]; then
+    swapon /swapfile_fix10prep2 2>/dev/null || true
+fi
+
+swapon --show
+free -h
+
+export LIBIIO_ROOT=/opt/sdr/libiio-0.26
+
+优先支持：
+
+BUILD_JOBS=1 bash scripts/build_on_board.sh
+
+如果现有脚本不支持BUILD_JOBS，允许仅对构建脚本做兼容性修改：
+
+JOBS="${BUILD_JOBS:-$(nproc)}"
+make -j"$JOBS"
+
+默认发布命令使用：
+
+BUILD_JOBS=1
+
+不得通过增大并行度缩短构建时间。
+
+———
+
+## 13. 确定性打包
+
+生成：
+
+dist/sdr_rml24_fix10class24_bf16_dualsdr_patch.tar.gz
+dist/sdr_rml24_fix10class24_bf16_dualsdr_patch_SHA256SUMS.txt
+
+dist/sdr_rml24_fix10class24_bf16_dualsdr_boardtest_full.tar.gz
+dist/sdr_rml24_fix10class24_bf16_dualsdr_boardtest_full_SHA256SUMS.txt
+
+full包必须自包含：
+
+- fix10prep3完整基线；
+- canonical训练帧；
+- fractional timing修复；
+- BF16 JSON/RAW；
+- raw24合同；
+- 24类baseline；
+- 24类direct runner；
+- 24类dual-SDR runner；
+- clean24测试资产；
+- PC预热脚本；
+- 用户命令；
+- AUDIT。
+
+必须验证：
+
+- 两次独立打包字节一致；
+- 包SHA一致；
+- 独立目录解包逐文件SHA全过；
+- patch覆盖基线后与full内容一致；
+- 依赖闭包完整；
+- 无缓存、日志、临时文件、__pycache__；
+- 所有红线文件与fix10prep3基线字节一致。
+
+———
+
+## 14. 审计文档
+
+新增：
+
+docs/M29_RML24_FIX10CLASS24_BF16_DUALSDR_AUDIT.md
+
+必须包含：
+
+- 模型来源及完整SHA；
+- BF16算子映射统计；
+- 无CPU fallback证据；
+- 24类标签顺序；
+- 24样本清单；
+- WC/SC独立判定证明；
+- Host BF16 24/24结果；
+- 23类与24类模式隔离说明；
+- 红线文件SHA对比；
+- 包SHA；
+- 板端上传、解包、构建命令；
+- PC预热及服务命令；
+- Gate B/C1/C2板端命令；
+- 日志提取命令；
+- 失败停止规则；
+- 状态晋升条件。
+
+———
+
+## 15. 红线
+
+- 不重训模型；
+- 不重新量化BF16模型；
+- 不根据板测结果切换BF16/FP16；
+- 不替换失败样本；
+- 不修改baseline预测；
+- 不合并WC/SC后宣称24类通过；
+- 不降低同步、CFO、SRO、相关性、残差、削顶门限；
+- 不使用标签选择恢复参数；
+- 不改变canonical训练帧；
+- 不改现有23类稳定路径语义；
+- 不让UI阻塞headless分类测试；
+- 不将Host仿真称为板端NPU通过；
+- API不得控制板卡、SDR或执行真实RF测试。
+
+———
+
+## 16. 停止点和最终汇报
+
+API完成离线准备后停止，并逐项汇报：
+
+1. BF16 JSON/RAW完整SHA；
+2. 计算算子NPU映射数、host数及fallback数；
+3. Host BF16固定24样本正确率；
+4. WC与SC各自预测结果；
+5. 新增/修改文件清单；
+6. 23类回归结果；
+7. 24类host测试结果；
+8. 红线文件是否字节一致；
+9. patch/full包SHA及文件数；
+10. 当前状态；
+11. 用户下一步Gate A、B、C1、C2的完整命令。
+
+在当前23类双SDR尚未通过的情况下，最高只能写：
+
+M29-RML24-FIX10CLASS24-BF16-DUALSDR-OFFLINE-READY-BASE-GATE-PENDING
+</pasted_content id="39e5">

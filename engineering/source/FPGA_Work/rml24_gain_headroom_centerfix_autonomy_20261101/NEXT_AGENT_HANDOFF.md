@@ -1,0 +1,8 @@
+# Completed: final gain adaptation deployment
+
+Status SOFTWARE_DEPLOYED_POST_RF_AND_SOFTWARE_RESTART_PASS.
+Read E:/FPGA_Work/rml24_gain_ui_sync_20261102/HANDOFF_FINAL.md for final user handoff. Board current /opt/rml24-integrated/releases/gain_ui_sync_20261102, previous range_20261101 retained. User explicitly authorized final deployment after powering screen, observed clear UI and real RX GAIN60. Productionfixed24/24+sweep6/6,missing0,actualcalibrationactive,all408finiteUIgainreadbacksmatch,ADCrails0,cleanNPU3264apply1/reset3263/discipline1, cleansoftwarestop/start. Finalreadonlyhealth ready NPU/UI/RXalive,enabled,running,NRestarts0. Physicalcoldboot andlongsoak notperformedfornewsoftware.
+
+PC existing E:/FPGA_Work/rml24_range_expansion_20261101/START_TX_CONSOLE.cmd backedup andredirectednew E:/FPGA_Work/rml24_gain_ui_sync_20261102/START_TX_CONSOLE.cmd. Noautotransmission. Final source d960b668f1298962ec230db661fbcf2f7881206ba49c1ceb4d39dc25518c611b. Model/publicframe/8repeats/2.56MS/s/bitunchanged. Priorfullfixed240/search238/wide13 evidence inheritedwithexactscopeproof, notnewfull240+240claim. Newboundedsweep24/24 andallmodeshortspassed;old22failurepreserved. Limits in finalhandoff.
+
+Evidence/PCconsole ZIP E:\FPGA_Work\rml24_gain_ui_sync_final_20261102.zip SHA256 e68e27a618452ccf24c55512bb06b8bd0e46fdc7c3f2f803b98851381bb2ec31, all members verified. Do not claimZIPcontainsfullmodel/bootimage; boardrelease andexistingQtdeps pathsdocumented. Execution objectivecomplete, noRFcontrollersrunning, automation-3 shouldbe deleted after completion notification, not continue tests. Old state archived as HISTORY_PREVIOUS_TASK_STATE.md. Further experiments require user direction; no automatic repeat-count/rate research.

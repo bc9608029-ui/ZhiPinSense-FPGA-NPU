@@ -1,0 +1,20 @@
+{
+  "passed": 14,
+  "total": 14,
+  "checks": {
+    "qspi_bootloader_original.bin": true,
+    "qspi_kernel_original.bin": true,
+    "sd_first_1MiB_original.bin": true,
+    "sd/BOOT.bin": true,
+    "sd/FSBL251210_ddr400_demo.out": true,
+    "sd/Image": true,
+    "sd/System Volume Information/IndexerVolumeGuid": true,
+    "sd/System Volume Information/WPSettings.dat": true,
+    "sd/ai7030_top.bit": true,
+    "sd/ai7030_top_disable_icap.bit": true,
+    "sd/bl31.elf": true,
+    "sd/fmqlmp-verify.dtb": true,
+    "sd/u-boot": true,
+    "sd/uEnv.txt": true
+  }
+}

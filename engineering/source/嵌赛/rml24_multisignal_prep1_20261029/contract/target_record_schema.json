@@ -1,0 +1,56 @@
+{
+  "schema_id": "rml24-multisignal-target-record-v1",
+  "note": "Frozen nine-field target record per SHARED_CONTRACT_PARALLEL_20261029.md sec. 7. No extra fields are permitted on the record itself; per-dwell diagnostics (spectrum, tuning time, effective backend) live in a separate scan log.",
+  "fields": {
+    "target_id": {
+      "type": "integer",
+      "semantics": "stable monotonic counter assigned at first discovery; never reused within a run"
+    },
+    "center_hz": {
+      "type": "integer",
+      "unit": "Hz",
+      "semantics": "power-weighted centroid of the occupied span, rounded to integer Hz"
+    },
+    "bw_hz": {
+      "type": "integer",
+      "unit": "Hz",
+      "semantics": "occupied bandwidth span (bins within 20 dB of peak times bin_hz); 0 = unknown"
+    },
+    "power_valid": {
+      "type": "number",
+      "semantics": "numeric power measurement, NOT a bare boolean flag: peak PSD power of the detected occupied span expressed in dB above the dwell's adaptive median noise floor (relative scale)",
+      "source": "detection PSD peak power minus the dwell's adaptive median noise floor (prominence of the selected peak)",
+      "unit": "dB above adaptive median noise floor (relative scale; NOT dBm, NOT dBFS)",
+      "valid_range_db": [14.0, 80.0],
+      "valid_means": "value >= 14 dB means a valid detection (detector only reports peaks >= median + 14 dB); NaN or absent means unmeasured/invalid",
+      "no_dbm": "no absolute metrological contract exists offline, so dBm must never be reported from this field"
+    },
+    "top3": {
+      "type": "array",
+      "max_items": 3,
+      "item": {"class_name": "string", "confidence": "number"},
+      "semantics": "top-3 class labels with confidence, from the frozen NPU; empty until classified"
+    },
+    "confidence": {
+      "type": "number",
+      "range": [0.0, 1.0],
+      "semantics": "top-1 confidence; 0.0 while unclassified"
+    },
+    "last_seen": {
+      "type": "number",
+      "unit": "seconds",
+      "semantics": "wall-clock time of the last re-detection, same epoch as receiver time.time()"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["new", "tracking", "missing", "expired"],
+      "semantics": "new=first observation this cycle; tracking=re-detected; missing=missed in the latest revisit cycle but within the aging budget; expired=aged out (retained only in the audit log)"
+    },
+    "backend": {
+      "type": "string",
+      "enum": ["software", "fpga", "auto"],
+      "semantics": "selected backend mode for the last update (auto = FPGA with software fallback, per contract sec. 1)"
+    }
+  },
+  "classification_red_line": "classification never reads test ground truth, transmit samples, or per-sample compensation; it is the frozen two-DC + NPU path"
+}

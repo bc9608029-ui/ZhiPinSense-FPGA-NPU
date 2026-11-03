@@ -1,0 +1,15 @@
+{
+  "candidate/ui_sw/signal_history.hpp": {
+    "before": "2248f70220930268d1672e3c26697825623c11146c5444098349c4f8876c2a32",
+    "after": "2578793e94e7ee136e6a391a416193f0aecdc6b1d7f3b3442ae5989ff4a53fd9"
+  },
+  "candidate/ui_sw/ui_render.cpp": {
+    "before": "c3de37a4e65cc35a9eb5161276b7e4ba30a5af056bcd7ae0ef26c7aa14548f0e",
+    "after": "40c98dc55054a67d7acbf60cdd40b72317054ef5626b4eec5bd174632897b5fc",
+    "accepted_tested_before": "895d82efb402319e246ffc903cdae40590e5ccefc919d8864864b9f385a1addd"
+  },
+  "candidate/board_package/board_ui_live_rml24_final.cpp": {
+    "before": "083a3ddf27724f3efbc250ad4b92a00cb7ff1204c99b021c9105c89fa3130c42",
+    "after": "dbf98dcf3cd10a3020140edc7709b5f985930ab8558902e530430f12487c7b3a"
+  }
+}

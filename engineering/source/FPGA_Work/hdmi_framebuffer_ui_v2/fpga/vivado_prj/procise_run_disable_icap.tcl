@@ -1,0 +1,2 @@
+set_device JFMQL30TAI676H
+increment_bit_cfg_v3  F:/FPGA_Work/hdmi_framebuffer_ui_v2/fpga/vivado_prj/hdmi_framebuffer_720p.runs/impl_1/hdmi_framebuffer_720p_top.bit F:/FPGA_Work/hdmi_framebuffer_ui_v2/fpga/vivado_prj/hdmi_framebuffer_720p.runs/impl_1/hdmi_framebuffer_720p_top_disable_icap.bit -disable_icap

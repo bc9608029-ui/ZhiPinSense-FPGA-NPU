@@ -1,0 +1,20 @@
+{
+  "token":"M29_RML24_REALRF_FINETUNE_PILOT1_CAPTURE",
+  "session":"S1",
+  "manifest_sha256":"ca1a026440009b05a643336af1d579bdb0c1b162181ee81f8a1d7c04df35fd38",
+  "model_sha":"c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+  "rows_written":240,
+  "capture_ok":240,
+  "no_sync":0,
+  "rx_clipped":0,
+  "hard_invalid":0,
+  "valid_recovery":127,
+  "finite":240,
+  "repeat_deterministic":240,
+  "gate_pass":127,
+  "negative_control_ok":true,
+  "tx_restore_ok":true,
+  "rx_restore_ok":true,
+  "functional_pass":true,
+  "error":""
+}

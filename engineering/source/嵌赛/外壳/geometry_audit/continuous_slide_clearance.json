@@ -1,0 +1,11 @@
+{
+  "result": "PASS_GEOMETRIC_STRAIGHT_INSERTION",
+  "minimum_horizontal_side_clearance_mm": 0.2739130434782622,
+  "maximum_horizontal_side_clearance_mm": 0.38260869565217526,
+  "bottom_clearance_mm": 0.3499999999999943,
+  "plate_clearance_mm": 0.35,
+  "end_stop_gap_mm": 0.3499999999999943,
+  "basis": "constant X section; linear Z boundaries; lid withdraws only toward negative X",
+  "limits": "No printer deformation, internal equipment, wiring or friction model",
+  "sampled_boolean": "Stopped due to expensive union; not reported as PASS"
+}

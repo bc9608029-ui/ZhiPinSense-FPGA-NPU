@@ -1,0 +1,25 @@
+{
+  "attribution": "\u6570\u5b57\u5c42 recovered vs orig \u65e0\u7ffb\u8f6c\u3001fixed-512 \u65cb\u8f6c\u7ffb\u8f6c\u4e3a AM-SSB-WC->SC \uff08\u5355\u4e2a\u6570\u5b57\u5b9e\u9a8c\uff09\u3002\u4efb\u4f55 RF \u5f52\u56e0\u9700\u677f\u7aef C \u5c42\u8bc1\u636e\uff0c\u672c\u5224\u8bfb\u5668\u4e0d\u81ea\u52a8\u5f52\u56e0 RF\u3002",
+  "avg_residual_orig_recovered": 0.0030071223991666664,
+  "errors": [],
+  "kind": "digital",
+  "mislabeled_inputs": [],
+  "n_results": 24,
+  "n_sources": 24,
+  "prediction_change": {
+    "recovered_vs_orig_flips": [],
+    "rotated_vs_recovered_flips": [
+      "AM-SSB-WC:17->18"
+    ]
+  },
+  "recomputed_correct": "24/24",
+  "sha_bad": [],
+  "sha_verified": "24/24",
+  "three_layer": {
+    "orig_correct": "24/24",
+    "recovered_correct": "24/24",
+    "rotated_fixed_window_correct": "23/24"
+  },
+  "token": "M29-RML24-FIX10CLASS24-INDEPENDENT-RX-DELIVERY-FIX1-JUDGER",
+  "warnings": []
+}

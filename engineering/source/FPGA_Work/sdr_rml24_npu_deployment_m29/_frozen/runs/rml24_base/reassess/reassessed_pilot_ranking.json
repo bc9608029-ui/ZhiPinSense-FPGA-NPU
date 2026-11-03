@@ -1,0 +1,289 @@
+{
+  "result": "PASS",
+  "reason": "coverage OK",
+  "pilot_root": "runs/rml24_base/pilot",
+  "split": "validation",
+  "eval_samples": null,
+  "index_seed": 20261003,
+  "final_blind_test_accessed": false,
+  "coverage": {
+    "samples": 511056,
+    "n_classes_covered": 24,
+    "n_snr_covered": 26,
+    "classes_covered": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "snrs_covered": [
+      -20.0,
+      -18.0,
+      -16.0,
+      -14.0,
+      -12.0,
+      -10.0,
+      -8.0,
+      -6.0,
+      -4.0,
+      -2.0,
+      0.0,
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0
+    ]
+  },
+  "sort_rule": "descending lexicographic key = (round(rated_0_20_accuracy / 1e-4), min_per_class_accuracy, snr_0_accuracy, macro_f1, accuracy); the primary metric is quantised to 1e-4 so near-tied (saturated) rated_0_20 values fall through to min_per_class_accuracy / snr_0_accuracy / macro_f1",
+  "n_trials_discovered": 12,
+  "n_orphan_checkpoints": 0,
+  "n_unique": 9,
+  "ranking": [
+    {
+      "rank": 1,
+      "trial": "t002_losscross_entropy_optadamw",
+      "seed": 2026,
+      "checkpoint": "runs/rml24_base/pilot/seed2026/t002_losscross_entropy_optadamw/checkpoints/best.pt",
+      "checkpoint_epoch": 15,
+      "candidate_signature": "b87720465f0a0fe42c863da96bc350eb50185390d30c60e197a3067bee56e0cf",
+      "metrics": {
+        "accuracy": 0.6061821013744091,
+        "macro_f1": 0.6136939114052717,
+        "rated_0_20_accuracy": 0.8550708550708551,
+        "snr_0_accuracy": 0.5434981684981685,
+        "min_per_class_accuracy": 0.3982342443880905
+      }
+    },
+    {
+      "rank": 2,
+      "trial": "t008_losscross_entropy_optadamw",
+      "seed": 2026,
+      "checkpoint": "runs/rml24_base/pilot/seed2026/t008_losscross_entropy_optadamw/checkpoints/best.pt",
+      "checkpoint_epoch": 15,
+      "candidate_signature": "2f5c070f54c7d6950a257615b4554c41788e415c28de1ca285848a6ab38301af",
+      "metrics": {
+        "accuracy": 0.6058748943364328,
+        "macro_f1": 0.6157502061095506,
+        "rated_0_20_accuracy": 0.8536324786324786,
+        "snr_0_accuracy": 0.5296601546601547,
+        "min_per_class_accuracy": 0.43951347797501644
+      }
+    },
+    {
+      "rank": 3,
+      "trial": "t003_losslabel_smoothing_optsgd",
+      "seed": 2026,
+      "checkpoint": "runs/rml24_base/pilot/seed2026/t003_losslabel_smoothing_optsgd/checkpoints/best.pt",
+      "checkpoint_epoch": 14,
+      "candidate_signature": "63b1f994571678baba72d37971d339918d8219229a44949e6468053db907369f",
+      "metrics": {
+        "accuracy": 0.6037537960614884,
+        "macro_f1": 0.6156596426224226,
+        "rated_0_20_accuracy": 0.850996225996226,
+        "snr_0_accuracy": 0.5318986568986569,
+        "min_per_class_accuracy": 0.3512256973795435
+      }
+    },
+    {
+      "rank": 4,
+      "trial": "t005_lossfocal_optsgd",
+      "seed": 2026,
+      "checkpoint": "runs/rml24_base/pilot/seed2026/t005_lossfocal_optsgd/checkpoints/best.pt",
+      "checkpoint_epoch": 15,
+      "candidate_signature": "565adb9da81b4e469752f01717eea57d2d6f7728e5b73fd034e009696507e2db",
+      "metrics": {
+        "accuracy": 0.5846697817851664,
+        "macro_f1": 0.5944721724955045,
+        "rated_0_20_accuracy": 0.8202723202723202,
+        "snr_0_accuracy": 0.512006512006512,
+        "min_per_class_accuracy": 0.27139100216023293
+      }
+    },
+    {
+      "rank": 5,
+      "trial": "t004_lossclass_balanced_optsgd",
+      "seed": 2026,
+      "checkpoint": "runs/rml24_base/pilot/seed2026/t004_lossclass_balanced_optsgd/checkpoints/best.pt",
+      "checkpoint_epoch": 10,
+      "candidate_signature": "da80dc46e5a92e2a8496475dd5c5738f130140f20ac03e7594345a3d70e79859",
+      "metrics": {
+        "accuracy": 0.5808384991077299,
+        "macro_f1": 0.5986358143014162,
+        "rated_0_20_accuracy": 0.8186026936026936,
+        "snr_0_accuracy": 0.5098188848188848,
+        "min_per_class_accuracy": 0.2577251808021039
+      }
+    },
+    {
+      "rank": 6,
+      "trial": "t000_losslabel_smoothing_optsgd",
+      "seed": 2026,
+      "checkpoint": "runs/rml24_base/pilot/seed2026/t000_losslabel_smoothing_optsgd/checkpoints/best.pt",
+      "checkpoint_epoch": 6,
+      "candidate_signature": "3f0f878120a9a0f2463813dfe985e0d5feb6c3c7ef04b38e56e69d57c3cbf291",
+      "metrics": {
+        "accuracy": 0.5791185310416079,
+        "macro_f1": 0.6042609020643533,
+        "rated_0_20_accuracy": 0.8170533170533171,
+        "snr_0_accuracy": 0.5013227513227513,
+        "min_per_class_accuracy": 0.2902225979149056
+      }
+    },
+    {
+      "rank": 7,
+      "trial": "t010_lossfocal_optadamw",
+      "seed": 2026,
+      "checkpoint": "runs/rml24_base/pilot/seed2026/t010_lossfocal_optadamw/checkpoints/best.pt",
+      "checkpoint_epoch": 20,
+      "candidate_signature": "bfda77dd94bbaa62392e9aef85e60a48faa2ad397a5a22b53ff8318b4b98d85e",
+      "metrics": {
+        "accuracy": 0.5787310979618672,
+        "macro_f1": 0.5818933889884874,
+        "rated_0_20_accuracy": 0.8068783068783069,
+        "snr_0_accuracy": 0.5133292633292633,
+        "min_per_class_accuracy": 0.3230957077110923
+      }
+    },
+    {
+      "rank": 8,
+      "trial": "t001_lossfocal_optsgd",
+      "seed": 2026,
+      "checkpoint": "runs/rml24_base/pilot/seed2026/t001_lossfocal_optsgd/checkpoints/best.pt",
+      "checkpoint_epoch": 10,
+      "candidate_signature": "917da335a50a755a32327dc99a9c6d06a0c4000e0855f1b298e41ef84ddcd45c",
+      "metrics": {
+        "accuracy": 0.57332464544003,
+        "macro_f1": 0.5799162931165031,
+        "rated_0_20_accuracy": 0.8047785547785548,
+        "snr_0_accuracy": 0.5085470085470085,
+        "min_per_class_accuracy": 0.2410538179768949
+      }
+    },
+    {
+      "rank": 9,
+      "trial": "t009_lossfocal_optadamw",
+      "seed": 2026,
+      "checkpoint": "runs/rml24_base/pilot/seed2026/t009_lossfocal_optadamw/checkpoints/best.pt",
+      "checkpoint_epoch": 15,
+      "candidate_signature": "0c0d99a080af923df46c705b7a568b47b7ffd420b4597bc7adef91549c15e030",
+      "metrics": {
+        "accuracy": 0.5731739770201308,
+        "macro_f1": 0.5745531463048462,
+        "rated_0_20_accuracy": 0.7994505494505495,
+        "snr_0_accuracy": 0.4987789987789988,
+        "min_per_class_accuracy": 0.2784352399737015
+      }
+    }
+  ],
+  "duplicates": [
+    {
+      "candidate_signature": "63b1f994571678baba72d37971d339918d8219229a44949e6468053db907369f",
+      "kept_trial": "t003_losslabel_smoothing_optsgd",
+      "duplicate_trials": [
+        "t006_losslabel_smoothing_optsgd"
+      ]
+    },
+    {
+      "candidate_signature": "da80dc46e5a92e2a8496475dd5c5738f130140f20ac03e7594345a3d70e79859",
+      "kept_trial": "t004_lossclass_balanced_optsgd",
+      "duplicate_trials": [
+        "t007_lossclass_balanced_optsgd"
+      ]
+    },
+    {
+      "candidate_signature": "2f5c070f54c7d6950a257615b4554c41788e415c28de1ca285848a6ab38301af",
+      "kept_trial": "t008_losscross_entropy_optadamw",
+      "duplicate_trials": [
+        "t011_losscross_entropy_optadamw"
+      ]
+    }
+  ],
+  "formal_candidate_plan": {
+    "formal_seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "top_candidates": 1,
+    "budget": {
+      "unique_candidates": 1,
+      "seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "total_runs": 3
+    },
+    "candidates": [
+      {
+        "trial": "t002_losscross_entropy_optadamw",
+        "candidate_signature": "b87720465f0a0fe42c863da96bc350eb50185390d30c60e197a3067bee56e0cf",
+        "selection_score": 0.8550708550708551,
+        "v2": {
+          "loss": "cross_entropy",
+          "optimizer": "adamw",
+          "class_sampling": "balanced"
+        },
+        "training": {
+          "epochs": 20,
+          "batch_size": 256,
+          "learning_rate": 0.0003,
+          "weight_decay": 1e-05,
+          "scheduler_factor": 0.5,
+          "scheduler_patience": 5,
+          "minimum_lr": 1e-06,
+          "minimum_epochs_before_stopping": 20,
+          "early_stopping_patience": 12,
+          "min_delta": 0.0001,
+          "gradient_clip_norm": 2.0,
+          "reconstruction_weight": 0.0,
+          "amp": true,
+          "amp_dtype": "bfloat16",
+          "snr_weighting": {
+            "very_low_snr_weight": 0.35,
+            "rated_snr_weight": 1.25,
+            "zero_db_extra_weight": 1.2
+          }
+        },
+        "reassessed_metrics": {
+          "accuracy": 0.6061821013744091,
+          "macro_f1": 0.6136939114052717,
+          "rated_0_20_accuracy": 0.8550708550708551,
+          "snr_0_accuracy": 0.5434981684981685,
+          "min_per_class_accuracy": 0.3982342443880905
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "files": {
+    "software_deploy.py": "762c09153b99cf0ba04dd639b455915c2048c71253377505d5208f6f46e7a9eb",
+    "deploy_and_verify.py": "196322afc17c11956e643d51c6515e3928f46934df9212b0ecdce968b1103ab6",
+    "post24/tx_formal.py": "54b858aa9c41a625b982b8a002d034726a4123dc81d91b380f7df8f1e546bd9c",
+    "post24/PLAN.json": "94566c541f6e747f68c7c3cd7a87d9bbe6949572e9edcd0bd40a942b095990b1",
+    "post24/TRUTH_FROZEN_PC_ONLY.json": "a8b424a0885a84707cdecf4252df85ea335912d40461d9bdaeb748a7c29a821f",
+    "post24/timing_contract.py": "84d120831ed629f84c1a16e424c87db77b6701cd9a6c5e1aa0eb7e0befacb71b"
+  },
+  "scope": "User authorized autonomous full regression and software deployment only after gates; original service and persistent bit retained for rollback"
+}

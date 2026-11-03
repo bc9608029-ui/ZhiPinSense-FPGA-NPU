@@ -1,0 +1,38 @@
+{
+  "loss_variant": "P0",
+  "seed": 2026,
+  "best_epoch": 1,
+  "best_validation_macro_f1": 0.027777777777777776,
+  "best_validation_accuracy": 0.125,
+  "profile": {
+    "parameters": 288236,
+    "trainable_parameters": 288236,
+    "neural_macs": 32525014,
+    "neural_flops": 65050028,
+    "fp32_parameter_size_mb": 1.0995330810546875,
+    "state_dict_size_mb": 1.1058120727539062,
+    "serialized_state_dict_mb": 1.1504812240600586
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "learning_rate": 0.001,
+      "train_loss": 3.677539348602295,
+      "val_loss": 3.4477427005767822,
+      "val_accuracy": 0.125,
+      "val_macro_f1": 0.027777777777777776,
+      "epoch_time_sec": 1.2727871999959461,
+      "peak_mem_mb": null
+    },
+    {
+      "epoch": 2,
+      "learning_rate": 0.001,
+      "train_loss": 3.5415456891059875,
+      "val_loss": 3.4465655088424683,
+      "val_accuracy": 0.125,
+      "val_macro_f1": 0.027777777777777776,
+      "epoch_time_sec": 1.1626372999962769,
+      "peak_mem_mb": null
+    }
+  ]
+}

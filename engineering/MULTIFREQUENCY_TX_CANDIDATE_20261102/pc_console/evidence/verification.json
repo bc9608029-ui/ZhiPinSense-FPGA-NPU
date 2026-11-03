@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "checks": {
+    "unit_tests": {
+      "returncode": 0,
+      "pass_": true
+    },
+    "gui_smoke": {
+      "returncode": 0,
+      "pass_": true
+    }
+  },
+  "hardware_access": false,
+  "radio_in_unit_tests": "FakeRadio only",
+  "real_rf_test": false
+}

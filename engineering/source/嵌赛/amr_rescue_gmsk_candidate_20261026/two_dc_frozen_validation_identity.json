@@ -1,0 +1,13 @@
+{
+  "frozen_at": "2026-10-26T23:27:52.6874049+08:00",
+  "candidate": "candidate_two_dc.py",
+  "sha256": "E0AA12029E9C5AA670A9340D9C078814B10DCFB0EE82C580ADAAD4F55AFFCF3A",
+  "development_baseline_correct": 108,
+  "development_candidate_correct": 119,
+  "development_n": 120,
+  "development_regressions": 0,
+  "validation_dataset": "validation_seed5100000",
+  "validation_n": 240,
+  "model_changed": false,
+  "acceptance": "Complete fixed sample set, no receiver failures, no baseline-correct/candidate-wrong regressions, candidate total >= baseline in each independent RF run. No tuning on validation."
+}

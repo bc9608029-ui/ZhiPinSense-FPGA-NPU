@@ -1,0 +1,318 @@
+{
+  "kind": "NEW_GENERATED_CLEAN_V2_NOT_RF_TESTED",
+  "source_generator": "E:\\\u5d4c\u8d5b\\fix10class24_waveform_correct_v2_work\\scripts\\radioml_waveform_correct_v2.py",
+  "records": [
+    {
+      "class_index": 0,
+      "class_name": "OOK",
+      "seed": 4100000,
+      "file": "00_OOK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "94bc0ecd505ca4247e219b7b26f2af369ace5563b5ade8b46672f32ea1c733f1",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 1,
+      "class_name": "4ASK",
+      "seed": 4100001,
+      "file": "01_4ASK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "365de09622aba5468f311daf45a968d4cabcab8f6c0399811b1d4b14b7aa0652",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 2,
+      "class_name": "8ASK",
+      "seed": 4100002,
+      "file": "02_8ASK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "5a36711e9e2df84b638888180c33b273f811ba83a5baadbcdc5eccc13118b175",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 3,
+      "class_name": "BPSK",
+      "seed": 4100003,
+      "file": "03_BPSK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "e7546b7278bd2b696e49d9b7a2b04ca877694e0b30eb30738b2f689d27333788",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 4,
+      "class_name": "QPSK",
+      "seed": 4100004,
+      "file": "04_QPSK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "34aacdc1dc1d94311e1ff8b12ce89745f76f5e39159607f0ea714c53407e6305",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 5,
+      "class_name": "8PSK",
+      "seed": 4100005,
+      "file": "05_8PSK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "f0027bc56c1d3abbf41c895a63c1b72487a679e912ccc9b5f7c178a44d2bb655",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 4100006,
+      "file": "06_16PSK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "fd93d2961769ca618b5f6232280e510573cae1f5ba848528f4de23ef2ab2e454",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 7,
+      "class_name": "32PSK",
+      "seed": 4100007,
+      "file": "07_32PSK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "c39602633a58596149bd1180c6aaa22b24276e75511ad6777ea3eea1562e8689",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 8,
+      "class_name": "16APSK",
+      "seed": 4100008,
+      "file": "08_16APSK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "2e865d670e9b97589896fae57dc2e3d7c03871a058bf7f18d546be5e7e202709",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 9,
+      "class_name": "32APSK",
+      "seed": 4100009,
+      "file": "09_32APSK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "37edd8769146a6a17f7bdfb262f616c0c876fa9f5f7dffde21dabd2ed2fb18e0",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 10,
+      "class_name": "64APSK",
+      "seed": 4100010,
+      "file": "10_64APSK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "4215887ed930a1e62f12a39fcfde152e715fd096495a2842bbd7e0a7612fee3b",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 11,
+      "class_name": "128APSK",
+      "seed": 4100011,
+      "file": "11_128APSK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "2ed685d0419068f3e6e3bd81c91a8b4be4a913ac086898becfe88e2161764245",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 12,
+      "class_name": "16QAM",
+      "seed": 4100012,
+      "file": "12_16QAM.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "4040eab887473e0e1fe2f0dcedc1b18e9c9cecd20e8a2804ee17b7171dca0740",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 4100013,
+      "file": "13_32QAM.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "c610b91f6fabefb23e66fbf1dd7998c546f48506755af11212ef73ad5d0c9125",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 4100014,
+      "file": "14_64QAM.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "5cc2c83b51b77a988d2ffecafed131e853aee9c71035bde5ffbde9a7b2f1faa9",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 15,
+      "class_name": "128QAM",
+      "seed": 4100015,
+      "file": "15_128QAM.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "7c12d1e86b556ab0604b7a77490a1ff5eaa901427674a7eef758383aee037c2c",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 16,
+      "class_name": "256QAM",
+      "seed": 4100016,
+      "file": "16_256QAM.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "13c761b036b5c0b1c4feaf81555d042ab89799cdb7634ab58ce6b18f01edbf84",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 17,
+      "class_name": "AM-SSB-WC",
+      "seed": 4100017,
+      "file": "17_AM-SSB-WC.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "9d46080a58b101a16d193011abeab387ee523bdcce9bc5dba35dc5dc069ea22a",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 18,
+      "class_name": "AM-SSB-SC",
+      "seed": 4100018,
+      "file": "18_AM-SSB-SC.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "9cce5029a577bc0137dee267105dfd05aee86c02b652557660ae940a0dae044a",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 19,
+      "class_name": "AM-DSB-WC",
+      "seed": 4100019,
+      "file": "19_AM-DSB-WC.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "ecaa2955381f422b1c1dce0e1e47f0e603bacb0c6fa5a5811726c4d1ce8a6c8f",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 20,
+      "class_name": "AM-DSB-SC",
+      "seed": 4100020,
+      "file": "20_AM-DSB-SC.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "daf9c1a7cd5aee7043ccf906f29ff14ac623489ea35670b002839169284111d4",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 21,
+      "class_name": "FM",
+      "seed": 4100021,
+      "file": "21_FM.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "abdf3df1aa7655e829ecb9e94c7195016b60f1825809e1e4177e3c8f760efc74",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 22,
+      "class_name": "GMSK",
+      "seed": 4100022,
+      "file": "22_GMSK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "a82bd0c7093e72b8b514bb423a363d84e50f638bada54e288459343826ea84e0",
+      "differs_from_frozen": true
+    },
+    {
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 4100023,
+      "file": "23_OQPSK.bin",
+      "shape": [
+        2,
+        1024
+      ],
+      "dtype": "float32_le_planar_I_then_Q",
+      "sha256": "16af2d12726fbead6c1fad0100abb2d6fea0bd456e81554108ecf2ae0d982055",
+      "differs_from_frozen": true
+    }
+  ]
+}

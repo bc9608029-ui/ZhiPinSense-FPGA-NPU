@@ -1,0 +1,12 @@
+{
+  "allowed": true,
+  "plan_sha256": "19c0027f200c252a7964ca7d73810baabbf6fa305e4a0278393a0cc8fe97fc0f",
+  "helpers_sha256": "eb52b5d0d2b783eeb1cf34c7f67348d5c6c0a29998a2e96e7122fa8a59f5fcda",
+  "user_answer": "User explicitly approved all three frozen RF regression rounds",
+  "approved_at": "2026-10-31T20:14:42.837039",
+  "scope": [
+    "fixed240",
+    "search240",
+    "sweep24"
+  ]
+}

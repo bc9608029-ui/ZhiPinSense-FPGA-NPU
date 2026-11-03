@@ -1,0 +1,129 @@
+{
+  "status": "RTL_SIM_AND_FMQL_STANDALONE_IMPLEMENTATION_VERIFIED_PS_PL_AB_PENDING",
+  "client_date": "2026-10-27",
+  "workdir": "E:\\rml24_fpga_execution_20261027",
+  "device": "JFMQL30TAI676H",
+  "package": "fcbga676",
+  "speed_grade": "-2",
+  "procise": "2025.1.1 temp SVN32494",
+  "simulation_tool": "XSim2018.3, generic RTL simulation only",
+  "vector_comparison": {
+    "frames": 19,
+    "expected_samples": 19456,
+    "actual_samples": 19456,
+    "compared_fields": [
+      "frame_id",
+      "sample_index",
+      "power",
+      "lag_re",
+      "lag_im"
+    ],
+    "mismatches": 0,
+    "pass": true,
+    "note": "Projection required: frozen CSV also contains unrelated INT8 and address columns."
+  },
+  "stress": {
+    "samples": 19456,
+    "frames": 19,
+    "input_stalls": 6389,
+    "output_stalls": 6377,
+    "stats_stalls": 14,
+    "partial_frame_reset_tested": true,
+    "max_energy": 2199023255552,
+    "max_peak_power": 2147483648,
+    "dut_modified": false
+  },
+  "implementations": {
+    "frame_statistics": {
+      "flow_complete": true,
+      "synthesis_pass": true,
+      "area": {
+        "instances": 530,
+        "luts": 214,
+        "ffs": 171,
+        "cu": 2,
+        "ramb": 0
+      },
+      "register_timing": {
+        "period_ns": 10.0,
+        "setup_slack_ns": 6.537,
+        "hold_slack_ns": 0.151
+      },
+      "note": ""
+    },
+    "qam_original_top": {
+      "flow_complete": false,
+      "synthesis_pass": true,
+      "area": {
+        "instances": 739,
+        "luts": 200,
+        "ffs": 254,
+        "cu": 6,
+        "ramb": 0
+      },
+      "register_timing": null,
+      "note": ""
+    },
+    "qam_serial_test_harness": {
+      "flow_complete": true,
+      "synthesis_pass": true,
+      "area": {
+        "instances": 919,
+        "luts": 376,
+        "ffs": 506,
+        "cu": 6,
+        "ramb": 0
+      },
+      "register_timing": {
+        "period_ns": 10.0,
+        "setup_slack_ns": 5.83,
+        "hold_slack_ns": 0.108
+      },
+      "note": "Includes extra serial input/output registers; not a PS-PL adapter."
+    }
+  },
+  "frozen_rtl_sha256": {
+    "qam_feature_pipeline": "2c8b8543f1ae8819e745e46002fcd250fdbe5ee52ca501b8453e53c0ddb766a7",
+    "frame_statistics": "97a173e11f53c6d020962fb7ed7ca0e5f69dd963d27e2053a0a7055f3c3a93c3"
+  },
+  "baseline_backup": {
+    "runtime_before.tar.gz": {
+      "sha256": "b4fab53e1e036fe8246d5758ee02804b54d57263d81171cce79988a5ce03524b",
+      "bytes": 1837403,
+      "members": 190,
+      "tar_readable": true,
+      "single_gzip": true
+    },
+    "sd_boot_before.tar.gz": {
+      "sha256": "f4fbd761fe0e3becd6d25a470c060d1d06dfb6a2281fd067e4c494822fced900",
+      "bytes": 16219503,
+      "members": 15,
+      "tar_readable": true,
+      "single_gzip": true
+    },
+    "sd_file_hashes": {
+      "./BOOT.bin": "ff350477e624c50d2f8180fb4b9130ec7688fbc7ca553412ed7c3dd2a68b31ef",
+      "./Image": "ee88eae627df17fdf615b44cb9fc5a7a7a37d2baaa3f21e90d613f48bedf0929",
+      "./uEnv.txt": "b81563447febf35023b7c99a918bd204270518a87ea9cff169a11fbf26d1f4a9",
+      "./download.bit": "22fec95c64f3db727dd250e5768cdadec82f4c4d2de088392980b95a632932e9"
+    },
+    "runtime_identity_hashes": {
+      "root/realrf_finetune_pilot1_test_1773373090/model_rml24_bf16/rml24_adamrv11_bf16.json": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+      "root/realrf_finetune_pilot1_test_1773373090/model_rml24_bf16/rml24_adamrv11_bf16.raw": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+      "opt/rml24-system/rml24_final/recovery/candidate_two_dc.py": "e0aa12029e9c5aa670a9340d9c078814b10dcfb0ee82c580adaad4f55affcf3a",
+      "etc/systemd/system/rml24-ui.service": "6ee4461dfae6f1b513e1ae136dc489982ab95318e6aa3b8213654a17e2b8e00e",
+      "etc/systemd/system/rml24-receiver.service": "febdfe0940585b56d6725f04fdcad1a8a71b9fd703a3a4bc5fc6493b34229c7e"
+    }
+  },
+  "board_access_restored": true,
+  "baseline_services_unchanged": true,
+  "temporary_backup_server_closed": true,
+  "new_bitstream_generated_or_loaded": false,
+  "ps_pl_actual_ab_completed": false,
+  "automatic_fallback_board_tested": false,
+  "model_input_sha_ab_tested": false,
+  "new_rf_regression_run": false,
+  "fivepage_native_build_done": false,
+  "new_ui_physical_test_done": false,
+  "long_stability_done": false
+}

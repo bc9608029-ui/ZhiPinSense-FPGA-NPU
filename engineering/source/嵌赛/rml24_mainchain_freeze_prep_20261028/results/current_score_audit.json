@@ -1,0 +1,269 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "run": "formal_fixed01",
+      "denominator": 240,
+      "correct": 227,
+      "accuracy": 0.9458333333333333,
+      "missing": 0,
+      "top_confusions": [
+        {
+          "label": 19,
+          "pred": 20,
+          "count": 8
+        },
+        {
+          "label": 22,
+          "pred": 17,
+          "count": 2
+        },
+        {
+          "label": 14,
+          "pred": 16,
+          "count": 1
+        },
+        {
+          "label": 13,
+          "pred": 15,
+          "count": 1
+        },
+        {
+          "label": 23,
+          "pred": 10,
+          "count": 1
+        }
+      ],
+      "per_class": {
+        "0": {
+          "correct": 10,
+          "total": 10
+        },
+        "1": {
+          "correct": 10,
+          "total": 10
+        },
+        "2": {
+          "correct": 10,
+          "total": 10
+        },
+        "3": {
+          "correct": 10,
+          "total": 10
+        },
+        "4": {
+          "correct": 10,
+          "total": 10
+        },
+        "5": {
+          "correct": 10,
+          "total": 10
+        },
+        "6": {
+          "correct": 10,
+          "total": 10
+        },
+        "7": {
+          "correct": 10,
+          "total": 10
+        },
+        "8": {
+          "correct": 10,
+          "total": 10
+        },
+        "9": {
+          "correct": 10,
+          "total": 10
+        },
+        "10": {
+          "correct": 10,
+          "total": 10
+        },
+        "11": {
+          "correct": 10,
+          "total": 10
+        },
+        "12": {
+          "correct": 10,
+          "total": 10
+        },
+        "13": {
+          "correct": 9,
+          "total": 10
+        },
+        "14": {
+          "correct": 9,
+          "total": 10
+        },
+        "15": {
+          "correct": 10,
+          "total": 10
+        },
+        "16": {
+          "correct": 10,
+          "total": 10
+        },
+        "17": {
+          "correct": 10,
+          "total": 10
+        },
+        "18": {
+          "correct": 10,
+          "total": 10
+        },
+        "19": {
+          "correct": 2,
+          "total": 10
+        },
+        "20": {
+          "correct": 10,
+          "total": 10
+        },
+        "21": {
+          "correct": 10,
+          "total": 10
+        },
+        "22": {
+          "correct": 8,
+          "total": 10
+        },
+        "23": {
+          "correct": 9,
+          "total": 10
+        }
+      }
+    },
+    {
+      "run": "formal_scan01",
+      "denominator": 240,
+      "correct": 232,
+      "accuracy": 0.9666666666666667,
+      "missing": 0,
+      "top_confusions": [
+        {
+          "label": 22,
+          "pred": 17,
+          "count": 3
+        },
+        {
+          "label": 19,
+          "pred": 20,
+          "count": 2
+        },
+        {
+          "label": 14,
+          "pred": 16,
+          "count": 1
+        },
+        {
+          "label": 7,
+          "pred": 6,
+          "count": 1
+        },
+        {
+          "label": 23,
+          "pred": 10,
+          "count": 1
+        }
+      ],
+      "per_class": {
+        "0": {
+          "correct": 10,
+          "total": 10
+        },
+        "1": {
+          "correct": 10,
+          "total": 10
+        },
+        "2": {
+          "correct": 10,
+          "total": 10
+        },
+        "3": {
+          "correct": 10,
+          "total": 10
+        },
+        "4": {
+          "correct": 10,
+          "total": 10
+        },
+        "5": {
+          "correct": 10,
+          "total": 10
+        },
+        "6": {
+          "correct": 10,
+          "total": 10
+        },
+        "7": {
+          "correct": 9,
+          "total": 10
+        },
+        "8": {
+          "correct": 10,
+          "total": 10
+        },
+        "9": {
+          "correct": 10,
+          "total": 10
+        },
+        "10": {
+          "correct": 10,
+          "total": 10
+        },
+        "11": {
+          "correct": 10,
+          "total": 10
+        },
+        "12": {
+          "correct": 10,
+          "total": 10
+        },
+        "13": {
+          "correct": 10,
+          "total": 10
+        },
+        "14": {
+          "correct": 9,
+          "total": 10
+        },
+        "15": {
+          "correct": 10,
+          "total": 10
+        },
+        "16": {
+          "correct": 10,
+          "total": 10
+        },
+        "17": {
+          "correct": 10,
+          "total": 10
+        },
+        "18": {
+          "correct": 10,
+          "total": 10
+        },
+        "19": {
+          "correct": 8,
+          "total": 10
+        },
+        "20": {
+          "correct": 10,
+          "total": 10
+        },
+        "21": {
+          "correct": 10,
+          "total": 10
+        },
+        "22": {
+          "correct": 7,
+          "total": 10
+        },
+        "23": {
+          "correct": 9,
+          "total": 10
+        }
+      }
+    }
+  ]
+}

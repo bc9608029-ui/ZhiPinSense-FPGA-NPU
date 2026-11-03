@@ -1,0 +1,471 @@
+#!/usr/bin/env python3
+"""Package the fix10prep3 delivery: cross-architecture canonical training frame.
+
+fix10prep3 sits on top of the fix10prep2 authoritative tree and adds ONE auditable
+change: freeze the three non-zero training components (Zadoff-Chu preamble, payload
+16QAM training block, Zadoff-Chu tail) that previously differed between x86 and ARM
+because of std::sin/cos/lround rounding, into platform-independent little-endian CI16
+assets derived from the ARM (aarch64) authoritative output.  Both the PC TX path and
+the board RX path now assemble the full burst from these compile-time-embedded
+canonical components, so the full burst SHA is byte-identical across architectures.
+
+Also folded in (Batch 1, the three PC hotfixes that make the probe / prewarm / cache
+auditable):
+  * IIO numeric-attribute parsing extracted to a pure module (Hz/dB suffixes).
+  * PREPARE only serves cache hits (no WSL/g++ inside the 2-second window).
+  * content-addressed burst-cache tool SHA includes FLAGS + compiler + dependency
+    closure.
+
+No model / weights / labels / preprocess / 24->23 mapping / sync threshold / CFO
+range / SRO / clip threshold is changed.  A later dual-SDR-only hotfix adds
+category-independent fractional-sample alignment in the existing coarse-CFO wrapper,
+and permits repeated idle header polls only while the PC protocol is in the proven
+TX-off WAIT_PREPARE state.  The red-line recovery core and active-message timeout
+remain byte-identical/unchanged.
+
+Produces, under dist/:
+  1. sdr_rml23_fix10prep3_canonical_frame_patch.tar.gz
+  2. sdr_rml23_fix10prep3_canonical_frame_boardtest_full.tar.gz   (full tree)
+
+Fail-closed audits the packager runs BEFORE emitting anything:
+  * RED-LINE headers (the six recovery/frame/transfer headers) are byte-identical to
+    the fix10prep2 base.
+  * PROTECTED dirs (model/weights/labels/preprocess) byte-identical to the base.
+  * every quoted include of every new C++ file resolves inside the tree.
+  * no old-fix10 (external_rf / pluto_external) residue.
+
+Each tarball carries a SHA256SUMS in the repo's `HASH *relpath` convention
+(sha256sum -b).  stdlib only; deterministic (uid/gid 0, mtime 0, sorted entries,
+gzip level 9, mtime 0).  Run with:
+    python scripts/package_pc_tx_board_rx_fix10prep3.py
+"""
+
+import gzip
+import hashlib
+import os
+import re
+import shutil
+import sys
+import tarfile
+import tempfile
+
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+DIST = os.path.join(ROOT, "dist")
+
+PATCH_NAME = "sdr_rml23_fix10prep3_canonical_frame_patch"
+PATCH_SUMS_NAME = "FIX10PREP3_PATCH_SHA256SUMS.txt"
+# The full tree's internal top directory (== the tree basename, so the tarball
+# extracts to the natural name).  The tarball FILE itself carries the "boardtest_full"
+# suffix per the task book.
+FULL_NAME = "sdr_rml23_live_board_package_pc_tx_board_rx_fix10prep3"
+FULL_TAR_BASENAME = "sdr_rml23_fix10prep3_canonical_frame_boardtest_full"
+FULL_SUMS_NAME = "SHA256SUMS.txt"
+
+# Directories never packaged (build products / python cache / output).
+EXCLUDED_DIRS = {"host_tests/bin", "host_tests/__pycache__", "host_tools/__pycache__",
+                 "scripts/__pycache__", "dist", ".git",
+                 "host_tools/.build_burst_cache", "results"}
+
+# Transient files never packaged (stale host-test logs from a manual run).
+EXCLUDED_FILES = {
+    "host_tests/build_host_tests.log",
+    "host_tests/run_tests.log",
+}
+
+# ---- the fix10prep3 change set (the ONLY thing the patch carries) ----
+FIX10PREP3_NEW_FILES = [
+    "board_package/iq_fix10_canonical_frame.hpp",
+    "board_package/iq_fix10_canonical_frame_data.hpp",
+    "contracts/fix10_canonical_frame_v1/SHA256SUMS.txt",
+    "contracts/fix10_canonical_frame_v1/manifest.tsv",
+    "contracts/fix10_canonical_frame_v1/payload_training.ci16",
+    "contracts/fix10_canonical_frame_v1/preamble.ci16",
+    "contracts/fix10_canonical_frame_v1/tail.ci16",
+    "docs/M29_RML23_FIX10PREP3_CROSS_ARCH_TRAINING_FRAME_AUDIT.md",
+    "docs/M29_RML23_FIX10PREP3_DUAL_SDR_TIMING_HOTFIX_AUDIT.md",
+    "host_tests/fixtures_fix10_canonical/quantized_d2_2p56m_000002.ci16",
+    "host_tests/fixtures_fix10_canonical/quantized_d2_2p56m_000006.ci16",
+    "host_tests/test_fix10_canonical_frame.cpp",
+    "host_tests/test_pc_tx_burst_cache.py",
+    "host_tests/test_pc_tx_iio_attr_parse.py",
+    "host_tools/fix10_burst_cache.py",
+    "host_tools/fix10_iio_attr.py",
+    "host_tools/frame_component_digest.cpp",
+    "host_tools/frame_component_digest.sh",
+    "scripts/generate_fix10_canonical_frame_header.py",
+    "scripts/package_pc_tx_board_rx_fix10prep3.py",
+]
+
+FIX10PREP3_MODIFIED_FILES = [
+    "board_package/iq_dual_sdr_coarse_cfo_recovery.hpp",
+    "board_package/iq_pc_tx_board_rx_23class_fix10.hpp",
+    "host_tests/build_host_tests.sh",
+    "host_tests/run_tests.sh",
+    "host_tests/test_iq_dual_sdr_23class_fix10.cpp",
+    "host_tests/test_pc_tx_protocol_fix10.py",
+    "host_tools/build_burst_cli.cpp",
+    "host_tools/build_burst_cli.sh",
+    "host_tools/fix10_tx_protocol.py",
+    "host_tools/pc_tx_sdr_fix10.py",
+]
+
+# The patch = the complete delta from the fix10prep2 base.  Overlaying these onto the
+# fix10prep2 tree reproduces the full fix10prep3 tree.
+PATCH_FILES = FIX10PREP3_NEW_FILES + FIX10PREP3_MODIFIED_FILES
+PATCH_SET = set(PATCH_FILES)
+
+# Directories whose contents must be byte-identical to the fix10prep2 baseline (model
+# / weights / labels / preprocess / mapping / gates untouched).
+PROTECTED_DIRS = ("model_rml23/", "model_12class/", "contracts/",
+                  "deployment_golden/")
+
+# RED LINE: these headers carry the recovery core, frame math, transfer/provenance
+# state machine and the canonical-sync contract the fix10prep2 base proved; fix10prep3
+# must NOT have touched them.
+RED_LINE_HEADERS = (
+    "board_package/iq_rf_sync_recovery.hpp",
+    "board_package/iq_rf_training_frame.hpp",
+    "board_package/iq_digital_loopback.hpp",
+    "board_package/iq_pc_tx_board_rx_transfer_fix10.hpp",
+    "board_package/iq_rf_fix9r_baseline.hpp",
+    "board_package/iq_clean_baseline.hpp",
+)
+
+_INCLUDE_RE = re.compile(r'^\s*#\s*include\s*"([^"]+)"')
+_CPP_EXT = (".cpp", ".hpp", ".h", ".cc", ".cxx")
+
+
+def sha256_of(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def write_bytes(path, data, mode=0o644):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "wb") as f:
+        f.write(data)
+    os.chmod(path, mode)
+
+
+def list_files(stage):
+    out = []
+    for dirpath, dirnames, filenames in os.walk(stage):
+        dirnames[:] = sorted(
+            d for d in dirnames
+            if os.path.relpath(os.path.join(dirpath, d), stage).replace(os.sep, "/")
+            not in EXCLUDED_DIRS)
+        for name in filenames:
+            rel = os.path.relpath(os.path.join(dirpath, name), stage).replace(os.sep, "/")
+            if rel not in EXCLUDED_FILES:
+                out.append(rel)
+    return sorted(out)
+
+
+def write_sums(stage, sums_name):
+    rels = [r for r in list_files(stage) if r != sums_name]
+    lines = ["%s *%s\n" % (sha256_of(os.path.join(stage, rel.replace("/", os.sep))), rel)
+             for rel in rels]
+    write_bytes(os.path.join(stage, sums_name), "".join(sorted(lines)).encode("utf-8"))
+    return len(rels)
+
+
+def make_tar(stage, tar_path):
+    top = os.path.basename(stage.rstrip("/\\"))
+    raw = tar_path + ".tmp.tar"
+
+    entries = [("", True)]
+    for dirpath, dirnames, filenames in os.walk(stage):
+        dirnames[:] = sorted(
+            d for d in dirnames
+            if os.path.relpath(os.path.join(dirpath, d), stage).replace(os.sep, "/")
+            not in EXCLUDED_DIRS)
+        filenames.sort()
+        for d in dirnames:
+            entries.append((os.path.relpath(os.path.join(dirpath, d), stage)
+                            .replace(os.sep, "/"), True))
+        for name in filenames:
+            rel = os.path.relpath(os.path.join(dirpath, name), stage).replace(os.sep, "/")
+            if rel not in EXCLUDED_FILES:
+                entries.append((rel, False))
+    entries.sort(key=lambda e: e[0])
+
+    with tarfile.open(raw, "w", format=tarfile.GNU_FORMAT) as t:
+        for rel, is_dir in entries:
+            full = stage if rel == "" else os.path.join(stage, rel.replace("/", os.sep))
+            arc = top if rel == "" else os.path.join(top, rel).replace(os.sep, "/")
+            info = t.gettarinfo(full, arcname=arc)
+            info.uid = 0
+            info.gid = 0
+            info.uname = ""
+            info.gname = ""
+            info.mtime = 0
+            info.mode = 0o755 if is_dir else (0o755 if rel.endswith(".sh") else 0o644)
+            if is_dir:
+                t.addfile(info)
+            else:
+                with open(full, "rb") as f:
+                    t.addfile(info, f)
+
+    with open(raw, "rb") as fin:
+        with gzip.GzipFile(filename="", mode="wb", fileobj=open(tar_path, "wb"),
+                           compresslevel=9, mtime=0) as gz:
+            shutil.copyfileobj(fin, gz)
+    os.remove(raw)
+
+
+def verify_tar(tar_path, sums_name, topdir):
+    with tempfile.TemporaryDirectory() as td:
+        with tarfile.open(tar_path, "r:gz") as t:
+            t.extractall(td, filter="data")
+        d = os.path.join(td, topdir)
+        ok = 0
+        bad = 0
+        with open(os.path.join(d, sums_name), "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.rstrip("\n")
+                if not line:
+                    continue
+                hx, _, rel = line.partition(" *")
+                p = os.path.join(d, rel.replace("/", os.sep))
+                if sha256_of(p) == hx:
+                    ok += 1
+                else:
+                    bad += 1
+                    print("  MISMATCH: %s" % rel, file=sys.stderr)
+        return (bad == 0, ok + bad, ok)
+
+
+def _cpp_includes(text):
+    out = []
+    for line in text.splitlines():
+        m = _INCLUDE_RE.match(line)
+        if m:
+            out.append(m.group(1))
+    return out
+
+
+_INCLUDE_DIRS = ("board_package", "sdr_adapter", "ui_sw")
+
+
+def audit_dependency_closure(full_dir, files=None, extra_roots=()):
+    """Fail-closed: every quoted include of every audited C++ file must resolve to a
+    real file inside `full_dir` (or one of `extra_roots`, e.g. the fix10prep2 base,
+    for the patch self-containment check)."""
+    if files is None:
+        files = PATCH_FILES
+    roots = (full_dir,) + tuple(extra_roots)
+
+    by_base = {}
+    for root in roots:
+        for dirpath, dirnames, filenames in os.walk(root):
+            dirnames[:] = sorted(
+                d for d in dirnames
+                if os.path.relpath(os.path.join(dirpath, d), root).replace(os.sep, "/")
+                not in EXCLUDED_DIRS)
+            for name in filenames:
+                if name.endswith(_CPP_EXT):
+                    p = os.path.join(dirpath, name)
+                    by_base.setdefault(name, []).append(p)
+
+    missing = set()
+    for rel in files:
+        if not rel.endswith(_CPP_EXT):
+            continue
+        abs_path = os.path.join(full_dir, rel.replace("/", os.sep))
+        with open(abs_path, "r", encoding="utf-8", errors="replace") as f:
+            includes = _cpp_includes(f.read())
+        for inc in includes:
+            cands = [os.path.normpath(os.path.join(os.path.dirname(abs_path), inc))]
+            for root in roots:
+                cands += [os.path.normpath(os.path.join(root, d, inc))
+                          for d in _INCLUDE_DIRS]
+            if not any(os.path.exists(c) for c in cands):
+                base = os.path.basename(inc)
+                hits = by_base.get(base, [])
+                if len(hits) != 1:
+                    missing.add(rel + " -> " + inc)
+    return sorted(missing)
+
+
+def audit_complete_delta(full_dir, base_dir, patch_files):
+    """Fail-closed: every file in the full tree is either byte-identical to the
+    fix10prep2 base, or carried by the patch -- i.e. patch + base reproduces the full
+    tree.  Catches any base-delta file the patch does not carry."""
+    patch_set = set(patch_files)
+    violations = []
+    for rel in list_files(full_dir):
+        bf = os.path.join(base_dir, rel.replace("/", os.sep))
+        ff = os.path.join(full_dir, rel.replace("/", os.sep))
+        if os.path.exists(bf) and sha256_of(ff) == sha256_of(bf):
+            continue   # unchanged base file
+        if rel in patch_set:
+            continue   # changed by the patch
+        violations.append(rel)
+    return sorted(violations)
+
+
+def verify_protected_unchanged(full_dir, base_dir):
+    violations = []
+    for pdir in PROTECTED_DIRS:
+        base_p = os.path.join(base_dir, pdir)
+        full_p = os.path.join(full_dir, pdir)
+        if not os.path.isdir(base_p):
+            continue
+        for dirpath, dirnames, filenames in os.walk(base_p):
+            dirnames.sort()
+            for name in sorted(filenames):
+                bf = os.path.join(dirpath, name)
+                rel = os.path.relpath(bf, base_dir).replace(os.sep, "/")
+                ff = os.path.join(full_dir, rel.replace("/", os.sep))
+                if not os.path.exists(ff) or sha256_of(ff) != sha256_of(bf):
+                    violations.append(rel)
+    return sorted(violations)
+
+
+def verify_red_line_headers(full_dir, base_dir):
+    """RED LINE: the recovery core + frame math + transfer/provenance state machine +
+    canonical-sync contract must be byte-identical to fix10prep2."""
+    violations = []
+    for rel in RED_LINE_HEADERS:
+        ff = os.path.join(full_dir, rel.replace("/", os.sep))
+        bf = os.path.join(base_dir, rel.replace("/", os.sep))
+        if not os.path.exists(bf):
+            violations.append(rel + " (missing in base)")
+        elif not os.path.exists(ff) or sha256_of(ff) != sha256_of(bf):
+            violations.append(rel + " (differs from fix10prep2 base)")
+    return sorted(violations)
+
+
+def main():
+    for rel in PATCH_FILES:
+        if not os.path.exists(os.path.join(ROOT, rel.replace("/", os.sep))):
+            sys.exit("missing fix10prep3 file: %s" % rel)
+
+    # The fix10prep2 authoritative baseline reference tree.
+    base_ref = os.path.abspath(os.path.join(
+        ROOT, os.pardir, os.pardir, "fix10prep2_work",
+        "sdr_rml23_live_board_package_iq_rf_loopback_fix10prep2"))
+
+    work = tempfile.mkdtemp(prefix="pkg_fix10prep3_")
+    try:
+        full = os.path.join(work, FULL_NAME)
+        os.makedirs(full, exist_ok=True)
+        for rel in list_files(ROOT):
+            if rel == FULL_SUMS_NAME:
+                continue
+            src = os.path.join(ROOT, rel.replace("/", os.sep))
+            dst = os.path.join(full, rel.replace("/", os.sep))
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+            shutil.copy2(src, dst)
+
+        # ---- RED LINE: six recovery/frame/transfer headers byte-identical ----
+        red_line_viol = verify_red_line_headers(full, base_ref)
+        if red_line_viol:
+            print("RED-LINE header audit FAILED (recovery/frame/transfer touched):",
+                  file=sys.stderr)
+            for v in red_line_viol:
+                print("  " + v, file=sys.stderr)
+            sys.exit(1)
+        print("red-line header audit: OK (6 headers byte-identical to fix10prep2)")
+
+        # ---- protected-dir proof ----
+        protected_viol = verify_protected_unchanged(full, base_ref)
+        if protected_viol:
+            print("protected-dir audit FAILED (model/weights/labels/preprocess "
+                  "touched):", file=sys.stderr)
+            for v in protected_viol:
+                print("  " + v, file=sys.stderr)
+            sys.exit(1)
+        print("protected-dir audit: OK (model/weights/labels/preprocess/mapping "
+              "byte-identical to fix10prep2)")
+
+        # ---- dependency-closure audit ----
+        missing = audit_dependency_closure(full, files=PATCH_FILES)
+        if missing:
+            print("dependency-closure audit FAILED:", file=sys.stderr)
+            for v in missing:
+                print("  " + v, file=sys.stderr)
+            sys.exit(1)
+        print("dependency-closure audit: OK")
+
+        # ---- complete-delta audit: patch + fix10prep2 base == full tree ----
+        delta_viol = audit_complete_delta(full, base_ref, PATCH_FILES)
+        if delta_viol:
+            print("complete-delta audit FAILED (file changed vs base but not in the "
+                  "patch):", file=sys.stderr)
+            for v in delta_viol:
+                print("  " + v, file=sys.stderr)
+            sys.exit(1)
+        print("complete-delta audit: OK (patch + fix10prep2 base reproduces the full "
+              "tree)")
+
+        # ---- old-fix10 zero-residual ----
+        for rel in list_files(full):
+            if "external_rf" in rel or "pluto_external" in rel:
+                print("old-fix10 zero-residual FAILED: %s leaked" % rel,
+                      file=sys.stderr)
+                sys.exit(1)
+        print("old-fix10 zero-residual: OK")
+
+        # ---- 1. patch (complete delta from fix10prep2) ----
+        p = os.path.join(work, PATCH_NAME)
+        for rel in PATCH_FILES:
+            src = os.path.join(ROOT, rel.replace("/", os.sep))
+            write_bytes(os.path.join(p, rel.replace("/", os.sep)),
+                        open(src, "rb").read())
+
+        # ---- patch self-containment audit: the patch, overlaid onto the fix10prep2
+        #      base ALONE, must resolve every include of every patch C++ file.
+        patch_missing = audit_dependency_closure(p, files=PATCH_FILES,
+                                                 extra_roots=(base_ref,))
+        if patch_missing:
+            print("patch self-containment audit FAILED (patch cannot overlay onto "
+                  "fix10prep2 alone):", file=sys.stderr)
+            for v in patch_missing:
+                print("  " + v, file=sys.stderr)
+            sys.exit(1)
+        print("patch self-containment audit: OK (patch overlays independently onto "
+              "fix10prep2)")
+
+        p_n = write_sums(p, PATCH_SUMS_NAME)
+        p_tar = os.path.join(DIST, PATCH_NAME + ".tar.gz")
+        os.makedirs(DIST, exist_ok=True)
+        make_tar(p, p_tar)
+        shutil.copy2(os.path.join(p, PATCH_SUMS_NAME),
+                     os.path.join(DIST, PATCH_SUMS_NAME))
+
+        # ---- 2. full ----
+        full_n = write_sums(full, FULL_SUMS_NAME)
+        full_tar = os.path.join(DIST, FULL_TAR_BASENAME + ".tar.gz")
+        make_tar(full, full_tar)
+        shutil.copy2(os.path.join(full, FULL_SUMS_NAME),
+                     os.path.join(DIST, FULL_TAR_BASENAME + ".SHA256SUMS.txt"))
+
+        # ---- self-check (independent unpack + sha256sum -c) ----
+        print("== self-check ==")
+        for label, tar, sums, top in [
+            ("fix10prep3 patch", p_tar, PATCH_SUMS_NAME, PATCH_NAME),
+            ("fix10prep3 full", full_tar, FULL_SUMS_NAME, FULL_NAME),
+        ]:
+            ok, total, good = verify_tar(tar, sums, top)
+            print("  %-22s files=%d ok=%d %s" % (label, total, good,
+                                                 "PASS" if ok else "FAIL"))
+            if not ok:
+                sys.exit(1)
+
+        print("== summary ==")
+        for label, tar, n in [
+            ("fix10prep3 patch", p_tar, p_n),
+            ("fix10prep3 full", full_tar, full_n),
+        ]:
+            print("  %-22s %d content-files  sha256=%s" % (label, n, sha256_of(tar)))
+            print("  %s" % tar)
+    finally:
+        shutil.rmtree(work, ignore_errors=True)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,27 @@
+{
+  "fs_out_hz": 128000,
+  "cases": [
+    {
+      "name": "2p56M",
+      "fs_in_hz": 2560000,
+      "up": 1,
+      "down": 20,
+      "n_in": 51200,
+      "n_out": 1960,
+      "transient": 600,
+      "input_file": "resampler_2p56M_input.bin",
+      "output_file": "resampler_2p56M_output.bin"
+    },
+    {
+      "name": "3p84M",
+      "fs_in_hz": 3840000,
+      "up": 1,
+      "down": 30,
+      "n_in": 76800,
+      "n_out": 1658,
+      "transient": 902,
+      "input_file": "resampler_3p84M_input.bin",
+      "output_file": "resampler_3p84M_output.bin"
+    }
+  ]
+}

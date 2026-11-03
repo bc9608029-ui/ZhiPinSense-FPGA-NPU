@@ -1,0 +1,49 @@
+# SHA256SUMS.txt — v3 HDMI 仪器化 UI 重构 · 交付物校验清单
+#
+# 生成时间：2026-10-04（WSL Ubuntu g++ 15.2.0 验证后）
+# 用法：在板端或宿主机执行  sha256sum -c SHA256SUMS.txt
+#
+# 说明：
+#   [v3 后端/UI]     本重构新增或重写的核心源码（上板编译对象）
+#   [v3 host 测试]   宿主机单元测试 + 截图生成（不上板，证据用）
+#   [v3 脚本]        板端构建 / 宿主机测试 / 串口传输 / 日志收集
+#   [v2 保留未构建]   phase1b/1c 为 v2 已验证资产，v3 不构建、原样保留
+#   [位流/JTAG]       v2 双缓冲位流（v3 复用，不改时序），_disable_icap 为 JTAG 加载目标
+
+# ---- v3 后端 / UI 核心源码 ----
+62b93f583953b8d1a041d29d811c3f9f79d2aae6d93891953d0c4c336e7fd4f7  sw/direct_framebuffer_backend.cpp
+02dfcb86f1552c31004ab4d2432ca956b266b5685797f2f358b02bf34394f3e0  sw/direct_framebuffer_backend.hpp
+f1f48440f169c1f253d483f64c1c218623963561119c016480b7b066fc944bb9  sw/font.cpp
+14a2a79331608d2d8cdfc4d975a596e8092b40ea1ea56df3df93497dc6c7449b  sw/font.hpp
+b882d775b77ae2929eeef500929709557985297a0d0b6bc12a9dacc2a078dce9  sw/model_contract.hpp
+f9debbd2e132ccad616adfc5ce163c6587c7b3d61cda6347444eeb0cb33d4405  sw/model_contract.cpp
+914761b13b794981c7acdee1ac73d4cdf8d1be6df4bb23b0659476877a75aa0e  sw/canvas.hpp
+e08729213ad7ea4d7a35d249280544ef6dc8e7d6a805f62913a35f820cc4bdde  sw/ui_renderer.hpp
+cb349fa38720b8e3d797dc8109dc5d217342e8c37894ff6446f0e9d5f50f054a  sw/ui_renderer.cpp
+022ef920cafa7496926e1192f5658b1ce4f968e1ce67f7dd6a28c76feeab7bd4  sw/touch.hpp
+af74ed4f5b624b4c9a1d969f3d7b88c20fd087229397949813d694c32566525c  sw/touch.cpp
+a63fbac212bfbcd64f4067b4d9ff496f5a0100c6f71276fb9f5a582a4bf43582  sw/image_writer.hpp
+b60577707bea5d124d9f08539899ff3520a43c9b6120d56f5388d0e99019a7f0  sw/image_writer.cpp
+8fb2dcc124c9248d0716709cbf9778a2671ec17830ddccba12d4d20504e439c7  sw/phase2_ui_render.cpp
+0285cf994ac559c6f2d405f2951f9c565bebe775fa9fde37f34c8686284a171c  sw/phase3_touch_test.cpp
+
+# ---- v3 host 测试 / 截图生成 ----
+5238d27d5dee1c1053e1a46d9d6947610826de8e25a88eec6700a31158bf3db6  sw/test_direct_framebuffer_backend.cpp
+39e6a2911d880c5a4ff598d6dc78e852e1995af56b89ccb5f04119b33693dfd6  sw/test_ui.cpp
+4498ca35ea27e6c9d6a68d492876bd8dd331ef2f8983435394be540fe11a357b  sw/render_screenshots.cpp
+
+# ---- v3 脚本 ----
+9296344df89c1cd11a49bad1c90f86d1c22526a27375cfee4da0da803e024595  sw/build_host_tests.sh
+c30d0a3974a4205457cf8443f454cfc750a85a6c1d3e86363811e88c0140c29d  sw/build_on_board.sh
+7c3f9f2e61e07ad6ae3138f46ba80378dc5cb4708624cae5aedfafcb8a104e05  sw/transfer_over_serial.ps1
+f011bb33f31aff86b9480a3cd5f524cb89cfaa3fd40f52f824816fc8726a8961  sw/collect_logs.sh
+a74db75e0cac9dcf418188e98070e317ea5e1b2c76433dcab0a23e8f99f2eab1  sw/CMakeLists.txt
+
+# ---- v2 保留（v3 不构建，原样保留） ----
+6f2b8da88322e9745212af5246023ba8ddef99ea3f5461a117de15d3c8d99e54  sw/phase1b_doublebuf_test.cpp
+ae2b753d120b53460279efc85317fb41c6fe56cbc1f35972f5373f708e772592  sw/phase1c_dynamic_test.cpp
+
+# ---- 位流 / JTAG（v2 双缓冲，v3 复用） ----
+fdc93f10fba78364cdce605108d8210c0b7c716891e4979b50ef790862427725  fpga/bitstream/hdmi_framebuffer_720p_top.bit
+686bb1e312ccf2ac8d2d0eeb05c0e6654485611d21de09d7671ff8098b8be0b9  fpga/bitstream/hdmi_framebuffer_720p_top_disable_icap.bit
+72b89c8dfeceb040239573e015ada4330c1de9b51065c00497d87db205cb7eb1  fpga/program_phase1b_jtag.tcl

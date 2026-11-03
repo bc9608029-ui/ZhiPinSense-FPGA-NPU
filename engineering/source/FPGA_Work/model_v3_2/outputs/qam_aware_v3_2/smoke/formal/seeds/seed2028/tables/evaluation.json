@@ -1,0 +1,36 @@
+{
+  "checkpoint": "F:\\FPGA_Work\\model_v3_2\\outputs\\qam_aware_v3_2\\smoke\\formal\\seeds\\seed2028\\checkpoints\\best.pt",
+  "checkpoint_epoch": 2,
+  "final_blind_test_accessed": false,
+  "suites": {
+    "v2_compatible": {
+      "suite": "v2_compatible",
+      "scope": "development-only; v3_2_final_blind_test was not accessed",
+      "exact_v2_test_namespace": true,
+      "samples": 256,
+      "accuracy": 0.87109375,
+      "macro_f1": 0.8710450839483097,
+      "qam_mean_accuracy": 0.578125,
+      "per_class_accuracy": {
+        "BPSK": 1.0,
+        "QPSK": 0.9375,
+        "8PSK": 0.875,
+        "16QAM": 0.59375,
+        "64QAM": 0.5625,
+        "2FSK": 1.0,
+        "CPFSK": 1.0,
+        "OFDM": 1.0
+      },
+      "per_class_f1": {
+        "BPSK": 1.0,
+        "QPSK": 0.9090909090909091,
+        "8PSK": 0.9032258064516129,
+        "16QAM": 0.5846153846153846,
+        "64QAM": 0.5714285714285714,
+        "2FSK": 1.0,
+        "CPFSK": 1.0,
+        "OFDM": 1.0
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+AArch64 disassembly evidence: DirectFramebufferBackend::submit_frame() uses ONLY
+16-bit scalar stores (strh) to the u-dma-buf device mapping.  No NEON/SIMD wide
+stores are emitted.  This is acceptance criterion #2 for the SIGBUS fix.
+
+Build (cross-compile, matching Release -O2):
+  D:\Xilinx2018.3\SDK\2018.3\gnu\aarch64\nt\aarch64-linux\bin\aarch64-linux-gnu-g++.exe
+      -std=gnu++17 -O2 -Wall -Wextra -c
+      sw/direct_framebuffer_backend.cpp
+      -o sw/objdump_evidence/dfb_backend_aarch64.o
+
+  Toolchain: Linaro GCC 7.3.1 2018.04 (aarch64-linux-gnu-g++ 7.3.1)
+  Objdump:   GNU objdump 2.29.1  (aarch64-linux-gnu-objdump)
+
+Source of submit_frame (direct_framebuffer_backend.cpp), the ONLY device-write path:
+
+    bool DirectFramebufferBackend::submit_frame(int frame_index,
+                                                const std::uint16_t* staging_data,
+                                                std::size_t pixel_count) {
+        ... validation (frame_index / pixel_count / null / ready) ...
+        volatile std::uint16_t* dst = fb_ + (size_t)frame_index * words;
+        for (std::size_t i = 0; i < pixel_count; ++i)
+            dst[i] = staging_data[i];        // <-- the scalar volatile commit loop
+        if (!flush()) return false;
+        return write_reg(cfg_.wr_addr_offset, (uint32_t)frame_index);
+    }
+
+The commit loop compiles to exactly two instructions (objdump -d -C):
+
+    1cc8:	78607844 	ldrh	w4, [x2, x0, lsl #1]   ; w4 = staging_data[i]  (16-bit load from staging)
+    1ccc:	91000400 	add	x0, x0, #0x1           ; i++
+    1cd0:	78002464 	strh	w4, [x3], #2           ; *dst++ = w4          (16-bit store to device)
+    1cd4:	eb00003f 	cmp	x1, x0                 ; i vs pixel_count
+    1cd8:	54ffff88 	b.hi	1cc8                  ; loop while i < pixel_count
+
+  - x2 = staging_data (ordinary heap memory)
+  - x3 = fb_ (volatile uint16_t* into the u-dma-buf mmap, post-incremented by 2)
+
+VERIFICATION (full submit_frame body scanned, 280 instruction lines, 0x1ad0..0x1f28):
+
+  * NEON/SIMD wide stores (st1 / st2 / st3 / st4, st1b/h/w, str qN, str dN):  NONE
+  * The only store touching the device mapping is `strh` (store halfword, 16-bit).
+  * The only other stores in the function are:
+      - `stp xN, xM, [sp/...]` and `str xN, [x29, #...]`: stack-frame save/restore
+        of 64-bit general-purpose registers (prologue/epilogue) — these write to
+        the stack, never to the framebuffer.
+      - `strb wzr, [x0, #16]`: the SSO null terminator written into a std::string
+        object when constructing an error message — writes to heap, not the device.
+    None of these target fb_ (the u-dma-buf mapping).
+
+CONCLUSION: submit_frame emits a single 16-bit `strh` per pixel inside a scalar
+loop.  The -O2 auto-vectorizer did NOT turn the commit loop into NEON/SIMD wide
+stores (the volatile std::uint16_t* type and the no-tree-vectorize /
+no-tree-slp-vectorize attributes prevent it).  The SIGBUS root cause is removed.
+
+Full disassembly for audit: submit_frame_aarch64_full.txt (this same .o file).

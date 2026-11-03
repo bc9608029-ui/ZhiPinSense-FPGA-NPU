@@ -1,0 +1,60 @@
+{
+  "kind": "UI_AND_MONOTONIC_TIMING_FUNCTIONAL_SHORT_NOT_FORMAL_REGRESSION",
+  "denominator": 3,
+  "correct": 3,
+  "results": [
+    {
+      "index": 0,
+      "expected": 3,
+      "selected": {
+        "frame_id": 45,
+        "capture_monotonic_ns": 33679857768980,
+        "clock_id": "board-monotonic-v1",
+        "boot_id": "b68cfa6b-e214-407a-8d6d-74b2e10e5221",
+        "pred": 3,
+        "finite": true
+      },
+      "correct": true
+    },
+    {
+      "index": 1,
+      "expected": 4,
+      "selected": {
+        "frame_id": 79,
+        "capture_monotonic_ns": 33689542097940,
+        "clock_id": "board-monotonic-v1",
+        "boot_id": "b68cfa6b-e214-407a-8d6d-74b2e10e5221",
+        "pred": 4,
+        "finite": true
+      },
+      "correct": true
+    },
+    {
+      "index": 2,
+      "expected": 3,
+      "selected": {
+        "frame_id": 112,
+        "capture_monotonic_ns": 33698946079560,
+        "clock_id": "board-monotonic-v1",
+        "boot_id": "b68cfa6b-e214-407a-8d6d-74b2e10e5221",
+        "pred": 3,
+        "finite": true
+      },
+      "correct": true
+    }
+  ],
+  "clock_drift_ns": -1719760,
+  "pre_uncertainty_ns": 54415100,
+  "post_uncertainty_ns": 59931800,
+  "history_episode_labels": [
+    3,
+    4,
+    3
+  ],
+  "history_uptime_valid": true,
+  "receiver_clean": true,
+  "fpga_calls": {
+    "fpga": 70
+  },
+  "original_restored": true
+}

@@ -1,0 +1,83 @@
+{
+  "project": "AD-AMR Net V1 (ICC 2024 paper-driven independent line)",
+  "status": "pending-cuda-preflight",
+  "ready_to_run_cuda_preflight": true,
+  "ready_for_formal_training": false,
+  "date": "2026-10-02",
+  "formal_gpu_training_started": false,
+  "final_blind_data_accessed": false,
+  "board_sdr_fpga_touched": false,
+  "frozen_assets_modified": false,
+  "model": {
+    "parameters": 288236,
+    "input": [2, 1024],
+    "classes": ["BPSK", "QPSK", "8PSK", "16QAM", "64QAM", "2FSK", "CPFSK", "OFDM"],
+    "loss_variants": ["P0", "P1"],
+    "paper_unstated_choices": "documented assumptions A1-A13"
+  },
+  "release_fixes": {
+    "gpu_profile_device_safe": true,
+    "checkpoint_version": 3,
+    "train_loader_rng_restored": true,
+    "cpu_cuda_rng_restored": true,
+    "continuous_equals_split_resume_cpu": true,
+    "production_cuda_preflight_entrypoints": ["run_training", "evaluate", "export_ad_amr"],
+    "preflight_source_hash_binding": true,
+    "onnxruntime_parity_mandatory": true,
+    "pilot_compares_frozen_v2_on_identical_records": true,
+    "pilot_test_or_blind_access": false
+  },
+  "pilot_contract": {
+    "stage_a": "P0/P1, seed 2026, 8 epochs",
+    "stage_b": "winner, seeds 2026/2027, 15 epochs",
+    "hard_gates": [
+      "mean validation macro-F1 >= paired V2 + 0.01",
+      "mean validation accuracy >= paired V2 + 0.01",
+      "each-seed macro-F1 non-regression",
+      "every-class regression <= 0.03",
+      "0/10/20 dB regression <= 0.01",
+      "0-10 dB accuracy >= paired V2 + 0.02",
+      "QAM mean non-regression",
+      "every validation-only OOD domain macro-F1 regression <= 0.01",
+      "finite and complete metrics",
+      "test/final-blind untouched",
+      "ONNX Runtime parity status ok"
+    ]
+  },
+  "local_verification": {
+    "tests_passed": 38,
+    "tests_skipped": 2,
+    "skip_reasons": ["CUDA unavailable on local host", "bash unavailable on local host"],
+    "warnings": 8,
+    "warnings_scope": "third-party legacy ONNX exporter deprecations",
+    "cpu_smoke_train_eval_export": "pass",
+    "onnx_opset": 17,
+    "onnx_checker": "pass",
+    "onnxruntime_max_abs_diff": 1.1175870895385742e-08,
+    "zip_reextracted_test_suite": "38 passed, 2 skipped",
+    "real_v2_checkpoint_strict_load": "91 keys, pass"
+  },
+  "frozen_v2": {
+    "checkpoint": "init/v2_time_power_phase_best.pt",
+    "sha256": "f9e4b5e5513f60907aa69416df3374353848272e14744cb193a46d06b02d71a6"
+  },
+  "deployment": {
+    "onnx_exportable": true,
+    "npu_deployable_under_current_8_op_policy": false,
+    "note": "Paper architecture retains operators outside the current whitelist; no NPU deployment is claimed."
+  },
+  "package": {
+    "archive": "dist/ad_amr_v1_autodl.zip",
+    "sha256": "5a0e1e8352914b42534377cc88c797821ec419a26547f5d3af88339d50599e7d",
+    "size_bytes": 910858,
+    "manifest_entries": 54,
+    "zip_members": 55,
+    "zip_crc_ok": true,
+    "manifest_digest_mismatches": 0,
+    "manifest_size_mismatches": 0,
+    "python_parse_errors": 0,
+    "shell_lf_errors": 0,
+    "residue": []
+  },
+  "next_action": "bash autodl_ad_amr_v1/run_preflight.sh"
+}

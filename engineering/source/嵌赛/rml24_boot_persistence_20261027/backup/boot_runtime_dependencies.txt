@@ -1,0 +1,40 @@
+	linux-vdso.so.1 (0x0000007f9b1b7000)
+	libicraft_zg330backend.so => /lib/aarch64-linux-gnu/libicraft_zg330backend.so (0x0000007f9b097000)
+	libicraft_hostbackend.so => /lib/aarch64-linux-gnu/libicraft_hostbackend.so (0x0000007f9a735000)
+	libpthread.so.0 => /lib/aarch64-linux-gnu/libpthread.so.0 (0x0000007f9a704000)
+	libicraft_xrt.so => /lib/aarch64-linux-gnu/libicraft_xrt.so (0x0000007f9a62e000)
+	libicraft_xir.so => /lib/aarch64-linux-gnu/libicraft_xir.so (0x0000007f9a027000)
+	libicraft_utils.so => /lib/aarch64-linux-gnu/libicraft_utils.so (0x0000007f99ed8000)
+	libstdc++.so.6 => /lib/aarch64-linux-gnu/libstdc++.so.6 (0x0000007f99cf3000)
+	libgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000007f99ccf000)
+	libc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007f99b5c000)
+	/lib/ld-linux-aarch64.so.1 (0x0000007f9b187000)
+	libdl.so.2 => /lib/aarch64-linux-gnu/libdl.so.2 (0x0000007f99b48000)
+	libm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000007f99a9d000)
+	libgomp.so.1 => /lib/aarch64-linux-gnu/libgomp.so.1 (0x0000007f99a4d000)
+-rwxr-xr-x 1 fmsh fmsh 547 Mar 13 03:31 /etc/rc.local
+#!/bin/bash
+
+ifconfig eth0 down
+
+#macchanger -m ae:59:f4:2d:3a:99 eth0
+ifconfig eth0 hw ether ae:59:f4:2d:3a:99 
+ifconfig eth0 up
+#
+systemctl start systemd-resolved
+#
+timeout 5 dhclient
+#
+#
+
+ifconfig eth0 192.168.126.49 netmask 255.255.255.0
+#ip route add default via 192.168.110.254
+systemctl start sshd
+
+#insmod /home/fmsh/media/executable/modules/dp159.ko
+#insmod /home/fmsh/media/executable/modules/xilinx-vphy.ko
+#insmod /home/fmsh/media/executable/modules/xilinx-hdmi-tx.ko
+#echo Y > /sys/module/xlnx_mixer/parameters/mixer_primary_enable
+
+
+disabled

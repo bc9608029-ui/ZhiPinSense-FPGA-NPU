@@ -1,0 +1,44 @@
+{
+  "status": "FAILED",
+  "updated": "2026-10-31T21:19:46.297825",
+  "phases": [
+    {
+      "name": "fixed240",
+      "state": "DEVICE_PHASE_ENDED_ORIGINAL_RESTORED",
+      "completed_tx": 240,
+      "score": {
+        "name": "fixed240",
+        "denominator": 240,
+        "correct": 235,
+        "missing": 0,
+        "minimum_correct": 235,
+        "promotion_gate_pass": true,
+        "kind": "NEW_RF_EXISTING_FROZEN_WAVEFORMS_NOT_UNSEEN_GENERALIZATION"
+      },
+      "failure": false
+    },
+    {
+      "name": "search240",
+      "state": "DEVICE_PHASE_ENDED_ORIGINAL_RESTORED",
+      "completed_tx": 240,
+      "score": {
+        "name": "search240",
+        "denominator": 240,
+        "correct": 179,
+        "missing": 0,
+        "minimum_correct": 235,
+        "promotion_gate_pass": false,
+        "kind": "NEW_RF_EXISTING_FROZEN_WAVEFORMS_NOT_UNSEEN_GENERALIZATION"
+      },
+      "failure": false
+    },
+    {
+      "name": "sweep24",
+      "state": "TEST_FAILED_OR_BLOCKED",
+      "completed_tx": 15,
+      "score": null,
+      "failure": true
+    }
+  ],
+  "official_deployment_done": false
+}

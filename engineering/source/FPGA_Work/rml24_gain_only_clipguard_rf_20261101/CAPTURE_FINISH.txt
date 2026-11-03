@@ -1,0 +1,6 @@
+test -f /root/rml24_gain_only_clipguard_rf_20261101/RESULT.json  && echo GAIN_CAPTURE_FINISHED; tail -c 200 /root/gain_only_capture_20261101.log [A && echo GAIN_CAPTURE_FINISHED; tail -c 200 /root/gain_only_capture_20261101.lo[Kg
+GAIN_CAPTURE_FINISHED
+
+CLIP_CAPTURE_FINISHED 120 [] {'ready': True, 'run': '/var/log/rml24-integrated/r7d9fc6c37a3d'}
+[1]+  Done                    nohup /root/miniconda3/envs/torch_v2.0.1_aarch64/bin/python3 /root/rml24_three_modes_execution_20261029/fpga_ui_integration_20261031/capture_gain_only.py > /root/gain_only_capture_20261101.log 2>&1 < /dev/null
+(base) root@U:~# 

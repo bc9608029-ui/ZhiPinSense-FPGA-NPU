@@ -1,0 +1,207 @@
+{
+  "cases": [
+    {
+      "class_index": 8,
+      "repeats": 8
+    },
+    {
+      "class_index": 3,
+      "repeats": 1
+    },
+    {
+      "class_index": 5,
+      "repeats": 1
+    },
+    {
+      "class_index": 1,
+      "repeats": 1
+    },
+    {
+      "class_index": 10,
+      "repeats": 1
+    },
+    {
+      "class_index": 22,
+      "repeats": 1
+    },
+    {
+      "class_index": 19,
+      "repeats": 1
+    },
+    {
+      "class_index": 17,
+      "repeats": 8
+    },
+    {
+      "class_index": 17,
+      "repeats": 1
+    },
+    {
+      "class_index": 16,
+      "repeats": 1
+    },
+    {
+      "class_index": 4,
+      "repeats": 8
+    },
+    {
+      "class_index": 15,
+      "repeats": 1
+    },
+    {
+      "class_index": 19,
+      "repeats": 8
+    },
+    {
+      "class_index": 20,
+      "repeats": 8
+    },
+    {
+      "class_index": 0,
+      "repeats": 8
+    },
+    {
+      "class_index": 21,
+      "repeats": 8
+    },
+    {
+      "class_index": 4,
+      "repeats": 1
+    },
+    {
+      "class_index": 10,
+      "repeats": 8
+    },
+    {
+      "class_index": 0,
+      "repeats": 1
+    },
+    {
+      "class_index": 8,
+      "repeats": 1
+    },
+    {
+      "class_index": 9,
+      "repeats": 8
+    },
+    {
+      "class_index": 7,
+      "repeats": 8
+    },
+    {
+      "class_index": 23,
+      "repeats": 1
+    },
+    {
+      "class_index": 2,
+      "repeats": 1
+    },
+    {
+      "class_index": 1,
+      "repeats": 8
+    },
+    {
+      "class_index": 5,
+      "repeats": 8
+    },
+    {
+      "class_index": 21,
+      "repeats": 1
+    },
+    {
+      "class_index": 11,
+      "repeats": 8
+    },
+    {
+      "class_index": 18,
+      "repeats": 8
+    },
+    {
+      "class_index": 22,
+      "repeats": 8
+    },
+    {
+      "class_index": 14,
+      "repeats": 8
+    },
+    {
+      "class_index": 3,
+      "repeats": 8
+    },
+    {
+      "class_index": 18,
+      "repeats": 1
+    },
+    {
+      "class_index": 9,
+      "repeats": 1
+    },
+    {
+      "class_index": 6,
+      "repeats": 8
+    },
+    {
+      "class_index": 13,
+      "repeats": 1
+    },
+    {
+      "class_index": 20,
+      "repeats": 1
+    },
+    {
+      "class_index": 15,
+      "repeats": 8
+    },
+    {
+      "class_index": 2,
+      "repeats": 8
+    },
+    {
+      "class_index": 14,
+      "repeats": 1
+    },
+    {
+      "class_index": 12,
+      "repeats": 1
+    },
+    {
+      "class_index": 23,
+      "repeats": 8
+    },
+    {
+      "class_index": 12,
+      "repeats": 8
+    },
+    {
+      "class_index": 13,
+      "repeats": 8
+    },
+    {
+      "class_index": 6,
+      "repeats": 1
+    },
+    {
+      "class_index": 16,
+      "repeats": 8
+    },
+    {
+      "class_index": 7,
+      "repeats": 1
+    },
+    {
+      "class_index": 11,
+      "repeats": 1
+    }
+  ],
+  "denominator_per_mode": 48,
+  "modes": [
+    "gainfreeze"
+  ],
+  "manual_gain": 35,
+  "bandwidth_hz": 5000000,
+  "dwell_sec": 4,
+  "score": "first capture start+1s..end-.3s; missing/rejected/mode-mismatch/wrong count fail",
+  "model_and_source_unchanged": true,
+  "gainfreeze": "slow_attack settle then read gain and freeze manual before each capture",
+  "selection_rule": "gainfreeze only if paired score at least manual; otherwise manual"
+}

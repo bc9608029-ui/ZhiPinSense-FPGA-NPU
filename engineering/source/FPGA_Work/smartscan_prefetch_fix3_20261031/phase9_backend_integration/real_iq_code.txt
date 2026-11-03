@@ -1,0 +1,13 @@
+import sys,json,numpy as np,hashlib
+from pathlib import Path
+sys.path.insert(0,'/root/rml24_three_modes_execution_20261029/fpga_ui_integration_20261031')
+from spectrum_backend import SpectrumBackend
+root=Path(sys.argv[1]);root.mkdir();v=json.loads(Path('/root/rml24_fix3_1793428931/SUMMARY.json').read_text());backend=SpectrumBackend('fpga','/root/rml24_fpga_diag_1793380588/scan_xrt',root/'backend.jsonl');rows=[]
+for i,m in enumerate(v['manifest']):
+ p=Path(m['source']);assert hashlib.sha256(p.read_bytes()).hexdigest()==m['source_sha'];z=np.load(p,allow_pickle=False)[32768:33792].astype(np.complex128);h=hashlib.sha256(z.tobytes()).hexdigest();actual=backend(z);assert hashlib.sha256(z.tobytes()).hexdigest()==h
+ reference=np.abs(np.fft.fftshift(np.fft.fft(z*np.hanning(1024))))**2
+ relative=float(np.abs(actual-reference).sum()/max(reference.sum(),np.finfo(float).tiny));peak_error=float(abs(actual.max()-reference.max())/max(reference.max(),np.finfo(float).tiny));peak_ok=bool(reference[int(actual.argmax())]>=.99*reference.max());ok=relative<=.02 and peak_error<=.02 and peak_ok
+ rows.append(dict(index=i,relative_l1=relative,peak_error=peak_error,peak_ok=peak_ok,backend=backend.last_backend,ok=ok))
+ if not ok:break
+f=SpectrumBackend('auto','/nonexistent/intentionally_missing');z=np.ones(1024,dtype=complex);a=f(z);assert f.last_backend=='software' and np.array_equal(a,np.abs(np.fft.fftshift(np.fft.fft(z*np.hanning(1024))))**2)
+out=dict(expected=24,executed=len(rows),passed=sum(x['ok'] for x in rows),rows=rows,fallback_verified=True);(root/'SUMMARY.json').write_text(json.dumps(out,indent=2));print(json.dumps(out));print('REAL_IQ_MATRIX_DONE',flush=True)

@@ -1,0 +1,16 @@
+{
+  "kind": "single frozen BPSK waveform functional test, not formal accuracy",
+  "valid": 347,
+  "pred_counts": {
+    "3": 347
+  },
+  "backend_counts": {
+    "fpga": 347
+  },
+  "ui_sent": 865,
+  "ui_failed": 0,
+  "clean_stop": true,
+  "TX_restore_errors": [],
+  "board_evidence": "/root/rml24_fix3_1793433081",
+  "original_bit_and_services_restored": true
+}

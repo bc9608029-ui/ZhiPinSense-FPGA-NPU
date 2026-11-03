@@ -1,0 +1,122 @@
+{
+  "accepted": true,
+  "per_file": [
+    {
+      "file_name": "quantized_d2_2p56m_000002.ci16",
+      "metrics": {
+        "contract": {
+          "cfo_hz": 0.00554576,
+          "excess_db": 7.829564154270468,
+          "payload_phase_slope_deg_per_win": -0.00033792864333486496,
+          "rx_pay_active_rms": 77.98972383467917,
+          "rx_pay_full_rms": 49.727456418713,
+          "rx_ratio": 2.3846093826937844,
+          "rx_train_rms": 32.705450377192484,
+          "sro_ppm": 0.0,
+          "tx_pay_active_rms": 1982.7547172027466,
+          "tx_pay_full_rms": 1263.7631289206633,
+          "tx_ratio": 0.9681419545182585,
+          "tx_train_rms": 2047.999994163411
+        },
+        "cycle_payload_gain_mags": [
+          0.039311497233765584,
+          0.039265868626105205
+        ],
+        "cycle_preamble_gain_mags": [
+          0.015585441059943972,
+          0.015781013758627147
+        ],
+        "forward_gain_ratio": 2.522432191257116,
+        "g_pay_mag": 0.039313218244543105,
+        "g_pay_phase_deg": 97.94469762268994,
+        "g_train_mag": 0.015585441059943972,
+        "g_train_phase_deg": 96.14611952848388,
+        "phase_diff_deg": 1.7985780942060672,
+        "residual_pay": 0.032539001607828445,
+        "residual_train": 0.22335188794982277,
+        "root_cause": "FIXED_SCALE_JUMP",
+        "spectral": {
+          "fir_nmse": 1.9386194536613264,
+          "g_pay_meas_mag": 0.039313218244543105,
+          "g_pay_meas_phase_deg": 97.94469762268994,
+          "g_pay_pred_mag": 0.016371452196948622,
+          "g_pay_pred_phase_deg": 93.44267864498302,
+          "h_low_vs_high_db": 0.011110504608060673,
+          "h_ripple_db": 6.910534072933688,
+          "pred_error_db": 7.609027859789174,
+          "scalar_carry_nmse": 2.327021928404744
+        },
+        "trajectory": {
+          "first_vs_rest_db": -0.014889406164814007,
+          "mag_mean": 0.03930009257929153,
+          "mag_pp_db": 0.16184300880859415,
+          "mag_slope_db_per_win": -0.0024232575002198393,
+          "mag_std_db": -45.291354107381096,
+          "n_active_windows": 13,
+          "n_windows": 32,
+          "phase_slope_deg_per_win": -0.00033792864333486496,
+          "window_len": 1680
+        }
+      }
+    },
+    {
+      "file_name": "quantized_d2_2p56m_000006.ci16",
+      "metrics": {
+        "contract": {
+          "cfo_hz": 0.00945884,
+          "excess_db": 8.233616083013365,
+          "payload_phase_slope_deg_per_win": 0.0009095040063216952,
+          "rx_pay_active_rms": 73.85821017749286,
+          "rx_pay_full_rms": 47.09389466198908,
+          "rx_ratio": 2.498489443597976,
+          "rx_train_rms": 29.56114558208122,
+          "sro_ppm": 0.0,
+          "tx_pay_active_rms": 1983.01804295867,
+          "tx_pay_full_rms": 1263.9309644981063,
+          "tx_ratio": 0.9682705315478844,
+          "tx_train_rms": 2047.999994163411
+        },
+        "cycle_payload_gain_mags": [
+          0.03756815204536024,
+          0.03724547917772867
+        ],
+        "cycle_preamble_gain_mags": [
+          0.014058795622661841,
+          0.014178249105932225
+        ],
+        "forward_gain_ratio": 2.6475721422688476,
+        "g_pay_mag": 0.03722167564441071,
+        "g_pay_phase_deg": 99.82429934474764,
+        "g_train_mag": 0.014058795622661841,
+        "g_train_phase_deg": 96.00567979576158,
+        "phase_diff_deg": 3.8186195489860637,
+        "residual_pay": 0.03567569200010947,
+        "residual_train": 0.23261791044551555,
+        "root_cause": "FIXED_SCALE_JUMP",
+        "spectral": {
+          "fir_nmse": 2.4674804400435466,
+          "g_pay_meas_mag": 0.03722167564441071,
+          "g_pay_meas_phase_deg": 99.82429934474764,
+          "g_pay_pred_mag": 0.014190052038190393,
+          "g_pay_pred_phase_deg": 96.19429459352119,
+          "h_low_vs_high_db": 0.0012407486677534934,
+          "h_ripple_db": 6.624393884225903,
+          "pred_error_db": 8.37623864348042,
+          "scalar_carry_nmse": 2.735171246786912
+        },
+        "trajectory": {
+          "first_vs_rest_db": 0.1398238676078557,
+          "mag_mean": 0.03720470797744676,
+          "mag_pp_db": 0.4297652829589833,
+          "mag_slope_db_per_win": -0.016079782356651865,
+          "mag_std_db": -36.9691401568675,
+          "n_active_windows": 13,
+          "n_windows": 32,
+          "phase_slope_deg_per_win": 0.0009095040063216952,
+          "window_len": 1680
+        }
+      }
+    }
+  ],
+  "problems": []
+}

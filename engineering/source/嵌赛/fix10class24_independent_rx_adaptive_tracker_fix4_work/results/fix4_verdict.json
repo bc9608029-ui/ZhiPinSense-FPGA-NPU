@@ -1,0 +1,57 @@
+{
+  "token": "M29-RML24-FIX10CLASS24-INDEPENDENT-RX-ADAPTIVE-TRACKER-FIX4-VERDICT",
+  "verdict": "NO_IMPROVEMENT",
+  "superseded": true,
+  "superseded_by": "M29-RML24-FIX10CLASS24-INDEPENDENT-RX-ADAPTIVE-TRACKER-FIX4-REVIEW-R1",
+  "superseded_reason": "R1 treated received train/tail BLOCK MEANS as DC; train(16QAM) and tail(ZC) have non-zero known means (train mean -276-276j, tail -45-45j), so block-mean conflates known-sequence mean with LO DC. REVIEW-R1 redefines DC as per-sample residual vs model-predicted public reference, then sub-block residual means.",
+  "rf_fix2_target_best": {
+    "tracker": "C1_settle_dc_constant",
+    "e2e_correct": 2,
+    "n": 24
+  },
+  "old_rf_session_best": {
+    "tracker": "C1_settle_dc_constant",
+    "e2e_correct": 2,
+    "n": 24
+  },
+  "digital_baseline": {
+    "correct": 23,
+    "n": 24
+  },
+  "digital_no_new_flips": true,
+  "board_patch_allowed": false,
+  "per_tracker": {
+    "T0_baseline": {
+      "target_e2e": 1,
+      "old_e2e": 1
+    },
+    "C1_settle_dc_constant": {
+      "target_e2e": 2,
+      "old_e2e": 2
+    },
+    "T1_blockwise_linear": {
+      "target_e2e": 0,
+      "old_e2e": 0
+    },
+    "T2_exp_transient": {
+      "target_e2e": 2,
+      "old_e2e": 0
+    },
+    "T3_hermite": {
+      "target_e2e": 0,
+      "old_e2e": 0
+    },
+    "T4_kalman": {
+      "target_e2e": 2,
+      "old_e2e": 2
+    },
+    "T5_kalman_crossframe": {
+      "target_e2e": 1,
+      "old_e2e": 1
+    },
+    "T6_best_alternate": {
+      "target_e2e": 2,
+      "old_e2e": 2
+    }
+  }
+}

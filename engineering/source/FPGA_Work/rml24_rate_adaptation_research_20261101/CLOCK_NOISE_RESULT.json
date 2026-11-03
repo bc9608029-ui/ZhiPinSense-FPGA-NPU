@@ -1,0 +1,96 @@
+{
+  "scope": "PC synthetic only; no RF or NPU classification; frozen formal unchanged",
+  "clock": [
+    {
+      "ppm": -100,
+      "recovered": false,
+      "error": "no supported public timing scale"
+    },
+    {
+      "ppm": -50,
+      "recovered": false,
+      "error": "no supported public timing scale"
+    },
+    {
+      "ppm": 0,
+      "recovered": true,
+      "relative_error": 0.030247492588967122,
+      "meta": {
+        "cfo_hz": 100.13496579129497,
+        "training_residual": 0.12209640339558328,
+        "fir_training_residual": 0.028188394078661624,
+        "head_reference_relative_error": 0.027995446975140347,
+        "tail_reference_relative_error": 0.027354814965302787,
+        "tail_residual": 0.11080468490215652,
+        "gain": 13.157370744839586,
+        "dc": 0.12366032563279401,
+        "detected_repeats": 8.0,
+        "rx_fs_hz": 5120000.0,
+        "detected_tx_logical_fs_hz": 2560000.0,
+        "resample_down": 2.0,
+        "cfo_physical_hz": 100.13496579129497
+      }
+    },
+    {
+      "ppm": 50,
+      "recovered": false,
+      "error": "no supported public timing scale"
+    },
+    {
+      "ppm": 100,
+      "recovered": false,
+      "error": "no supported public timing scale"
+    }
+  ],
+  "noise": [
+    {
+      "index": 0,
+      "accepted": false
+    },
+    {
+      "index": 1,
+      "accepted": false
+    },
+    {
+      "index": 2,
+      "accepted": false
+    },
+    {
+      "index": 3,
+      "accepted": false
+    },
+    {
+      "index": 4,
+      "accepted": false
+    },
+    {
+      "index": 5,
+      "accepted": false
+    },
+    {
+      "index": 6,
+      "accepted": false
+    },
+    {
+      "index": 7,
+      "accepted": false
+    },
+    {
+      "index": 8,
+      "accepted": false
+    },
+    {
+      "index": 9,
+      "accepted": false
+    },
+    {
+      "index": 10,
+      "accepted": false
+    },
+    {
+      "index": 11,
+      "accepted": false
+    }
+  ],
+  "false_accepts": 0
+}

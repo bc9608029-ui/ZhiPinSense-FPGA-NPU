@@ -1,0 +1,67 @@
+{
+  "original_config": [
+    [
+      "tx",
+      "hardwaregain",
+      -40.0,
+      1.0
+    ],
+    [
+      "tx",
+      "sampling_frequency",
+      10240000,
+      1.0
+    ],
+    [
+      "tx",
+      "rf_bandwidth",
+      18000000,
+      1.0
+    ],
+    [
+      "tlo",
+      "frequency",
+      2401800000,
+      1.0
+    ],
+    [
+      "tlo",
+      "powerdown",
+      0,
+      0
+    ]
+  ],
+  "compat_config": [
+    [
+      "tx",
+      "hardwaregain",
+      -40.0,
+      1.0
+    ],
+    [
+      "tx",
+      "sampling_frequency",
+      10240000,
+      2.0
+    ],
+    [
+      "tx",
+      "rf_bandwidth",
+      18000000,
+      1.0
+    ],
+    [
+      "tlo",
+      "frequency",
+      2401800000,
+      5.0
+    ],
+    [
+      "tlo",
+      "powerdown",
+      0,
+      0
+    ]
+  ],
+  "reason": "Observed fractional clock readback Fs -1Hz and LO -2Hz; bounded <=2Hz Fs, <=5Hz LO; waveforms and RX detection thresholds unchanged"
+}

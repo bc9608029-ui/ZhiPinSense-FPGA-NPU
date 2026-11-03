@@ -1,0 +1,12 @@
+{
+  "status": "ISOLATED_UI_ONLY_BUILD_PENDING",
+  "before": "2578793e94e7ee136e6a391a416193f0aecdc6b1d7f3b3442ae5989ff4a53fd9",
+  "after": "82370603705197785bdc28b58b9500a771afb6b4aa0a71edfe980ce0b655e856",
+  "changed_file": "candidate/ui_sw/signal_history.hpp",
+  "sweep": "record actual valid class-change observation immediately; repeated same-class updates count",
+  "fixed_search": "retain three consecutive valid observations for new class",
+  "receiver_unchanged": true,
+  "model_unchanged": true,
+  "live_test_unchanged": true,
+  "warning": "Do not deploy whole PC candidate; its receiver snapshot predates monotonic telemetry. Overlay header only onto board delivery_ui_timing."
+}

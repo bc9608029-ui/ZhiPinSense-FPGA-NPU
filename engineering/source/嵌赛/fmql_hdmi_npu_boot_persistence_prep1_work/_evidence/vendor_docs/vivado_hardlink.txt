@@ -1,0 +1,135 @@
+
+===== PAGE 1 =====
+ 
+ 1 / 6 
+Vivado HardLink 方案 
+ 
+修订历史记录 
+Date 
+Version 
+Revision 
+2026/06/03 
+V1.0 
+Initial release 
+2026/06/27 
+V2.0 
+1. 新增fmp100/jfmp130 器件的vivado hardlink 
+2. 支持Linux 下的hardlink 
+3. hardlink vivado 图标优化 
+4. 新增HL PSOC 器件的vivado hardlink 
+ 
+
+===== PAGE 2 =====
+ 
+ 2 / 6 
+ 
+1  背景介绍 
+由于我司的7 系列FPGA 和PSOC 器件存在数据库不兼容的问题，特此提供
+HardLink 方案解决该问题。 
+用户使用HardLink 方案，可以在电脑上生成多个Vivado 而不占用磁盘空间，极大
+方便用户的开发。 
+
+===== PAGE 3 =====
+ 
+ 3 / 6 
+ 
+2  HardLink 流程 
+2.1 创建HardLink 的Vivado 
+下面介绍如何基于Vivado2018.3 ，使用hardlink 工具，制作一个专门开发
+7z100(JFMQL100T900)器件的Vivado。 
+2.1.1 准备好基准Vivado。 
+ 基准Vivado 需为未修改过数据库的原始vivado 
+ hardlink 后一定不要修改基准vivado 的数据库，否则会导致hardlink 出来的
+vivado 数据库被误修改 
+ 不要使用老版本的补丁（支持hardlink 功能之前的补丁），去修改任何Vivado
+的数据库 
+ 千万不要在打过老版本补丁工程上执行replace_*，add_*，fmsh_install_device，
+remove_*或者点击界面上的按钮这些会发生数据库替换的操作，否则会导致数
+据库异常。 
+2.1.2 生成hardlink Vivado 2018.3_7z100 
+打开基准Vivado，使用工具中提供命令对Vivado 进行hardlink。 
+source E:/wjqin/code/tcl/JFM_Kits/ip_patch/vivado_lnk/lnk_change.tcl –notrace 
+create_vivado_hardlink_lnk 7z100 
+ 
+图 1 在基准Vivado 中使用命令产生hardlink_lnk vivado 
+
+===== PAGE 4 =====
+ 
+ 4 / 6 
+ 
+ 
+下表为所有器件的hardlink 命令，用户可以根据自己的实际情况使用。 
+hardlink Vivado 命令 
+支持Vivado 的版本 
+create_vivado_hardlink_lnk 7z100 
+所有Vivado 版本 
+create_vivado_hardlink_lnk 7z010_7z020_7z045 
+所有Vivado 版本 
+create_vivado_hardlink_lnk 7z010_7z020_7z045_hl
+所有Vivado 版本(HL 器件) 
+create_vivado_hardlink_lnk 7z30ai 
+所有Vivado 版本(HL 器件) 
+create_vivado_hardlink_lnk 7z100ai 
+所有Vivado 版本 
+create_vivado_hardlink_lnk 325t_410t_690t 
+所有Vivado 版本 
+create_vivado_hardlink_lnk 7z70ai 
+2018.3/2019.2/2022.1 
+create_vivado_hardlink_lnk 7a50t 
+2016.4 及以上 
+create_vivado_hardlink_lnk fmbh45 
+2018.3/2022.1 
+create_vivado_hardlink_lnk fmk50rh 
+2018.3/2022.1 
+create_vivado_hardlink_lnk fmk230t_fmk300t 
+2018.3/2022.1 
+create_vivado_hardlink_lnk fmql15 
+2018.3/2022.1 
+create_vivado_hardlink_lnk fmql15_hl 
+2018.3/2022.1(HL 器件) 
+create_vivado_hardlink_lnk fmp100 
+2022.1 
+create_vivado_hardlink_lnk jfmp130 
+2022.1 
+create_vivado_hardlink_lnk rf690t 
+2018.3 
+ 
+2.1.3 确认hardlink Vivado 2018.3_7z100 已生成 
+等待工具执行完毕，hardlink Vivado 2018.3_7z100 会在基准vivado 的同名目录下生成。
+同时该目录下也会生成hardlink Vivado 2018.3_7z100 的快捷方式，可以复制到桌面上进行
+使用。 
+
+===== PAGE 5 =====
+ 
+ 5 / 6 
+ 
+图 2 确认hardlink_lnk vivado 已生成 
+采用上述方法客户可以根据自己的需求，生成多个hardlink vivado 进行复旦微芯片的
+开发。 
+ 
+ 
+图 3 生成开发不同器件的hardlink_lnk vivado  
+2.1.4 工程的开发 
+启动hardlink Vivado 2018.3_7z100，可以看到该Vivado 的标题已被修改，如下图所示。
+
+===== PAGE 6 =====
+ 
+ 6 / 6 
+接下来就可以使用该vivado，专门进行7z100(JFMQL100T900)器件的开发了。 
+ 
+图 4 hardlink Vivado 2018.3_7z100 制作完成 
+2.2 HardLink Vivado 升级流程 
+HardLink Vivado 升级流程如下： 
+1. 更新环境变量下的补丁文件 
+2. 关闭所有Vivado 软件 
+3. 删除HardLink Vivado 所在的文件夹 
+4. 使用创建HardLink 的Vivado 章节的方法，生成新的HardLink Vivado 
+2.3 打过老版本补丁工程的升级流程 
+打过老版本补丁工程的升级流程如下： 
+1. 删除工程目录下的老版本补丁ip_patch 文件夹 
+2. 使用source+add 添加新版本补丁 
+3. 正常流程生成位流 
+注：千万不要在打过老版本补丁工程上执行replace_*，add_*，fmsh_install_device，
+remove_*或者点击界面上的按钮这些会发生数据库替换的操作，否则会导致数据库异常。 
+2.4 可能存在的风险 
+ 权限或者系统兼容性问题，导致的hardlink 失败，可联系FAE 向我们反馈 

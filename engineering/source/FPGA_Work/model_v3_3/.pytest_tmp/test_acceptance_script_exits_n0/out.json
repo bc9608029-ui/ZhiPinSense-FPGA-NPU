@@ -1,0 +1,234 @@
+{
+  "reference": "frozen_qam_aware_v2_time_power_phase",
+  "scope": "V2 exact development namespace; final blind set not accessed",
+  "seeds": [
+    "0",
+    "1",
+    "2"
+  ],
+  "per_seed": [
+    {
+      "seed": "0",
+      "checkpoint": "F:\\FPGA_Work\\model_v3_3\\.pytest_tmp\\test_acceptance_script_exits_n0\\seed0\\best.pt",
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "qam_mean_accuracy": 0.0,
+      "per_class_accuracy": {
+        "BPSK": 0.0,
+        "QPSK": 0.0,
+        "8PSK": 0.0,
+        "16QAM": 0.0,
+        "64QAM": 0.0,
+        "2FSK": 0.0,
+        "CPFSK": 0.0,
+        "OFDM": 0.0
+      },
+      "snr_accuracy": {
+        "0": 0.0,
+        "10": 0.0,
+        "20": 0.0
+      },
+      "fpga_sim_accuracy_gap": 0.0,
+      "fpga_sim_macro_f1_gap": 0.0
+    },
+    {
+      "seed": "1",
+      "checkpoint": "F:\\FPGA_Work\\model_v3_3\\.pytest_tmp\\test_acceptance_script_exits_n0\\seed1\\best.pt",
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "qam_mean_accuracy": 0.0,
+      "per_class_accuracy": {
+        "BPSK": 0.0,
+        "QPSK": 0.0,
+        "8PSK": 0.0,
+        "16QAM": 0.0,
+        "64QAM": 0.0,
+        "2FSK": 0.0,
+        "CPFSK": 0.0,
+        "OFDM": 0.0
+      },
+      "snr_accuracy": {
+        "0": 0.0,
+        "10": 0.0,
+        "20": 0.0
+      },
+      "fpga_sim_accuracy_gap": 0.0,
+      "fpga_sim_macro_f1_gap": 0.0
+    },
+    {
+      "seed": "2",
+      "checkpoint": "F:\\FPGA_Work\\model_v3_3\\.pytest_tmp\\test_acceptance_script_exits_n0\\seed2\\best.pt",
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "qam_mean_accuracy": 0.0,
+      "per_class_accuracy": {
+        "BPSK": 0.0,
+        "QPSK": 0.0,
+        "8PSK": 0.0,
+        "16QAM": 0.0,
+        "64QAM": 0.0,
+        "2FSK": 0.0,
+        "CPFSK": 0.0,
+        "OFDM": 0.0
+      },
+      "snr_accuracy": {
+        "0": 0.0,
+        "10": 0.0,
+        "20": 0.0
+      },
+      "fpga_sim_accuracy_gap": 0.0,
+      "fpga_sim_macro_f1_gap": 0.0
+    }
+  ],
+  "mean": {
+    "accuracy": 0.0,
+    "macro_f1": 0.0,
+    "qam_mean_accuracy": 0.0
+  },
+  "std": {
+    "accuracy": 0.0,
+    "macro_f1": 0.0,
+    "qam_mean_accuracy": 0.0
+  },
+  "per_class_summary": {
+    "BPSK": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "QPSK": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "8PSK": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "16QAM": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "64QAM": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "2FSK": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "CPFSK": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "OFDM": {
+      "mean": 0.0,
+      "std": 0.0
+    }
+  },
+  "snr_summary": {
+    "0": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "10": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "20": {
+      "mean": 0.0,
+      "std": 0.0
+    }
+  },
+  "rule": "mean_improvement_and_per_seed_regression_floors",
+  "improvement_on": "mean",
+  "regression_floors_on": "every_seed",
+  "fpga_sim_gap_on": "every_seed",
+  "checks": {
+    "mean_accuracy_gain": false,
+    "mean_macro_f1_gain": false,
+    "mean_qam_mean_gain": false,
+    "seed0_per_class_BPSK": false,
+    "seed0_per_class_QPSK": false,
+    "seed0_per_class_8PSK": false,
+    "seed0_per_class_16QAM": false,
+    "seed0_per_class_64QAM": false,
+    "seed0_per_class_2FSK": false,
+    "seed0_per_class_CPFSK": false,
+    "seed0_per_class_OFDM": false,
+    "seed0_snr_0": false,
+    "seed0_snr_10": false,
+    "seed0_snr_20": false,
+    "seed0_fpga_sim_accuracy_gap": true,
+    "seed0_fpga_sim_macro_f1_gap": true,
+    "seed1_per_class_BPSK": false,
+    "seed1_per_class_QPSK": false,
+    "seed1_per_class_8PSK": false,
+    "seed1_per_class_16QAM": false,
+    "seed1_per_class_64QAM": false,
+    "seed1_per_class_2FSK": false,
+    "seed1_per_class_CPFSK": false,
+    "seed1_per_class_OFDM": false,
+    "seed1_snr_0": false,
+    "seed1_snr_10": false,
+    "seed1_snr_20": false,
+    "seed1_fpga_sim_accuracy_gap": true,
+    "seed1_fpga_sim_macro_f1_gap": true,
+    "seed2_per_class_BPSK": false,
+    "seed2_per_class_QPSK": false,
+    "seed2_per_class_8PSK": false,
+    "seed2_per_class_16QAM": false,
+    "seed2_per_class_64QAM": false,
+    "seed2_per_class_2FSK": false,
+    "seed2_per_class_CPFSK": false,
+    "seed2_per_class_OFDM": false,
+    "seed2_snr_0": false,
+    "seed2_snr_10": false,
+    "seed2_snr_20": false,
+    "seed2_fpga_sim_accuracy_gap": true,
+    "seed2_fpga_sim_macro_f1_gap": true
+  },
+  "values": {
+    "mean_accuracy_gain": -0.7054761904761905,
+    "mean_macro_f1_gain": -0.697538161950682,
+    "mean_qam_mean_gain": -0.46476190476190476,
+    "seed0_per_class_delta_BPSK": -0.7952380952380952,
+    "seed0_per_class_delta_QPSK": -0.64,
+    "seed0_per_class_delta_8PSK": -0.6352380952380953,
+    "seed0_per_class_delta_16QAM": -0.5076190476190476,
+    "seed0_per_class_delta_64QAM": -0.4219047619047619,
+    "seed0_per_class_delta_2FSK": -0.9076190476190477,
+    "seed0_per_class_delta_CPFSK": -0.8771428571428571,
+    "seed0_per_class_delta_OFDM": -0.8590476190476191,
+    "seed0_snr_delta_0": -0.8535,
+    "seed0_snr_delta_10": -0.9265,
+    "seed0_snr_delta_20": -0.933,
+    "seed0_fpga_sim_accuracy_gap": 0.0,
+    "seed0_fpga_sim_macro_f1_gap": 0.0,
+    "seed1_per_class_delta_BPSK": -0.7952380952380952,
+    "seed1_per_class_delta_QPSK": -0.64,
+    "seed1_per_class_delta_8PSK": -0.6352380952380953,
+    "seed1_per_class_delta_16QAM": -0.5076190476190476,
+    "seed1_per_class_delta_64QAM": -0.4219047619047619,
+    "seed1_per_class_delta_2FSK": -0.9076190476190477,
+    "seed1_per_class_delta_CPFSK": -0.8771428571428571,
+    "seed1_per_class_delta_OFDM": -0.8590476190476191,
+    "seed1_snr_delta_0": -0.8535,
+    "seed1_snr_delta_10": -0.9265,
+    "seed1_snr_delta_20": -0.933,
+    "seed1_fpga_sim_accuracy_gap": 0.0,
+    "seed1_fpga_sim_macro_f1_gap": 0.0,
+    "seed2_per_class_delta_BPSK": -0.7952380952380952,
+    "seed2_per_class_delta_QPSK": -0.64,
+    "seed2_per_class_delta_8PSK": -0.6352380952380953,
+    "seed2_per_class_delta_16QAM": -0.5076190476190476,
+    "seed2_per_class_delta_64QAM": -0.4219047619047619,
+    "seed2_per_class_delta_2FSK": -0.9076190476190477,
+    "seed2_per_class_delta_CPFSK": -0.8771428571428571,
+    "seed2_per_class_delta_OFDM": -0.8590476190476191,
+    "seed2_snr_delta_0": -0.8535,
+    "seed2_snr_delta_10": -0.9265,
+    "seed2_snr_delta_20": -0.933,
+    "seed2_fpga_sim_accuracy_gap": 0.0,
+    "seed2_fpga_sim_macro_f1_gap": 0.0
+  },
+  "passed": false
+}

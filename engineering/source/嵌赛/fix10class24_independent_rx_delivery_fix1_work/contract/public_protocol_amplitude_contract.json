@@ -1,0 +1,49 @@
+{
+  "token": "M29-RML24-FIX10CLASS24-INDEPENDENT-RX-DELIVERY-FIX1-CONTRACT",
+  "section": "1+2 公共协议 + 幅度合同",
+  "public_protocol_layout": {
+    "source": "复用 dualsdr 冻结 build_burst（权威 C++ iq_rf_training_frame.hpp）",
+    "preamble_complex": 1024,
+    "preamble_kind": "Zadoff-Chu root=1",
+    "settling_zero_complex": 1024,
+    "payload_training_complex": 1024,
+    "payload_training_kind": "16QAM 已知符号（增益/IQ 参考）",
+    "payload_training_amp": 2896.309375740099,
+    "payload_training_offset": 2048,
+    "payload_complex": 53760,
+    "payload_start_complex": 3072,
+    "guard_zero_complex": 2048,
+    "tail_complex": 1024,
+    "tail_kind": "Zadoff-Chu root=3",
+    "tail_start_complex": 58880,
+    "total_burst_complex": 59904,
+    "total_burst_int16": 119808,
+    "sample_rate_hz": 2560000.0
+  },
+  "amplitude_contract": {
+    "tx_digital_scale_S": 117.84922023433009,
+    "tx_digital_scale_formula": "S = 1600 / max_peak（统一、类别无关）",
+    "max_peak": 13.576670230134553,
+    "max_peak_source": "AM-SSB-WC seed 3000017",
+    "rx_gain_estimate_a": "广线性系数 a，从载荷训练块已知幅度估计（数字域 a≈1；RF 域 a≈G 待板端训练块残差核验）",
+    "rx_iq_imbalance_b": "广线性系数 b（数字域 b≈0）",
+    "model_input_norm": 0.008485418893834097,
+    "model_input_norm_formula": "1/S = 1/117.84922023433009",
+    "quantization": "ci16 = lround(wf * S)，lround 半远离零（非 rint），clamp [-32768,32767]",
+    "model_window": "恢复载荷[:1024] * (1/S)（[2,1024] f32 LE，行0=实部）",
+    "adc_full_scale": 2048.0,
+    "adc_full_scale_note": "训练块参考幅度基准（非载荷幅度）"
+  },
+  "same_source_binding": {
+    "source_id": "fix1-public-protocol-24waveforms",
+    "conversion_version": "v1",
+    "binding_keys": "source_id + conversion_version + model_input_sha256",
+    "source_index": "显式 == class_index + 1（不 shuffle，不冒充 480 帧/盲采配对）"
+  },
+  "honest_boundary": {
+    "digital_self_consistency": "数字域 a≈1、b≈0 只证明 TX->模型归一化链路自洽，不证明 RF 模拟增益 G 已恢复",
+    "rf_gain_attribution": "RF 路径 G 由公共参考估计 a≈G 是否成立，须板端训练块残差单独核验",
+    "deleted_argument": "删除了 blind-clean1 的「数字量化逆变换证明 RF 幅度已恢复」论证",
+    "fixed_window_demoted": "固定 512 旋转 = 单个数字实验（反例），不代表真实捕获的未知相位"
+  }
+}

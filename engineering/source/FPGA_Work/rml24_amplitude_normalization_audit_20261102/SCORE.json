@@ -1,0 +1,330 @@
+{
+  "scores": {
+    "original": {
+      "correct": 240,
+      "denominator": 240,
+      "errors": []
+    },
+    "unit_rms": {
+      "correct": 196,
+      "denominator": 240,
+      "errors": [
+        {
+          "source": "00_00.bin",
+          "expected": 0,
+          "pred": 9,
+          "power": 2.165018081665039
+        },
+        {
+          "source": "00_01.bin",
+          "expected": 0,
+          "pred": 9,
+          "power": 2.165018081665039
+        },
+        {
+          "source": "00_02.bin",
+          "expected": 0,
+          "pred": 9,
+          "power": 2.165018081665039
+        },
+        {
+          "source": "00_03.bin",
+          "expected": 0,
+          "pred": 9,
+          "power": 2.165018081665039
+        },
+        {
+          "source": "00_04.bin",
+          "expected": 0,
+          "pred": 9,
+          "power": 2.165018081665039
+        },
+        {
+          "source": "00_05.bin",
+          "expected": 0,
+          "pred": 9,
+          "power": 2.165018081665039
+        },
+        {
+          "source": "00_06.bin",
+          "expected": 0,
+          "pred": 9,
+          "power": 2.165018081665039
+        },
+        {
+          "source": "00_07.bin",
+          "expected": 0,
+          "pred": 9,
+          "power": 2.16501784324646
+        },
+        {
+          "source": "00_08.bin",
+          "expected": 0,
+          "pred": 10,
+          "power": 2.165018081665039
+        },
+        {
+          "source": "01_00.bin",
+          "expected": 1,
+          "pred": 16,
+          "power": 3.071256160736084
+        },
+        {
+          "source": "01_01.bin",
+          "expected": 1,
+          "pred": 16,
+          "power": 3.071256160736084
+        },
+        {
+          "source": "01_02.bin",
+          "expected": 1,
+          "pred": 15,
+          "power": 3.071256160736084
+        },
+        {
+          "source": "01_03.bin",
+          "expected": 1,
+          "pred": 16,
+          "power": 3.071256160736084
+        },
+        {
+          "source": "01_04.bin",
+          "expected": 1,
+          "pred": 16,
+          "power": 3.071256160736084
+        },
+        {
+          "source": "01_05.bin",
+          "expected": 1,
+          "pred": 16,
+          "power": 3.071256160736084
+        },
+        {
+          "source": "01_06.bin",
+          "expected": 1,
+          "pred": 16,
+          "power": 3.071256160736084
+        },
+        {
+          "source": "01_07.bin",
+          "expected": 1,
+          "pred": 16,
+          "power": 3.071256160736084
+        },
+        {
+          "source": "01_08.bin",
+          "expected": 1,
+          "pred": 16,
+          "power": 3.071256160736084
+        },
+        {
+          "source": "01_09.bin",
+          "expected": 1,
+          "pred": 16,
+          "power": 3.071256399154663
+        },
+        {
+          "source": "02_00.bin",
+          "expected": 2,
+          "pred": 16,
+          "power": 3.65421462059021
+        },
+        {
+          "source": "02_02.bin",
+          "expected": 2,
+          "pred": 16,
+          "power": 3.654214382171631
+        },
+        {
+          "source": "02_07.bin",
+          "expected": 2,
+          "pred": 16,
+          "power": 3.65421462059021
+        },
+        {
+          "source": "02_08.bin",
+          "expected": 2,
+          "pred": 16,
+          "power": 3.654214382171631
+        },
+        {
+          "source": "02_09.bin",
+          "expected": 2,
+          "pred": 16,
+          "power": 3.654214382171631
+        },
+        {
+          "source": "17_00.bin",
+          "expected": 17,
+          "pred": 14,
+          "power": 137.80882263183594
+        },
+        {
+          "source": "17_01.bin",
+          "expected": 17,
+          "pred": 14,
+          "power": 137.80880737304688
+        },
+        {
+          "source": "17_02.bin",
+          "expected": 17,
+          "pred": 14,
+          "power": 137.80882263183594
+        },
+        {
+          "source": "17_03.bin",
+          "expected": 17,
+          "pred": 14,
+          "power": 137.80882263183594
+        },
+        {
+          "source": "17_04.bin",
+          "expected": 17,
+          "pred": 14,
+          "power": 137.80880737304688
+        },
+        {
+          "source": "17_05.bin",
+          "expected": 17,
+          "pred": 14,
+          "power": 137.80880737304688
+        },
+        {
+          "source": "17_06.bin",
+          "expected": 17,
+          "pred": 14,
+          "power": 137.80880737304688
+        },
+        {
+          "source": "17_07.bin",
+          "expected": 17,
+          "pred": 14,
+          "power": 137.80882263183594
+        },
+        {
+          "source": "17_08.bin",
+          "expected": 17,
+          "pred": 14,
+          "power": 137.80880737304688
+        },
+        {
+          "source": "17_09.bin",
+          "expected": 17,
+          "pred": 14,
+          "power": 137.80880737304688
+        },
+        {
+          "source": "18_00.bin",
+          "expected": 18,
+          "pred": 16,
+          "power": 61.352752685546875
+        },
+        {
+          "source": "18_01.bin",
+          "expected": 18,
+          "pred": 15,
+          "power": 61.352752685546875
+        },
+        {
+          "source": "18_02.bin",
+          "expected": 18,
+          "pred": 11,
+          "power": 61.352752685546875
+        },
+        {
+          "source": "18_03.bin",
+          "expected": 18,
+          "pred": 15,
+          "power": 61.35275650024414
+        },
+        {
+          "source": "18_04.bin",
+          "expected": 18,
+          "pred": 16,
+          "power": 61.352752685546875
+        },
+        {
+          "source": "18_05.bin",
+          "expected": 18,
+          "pred": 16,
+          "power": 61.352752685546875
+        },
+        {
+          "source": "18_06.bin",
+          "expected": 18,
+          "pred": 16,
+          "power": 61.35275650024414
+        },
+        {
+          "source": "18_07.bin",
+          "expected": 18,
+          "pred": 16,
+          "power": 61.352752685546875
+        },
+        {
+          "source": "18_08.bin",
+          "expected": 18,
+          "pred": 16,
+          "power": 61.35275650024414
+        },
+        {
+          "source": "18_09.bin",
+          "expected": 18,
+          "pred": 16,
+          "power": 61.352752685546875
+        }
+      ]
+    }
+  },
+  "new_regressions": [
+    "00_00.bin",
+    "00_01.bin",
+    "00_02.bin",
+    "00_03.bin",
+    "00_04.bin",
+    "00_05.bin",
+    "00_06.bin",
+    "00_07.bin",
+    "00_08.bin",
+    "01_00.bin",
+    "01_01.bin",
+    "01_02.bin",
+    "01_03.bin",
+    "01_04.bin",
+    "01_05.bin",
+    "01_06.bin",
+    "01_07.bin",
+    "01_08.bin",
+    "01_09.bin",
+    "02_00.bin",
+    "02_02.bin",
+    "02_07.bin",
+    "02_08.bin",
+    "02_09.bin",
+    "17_00.bin",
+    "17_01.bin",
+    "17_02.bin",
+    "17_03.bin",
+    "17_04.bin",
+    "17_05.bin",
+    "17_06.bin",
+    "17_07.bin",
+    "17_08.bin",
+    "17_09.bin",
+    "18_00.bin",
+    "18_01.bin",
+    "18_02.bin",
+    "18_03.bin",
+    "18_04.bin",
+    "18_05.bin",
+    "18_06.bin",
+    "18_07.bin",
+    "18_08.bin",
+    "18_09.bin"
+  ],
+  "diagnostic_only": true,
+  "not_deployed": true,
+  "npu_stop": [
+    "NPU_STREAM_STOP frames=3840 apply=1 reset=3839 discipline=1"
+  ]
+}

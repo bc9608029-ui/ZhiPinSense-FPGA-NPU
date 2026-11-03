@@ -1,0 +1,65 @@
+{
+  "token": "M29-RML24-FIX10CLASS24-CLASSIFICATION-GATE-SEPARATION1-READY-FOR-BOARD-TEST",
+  "task": "fix10class24-classification-gate-separation1",
+  "scope": "Part B diagnostic bypass (single + dual SDR direct/dc) + unified judger",
+  "nature": "BOARD-PREP offline; no RF_PASS / no TX / no train; C++ not compiled here",
+  "gates": {
+    "fidelity_gate": {
+      "question": "did the RF chain preserve the TX signal well enough",
+      "criterion": "payload_training_residual <= 0.100",
+      "symbol": "iqrfrec::kPayloadTrainingResidualMax",
+      "on_fail": "gated=0, gate_reject=1, board_pred=-1"
+    },
+    "classification_gate": {
+      "question": "given recovered payload, which class",
+      "criterion": "NPU24 BF16 raw24_predict argmax",
+      "on_pass": "board_pred = raw_24_top1"
+    }
+  },
+  "diagnostic_flag": {
+    "name": "--diagnostic-force-classify",
+    "default": false,
+    "runners": [
+      "radioml_singlesdr_ab_runner.hpp",
+      "radioml_dualsdr_ab_runner.hpp"
+    ]
+  },
+  "bypass_conditions": [
+    "rec.failure == PAYLOAD_TRAINING_RESIDUAL_TOO_HIGH",
+    "residual > 0.100",
+    "residual <= 0.30 (kHardInvalidResidualCeiling)",
+    "cfo_in_range",
+    "!rx_clipped",
+    "neg_pass",
+    "abs(rec.sro_ppm) <= max_sro_ppm"
+  ],
+  "classification_layer": {
+    "NPU_BF16_PRODUCTION": "gated production classification",
+    "NPU_BF16_DIAGNOSTIC": "Part B diagnostic bypass classification",
+    "NOT_APPLICABLE": "gate-rejected and not bypassable"
+  },
+  "diagnostic_results_schema": [
+    "selection_id", "hdf5_row_index", "raw24_class", "dataset_snr_db",
+    "residual", "corr", "board_pred_diag", "finite_diag",
+    "repeat_deterministic", "classification_layer",
+    "diagnostic_gate_bypass", "label_correct"
+  ],
+  "six_statistics": {
+    "diagnostic_bypass_total": "frames meeting ALL bypass conditions",
+    "diagnostic_bypass_classified": "of those, finite classification produced",
+    "diagnostic_bypass_correct": "of those, prediction == source label",
+    "diagnostic_bypass_accuracy": "derived = correct / classified",
+    "diagnostic_bypass_repeat_deterministic": "of those, x2 infer agreed",
+    "diagnostic_bypass_refused": "forceable frames NOT bypassed (CFO/SRO/clip/neg)"
+  },
+  "defensive_counter": {
+    "diagnostic_bypass_apply_failed": "bypass conditions met but apply() safety guard refused"
+  },
+  "red_lines": [
+    "production 0.100 gate and 19-col board_results.tsv semantics unchanged",
+    "hard_invalid frames are NEVER forced to success",
+    "frozen recovery math reused verbatim; only local rec.valid bypassed",
+    "frozen BF16 model SHA / 24-class order / 480-frame selection unchanged",
+    "no train / no tune / no model swap / no per-class recovery"
+  ]
+}

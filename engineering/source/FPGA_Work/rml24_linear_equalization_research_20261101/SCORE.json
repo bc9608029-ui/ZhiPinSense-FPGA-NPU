@@ -1,0 +1,327 @@
+{
+  "scope": "Same actual1-repeat raw IQ35 captures; offline frozen-NPU replay; not new RF qualification",
+  "old_correct": 32,
+  "new_correct": 32,
+  "denominator": 35,
+  "gained": [],
+  "lost": [],
+  "no_paired_regressions": true,
+  "deployed": false,
+  "rows": [
+    {
+      "index": 5,
+      "file": "00_00.bin",
+      "expected": 0,
+      "old_pred": 0,
+      "new_pred": 0,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 7,
+      "file": "01_00.bin",
+      "expected": 1,
+      "old_pred": 1,
+      "new_pred": 1,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 8,
+      "file": "01_00.bin",
+      "expected": 1,
+      "old_pred": 1,
+      "new_pred": 1,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 9,
+      "file": "02_00.bin",
+      "expected": 2,
+      "old_pred": 2,
+      "new_pred": 2,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 10,
+      "file": "02_00.bin",
+      "expected": 2,
+      "old_pred": 2,
+      "new_pred": 2,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 12,
+      "file": "03_00.bin",
+      "expected": 3,
+      "old_pred": 3,
+      "new_pred": 3,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 14,
+      "file": "04_00.bin",
+      "expected": 4,
+      "old_pred": 4,
+      "new_pred": 4,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 15,
+      "file": "04_00.bin",
+      "expected": 4,
+      "old_pred": 4,
+      "new_pred": 4,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 16,
+      "file": "05_00.bin",
+      "expected": 5,
+      "old_pred": 5,
+      "new_pred": 5,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 17,
+      "file": "05_00.bin",
+      "expected": 5,
+      "old_pred": 5,
+      "new_pred": 5,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 19,
+      "file": "06_00.bin",
+      "expected": 6,
+      "old_pred": 6,
+      "new_pred": 6,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 21,
+      "file": "07_00.bin",
+      "expected": 7,
+      "old_pred": 7,
+      "new_pred": 7,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 22,
+      "file": "07_00.bin",
+      "expected": 7,
+      "old_pred": 7,
+      "new_pred": 7,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 24,
+      "file": "08_00.bin",
+      "expected": 8,
+      "old_pred": 8,
+      "new_pred": 8,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 26,
+      "file": "09_00.bin",
+      "expected": 9,
+      "old_pred": 9,
+      "new_pred": 9,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 27,
+      "file": "09_00.bin",
+      "expected": 9,
+      "old_pred": 9,
+      "new_pred": 9,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 29,
+      "file": "10_00.bin",
+      "expected": 10,
+      "old_pred": 10,
+      "new_pred": 10,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 31,
+      "file": "11_00.bin",
+      "expected": 11,
+      "old_pred": 11,
+      "new_pred": 11,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 33,
+      "file": "12_00.bin",
+      "expected": 12,
+      "old_pred": 12,
+      "new_pred": 12,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 34,
+      "file": "12_00.bin",
+      "expected": 12,
+      "old_pred": 12,
+      "new_pred": 12,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 36,
+      "file": "13_00.bin",
+      "expected": 13,
+      "old_pred": 13,
+      "new_pred": 13,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 38,
+      "file": "14_00.bin",
+      "expected": 14,
+      "old_pred": 14,
+      "new_pred": 14,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 39,
+      "file": "14_00.bin",
+      "expected": 14,
+      "old_pred": 14,
+      "new_pred": 14,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 41,
+      "file": "15_00.bin",
+      "expected": 15,
+      "old_pred": 16,
+      "new_pred": 16,
+      "old_correct": false,
+      "new_correct": false
+    },
+    {
+      "index": 43,
+      "file": "16_00.bin",
+      "expected": 16,
+      "old_pred": 16,
+      "new_pred": 16,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 45,
+      "file": "17_00.bin",
+      "expected": 17,
+      "old_pred": 17,
+      "new_pred": 17,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 46,
+      "file": "17_00.bin",
+      "expected": 17,
+      "old_pred": 18,
+      "new_pred": 18,
+      "old_correct": false,
+      "new_correct": false
+    },
+    {
+      "index": 48,
+      "file": "18_00.bin",
+      "expected": 18,
+      "old_pred": 18,
+      "new_pred": 18,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 50,
+      "file": "19_00.bin",
+      "expected": 19,
+      "old_pred": 19,
+      "new_pred": 19,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 51,
+      "file": "19_00.bin",
+      "expected": 19,
+      "old_pred": 19,
+      "new_pred": 19,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 53,
+      "file": "20_00.bin",
+      "expected": 20,
+      "old_pred": 16,
+      "new_pred": 16,
+      "old_correct": false,
+      "new_correct": false
+    },
+    {
+      "index": 55,
+      "file": "21_00.bin",
+      "expected": 21,
+      "old_pred": 21,
+      "new_pred": 21,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 57,
+      "file": "22_00.bin",
+      "expected": 22,
+      "old_pred": 22,
+      "new_pred": 22,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 58,
+      "file": "22_00.bin",
+      "expected": 22,
+      "old_pred": 22,
+      "new_pred": 22,
+      "old_correct": true,
+      "new_correct": true
+    },
+    {
+      "index": 60,
+      "file": "23_00.bin",
+      "expected": 23,
+      "old_pred": 23,
+      "new_pred": 23,
+      "old_correct": true,
+      "new_correct": true
+    }
+  ]
+}

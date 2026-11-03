@@ -1,0 +1,119 @@
+{
+  "overall_accuracy": 0.359375,
+  "macro_f1": 0.2899764016933287,
+  "per_class_accuracy": {
+    "BPSK": 0.5625,
+    "QPSK": 0.125,
+    "8PSK": 0.09375,
+    "16QAM": 0.0,
+    "64QAM": 0.03125,
+    "2FSK": 0.8125,
+    "CPFSK": 0.9375,
+    "OFDM": 0.3125
+  },
+  "best_epoch": 3,
+  "epochs_completed": 3,
+  "best_validation_loss": 1.8238453269004824,
+  "best_validation_accuracy": 0.3515625,
+  "final_train_accuracy": 0.3723958333333333,
+  "final_validation_accuracy": 0.3515625,
+  "overfitting_detected": false,
+  "overfitting_basis": {
+    "accuracy_gap_at_best_epoch": 0.020833333333333315,
+    "validation_degraded_after_best": false,
+    "rule": "flag if best-epoch train/validation accuracy gap > 0.10 or validation loss remains degraded after best epoch"
+  },
+  "performance_knee": {
+    "interval_db": [
+      -20.0,
+      -10.0
+    ],
+    "accuracy_gain": 0.1875
+  },
+  "high_snr_sanity": {
+    "10": {
+      "accuracy": 0.40625,
+      "macro_f1": 0.3400974025974026,
+      "per_modulation_accuracy": {
+        "BPSK": 0.75,
+        "QPSK": 0.0,
+        "8PSK": 0.0,
+        "16QAM": 0.0,
+        "64QAM": 0.0,
+        "2FSK": 0.75,
+        "CPFSK": 1.0,
+        "OFDM": 0.75
+      }
+    },
+    "20": {
+      "accuracy": 0.40625,
+      "macro_f1": 0.3432539682539682,
+      "per_modulation_accuracy": {
+        "BPSK": 0.5,
+        "QPSK": 0.0,
+        "8PSK": 0.0,
+        "16QAM": 0.0,
+        "64QAM": 0.0,
+        "2FSK": 1.0,
+        "CPFSK": 1.0,
+        "OFDM": 0.75
+      }
+    }
+  },
+  "selected_pair_confusions": {
+    "10": {
+      "QPSK_vs_8PSK": {
+        "QPSK_as_8PSK": 0.0,
+        "8PSK_as_QPSK": 0.0
+      },
+      "16QAM_vs_64QAM": {
+        "16QAM_as_64QAM": 0.0,
+        "64QAM_as_16QAM": 0.0
+      },
+      "2FSK_vs_CPFSK": {
+        "2FSK_as_CPFSK": 0.0,
+        "CPFSK_as_2FSK": 0.0
+      }
+    },
+    "20": {
+      "QPSK_vs_8PSK": {
+        "QPSK_as_8PSK": 0.0,
+        "8PSK_as_QPSK": 0.0
+      },
+      "16QAM_vs_64QAM": {
+        "16QAM_as_64QAM": 0.25,
+        "64QAM_as_16QAM": 0.0
+      },
+      "2FSK_vs_CPFSK": {
+        "2FSK_as_CPFSK": 0.0,
+        "CPFSK_as_2FSK": 0.0
+      }
+    }
+  },
+  "single_sample_cpu_inference_ms": 0.23761099999319413,
+  "batch_inference_throughput_records_per_sec": 63245.16890926957,
+  "end_to_end_test_records_per_sec": 840.2004403169594,
+  "model_profile": {
+    "parameters": 9672,
+    "trainable_parameters": 9672,
+    "model_size_mb_fp32": 0.036895751953125,
+    "approx_macs": 1163776,
+    "approx_flops": 2327552
+  },
+  "training_time_sec": 5.092792399998871,
+  "peak_process_rss_mb": 427.51171875,
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "torch": "2.14.0+cpu",
+    "cuda_available": false,
+    "torch_cuda_version": null,
+    "cudnn_version": null,
+    "cuda_devices": []
+  },
+  "config_file": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\smoke_py311.yaml",
+  "git_commit": null,
+  "random_seed": 2026
+}

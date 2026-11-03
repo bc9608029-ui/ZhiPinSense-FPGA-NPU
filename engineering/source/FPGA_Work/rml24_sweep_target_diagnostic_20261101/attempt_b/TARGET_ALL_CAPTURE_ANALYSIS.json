@@ -1,0 +1,1543 @@
+{
+  "diagnostic_only": true,
+  "truth_used_posthoc_only": true,
+  "windows": [
+    {
+      "window": 0,
+      "source": "23_07.bin",
+      "expected": 23,
+      "captures": [
+        {
+          "frame_id": 19,
+          "prediction": 23,
+          "correct": true,
+          "seconds_after_start": 8.91593058,
+          "metadata": {
+            "cfo_hz": -0.7752150297108014,
+            "training_residual": 0.7612388035486307,
+            "fir_training_residual": 0.028684884867967213,
+            "head_reference_relative_error": 0.022853111406487644,
+            "tail_reference_relative_error": 0.023689870838148955,
+            "tail_residual": 0.7170077612617768,
+            "gain": 556.1604449339925,
+            "dc": 19.906359100511743,
+            "repeat_average": 8.0,
+            "input_sha256": "8108d3db205dbacadcee826518cc7fed5622136879236c806dce29a4e7a3f3c0",
+            "pred": 23,
+            "class_name": "OQPSK",
+            "confidence": 0.9793361047490248,
+            "top3": [
+              {
+                "index": 23,
+                "class_name": "OQPSK",
+                "probability": 0.9793361047490248
+              },
+              {
+                "index": 15,
+                "class_name": "128QAM",
+                "probability": 0.013969479273668286
+              },
+              {
+                "index": 10,
+                "class_name": "64APSK",
+                "probability": 0.003759834340155831
+              }
+            ],
+            "window_predictions": [
+              23,
+              23,
+              23,
+              23,
+              23,
+              23,
+              23,
+              23
+            ],
+            "mean_logits": [
+              -46.75,
+              -40.25,
+              -45.0,
+              -40.5,
+              -40.75,
+              -45.0,
+              -27.375,
+              -17.125,
+              -36.25,
+              -38.25,
+              -16.875,
+              -27.875,
+              -40.0,
+              -29.25,
+              -23.625,
+              -15.5625,
+              -24.5,
+              -36.25,
+              -40.0,
+              -39.5,
+              -42.75,
+              -70.0,
+              -65.0,
+              -11.3125
+            ],
+            "finite": true
+          },
+          "gain": {
+            "selected_gain_db": 63.0,
+            "readback_gain_db": 63.0,
+            "settle_buffers": 3,
+            "initial_adc_stats": {
+              "peak": 1209.0,
+              "rail_count": 0
+            },
+            "final_adc_stats": {
+              "peak": 1209.0,
+              "rail_count": 0
+            },
+            "final_gain_db": 63.0,
+            "backoff_steps": [],
+            "headroom_resolved": true
+          },
+          "scan": [
+            {
+              "scan_index": 9,
+              "scan_points": 11,
+              "sweep_cycle": 1,
+              "lo_hz": 2403000000,
+              "public_score": 0.8608593140608818,
+              "cfo_hz": 599922.8251691101,
+              "captured_ns": 1773418623475561520,
+              "captured_monotonic_ns": 46136473931030,
+              "accepted": true,
+              "centred_fallback_used": false,
+              "primary_confirmed_score": 0.7955785658851764,
+              "primary_confirmed_cfo_hz": -0.7752149885010634,
+              "confirmed_lo_hz": 2403599920,
+              "confirmed_ns": 1773418625736223310,
+              "confirmed_monotonic_ns": 46138734593010,
+              "confirmed_score": 0.7955785658851764,
+              "confirmed_cfo_hz": -0.7752149885010634,
+              "reason": "CENTRED_PUBLIC_FRAME"
+            }
+          ],
+          "input_sha256": "8108d3db205dbacadcee826518cc7fed5622136879236c806dce29a4e7a3f3c0",
+          "aligned_nmse": 0.0004641117995691071,
+          "fitted_scale": [
+            1.0043614500131148,
+            -0.0043022811388866
+          ],
+          "fitted_dc": [
+            0.002398742490590425,
+            0.0020489581418608053
+          ]
+        },
+        {
+          "frame_id": 20,
+          "prediction": 23,
+          "correct": true,
+          "seconds_after_start": 13.69624904,
+          "metadata": {
+            "cfo_hz": 0.3051661551438512,
+            "training_residual": 0.42807805555067147,
+            "fir_training_residual": 0.043527535719776744,
+            "head_reference_relative_error": 0.04005252446038555,
+            "tail_reference_relative_error": 0.03925137975707712,
+            "tail_residual": 0.4067949837392349,
+            "gain": 607.9181455851045,
+            "dc": 15.489620496917086,
+            "repeat_average": 8.0,
+            "input_sha256": "86ee5156d844c840c9b3b6c28cb7ed218b01bea89790ed71d7bd3ce0570d3123",
+            "pred": 23,
+            "class_name": "OQPSK",
+            "confidence": 0.8156856252216316,
+            "top3": [
+              {
+                "index": 23,
+                "class_name": "OQPSK",
+                "probability": 0.8156856252216316
+              },
+              {
+                "index": 15,
+                "class_name": "128QAM",
+                "probability": 0.18200406418647475
+              },
+              {
+                "index": 7,
+                "class_name": "32PSK",
+                "probability": 0.0022910930486804318
+              }
+            ],
+            "window_predictions": [
+              23,
+              23,
+              23,
+              23,
+              23,
+              23,
+              23,
+              23
+            ],
+            "mean_logits": [
+              -59.5,
+              -39.25,
+              -46.75,
+              -42.25,
+              -44.75,
+              -49.0,
+              -30.5,
+              -14.375,
+              -42.5,
+              -49.75,
+              -19.25,
+              -23.375,
+              -33.75,
+              -27.25,
+              -31.375,
+              -10.0,
+              -21.75,
+              -43.5,
+              -51.75,
+              -65.0,
+              -49.25,
+              -91.0,
+              -76.5,
+              -8.5
+            ],
+            "finite": true
+          },
+          "gain": {
+            "selected_gain_db": 62.0,
+            "readback_gain_db": 62.0,
+            "settle_buffers": 3,
+            "initial_adc_stats": {
+              "peak": 1132.0,
+              "rail_count": 0
+            },
+            "final_adc_stats": {
+              "peak": 1132.0,
+              "rail_count": 0
+            },
+            "final_gain_db": 62.0,
+            "backoff_steps": [],
+            "headroom_resolved": true
+          },
+          "scan": [
+            {
+              "scan_index": 10,
+              "scan_points": 11,
+              "sweep_cycle": 1,
+              "lo_hz": 2404000000,
+              "public_score": 0.7462110915080303,
+              "cfo_hz": -400077.386273888,
+              "captured_ns": 1773418628206129730,
+              "captured_monotonic_ns": 46141204499240,
+              "accepted": true,
+              "centred_fallback_used": false,
+              "primary_confirmed_score": 0.9201291870974284,
+              "primary_confirmed_cfo_hz": 0.611227690256121,
+              "confirmed_lo_hz": 2403599920,
+              "confirmed_ns": 1773418630516541580,
+              "confirmed_monotonic_ns": 46143514911470,
+              "confirmed_score": 0.9201291870974284,
+              "confirmed_cfo_hz": 0.611227690256121,
+              "reason": "CENTRED_PUBLIC_FRAME"
+            }
+          ],
+          "input_sha256": "86ee5156d844c840c9b3b6c28cb7ed218b01bea89790ed71d7bd3ce0570d3123",
+          "aligned_nmse": 0.0014673433078680397,
+          "fitted_scale": [
+            1.0121400436808374,
+            -0.0037113979043964396
+          ],
+          "fitted_dc": [
+            0.0022388141488881995,
+            0.0011149091805665373
+          ]
+        }
+      ]
+    },
+    {
+      "window": 1,
+      "source": "19_00.bin",
+      "expected": 19,
+      "captures": [
+        {
+          "frame_id": 30,
+          "prediction": 19,
+          "correct": true,
+          "seconds_after_start": 9.96017769,
+          "metadata": {
+            "cfo_hz": 2.2829049450945105,
+            "training_residual": 0.4393656367790817,
+            "fir_training_residual": 0.023302235223237745,
+            "head_reference_relative_error": 0.021352216038960686,
+            "tail_reference_relative_error": 0.023899529398849175,
+            "tail_residual": 0.4174919583493339,
+            "gain": 740.9722190186067,
+            "dc": 45.00357158120893,
+            "repeat_average": 8.0,
+            "input_sha256": "bde7e151d7c94ec10d64199a427c78097641e4f63e0ac195dd8aa7ca76a1447d",
+            "pred": 19,
+            "class_name": "AM-DSB-WC",
+            "confidence": 0.9755766237477956,
+            "top3": [
+              {
+                "index": 19,
+                "class_name": "AM-DSB-WC",
+                "probability": 0.9755766237477956
+              },
+              {
+                "index": 20,
+                "class_name": "AM-DSB-SC",
+                "probability": 0.024423082889278042
+              },
+              {
+                "index": 17,
+                "class_name": "AM-SSB-WC",
+                "probability": 2.8924939172150403e-07
+              }
+            ],
+            "window_predictions": [
+              19,
+              19,
+              19,
+              19,
+              19,
+              19,
+              19,
+              19
+            ],
+            "mean_logits": [
+              -20.5,
+              -24.0,
+              -23.625,
+              -17.625,
+              -19.75,
+              -15.75,
+              -19.75,
+              -20.5,
+              -13.375,
+              -14.3125,
+              -12.875,
+              -16.125,
+              -19.875,
+              -16.75,
+              -19.875,
+              -16.875,
+              -21.625,
+              -6.71875,
+              -12.875,
+              8.3125,
+              4.625,
+              -21.75,
+              -41.75,
+              -11.5625
+            ],
+            "finite": true
+          },
+          "gain": {
+            "selected_gain_db": 64.0,
+            "readback_gain_db": 64.0,
+            "settle_buffers": 3,
+            "initial_adc_stats": {
+              "peak": 1343.0,
+              "rail_count": 0
+            },
+            "final_adc_stats": {
+              "peak": 1343.0,
+              "rail_count": 0
+            },
+            "final_gain_db": 64.0,
+            "backoff_steps": [],
+            "headroom_resolved": true
+          },
+          "scan": [
+            {
+              "scan_index": 9,
+              "scan_points": 11,
+              "sweep_cycle": 2,
+              "lo_hz": 2403000000,
+              "public_score": 0.7443729111350558,
+              "cfo_hz": 599922.644439955,
+              "captured_ns": 1773418664766623330,
+              "captured_monotonic_ns": 46177764993020,
+              "accepted": true,
+              "centred_fallback_used": false,
+              "primary_confirmed_score": 0.9148277883203505,
+              "primary_confirmed_cfo_hz": 3.000185864629378,
+              "confirmed_lo_hz": 2403599920,
+              "confirmed_ns": 1773418667032782560,
+              "confirmed_monotonic_ns": 46180031152320,
+              "confirmed_score": 0.9148277883203505,
+              "confirmed_cfo_hz": 3.000185864629378,
+              "reason": "CENTRED_PUBLIC_FRAME"
+            }
+          ],
+          "input_sha256": "bde7e151d7c94ec10d64199a427c78097641e4f63e0ac195dd8aa7ca76a1447d",
+          "aligned_nmse": 7.792884889468513e-05,
+          "fitted_scale": [
+            1.004753767830541,
+            0.018805269598336467
+          ],
+          "fitted_dc": [
+            0.0021810653912953835,
+            0.0007022210076967018
+          ]
+        },
+        {
+          "frame_id": 31,
+          "prediction": 19,
+          "correct": true,
+          "seconds_after_start": 14.62423557,
+          "metadata": {
+            "cfo_hz": 0.5969013095028113,
+            "training_residual": 0.32788380684249013,
+            "fir_training_residual": 0.054965935365694205,
+            "head_reference_relative_error": 0.05229131978777995,
+            "tail_reference_relative_error": 0.05179997146910145,
+            "tail_residual": 0.31374978890211025,
+            "gain": 525.8566657153694,
+            "dc": 11.929735692173418,
+            "repeat_average": 8.0,
+            "input_sha256": "95d02aa102d82bcc99e744247e73159385550a993451d88a2e80a0644a824db5",
+            "pred": 19,
+            "class_name": "AM-DSB-WC",
+            "confidence": 0.9525741217008522,
+            "top3": [
+              {
+                "index": 19,
+                "class_name": "AM-DSB-WC",
+                "probability": 0.9525741217008522
+              },
+              {
+                "index": 20,
+                "class_name": "AM-DSB-SC",
+                "probability": 0.04742587292257828
+              },
+              {
+                "index": 17,
+                "class_name": "AM-SSB-WC",
+                "probability": 5.013721631751167e-09
+              }
+            ],
+            "window_predictions": [
+              19,
+              19,
+              19,
+              19,
+              19,
+              19,
+              19,
+              19
+            ],
+            "mean_logits": [
+              -22.5,
+              -28.0,
+              -29.875,
+              -21.375,
+              -26.0,
+              -18.25,
+              -21.875,
+              -23.125,
+              -15.875,
+              -14.75,
+              -13.8125,
+              -17.0,
+              -22.5,
+              -18.125,
+              -23.125,
+              -18.625,
+              -24.75,
+              -10.0,
+              -17.25,
+              9.0625,
+              6.0625,
+              -22.625,
+              -47.5,
+              -13.3125
+            ],
+            "finite": true
+          },
+          "gain": {
+            "selected_gain_db": 61.0,
+            "readback_gain_db": 61.0,
+            "settle_buffers": 3,
+            "initial_adc_stats": {
+              "peak": 976.0,
+              "rail_count": 0
+            },
+            "final_adc_stats": {
+              "peak": 976.0,
+              "rail_count": 0
+            },
+            "final_gain_db": 61.0,
+            "backoff_steps": [],
+            "headroom_resolved": true
+          },
+          "scan": [
+            {
+              "scan_index": 10,
+              "scan_points": 11,
+              "sweep_cycle": 2,
+              "lo_hz": 2404000000,
+              "public_score": 0.9236295020107295,
+              "cfo_hz": -400076.0182091075,
+              "captured_ns": 1773418669486675990,
+              "captured_monotonic_ns": 46182485045250,
+              "accepted": true,
+              "centred_fallback_used": false,
+              "primary_confirmed_score": 0.9501895705071359,
+              "primary_confirmed_cfo_hz": 1.4212448402558795,
+              "confirmed_lo_hz": 2403599924,
+              "confirmed_ns": 1773418671696840580,
+              "confirmed_monotonic_ns": 46184695210200,
+              "confirmed_score": 0.9501895705071359,
+              "confirmed_cfo_hz": 1.4212448402558795,
+              "reason": "CENTRED_PUBLIC_FRAME"
+            }
+          ],
+          "input_sha256": "95d02aa102d82bcc99e744247e73159385550a993451d88a2e80a0644a824db5",
+          "aligned_nmse": 8.182895058175764e-05,
+          "fitted_scale": [
+            1.027381848205731,
+            0.052346420062835214
+          ],
+          "fitted_dc": [
+            -0.0006181193010724941,
+            -0.0013380702073018304
+          ]
+        }
+      ]
+    },
+    {
+      "window": 2,
+      "source": "23_07.bin",
+      "expected": 23,
+      "captures": [
+        {
+          "frame_id": 41,
+          "prediction": 23,
+          "correct": true,
+          "seconds_after_start": 10.07090636,
+          "metadata": {
+            "cfo_hz": -1.09219030752883,
+            "training_residual": 0.20971587861101504,
+            "fir_training_residual": 0.041214911184905514,
+            "head_reference_relative_error": 0.04037887421006142,
+            "tail_reference_relative_error": 0.04009565029775769,
+            "tail_residual": 0.2003947302987433,
+            "gain": 827.0110042954251,
+            "dc": 27.7563420177799,
+            "repeat_average": 8.0,
+            "input_sha256": "a18f9fe0cb5239f6a803198a9cc862b8c24fa48ccd67947e8838cc69f412add1",
+            "pred": 23,
+            "class_name": "OQPSK",
+            "confidence": 0.9963108993704695,
+            "top3": [
+              {
+                "index": 23,
+                "class_name": "OQPSK",
+                "probability": 0.9963108993704695
+              },
+              {
+                "index": 15,
+                "class_name": "128QAM",
+                "probability": 0.0032716987873232083
+              },
+              {
+                "index": 7,
+                "class_name": "32PSK",
+                "probability": 0.00034483451518385806
+              }
+            ],
+            "window_predictions": [
+              23,
+              23,
+              23,
+              23,
+              23,
+              23,
+              23,
+              23
+            ],
+            "mean_logits": [
+              -48.5,
+              -40.0,
+              -46.0,
+              -39.25,
+              -40.5,
+              -45.75,
+              -26.75,
+              -15.6875,
+              -36.0,
+              -41.5,
+              -17.25,
+              -27.875,
+              -37.5,
+              -28.25,
+              -24.125,
+              -13.4375,
+              -23.125,
+              -39.25,
+              -43.5,
+              -42.75,
+              -43.25,
+              -77.5,
+              -69.5,
+              -7.71875
+            ],
+            "finite": true
+          },
+          "gain": {
+            "selected_gain_db": 64.0,
+            "readback_gain_db": 64.0,
+            "settle_buffers": 3,
+            "initial_adc_stats": {
+              "peak": 1255.0,
+              "rail_count": 0
+            },
+            "final_adc_stats": {
+              "peak": 1255.0,
+              "rail_count": 0
+            },
+            "final_gain_db": 64.0,
+            "backoff_steps": [],
+            "headroom_resolved": true
+          },
+          "scan": [
+            {
+              "scan_index": 9,
+              "scan_points": 11,
+              "sweep_cycle": 3,
+              "lo_hz": 2403000000,
+              "public_score": 0.8638024402518567,
+              "cfo_hz": 599927.429369322,
+              "captured_ns": 1773418705147338880,
+              "captured_monotonic_ns": 46218145707950,
+              "accepted": true,
+              "centred_fallback_used": false,
+              "primary_confirmed_score": 0.9782079111114675,
+              "primary_confirmed_cfo_hz": -1.092190207016784,
+              "confirmed_lo_hz": 2403599926,
+              "confirmed_ns": 1773418707407375130,
+              "confirmed_monotonic_ns": 46220405744790,
+              "confirmed_score": 0.9782079111114675,
+              "confirmed_cfo_hz": -1.092190207016784,
+              "reason": "CENTRED_PUBLIC_FRAME"
+            }
+          ],
+          "input_sha256": "a18f9fe0cb5239f6a803198a9cc862b8c24fa48ccd67947e8838cc69f412add1",
+          "aligned_nmse": 0.0015692356292295393,
+          "fitted_scale": [
+            1.0064510414815062,
+            -0.005561475808018311
+          ],
+          "fitted_dc": [
+            0.0014995751276126032,
+            -0.0007394851831915884
+          ]
+        },
+        {
+          "frame_id": 42,
+          "prediction": 23,
+          "correct": true,
+          "seconds_after_start": 14.80134685,
+          "metadata": {
+            "cfo_hz": 0.0703369921794508,
+            "training_residual": 0.7138543026751965,
+            "fir_training_residual": 0.024117822837490248,
+            "head_reference_relative_error": 0.019654226276317334,
+            "tail_reference_relative_error": 0.02032051283369879,
+            "tail_residual": 0.6725235017565036,
+            "gain": 568.1015049978896,
+            "dc": 20.66324543423056,
+            "repeat_average": 8.0,
+            "input_sha256": "0d665e42776b1ecbf23676d13be1bac009ff8091b697dd4bbf9820e8d61d1d00",
+            "pred": 23,
+            "class_name": "OQPSK",
+            "confidence": 0.95621164023947,
+            "top3": [
+              {
+                "index": 23,
+                "class_name": "OQPSK",
+                "probability": 0.95621164023947
+              },
+              {
+                "index": 15,
+                "class_name": "128QAM",
+                "probability": 0.030737372808843533
+              },
+              {
+                "index": 7,
+                "class_name": "32PSK",
+                "probability": 0.009374369062145132
+              }
+            ],
+            "window_predictions": [
+              23,
+              23,
+              23,
+              23,
+              23,
+              23,
+              23,
+              23
+            ],
+            "mean_logits": [
+              -48.0,
+              -39.75,
+              -44.0,
+              -41.0,
+              -39.5,
+              -43.5,
+              -26.625,
+              -15.8125,
+              -35.75,
+              -38.5,
+              -16.75,
+              -26.5,
+              -39.0,
+              -28.875,
+              -24.375,
+              -14.625,
+              -23.75,
+              -35.25,
+              -39.25,
+              -39.5,
+              -42.25,
+              -68.5,
+              -62.25,
+              -11.1875
+            ],
+            "finite": true
+          },
+          "gain": {
+            "selected_gain_db": 63.0,
+            "readback_gain_db": 63.0,
+            "settle_buffers": 3,
+            "initial_adc_stats": {
+              "peak": 1058.0,
+              "rail_count": 0
+            },
+            "final_adc_stats": {
+              "peak": 1058.0,
+              "rail_count": 0
+            },
+            "final_gain_db": 63.0,
+            "backoff_steps": [],
+            "headroom_resolved": true
+          },
+          "scan": [
+            {
+              "scan_index": 10,
+              "scan_points": 11,
+              "sweep_cycle": 3,
+              "lo_hz": 2404000000,
+              "public_score": 0.8866814253189131,
+              "cfo_hz": -400074.48008878,
+              "captured_ns": 1773418709877679020,
+              "captured_monotonic_ns": 46222876048240,
+              "accepted": true,
+              "centred_fallback_used": false,
+              "primary_confirmed_score": 0.8137545535937858,
+              "primary_confirmed_cfo_hz": 0.07033671625564371,
+              "confirmed_lo_hz": 2403599926,
+              "confirmed_ns": 1773418712137815560,
+              "confirmed_monotonic_ns": 46225136185280,
+              "confirmed_score": 0.8137545535937858,
+              "confirmed_cfo_hz": 0.07033671625564371,
+              "reason": "CENTRED_PUBLIC_FRAME"
+            }
+          ],
+          "input_sha256": "0d665e42776b1ecbf23676d13be1bac009ff8091b697dd4bbf9820e8d61d1d00",
+          "aligned_nmse": 0.00026837323918505303,
+          "fitted_scale": [
+            1.0072873604030668,
+            0.0016073136378661687
+          ],
+          "fitted_dc": [
+            -0.0016994185139523684,
+            0.00039696606167444
+          ]
+        }
+      ]
+    },
+    {
+      "window": 3,
+      "source": "19_00.bin",
+      "expected": 19,
+      "captures": [
+        {
+          "frame_id": 52,
+          "prediction": 19,
+          "correct": true,
+          "seconds_after_start": 10.35973627,
+          "metadata": {
+            "cfo_hz": 0.7962688043478348,
+            "training_residual": 0.3392872203415236,
+            "fir_training_residual": 0.025037452531268555,
+            "head_reference_relative_error": 0.023735261974839588,
+            "tail_reference_relative_error": 0.025985496967010597,
+            "tail_residual": 0.322995272706263,
+            "gain": 770.914563103904,
+            "dc": 5.792740211747529,
+            "repeat_average": 8.0,
+            "input_sha256": "dd20843d53d3c48cb7a48df491cd7b8e25257cf8df0c5a43b5efeb7b02140ffe",
+            "pred": 19,
+            "class_name": "AM-DSB-WC",
+            "confidence": 0.9648534916310544,
+            "top3": [
+              {
+                "index": 19,
+                "class_name": "AM-DSB-WC",
+                "probability": 0.9648534916310544
+              },
+              {
+                "index": 20,
+                "class_name": "AM-DSB-SC",
+                "probability": 0.03514478586360774
+              },
+              {
+                "index": 17,
+                "class_name": "AM-SSB-WC",
+                "probability": 1.69847628576373e-06
+              }
+            ],
+            "window_predictions": [
+              19,
+              19,
+              19,
+              19,
+              19,
+              19,
+              19,
+              19
+            ],
+            "mean_logits": [
+              -19.625,
+              -22.125,
+              -21.125,
+              -16.75,
+              -17.25,
+              -15.5,
+              -18.75,
+              -19.25,
+              -12.375,
+              -13.75,
+              -13.125,
+              -15.5625,
+              -18.75,
+              -15.25,
+              -17.875,
+              -15.375,
+              -19.125,
+              -5.84375,
+              -11.1875,
+              7.40625,
+              4.09375,
+              -19.625,
+              -38.75,
+              -10.875
+            ],
+            "finite": true
+          },
+          "gain": {
+            "selected_gain_db": 64.0,
+            "readback_gain_db": 64.0,
+            "settle_buffers": 3,
+            "initial_adc_stats": {
+              "peak": 1275.0,
+              "rail_count": 0
+            },
+            "final_adc_stats": {
+              "peak": 1275.0,
+              "rail_count": 0
+            },
+            "final_gain_db": 64.0,
+            "backoff_steps": [],
+            "headroom_resolved": true
+          },
+          "scan": [
+            {
+              "scan_index": 9,
+              "scan_points": 11,
+              "sweep_cycle": 4,
+              "lo_hz": 2403000000,
+              "public_score": 0.896113903394152,
+              "cfo_hz": 599928.7092408695,
+              "captured_ns": 1773418745778048870,
+              "captured_monotonic_ns": 46258776418260,
+              "accepted": true,
+              "centred_fallback_used": false,
+              "primary_confirmed_score": 0.9469572982968067,
+              "primary_confirmed_cfo_hz": 0.7962677335456664,
+              "confirmed_lo_hz": 2403599928,
+              "confirmed_ns": 1773418747988213340,
+              "confirmed_monotonic_ns": 46260986582700,
+              "confirmed_score": 0.9469572982968067,
+              "confirmed_cfo_hz": 0.7962677335456664,
+              "reason": "CENTRED_PUBLIC_FRAME"
+            }
+          ],
+          "input_sha256": "dd20843d53d3c48cb7a48df491cd7b8e25257cf8df0c5a43b5efeb7b02140ffe",
+          "aligned_nmse": 7.976407039821959e-05,
+          "fitted_scale": [
+            0.9872220310175908,
+            -0.0013457725415872463
+          ],
+          "fitted_dc": [
+            -0.0014158786633214062,
+            -0.0006992399661563193
+          ]
+        },
+        {
+          "frame_id": 53,
+          "prediction": 19,
+          "correct": true,
+          "seconds_after_start": 15.05004021,
+          "metadata": {
+            "cfo_hz": -0.02348266182492479,
+            "training_residual": 1.023406738640484,
+            "fir_training_residual": 0.030351886710982212,
+            "head_reference_relative_error": 0.02122965776947752,
+            "tail_reference_relative_error": 0.019917603369714806,
+            "tail_residual": 0.9511793378275473,
+            "gain": 435.51861832371134,
+            "dc": 18.83496560544666,
+            "repeat_average": 8.0,
+            "input_sha256": "d703a4fd1ac5f0620377ad6d05dc507bf0886c0eb5e2cba71d70ebd49e489543",
+            "pred": 19,
+            "class_name": "AM-DSB-WC",
+            "confidence": 0.9777136650070897,
+            "top3": [
+              {
+                "index": 19,
+                "class_name": "AM-DSB-WC",
+                "probability": 0.9777136650070897
+              },
+              {
+                "index": 20,
+                "class_name": "AM-DSB-SC",
+                "probability": 0.022286182132551166
+              },
+              {
+                "index": 17,
+                "class_name": "AM-SSB-WC",
+                "probability": 1.5038932161057553e-07
+              }
+            ],
+            "window_predictions": [
+              19,
+              19,
+              19,
+              19,
+              19,
+              19,
+              19,
+              19
+            ],
+            "mean_logits": [
+              -21.0,
+              -24.875,
+              -24.75,
+              -18.5,
+              -20.875,
+              -15.8125,
+              -20.0,
+              -20.875,
+              -13.8125,
+              -14.5,
+              -12.875,
+              -16.375,
+              -20.5,
+              -17.375,
+              -20.625,
+              -17.5,
+              -22.625,
+              -7.125,
+              -13.4375,
+              8.5625,
+              4.78125,
+              -22.375,
+              -43.0,
+              -11.8125
+            ],
+            "finite": true
+          },
+          "gain": {
+            "selected_gain_db": 62.0,
+            "readback_gain_db": 62.0,
+            "settle_buffers": 3,
+            "initial_adc_stats": {
+              "peak": 1199.0,
+              "rail_count": 0
+            },
+            "final_adc_stats": {
+              "peak": 1199.0,
+              "rail_count": 0
+            },
+            "final_gain_db": 62.0,
+            "backoff_steps": [],
+            "headroom_resolved": true
+          },
+          "scan": [
+            {
+              "scan_index": 10,
+              "scan_points": 11,
+              "sweep_cycle": 4,
+              "lo_hz": 2404000000,
+              "public_score": 0.7920378380980007,
+              "cfo_hz": -400072.59312085644,
+              "captured_ns": 1773418750448228530,
+              "captured_monotonic_ns": 46263446597950,
+              "accepted": true,
+              "centred_fallback_used": false,
+              "primary_confirmed_score": 0.6986462030364488,
+              "primary_confirmed_cfo_hz": -0.02348281871310743,
+              "confirmed_lo_hz": 2403599926,
+              "confirmed_ns": 1773418752678517090,
+              "confirmed_monotonic_ns": 46265676886640,
+              "confirmed_score": 0.6986462030364488,
+              "confirmed_cfo_hz": -0.02348281871310743,
+              "reason": "CENTRED_PUBLIC_FRAME"
+            }
+          ],
+          "input_sha256": "d703a4fd1ac5f0620377ad6d05dc507bf0886c0eb5e2cba71d70ebd49e489543",
+          "aligned_nmse": 0.00044398542971868293,
+          "fitted_scale": [
+            1.0104144468420886,
+            -0.01364804433530062
+          ],
+          "fitted_dc": [
+            0.002196752848550055,
+            -0.00041023989269450964
+          ]
+        }
+      ]
+    },
+    {
+      "window": 4,
+      "source": "23_07.bin",
+      "expected": 23,
+      "captures": [
+        {
+          "frame_id": 63,
+          "prediction": 23,
+          "correct": true,
+          "seconds_after_start": 10.89668747,
+          "metadata": {
+            "cfo_hz": -0.24076792017791834,
+            "training_residual": 0.5487728777885584,
+            "fir_training_residual": 0.03279470807887692,
+            "head_reference_relative_error": 0.028783992998900044,
+            "tail_reference_relative_error": 0.028689866607405065,
+            "tail_residual": 0.5201546955580825,
+            "gain": 721.3484231444353,
+            "dc": 16.900645772863097,
+            "repeat_average": 8.0,
+            "input_sha256": "3c24250c3c3de06165f070252c6a3cb3570dafca7b29bb4bdb06dcf2cc8c393a",
+            "pred": 23,
+            "class_name": "OQPSK",
+            "confidence": 0.835111190541326,
+            "top3": [
+              {
+                "index": 23,
+                "class_name": "OQPSK",
+                "probability": 0.835111190541326
+              },
+              {
+                "index": 7,
+                "class_name": "32PSK",
+                "probability": 0.12030917386595438
+              },
+              {
+                "index": 15,
+                "class_name": "128QAM",
+                "probability": 0.04425927164960519
+              }
+            ],
+            "window_predictions": [
+              23,
+              23,
+              23,
+              23,
+              23,
+              23,
+              23,
+              23
+            ],
+            "mean_logits": [
+              -54.25,
+              -41.25,
+              -44.75,
+              -41.5,
+              -37.75,
+              -41.0,
+              -25.0,
+              -11.6875,
+              -37.0,
+              -42.0,
+              -17.625,
+              -24.75,
+              -37.5,
+              -28.625,
+              -26.875,
+              -12.6875,
+              -22.5,
+              -35.75,
+              -41.0,
+              -43.5,
+              -43.5,
+              -69.0,
+              -60.0,
+              -9.75
+            ],
+            "finite": true
+          },
+          "gain": {
+            "selected_gain_db": 64.0,
+            "readback_gain_db": 64.0,
+            "settle_buffers": 3,
+            "initial_adc_stats": {
+              "peak": 1331.0,
+              "rail_count": 0
+            },
+            "final_adc_stats": {
+              "peak": 1331.0,
+              "rail_count": 0
+            },
+            "final_gain_db": 64.0,
+            "backoff_steps": [],
+            "headroom_resolved": true
+          },
+          "scan": [
+            {
+              "scan_index": 9,
+              "scan_points": 11,
+              "sweep_cycle": 5,
+              "lo_hz": 2403000000,
+              "public_score": 0.8862734481843619,
+              "cfo_hz": 599928.3193718224,
+              "captured_ns": 1773418786509257560,
+              "captured_monotonic_ns": 46299507627170,
+              "accepted": true,
+              "centred_fallback_used": false,
+              "primary_confirmed_score": 0.8765873143998338,
+              "primary_confirmed_cfo_hz": -0.24076805733100268,
+              "confirmed_lo_hz": 2403599928,
+              "confirmed_ns": 1773418788798785650,
+              "confirmed_monotonic_ns": 46301797155200,
+              "confirmed_score": 0.8765873143998338,
+              "confirmed_cfo_hz": -0.24076805733100268,
+              "reason": "CENTRED_PUBLIC_FRAME"
+            }
+          ],
+          "input_sha256": "3c24250c3c3de06165f070252c6a3cb3570dafca7b29bb4bdb06dcf2cc8c393a",
+          "aligned_nmse": 0.0006653110362235423,
+          "fitted_scale": [
+            1.0086519693558307,
+            0.005295194726948391
+          ],
+          "fitted_dc": [
+            -0.0013052084219991097,
+            0.0023982407170014793
+          ]
+        },
+        {
+          "frame_id": 64,
+          "prediction": 23,
+          "correct": true,
+          "seconds_after_start": 15.55724814,
+          "metadata": {
+            "cfo_hz": 0.6398105222152285,
+            "training_residual": 0.7044201422672473,
+            "fir_training_residual": 0.02556809605684459,
+            "head_reference_relative_error": 0.020923458621359328,
+            "tail_reference_relative_error": 0.021021385625103854,
+            "tail_residual": 0.664494586442592,
+            "gain": 559.9223512470685,
+            "dc": 15.844751318237861,
+            "repeat_average": 8.0,
+            "input_sha256": "dfdb72239fc539458980dcff2c2808a5cab42aada4fa9ec17e6caa25771ae35c",
+            "pred": 23,
+            "class_name": "OQPSK",
+            "confidence": 0.8655540762701613,
+            "top3": [
+              {
+                "index": 23,
+                "class_name": "OQPSK",
+                "probability": 0.8655540762701613
+              },
+              {
+                "index": 7,
+                "class_name": "32PSK",
+                "probability": 0.06674436354677973
+              },
+              {
+                "index": 15,
+                "class_name": "128QAM",
+                "probability": 0.06674436354677973
+              }
+            ],
+            "window_predictions": [
+              23,
+              23,
+              23,
+              23,
+              23,
+              23,
+              23,
+              23
+            ],
+            "mean_logits": [
+              -52.0,
+              -39.75,
+              -43.75,
+              -41.75,
+              -38.25,
+              -41.5,
+              -25.0,
+              -12.625,
+              -36.5,
+              -41.5,
+              -16.875,
+              -25.25,
+              -37.5,
+              -28.375,
+              -25.25,
+              -12.625,
+              -22.25,
+              -35.25,
+              -40.0,
+              -42.25,
+              -42.75,
+              -69.0,
+              -60.25,
+              -10.0625
+            ],
+            "finite": true
+          },
+          "gain": {
+            "selected_gain_db": 63.0,
+            "readback_gain_db": 63.0,
+            "settle_buffers": 3,
+            "initial_adc_stats": {
+              "peak": 1136.0,
+              "rail_count": 0
+            },
+            "final_adc_stats": {
+              "peak": 1136.0,
+              "rail_count": 0
+            },
+            "final_gain_db": 63.0,
+            "backoff_steps": [],
+            "headroom_resolved": true
+          },
+          "scan": [
+            {
+              "scan_index": 10,
+              "scan_points": 11,
+              "sweep_cycle": 5,
+              "lo_hz": 2404000000,
+              "public_score": 0.6877583580034495,
+              "cfo_hz": -400072.35257143894,
+              "captured_ns": 1773418791238929940,
+              "captured_monotonic_ns": 46304237299060,
+              "accepted": true,
+              "centred_fallback_used": false,
+              "primary_confirmed_score": 0.8174767421787424,
+              "primary_confirmed_cfo_hz": 0.6398110324288675,
+              "confirmed_lo_hz": 2403599928,
+              "confirmed_ns": 1773418793459346130,
+              "confirmed_monotonic_ns": 46306457715870,
+              "confirmed_score": 0.8174767421787424,
+              "confirmed_cfo_hz": 0.6398110324288675,
+              "reason": "CENTRED_PUBLIC_FRAME"
+            }
+          ],
+          "input_sha256": "dfdb72239fc539458980dcff2c2808a5cab42aada4fa9ec17e6caa25771ae35c",
+          "aligned_nmse": 0.0002933652374680272,
+          "fitted_scale": [
+            1.008683246632795,
+            0.0013313239227740281
+          ],
+          "fitted_dc": [
+            -8.612061265338253e-05,
+            0.00040340456480322844
+          ]
+        }
+      ]
+    },
+    {
+      "window": 5,
+      "source": "19_00.bin",
+      "expected": 19,
+      "captures": [
+        {
+          "frame_id": 74,
+          "prediction": 20,
+          "correct": false,
+          "seconds_after_start": 11.19467821,
+          "metadata": {
+            "cfo_hz": 1.9841417912163453,
+            "training_residual": 0.66275677571556,
+            "fir_training_residual": 0.06923050058555828,
+            "head_reference_relative_error": 0.057768716623698806,
+            "tail_reference_relative_error": 0.062471849878565,
+            "tail_residual": 0.62649527105595,
+            "gain": 485.3437475902034,
+            "dc": 15.802389600022023,
+            "repeat_average": 8.0,
+            "input_sha256": "32317adf9e5218a72b789a847879ef2f217fae02b9fe3d79d9778a5de4c7e868",
+            "pred": 20,
+            "class_name": "AM-DSB-SC",
+            "confidence": 0.9986696785548964,
+            "top3": [
+              {
+                "index": 20,
+                "class_name": "AM-DSB-SC",
+                "probability": 0.9986696785548964
+              },
+              {
+                "index": 19,
+                "class_name": "AM-DSB-WC",
+                "probability": 0.0013302013501612822
+              },
+              {
+                "index": 17,
+                "class_name": "AM-SSB-WC",
+                "probability": 1.0557637554755341e-07
+              }
+            ],
+            "window_predictions": [
+              20,
+              20,
+              20,
+              20,
+              20,
+              20,
+              20,
+              20
+            ],
+            "mean_logits": [
+              -27.75,
+              -19.125,
+              -22.375,
+              -19.625,
+              -17.875,
+              -18.625,
+              -17.25,
+              -22.5,
+              -13.8125,
+              -17.375,
+              -20.5,
+              -18.0,
+              -17.125,
+              -13.375,
+              -21.75,
+              -16.125,
+              -19.75,
+              -10.4375,
+              -13.625,
+              -0.99609375,
+              5.625,
+              -18.375,
+              -26.375,
+              -19.25
+            ],
+            "finite": true
+          },
+          "gain": {
+            "selected_gain_db": 61.0,
+            "readback_gain_db": 61.0,
+            "settle_buffers": 3,
+            "initial_adc_stats": {
+              "peak": 1012.0,
+              "rail_count": 0
+            },
+            "final_adc_stats": {
+              "peak": 1012.0,
+              "rail_count": 0
+            },
+            "final_gain_db": 61.0,
+            "backoff_steps": [],
+            "headroom_resolved": true
+          },
+          "scan": [
+            {
+              "scan_index": 9,
+              "scan_points": 11,
+              "sweep_cycle": 6,
+              "lo_hz": 2403000000,
+              "public_score": 0.8691568479713396,
+              "cfo_hz": 599929.8362045044,
+              "captured_ns": 1773418827129457940,
+              "captured_monotonic_ns": 46340127827270,
+              "accepted": true,
+              "centred_fallback_used": false,
+              "primary_confirmed_score": 0.834390963829882,
+              "primary_confirmed_cfo_hz": 0.085976065708786,
+              "confirmed_lo_hz": 2403599928,
+              "confirmed_ns": 1773418829369625480,
+              "confirmed_monotonic_ns": 46342367995240,
+              "confirmed_score": 0.834390963829882,
+              "confirmed_cfo_hz": 0.085976065708786,
+              "reason": "CENTRED_PUBLIC_FRAME"
+            }
+          ],
+          "input_sha256": "32317adf9e5218a72b789a847879ef2f217fae02b9fe3d79d9778a5de4c7e868",
+          "aligned_nmse": 0.00013761590145981183,
+          "fitted_scale": [
+            0.9497770200092427,
+            -0.015318102332404649
+          ],
+          "fitted_dc": [
+            0.0005305598931212557,
+            0.0025415355510271104
+          ]
+        },
+        {
+          "frame_id": 75,
+          "prediction": 20,
+          "correct": false,
+          "seconds_after_start": 15.93447875,
+          "metadata": {
+            "cfo_hz": 2.07221999317688,
+            "training_residual": 0.5925250340520415,
+            "fir_training_residual": 0.06695190948534988,
+            "head_reference_relative_error": 0.05765187244627899,
+            "tail_reference_relative_error": 0.05598024133813535,
+            "tail_residual": 0.56214147482892,
+            "gain": 492.70181669256425,
+            "dc": 20.568747589958672,
+            "repeat_average": 8.0,
+            "input_sha256": "37bb87235a03a3316cddb33f5eb5dd8ce9c7b3f8a129cc89254505db93f2eb58",
+            "pred": 20,
+            "class_name": "AM-DSB-SC",
+            "confidence": 0.9998390691019929,
+            "top3": [
+              {
+                "index": 20,
+                "class_name": "AM-DSB-SC",
+                "probability": 0.9998390691019929
+              },
+              {
+                "index": 19,
+                "class_name": "AM-DSB-WC",
+                "probability": 0.00016093082497517522
+              },
+              {
+                "index": 9,
+                "class_name": "32APSK",
+                "probability": 3.129192797393907e-11
+              }
+            ],
+            "window_predictions": [
+              20,
+              20,
+              20,
+              20,
+              20,
+              20,
+              20,
+              20
+            ],
+            "mean_logits": [
+              -23.375,
+              -31.5,
+              -42.25,
+              -31.875,
+              -44.25,
+              -38.25,
+              -36.75,
+              -38.0,
+              -32.0,
+              -14.375,
+              -14.375,
+              -16.5,
+              -24.0,
+              -16.25,
+              -24.875,
+              -17.75,
+              -25.75,
+              -18.0,
+              -28.625,
+              1.078125,
+              9.8125,
+              -34.75,
+              -67.0,
+              -26.125
+            ],
+            "finite": true
+          },
+          "gain": {
+            "selected_gain_db": 61.0,
+            "readback_gain_db": 61.0,
+            "settle_buffers": 3,
+            "initial_adc_stats": {
+              "peak": 982.0,
+              "rail_count": 0
+            },
+            "final_adc_stats": {
+              "peak": 982.0,
+              "rail_count": 0
+            },
+            "final_gain_db": 61.0,
+            "backoff_steps": [],
+            "headroom_resolved": true
+          },
+          "scan": [
+            {
+              "scan_index": 10,
+              "scan_points": 11,
+              "sweep_cycle": 6,
+              "lo_hz": 2404000000,
+              "public_score": 0.6855567330908315,
+              "cfo_hz": -400069.7431393512,
+              "captured_ns": 1773418831839889790,
+              "captured_monotonic_ns": 46344838259010,
+              "accepted": true,
+              "centred_fallback_used": false,
+              "primary_confirmed_score": 0.8607795925142121,
+              "primary_confirmed_cfo_hz": 1.7706096924710377,
+              "confirmed_lo_hz": 2403599928,
+              "confirmed_ns": 1773418834109425930,
+              "confirmed_monotonic_ns": 46347107795780,
+              "confirmed_score": 0.8607795925142121,
+              "confirmed_cfo_hz": 1.7706096924710377,
+              "reason": "CENTRED_PUBLIC_FRAME"
+            }
+          ],
+          "input_sha256": "37bb87235a03a3316cddb33f5eb5dd8ce9c7b3f8a129cc89254505db93f2eb58",
+          "aligned_nmse": 9.723916857150172e-05,
+          "fitted_scale": [
+            1.056081757725271,
+            0.0349497764454523
+          ],
+          "fitted_dc": [
+            0.0021827970822125503,
+            -0.002297366264586482
+          ]
+        }
+      ]
+    }
+  ],
+  "all_capture_errors": [
+    {
+      "window": 5,
+      "source": "19_00.bin",
+      "frame_id": 74,
+      "pred": 20,
+      "expected": 19
+    },
+    {
+      "window": 5,
+      "source": "19_00.bin",
+      "frame_id": 75,
+      "pred": 20,
+      "expected": 19
+    }
+  ],
+  "total_centered_captures": 12,
+  "archive_sha256": "cf93ae14cb9794c6535a20c7de7866bc8a3d472b013d31552cafb7d9b08a4711",
+  "not_deployed": true
+}

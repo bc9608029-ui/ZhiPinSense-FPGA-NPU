@@ -1,0 +1,114 @@
+{
+  "old_rf_session": {
+    "M0_baseline": {
+      "end_to_end_accuracy": 0.041666666666666664,
+      "end_to_end_correct": 1,
+      "gate_pass": 23,
+      "gate_pass_frac": 0.9583333333333334,
+      "gated_accuracy": 0.043478260869565216,
+      "gated_correct": 1,
+      "n": 24
+    },
+    "M1_settle_dc": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "M2_guard_dc": {
+      "end_to_end_accuracy": 0.0,
+      "end_to_end_correct": 0,
+      "gate_pass": 0,
+      "gate_pass_frac": 0.0,
+      "gated_accuracy": null,
+      "gated_correct": 0,
+      "n": 24
+    },
+    "M3_settle_guard_avg": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "M4_linear_drift": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "M5_payload_mean_bound": {
+      "end_to_end_accuracy": 0.041666666666666664,
+      "end_to_end_correct": 1,
+      "gate_pass": 23,
+      "gate_pass_frac": 0.9583333333333334,
+      "gated_accuracy": 0.043478260869565216,
+      "gated_correct": 1,
+      "n": 24
+    }
+  },
+  "rf_fix2_target": {
+    "M0_baseline": {
+      "end_to_end_accuracy": 0.041666666666666664,
+      "end_to_end_correct": 1,
+      "gate_pass": 23,
+      "gate_pass_frac": 0.9583333333333334,
+      "gated_accuracy": 0.043478260869565216,
+      "gated_correct": 1,
+      "n": 24
+    },
+    "M1_settle_dc": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "M2_guard_dc": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 22,
+      "gate_pass_frac": 0.9166666666666666,
+      "gated_accuracy": 0.09090909090909091,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "M3_settle_guard_avg": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "M4_linear_drift": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "M5_payload_mean_bound": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    }
+  }
+}

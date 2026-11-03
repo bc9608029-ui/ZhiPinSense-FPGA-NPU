@@ -1,0 +1,253 @@
+{
+  "kind": "NEW_RF_EXISTING_FROZEN_WAVEFORMS_NOT_UNSEEN_GENERALIZATION",
+  "name": "formal_sweep24_02",
+  "denominator": 24,
+  "correct": 23,
+  "missing": 0,
+  "rejected": 1,
+  "misclassified": 0,
+  "method": "FIRST_COVERAGE_OPPORTUNITY_WITHIN_1152KHZ_REGARDLESS_DETECTION_OR_PREDICTION",
+  "clock_uncertainty_ms": 54,
+  "rows": [
+    {
+      "index": 0,
+      "file": "08_05.bin",
+      "label": 8,
+      "pred": 8,
+      "correct": true,
+      "chosen_frame": 30,
+      "eligible_count": 4,
+      "frequency_correct": true
+    },
+    {
+      "index": 1,
+      "file": "15_04.bin",
+      "label": 15,
+      "pred": 15,
+      "correct": true,
+      "chosen_frame": 52,
+      "eligible_count": 2,
+      "frequency_correct": true
+    },
+    {
+      "index": 2,
+      "file": "23_07.bin",
+      "label": 23,
+      "pred": 23,
+      "correct": true,
+      "chosen_frame": 63,
+      "eligible_count": 4,
+      "frequency_correct": true
+    },
+    {
+      "index": 3,
+      "file": "06_08.bin",
+      "label": 6,
+      "pred": 6,
+      "correct": true,
+      "chosen_frame": 85,
+      "eligible_count": 2,
+      "frequency_correct": true
+    },
+    {
+      "index": 4,
+      "file": "00_07.bin",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "chosen_frame": 96,
+      "eligible_count": 4,
+      "frequency_correct": true
+    },
+    {
+      "index": 5,
+      "file": "22_04.bin",
+      "label": 22,
+      "pred": 22,
+      "correct": true,
+      "chosen_frame": 118,
+      "eligible_count": 2,
+      "frequency_correct": true
+    },
+    {
+      "index": 6,
+      "file": "01_01.bin",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "chosen_frame": 129,
+      "eligible_count": 4,
+      "frequency_correct": true
+    },
+    {
+      "index": 7,
+      "file": "12_05.bin",
+      "label": 12,
+      "pred": 12,
+      "correct": true,
+      "chosen_frame": 151,
+      "eligible_count": 2,
+      "frequency_correct": true
+    },
+    {
+      "index": 8,
+      "file": "02_04.bin",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "chosen_frame": 162,
+      "eligible_count": 4,
+      "frequency_correct": true
+    },
+    {
+      "index": 9,
+      "file": "11_01.bin",
+      "label": 11,
+      "pred": 11,
+      "correct": true,
+      "chosen_frame": 184,
+      "eligible_count": 2,
+      "frequency_correct": true
+    },
+    {
+      "index": 10,
+      "file": "04_04.bin",
+      "label": 4,
+      "pred": 4,
+      "correct": true,
+      "chosen_frame": 195,
+      "eligible_count": 4,
+      "frequency_correct": true
+    },
+    {
+      "index": 11,
+      "file": "05_00.bin",
+      "label": 5,
+      "pred": 5,
+      "correct": true,
+      "chosen_frame": 217,
+      "eligible_count": 2,
+      "frequency_correct": true
+    },
+    {
+      "index": 12,
+      "file": "03_02.bin",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "chosen_frame": 228,
+      "eligible_count": 4,
+      "frequency_correct": true
+    },
+    {
+      "index": 13,
+      "file": "13_09.bin",
+      "label": 13,
+      "pred": 13,
+      "correct": true,
+      "chosen_frame": 250,
+      "eligible_count": 2,
+      "frequency_correct": true
+    },
+    {
+      "index": 14,
+      "file": "09_09.bin",
+      "label": 9,
+      "pred": 9,
+      "correct": true,
+      "chosen_frame": 261,
+      "eligible_count": 4,
+      "frequency_correct": true
+    },
+    {
+      "index": 15,
+      "file": "14_01.bin",
+      "label": 14,
+      "pred": 14,
+      "correct": true,
+      "chosen_frame": 283,
+      "eligible_count": 2,
+      "frequency_correct": true
+    },
+    {
+      "index": 16,
+      "file": "19_00.bin",
+      "label": 19,
+      "pred": 19,
+      "correct": true,
+      "chosen_frame": 294,
+      "eligible_count": 4,
+      "frequency_correct": true
+    },
+    {
+      "index": 17,
+      "file": "10_09.bin",
+      "label": 10,
+      "pred": 10,
+      "correct": true,
+      "chosen_frame": 316,
+      "eligible_count": 2,
+      "frequency_correct": true
+    },
+    {
+      "index": 18,
+      "file": "16_00.bin",
+      "label": 16,
+      "pred": 16,
+      "correct": true,
+      "chosen_frame": 327,
+      "eligible_count": 4,
+      "frequency_correct": true
+    },
+    {
+      "index": 19,
+      "file": "21_00.bin",
+      "label": 21,
+      "pred": 21,
+      "correct": true,
+      "chosen_frame": 349,
+      "eligible_count": 2,
+      "frequency_correct": true
+    },
+    {
+      "index": 20,
+      "file": "07_09.bin",
+      "label": 7,
+      "pred": 7,
+      "correct": true,
+      "chosen_frame": 360,
+      "eligible_count": 4,
+      "frequency_correct": true
+    },
+    {
+      "index": 21,
+      "file": "20_05.bin",
+      "label": 20,
+      "pred": 20,
+      "correct": true,
+      "chosen_frame": 382,
+      "eligible_count": 2,
+      "frequency_correct": true
+    },
+    {
+      "index": 22,
+      "file": "17_01.bin",
+      "label": 17,
+      "pred": -1,
+      "correct": false,
+      "chosen_frame": 393,
+      "eligible_count": 4,
+      "frequency_correct": true
+    },
+    {
+      "index": 23,
+      "file": "18_03.bin",
+      "label": 18,
+      "pred": 18,
+      "correct": true,
+      "chosen_frame": 415,
+      "eligible_count": 2,
+      "frequency_correct": true
+    }
+  ]
+}

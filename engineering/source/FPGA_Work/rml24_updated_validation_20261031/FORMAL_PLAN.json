@@ -1,0 +1,49 @@
+{
+  "status": "UPDATED_UI_MONOTONIC_PLAN",
+  "candidate_board": "/root/rml24_fpga_ui_20261031/delivery_ui_timing",
+  "candidate_bit_sha256": "f42dd12f03bf81c65978b7034b45808efd5035f6a358cc54710f2404530a057c",
+  "worker_sha256": "7b185cad8aaf526344a36666a90071e59577a2fa1488a7f8f0523ce437bc0af9",
+  "supervisor_sha256": "bc0e5002859adc64759156e8e007bc6c20780290711b7e7ae4923c15309e73b1",
+  "guard_sha256": "129dbc4cfa1135d653c79c3544e35709f25b01832fb8450feca367ff0da1a026",
+  "truth_sha256": "20dbeeefa914b93ac5148b0165435409b7d8d59971de000aa64f9843cb44ac30",
+  "gain_db": -40,
+  "sample_rate": 2560000,
+  "bandwidth": 18000000,
+  "warmup_sec": 40,
+  "mute_sec": 8,
+  "gap_sec": 0.25,
+  "runs": [
+    {
+      "name": "search240",
+      "mode": "BAND_SCAN",
+      "n": 240,
+      "hz": 2403600000,
+      "hold": 6,
+      "rx_seconds": 1610,
+      "minimum_correct": 235
+    },
+    {
+      "name": "sweep24",
+      "mode": "CONTINUOUS_SCAN",
+      "n": 24,
+      "hz": 2403600000,
+      "hold": 40,
+      "rx_seconds": 1120,
+      "minimum_correct": 23
+    }
+  ],
+  "scoring": "Fixed first eligible capture in [TXstart+1.5s,TXend-.3s]; rejects/missing/wrong all count wrong. Sweep first scheduled LO within1.152MHz irrespective of detection/prediction plus final frequency within10kHz.",
+  "promotion": "All accuracy gates plus zero missing, clean shutdown/restoration, no hardware fault and no unexpected software fallback. No automatic deployment on partial pass.",
+  "known_limit": "New-seed short test45/48; two pure sources themselves misclassified by frozen model. Do not claim arbitrary signals or 100% accuracy.",
+  "deployment_pending": true,
+  "receiver_sha256": "9b43e19ef4125881e032786ed9ccf708077ae74289a4adb65448851f3bbbc01b",
+  "ui_binary_sha256": "b6d67913b052244bc7b2dffab63ac55492891bdd319518b4e1b71b0cc78ddd35",
+  "clock_contract": "windows-qpc-board-monotonic-v1",
+  "max_clock_drift_ns": 100000000,
+  "carry_forward_fixed": {
+    "correct": 235,
+    "n": 240,
+    "source": "E:\\FPGA_Work\\rml24_final_deployment_20261031\\fixed240\\SCORE.json",
+    "basis": "UI-only plus telemetry-only AST-equivalent receiver changes; model/core unchanged"
+  }
+}

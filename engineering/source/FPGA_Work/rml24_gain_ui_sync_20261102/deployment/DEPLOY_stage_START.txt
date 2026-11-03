@@ -1,0 +1,3 @@
+nohup python3 /root/rml24_three_modes_execution_20261029/fpga_uii_integration_20261031/software_deploy_gain_ui.py stage > /root/rml24_gain_ui_synnc_20261102/stage.log 2>&1 < /dev/null &
+[1] 7224
+(base) root@U:~# 

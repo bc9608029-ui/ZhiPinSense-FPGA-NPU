@@ -1,0 +1,72 @@
+baseline_config: configs/baseline.yaml
+output_root: outputs/qam_aware_v3/formal
+
+model_contract:
+  iq_channels: 2
+  physical_channels: 3
+  sample_length: 1024
+  class_order: [BPSK, QPSK, 8PSK, 16QAM, 64QAM, 2FSK, CPFSK, OFDM]
+
+model:
+  simulate_hardware_inputs: true
+  iq_branch_channels: 12
+  iq_stem_channels: 32
+  physical_branch_channels: 8
+  physical_stem_channels: 24
+  fusion_channels: 64
+  stage_channels: [64, 96, 128]
+  classifier_features: 128
+  dropout: 0.15
+
+# V3 trains on a broader but still bounded impairment distribution.  Values
+# are deliberately realistic enough for later SDR adaptation without turning
+# every training record into an adversarial corner case.
+channel:
+  domain_randomization: true
+  awgn: {enabled: true, probability: 1.0, snr_db: [-20.0, 20.0]}
+  rayleigh: {enabled: true, probability: 0.15}
+  rician: {enabled: true, probability: 0.15, k_factor: [3.0, 12.0]}
+  multipath: {enabled: true, probability: 0.25, num_taps: [2, 5], max_delay: 12}
+  cfo: {enabled: true, probability: 0.8, hz: [-2000.0, 2000.0]}
+  phase_offset: {enabled: true, probability: 0.8, radians: [-3.14159, 3.14159]}
+  phase_noise: {enabled: true, probability: 0.25, std_rad: [0.0001, 0.006]}
+  sfo: {enabled: true, probability: 0.2, ppm: [-80.0, 80.0]}
+  iq_imbalance: {enabled: true, probability: 0.25, gain_db: [-1.2, 1.2], phase_deg: [-6.0, 6.0]}
+  dc_offset: {enabled: true, probability: 0.2, magnitude: [0.0, 0.08]}
+  amplitude_scaling: {enabled: true, probability: 0.7, scale: [0.55, 1.45]}
+  clipping: {enabled: true, probability: 0.12, level_rms: [1.4, 2.5]}
+  narrowband_interference: {enabled: true, probability: 0.1, sir_db: [0.0, 20.0]}
+  burst_interference: {enabled: true, probability: 0.1, sir_db: [0.0, 18.0], duty_cycle: [0.03, 0.25]}
+
+dataset:
+  train_samples: 100800
+  val_samples: 16800
+  test_samples: 16800
+  snr_values: [-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+  num_workers: 4
+
+training:
+  epochs: 60
+  batch_size: 256
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.0002
+  scheduler: cosine
+  early_stopping_patience: 12
+  min_delta: 0.0001
+  label_smoothing: 0.03
+  gradient_clip_norm: 5.0
+  amp: true
+
+evaluation:
+  batch_size: 512
+  samples_per_modulation_per_snr: 500
+  snr_values: [-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+  comparison_config: configs/qam_aware_v2.yaml
+
+# Reserved until model/hyperparameters are frozen.  Training and development
+# scripts must never instantiate this namespace.
+final_blind_test:
+  seed: 26093031
+  split: v3_final_blind_test
+  samples: 16800

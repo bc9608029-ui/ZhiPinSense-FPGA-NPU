@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "model_name": "12CLASS_CHAIN_VALIDATION_MODEL",
+  "model_sha256": "2ae95275fe362bdc463e1ded5dfc974b5d77eaae5ce2d2184beebdb5dad7ec2c",
+  "checkpoint_sha256": "7215290b0f43f8a8cc05f4ee135f2a9524cf8a8036b71ae52b0b6c94c02aae72",
+  "npu_model_sha256": "2ae95275fe362bdc463e1ded5dfc974b5d77eaae5ce2d2184beebdb5dad7ec2c",
+  "label_order": [
+    "OOK",
+    "4ASK",
+    "AM-DSB",
+    "WBFM",
+    "2FSK",
+    "GFSK",
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "OFDM"
+  ],
+  "input_contract": {
+    "shape": [
+      1,
+      2,
+      1024
+    ],
+    "layout": "planar_iq_c_order",
+    "dtype": "fp32",
+    "normalization": "rms_1.0"
+  },
+  "output_numeric_type": "fp32",
+  "output_scale": null,
+  "output_zero_point": null,
+  "score_method": "logit_margin",
+  "score_direction": "higher_is_ood",
+  "temperature": 1.0,
+  "threshold": -0.15274411201477073,
+  "working_points": {
+    "id_accept_95": {
+      "threshold": -0.48299052715301544,
+      "id_accept_rate": 0.95,
+      "id_frr": 0.05,
+      "near_reject_rate": 0.15384615384615385,
+      "far_reject_rate": 0.29333333333333333
+    },
+    "id_accept_99": {
+      "threshold": -0.15274411201477073,
+      "id_accept_rate": 0.99,
+      "id_frr": 0.011111111111111112,
+      "near_reject_rate": 0.05897435897435897,
+      "far_reject_rate": 0.07666666666666666
+    },
+    "far_ood_target": {
+      "threshold": -15.238977313041687,
+      "far_reject_rate": 0.95,
+      "id_accept_rate": 0.11944444444444445,
+      "near_reject_rate": 1.0,
+      "id_frr": 0.8805555555555555
+    }
+  },
+  "target_operating_point": "id_accept_99",
+  "calibration_dataset_sha256": "06e1b2110e83ba9ff4f0291fd67d957408eefff5165272ce80f37e7bf14ee93b",
+  "calibration_split_sha256": "b7c2f001c9a2fa3b26f73a5fab656d43f917d0397a7efafeda87741ae542ddbf",
+  "sample_count": {
+    "id": 720,
+    "ood": 1080
+  },
+  "creation_seed": 12600,
+  "creation_time": "2026-10-08T13:22:42.241966+00:00",
+  "final_test_accessed": false
+}

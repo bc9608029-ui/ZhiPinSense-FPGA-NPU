@@ -1,0 +1,15 @@
+python3 /root/rml24_three_modes_execution_20261029/fpga_ui_integgration_20261031/range_command.py SET_FIXED_HZ 70000000
+
+Traceback (most recent call last):
+  File "/root/rml24_three_modes_execution_20261029/fpga_ui_integration_20261031/range_command.py", line 3, in <module>
+    pid=int(subprocess.check_output(['systemctl','show','rml24-range-test','-p','MainPID','--value']).strip());args=Path('/proc/%d/cmdline'%pid).read_bytes().decode().strip('\0').split('\0');r=Path(args[args.index('--run')+1]);s=socket.socket(socket.AF_UNIX);s.settimeout(45);s.connect(str(r/'control.sock'));f=s.makefile('rwb');c=' '.join(sys.argv[1:]);f.
+write((c+'\n').encode());f.flush()
+                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/0/cmdline'
+(base) root@U:~# 

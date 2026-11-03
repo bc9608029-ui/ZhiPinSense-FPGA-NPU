@@ -1,0 +1,69 @@
+{
+  "events": [
+    {
+      "command": "STATUS",
+      "reply": [
+        "OK requested_mode=FIXED requested_running=1 applied_mode=FIXED applied_running=1 pending_mode=0 pending_run=0 last_applied_command_id=0"
+      ],
+      "frames": 4,
+      "time": 5232.45485338
+    },
+    {
+      "command": "STOP",
+      "reply": [
+        "OK accepted command_id=1 STOP",
+        "OK applied command_id=1 STOP"
+      ],
+      "frames": 4,
+      "time": 5232.4572799
+    },
+    {
+      "stop_count_a": 5,
+      "stop_count_b": 5,
+      "stopped_stable": true
+    },
+    {
+      "command": "START",
+      "reply": [
+        "OK accepted command_id=2 START",
+        "OK applied command_id=2 START"
+      ],
+      "frames": 5,
+      "time": 5235.46612451
+    },
+    {
+      "command": "SET_MODE BAND_SCAN",
+      "reply": [
+        "OK accepted command_id=3 SET_MODE BAND_SCAN",
+        "OK applied command_id=3 SET_MODE BAND_SCAN"
+      ],
+      "frames": 5,
+      "time": 5235.46953067
+    },
+    {
+      "command": "SET_MODE FIXED",
+      "reply": [
+        "OK accepted command_id=4 SET_MODE FIXED",
+        "OK applied command_id=4 SET_MODE FIXED"
+      ],
+      "frames": 12,
+      "time": 5251.83815988
+    },
+    {
+      "command": "SET_MODE AUTO_LOCK",
+      "reply": [
+        "ERR unsupported_mode"
+      ],
+      "frames": 20,
+      "time": 5256.44372137
+    },
+    {
+      "command": "STATUS",
+      "reply": [
+        "OK requested_mode=FIXED requested_running=1 applied_mode=FIXED applied_running=1 pending_mode=0 pending_run=0 last_applied_command_id=4"
+      ],
+      "frames": 20,
+      "time": 5256.45063763
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "class_order": [
+    "AM-DSB",
+    "WBFM",
+    "2FSK",
+    "GFSK",
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "OFDM"
+  ],
+  "contract_version": 2,
+  "fps": 15.0,
+  "generator": "scripts/generate_mock_data.py",
+  "model_id": "mock-10class-v1.1",
+  "scenarios": [
+    {
+      "file": "normal.jsonl",
+      "frames": 200,
+      "scenario": "normal",
+      "sha256": "097f6b20096b42304f05f3695b51b564b30e9d8a6a990018bc9b1a8803dfb666"
+    },
+    {
+      "file": "modulation_switch.jsonl",
+      "frames": 200,
+      "scenario": "modulation_switch",
+      "sha256": "cfb26e0808b952ce47d00990773a36251a879f697a6b83451571c24a28759a00"
+    },
+    {
+      "file": "low_confidence.jsonl",
+      "frames": 200,
+      "scenario": "low_confidence",
+      "sha256": "e69c1c916cedae247511e5dd6fea27bc303c8f545c849779cf9a396b8a372f55"
+    },
+    {
+      "file": "stale.jsonl",
+      "frames": 30,
+      "scenario": "stale",
+      "sha256": "d205253d62b62af83bfea98eafe44f55073daf8f9a1c7bc96a88118d6b236989"
+    },
+    {
+      "file": "reorder.jsonl",
+      "frames": 200,
+      "scenario": "reorder",
+      "sha256": "954ed877ea928b1e097d1127723e030146a988d42cc01a7e4b65a1b0a2724827"
+    },
+    {
+      "file": "drop_overflow.jsonl",
+      "frames": 160,
+      "scenario": "drop_overflow",
+      "sha256": "c9f9cfff60ee59d5d2bf1a6ea03d19b854e39c31fa480a9aad1c2e1ed3191088"
+    },
+    {
+      "file": "fpga_error.jsonl",
+      "frames": 100,
+      "scenario": "fpga_error",
+      "sha256": "1c8958e1eeb5a2280f22fca8a8cede00377bd05ffd5fc753717b751e8ed1ecfc"
+    },
+    {
+      "file": "npu_timeout.jsonl",
+      "frames": 100,
+      "scenario": "npu_timeout",
+      "sha256": "467e171824e83d8b71725dcc8b7e29f8c777111b6843807aaf04514feac90f4f"
+    },
+    {
+      "file": "sdr_disconnect.jsonl",
+      "frames": 31,
+      "scenario": "sdr_disconnect",
+      "sha256": "e310e244dc46072f5095f86895309249036ee9ee64e4344ada79c7b4da6cbabb"
+    },
+    {
+      "file": "recovery.jsonl",
+      "frames": 120,
+      "scenario": "recovery",
+      "sha256": "49c62fd257ecac2b3a2946f2071a813cf5da05f30a666b0de3720d16cc1eb79a"
+    }
+  ],
+  "seed": 539365378
+}

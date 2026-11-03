@@ -1,0 +1,117 @@
+{
+  "kind": "UI_AND_MONOTONIC_TIMING_FUNCTIONAL_SHORT_NOT_FORMAL_REGRESSION",
+  "denominator": 3,
+  "correct": 3,
+  "results": [
+    {
+      "index": 0,
+      "expected": 3,
+      "selected": {
+        "frame_id": 10,
+        "capture_monotonic_ns": 38952423878370,
+        "clock_id": "board-monotonic-v1",
+        "boot_id": "b68cfa6b-e214-407a-8d6d-74b2e10e5221",
+        "pred": 3,
+        "finite": true,
+        "scan_steps": [
+          {
+            "scan_index": 1,
+            "scan_points": 2,
+            "sweep_cycle": 5,
+            "lo_hz": 2403500000,
+            "public_score": 0.934539657227049,
+            "cfo_hz": 99917.01314583758,
+            "captured_ns": 1773411437809527470,
+            "captured_monotonic_ns": 38950814068800,
+            "accepted": true,
+            "confirmed_lo_hz": 2403599916,
+            "confirmed_ns": 1773411439419337210,
+            "confirmed_monotonic_ns": 38952423878370,
+            "confirmed_score": 0.9760455617152014,
+            "confirmed_cfo_hz": -1.2913728954383137,
+            "reason": "CENTRED_PUBLIC_FRAME"
+          }
+        ]
+      },
+      "correct": true
+    },
+    {
+      "index": 1,
+      "expected": 4,
+      "selected": {
+        "frame_id": 15,
+        "capture_monotonic_ns": 38966514157410,
+        "clock_id": "board-monotonic-v1",
+        "boot_id": "b68cfa6b-e214-407a-8d6d-74b2e10e5221",
+        "pred": 4,
+        "finite": true,
+        "scan_steps": [
+          {
+            "scan_index": 2,
+            "scan_points": 2,
+            "sweep_cycle": 7,
+            "lo_hz": 2403700000,
+            "public_score": 0.6619177114309502,
+            "cfo_hz": -100084.76510556445,
+            "captured_ns": 1773411451879936640,
+            "captured_monotonic_ns": 38964884477500,
+            "accepted": true,
+            "confirmed_lo_hz": 2403599914,
+            "confirmed_ns": 1773411453509615690,
+            "confirmed_monotonic_ns": 38966514157410,
+            "confirmed_score": 0.8304211537423548,
+            "confirmed_cfo_hz": 0.6954695466168063,
+            "reason": "CENTRED_PUBLIC_FRAME"
+          }
+        ]
+      },
+      "correct": true
+    },
+    {
+      "index": 2,
+      "expected": 3,
+      "selected": {
+        "frame_id": 20,
+        "capture_monotonic_ns": 38982004628910,
+        "clock_id": "board-monotonic-v1",
+        "boot_id": "b68cfa6b-e214-407a-8d6d-74b2e10e5221",
+        "pred": 3,
+        "finite": true,
+        "scan_steps": [
+          {
+            "scan_index": 1,
+            "scan_points": 2,
+            "sweep_cycle": 10,
+            "lo_hz": 2403500000,
+            "public_score": 0.9094601972033803,
+            "cfo_hz": 99917.50088191118,
+            "captured_ns": 1773411467380156040,
+            "captured_monotonic_ns": 38980384697120,
+            "accepted": true,
+            "confirmed_lo_hz": 2403599916,
+            "confirmed_ns": 1773411469000087650,
+            "confirmed_monotonic_ns": 38982004628910,
+            "confirmed_score": 0.9768655685145632,
+            "confirmed_cfo_hz": 1.6874174209037056,
+            "reason": "CENTRED_PUBLIC_FRAME"
+          }
+        ]
+      },
+      "correct": true
+    }
+  ],
+  "clock_drift_ns": -9390510,
+  "pre_uncertainty_ns": 54385650,
+  "post_uncertainty_ns": 56262650,
+  "history_episode_labels": [
+    3,
+    4,
+    3
+  ],
+  "history_uptime_valid": true,
+  "receiver_clean": true,
+  "fpga_calls": {
+    "fpga": 9
+  },
+  "original_restored": true
+}

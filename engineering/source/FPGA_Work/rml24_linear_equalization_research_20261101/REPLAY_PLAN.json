@@ -1,0 +1,10 @@
+{
+  "state": "PREPARED_NOT_RUN_NPU_REPLAY_AFTER_FORMAL_ONLY",
+  "scope": "Same unaveraged actual1-repeat RF captures; linear full-frame-context EQ vs circular payload EQ; frozen model; not new RF or production change",
+  "cases": 35,
+  "synthetic_recovery_cases": 72,
+  "synthetic_improved": 60,
+  "synthetic_regressed_or_equal": 12,
+  "promotion": false,
+  "formal_root": "E:/FPGA_Work/rml24_lockpilot_formal_prep_20261101"
+}

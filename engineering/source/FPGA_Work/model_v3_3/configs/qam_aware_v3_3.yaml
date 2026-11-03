@@ -1,0 +1,92 @@
+# QAM-Aware RFNet V3.3 — formal base experiment config.
+#
+# V3.3 keeps the frozen V2 champion backbone *strictly* (parameters and BatchNorm
+# running stats pinned; see models/qam_aware_rfnet_v3_3.py) and adds a separate,
+# zero-gated residual expert that can only *additively* correct the V2 logits.
+# The train-only family head and the numeric-domain consistency loss are enabled
+# by the selected candidate's override, never here.  This file is a complete,
+# valid default (A1: bounded residual expert, no family/domain loss); the frozen
+# selected_candidate.yaml supplies the winning variant's knobs for the formal run.
+
+baseline_config: configs/baseline.yaml
+output_root: outputs/qam_aware_v3_3/formal
+
+# Frozen V2 champion: the backbone-initialization source.  Read-only.
+v2_checkpoint: init/v2_time_power_phase_best.pt
+
+model_contract:
+  iq_channels: 2
+  physical_channels: 3
+  sample_length: 1024
+  class_order: [BPSK, QPSK, 8PSK, 16QAM, 64QAM, 2FSK, CPFSK, OFDM]
+
+model:
+  # Full precision exactly as the frozen V2 champion, so "initial V3.3 logits
+  # == V2 logits" holds element-wise.  The quantized DeploymentInputEmulator
+  # path remains available for the A3 domain-consistency loss and FPGA tests.
+  simulate_hardware_inputs: false
+  time_base_channels: 22
+  physical_base_channels: 8
+  fusion_features: 64
+  dropout: 0.1
+  residual_expert:
+    enabled: true
+    moment_order: 4
+    hidden: 32
+    gate_init: 0.0
+    residual_bound: 1.0
+    # Deployable input clamp bound (physical dequant int8 * 2/127 -> [-2, 2]).
+    # Keeps the order-4 moment products finite in FP16 at deep-negative SNR.
+    input_clamp_bound: 2.0
+  family_aux:
+    enabled: false
+    hidden: 16
+
+# Channel, signal and dataset are inherited unchanged from baseline.yaml (the
+# exact V2-mild impairment set, 8 modulations, 1024 samples, 21 SNR points,
+# 25200/5040/8400 split).  No overrides: V3.3 trains on the same distribution as
+# the frozen champion it must preserve.
+
+training:
+  epochs: 60
+  batch_size: 128
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  scheduler: cosine
+  early_stopping_patience: 12
+  min_delta: 0.0001
+  # Select the checkpoint on macro-F1 (aligned with the acceptance bar) with a
+  # minimum-epoch floor, and do NOT force the full trajectory (V3.1's forced-60
+  # overfit is the anti-pattern).
+  minimum_epochs_before_stopping: 10
+  checkpoint_metric: val_macro_f1
+  checkpoint_mode: max
+  # No QAM reweighting of the base classifier — the V3.1 failure mode.  All
+  # classes carry weight 1.0; the improvement must come from the residual expert
+  # alone and only if it does not regress other classes (promotion gate).
+  class_weights: {BPSK: 1.0, QPSK: 1.0, 8PSK: 1.0, 16QAM: 1.0, 64QAM: 1.0, 2FSK: 1.0, CPFSK: 1.0, OFDM: 1.0}
+  label_smoothing: 0.0
+  gradient_clip_norm: 5.0
+  amp: true
+  # Residual/aux losses are training/evaluation-only; none enters the NPU graph.
+  # A non-zero residual penalty plus the finite residual_bound keeps the expert's
+  # additive correction small and provably bounded (see the bounded-residual test).
+  residual_penalty_weight: 0.01
+  family_aux_loss_weight: 0.0
+  domain_consistency:
+    enabled: false
+    weight: 0.0
+    mechanism: consistency
+
+evaluation:
+  batch_size: 256
+  samples_per_modulation_per_snr: 250
+  snr_values: [-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+# Reserved until architecture and hyperparameters are frozen.  Training and
+# development scripts must never instantiate this namespace.
+final_blind_test:
+  seed: 26093032
+  split: v3_3_final_blind_test
+  samples: 16800

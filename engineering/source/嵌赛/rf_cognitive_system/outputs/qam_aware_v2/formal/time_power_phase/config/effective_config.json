@@ -1,0 +1,245 @@
+{
+  "seed": 2026,
+  "device": "auto",
+  "output_dir": "outputs\\qam_aware_v2\\formal\\time_power_phase",
+  "signal": {
+    "sample_rate": 128000.0,
+    "symbol_rate": 16000.0,
+    "samples_per_symbol": 8,
+    "sample_length": 1024,
+    "amplitude": 1.0,
+    "frequency_offset": 0.0,
+    "phase_offset": 0.0,
+    "pulse_shape": {
+      "type": "rrc",
+      "rolloff": 0.35,
+      "span_symbols": 8
+    },
+    "ofdm": {
+      "fft_length": 256,
+      "cyclic_prefix": 64,
+      "active_subcarriers": 48,
+      "subcarrier_modulation": "QPSK"
+    },
+    "modulations": [
+      "BPSK",
+      "QPSK",
+      "8PSK",
+      "16QAM",
+      "64QAM",
+      "2FSK",
+      "CPFSK",
+      "OFDM"
+    ]
+  },
+  "channel": {
+    "domain_randomization": true,
+    "awgn": {
+      "enabled": true,
+      "probability": 1.0,
+      "snr_db": [
+        -10.0,
+        20.0
+      ]
+    },
+    "rayleigh": {
+      "enabled": false,
+      "probability": 0.0
+    },
+    "rician": {
+      "enabled": false,
+      "probability": 0.0,
+      "k_factor": [
+        3.0,
+        10.0
+      ]
+    },
+    "multipath": {
+      "enabled": false,
+      "probability": 0.0,
+      "num_taps": [
+        2,
+        5
+      ],
+      "max_delay": 12
+    },
+    "cfo": {
+      "enabled": true,
+      "probability": 0.6,
+      "hz": [
+        -1200.0,
+        1200.0
+      ]
+    },
+    "phase_offset": {
+      "enabled": true,
+      "probability": 0.6,
+      "radians": [
+        -3.14159,
+        3.14159
+      ]
+    },
+    "phase_noise": {
+      "enabled": false,
+      "probability": 0.0,
+      "std_rad": [
+        0.0001,
+        0.004
+      ]
+    },
+    "sfo": {
+      "enabled": false,
+      "probability": 0.0,
+      "ppm": [
+        -80.0,
+        80.0
+      ]
+    },
+    "iq_imbalance": {
+      "enabled": false,
+      "probability": 0.0,
+      "gain_db": [
+        -1.0,
+        1.0
+      ],
+      "phase_deg": [
+        -5.0,
+        5.0
+      ]
+    },
+    "dc_offset": {
+      "enabled": false,
+      "probability": 0.0,
+      "magnitude": [
+        0.0,
+        0.08
+      ]
+    },
+    "amplitude_scaling": {
+      "enabled": true,
+      "probability": 0.5,
+      "scale": [
+        0.7,
+        1.3
+      ]
+    },
+    "clipping": {
+      "enabled": false,
+      "probability": 0.0,
+      "level_rms": [
+        1.5,
+        3.0
+      ]
+    },
+    "narrowband_interference": {
+      "enabled": false,
+      "probability": 0.0,
+      "sir_db": [
+        5.0,
+        25.0
+      ]
+    },
+    "burst_interference": {
+      "enabled": false,
+      "probability": 0.0,
+      "sir_db": [
+        0.0,
+        20.0
+      ],
+      "duty_cycle": [
+        0.05,
+        0.3
+      ]
+    }
+  },
+  "dataset": {
+    "train_samples": 25200,
+    "val_samples": 5040,
+    "test_samples": 8400,
+    "snr_values": [
+      -20,
+      -18,
+      -16,
+      -14,
+      -12,
+      -10,
+      -8,
+      -6,
+      -4,
+      -2,
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "num_workers": 0
+  },
+  "training": {
+    "epochs": 40,
+    "batch_size": 128,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "scheduler": "cosine",
+    "early_stopping_patience": 8,
+    "min_delta": 0.0001
+  },
+  "model": {
+    "base_channels": 32,
+    "dropout": 0.1
+  },
+  "evaluation": {
+    "batch_size": 256,
+    "samples_per_modulation_per_snr": 250,
+    "snr_values": [
+      -20,
+      -18,
+      -16,
+      -14,
+      -12,
+      -10,
+      -8,
+      -6,
+      -4,
+      -2,
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20
+    ]
+  },
+  "audit": {
+    "samples_per_modulation": 128
+  },
+  "qam_aware": {
+    "time_base_channels": 22,
+    "physical_base_channels": 8,
+    "fusion_features": 64,
+    "dropout": 0.1
+  },
+  "variants": [
+    "time_power",
+    "time_phase",
+    "time_power_phase"
+  ],
+  "final_blind_test": {
+    "seed": 26090831,
+    "split": "final_blind_test",
+    "samples": 8400
+  },
+  "output_root": "outputs/qam_aware_v2/formal"
+}

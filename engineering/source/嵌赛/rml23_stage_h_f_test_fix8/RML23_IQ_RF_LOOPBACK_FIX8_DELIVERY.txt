@@ -1,0 +1,125 @@
+================================================================================
+RML23 Stage H-F / Route F — IQ RF 回环 fix8 交付清单
+================================================================================
+状态: M29-RML23-IQ-RF-LOOPBACK-READY-FOR-BOARD-TEST（未取得板端证据前不变；不写
+      RF_PASS / RF_PATH_PROVEN / RF_PATH_PRESERVES / PROJECT_COMPLETE / FINAL_* /
+      BOARD_TEST_PASS；sweep RC=0 != 回环保真 PASS；host 测试永不升级 RF_PATH_PROVEN）
+基线: sdr_rml23_live_board_package_iq_rf_loopback_fix7.tar.gz  20d843c2…（548 文件）
+================================================================================
+
+1. 工件（2 份，均在 dist/，未覆盖任何历史包）
+--------------------------------------------------------------------------------
+A. 独立补丁（Route F + D2 fix8 增量，自包含）
+   路径: dist/sdr_rml23_live_iq_rf_loopback_fix8_patch.tar.gz
+   字节: 134799
+   文件数: 21
+   manifest 行数: 21（dist/IQ_RF_LOOPBACK_FIX8_PATCH_SHA256SUMS.txt）
+   sha256: d6c5d0bd71200e5bbc87067f3a6e5cece77f941d4458297c78b6677990ef3dc9
+
+B. 合并全量（fix7 全量 + fix8）
+   路径: dist/sdr_rml23_live_board_package_iq_rf_loopback_fix8.tar.gz
+   字节: 3867675
+   文件数: 555（548 fix7 基线 + 7 fix8 新增；14 改以工作树内容覆盖同名基线）
+   manifest 行数: 555（dist/sdr_rml23_live_board_package_iq_rf_loopback_fix8.SHA256SUMS.txt）
+   sha256: 2577b1c910aaa2eb7a8b305f2c4a0f3af526b78e2d32c7567197b3ca3541ee5e
+
+2. 差异证明（相对 fix7 20d843c2… 基线，diff 仅 14 改 + 7 新）
+--------------------------------------------------------------------------------
+MODIFIED(14):
+  board_package/iq_digital_loopback_sync.hpp        （SyncFidelityMetrics.clipped 拆分 + rails）
+  board_package/iq_digital_loopback_runner.hpp      （逐文件日志 tx/rx 削顶字段）
+  board_package/iq_rf_loopback.hpp                  （RF_TX_CLIPPED / RF_RX_CLIPPED）
+  board_package/iq_rf_loopback_report.hpp           （3 窗口负对照摘要标量）
+  board_package/iq_rf_loopback_runner.hpp           （Task A 指标 + Task B 瞬态）
+  board_package/iq_rf_loopback_transfer.hpp         （discard refill + 3 独立噪声窗口）
+  sdr_adapter/pluto_device.hpp                      （tx_running() 纯虚 + RF 回波钩子）
+  sdr_adapter/pluto_device_libiio.cpp               （tx_running() 实现）
+  board_package/board_gate9_full_chain_rml23.cpp    （sweep + ab 两 phase）
+  board_package/gate9_phase.hpp                     （level-sweep + ab phase 名）
+  host_tests/test_iq_rf_loopback.cpp                （Task A/B 测试更新）
+  scripts/analyze_route_d2_4ask.py                  （compute_verdict + D2 工件）
+  host_tests/build_host_tests.sh                    （构建 sweep + ab 测试）
+  host_tests/run_tests.sh                           （运行 sweep + ab 测试）
+NEW(7):
+  board_package/iq_rf_loopback_level_sweep.hpp      （RF 安全工作点扫描）
+  host_tests/test_iq_rf_loopback_level_sweep.cpp    （host sweep 测试）
+  scripts/audit_route_d_artifacts.py                （Route D 冻结工件审计）
+  board_package/iq_rf_loopback_ab.hpp               （纯六门禁 A/B 前置）
+  host_tests/test_iq_rf_loopback_ab.cpp             （host 门禁测试）
+  scripts/package_iq_rf_loopback_fix8.py            （本打包器）
+  docs/M29_RML23_STAGE_H_F_IQ_RF_LOOPBACK_FIX8_AUDIT.md
+
+红线合规：无模型/标签/NPU 二进制/RTL/XDC/位流/Flash 改动；不重训/不微调；不新增
+4ASK 专用分类规则；不按标签选 RF 工作点；不逐文件用参考答案校正分类；不放宽
+corr/SNR/residual/RSS 阈值；不自动提高 TX 功率；TX 衰减保持 -40 dB；不覆盖 fix7
+及更早历史工件；API 未连接/未操作板卡；host 测试不能升级 RF_PATH_PROVEN。
+
+3. 离线验证（本轮，不碰板）
+--------------------------------------------------------------------------------
+[1] host_tests/build_host_tests.sh            OK（含 sweep/ab 两新测试链接）
+[2] host_tests/run_tests.sh                   ALL HOST TESTS PASSED
+[3] test_iq_rf_loopback                        75/0
+    test_iq_rf_loopback_level_sweep            40/0
+    test_iq_rf_loopback_ab                     28/0
+[4] host_tests/syntax_check.sh                gate9_rml23: syntax OK（含 sweep/ab 包装）
+[5] scripts/audit_route_d_artifacts.py --self-test   5/5（1 项 Windows 符号链接特权跳过，宿主限制）
+[6] scripts/analyze_route_d2_4ask.py --self-test      10/10
+[7] 打包器 audit_dependency_closure           OK（所有改动头已列入 ROUTE_F_FIX8_FILES）
+[8] 两跑确定性                                patch 与 full 两次打包 sha256 逐字节一致
+[9] 独立解包 sha256sum -c                     patch 21/21 OK；full 555/555 OK（0 失败）
+
+4. 板端复测（用户执行；本清单不写死 ip、不强制）
+--------------------------------------------------------------------------------
+第一步（Route D / D2 工件审计，建立六门禁前两门）：
+  python3 -I scripts/audit_route_d_artifacts.py --out-dir /root/rml23_route_d_scale128_* \
+    --json /root/rml23_route_d_audit_fix8.json
+  python3 -I scripts/analyze_route_d2_4ask.py --out-dir /root/rml23_route_d2_* \
+    --d2-out-dir /root/rml23_route_d2_fix8_out --json /root/rml23_route_d2_fix8.json
+第二步（RF 安全工作点扫描，判责后按推荐点重跑）：
+  ./scripts/run_gate9_rml23.sh --phase=iq-rf-loopback-level-sweep --center=2400000000 \
+    --tx-atten=-40 --rf-path=direct-cable > /root/rml23_route_f_fix8_sweep.log 2>&1
+  预期：IQ_RF_LOOPBACK_LEVEL_SWEEP（每点 corr/clip/negative_control_ok）+
+        IQ_RF_LOOPBACK_LEVEL_SELECTION ok=1 recommended_raw_complex_rms_counts=…
+        recommended_rx_gain=…；sweep result=PASS 只表判责成功，非回环保真 PASS。
+第三步（物理 RF 回环，确认 RF_PRESERVES_IQ + 无削顶 + 负对照稳定）：
+  ./scripts/run_gate9_rml23.sh --phase=iq-rf-loopback --center=2400000000 --rx-gain=10 \
+    --tx-atten=-40 --rf-path=direct-cable --rf-calib-count=8 --input-kind=generated-2p56m \
+    --frozen-dir=DIR > /root/rml23_route_f_fix8_rf.log 2>&1
+  预期：NEGATIVE_CONTROL_SUMMARY noise_stable=1 tx_stopped_readback=1、每文件 fidelity
+        token；RF_PRESERVES_IQ 仅由板端运行建立，host 测试永不升级 RF_PATH_PROVEN。
+第四步（六门全过才允许 D-vs-D2 A/B 门禁授权）：
+  ./scripts/run_gate9_rml23.sh --phase=iq-rf-loopback-ab --route-d-audit-pass=1 \
+    --route-d2-audit-pass=1 --rf-safe-point-selected=1 --rf-preserves-iq=1 --no-clip=1 \
+    --negative-control-stable=1
+  预期：ROUTE_F_AB_GATE_LINE ×6 全 ok=1 + ROUTE_F_AB_GATE ok=1 reason= missing=；
+        任一门为 0 则 gate=BLOCKED 且绝不发射。D-vs-D2 交织采集复用 fix7 runner。
+
+5. 最终回报（16 项）
+--------------------------------------------------------------------------------
+[1]  Task A 削顶拆分：rails 由 DataFormatInfo.bits 推导（TX16→±32767/-32768、RX12→
+     ±2047/-2048），不硬编码；RF_TX_CLIPPED/RF_RX_CLIPPED 双 token。
+[2]  Task B 首次 TX-off 负对照瞬态：tx_stop→销毁 cyclic TX→确认 tx_running()==false→
+     recreate_rx_buffer→≥1 discard refill（不计入）→3 独立窗口 RMS 中位数；3 窗口异常
+     不同 → RF_NEGATIVE_CONTROL_UNSTABLE fail-closed。
+[3]  Task C --phase=iq-rf-loopback-level-sweep：loopback=0/direct-cable/tx-atten=-40/无
+     自动提功率/无天线/50Ω；TX RMS 512..8192 × RX gain 0..30 × (tone+PRBS+QPSK)；
+     削顶即拒绝该点；输出 _SWEEP / _SELECTION。
+[4]  Task D audit_route_d_artifacts.py：manifest 13 列、6 文件存在、无 dangling symlink、
+     精确尺寸/SHA、recovered=8192、quant bytes==complex count。
+[5]  Task E analyze_route_d2_4ask.py compute_verdict：PROVEN 仅当 holdout 4ASK 明显救回
+     ∧ 其余 3 类不退化，否则 NOT_PROVEN；合成端到端诚实返回 NOT_PROVEN。
+[6]  Task F iq_rf_loopback_ab.hpp：纯六门禁严格顺序求值，任一门不过即 fail-closed 拒绝
+     发射；--phase=iq-rf-loopback-ab 不开设备不跑 NPU。
+[7]  host 测试逐项：build OK；run_tests ALL HOST TESTS PASSED；RF 三套 75/0 + 40/0 + 28/0。
+[8]  审计器自检：audit_route_d_artifacts 5/5；analyze_route_d2_4ask 10/10。
+[9]  syntax check：gate9_rml23 syntax OK（含 sweep/ab 包装与分发）。
+[10] dependency closure 审计 OK（fail-closed；所有改动头已覆盖）。
+[11] 两跑确定性：patch 与 full 两次打包 sha256 逐字节一致。
+[12] 独立解包 sha256sum -c：patch 21/21、full 555/555 全 OK（0 失败）。
+[13] 历史包未覆盖证明：fix7 20d843c2… 及更早全保留，dist/ 无覆盖写入。
+[14] 官方文档引用（Task 11）：libiio（analogdevicesinc.github.io/libiio）、
+     AD9361/AD9363/AD9364 Linux IIO 驱动（wiki.analog.com/.../ad9361）、AD9364 UG-673、
+     ADALM-PLUTO（wiki.analog.com/university/tools/pluto）。详见审计 §6。
+[15] 板端复测命令见上 §4（用户执行）。
+[16] 状态仍 M29-RML23-IQ-RF-LOOPBACK-READY-FOR-BOARD-TEST，不声称板端回环保真已通过。
+================================================================================

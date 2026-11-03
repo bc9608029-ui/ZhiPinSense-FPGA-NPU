@@ -1,0 +1,10 @@
+{
+  "valid_records": 408,
+  "ui_gain_matches_all_valid_records": true,
+  "guard_clean": true,
+  "max_valid_adc_peak": 1951.0,
+  "valid_rail_count": 0,
+  "npu_stop": [
+    "NPU_STREAM_STOP frames=3264 apply=1 reset=3263 discipline=1"
+  ]
+}

@@ -1,0 +1,312 @@
+python3 /root/rml24_three_modes_execution_20261029/fpga_ui_integgration_20261031/live_status.py; cat /var/log/rml24-integrated/r84ec9319d081/POSTTDEPLOY_PARAMETER_TEST.json
+
+{"run": "/var/log/rml24-integrated/r84ec9319d081", "boot_id": "45b4754c-e04b-4d8c-8a3a-467bcd5b9b01", "alive": {"npu": true, "ui": true, "rx": true}, "total": 2539, "valid": 271, "pred_counts": {"3": 111, "4": 90, "12": 70}, "method": "systemd MainPID argv --run, not filesystem wall time"}
+
+{
+  "passed": true,
+  "restored": {
+    "tuning": "1",
+    "mode": "FIXED",
+    "running": "1",
+    "fixed_hz": "2400000000",
+    "fixed_readback_hz": "2400000000",
+    "start_hz": "2395000000",
+    "stop_hz": "2405000000",
+    "step_hz": "1000000",
+    "actual_lo_hz": "2400000000",
+    "command_id": "22",
+    "scan_index": "0",
+    "scan_points": "8",
+    "presence": "ACQUIRING",
+    "frame_id": "1002",
+    "rms_iq": "0.9867905087738514",
+    "peak_iq": "1.7798371302636629",
+    "energy_iq2": "997.1256404031044",
+    "feature_latency_us": "1408.57",
+    "backend": "fpga",
+    "sweep_cycle": "0",
+    "min_hz": "2300000000",
+    "max_hz": "2500000000",
+    "max_scan_points": "101"
+  },
+  "steps": [
+    {
+      "command": "STOP",
+      "replies": [
+        "OK accepted command_id=1 STOP",
+        "OK applied command_id=1 STOP"
+      ]
+    },
+    {
+      "command": "SET_MODE FIXED",
+      "replies": [
+        "OK accepted command_id=2 SET_MODE FIXED",
+        "OK applied co
+mmand_id=2 SET_MODE FIXED"
+      ]
+    },
+    {
+      "command": "SET_FIXED_HZ 2401000000",
+      "replies": [
+        "OK accepted command_id=3 SET_FIXED_HZ 2401000000",
+        "OK command_id=3 requested_fixed_hz=2401000000 applied_fixed_hz=2401000000"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2401000000 fixed_readback_hz=2401000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1000000 actual_lo_hz=2401000000 command_id=3 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "SET_FIXED_HZ 2400000000",
+      "replies": [
+        "OK accepted command_id=4 SET_FIXED_HZ 2400000000",
+        "OK command_id=4 requested_fixed_hz=2400000000 applied_fixed_hz=2400000000"
+      ]
+    },
+    {
+   
+   "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1000000 actual_lo_hz=2400000000 command_id=4 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "SET_SCAN_RANGE_HZ 2395000000 2405000000 1000000",
+      "replies": [
+        "OK accepted command_id=5 SET_SCAN_RANGE_HZ 2395000000 2405000000 1000000",
+        "OK command_id=5 requested_start_hz=2395000000 requested_stop_hz=2405000000 requested_step_hz=1000000 scan_points=11"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1000000 actual_lo_hz=2400000000 command_id=5 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "SET_SCAN_RANGE_HZ 2396000000 2404000000 2000000",
+      "replies": [
+        "OK accepted command_id=6 SET_SCAN_RANGE_HZ 2396000000 2404000000 2000000",
+        "OK command_id=6 requested_start_h
+z=2396000000 requested_stop_hz=2404000000 requested_step_hz=2000000 scan_points=5"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2396000000 stop_hz=2404000000 step_hz=2000000 actual_lo_hz=2400000000 command_id=6 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "SET_SCAN_RANGE_HZ 2395000000 2405000000 500000",
+      "replies": [
+        "OK accepted command_id=7 SET_SCAN_RANGE_HZ 2395000000 2405000000 500000",
+        "OK command_id=7 requested_start_hz=2395000000 requested_stop_hz=2405000000 requested_step_hz=500000 scan_points=21"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 f
+ixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=500000 actual_lo_hz=2400000000 command_id=7 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "SET_SCAN_RANGE_HZ 2395000000 2405000000 1500000",
+      "replies": [
+        "OK accepted command_id=8 SET_SCAN_RANGE_HZ 2395000000 2405000000 1500000",
+        "OK command_id=8 requested_start_hz=2395000000 requested_stop_hz=2405000000 requested_step_hz=1500000 scan_points=8"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2400000000 command_id=8 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2400000000 command_id=8 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.986790
+5087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "SET_SCAN_RANGE_HZ 2405000000 2395000000 1000000",
+      "replies": [
+        "ERR command_id=0 reason=START_GE_STOP"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2400000000 command_id=8 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=240
+5000000 step_hz=1500000 actual_lo_hz=2400000000 command_id=8 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "SET_SCAN_RANGE_HZ 2395000000 2395000000 1000000",
+      "replies": [
+        "ERR command_id=0 reason=START_GE_STOP"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2400000000 command_id=8 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2400000000 command_id=8 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "SET_SCAN_RANGE_HZ 2395000000 2405
+000000 0",
+      "replies": [
+        "ERR command_id=0 reason=STEP_INVALID"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2400000000 command_id=8 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2400000000 command_id=8 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_
+hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "SET_SCAN_RANGE_HZ 2395000000 2405000000 -1",
+      "replies": [
+        "ERR command_id=0 reason=INVALID_NUMBER"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2400000000 command_id=8 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2400000000 command_id=8 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "SET_SCAN_RANGE_HZ 2395000000 2405000000 2304001",
+      "replies": [
+        "ERR command_id=0 reason=STEP_INVALID"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=240000000
+0 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2400000000 command_id=8 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2400000000 command_id=8 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "SET_SCAN_RANGE_HZ 2395000000 2405000000 1",
+      "replies": [
+        "ERR command_id=0 reason=STEP_INVALID"
+      ]
+    },
+    {
+      "comma
+nd": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=FIXED running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2400000000 command_id=8 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "SET_MODE BAND_SCAN",
+      "replies": [
+        "OK accepted command_id=9 SET_MODE BAND_SCAN",
+        "OK applied command_id=9 SET_MODE BAND_SCAN"
+      ]
+    },
+    {
+      "command": "START",
+      "replies": [
+        "OK accepted command_id=10 START",
+        "OK applied command_id=10 START"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=BAND_SCAN running=1 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 
+step_hz=1500000 actual_lo_hz=2396499998 command_id=10 scan_index=2 scan_points=8 presence=ACQUIRING frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "STOP",
+      "replies": [
+        "OK accepted command_id=11 STOP",
+        "OK applied command_id=11 STOP"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=BAND_SCAN running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2396499998 command_id=11 scan_index=0 scan_points=8 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "SET_MODE CONTINUOUS_SCAN",
+      "replies": [
+        "OK accepted command_id=12 SET_MODE CONTINUOUS_SCAN",
+        "OK applied command_id=12 SET_MODE CONTINUOUS_SCAN"
+      ]
+    },
+    {
+      "command": "START",
+      "replies": [
+        "OK accepted command_id=13 START",
+        "OK applied command_id=13 START"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=CONTINUOUS_SCAN running=1 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=24050000
+00 step_hz=1500000 actual_lo_hz=2395000000 command_id=13 scan_index=1 scan_points=8 presence=ACQUIRING frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga sweep_cycle=0 min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "command": "STOP",
+      "replies": [
+        "OK accepted command_id=14 STOP",
+        "OK applied command_id=14 STOP"
+      ]
+    },
+    {
+      "command": "GET_TUNING",
+      "replies": [
+        "OK tuning=1 mode=CONTINUOUS_SCAN running=0 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1500000 actual_lo_hz=2396499998 command_id=14 scan_index=0 scan_points=8 presence=NO_SIGNAL frame_id=1002 rms_iq=0.9867905087738514 peak_iq=1.7798371302636629 energy_iq2=997.1256404031044 feature_latency_us=1408.57 backend=fpga sweep_cycle=0 min_hz=2300000000 max_hz=2500000000 max_scan_points=101"
+      ]
+    },
+    {
+      "comm

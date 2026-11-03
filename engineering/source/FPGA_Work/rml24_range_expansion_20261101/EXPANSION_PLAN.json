@@ -1,0 +1,44 @@
+{
+  "status": "PREPARING_NOT_DEPLOYED",
+  "frequency_hz": [
+    70000000,
+    6000000000
+  ],
+  "tx_gain_db": [
+    -89.75,
+    0
+  ],
+  "tx_gain_step_db": 0.25,
+  "default_gain_db": -40,
+  "fs_hz": 2560000,
+  "frame_and_model_unchanged": true,
+  "rf_frequency_cases_mhz": [
+    70,
+    100,
+    325,
+    433,
+    915,
+    1200,
+    1800,
+    2400,
+    3500,
+    3800,
+    5000,
+    5800,
+    6000
+  ],
+  "gain_cases_db": [
+    -89.75,
+    -70,
+    -60,
+    -50,
+    -40,
+    -30,
+    -20,
+    -10,
+    0
+  ],
+  "all_gain_rf_sweep_requires_link_budget_check": true,
+  "scan_points_limit": 101,
+  "scan_step_max_hz": 2304000
+}

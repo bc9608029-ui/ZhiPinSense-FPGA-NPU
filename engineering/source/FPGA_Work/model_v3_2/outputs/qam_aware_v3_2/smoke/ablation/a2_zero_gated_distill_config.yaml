@@ -1,0 +1,18 @@
+experiment_config: configs/qam_aware_v3_2_smoke_full.yaml
+output_root: outputs\qam_aware_v3_2\smoke\ablation\a2_zero_gated_distill
+training:
+  epochs: 1
+  minimum_epochs_before_stopping: 1
+  distillation:
+    enabled: true
+    temperature: 4.0
+    alpha: 0.7
+  class_weights:
+    BPSK: 1.0
+    QPSK: 1.0
+    8PSK: 1.0
+    16QAM: 1.0
+    64QAM: 1.0
+    2FSK: 1.0
+    CPFSK: 1.0
+    OFDM: 1.0

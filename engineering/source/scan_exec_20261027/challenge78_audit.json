@@ -1,0 +1,90 @@
+{
+  "records": 78,
+  "signal_denominator": 72,
+  "signal_correct": 68,
+  "signal_accuracy": 0.9444444444444444,
+  "signal_missing": [],
+  "signal_invalid": [],
+  "max_signal_frequency_error_hz": 64.68531370162964,
+  "hop_evidence": [
+    {
+      "seq": 0,
+      "target_hz": 2397400000,
+      "signal_hz": 2397399940.2809477,
+      "rescan": true,
+      "locked_miss_before_rescan": false,
+      "elapsed_ms": 18783.445850000135
+    },
+    {
+      "seq": 24,
+      "target_hz": 2403600000,
+      "signal_hz": 2403599941.2292905,
+      "rescan": true,
+      "locked_miss_before_rescan": true,
+      "elapsed_ms": 19958.265029999893
+    },
+    {
+      "seq": 48,
+      "target_hz": 2397400000,
+      "signal_hz": 2397399936.725168,
+      "rescan": true,
+      "locked_miss_before_rescan": true,
+      "elapsed_ms": 19617.567710000003
+    }
+  ],
+  "muted_denominator": 6,
+  "muted_pass": 5,
+  "muted_details": [
+    {
+      "seq": 72,
+      "pass": true,
+      "pred": -1,
+      "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+    },
+    {
+      "seq": 73,
+      "pass": true,
+      "pred": -1,
+      "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+    },
+    {
+      "seq": 74,
+      "pass": true,
+      "pred": -1,
+      "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+    },
+    {
+      "seq": 75,
+      "pass": true,
+      "pred": -1,
+      "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+    },
+    {
+      "seq": 76,
+      "pass": false,
+      "pred": -1,
+      "error": null
+    },
+    {
+      "seq": 77,
+      "pass": true,
+      "pred": -1,
+      "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+    }
+  ],
+  "note": "Predeclared 72 signal and 6 muted diagnostic frames; repeats of 24 sources, not independent new-waveform validation.",
+  "end_to_end_muted_rejections": 6,
+  "false_muted_classifications": 0,
+  "public_discovery_false_hits": [
+    {
+      "seq": 76,
+      "scan_hit": {
+        "lo_hz": 2404999998,
+        "signal_hz": 2405317428.7807837,
+        "coarse_cfo_hz": 317430.7807835919,
+        "public_score": 0.1023381380645227
+      },
+      "recovery_error": "RuntimeError: no usable public preamble"
+    }
+  ]
+}

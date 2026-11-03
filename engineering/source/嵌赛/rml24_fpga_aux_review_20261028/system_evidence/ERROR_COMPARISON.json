@@ -1,0 +1,224 @@
+{
+  "candidate_fixed02_score": {
+    "correct": 235,
+    "missing": 0,
+    "errors": [
+      {
+        "index": 5,
+        "file": "22_04.bin",
+        "label": 22,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 300,
+        "eligible_count": 9
+      },
+      {
+        "index": 7,
+        "file": "22_08.bin",
+        "label": 22,
+        "pred": 1,
+        "correct": false,
+        "chosen_frame": 334,
+        "eligible_count": 9
+      },
+      {
+        "index": 87,
+        "file": "14_03.bin",
+        "label": 14,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 1666,
+        "eligible_count": 9
+      },
+      {
+        "index": 211,
+        "file": "22_00.bin",
+        "label": 22,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 3739,
+        "eligible_count": 9
+      },
+      {
+        "index": 232,
+        "file": "17_06.bin",
+        "label": 17,
+        "pred": 18,
+        "correct": false,
+        "chosen_frame": 4089,
+        "eligible_count": 9
+      }
+    ]
+  },
+  "gapfix_fixed01_score": {
+    "correct": 233,
+    "missing": 0,
+    "errors": [
+      {
+        "index": 5,
+        "file": "22_04.bin",
+        "label": 22,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 322,
+        "eligible_count": 9
+      },
+      {
+        "index": 7,
+        "file": "22_08.bin",
+        "label": 22,
+        "pred": 1,
+        "correct": false,
+        "chosen_frame": 356,
+        "eligible_count": 9
+      },
+      {
+        "index": 31,
+        "file": "14_08.bin",
+        "label": 14,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 756,
+        "eligible_count": 9
+      },
+      {
+        "index": 57,
+        "file": "23_05.bin",
+        "label": 23,
+        "pred": 15,
+        "correct": false,
+        "chosen_frame": 1189,
+        "eligible_count": 9
+      },
+      {
+        "index": 85,
+        "file": "14_05.bin",
+        "label": 14,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 1653,
+        "eligible_count": 9
+      },
+      {
+        "index": 115,
+        "file": "13_01.bin",
+        "label": 13,
+        "pred": 15,
+        "correct": false,
+        "chosen_frame": 2155,
+        "eligible_count": 9
+      },
+      {
+        "index": 237,
+        "file": "23_04.bin",
+        "label": 23,
+        "pred": 10,
+        "correct": false,
+        "chosen_frame": 4184,
+        "eligible_count": 8
+      }
+    ]
+  },
+  "fix2_fixed01_score": {
+    "correct": 233,
+    "missing": 0,
+    "errors": [
+      {
+        "index": 66,
+        "file": "22_02.bin",
+        "label": 22,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 1317,
+        "eligible_count": 9
+      },
+      {
+        "index": 111,
+        "file": "19_04.bin",
+        "label": 19,
+        "pred": 20,
+        "correct": false,
+        "chosen_frame": 2069,
+        "eligible_count": 9
+      },
+      {
+        "index": 133,
+        "file": "22_06.bin",
+        "label": 22,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 2433,
+        "eligible_count": 9
+      },
+      {
+        "index": 137,
+        "file": "22_07.bin",
+        "label": 22,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 2500,
+        "eligible_count": 8
+      },
+      {
+        "index": 186,
+        "file": "22_03.bin",
+        "label": 22,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 3313,
+        "eligible_count": 9
+      },
+      {
+        "index": 200,
+        "file": "22_09.bin",
+        "label": 22,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 3545,
+        "eligible_count": 9
+      },
+      {
+        "index": 211,
+        "file": "22_00.bin",
+        "label": 22,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 3729,
+        "eligible_count": 8
+      }
+    ]
+  },
+  "fix2_scan02_score": {
+    "correct": 237,
+    "missing": 0,
+    "errors": [
+      {
+        "index": 13,
+        "file": "15_06.bin",
+        "label": 15,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 86,
+        "eligible_count": 3
+      },
+      {
+        "index": 85,
+        "file": "14_05.bin",
+        "label": 14,
+        "pred": 16,
+        "correct": false,
+        "chosen_frame": 362,
+        "eligible_count": 2
+      },
+      {
+        "index": 115,
+        "file": "13_01.bin",
+        "label": 13,
+        "pred": 15,
+        "correct": false,
+        "chosen_frame": 476,
+        "eligible_count": 2
+      }
+    ]
+  }
+}

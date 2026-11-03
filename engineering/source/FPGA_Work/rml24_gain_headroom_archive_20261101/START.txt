@@ -1,0 +1,3 @@
+nohup python3 /root/rml24_three_modes_execution_20261029/fpga_uii_integration_20261031/archive_gain_pairs.py 84043ce2835627992a0b9ff0beb5cb81 > //root/gain_pairs_archive_20261101.log 2>&1 < /dev/null &
+[1] 5140
+(base) root@U:~# 

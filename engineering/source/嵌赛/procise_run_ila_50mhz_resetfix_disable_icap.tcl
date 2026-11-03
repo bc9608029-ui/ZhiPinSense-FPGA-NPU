@@ -1,0 +1,6 @@
+set_device JFMQL30TAI676H
+increment_bit_cfg_v3 \
+  F:/Project_vivado/mandatory_core_board_validation_50mhz/bitstreams_ila_50mhz_resetfix/board_mandatory_core_test_top_ila_50mhz_resetfix.bit \
+  F:/Project_vivado/mandatory_core_board_validation_50mhz/bitstreams_ila_50mhz_resetfix/board_mandatory_core_test_top_ila_50mhz_resetfix_disable_icap.bit \
+  -disable_icap
+exit

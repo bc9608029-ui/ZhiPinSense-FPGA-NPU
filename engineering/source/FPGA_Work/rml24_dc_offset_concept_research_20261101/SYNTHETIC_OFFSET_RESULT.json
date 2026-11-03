@@ -1,0 +1,389 @@
+{
+  "scope": "Concept only: chosen first-order50Hz highpass surrogate, not measured AD9361 tracking; no RF or NPU classification; RX5.12 oversampling and digital offset removal simulated",
+  "rows": [
+    {
+      "source": 14,
+      "repeats": 1,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.011092169912995359
+    },
+    {
+      "source": 14,
+      "repeats": 1,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.024597498005277225
+    },
+    {
+      "source": 14,
+      "repeats": 1,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.011004711849592105
+    },
+    {
+      "source": 14,
+      "repeats": 1,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.01585300490489251
+    },
+    {
+      "source": 14,
+      "repeats": 8,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.011735596143577928
+    },
+    {
+      "source": 14,
+      "repeats": 8,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.09025011767175771
+    },
+    {
+      "source": 14,
+      "repeats": 8,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.012061920161806594
+    },
+    {
+      "source": 14,
+      "repeats": 8,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.054015292536071714
+    },
+    {
+      "source": 15,
+      "repeats": 1,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.010791151873689408
+    },
+    {
+      "source": 15,
+      "repeats": 1,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.022367332507569896
+    },
+    {
+      "source": 15,
+      "repeats": 1,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.010620317251813425
+    },
+    {
+      "source": 15,
+      "repeats": 1,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.014784145175355179
+    },
+    {
+      "source": 15,
+      "repeats": 8,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.00924674416550533
+    },
+    {
+      "source": 15,
+      "repeats": 8,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.08135031245301455
+    },
+    {
+      "source": 15,
+      "repeats": 8,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.009518062052204422
+    },
+    {
+      "source": 15,
+      "repeats": 8,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.04847356051515416
+    },
+    {
+      "source": 17,
+      "repeats": 1,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.04949640693540399
+    },
+    {
+      "source": 17,
+      "repeats": 1,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.010878571716500494
+    },
+    {
+      "source": 17,
+      "repeats": 1,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.05340800688828428
+    },
+    {
+      "source": 17,
+      "repeats": 1,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.010753549929525921
+    },
+    {
+      "source": 17,
+      "repeats": 8,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 0,
+      "recovered": false,
+      "error": "no usable public preamble"
+    },
+    {
+      "source": 17,
+      "repeats": 8,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.010408176757433898
+    },
+    {
+      "source": 17,
+      "repeats": 8,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 0,
+      "recovered": false,
+      "error": "no usable public preamble"
+    },
+    {
+      "source": 17,
+      "repeats": 8,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.010245154322391354
+    },
+    {
+      "source": 18,
+      "repeats": 1,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.01040413595067239
+    },
+    {
+      "source": 18,
+      "repeats": 1,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.009573565639070528
+    },
+    {
+      "source": 18,
+      "repeats": 1,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.010367281254449521
+    },
+    {
+      "source": 18,
+      "repeats": 1,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.009445339930213015
+    },
+    {
+      "source": 18,
+      "repeats": 8,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.01029319039126086
+    },
+    {
+      "source": 18,
+      "repeats": 8,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.009280300606846618
+    },
+    {
+      "source": 18,
+      "repeats": 8,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.010216468704696315
+    },
+    {
+      "source": 18,
+      "repeats": 8,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.009184492002366691
+    },
+    {
+      "source": 19,
+      "repeats": 1,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.007749314437580371
+    },
+    {
+      "source": 19,
+      "repeats": 1,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.008002511043417468
+    },
+    {
+      "source": 19,
+      "repeats": 1,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.0077648870719702456
+    },
+    {
+      "source": 19,
+      "repeats": 1,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.008065752801649504
+    },
+    {
+      "source": 19,
+      "repeats": 8,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.0017579307423033692
+    },
+    {
+      "source": 19,
+      "repeats": 8,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.002707772820005825
+    },
+    {
+      "source": 19,
+      "repeats": 8,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.00245066945884862
+    },
+    {
+      "source": 19,
+      "repeats": 8,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.0023355202486881137
+    },
+    {
+      "source": 20,
+      "repeats": 1,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.008355031046762986
+    },
+    {
+      "source": 20,
+      "repeats": 1,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.008443087547665831
+    },
+    {
+      "source": 20,
+      "repeats": 1,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.00837950085247253
+    },
+    {
+      "source": 20,
+      "repeats": 1,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.008250860007663348
+    },
+    {
+      "source": 20,
+      "repeats": 8,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.003155304732235867
+    },
+    {
+      "source": 20,
+      "repeats": 8,
+      "residual_cfo_hz": 20,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.012520391219505805
+    },
+    {
+      "source": 20,
+      "repeats": 8,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 0,
+      "recovered": true,
+      "relative_error": 0.003713546048573348
+    },
+    {
+      "source": 20,
+      "repeats": 8,
+      "residual_cfo_hz": -70,
+      "rx_internal_offset_hz": 50000,
+      "recovered": true,
+      "relative_error": 0.0084656834615378
+    }
+  ]
+}

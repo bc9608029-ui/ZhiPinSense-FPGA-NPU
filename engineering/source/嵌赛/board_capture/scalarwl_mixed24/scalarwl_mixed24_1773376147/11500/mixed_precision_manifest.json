@@ -1,0 +1,29 @@
+{
+  "inputs_identical": false,
+  "model_dir": "F:\\\u5d4c\u8d5b\\fix10class24_scalarwl_4way_work\\sdr_rml24_fix10class24_scalarwl_4way\\model_rml23",
+  "model_json_sha256": "d43a22848fad56195265fc98f9009039e4e9d9e8da7f58fc5042fb2a602edb2d",
+  "model_raw_sha256": "2425d990dbac0761cfcdb578c2225795e3b700c4afc6800a0b544ff4d50e0cba",
+  "network_name": "model_24class",
+  "phase": "mixed-precision",
+  "scalar": {
+    "argmax_pass1": 23,
+    "argmax_pass2": 23,
+    "finite": true,
+    "input_sha256": "57761576dd5de52194941adbd21e61540a095fa7100a1dcc2384661d27fe1193",
+    "label_pass1": "OQPSK",
+    "logits_sha256": "1d17918522b9e4d6afecda7db3337712c85fd94747ef957638eab92307dcef47",
+    "repeat_argmax_deterministic": 1,
+    "repeat_logits_byte_identical": 1
+  },
+  "task_id": "fix10class24-scalarwl-4way",
+  "wl": {
+    "argmax_pass1": 23,
+    "argmax_pass2": 23,
+    "finite": true,
+    "input_sha256": "0146e17651893ff07e320ac4a7f5e176fc2e4f6dbae24c493f73b05971d41433",
+    "label_pass1": "OQPSK",
+    "logits_sha256": "dba6c005c2dac801887a456ed6be405d0c04c35d2d52406220c9beb4325db412",
+    "repeat_argmax_deterministic": 1,
+    "repeat_logits_byte_identical": 1
+  }
+}

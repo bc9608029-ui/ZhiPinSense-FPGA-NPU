@@ -1,0 +1,45 @@
+{
+  "selected_scored_fallback_cases": [
+    {
+      "file": "17_01.bin",
+      "expected": 17,
+      "pred": 17,
+      "correct": true,
+      "frame_id": 173,
+      "scan_steps": [
+        {
+          "lo_hz": 2403599928,
+          "public_score": 0.2109309465194632,
+          "cfo_hz": 10.624884751149898,
+          "locked_check": true,
+          "accepted": true,
+          "locked_fallback_used": true,
+          "primary_public_score": 0.09493565849598705,
+          "primary_cfo_hz": 13.45680191918797
+        }
+      ]
+    },
+    {
+      "file": "18_06.bin",
+      "expected": 18,
+      "pred": 18,
+      "correct": true,
+      "frame_id": 518,
+      "scan_steps": [
+        {
+          "lo_hz": 2403599928,
+          "public_score": 0.9118116393088617,
+          "cfo_hz": 13.675290064141336,
+          "locked_check": true,
+          "accepted": true,
+          "locked_fallback_used": true,
+          "primary_public_score": 0.10862893499912867,
+          "primary_cfo_hz": -499981.99445883144
+        }
+      ]
+    }
+  ],
+  "total_fallback_captures": 4,
+  "fallback_strict_recovered": 4,
+  "scope": "Observed branch usage, not a simultaneous counterfactual experiment; paired gains/losses remain reported"
+}

@@ -1,0 +1,50 @@
+{
+  "scope": "smoke/current frozen test namespace only; final_blind_test was not accessed",
+  "variant": "time_power_phase",
+  "checkpoint_epoch": 2,
+  "overall_accuracy": 0.2261904761904762,
+  "macro_f1": 0.160156982454441,
+  "overall_qam": {
+    "16qam_samples": 84,
+    "64qam_samples": 84,
+    "16qam_accuracy": 0.09523809523809523,
+    "64qam_accuracy": 0.011904761904761904,
+    "16qam_to_64qam_count": 0,
+    "64qam_to_16qam_count": 13,
+    "16qam_to_64qam_rate": 0.0,
+    "64qam_to_16qam_rate": 0.15476190476190477
+  },
+  "qam_by_snr": {
+    "0": {
+      "16qam_samples": 64,
+      "64qam_samples": 64,
+      "16qam_accuracy": 0.015625,
+      "64qam_accuracy": 0.0,
+      "16qam_to_64qam_count": 0,
+      "64qam_to_16qam_count": 3,
+      "16qam_to_64qam_rate": 0.0,
+      "64qam_to_16qam_rate": 0.046875
+    },
+    "10": {
+      "16qam_samples": 64,
+      "64qam_samples": 64,
+      "16qam_accuracy": 0.015625,
+      "64qam_accuracy": 0.0,
+      "16qam_to_64qam_count": 1,
+      "64qam_to_16qam_count": 0,
+      "16qam_to_64qam_rate": 0.015625,
+      "64qam_to_16qam_rate": 0.0
+    },
+    "20": {
+      "16qam_samples": 64,
+      "64qam_samples": 64,
+      "16qam_accuracy": 0.0,
+      "64qam_accuracy": 0.0,
+      "16qam_to_64qam_count": 0,
+      "64qam_to_16qam_count": 0,
+      "16qam_to_64qam_rate": 0.0,
+      "64qam_to_16qam_rate": 0.0
+    }
+  },
+  "finite_logits_and_pipeline": true
+}

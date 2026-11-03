@@ -1,0 +1,22 @@
+[
+  {
+    "varying_payload": false,
+    "result": {
+      "eligible": true,
+      "median_similarity": 0.9712588576754022,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  },
+  {
+    "varying_payload": true,
+    "result": {
+      "eligible": false,
+      "median_similarity": 0.022619540358397028,
+      "frames": 4,
+      "threshold": 0.8,
+      "scope": "experimental gate; synthetic validation only"
+    }
+  }
+]

@@ -1,0 +1,61 @@
+# Tiny FULL experiment config used to rehearse the complete V3.2 pipeline:
+# ablation -> selection -> multi-seed -> aggregate -> gate -> package.
+#
+# Unlike qam_aware_v3_2_smoke.yaml (a one-level override of the formal config),
+# this file is a full experiment (it carries baseline_config + model), so it can
+# itself be the ``experiment_config`` of an ablation override or a per-seed
+# override without the loader's single level of indirection failing to find
+# ``model``.
+baseline_config: configs/baseline.yaml
+output_root: outputs/qam_aware_v3_2/smoke
+v2_checkpoint: init/v2_time_power_phase_best.pt
+
+model_contract:
+  iq_channels: 2
+  physical_channels: 3
+  sample_length: 1024
+  class_order: [BPSK, QPSK, 8PSK, 16QAM, 64QAM, 2FSK, CPFSK, OFDM]
+
+model:
+  simulate_hardware_inputs: false
+  time_base_channels: 22
+  physical_base_channels: 8
+  fusion_features: 64
+  dropout: 0.1
+  delta_hidden: 16
+  moment_order: 4
+
+dataset:
+  train_samples: 512
+  val_samples: 256
+  test_samples: 256
+  snr_values: [0, 10, 20]
+  num_workers: 0
+
+training:
+  epochs: 2
+  batch_size: 32
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  scheduler: cosine
+  early_stopping_patience: 2
+  min_delta: 0.0001
+  minimum_epochs_before_stopping: 1
+  checkpoint_metric: val_macro_f1
+  checkpoint_mode: max
+  class_weights: {BPSK: 1.0, QPSK: 1.0, 8PSK: 1.0, 16QAM: 1.0, 64QAM: 1.0, 2FSK: 1.0, CPFSK: 1.0, OFDM: 1.0}
+  label_smoothing: 0.0
+  gradient_clip_norm: 5.0
+  amp: false
+  distillation: {enabled: true, temperature: 4.0, alpha: 0.7}
+
+evaluation:
+  batch_size: 64
+  samples_per_modulation_per_snr: 4
+  snr_values: [0, 10, 20]
+
+final_blind_test:
+  seed: 26093032
+  split: v3_2_final_blind_test
+  samples: 16800

@@ -1,0 +1,60 @@
+{
+  "name": "sweep6",
+  "denominator": 6,
+  "correct": 6,
+  "missing": 0,
+  "minimum_correct": 6,
+  "clock_drift_ns": -80620,
+  "rows": [
+    {
+      "index": 0,
+      "expected": 23,
+      "pred": 23,
+      "chosen_frame": 19,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 1,
+      "expected": 19,
+      "pred": 19,
+      "chosen_frame": 30,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 2,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 41,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 3,
+      "expected": 17,
+      "pred": 17,
+      "chosen_frame": 52,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 4,
+      "expected": 14,
+      "pred": 14,
+      "chosen_frame": 63,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 5,
+      "expected": 20,
+      "pred": 20,
+      "chosen_frame": 74,
+      "correct": true,
+      "missing": false
+    }
+  ],
+  "candidate_identity_sha256": "d3259ebbcdbd4a919461b501210f1219e0e65a4962923be305d480c73bb65ba7",
+  "gate_pass": true
+}

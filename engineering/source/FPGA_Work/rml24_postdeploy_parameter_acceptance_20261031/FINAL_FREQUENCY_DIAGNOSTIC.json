@@ -1,0 +1,33 @@
+{
+  "rows": [
+    {
+      "mhz": "2398",
+      "expected": 3,
+      "valid": 5,
+      "correct": 5,
+      "preds": [
+        3
+      ]
+    },
+    {
+      "mhz": "2400",
+      "expected": 4,
+      "valid": 14,
+      "correct": 14,
+      "preds": [
+        4
+      ]
+    },
+    {
+      "mhz": "2403.6",
+      "expected": 3,
+      "valid": 14,
+      "correct": 14,
+      "preds": [
+        3
+      ]
+    }
+  ],
+  "post_only_clock_mapping": true,
+  "formal_accuracy_claim": false
+}

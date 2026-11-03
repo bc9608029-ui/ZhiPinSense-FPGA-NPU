@@ -1,0 +1,9 @@
+SELFTEST PASS: auto happy path uses fpga
+SELFTEST PASS: version mismatch falls back to software
+SELFTEST PASS: bad config falls back
+SELFTEST PASS: timeout falls back
+SELFTEST PASS: overflow falls back
+SELFTEST PASS: frame-not-committed falls back
+SELFTEST PASS: generation change falls back (no stale fpga result)
+SELFTEST PASS: sample-count mismatch falls back
+SELFTEST_FPGA_BACKEND PASS failures=0

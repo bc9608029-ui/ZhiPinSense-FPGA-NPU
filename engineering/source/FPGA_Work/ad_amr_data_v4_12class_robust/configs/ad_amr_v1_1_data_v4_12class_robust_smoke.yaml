@@ -1,0 +1,28 @@
+# data-v4 鲁棒性增强 CPU smoke（离线 wiring 验证，不跑真训练）。
+# init_checkpoint 由 smoke 测试写入一个合成十二类 checkpoint；蒸馏关闭以加速并避免
+# 教师依赖；仅验证 train-only 增强接线 + init-from-checkpoint + 低 LR + 1 轮。
+_base: configs/ad_amr_v1_1_data_v4_12class_robust.yaml
+
+device: cpu
+output_root: outputs/ad_amr_v1_1_data_v4_12class_robust/smoke
+
+robust:
+  init_checkpoint: outputs/ad_amr_v1_1_data_v4_12class_robust/smoke/init_checkpoint.pt
+
+dataset:
+  train_samples: 252
+  val_samples: 252
+  num_workers: 0
+
+training:
+  epochs: 2
+  batch_size: 32
+  minimum_epochs_before_stopping: 2
+  early_stopping_patience: 2
+  distillation:
+    enabled: false
+
+evaluation:
+  batch_size: 64
+  samples: 252
+  ood_samples: 126

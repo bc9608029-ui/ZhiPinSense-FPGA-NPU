@@ -1,0 +1,10 @@
+{
+  "status": "INVALID_SWEEP_MONOTONIC_TELEMETRY_NOT_ZERO_RF_ACCURACY",
+  "real_valid_captures": 72,
+  "zero_monotonic_records": 473,
+  "original_score_preserved": "SCORE.json",
+  "cause": "ContinuousSweep.probe returns its own capture wall timestamp; first telemetry patch did not propagate paired monotonic timestamp from this delegated path",
+  "owner": "Current integration patch omission, acknowledged and corrected",
+  "new_patch": "E:/FPGA_Work/rml24_history_sweep_fix2_20261031/SWEEP_TIMING_PATCH.json",
+  "action": "Reject missing actual timestamps; true short test of continuous scan path before new sweep24"
+}

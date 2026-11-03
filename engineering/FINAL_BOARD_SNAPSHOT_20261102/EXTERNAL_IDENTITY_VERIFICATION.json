@@ -1,0 +1,10 @@
+{
+  "method": "User executed sha256sum through COM12 and pasted output; no new RF test",
+  "expected_and_observed": {
+    "/root/amr_rescue_20261025/build/npu_stream": "cc88cb0bf5cde766937d011978314b7dafd1122d0f18e1cbda731ec2f7a440d8",
+    "/root/rml24_fpga_shared_owner_20261031/build/npu_stream_shared": "7b185cad8aaf526344a36666a90071e59577a2fa1488a7f8f0523ce437bc0af9",
+    "/root/realrf_finetune_pilot1_test_1773373090/model_rml24_bf16/rml24_adamrv11_bf16.json": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+    "/root/realrf_finetune_pilot1_test_1773373090/model_rml24_bf16/rml24_adamrv11_bf16.raw": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151"
+  },
+  "all_four_match": true
+}

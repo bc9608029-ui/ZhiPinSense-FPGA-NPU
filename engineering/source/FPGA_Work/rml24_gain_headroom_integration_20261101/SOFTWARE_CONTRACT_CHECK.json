@@ -1,0 +1,10 @@
+{
+  "scope": "Callback software contract only, not RF qualification",
+  "passed": [
+    "safe_capture_identity_no_extra_io",
+    "saturation_backoff_reacquires",
+    "native_minimum_never_exceeded",
+    "bounded_reacquisition",
+    "hardware_write_readback_failure_propagates"
+  ]
+}

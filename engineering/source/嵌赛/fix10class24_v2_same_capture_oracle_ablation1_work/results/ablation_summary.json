@@ -1,0 +1,140 @@
+{
+  "production_e2e": {
+    "rf_fix2_target": {
+      "gate_pass": "23/24",
+      "label_correct": "1/24",
+      "agree_baseline": "1/24"
+    },
+    "rf_independent_v2": {
+      "gate_pass": "0/24",
+      "label_correct": "0/24",
+      "agree_baseline": "0/24"
+    }
+  },
+  "oracle_levels": {
+    "rf_fix2_target": {
+      "O0": {
+        "agree": 2,
+        "agree_frac": 0.08333333333333333,
+        "label": 2,
+        "label_frac": 0.08333333333333333,
+        "nmse_median": 13.030554879370932,
+        "nmse_max": 15.882737625255901,
+        "nrmse_median": 3.6097667825774433,
+        "nrmse_max": 3.9853152479140093
+      },
+      "O1": {
+        "agree": 2,
+        "agree_frac": 0.08333333333333333,
+        "label": 2,
+        "label_frac": 0.08333333333333333,
+        "nmse_median": 13.030554879370932,
+        "nmse_max": 15.882737625255901,
+        "nrmse_median": 3.6097667825774433,
+        "nrmse_max": 3.9853152479140093
+      },
+      "O2": {
+        "agree": 2,
+        "agree_frac": 0.08333333333333333,
+        "label": 2,
+        "label_frac": 0.08333333333333333,
+        "nmse_median": 10.865531380906218,
+        "nmse_max": 24.074214864961004,
+        "nrmse_median": 3.2962387191697258,
+        "nrmse_max": 4.906548161891515
+      },
+      "O3": {
+        "agree": 5,
+        "agree_frac": 0.20833333333333334,
+        "label": 6,
+        "label_frac": 0.25,
+        "nmse_median": 0.5761934902807554,
+        "nmse_max": 0.7570201040410857,
+        "nrmse_median": 0.7590470009456578,
+        "nrmse_max": 0.8700690225729714
+      },
+      "O4": {
+        "agree": 4,
+        "agree_frac": 0.16666666666666666,
+        "label": 4,
+        "label_frac": 0.16666666666666666,
+        "nmse_median": 0.36408070881472576,
+        "nmse_max": 0.43183227051317935,
+        "nrmse_median": 0.6033882523191605,
+        "nrmse_max": 0.6571394604748518
+      },
+      "O5": {
+        "agree": 5,
+        "agree_frac": 0.20833333333333334,
+        "label": 5,
+        "label_frac": 0.20833333333333334,
+        "nmse_median": 0.36087275144427167,
+        "nmse_max": 0.448969926669819,
+        "nrmse_median": 0.600722520739009,
+        "nrmse_max": 0.67005218204989
+      }
+    },
+    "rf_independent_v2": {
+      "O0": {
+        "agree": 1,
+        "agree_frac": 0.041666666666666664,
+        "label": 1,
+        "label_frac": 0.041666666666666664,
+        "nmse_median": 18.576581022743568,
+        "nmse_max": 43.99947940499407,
+        "nrmse_median": 4.309950066764337,
+        "nrmse_max": 6.633210339269671
+      },
+      "O1": {
+        "agree": 1,
+        "agree_frac": 0.041666666666666664,
+        "label": 1,
+        "label_frac": 0.041666666666666664,
+        "nmse_median": 18.576581022743568,
+        "nmse_max": 41.8948985014596,
+        "nrmse_median": 4.309950066764337,
+        "nrmse_max": 6.4726268625234065
+      },
+      "O2": {
+        "agree": 2,
+        "agree_frac": 0.08333333333333333,
+        "label": 2,
+        "label_frac": 0.08333333333333333,
+        "nmse_median": 14.383789936325979,
+        "nmse_max": 45.544637031876896,
+        "nrmse_median": 3.7925609366927753,
+        "nrmse_max": 6.748676687460802
+      },
+      "O3": {
+        "agree": 2,
+        "agree_frac": 0.08333333333333333,
+        "label": 2,
+        "label_frac": 0.08333333333333333,
+        "nmse_median": 4.545798976898505,
+        "nmse_max": 17.6786698606229,
+        "nrmse_median": 2.1293977906209456,
+        "nrmse_max": 4.204601034655119
+      },
+      "O4": {
+        "agree": 2,
+        "agree_frac": 0.08333333333333333,
+        "label": 2,
+        "label_frac": 0.08333333333333333,
+        "nmse_median": 0.6902427768454047,
+        "nmse_max": 0.9429116929189079,
+        "nrmse_median": 0.8306524004642644,
+        "nrmse_max": 0.9710364014386422
+      },
+      "O5": {
+        "agree": 2,
+        "agree_frac": 0.08333333333333333,
+        "label": 2,
+        "label_frac": 0.08333333333333333,
+        "nmse_median": 1.4405648503365818,
+        "nmse_max": 5.066590011029057,
+        "nrmse_median": 1.2002085999193568,
+        "nrmse_max": 2.2509087078398045
+      }
+    }
+  }
+}

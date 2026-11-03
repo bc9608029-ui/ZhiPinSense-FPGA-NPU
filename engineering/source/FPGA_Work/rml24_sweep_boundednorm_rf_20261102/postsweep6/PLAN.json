@@ -1,0 +1,45 @@
+{
+  "status": "FROZEN_SWEEP_ONLY_RF_VALIDATION",
+  "candidate": "/root/rml24_sweep_boundednorm_20261102/candidate",
+  "candidate_hashes": {
+    "evidence/CANDIDATE_SOURCE_IDENTITY.json": "cca2b8b55214698df4e226ee5949dad46e6a2a854406d8820eceb8a0d0325d2a",
+    "candidate/rml24_final/board_runtime/receiver_repeat_mean_gapfix1.py": "f4435a0383f6e00d96acedea6cac8a913681bd4f8d1b9c07bd772da8205bb7f6",
+    "candidate/rml24_final/board_runtime/gain_freeze_radio.py": "8d4160b38ef33cc607a080d5d1fbcab61ef0d15c12e8c49ba8998120b489d416"
+  },
+  "bit_sha256": "f42dd12f03bf81c65978b7034b45808efd5035f6a358cc54710f2404530a057c",
+  "worker_sha256": "7b185cad8aaf526344a36666a90071e59577a2fa1488a7f8f0523ce437bc0af9",
+  "model_unchanged": true,
+  "eight_repeats_unchanged": true,
+  "rx_profile": "slowAGC settle3x16384 then freeze,5MHz; no temporal weak combining",
+  "sample_rate": 2560000,
+  "truth_sha256": "20dbeeefa914b93ac5148b0165435409b7d8d59971de000aa64f9843cb44ac30",
+  "warmup_sec": 40,
+  "mute_sec": 8,
+  "gap_sec": 0.25,
+  "gain_db": -40,
+  "runs": [
+    {
+      "name": "postsweep6",
+      "mode": "CONTINUOUS_SCAN",
+      "n": 6,
+      "hz": 2403600000,
+      "hold": 40,
+      "minimum_correct": 6
+    }
+  ],
+  "scoring": "first eligible capture TXstart+1.5s..TXend-.3s; rejects/missing/wrong fail; SWEEP scheduled LO within1.152MHz and final center within10kHz; wide13 coordinated tuning not blind search",
+  "promotion": "No deployment until scope equivalence, new RF and original full-mode evidence audited",
+  "scope": "existing frozen240 waveforms, not unseen waveform generalization; sustained cyclic signals, not isolated bursts",
+  "estimated_minutes": [
+    75,
+    90
+  ],
+  "candidate_scope": "Bounded power calibration only CONTINUOUS_SCAN, other modes unchanged",
+  "prior_full_regression_reference": {
+    "fixed240": 235,
+    "search240": 237,
+    "sweep24": 24,
+    "wide13": 13
+  },
+  "storage_policy": "No raw capture; preflight1.1GiB retains1GiB official reserve plus100MiB for <10MiB expected compact logs. Preserve all archived diagnostic data."
+}

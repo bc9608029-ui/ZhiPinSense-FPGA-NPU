@@ -1,0 +1,48 @@
+{
+  "byte_identical": 0,
+  "corr_median": 0.9999999801335,
+  "corr_min": 0.999999979012,
+  "frames": 480,
+  "nmse_max": 4.204e-08,
+  "prediction_consistency": {
+    "correct": 419,
+    "diverge_vs_arm_a": 0,
+    "finite": 480,
+    "frames": 480,
+    "per_class": {
+      "128APSK": "15/20",
+      "128QAM": "15/20",
+      "16APSK": "19/20",
+      "16PSK": "16/20",
+      "16QAM": "16/20",
+      "256QAM": "19/20",
+      "32APSK": "17/20",
+      "32PSK": "17/20",
+      "32QAM": "16/20",
+      "4ASK": "17/20",
+      "64APSK": "15/20",
+      "64QAM": "15/20",
+      "8ASK": "18/20",
+      "8PSK": "18/20",
+      "AM-DSB-SC": "16/20",
+      "AM-DSB-WC": "19/20",
+      "AM-SSB-SC": "16/20",
+      "AM-SSB-WC": "16/20",
+      "BPSK": "20/20",
+      "FM": "20/20",
+      "GMSK": "20/20",
+      "OOK": "20/20",
+      "OQPSK": "20/20",
+      "QPSK": "19/20"
+    },
+    "per_snr": {
+      "0": "68/120",
+      "10": "118/120",
+      "20": "117/120",
+      "30": "116/120"
+    }
+  },
+  "predictions_computed": true,
+  "recovery_assumption": "DIGITAL_IDENTITY_ASSUMED (wide-linear/CFO/timing \u5f85\u677f\u7aef\u9a8c\u8bc1)",
+  "token": "M29-RML24-FIX10CLASS24-ORIGINAL-RADIOML-DUALSDR-AB1-DIGITAL-ROUNDTRIP"
+}

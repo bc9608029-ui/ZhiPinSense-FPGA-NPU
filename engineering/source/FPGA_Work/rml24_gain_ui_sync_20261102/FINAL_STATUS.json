@@ -1,0 +1,320 @@
+{
+  "status": "DEPLOYED_AND_VERIFIED",
+  "board": {
+    "post_sweep_rf": {
+      "correct": 6,
+      "denominator": 6,
+      "missing": 0,
+      "clock_drift_ns": -4216830,
+      "rows": [
+        {
+          "index": 0,
+          "expected": 23,
+          "pred": 23,
+          "correct": true,
+          "missing": false,
+          "calibration": {
+            "applied": true,
+            "input_power": 1.0208507776260376,
+            "scale": 0.9897348622103568,
+            "power_window": [
+              0.8,
+              1.25
+            ]
+          }
+        },
+        {
+          "index": 1,
+          "expected": 19,
+          "pred": 19,
+          "correct": true,
+          "missing": false,
+          "calibration": {
+            "applied": true,
+            "input_power": 1.038719654083252,
+            "scale": 0.9811848309191856,
+            "power_window": [
+              0.8,
+              1.25
+            ]
+          }
+        },
+        {
+          "index": 2,
+          "expected": 3,
+          "pred": 3,
+          "correct": true,
+          "missing": false,
+          "calibration": {
+            "applied": true,
+            "input_power": 0.9746260046958923,
+            "scale": 1.0129336587592155,
+            "power_window": [
+              0.8,
+              1.25
+            ]
+          }
+        },
+        {
+          "index": 3,
+          "expected": 17,
+          "pred": 17,
+          "correct": true,
+          "missing": false,
+          "calibration": {
+            "applied": false,
+            "input_power": 136.29373168945312,
+            "scale": 1.0,
+            "power_window": [
+              0.8,
+              1.25
+            ]
+          }
+        },
+        {
+          "index": 4,
+          "expected": 14,
+          "pred": 14,
+          "correct": true,
+          "missing": false,
+          "calibration": {
+            "applied": true,
+            "input_power": 1.014636516571045,
+            "scale": 0.9927611095987089,
+            "power_window": [
+              0.8,
+              1.25
+            ]
+          }
+        },
+        {
+          "index": 5,
+          "expected": 20,
+          "pred": 20,
+          "correct": true,
+          "missing": false,
+          "calibration": {
+            "applied": true,
+            "input_power": 0.9208250641822815,
+            "scale": 1.0421048905375938,
+            "power_window": [
+              0.8,
+              1.25
+            ]
+          }
+        }
+      ]
+    },
+    "deployed": true,
+    "release": "/opt/rml24-integrated/releases/gain_ui_sync_20261102",
+    "previous": "/opt/rml24-integrated/releases/range_20261101",
+    "software_restart_verified": true,
+    "physical_cold_boot_pending": true,
+    "health": {
+      "ready": true,
+      "run": "/var/log/rml24-integrated/rcf9a75ff2736",
+      "alive": {
+        "npu": true,
+        "ui": true,
+        "rx": true
+      },
+      "release": "/opt/rml24-integrated/releases/gain_ui_sync_20261102"
+    },
+    "post_rf": {
+      "correct": 24,
+      "denominator": 24,
+      "missing": 0,
+      "clock_drift_ns": -5691960,
+      "rows": [
+        {
+          "index": 0,
+          "expected": 8,
+          "pred": 8,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 1,
+          "expected": 5,
+          "pred": 5,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 2,
+          "expected": 19,
+          "pred": 19,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 3,
+          "expected": 16,
+          "pred": 16,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 4,
+          "expected": 21,
+          "pred": 21,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 5,
+          "expected": 3,
+          "pred": 3,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 6,
+          "expected": 9,
+          "pred": 9,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 7,
+          "expected": 7,
+          "pred": 7,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 8,
+          "expected": 0,
+          "pred": 0,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 9,
+          "expected": 11,
+          "pred": 11,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 10,
+          "expected": 20,
+          "pred": 20,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 11,
+          "expected": 1,
+          "pred": 1,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 12,
+          "expected": 6,
+          "pred": 6,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 13,
+          "expected": 17,
+          "pred": 17,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 14,
+          "expected": 13,
+          "pred": 13,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 15,
+          "expected": 2,
+          "pred": 2,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 16,
+          "expected": 14,
+          "pred": 14,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 17,
+          "expected": 15,
+          "pred": 15,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 18,
+          "expected": 18,
+          "pred": 18,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 19,
+          "expected": 22,
+          "pred": 22,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 20,
+          "expected": 10,
+          "pred": 10,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 21,
+          "expected": 4,
+          "pred": 4,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 22,
+          "expected": 12,
+          "pred": 12,
+          "correct": true,
+          "missing": false
+        },
+        {
+          "index": 23,
+          "expected": 23,
+          "pred": 23,
+          "correct": true,
+          "missing": false
+        }
+      ]
+    },
+    "candidate_identity_sha256": "d960b668f1298962ec230db661fbcf2f7881206ba49c1ceb4d39dc25518c611b",
+    "model_bit_public_frame_unchanged": true
+  },
+  "pc": {
+    "deployed_launcher": true,
+    "legacy_entry": "E:\\FPGA_Work\\rml24_range_expansion_20261101\\START_TX_CONSOLE.cmd",
+    "new_entry": "E:\\FPGA_Work\\rml24_gain_ui_sync_20261102\\START_TX_CONSOLE.cmd",
+    "original_backup": "E:\\FPGA_Work\\rml24_gain_ui_sync_20261102\\deployment\\PREVIOUS_TX_LAUNCHER.cmd",
+    "original_sha256": "bf829b8791591d8500241ef975851e771a32a21f57cd9031cc80f7cc028ceb6b",
+    "new_launcher_sha256": "a0b5e962ac36b544b96775979a9d9dda5080b8f162b2b216ccc94dbbd0971b34",
+    "radio_not_opened_by_launcher_update": true
+  },
+  "physical_ui": {
+    "user_confirmed_clear_ui": true,
+    "user_confirmed_actual_rx_gain_display": true,
+    "user_observed_gain_db": 60,
+    "confirmation_source": "User reply during deployment RF in this chat",
+    "physical_cold_boot_verified": false
+  },
+  "cold_boot_pending": true,
+  "utc": "2026-11-01T17:39:48.533423Z"
+}

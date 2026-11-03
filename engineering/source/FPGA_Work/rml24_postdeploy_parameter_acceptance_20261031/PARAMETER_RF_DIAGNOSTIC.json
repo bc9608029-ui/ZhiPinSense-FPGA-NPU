@@ -1,0 +1,286 @@
+{
+  "clock_mapping": "post_only_not_formal_pre_post_validation",
+  "rows": [
+    {
+      "session": "session_1793499963273022800",
+      "case": {
+        "class_index": 3,
+        "bank": 0,
+        "message": 1,
+        "mhz": "2400",
+        "gain": -40,
+        "diagnostic_only": false,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793499963273022800\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 18,
+      "correct": 18,
+      "preds": [
+        3
+      ],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793499963273022800",
+      "case": {
+        "class_index": 3,
+        "bank": 0,
+        "message": 1,
+        "mhz": "2400",
+        "gain": -50,
+        "diagnostic_only": true,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793499963273022800\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 19,
+      "correct": 19,
+      "preds": [
+        3
+      ],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793499963273022800",
+      "case": {
+        "class_index": 3,
+        "bank": 1,
+        "message": 1,
+        "mhz": "2400",
+        "gain": -40,
+        "diagnostic_only": false,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793499963273022800\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 18,
+      "correct": 18,
+      "preds": [
+        3
+      ],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793499963273022800",
+      "case": {
+        "class_index": 3,
+        "bank": 1,
+        "message": 1,
+        "mhz": "2400",
+        "gain": -50,
+        "diagnostic_only": true,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793499963273022800\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 17,
+      "correct": 17,
+      "preds": [
+        3
+      ],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793499963273022800",
+      "case": {
+        "class_index": 4,
+        "bank": 0,
+        "message": 1,
+        "mhz": "2400",
+        "gain": -40,
+        "diagnostic_only": false,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793499963273022800\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 18,
+      "correct": 18,
+      "preds": [
+        4
+      ],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793499963273022800",
+      "case": {
+        "class_index": 4,
+        "bank": 0,
+        "message": 1,
+        "mhz": "2400",
+        "gain": -50,
+        "diagnostic_only": true,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793499963273022800\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 18,
+      "correct": 18,
+      "preds": [
+        4
+      ],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793499963273022800",
+      "case": {
+        "class_index": 4,
+        "bank": 1,
+        "message": 1,
+        "mhz": "2400",
+        "gain": -40,
+        "diagnostic_only": false,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793499963273022800\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 17,
+      "correct": 17,
+      "preds": [
+        4
+      ],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793499963273022800",
+      "case": {
+        "class_index": 4,
+        "bank": 1,
+        "message": 1,
+        "mhz": "2400",
+        "gain": -50,
+        "diagnostic_only": true,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793499963273022800\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 16,
+      "correct": 16,
+      "preds": [
+        4
+      ],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793499963273022800",
+      "case": {
+        "class_index": 12,
+        "bank": 0,
+        "message": 1,
+        "mhz": "2400",
+        "gain": -40,
+        "diagnostic_only": false,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793499963273022800\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 17,
+      "correct": 17,
+      "preds": [
+        12
+      ],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793499963273022800",
+      "case": {
+        "class_index": 12,
+        "bank": 0,
+        "message": 1,
+        "mhz": "2400",
+        "gain": -50,
+        "diagnostic_only": true,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793499963273022800\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 17,
+      "correct": 17,
+      "preds": [
+        12
+      ],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793499963273022800",
+      "case": {
+        "class_index": 12,
+        "bank": 1,
+        "message": 1,
+        "mhz": "2400",
+        "gain": -40,
+        "diagnostic_only": false,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793499963273022800\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 17,
+      "correct": 17,
+      "preds": [
+        12
+      ],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793499963273022800",
+      "case": {
+        "class_index": 12,
+        "bank": 1,
+        "message": 1,
+        "mhz": "2400",
+        "gain": -50,
+        "diagnostic_only": true,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793499963273022800\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 16,
+      "correct": 16,
+      "preds": [
+        12
+      ],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793500134094180700",
+      "case": {
+        "class_index": 3,
+        "bank": 0,
+        "message": 1,
+        "mhz": "2398",
+        "gain": -40,
+        "diagnostic_only": false,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793500134094180700\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 0,
+      "correct": 0,
+      "preds": [],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793500134094180700",
+      "case": {
+        "class_index": 4,
+        "bank": 0,
+        "message": 1,
+        "mhz": "2400",
+        "gain": -40,
+        "diagnostic_only": false,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793500134094180700\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 3,
+      "correct": 3,
+      "preds": [
+        4
+      ],
+      "tx_restore": "READBACK_RESTORE_OK"
+    },
+    {
+      "session": "session_1793500134094180700",
+      "case": {
+        "class_index": 3,
+        "bank": 0,
+        "message": 1,
+        "mhz": "2403.6",
+        "gain": -40,
+        "diagnostic_only": false,
+        "source_sha_file": "E:\\FPGA_Work\\rml24_postdeploy_parameter_acceptance_20261031\\session_1793500134094180700\\source_sha.json",
+        "physical_ui_verified": false
+      },
+      "valid": 0,
+      "correct": 0,
+      "preds": [],
+      "tx_restore": "READBACK_RESTORE_OK"
+    }
+  ]
+}

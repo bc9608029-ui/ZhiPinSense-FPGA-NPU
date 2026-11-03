@@ -1,0 +1,226 @@
+{
+  "kind": "INDEPENDENT_TX_RX_FIRST_CAPTURE_SCORE",
+  "run": "smoke_fixed01",
+  "denominator": 24,
+  "correct": 23,
+  "missing": 0,
+  "clock_uncertainty_ms": 57,
+  "rows": [
+    {
+      "index": 0,
+      "file": "08_05.bin",
+      "label": 8,
+      "pred": 8,
+      "correct": true,
+      "chosen_frame": 50,
+      "eligible_count": 17
+    },
+    {
+      "index": 1,
+      "file": "15_04.bin",
+      "label": 15,
+      "pred": 15,
+      "correct": true,
+      "chosen_frame": 76,
+      "eligible_count": 17
+    },
+    {
+      "index": 2,
+      "file": "23_07.bin",
+      "label": 23,
+      "pred": 23,
+      "correct": true,
+      "chosen_frame": 100,
+      "eligible_count": 17
+    },
+    {
+      "index": 3,
+      "file": "06_08.bin",
+      "label": 6,
+      "pred": 6,
+      "correct": true,
+      "chosen_frame": 125,
+      "eligible_count": 17
+    },
+    {
+      "index": 4,
+      "file": "00_07.bin",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "chosen_frame": 150,
+      "eligible_count": 17
+    },
+    {
+      "index": 5,
+      "file": "22_04.bin",
+      "label": 22,
+      "pred": 22,
+      "correct": true,
+      "chosen_frame": 175,
+      "eligible_count": 17
+    },
+    {
+      "index": 6,
+      "file": "01_01.bin",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "chosen_frame": 200,
+      "eligible_count": 17
+    },
+    {
+      "index": 7,
+      "file": "12_05.bin",
+      "label": 12,
+      "pred": 12,
+      "correct": true,
+      "chosen_frame": 225,
+      "eligible_count": 16
+    },
+    {
+      "index": 8,
+      "file": "02_04.bin",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "chosen_frame": 250,
+      "eligible_count": 17
+    },
+    {
+      "index": 9,
+      "file": "11_01.bin",
+      "label": 11,
+      "pred": 11,
+      "correct": true,
+      "chosen_frame": 275,
+      "eligible_count": 16
+    },
+    {
+      "index": 10,
+      "file": "04_04.bin",
+      "label": 4,
+      "pred": 4,
+      "correct": true,
+      "chosen_frame": 299,
+      "eligible_count": 17
+    },
+    {
+      "index": 11,
+      "file": "05_00.bin",
+      "label": 5,
+      "pred": 5,
+      "correct": true,
+      "chosen_frame": 324,
+      "eligible_count": 17
+    },
+    {
+      "index": 12,
+      "file": "03_02.bin",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "chosen_frame": 349,
+      "eligible_count": 17
+    },
+    {
+      "index": 13,
+      "file": "13_09.bin",
+      "label": 13,
+      "pred": 13,
+      "correct": true,
+      "chosen_frame": 374,
+      "eligible_count": 17
+    },
+    {
+      "index": 14,
+      "file": "09_09.bin",
+      "label": 9,
+      "pred": 9,
+      "correct": true,
+      "chosen_frame": 399,
+      "eligible_count": 17
+    },
+    {
+      "index": 15,
+      "file": "14_01.bin",
+      "label": 14,
+      "pred": 14,
+      "correct": true,
+      "chosen_frame": 424,
+      "eligible_count": 17
+    },
+    {
+      "index": 16,
+      "file": "19_00.bin",
+      "label": 19,
+      "pred": 20,
+      "correct": false,
+      "chosen_frame": 449,
+      "eligible_count": 17
+    },
+    {
+      "index": 17,
+      "file": "10_09.bin",
+      "label": 10,
+      "pred": 10,
+      "correct": true,
+      "chosen_frame": 474,
+      "eligible_count": 17
+    },
+    {
+      "index": 18,
+      "file": "16_00.bin",
+      "label": 16,
+      "pred": 16,
+      "correct": true,
+      "chosen_frame": 499,
+      "eligible_count": 17
+    },
+    {
+      "index": 19,
+      "file": "21_00.bin",
+      "label": 21,
+      "pred": 21,
+      "correct": true,
+      "chosen_frame": 524,
+      "eligible_count": 17
+    },
+    {
+      "index": 20,
+      "file": "07_09.bin",
+      "label": 7,
+      "pred": 7,
+      "correct": true,
+      "chosen_frame": 549,
+      "eligible_count": 17
+    },
+    {
+      "index": 21,
+      "file": "20_05.bin",
+      "label": 20,
+      "pred": 20,
+      "correct": true,
+      "chosen_frame": 574,
+      "eligible_count": 17
+    },
+    {
+      "index": 22,
+      "file": "17_01.bin",
+      "label": 17,
+      "pred": 17,
+      "correct": true,
+      "chosen_frame": 599,
+      "eligible_count": 17
+    },
+    {
+      "index": 23,
+      "file": "18_03.bin",
+      "label": 18,
+      "pred": 18,
+      "correct": true,
+      "chosen_frame": 624,
+      "eligible_count": 17
+    }
+  ]
+}

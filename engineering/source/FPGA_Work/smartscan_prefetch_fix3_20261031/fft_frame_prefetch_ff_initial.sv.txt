@@ -1,0 +1,31 @@
+`timescale 1ns/1ps
+// Independent candidate: capture a complete windowed frame before realtime FFT.
+// Single buffer, backpressure between frames, no model/rounding/FFT config change.
+module fft_frame_prefetch(
+ input wire clk,rst_n, input wire [31:0] s_data,
+ input wire s_valid,output wire s_ready,input wire s_last,
+ output wire [31:0] m_data,output wire m_valid,input wire m_ready,
+ output wire m_last,output reg length_error);
+ reg [31:0] mem [0:1023];
+ reg [9:0] wr,rd;
+ reg draining;
+ assign s_ready=!draining;
+ assign m_valid=draining;
+ assign m_data=mem[rd];
+ assign m_last=draining && rd==1023;
+ always @(posedge clk or negedge rst_n) begin
+  if(!rst_n) begin wr<=0;rd<=0;draining<=0;length_error<=0;end
+  else begin
+   if(s_valid && s_ready) begin
+    mem[wr]<=s_data;
+    if(s_last != (wr==1023)) length_error<=1;
+    if(wr==1023) begin wr<=0;rd<=0;draining<=1;end
+    else wr<=wr+1'b1;
+   end
+   if(m_valid && m_ready) begin
+    if(rd==1023) begin rd<=0;draining<=0;end
+    else rd<=rd+1'b1;
+   end
+  end
+ end
+endmodule

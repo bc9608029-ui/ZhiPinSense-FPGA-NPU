@@ -1,0 +1,30 @@
+{
+  "model_name": "rml24_adamrv11_bf16",
+  "network_name": "model_24class",
+  "model_mode": "RML24-BF16-RAW",
+  "deployment_mode": "RAW24_UNMERGED",
+  "class_count": 24,
+  "source_checkpoint_sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+  "source_label_contract_sha256": "3e1382d1242a206dae3f73535deba30b461e8573889b60004db9d2ce055fa549",
+  "model_json_sha256": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+  "model_raw_sha256": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+  "params_bytes": 778732,
+  "params_md5": "0c9b60b82ea1f634469b598db45738fb",
+  "icraft_version": "v3.39.0",
+  "icraft_xir_version": "3.39.0.0",
+  "framework_kind": "ONNX",
+  "framework_version": "opset17",
+  "ai_target": "@zhuget(330)",
+  "quantization": {
+    "mode": "full_network_bf16_no_int8",
+    "storage_dtype_activation": "bf16/tf32",
+    "expressed_dtype": "fp32",
+    "int8_tensors": 0
+  },
+  "network_io": {
+    "input_shape": [1, 2, 1024],
+    "input_dtype": "fp32",
+    "output_shape": [1, 24],
+    "output_dtype": "fp32"
+  }
+}

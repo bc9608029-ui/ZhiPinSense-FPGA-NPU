@@ -1,0 +1,31 @@
+{
+  "built_note": "fix1v2-independent-rx-recovery-fix2 PATCH（A/B/C 三线 + 主线程收口），单层 gzip；基线 = fix1v2 board impl1 树；输入复用 v1/v2 tx_package（已冻结交付）",
+  "baseline": "fix10class24_fix1v2_board_impl1_work",
+  "tarball": "fix2_recovery_PATCH.tar.gz",
+  "sha256": "87f19167c8d04f8e9c09d38eb2a1dcdcbe7b0817670faa61c86f70eb60ac502f",
+  "bytes": 76647,
+  "members": [
+    "SHA256SUMS.txt",
+    "board_package/radioml_independent_rx_fft.hpp",
+    "board_package/radioml_independent_rx_public_recovery.hpp",
+    "board_package/radioml_independent_rx_runner.hpp",
+    "docs/BOARDTEST_FIX2.md",
+    "docs/RECOVERY_FIX2_BLINE_EFFICIENCY.md",
+    "docs/RECOVERY_FIX2_REPORT.md",
+    "host_tests/syntax_runner_template.cpp",
+    "host_tests/test_recovery_fix2.cpp",
+    "host_tests/test_sync_bench.cpp",
+    "host_tests/test_sync_fft_invariant.cpp",
+    "scripts/_build_bline.sh",
+    "scripts/a_line_interp_test.py",
+    "scripts/a_line_split_validation.py",
+    "scripts/diagnose_fix2_part2.py",
+    "scripts/export_fix2_cpp_reference.py",
+    "scripts/fix2_diagnosis.json",
+    "scripts/judge_radioml_independent_rx_board.py",
+    "scripts/package_fix2_recovery.py",
+    "scripts/radioml_independent_rx_recovery_fix2.py",
+    "scripts/reproduce_fix2_diagnosis.py",
+    "sdr_adapter/latency_stats.hpp"
+  ]
+}

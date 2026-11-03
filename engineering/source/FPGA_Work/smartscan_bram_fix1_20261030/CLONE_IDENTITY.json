@@ -1,0 +1,18 @@
+{
+  "original": "F:\\FPGA_Work\\sdr_full_chain_12class_smartscan_candidate_v1",
+  "candidate": "F:\\FPGA_Work\\smartscan_bram_fix1_20261030",
+  "copied": 870,
+  "changed_paths": [
+    "fpga\\m4_impl_bitgen_smartscan.tcl",
+    "fpga\\m5_procise_disable_icap_smartscan.tcl",
+    "fpga\\call_procise_disable_icap_smartscan.bat",
+    "fpga\\m3_synth_smartscan.tcl",
+    "fpga\\m4c_resume_route_smartscan.tcl",
+    "fpga\\npu_base\\fpai_demo_vivado.xpr",
+    "fpga\\smartscan_integration\\probe_read_edif.tcl",
+    "fpga\\smartscan_integration\\export_edif_z030.tcl",
+    "fpga\\smartscan_integration\\xfft_z030\\work_build\\smartscan_fft_z030.xpr"
+  ],
+  "buffer_before": "95aadd5b5b4796bb8b36c08de293eadd4d2f79def099ea0a813cbdd818da4f65",
+  "buffer_after": "10f0dc8ff21ccf7da5f5eb20892914e321e4b4a7faac688dc4fa22b2c62573ee"
+}

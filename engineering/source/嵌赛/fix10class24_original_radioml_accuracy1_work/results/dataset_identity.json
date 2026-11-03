@@ -1,0 +1,90 @@
+{
+  "checkpoint_path": "F:\\FPGA_Work\\24class_results\\rml24_seed2027_best.pt",
+  "checkpoint_sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+  "class_order": [
+    "OOK",
+    "4ASK",
+    "8ASK",
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16PSK",
+    "32PSK",
+    "16APSK",
+    "32APSK",
+    "64APSK",
+    "128APSK",
+    "16QAM",
+    "32QAM",
+    "64QAM",
+    "128QAM",
+    "256QAM",
+    "AM-SSB-WC",
+    "AM-SSB-SC",
+    "AM-DSB-WC",
+    "AM-DSB-SC",
+    "FM",
+    "GMSK",
+    "OQPSK"
+  ],
+  "hdf5_X_dtype": "float32",
+  "hdf5_X_shape": [
+    2555904,
+    1024,
+    2
+  ],
+  "hdf5_Y_shape": [
+    2555904,
+    24
+  ],
+  "hdf5_Z_shape": [
+    2555904,
+    1
+  ],
+  "hdf5_mtime_ns": 1791042816000000000,
+  "hdf5_path": "F:\\datasets\\RadioML2018\\GOLD_XYZ_OSC.0001_1024.hdf5",
+  "hdf5_samples": 2555904,
+  "hdf5_sha256": "e3dd0bef66a3426959ee66a1709a8c0a95d4f8395d18aaf6f1214bdbc763bd38",
+  "hdf5_sha_method": "audit.json (frozen at data-audit) + size + mtime_ns; full rehash skipped for 21 GiB",
+  "hdf5_size_bytes": 21449148312,
+  "snr_grid": [
+    -20,
+    -18,
+    -16,
+    -14,
+    -12,
+    -10,
+    -8,
+    -6,
+    -4,
+    -2,
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30
+  ],
+  "split_counts": {
+    "test": 511680,
+    "train": 1533168,
+    "validation": 511056
+  },
+  "split_index_sha256": "9a035841baef299ac918ae64294d59ba2298c5f20852862d3dd4069547330335",
+  "split_ratios": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "split_seed": 20261003
+}

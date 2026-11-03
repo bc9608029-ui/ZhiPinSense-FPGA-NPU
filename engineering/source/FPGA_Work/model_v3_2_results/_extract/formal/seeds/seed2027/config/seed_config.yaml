@@ -1,0 +1,17 @@
+experiment_config: configs/qam_aware_v3_2.yaml
+seed: 2027
+output_root: outputs/qam_aware_v3_2/formal/seeds/seed2027
+training:
+  distillation:
+    enabled: true
+    temperature: 4.0
+    alpha: 0.7
+  class_weights:
+    BPSK: 1.0
+    QPSK: 1.0
+    8PSK: 1.0
+    16QAM: 1.1
+    64QAM: 1.1
+    2FSK: 1.0
+    CPFSK: 1.0
+    OFDM: 1.0

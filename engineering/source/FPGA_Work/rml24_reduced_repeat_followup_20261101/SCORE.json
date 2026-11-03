@@ -1,0 +1,538 @@
+[
+  {
+    "mode": "gainfreeze",
+    "denominator": 48,
+    "correct": 46,
+    "missing": 0,
+    "rows": [
+      {
+        "expected": 8,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6691325926710,
+          "ok": true,
+          "pred": 8,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 3,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6695246732680,
+          "ok": true,
+          "pred": 3,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 5,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6700257319380,
+          "ok": true,
+          "pred": 5,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 1,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6704056364700,
+          "ok": true,
+          "pred": 1,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 10,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6707826457010,
+          "ok": true,
+          "pred": 10,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 22,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6711556340060,
+          "ok": true,
+          "pred": 22,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 19,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6716696385160,
+          "ok": true,
+          "pred": 19,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 17,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6720676654690,
+          "ok": true,
+          "pred": 17,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 17,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6724907442300,
+          "ok": true,
+          "pred": 18,
+          "repeat": 1.0
+        },
+        "correct": false
+      },
+      {
+        "expected": 16,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6728746835750,
+          "ok": true,
+          "pred": 16,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 4,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6732626899200,
+          "ok": true,
+          "pred": 4,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 15,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6736557387090,
+          "ok": true,
+          "pred": 15,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 19,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6740446774690,
+          "ok": true,
+          "pred": 19,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 20,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6744516851700,
+          "ok": true,
+          "pred": 20,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 0,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6748677180440,
+          "ok": true,
+          "pred": 0,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 21,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6752758124880,
+          "ok": true,
+          "pred": 21,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 4,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6756577281590,
+          "ok": true,
+          "pred": 4,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 10,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6760357172970,
+          "ok": true,
+          "pred": 10,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 0,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6765627653080,
+          "ok": true,
+          "pred": 0,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 8,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6769447494480,
+          "ok": true,
+          "pred": 8,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 9,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6773267603840,
+          "ok": true,
+          "pred": 9,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 7,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6777187601990,
+          "ok": true,
+          "pred": 7,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 23,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6781167750710,
+          "ok": true,
+          "pred": 23,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 2,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6785107823730,
+          "ok": true,
+          "pred": 2,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 1,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6789107905140,
+          "ok": true,
+          "pred": 1,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 5,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6793167801560,
+          "ok": true,
+          "pred": 5,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 21,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6797168077420,
+          "ok": true,
+          "pred": 21,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 11,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6802367921120,
+          "ok": true,
+          "pred": 11,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 18,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6806498219800,
+          "ok": true,
+          "pred": 18,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 22,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6810598096610,
+          "ok": true,
+          "pred": 22,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 14,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6813308291230,
+          "ok": true,
+          "pred": 14,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 3,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6818588264520,
+          "ok": true,
+          "pred": 3,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 18,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6822598507730,
+          "ok": true,
+          "pred": 18,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 9,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6826518594700,
+          "ok": true,
+          "pred": 9,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 6,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6830448410740,
+          "ok": true,
+          "pred": 6,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 13,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6834318719520,
+          "ok": true,
+          "pred": 13,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 20,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6838158556440,
+          "ok": true,
+          "pred": 16,
+          "repeat": 1.0
+        },
+        "correct": false
+      },
+      {
+        "expected": 15,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6842199505060,
+          "ok": true,
+          "pred": 15,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 2,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6846258934400,
+          "ok": true,
+          "pred": 2,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 14,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6850248996870,
+          "ok": true,
+          "pred": 14,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 12,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6854239090250,
+          "ok": true,
+          "pred": 12,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 23,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6858209187780,
+          "ok": true,
+          "pred": 23,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 12,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6862409051430,
+          "ok": true,
+          "pred": 12,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 13,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6866579309430,
+          "ok": true,
+          "pred": 13,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 6,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6870989405960,
+          "ok": true,
+          "pred": 6,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 16,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6875139482090,
+          "ok": true,
+          "pred": 16,
+          "repeat": 8.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 7,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6879309511330,
+          "ok": true,
+          "pred": 7,
+          "repeat": 1.0
+        },
+        "correct": true
+      },
+      {
+        "expected": 11,
+        "chosen": {
+          "mode": "gainfreeze",
+          "m": 6883149491650,
+          "ok": true,
+          "pred": 11,
+          "repeat": 1.0
+        },
+        "correct": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,217 @@
+{
+  "status": "PAUSED_AT_USER_REQUEST_AFTER_COMPLETED_RF_VALIDATION",
+  "scores": {
+    "candidate_fixed02": {
+      "kind": "FROZEN_REPEAT_MEAN_V1_NEW_RF_SAME_EXISTING_240_SOURCES",
+      "run": "candidate_fixed02",
+      "denominator": 240,
+      "correct": 235,
+      "missing": 0,
+      "clock_uncertainty_ms": 54.5
+    },
+    "candidate_scan01": {
+      "kind": "FROZEN_REPEAT_MEAN_V1_NEW_RF_SAME_EXISTING_240_SOURCES",
+      "run": "candidate_scan01",
+      "denominator": 240,
+      "correct": 230,
+      "missing": 4,
+      "clock_uncertainty_ms": 57
+    }
+  },
+  "gate": {
+    "verdict": "DO_NOT_PROMOTE",
+    "reasons": [
+      "scan:missing",
+      "scan:regression"
+    ],
+    "note": "Decision only; UI, source freeze and user approval remain separate requirements"
+  },
+  "checks": [
+    {
+      "check": "frozen_manifest_identity",
+      "passed": true
+    },
+    {
+      "check": "local_source:repeat_mean_candidate.py",
+      "passed": true
+    },
+    {
+      "check": "local_source:receiver_repeat_mean_v1.py",
+      "passed": true
+    },
+    {
+      "check": "local_source:run_repeat_mean_v1.sh",
+      "passed": true
+    },
+    {
+      "check": "local_source:strict_promotion_gate.py",
+      "passed": true
+    },
+    {
+      "check": "local_source:rml24_adamrv11_bf16.json",
+      "passed": true
+    },
+    {
+      "check": "local_source:rml24_adamrv11_bf16.raw",
+      "passed": true
+    },
+    {
+      "check": "local_source:candidate_two_dc.py",
+      "passed": true
+    },
+    {
+      "check": "local_source:receiver_core.py",
+      "passed": true
+    },
+    {
+      "check": "board_source:repeat_mean_candidate.py",
+      "passed": true
+    },
+    {
+      "check": "board_source:receiver_repeat_mean_v1.py",
+      "passed": true
+    },
+    {
+      "check": "board_source:run_repeat_mean_v1.sh",
+      "passed": true
+    },
+    {
+      "check": "baseline_unit:rml24-ui.service",
+      "passed": true
+    },
+    {
+      "check": "baseline_unit:rml24-receiver.service",
+      "passed": true
+    },
+    {
+      "check": "candidate_fixed02:fixed_denominator",
+      "passed": true
+    },
+    {
+      "check": "candidate_fixed02:rx_restore",
+      "passed": true
+    },
+    {
+      "check": "candidate_fixed02:ui_delivery",
+      "passed": true
+    },
+    {
+      "check": "candidate_fixed02:identical_repeated_input_predictions",
+      "passed": true,
+      "frame_ids": []
+    },
+    {
+      "check": "candidate_scan01:fixed_denominator",
+      "passed": true
+    },
+    {
+      "check": "candidate_scan01:rx_restore",
+      "passed": true
+    },
+    {
+      "check": "candidate_scan01:ui_delivery",
+      "passed": true
+    },
+    {
+      "check": "candidate_scan01:identical_repeated_input_predictions",
+      "passed": true,
+      "frame_ids": []
+    },
+    {
+      "check": "baseline_restoration",
+      "passed": true
+    }
+  ],
+  "passed": 23,
+  "total": 23,
+  "production_promoted": false,
+  "per_class_changes": [
+    {
+      "run": "candidate_fixed02",
+      "label": 13,
+      "before": 9,
+      "after": 10,
+      "regression": false
+    },
+    {
+      "run": "candidate_fixed02",
+      "label": 17,
+      "before": 10,
+      "after": 9,
+      "regression": true
+    },
+    {
+      "run": "candidate_fixed02",
+      "label": 19,
+      "before": 2,
+      "after": 10,
+      "regression": false
+    },
+    {
+      "run": "candidate_fixed02",
+      "label": 22,
+      "before": 8,
+      "after": 7,
+      "regression": true
+    },
+    {
+      "run": "candidate_fixed02",
+      "label": 23,
+      "before": 9,
+      "after": 10,
+      "regression": false
+    },
+    {
+      "run": "candidate_scan01",
+      "label": 2,
+      "before": 10,
+      "after": 9,
+      "regression": true
+    },
+    {
+      "run": "candidate_scan01",
+      "label": 7,
+      "before": 9,
+      "after": 10,
+      "regression": false
+    },
+    {
+      "run": "candidate_scan01",
+      "label": 13,
+      "before": 10,
+      "after": 9,
+      "regression": true
+    },
+    {
+      "run": "candidate_scan01",
+      "label": 16,
+      "before": 10,
+      "after": 9,
+      "regression": true
+    },
+    {
+      "run": "candidate_scan01",
+      "label": 17,
+      "before": 10,
+      "after": 7,
+      "regression": true
+    },
+    {
+      "run": "candidate_scan01",
+      "label": 19,
+      "before": 8,
+      "after": 9,
+      "regression": false
+    },
+    {
+      "run": "candidate_scan01",
+      "label": 22,
+      "before": 7,
+      "after": 9,
+      "regression": false
+    }
+  ],
+  "per_class_review_required": true,
+  "note": "Same existing 240 sources, fresh RF captures; not unseen-waveform generalization",
+  "further_work_started": false
+}

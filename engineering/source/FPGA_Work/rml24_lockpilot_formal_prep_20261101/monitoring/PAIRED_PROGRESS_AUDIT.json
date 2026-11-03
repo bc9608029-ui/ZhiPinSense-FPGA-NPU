@@ -1,0 +1,697 @@
+{
+  "controller_alive": true,
+  "completed_rounds": 4,
+  "all_performance_gates": false,
+  "deployed": false,
+  "scope": "Same frozen waveforms, fresh RF; comparison to previous gainfreeze candidate; not unseen generalization",
+  "rounds": [
+    {
+      "round": "fixed240",
+      "correct": 239,
+      "denominator": 240,
+      "required": 235,
+      "missing": 0,
+      "gate": true,
+      "old_gainfreeze_correct": 239,
+      "improved_items": [
+        {
+          "file": "20_07.bin",
+          "source_sha256": "4df7e9ad789f9293db93bdc5a09142d65668ff797ce4bf1326b1bac5962c896b",
+          "expected": 20,
+          "old_pred": 16,
+          "new_pred": 20
+        }
+      ],
+      "regressed_items": [
+        {
+          "file": "22_09.bin",
+          "source_sha256": "15afe881c29eca128cfadfbddd460a18bcb27fb461e33c74c68318b33cc6bd45",
+          "expected": 22,
+          "old_pred": 22,
+          "new_pred": 16
+        }
+      ],
+      "failures": [
+        {
+          "file": "22_09.bin",
+          "source_sha256": "15afe881c29eca128cfadfbddd460a18bcb27fb461e33c74c68318b33cc6bd45",
+          "expected": 22,
+          "old_pred": 22,
+          "new_pred": 16,
+          "chosen_frame": 2855,
+          "missing": false,
+          "nearby": [
+            {
+              "frame_id": 2853,
+              "capture_monotonic_ns": 30038499509980,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 22,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [],
+              "center_hz": 2400000000
+            },
+            {
+              "frame_id": 2854,
+              "capture_monotonic_ns": 30038959363990,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 22,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [],
+              "center_hz": 2400000000
+            },
+            {
+              "frame_id": 2855,
+              "capture_monotonic_ns": 30039419850240,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 16,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [],
+              "center_hz": 2400000000
+            },
+            {
+              "frame_id": 2856,
+              "capture_monotonic_ns": 30039869578420,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 22,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [],
+              "center_hz": 2400000000
+            },
+            {
+              "frame_id": 2857,
+              "capture_monotonic_ns": 30040319490950,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 22,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [],
+              "center_hz": 2400000000
+            }
+          ]
+        }
+      ],
+      "score_sha256": "011f527b3c6d4a46a3972891847c60c275c32a2a5506f98181ddc92a4dfb9040"
+    },
+    {
+      "round": "search240",
+      "correct": 237,
+      "denominator": 240,
+      "required": 237,
+      "missing": 0,
+      "gate": true,
+      "old_gainfreeze_correct": 234,
+      "improved_items": [
+        {
+          "file": "17_00.bin",
+          "source_sha256": "03a887028f08b4699dc8eb52ce2384047bd6a0f1ab42d827e48b979996b9d57a",
+          "expected": 17,
+          "old_pred": -1,
+          "new_pred": 17
+        },
+        {
+          "file": "18_06.bin",
+          "source_sha256": "996ceaa33727ae2bc26cb2d03faa7133fe466ec4f6cea7223537262c7f3f16ae",
+          "expected": 18,
+          "old_pred": -1,
+          "new_pred": 18
+        },
+        {
+          "file": "18_07.bin",
+          "source_sha256": "919de9a33286e363afef965b60ddda37509c992c19358babdc47581dc7438756",
+          "expected": 18,
+          "old_pred": -1,
+          "new_pred": 18
+        },
+        {
+          "file": "23_04.bin",
+          "source_sha256": "4096ea41c434a771d8c9e2fdb00e45d9baca881ed633e0dcef1c6b758795f2cc",
+          "expected": 23,
+          "old_pred": 10,
+          "new_pred": 23
+        }
+      ],
+      "regressed_items": [
+        {
+          "file": "20_07.bin",
+          "source_sha256": "4df7e9ad789f9293db93bdc5a09142d65668ff797ce4bf1326b1bac5962c896b",
+          "expected": 20,
+          "old_pred": 20,
+          "new_pred": 16
+        }
+      ],
+      "failures": [
+        {
+          "file": "14_05.bin",
+          "source_sha256": "d0897fab50db5cf82cfa944fe0b40395c8a4f5696b1b52224dc44a1407f09664",
+          "expected": 14,
+          "old_pred": 16,
+          "new_pred": 16,
+          "chosen_frame": 305,
+          "missing": false,
+          "nearby": [
+            {
+              "frame_id": 303,
+              "capture_monotonic_ns": 30989414193980,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 0,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.6364674421420833,
+                  "cfo_hz": 14.832385116081985,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.6364674421420833,
+                  "primary_cfo_hz": 14.832385116081985
+                }
+              ],
+              "center_hz": 2403599943
+            },
+            {
+              "frame_id": 304,
+              "capture_monotonic_ns": 30991236360150,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 16,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.7377663083737676,
+                  "cfo_hz": 14.275677633432558,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.7377663083737676,
+                  "primary_cfo_hz": 14.275677633432558
+                }
+              ],
+              "center_hz": 2403599942
+            },
+            {
+              "frame_id": 305,
+              "capture_monotonic_ns": 30993076414530,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 16,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.835236740584971,
+                  "cfo_hz": 17.584739191323205,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.835236740584971,
+                  "primary_cfo_hz": 17.584739191323205
+                }
+              ],
+              "center_hz": 2403599946
+            },
+            {
+              "frame_id": 306,
+              "capture_monotonic_ns": 30994916522620,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 16,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.907354842121719,
+                  "cfo_hz": 16.266049817790737,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.907354842121719,
+                  "primary_cfo_hz": 16.266049817790737
+                }
+              ],
+              "center_hz": 2403599944
+            },
+            {
+              "frame_id": 307,
+              "capture_monotonic_ns": 30996776141020,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 22,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.9571576951648,
+                  "cfo_hz": 12.876037368532481,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.9571576951648,
+                  "primary_cfo_hz": 12.876037368532481
+                }
+              ],
+              "center_hz": 2403599941
+            }
+          ]
+        },
+        {
+          "file": "20_07.bin",
+          "source_sha256": "4df7e9ad789f9293db93bdc5a09142d65668ff797ce4bf1326b1bac5962c896b",
+          "expected": 20,
+          "old_pred": 20,
+          "new_pred": 16,
+          "chosen_frame": 369,
+          "missing": false,
+          "nearby": [
+            {
+              "frame_id": 367,
+              "capture_monotonic_ns": 31107868633860,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 12,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.8095522081302038,
+                  "cfo_hz": 13.829590970711262,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.8095522081302038,
+                  "primary_cfo_hz": 13.829590970711262
+                }
+              ],
+              "center_hz": 2403599942
+            },
+            {
+              "frame_id": 368,
+              "capture_monotonic_ns": 31109768424650,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 20,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.9280009310975933,
+                  "cfo_hz": 15.938048297736536,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.9280009310975933,
+                  "primary_cfo_hz": 15.938048297736536
+                }
+              ],
+              "center_hz": 2403599944
+            },
+            {
+              "frame_id": 369,
+              "capture_monotonic_ns": 31111618466420,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 16,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.9403226121764464,
+                  "cfo_hz": 14.206168989293099,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.9403226121764464,
+                  "primary_cfo_hz": 14.206168989293099
+                }
+              ],
+              "center_hz": 2403599942
+            },
+            {
+              "frame_id": 370,
+              "capture_monotonic_ns": 31113468639440,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 20,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.9589367348171998,
+                  "cfo_hz": 13.685144575680084,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.9589367348171998,
+                  "primary_cfo_hz": 13.685144575680084
+                }
+              ],
+              "center_hz": 2403599942
+            },
+            {
+              "frame_id": 371,
+              "capture_monotonic_ns": 31115326812470,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 20,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.9474563772565096,
+                  "cfo_hz": 14.226958787469611,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.9474563772565096,
+                  "primary_cfo_hz": 14.226958787469611
+                }
+              ],
+              "center_hz": 2403599942
+            }
+          ]
+        },
+        {
+          "file": "13_01.bin",
+          "source_sha256": "36c5b8b65605942003634f26f969785d67d971b3103ccfa7b5905b304f5c163d",
+          "expected": 13,
+          "old_pred": 15,
+          "new_pred": 15,
+          "chosen_frame": 407,
+          "missing": false,
+          "nearby": [
+            {
+              "frame_id": 405,
+              "capture_monotonic_ns": 31178039770990,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 8,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.9446840943536278,
+                  "cfo_hz": 14.422383825978178,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.9446840943536278,
+                  "primary_cfo_hz": 14.422383825978178
+                }
+              ],
+              "center_hz": 2403599942
+            },
+            {
+              "frame_id": 406,
+              "capture_monotonic_ns": 31179959748210,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 15,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.9549915857403347,
+                  "cfo_hz": 14.12024849535313,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.9549915857403347,
+                  "primary_cfo_hz": 14.12024849535313
+                }
+              ],
+              "center_hz": 2403599942
+            },
+            {
+              "frame_id": 407,
+              "capture_monotonic_ns": 31181810171970,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 15,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.9443483740442471,
+                  "cfo_hz": 14.841396440234158,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.9443483740442471,
+                  "primary_cfo_hz": 14.841396440234158
+                }
+              ],
+              "center_hz": 2403599943
+            },
+            {
+              "frame_id": 408,
+              "capture_monotonic_ns": 31183669773560,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 15,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.9018704150909745,
+                  "cfo_hz": 15.251214156689343,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.9018704150909745,
+                  "primary_cfo_hz": 15.251214156689343
+                }
+              ],
+              "center_hz": 2403599943
+            },
+            {
+              "frame_id": 409,
+              "capture_monotonic_ns": 31185519764850,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 16,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "lo_hz": 2403599928,
+                  "public_score": 0.8352690726417661,
+                  "cfo_hz": 14.035517289386698,
+                  "locked_check": true,
+                  "accepted": true,
+                  "locked_fallback_used": false,
+                  "primary_public_score": 0.8352690726417661,
+                  "primary_cfo_hz": 14.035517289386698
+                }
+              ],
+              "center_hz": 2403599942
+            }
+          ]
+        }
+      ],
+      "score_sha256": "40f55148621b41a6f8b05085163a094aac5f2874f2a10185e4d352395a59e6c4"
+    },
+    {
+      "round": "sweep24",
+      "correct": 23,
+      "denominator": 24,
+      "required": 24,
+      "missing": 0,
+      "gate": false,
+      "old_gainfreeze_correct": 23,
+      "improved_items": [],
+      "regressed_items": [],
+      "failures": [
+        {
+          "file": "19_00.bin",
+          "source_sha256": "9065d4fa5c06d01605fc2b5ecf678ae971069dcfecfdb0de0e5beeaae30e4179",
+          "expected": 19,
+          "old_pred": 20,
+          "new_pred": 20,
+          "chosen_frame": 195,
+          "missing": false,
+          "nearby": [
+            {
+              "frame_id": 193,
+              "capture_monotonic_ns": 32779248616470,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": -1,
+              "finite": false,
+              "repeat_average": null,
+              "scan_steps": [
+                {
+                  "scan_index": 7,
+                  "scan_points": 11,
+                  "sweep_cycle": 17,
+                  "lo_hz": 2401000000,
+                  "public_score": 0.5350671881978976,
+                  "cfo_hz": 39949.870384466114,
+                  "captured_ns": 1773405264010094030,
+                  "captured_monotonic_ns": 32777008463380,
+                  "accepted": true,
+                  "confirmed_lo_hz": 2401039950,
+                  "confirmed_ns": 1773405266250246830,
+                  "confirmed_monotonic_ns": 32779248616470,
+                  "confirmed_score": 0.4603889091016512,
+                  "confirmed_cfo_hz": -5.280799616468101,
+                  "reason": "CENTRED_PUBLIC_FRAME"
+                }
+              ],
+              "center_hz": 2401039945
+            },
+            {
+              "frame_id": 194,
+              "capture_monotonic_ns": 32784038537020,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 9,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "scan_index": 8,
+                  "scan_points": 11,
+                  "sweep_cycle": 17,
+                  "lo_hz": 2401999998,
+                  "public_score": 0.6293968115291612,
+                  "cfo_hz": -960048.7822911628,
+                  "captured_ns": 1773405268840259440,
+                  "captured_monotonic_ns": 32781838629050,
+                  "accepted": true,
+                  "confirmed_lo_hz": 2401039946,
+                  "confirmed_ns": 1773405271040167800,
+                  "confirmed_monotonic_ns": 32784038537020,
+                  "confirmed_score": 0.5470665525368771,
+                  "confirmed_cfo_hz": -0.015502320397490915,
+                  "reason": "CENTRED_PUBLIC_FRAME"
+                }
+              ],
+              "center_hz": 2401039946
+            },
+            {
+              "frame_id": 195,
+              "capture_monotonic_ns": 32788829157240,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 20,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "scan_index": 9,
+                  "scan_points": 11,
+                  "sweep_cycle": 17,
+                  "lo_hz": 2403000000,
+                  "public_score": 0.8754522887571086,
+                  "cfo_hz": 599949.6969815142,
+                  "captured_ns": 1773405273510510480,
+                  "captured_monotonic_ns": 32786508879850,
+                  "accepted": true,
+                  "confirmed_lo_hz": 2403599950,
+                  "confirmed_ns": 1773405275830787350,
+                  "confirmed_monotonic_ns": 32788829157240,
+                  "confirmed_score": 0.9778513836416731,
+                  "confirmed_cfo_hz": -0.06446460395551395,
+                  "reason": "CENTRED_PUBLIC_FRAME"
+                }
+              ],
+              "center_hz": 2403599950
+            },
+            {
+              "frame_id": 196,
+              "capture_monotonic_ns": 32793648954980,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": 19,
+              "finite": true,
+              "repeat_average": 8.0,
+              "scan_steps": [
+                {
+                  "scan_index": 10,
+                  "scan_points": 11,
+                  "sweep_cycle": 17,
+                  "lo_hz": 2404000000,
+                  "public_score": 0.9070887800082171,
+                  "cfo_hz": -400050.3115981468,
+                  "captured_ns": 1773405278380488650,
+                  "captured_monotonic_ns": 32791378858040,
+                  "accepted": true,
+                  "confirmed_lo_hz": 2403599950,
+                  "confirmed_ns": 1773405280650585140,
+                  "confirmed_monotonic_ns": 32793648954980,
+                  "confirmed_score": 0.9084911730972549,
+                  "confirmed_cfo_hz": -0.47615592165747617,
+                  "reason": "CENTRED_PUBLIC_FRAME"
+                }
+              ],
+              "center_hz": 2403599950
+            },
+            {
+              "frame_id": 197,
+              "capture_monotonic_ns": 32796099280400,
+              "clock_id": "board-monotonic-v1",
+              "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+              "pred": -1,
+              "finite": false,
+              "repeat_average": null,
+              "scan_steps": [
+                {
+                  "scan_index": 11,
+                  "scan_points": 11,
+                  "sweep_cycle": 17,
+                  "lo_hz": 2404999998,
+                  "public_score": 0.7022493469158757,
+                  "cfo_hz": 1159952.6953900356,
+                  "captured_ns": 1773405283100911340,
+                  "captured_monotonic_ns": 32796099280400,
+                  "accepted": false,
+                  "reason": "DISCOVERY_REJECTED"
+                }
+              ],
+              "center_hz": 2404999998
+            }
+          ]
+        }
+      ],
+      "score_sha256": "c7deb19f9070e67df002ec96dcb59e83b6a1890469bf820499cc70777edb1a5f"
+    },
+    {
+      "round": "wide13",
+      "correct": 13,
+      "denominator": 13,
+      "required": 13,
+      "missing": 0,
+      "gate": true,
+      "old_gainfreeze_correct": 13,
+      "improved_items": [],
+      "regressed_items": [],
+      "failures": [],
+      "score_sha256": "6d694f790fc4a77aac506e466c7f8df3ab67c543b21a42b662137995c4a5e6ec"
+    }
+  ]
+}

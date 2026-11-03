@@ -1,0 +1,66 @@
+{
+  "time": "2026-10-30T17:12:37.167337",
+  "state": "OFFLINE_FIX2_TESTS_PASSED_FULL_IMPLEMENTATION_PENDING",
+  "checks": [
+    {
+      "log": "tb_router.log",
+      "sha256": "ea99a747b227e5e12713928bac0bedf5744b981079d8327c7c8729fc736626a8",
+      "pass": true
+    },
+    {
+      "log": "tb_fifo.log",
+      "sha256": "c8ff0946b06e7d1f3c1711b964ddf158bce574e25fe98649aef52e831f92c7d6",
+      "pass": true
+    },
+    {
+      "log": "tb_arbiter.log",
+      "sha256": "742587d55c540940bc46412805474771badf3f024bf8b5ff27f5059a0f0da1c0",
+      "pass": true
+    },
+    {
+      "log": "routed_pspl/xsim.log",
+      "sha256": "caf797d0ab1f07257bfa4eb52f6834659a08b9eed0d9f9e590742f82cdcd7554",
+      "pass": true
+    },
+    {
+      "log": "shared_pspl/xsim_retry.log",
+      "sha256": "8248d6ebe85fca59ba6474d28ac8474b73e30fec24049df5392bdfcb5a48b311",
+      "pass": true
+    }
+  ],
+  "fifo_cases": 4,
+  "fpga_programmed": false,
+  "rf_tested": false,
+  "scope": {
+    "scope_verified": true,
+    "changed_rtl": [
+      "smartscan_integration/rtl/smart_scan_psd_buffers.sv",
+      "smartscan_integration/rtl/user_reg_router.sv",
+      "smartscan_integration/rtl/user_ddr_read_arbiter.sv",
+      "smartscan_integration/rtl/pl_ddr_mandatory_core_top_combined_smartscan.sv",
+      "pl_ddr_integration_v1/deps/adapters/async_fifo_gray.sv"
+    ],
+    "constraints": [
+      {
+        "path": "pl_ddr_integration_v1/cdc_async_groups.xdc",
+        "unchanged": true
+      },
+      {
+        "path": "pl_ddr_integration_v1/pl_ddr_mandatory_core_v1.xdc",
+        "unchanged": true
+      }
+    ],
+    "frozen_netlists": [
+      {
+        "path": "npu_base/rtl/edif/AI_Mate.edif",
+        "sha256": "38f14b4427244f49a1ff0edf9dcdfe4438d033807d76018c688aa218c491d49c",
+        "unchanged": true
+      },
+      {
+        "path": "smartscan_integration/netlist/smartscan_fft_1024.edif",
+        "sha256": "448ca9977cd8f4c8031609daf0e5960e0840c023cfdac666f355eb607b2651e3",
+        "unchanged": true
+      }
+    ]
+  }
+}

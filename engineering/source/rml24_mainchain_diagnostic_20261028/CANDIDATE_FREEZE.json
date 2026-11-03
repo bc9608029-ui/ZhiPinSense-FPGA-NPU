@@ -1,0 +1,49 @@
+{
+  "status": "FROZEN_DEVELOPMENT_CANDIDATE_PENDING_EXPLICIT_USER_RF_APPROVAL",
+  "model_changed": false,
+  "public_frame_changed": false,
+  "development_only": true,
+  "protocol_assumption": "Eight identical 1024-sample payload repetitions",
+  "files": [
+    {
+      "path": "E:\\rml24_mainchain_diagnostic_20261028\\repeat_mean_candidate.py",
+      "sha256": "1e837d42485ce717023b580918773f9f53c3095ab3c4f2870321bd58ebd0bdde",
+      "bytes": 489
+    },
+    {
+      "path": "E:\\rml24_mainchain_diagnostic_20261028\\receiver_repeat_mean_v1.py",
+      "sha256": "ee8bd436cd919ee69b5323fa16dac5a957e9bdf7fb569a4a665fe3fc00f569ca",
+      "bytes": 1398
+    },
+    {
+      "path": "E:\\rml24_mainchain_diagnostic_20261028\\run_repeat_mean_v1.sh",
+      "sha256": "842dde9ed473b84a09a2766d9910a7087a7adeddfdb8c061c4ac00b97c5c8022",
+      "bytes": 3414
+    },
+    {
+      "path": "E:\\rml24_mainchain_diagnostic_20261028\\strict_promotion_gate.py",
+      "sha256": "a5170d7afc8bfd61ca780ed60ff2eb1750727da8a9af56fabd77191891e8d898",
+      "bytes": 2431
+    },
+    {
+      "path": "E:\\rml24_mainchain_diagnostic_20261028\\frozen_dependencies\\rml24_adamrv11_bf16.json",
+      "sha256": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+      "bytes": 189788
+    },
+    {
+      "path": "E:\\rml24_mainchain_diagnostic_20261028\\frozen_dependencies\\rml24_adamrv11_bf16.raw",
+      "sha256": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+      "bytes": 778732
+    },
+    {
+      "path": "E:\\rml24_standalone_execution_20261027\\candidate\\rml24_final\\recovery\\candidate_two_dc.py",
+      "sha256": "e0aa12029e9c5aa670a9340d9c078814b10dcfb0ee82c580adaad4f55affcf3a",
+      "bytes": 3857
+    },
+    {
+      "path": "E:\\rml24_standalone_execution_20261027\\candidate\\rml24_final\\runtime\\receiver_core.py",
+      "sha256": "cb529824a80e9fa2aea6aaa31375c8d560f117c36b9644862cb459f6c39cd79a",
+      "bytes": 3370
+    }
+  ]
+}

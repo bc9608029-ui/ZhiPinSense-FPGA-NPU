@@ -1,0 +1,34 @@
+Reading D:/modeltech64_10.4/tcl/vsim/pref.tcl
+
+# 10.4
+
+# vsim -c -do "run -all; quit -f" msim_diag_work.tb_pl_ddr_mandatory_core_engine 
+# Start time: 21:31:14 on Sep 29,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# //  ModelSim SE-64 10.4 Dec  3 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_pl_ddr_mandatory_core_engine(fast)
+# run -all
+# DDR_DONE_EDGE run=0 started=1 in_sync=19456 out_sync=19456 beats=1520 time=420318000
+# PL_DDR_ENGINE_RUN_PASS run=0 iq=19456 tensor=19456 beats=1520
+# DDR_DONE_EDGE run=1 started=1 in_sync=19456 out_sync=19456 beats=1520 time=840853000
+# PL_DDR_ENGINE_RUN_PASS run=1 iq=19456 tensor=19456 beats=1520
+# PL_DDR_MANDATORY_CORE_ENGINE_PASS runs=2 golden_byte_mismatches=0
+# ** Note: $finish    : tb/tb_pl_ddr_mandatory_core_engine.sv(238)
+#    Time: 841205 ns  Iteration: 1  Instance: /tb_pl_ddr_mandatory_core_engine
+# End time: 21:31:16 on Sep 29,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

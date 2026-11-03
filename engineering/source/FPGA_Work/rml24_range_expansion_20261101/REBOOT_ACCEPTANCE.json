@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+  "run": "/var/log/rml24-integrated/r66ac32b8a11e",
+  "tuning": "OK tuning=1 mode=FIXED running=1 fixed_hz=2400000000 fixed_readback_hz=2400000000 start_hz=2395000000 stop_hz=2405000000 step_hz=1000000 actual_lo_hz=2400000000 command_id=0 scan_index=0 scan_points=0 presence=NO_SIGNAL frame_id=-1 rms_iq=0.0 peak_iq=0.0 energy_iq2=0.0 feature_latency_us=0.0 backend=software min_hz=70000000 max_hz=6000000000 max_scan_points=101\n",
+  "release": "/opt/rml24-integrated/releases/range_20261101"
+}

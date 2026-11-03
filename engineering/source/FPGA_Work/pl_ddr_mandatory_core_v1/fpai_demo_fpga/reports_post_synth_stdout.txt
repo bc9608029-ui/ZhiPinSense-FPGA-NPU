@@ -1,0 +1,727 @@
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source reports_post_synth_only.tcl
+# set project_dir {F:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga}
+# set project_file [file join $project_dir fpai_demo_vivado.xpr]
+# set report_dir [file join $project_dir reports pl_ddr_mandatory_core_v1]
+# file mkdir $report_dir
+# open_project $project_file
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/PS_AI IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx2018.3/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:processing_system7:5.5'. The one found in IP location 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/PS_AI IP/processing_system7_v5_5' will take precedence over the same IP in the Xilinx installed IP.
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:display_processing_system7:fixedio:1.0'. The one found in location 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/PS_AI IP/processing_system7_v5_5/fixedio.xml' will take precedence over the same Interface in location 'd:/Xilinx2018.3/Vivado/2018.3/data/ip/xilinx/processing_system7_v5_5/fixedio.xml'
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:display_processing_system7:hpstatusctrl:1.0'. The one found in location 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/PS_AI IP/processing_system7_v5_5/hpstatusctrl.xml' will take precedence over the same Interface in location 'd:/Xilinx2018.3/Vivado/2018.3/data/ip/xilinx/processing_system7_v5_5/hpstatusctrl.xml'
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:display_processing_system7:usbctrl:1.0'. The one found in location 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/PS_AI IP/processing_system7_v5_5/usbctrl.xml' will take precedence over the same Interface in location 'd:/Xilinx2018.3/Vivado/2018.3/data/ip/xilinx/processing_system7_v5_5/usbctrl.xml'
+WARNING: [IP_Flow 19-3664] IP 'ps_ai_processing_system7_0_0' generated file not found 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/hdl/verilog/ps_ai_processing_system7_0_0.hwdef'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ps_ai_processing_system7_0_0' generated file not found 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps7_init.c'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ps_ai_processing_system7_0_0' generated file not found 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps7_init.h'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ps_ai_processing_system7_0_0' generated file not found 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps7_init_gpl.c'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ps_ai_processing_system7_0_0' generated file not found 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps7_init_gpl.h'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ps_ai_processing_system7_0_0' generated file not found 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps7_init.tcl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ps_ai_processing_system7_0_0' generated file not found 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps7_init.html'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 458.555 ; gain = 197.719
+# open_run synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z030ffg676-2
+INFO: [Project 1-454] Reading design checkpoint 'F:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/.Xil/Vivado-26684-colorfulshadow/clk_wiz_core_50/clk_wiz_core_50.dcp' for cell 'u_clk_wiz_core_50'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mig_7series_0/mig_7series_0.dcp' for cell 'u_ps_ai_peripheral/mig_ddr3_u0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/cmos_clkgen_742_5/cmos_clkgen_742_5.dcp' for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_clkgen_742_5_u0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/rindex_buf_2b_16w/rindex_buf_2b_16w.dcp' for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/windex_buf_2b_16w/windex_buf_2b_16w.dcp' for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/fifo_1/fifo_1.dcp' for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/fifo_1_u0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_64i_16o_128/afifo_64i_16o_128.dcp' for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_16i_64o_largebuf/afifo_16i_64o_largebuf.dcp' for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_24w_4096d/afifo_24w_4096d.dcp' for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_proc_sys_reset_0_1/ps_ai_proc_sys_reset_0_1.dcp' for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_proc_sys_reset_0_0/ps_ai_proc_sys_reset_0_0.dcp' for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/proc_sys_reset_1'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.dcp' for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_util_vector_logic_0_0/ps_ai_util_vector_logic_0_0.dcp' for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/util_vector_logic_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_xbar_0/ps_ai_xbar_0.dcp' for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_s00_regslice_0/ps_ai_s00_regslice_0.dcp' for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_0/s00_couplers/s00_regslice'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_xbar_1/ps_ai_xbar_1.dcp' for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_1/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_xbar_4/ps_ai_xbar_4.dcp' for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_4/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_m00_regslice_0/ps_ai_m00_regslice_0.dcp' for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_4/m00_couplers/m00_regslice'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_s00_regslice_1/ps_ai_s00_regslice_1.dcp' for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_4/s00_couplers/s00_regslice'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_s01_regslice_0/ps_ai_s01_regslice_0.dcp' for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_4/s01_couplers/s01_regslice'
+INFO: [Project 1-454] Reading design checkpoint 'f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.dcp' for cell 'u_ps_ai_peripheral/u_gp0_io/axi_to_mna_u0/bid_fifo'
+INFO: [Netlist 29-17] Analyzing 7295 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7z030ffg676-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_clk_wiz_core_50/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_ps_ai_peripheral/frame_to_ps_inst0/cmos_clkgen_742_5_u0/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'u_clk_wiz_core_50/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_clkgen_742_5_u0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_proc_sys_reset_0_1/ps_ai_proc_sys_reset_0_1_board.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_proc_sys_reset_0_1/ps_ai_proc_sys_reset_0_1_board.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/proc_sys_reset_0/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_proc_sys_reset_0_1/ps_ai_proc_sys_reset_0_1.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_proc_sys_reset_0_1/ps_ai_proc_sys_reset_0_1.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/proc_sys_reset_0/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc:20]
+WARNING: [Vivado 12-627] No clocks matched 'PJTAG_TCK'. [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc:20]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc:20]
+get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1982.871 ; gain = 702.652
+CRITICAL WARNING: [Vivado 12-4739] set_output_delay:No valid object(s) found for '-clock [get_clocks PJTAG_TCK]'. [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc:20]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'PJTAG_TCK'. [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc:21]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc:21]
+CRITICAL WARNING: [Vivado 12-4739] set_output_delay:No valid object(s) found for '-clock [get_clocks PJTAG_TCK]'. [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc:21]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'PJTAG_TCK'. [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc:22]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc:22]
+CRITICAL WARNING: [Vivado 12-4739] set_output_delay:No valid object(s) found for '-clock [get_clocks PJTAG_TCK]'. [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc:22]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'PJTAG_TCK'. [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc:23]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc:23]
+CRITICAL WARNING: [Vivado 12-4739] set_output_delay:No valid object(s) found for '-clock [get_clocks PJTAG_TCK]'. [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc:23]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_processing_system7_0_0/ps_ai_processing_system7_0_0.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_proc_sys_reset_0_0/ps_ai_proc_sys_reset_0_0_board.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_proc_sys_reset_0_0/ps_ai_proc_sys_reset_0_0_board.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/proc_sys_reset_1/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_proc_sys_reset_0_0/ps_ai_proc_sys_reset_0_0.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_proc_sys_reset_0_0/ps_ai_proc_sys_reset_0_0.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/proc_sys_reset_1/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_ps_ai_io/u_gp0_io/axi_to_mna_u0/bid_fifo/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_ps_ai_io/u_gp0_io/axi_to_mna_u0/bid_fifo/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_ps_ai_io/u_gp0_io/axi_to_mna_u0/rid_fifo/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_ps_ai_io/u_gp0_io/axi_to_mna_u0/rid_fifo/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_ps_ai_io/u_gp1_io/axi_to_mna_u0/bid_fifo/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_ps_ai_io/u_gp1_io/axi_to_mna_u0/bid_fifo/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_ps_ai_io/u_gp1_io/axi_to_mna_u0/rid_fifo/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_ps_ai_io/u_gp1_io/axi_to_mna_u0/rid_fifo/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/u_gp0_io/axi_to_mna_u0/bid_fifo/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/u_gp0_io/axi_to_mna_u0/bid_fifo/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/u_gp0_io/axi_to_mna_u0/rid_fifo/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/u_gp0_io/axi_to_mna_u0/rid_fifo/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/u_gp1_io/axi_to_mna_u0/bid_fifo/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/u_gp1_io/axi_to_mna_u0/bid_fifo/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/u_gp1_io/axi_to_mna_u0/rid_fifo/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mna_idfifo_w12/mna_idfifo_w12.xdc] for cell 'u_ps_ai_peripheral/u_gp1_io/axi_to_mna_u0/rid_fifo/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'u_ps_ai_peripheral/mig_ddr3_u0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'u_ps_ai_peripheral/mig_ddr3_u0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/rindex_buf_2b_16w/rindex_buf_2b_16w.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/rindex_buf_2b_16w/rindex_buf_2b_16w.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_16i_64o_largebuf/afifo_16i_64o_largebuf.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_16i_64o_largebuf/afifo_16i_64o_largebuf.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/windex_buf_2b_16w/windex_buf_2b_16w.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/windex_buf_2b_16w/windex_buf_2b_16w.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/cmos_clkgen_742_5/cmos_clkgen_742_5_board.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_clkgen_742_5_u0/inst'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/cmos_clkgen_742_5/cmos_clkgen_742_5_board.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_clkgen_742_5_u0/inst'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/cmos_clkgen_742_5/cmos_clkgen_742_5.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_clkgen_742_5_u0/inst'
+INFO: [Timing 38-2] Deriving generated clocks [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/cmos_clkgen_742_5/cmos_clkgen_742_5.xdc:57]
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.067340 which will be rounded to 0.067 to ensure it is an integer multiple of 1 picosecond [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/cmos_clkgen_742_5/cmos_clkgen_742_5.xdc:57]
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/cmos_clkgen_742_5/cmos_clkgen_742_5.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_clkgen_742_5_u0/inst'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/fifo_1/fifo_1.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/fifo_1_u0/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/fifo_1/fifo_1.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/fifo_1_u0/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_64i_16o_128/afifo_64i_16o_128.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_64i_16o_128/afifo_64i_16o_128.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_24w_4096d/afifo_24w_4096d.xdc] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_24w_4096d/afifo_24w_4096d.xdc] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/ip/clk_wiz_core_50/clk_wiz_core_50_board.xdc] for cell 'u_clk_wiz_core_50/inst'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/ip/clk_wiz_core_50/clk_wiz_core_50_board.xdc] for cell 'u_clk_wiz_core_50/inst'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/ip/clk_wiz_core_50/clk_wiz_core_50.xdc] for cell 'u_clk_wiz_core_50/inst'
+INFO: [Timing 38-2] Deriving generated clocks [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/ip/clk_wiz_core_50/clk_wiz_core_50.xdc:57]
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/ip/clk_wiz_core_50/clk_wiz_core_50.xdc] for cell 'u_clk_wiz_core_50/inst'
+Parsing XDC File [F:/FPGA_Work/pl_ddr_mandatory_core_v1/pl_ddr_integration_v1/pl_ddr_mandatory_core_v1.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'pl_ddr_refclk' completely overrides clock 'sys_clk_p'.
+New: create_clock -period 5.000 -name pl_ddr_refclk [get_ports sys_clk_p], [F:/FPGA_Work/pl_ddr_mandatory_core_v1/pl_ddr_integration_v1/pl_ddr_mandatory_core_v1.xdc:9]
+Previous: create_clock -period 5.000 [get_ports sys_clk_p], [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc:27]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+Finished Parsing XDC File [F:/FPGA_Work/pl_ddr_mandatory_core_v1/pl_ddr_integration_v1/pl_ddr_mandatory_core_v1.xdc]
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_s00_regslice_0/ps_ai_s00_regslice_0_clocks.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_0/s00_couplers/s00_regslice/inst'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_s00_regslice_0/ps_ai_s00_regslice_0_clocks.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_0/s00_couplers/s00_regslice/inst'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_s00_regslice_1/ps_ai_s00_regslice_1_clocks.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_4/s00_couplers/s00_regslice/inst'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_s00_regslice_1/ps_ai_s00_regslice_1_clocks.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_4/s00_couplers/s00_regslice/inst'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_s01_regslice_0/ps_ai_s01_regslice_0_clocks.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_4/s01_couplers/s01_regslice/inst'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_s01_regslice_0/ps_ai_s01_regslice_0_clocks.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_4/s01_couplers/s01_regslice/inst'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_m00_regslice_0/ps_ai_m00_regslice_0_clocks.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_4/m00_couplers/m00_regslice/inst'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.srcs/sources_1/bd/ps_ai/ip/ps_ai_m00_regslice_0/ps_ai_m00_regslice_0_clocks.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/axi_interconnect_4/m00_couplers/m00_regslice/inst'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/rindex_buf_2b_16w/rindex_buf_2b_16w_clocks.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0'
+INFO: [Timing 38-2] Deriving generated clocks [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/rindex_buf_2b_16w/rindex_buf_2b_16w_clocks.xdc:60]
+all_fanout: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 2108.070 ; gain = 6.699
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/rindex_buf_2b_16w/rindex_buf_2b_16w_clocks.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_16i_64o_largebuf/afifo_16i_64o_largebuf_clocks.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_16i_64o_largebuf/afifo_16i_64o_largebuf_clocks.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/windex_buf_2b_16w/windex_buf_2b_16w_clocks.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/windex_buf_2b_16w/windex_buf_2b_16w_clocks.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_64i_16o_128/afifo_64i_16o_128_clocks.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_64i_16o_128/afifo_64i_16o_128_clocks.xdc] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0'
+Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_24w_4096d/afifo_24w_4096d_clocks.xdc] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0'
+Finished Parsing XDC File [f:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/rtl/ip/afifo_24w_4096d/afifo_24w_4096d_clocks.xdc] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/mi_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/mi_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/mi_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/mi_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[1].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[1].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[1].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[1].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/mi_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.xpm_cdc_single_inst2'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/mi_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.xpm_cdc_single_inst2' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/mi_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.xpm_cdc_single_inst2 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/mi_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.xpm_cdc_single_inst2'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.xpm_cdc_single_inst2'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.xpm_cdc_single_inst2' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.xpm_cdc_single_inst2 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[0].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.xpm_cdc_single_inst2'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[1].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.xpm_cdc_single_inst2'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[1].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.xpm_cdc_single_inst2' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[1].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.xpm_cdc_single_inst2 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/u_axi_2to1/inst/axi_interconnect_inst/si_data_fifo_bank/gen_fifo_slot[1].data_fifo_inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.xpm_cdc_single_inst2'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_ar_cdc_fifo_ddr/u0_cdc_fifo_ar_64/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_aw_cdc_fifo_ddr/u0_cdc_fifo_aw_616/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/U0_ddr2hp_itcn/u0_r_cdc_fifo_ddr/u0_cdc_fifo_r_544/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/rindex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/buyi_icore_post_top_u0/icore_post_top_u0/post_read_u0/sync_fifo_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd' of design 'design_1' [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/cmos_write_req_gen_m0/windex_buf_2b_16w_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnrst_full.gsckt_bsy_o.xpm_cdc_sync_rst_sckt_bsy_o'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnrst_full.gsckt_bsy_o.xpm_cdc_sync_rst_sckt_bsy_o'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_trans_inst0/axis_master_inst/afifo_24w_4096d_u0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [D:/Xilinx2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'u_ps_ai_peripheral/frame_to_ps_inst0/frame_read_write_m0/read_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 2113.840 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1557 instances were transformed.
+  IOBUFDS_DIFF_OUT_DCIEN => IOBUFDS_DIFF_OUT_DCIEN (IBUFDS_IBUFDISABLE_INT, IBUFDS_IBUFDISABLE_INT, INV, OBUFTDS_DCIEN, OBUFTDS_DCIEN): 8 instances
+  IOBUF_DCIEN => IOBUF_DCIEN (IBUF_IBUFDISABLE, OBUFT_DCIEN): 64 instances
+  OBUFDS => OBUFDS: 4 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 4 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 717 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 703 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 56 instances
+
+open_run: Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 2113.840 ; gain = 1655.285
+# report_utilization -hierarchical -file [file join $report_dir post_synth_utilization_hier.rpt]
+# report_timing_summary -file [file join $report_dir post_synth_timing_summary.rpt]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:52 ; elapsed = 00:00:36 . Memory (MB): peak = 2288.941 ; gain = 175.102
+# report_clocks -file [file join $report_dir post_synth_clocks.rpt]
+# report_clock_interaction -file [file join $report_dir post_synth_clock_interaction.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-164] This design has multiple clocks. Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+# report_cdc -details -file [file join $report_dir post_synth_cdc.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: No interconnect No Cell Dly, Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-433] Consider using Xilinx recommended XPM_CDC modules to avoid Critical severities
+INFO: [Timing 38-314] The report_cdc command only analyzes and reports clock domain crossing paths where clocks have been defined on both source and destination sides. Ports with no input delay constraint are skipped. Please run check_timing to verify there are no missing clock definitions in your design, nor any unconstrained input port.
+report_cdc: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2288.941 ; gain = 0.000
+# report_methodology -file [file join $report_dir post_synth_methodology.rpt]
+Command: report_methodology -file F:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/reports/pl_ddr_mandatory_core_v1/post_synth_methodology.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Common 17-14] Message 'Designutils 20-3303' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file F:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/reports/pl_ddr_mandatory_core_v1/post_synth_methodology.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:01:08 ; elapsed = 00:00:46 . Memory (MB): peak = 2978.504 ; gain = 689.562
+# check_timing -verbose -file [file join $report_dir post_synth_check_timing.rpt]
+# report_drc -file [file join $report_dir post_synth_drc.rpt]
+Command: report_drc -file F:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/reports/pl_ddr_mandatory_core_v1/post_synth_drc.rpt
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file F:/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/reports/pl_ddr_mandatory_core_v1/post_synth_drc.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:25 ; elapsed = 00:00:18 . Memory (MB): peak = 3015.305 ; gain = 36.801
+# if {[llength [get_bus_skews -quiet]] != 0} {
+#     report_bus_skew -file [file join $report_dir post_synth_bus_skew.rpt]
+# }
+# get_bus_skews -quiet
+invalid command name "get_bus_skews"
+    while executing
+"get_bus_skews -quiet"
+    invoked from within
+"if {[llength [get_bus_skews -quiet]] != 0} {
+    report_bus_skew -file [file join $report_dir post_synth_bus_skew.rpt]
+}"
+    (file "reports_post_synth_only.tcl" line 21)
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 29 22:25:35 2026...

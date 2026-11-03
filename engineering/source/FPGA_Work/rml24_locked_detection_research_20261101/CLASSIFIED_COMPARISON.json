@@ -1,0 +1,180 @@
+{
+  "development_only": true,
+  "not_independent_formal_regression": true,
+  "groups": [
+    {
+      "file": "14_05.bin",
+      "captures": 4,
+      "old_correct": 0,
+      "new_correct": 0,
+      "raw_recovered_correct": 0,
+      "predictions": [
+        {
+          "index": 6,
+          "pred": 16,
+          "old": true,
+          "new": true
+        },
+        {
+          "index": 7,
+          "pred": 16,
+          "old": true,
+          "new": true
+        },
+        {
+          "index": 8,
+          "pred": 16,
+          "old": true,
+          "new": true
+        },
+        {
+          "index": 9,
+          "pred": 16,
+          "old": true,
+          "new": true
+        }
+      ]
+    },
+    {
+      "file": "13_01.bin",
+      "captures": 3,
+      "old_correct": 0,
+      "new_correct": 0,
+      "raw_recovered_correct": 0,
+      "predictions": [
+        {
+          "index": 12,
+          "pred": 15,
+          "old": true,
+          "new": true
+        },
+        {
+          "index": 13,
+          "pred": 15,
+          "old": true,
+          "new": true
+        },
+        {
+          "index": 14,
+          "pred": 15,
+          "old": true,
+          "new": true
+        }
+      ]
+    },
+    {
+      "file": "17_00.bin",
+      "captures": 3,
+      "old_correct": 3,
+      "new_correct": 3,
+      "raw_recovered_correct": 3,
+      "predictions": [
+        {
+          "index": 17,
+          "pred": 17,
+          "old": true,
+          "new": true
+        },
+        {
+          "index": 18,
+          "pred": 17,
+          "old": true,
+          "new": true
+        },
+        {
+          "index": 19,
+          "pred": 17,
+          "old": true,
+          "new": true
+        }
+      ]
+    },
+    {
+      "file": "18_06.bin",
+      "captures": 3,
+      "old_correct": 2,
+      "new_correct": 3,
+      "raw_recovered_correct": 3,
+      "predictions": [
+        {
+          "index": 22,
+          "pred": 18,
+          "old": true,
+          "new": true
+        },
+        {
+          "index": 23,
+          "pred": 18,
+          "old": false,
+          "new": true
+        },
+        {
+          "index": 24,
+          "pred": 18,
+          "old": true,
+          "new": true
+        }
+      ]
+    },
+    {
+      "file": "18_07.bin",
+      "captures": 3,
+      "old_correct": 3,
+      "new_correct": 3,
+      "raw_recovered_correct": 3,
+      "predictions": [
+        {
+          "index": 27,
+          "pred": 18,
+          "old": true,
+          "new": true
+        },
+        {
+          "index": 28,
+          "pred": 18,
+          "old": true,
+          "new": true
+        },
+        {
+          "index": 29,
+          "pred": 18,
+          "old": true,
+          "new": true
+        }
+      ]
+    },
+    {
+      "file": "23_04.bin",
+      "captures": 4,
+      "old_correct": 3,
+      "new_correct": 3,
+      "raw_recovered_correct": 3,
+      "predictions": [
+        {
+          "index": 32,
+          "pred": 23,
+          "old": true,
+          "new": true
+        },
+        {
+          "index": 33,
+          "pred": 23,
+          "old": true,
+          "new": true
+        },
+        {
+          "index": 34,
+          "pred": 23,
+          "old": true,
+          "new": true
+        },
+        {
+          "index": 35,
+          "pred": 10,
+          "old": true,
+          "new": true
+        }
+      ]
+    }
+  ]
+}

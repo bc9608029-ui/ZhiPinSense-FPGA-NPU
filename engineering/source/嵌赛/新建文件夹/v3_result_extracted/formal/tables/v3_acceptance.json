@@ -1,0 +1,37 @@
+{
+  "reference": "frozen_qam_aware_v2_time_power_phase",
+  "scope": "V2 exact development namespace; final blind set not accessed",
+  "checks": {
+    "accuracy_gain": false,
+    "macro_f1_gain": false,
+    "qam_mean_gain": false,
+    "per_class_BPSK": false,
+    "per_class_QPSK": false,
+    "per_class_8PSK": false,
+    "per_class_16QAM": true,
+    "per_class_64QAM": true,
+    "per_class_2FSK": false,
+    "per_class_CPFSK": true,
+    "per_class_OFDM": true,
+    "snr_0": false,
+    "snr_10": true,
+    "snr_20": true
+  },
+  "values": {
+    "accuracy_gain": -0.03166666666666662,
+    "macro_f1_gain": -0.02718852283061879,
+    "qam_mean_gain": 0.004285714285714282,
+    "per_class_delta_BPSK": -0.06476190476190469,
+    "per_class_delta_QPSK": -0.1171428571428571,
+    "per_class_delta_8PSK": -0.04095238095238096,
+    "per_class_delta_16QAM": -0.009523809523809545,
+    "per_class_delta_64QAM": 0.01809523809523811,
+    "per_class_delta_2FSK": -0.08190476190476192,
+    "per_class_delta_CPFSK": 0.020952380952380945,
+    "per_class_delta_OFDM": 0.02190476190476187,
+    "snr_delta_0": -0.0645,
+    "snr_delta_10": 0.028000000000000025,
+    "snr_delta_20": 0.04249999999999998
+  },
+  "passed": false
+}

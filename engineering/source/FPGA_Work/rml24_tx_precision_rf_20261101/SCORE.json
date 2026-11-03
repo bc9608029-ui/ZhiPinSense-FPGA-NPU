@@ -1,0 +1,149 @@
+{
+  "scope": "Targeted development comparison; six already failing waveforms; not independent formal regression; no deployment",
+  "clock_drift_ns": -6078030,
+  "rows": [
+    {
+      "file": "14_05.bin",
+      "captures": 4,
+      "old_detector_correct": 3,
+      "new_detector_correct": 3,
+      "recovered_correct": 3,
+      "predictions": [
+        {
+          "index": 6,
+          "pred": 14
+        },
+        {
+          "index": 7,
+          "pred": 14
+        },
+        {
+          "index": 8,
+          "pred": 16
+        },
+        {
+          "index": 9,
+          "pred": 14
+        }
+      ]
+    },
+    {
+      "file": "13_01.bin",
+      "captures": 4,
+      "old_detector_correct": 4,
+      "new_detector_correct": 4,
+      "recovered_correct": 4,
+      "predictions": [
+        {
+          "index": 11,
+          "pred": 13
+        },
+        {
+          "index": 12,
+          "pred": 13
+        },
+        {
+          "index": 13,
+          "pred": 13
+        },
+        {
+          "index": 14,
+          "pred": 13
+        }
+      ]
+    },
+    {
+      "file": "17_00.bin",
+      "captures": 4,
+      "old_detector_correct": 4,
+      "new_detector_correct": 4,
+      "recovered_correct": 4,
+      "predictions": [
+        {
+          "index": 16,
+          "pred": 17
+        },
+        {
+          "index": 17,
+          "pred": 17
+        },
+        {
+          "index": 18,
+          "pred": 17
+        },
+        {
+          "index": 19,
+          "pred": 17
+        }
+      ]
+    },
+    {
+      "file": "18_06.bin",
+      "captures": 3,
+      "old_detector_correct": 3,
+      "new_detector_correct": 3,
+      "recovered_correct": 3,
+      "predictions": [
+        {
+          "index": 22,
+          "pred": 18
+        },
+        {
+          "index": 23,
+          "pred": 18
+        },
+        {
+          "index": 24,
+          "pred": 18
+        }
+      ]
+    },
+    {
+      "file": "18_07.bin",
+      "captures": 3,
+      "old_detector_correct": 3,
+      "new_detector_correct": 3,
+      "recovered_correct": 3,
+      "predictions": [
+        {
+          "index": 27,
+          "pred": 18
+        },
+        {
+          "index": 28,
+          "pred": 18
+        },
+        {
+          "index": 29,
+          "pred": 18
+        }
+      ]
+    },
+    {
+      "file": "23_04.bin",
+      "captures": 4,
+      "old_detector_correct": 3,
+      "new_detector_correct": 3,
+      "recovered_correct": 3,
+      "predictions": [
+        {
+          "index": 32,
+          "pred": 23
+        },
+        {
+          "index": 33,
+          "pred": 23
+        },
+        {
+          "index": 34,
+          "pred": 23
+        },
+        {
+          "index": 35,
+          "pred": 10
+        }
+      ]
+    }
+  ],
+  "guard_clean": true
+}

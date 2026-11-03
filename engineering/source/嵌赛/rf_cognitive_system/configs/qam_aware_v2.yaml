@@ -1,0 +1,19 @@
+baseline_config: configs/baseline.yaml
+output_root: outputs/qam_aware_v2/formal
+variants: [time_power, time_phase, time_power_phase]
+
+# The IQ backbone remains the V1 lightweight residual encoder. The physical
+# branch is deliberately narrow so gains cannot be attributed to a large
+# channel-count increase.
+model:
+  time_base_channels: 22
+  physical_base_channels: 8
+  fusion_features: 64
+  dropout: 0.1
+
+# This split is reserved for one future, user-authorized final blind report.
+# Audit code may inspect provenance and balance only; it must not run a model.
+final_blind_test:
+  seed: 26090831
+  split: final_blind_test
+  samples: 8400

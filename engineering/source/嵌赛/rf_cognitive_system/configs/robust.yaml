@@ -1,0 +1,42 @@
+seed: 2026
+device: auto
+output_dir: outputs
+signal:
+  sample_rate: 128000.0
+  symbol_rate: 16000.0
+  samples_per_symbol: 8
+  sample_length: 1024
+  amplitude: 1.0
+  frequency_offset: 0.0
+  phase_offset: 0.0
+  pulse_shape: {type: rrc, rolloff: 0.35, span_symbols: 8}
+  ofdm: {fft_length: 256, cyclic_prefix: 64, active_subcarriers: 48, subcarrier_modulation: QPSK}
+  modulations: [BPSK, QPSK, 8PSK, 16QAM, 64QAM, 2FSK, CPFSK, OFDM]
+channel:
+  domain_randomization: true
+  awgn: {enabled: true, probability: 1.0, snr_db: [-20.0, 20.0]}
+  rayleigh: {enabled: true, probability: 0.25}
+  rician: {enabled: true, probability: 0.25, k_factor: [2.0, 12.0]}
+  multipath: {enabled: true, probability: 0.45, num_taps: [2, 6], max_delay: 16}
+  cfo: {enabled: true, probability: 0.8, hz: [-2500.0, 2500.0]}
+  phase_offset: {enabled: true, probability: 0.8, radians: [-3.14159, 3.14159]}
+  phase_noise: {enabled: true, probability: 0.4, std_rad: [0.0001, 0.008]}
+  sfo: {enabled: true, probability: 0.35, ppm: [-100.0, 100.0]}
+  iq_imbalance: {enabled: true, probability: 0.35, gain_db: [-1.5, 1.5], phase_deg: [-8.0, 8.0]}
+  dc_offset: {enabled: true, probability: 0.3, magnitude: [0.0, 0.12]}
+  amplitude_scaling: {enabled: true, probability: 0.7, scale: [0.5, 1.5]}
+  clipping: {enabled: true, probability: 0.2, level_rms: [1.2, 2.5]}
+  narrowband_interference: {enabled: true, probability: 0.25, sir_db: [-5.0, 20.0]}
+  burst_interference: {enabled: true, probability: 0.25, sir_db: [-5.0, 15.0], duty_cycle: [0.03, 0.35]}
+dataset:
+  train_samples: 50400
+  val_samples: 8400
+  test_samples: 8400
+  snr_values: [-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+  num_workers: 0
+training: {epochs: 40, batch_size: 128, optimizer: AdamW, learning_rate: 0.001, weight_decay: 0.0001, scheduler: cosine, early_stopping_patience: 8, min_delta: 0.0001}
+model: {base_channels: 32, dropout: 0.15}
+evaluation:
+  batch_size: 256
+  samples_per_modulation_per_snr: 300
+  snr_values: [-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]

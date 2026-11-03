@@ -1,0 +1,343 @@
+{
+  "scope": "48 synthetic negatives; no operational false alarm rate claim",
+  "accepted": 0,
+  "strict_false_recoveries": 0,
+  "rows": [
+    {
+      "kind": "noise",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.0713324068578697,
+      "cfo_hz": 364.1100486942145
+    },
+    {
+      "kind": "cw",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.03537661513955072,
+      "cfo_hz": -476.83293517566733
+    },
+    {
+      "kind": "dc",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.025543042158884564,
+      "cfo_hz": 325.63374043336023
+    },
+    {
+      "kind": "random_psk",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.06513956033737192,
+      "cfo_hz": 807.6714020760602
+    },
+    {
+      "kind": "noise",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.06482070677721685,
+      "cfo_hz": -105.47110238750726
+    },
+    {
+      "kind": "cw",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.052072590466080114,
+      "cfo_hz": -468.9520360418549
+    },
+    {
+      "kind": "dc",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.02559589693335473,
+      "cfo_hz": 309.5186464501418
+    },
+    {
+      "kind": "random_psk",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.072640733835913,
+      "cfo_hz": -387.9386814435579
+    },
+    {
+      "kind": "noise",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.07525841212623532,
+      "cfo_hz": 428.3761042785201
+    },
+    {
+      "kind": "cw",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.01939798090181517,
+      "cfo_hz": -674.114496382201
+    },
+    {
+      "kind": "dc",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.025526298767133,
+      "cfo_hz": 264.0463253814436
+    },
+    {
+      "kind": "random_psk",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.07535774899111918,
+      "cfo_hz": 96.60352608268092
+    },
+    {
+      "kind": "noise",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.06499080537651475,
+      "cfo_hz": -48.29398454180867
+    },
+    {
+      "kind": "cw",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.030340687631575214,
+      "cfo_hz": 587.5678819065303
+    },
+    {
+      "kind": "dc",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.025562924783593656,
+      "cfo_hz": 354.3181212510038
+    },
+    {
+      "kind": "random_psk",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.07440395312334261,
+      "cfo_hz": -238.64263653164463
+    },
+    {
+      "kind": "noise",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.0714509930024743,
+      "cfo_hz": -104.66107874302708
+    },
+    {
+      "kind": "cw",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.028247192315888764,
+      "cfo_hz": -977.3800748614728
+    },
+    {
+      "kind": "dc",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.02564867005132836,
+      "cfo_hz": 283.8001640377394
+    },
+    {
+      "kind": "random_psk",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.06712510173498304,
+      "cfo_hz": 117.93845754065141
+    },
+    {
+      "kind": "noise",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.06981088204115779,
+      "cfo_hz": 309.0975954878287
+    },
+    {
+      "kind": "cw",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.031487415689657405,
+      "cfo_hz": -72.97150632736863
+    },
+    {
+      "kind": "dc",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.02547698897093258,
+      "cfo_hz": 359.23885364116654
+    },
+    {
+      "kind": "random_psk",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.0789071740200351,
+      "cfo_hz": 453.0825736378269
+    },
+    {
+      "kind": "noise",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.06724222049374581,
+      "cfo_hz": 306.8190457901153
+    },
+    {
+      "kind": "cw",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.021850773656332676,
+      "cfo_hz": -923.0576900945218
+    },
+    {
+      "kind": "dc",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.02486271353675031,
+      "cfo_hz": 178.88242585995582
+    },
+    {
+      "kind": "random_psk",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.07475815392472614,
+      "cfo_hz": 0.18323147048393135
+    },
+    {
+      "kind": "noise",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.07387935491628944,
+      "cfo_hz": -167.11787596595715
+    },
+    {
+      "kind": "cw",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.03536218991257237,
+      "cfo_hz": -530.3608958932684
+    },
+    {
+      "kind": "dc",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.02550328017630314,
+      "cfo_hz": 286.532362880967
+    },
+    {
+      "kind": "random_psk",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.07639841572313356,
+      "cfo_hz": -199.23122152743898
+    },
+    {
+      "kind": "noise",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.06932035016528834,
+      "cfo_hz": 204.30851264530116
+    },
+    {
+      "kind": "cw",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.02503624082260503,
+      "cfo_hz": 155.27317725663949
+    },
+    {
+      "kind": "dc",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.023978769744896235,
+      "cfo_hz": 104.03581245515772
+    },
+    {
+      "kind": "random_psk",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.06692334813468725,
+      "cfo_hz": 88.75701641827736
+    },
+    {
+      "kind": "noise",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.0758218813736068,
+      "cfo_hz": -297.67259296273943
+    },
+    {
+      "kind": "cw",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.008998236480645516,
+      "cfo_hz": 159.93144056703107
+    },
+    {
+      "kind": "dc",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.02524975863647203,
+      "cfo_hz": 391.3037579559881
+    },
+    {
+      "kind": "random_psk",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.0723555308728698,
+      "cfo_hz": -315.9833274749353
+    },
+    {
+      "kind": "noise",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.0696623880808914,
+      "cfo_hz": 470.82846066695987
+    },
+    {
+      "kind": "cw",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.021747709562642912,
+      "cfo_hz": 666.7060467949124
+    },
+    {
+      "kind": "dc",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.025547047048359944,
+      "cfo_hz": 333.74954274690964
+    },
+    {
+      "kind": "random_psk",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.07948534966745785,
+      "cfo_hz": -161.6668581399537
+    },
+    {
+      "kind": "noise",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.0749926414391106,
+      "cfo_hz": 281.669419545325
+    },
+    {
+      "kind": "cw",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.006850180691214745,
+      "cfo_hz": -691.3164246054127
+    },
+    {
+      "kind": "dc",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.025366211070965476,
+      "cfo_hz": 239.51900474518166
+    },
+    {
+      "kind": "random_psk",
+      "detected": false,
+      "strict_recovered": false,
+      "score": 0.06965072027595282,
+      "cfo_hz": -568.6593225756448
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "BUILD_UNIT_PASS_SHORT_AND_SWEEP24_PENDING",
+  "changes": [
+    {
+      "file": "candidate/ui_sw/signal_history.hpp",
+      "before": "2578793e94e7ee136e6a391a416193f0aecdc6b1d7f3b3442ae5989ff4a53fd9",
+      "after": "82370603705197785bdc28b58b9500a771afb6b4aa0a71edfe980ce0b655e856"
+    },
+    {
+      "file": "candidate/rml24_final/runtime/continuous_sweep.py",
+      "before": "322c0e6851346f6fa850d04c222b5e9a15335d240be6510dd05f9b0221b1ed1b",
+      "after": "6450f9d02626fcfb6e884dc4e21daee6e0d77f9e0d3b8d7dc20169edc433ae57"
+    },
+    {
+      "file": "candidate/rml24_final/board_runtime/standalone_receiver.py",
+      "before": "9b43e19ef4125881e032786ed9ccf708077ae74289a4adb65448851f3bbbc01b",
+      "after": "ffdb47bff6834ca0a6ce267773dc731ebe439d8ce61d3595dbcf381f95be1801"
+    },
+    {
+      "file": "candidate/rml24_final/board_runtime/receiver_repeat_mean_gapfix1.py",
+      "after": "4f4a74a601aaec6d0bb3af09e368b5323a85acee0050d0bf457294255c9f5cf1"
+    }
+  ],
+  "receiver_sha": "ffdb47bff6834ca0a6ce267773dc731ebe439d8ce61d3595dbcf381f95be1801",
+  "ui_sha": "4464638e3d2fc1633d6d4228c8d4b7ff652f58b6886bf188a39f54dfc50d7421",
+  "model_changed": false,
+  "threshold_changed": false,
+  "bit_changed": false
+}

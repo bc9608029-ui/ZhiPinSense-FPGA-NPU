@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-27",
+  "status": "SCAN_CANDIDATE_RF_UI_TESTED_FIXED_ACCURACY_GAP_REMAINS_BOOT_UNCHANGED",
+  "fixed_accuracy_issue_resolved": false,
+  "historical_fixed_correct": 475,
+  "historical_fixed_total": 480,
+  "current_fixed_correct": 464,
+  "current_fixed_total": 480,
+  "legacy_control_correct": 229,
+  "legacy_control_total": 240,
+  "original_scan_correct": 454,
+  "original_scan_total": 480,
+  "candidate_scan_correct": 472,
+  "candidate_scan_total": 480,
+  "candidate_same_240_waveforms_at_two_frequencies": true,
+  "candidate_challenge": {
+    "records": 78,
+    "signal_denominator": 72,
+    "signal_correct": 68,
+    "signal_accuracy": 0.9444444444444444,
+    "signal_missing": [],
+    "signal_invalid": [],
+    "max_signal_frequency_error_hz": 73.80908203125,
+    "hop_evidence": [
+      {
+        "seq": 0,
+        "target_hz": 2397400000,
+        "signal_hz": 2397399931.170837,
+        "rescan": true,
+        "locked_miss_before_rescan": false,
+        "elapsed_ms": 20837.924999999814
+      },
+      {
+        "seq": 24,
+        "target_hz": 2403600000,
+        "signal_hz": 2403599929.444145,
+        "rescan": true,
+        "locked_miss_before_rescan": true,
+        "elapsed_ms": 21150.991770000473
+      },
+      {
+        "seq": 48,
+        "target_hz": 2397400000,
+        "signal_hz": 2397399928.4218616,
+        "rescan": true,
+        "locked_miss_before_rescan": true,
+        "elapsed_ms": 21253.60965999971
+      }
+    ],
+    "muted_denominator": 6,
+    "muted_pass": 6,
+    "muted_details": [
+      {
+        "seq": 72,
+        "pass": true,
+        "pred": -1,
+        "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+      },
+      {
+        "seq": 73,
+        "pass": true,
+        "pred": -1,
+        "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+      },
+      {
+        "seq": 74,
+        "pass": true,
+        "pred": -1,
+        "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+      },
+      {
+        "seq": 75,
+        "pass": true,
+        "pred": -1,
+        "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+      },
+      {
+        "seq": 76,
+        "pass": true,
+        "pred": -1,
+        "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+      },
+      {
+        "seq": 77,
+        "pass": true,
+        "pred": -1,
+        "error": "NO_PUBLIC_FRAME_IN_SCAN_RANGE"
+      }
+    ],
+    "note": "Predeclared 72 signal and 6 muted diagnostic frames; repeats of 24 sources, not independent new-waveform validation.",
+    "end_to_end_muted_rejections": 6,
+    "false_muted_classifications": 0,
+    "public_discovery_false_hits": []
+  },
+  "historical_npu_exact_replay": {
+    "records": 240,
+    "prediction_differences": [],
+    "input_hash_differences": [],
+    "max_abs_mean_logit_difference": 0.0,
+    "pass": true
+  },
+  "mode_control": {
+    "records": 24,
+    "modes_seen": [
+      "BAND_SCAN",
+      "FIXED"
+    ],
+    "stop_stable": true,
+    "auto_lock_rejected": true,
+    "four_supported_commands_two_ack": true,
+    "worker_error": null,
+    "note": "ACK denotes control-state update; subsequent actual RF rows prove mode behavior. One in-flight frame completed after STOP before counts became stable.",
+    "pass": true
+  },
+  "physical_ui": {
+    "date": "2026-10-27",
+    "source": "User physical confirmation in this chat",
+    "four_tabs_and_mode_navigation": true,
+    "mode_switch_stop_start": true,
+    "spectrum_waterfall_constellation_updating": true,
+    "note": "Native fourpage-waterfall build on tested board. Physical feedback is not proof of persistence or accuracy."
+  },
+  "new_systemd_entry_installed": false,
+  "new_runtime_reboot_or_cold_boot_tested": false,
+  "long_stability_tested": false,
+  "note": "All modified-candidate evaluations are development comparisons on reused waveforms; not independent generalization accuracy."
+}

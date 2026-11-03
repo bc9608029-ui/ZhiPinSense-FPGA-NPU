@@ -1,0 +1,11 @@
+{
+  "checkpoint_epoch": 50,
+  "checkpoint_path": "F:\\FPGA_Work\\24class_results\\rml24_seed2027_best.pt",
+  "checkpoint_sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+  "label_correct": "424/480",
+  "note": "FP32 CPU reference on ORIGINAL RadioML test frames. NOT board NPU.",
+  "phase": "D_fp32_reference",
+  "result_layer": "HOST_FP32_REFERENCE",
+  "sample_count": 480,
+  "task_id": "fix10class24-original-radioml-accuracy1"
+}

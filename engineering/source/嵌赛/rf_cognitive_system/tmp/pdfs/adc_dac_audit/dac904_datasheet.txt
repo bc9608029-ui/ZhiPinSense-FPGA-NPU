@@ -1,0 +1,1432 @@
+                                                                                                                                       DAC904
+                                                                                                904
+                                                                                             DAC
+
+                                                                                                  DAC9
+                                                                                                      04
+
+
+
+                                                                                                                                           SBAS095C – MAY 2002
+
+
+
+                                          14-Bit, 165MSPS
+                                  DIGITAL-TO-ANALOG CONVERTER
+FEATURES                                                                       APPLICATIONS
+● SINGLE +5V OR +3V OPERATION                                                  ● COMMUNICATION TRANSMIT CHANNELS
+● HIGH SFDR: 20MHz Output at 100MSPS: 64dBc                                       WLL, Cellular Base Station
+                                                                                  Digital Microwave Links
+● LOW GLITCH: 3pV-s                                                               Cable Modems
+● LOW POWER: 170mW at +5V                                                      ● WAVEFORM GENERATION
+● INTERNAL REFERENCE:                                                             Direct Digital Synthesis (DDS)
+   Optional Ext. Reference                                                        Arbitrary Waveform Generation (ARB)
+   Adjustable Full-Scale Range                                                 ● MEDICAL/ULTRASOUND
+   Multiplying Option
+                                                                               ● HIGH-SPEED INSTRUMENTATION AND
+                                                                                 CONTROL
+                                                                               ● VIDEO, DIGITAL TV
+
+DESCRIPTION                                                                    battery-operated systems. Further optimization can be realized
+                                                                               by lowering the output current with the adjustable full-scale
+The DAC904 is a high-speed, Digital-to-Analog Converter (DAC)                  option.
+offering a 14-bit resolution option within the family of high-
+                                                                               For noncontinuous operation of the DAC904, a power-down
+performance converters. Featuring pin compatibility among fam-
+                                                                               mode results in only 45mW of standby power.
+ily members, the DAC908, DAC900, and DAC902 provide a
+component selection option to an 8-, 10-, and 12-bit resolution,               The DAC904 comes with an integrated 1.24V bandgap refer-
+respectively. All models within this family of DACs support                    ence and edge-triggered input latches, offering a complete
+update rates in excess of 165MSPS with excellent dynamic                       converter solution. Both +3V and +5V CMOS logic families can
+performance, and are especially suited to fulfill the demands of               be interfaced to the DAC904.
+a variety of applications.                                                     The reference structure of the DAC904 allows for additional
+The advanced segmentation architecture of the DAC904 is                        flexibility by utilizing the on-chip reference, or applying an
+optimized to provide a high Spurious-Free Dynamic Range                        external reference. The full-scale output current can be adjusted
+(SFDR) for single-tone, as well as for multi-tone signals—                     over a span of 2-20mA, with one external resistor, while main-
+essential when used for the transmit signal path of communica-                 taining the specified dynamic performance.
+tion systems.                                                                  The DAC904 is available in SO-28 and TSSOP-28 packages.
+The DAC904 has a high impedance (200kΩ) current output with                                           +VA        BW             +VD
+a nominal range of 20mA and an output compliance of up to                                    DAC904
+1.25V. The differential outputs allow for both a differential or                                                                                              IOUT
+                                                                                                                                              LSB
+single-ended analog signal interface. The close matching of the                       FSA                                                   Switches
+                                                                                                                                                              IOUT
+                                                                                                                      Current                                 BYP
+current outputs ensures superior dynamic performance in the                                                           Sources
+                                                                                     REFIN
+differential configuration, which can be implemented with a                                                                                Segmented
+                                                                                                                                            Switches
+transformer.
+                                                                                INT/EXT
+Utilizing a small geometry CMOS process, the monolithic DAC904
+can be operated on a wide, single-supply range of +2.7V to                                                                       Latches                      PD
++5.5V. Its low power consumption allows for use in portable and                                 +1.24V Ref.
+                                                                                                                            14-Bit Data Input
+
+                                                                                               AGND           CLK                D13...D0              DGND
+
+
+                   Please be aware that an important notice concerning availability, standard warranty, and use in critical applications of
+                   Texas Instruments semiconductor products and disclaimers thereto appears at the end of this data sheet.
+
+PRODUCTION DATA information is current as of publication date.                                              Copyright © 2002, Texas Instruments Incorporated
+Products conform to specifications per the terms of Texas Instruments
+standard warranty. Production processing does not necessarily include
+testing of all parameters.
+
+                                                                        www.ti.com
+ABSOLUTE MAXIMUM RATINGS                                                                                                   ELECTROSTATIC
+    +VA to AGND ......................................................................... –0.3V to +6V
+    +VD to DGND ........................................................................ –0.3V to +6V
+                                                                                                                           DISCHARGE SENSITIVITY
+    AGND to DGND ................................................................. –0.3V to +0.3V                This integrated circuit can be damaged by ESD. Texas Instru-
+    +VA to +VD ............................................................................... –6V to +6V
+                                                                                                                 ments recommends that all integrated circuits be handled with
+    CLK, PD to DGND ....................................................... –0.3V to VD + 0.3V
+    D0-D13 to DGND ......................................................... –0.3V to VD + 0.3V                  appropriate precautions. Failure to observe proper handling
+    IOUT, IOUT to AGND .......................................................... –1V to VA + 0.3V               and installation procedures can cause damage.
+    BW, BYP to AGND ....................................................... –0.3V to VA + 0.3V
+    REFIN, FSA to AGND ................................................... –0.3V to VA + 0.3V
+                                                                                                                 ESD damage can range from subtle performance degradation
+    INT/EXT to AGND ........................................................ –0.3V to VA + 0.3V                  to complete device failure. Precision integrated circuits may be
+    Junction Temperature .................................................................... +150°C             more susceptible to damage because very small parametric
+    Case Temperature ......................................................................... +100°C            changes could cause the device not to meet its published
+    Storage Temperature ..................................................................... +125°C
+                                                                                                                 specifications.
+
+
+PACKAGE/ORDERING INFORMATION
+                                                                                                    SPECIFIED
+                                                                    PACKAGE                       TEMPERATURE            PACKAGE           ORDERING            TRANSPORT
+    PRODUCT                      PACKAGE-LEAD                     DESIGNATOR(1)                      RANGE               MARKING            NUMBER           MEDIA, QUANTITY
+    DAC904U                              SO-28                             DW                     –40°C to +85°C          DAC904U          DAC904U               Rails, 28
+            "                                "                               "                              "                "            DAC904U/1K        Tape and Reel, 1000
+    DAC904E                           TSSOP-28                             PW                     –40°C to +85°C          DAC904E          DAC904E               Rails, 52
+            "                                "                               "                              "                "            DAC904E/2K5       Tape and Reel, 2500
+
+NOTE: (1) For the most current specifications and package information, refer to our web site at www.ti.com.
+
+
+
+
+DEMO BOARD ORDERING INFORMATION
+                                     DEMO BOARD
+    PRODUCT                        ORDERING NUMBER                          COMMENT
+    DAC904U                             DEM-DAC90xU                         Populated evaluation board without DAC. Order sample of desired DAC90x model separately.
+    DAC904E                             DEM-DAC904E                         Populated evaluation board including the DAC904E.
+
+
+
+ELECTRICAL CHARACTERISTICS
+At TA = full specified temperature range, +VA = +5V, +VD = +5V, differential transformer coupled output, 50Ω doubly terminated, unless otherwise specified.
+
+                                                                                                                                           DAC904U, E
+
+    PARAMETER                                                                                    CONDITIONS                       MIN          TYP         MAX         UNITS
+
+    RESOLUTION                                                                                                                                 14                        Bits
+    OUTPUT UPDATE RATE                                                                            2.7V to 3.3V                      125        165                     MSPS
+    Output Update Rate (fCLOCK)                                                                   4.5V to 5.5V                      165        200                     MSPS
+    Full Specified Temperature Range, Operating                                                   Ambient, TA                       –40                     +85         °C
+    STATIC ACCURACY(1)                                                                         TA = +25°C
+    Differential Nonlinearity (DNL)                                                 fCLOCK = 25MSPS, fOUT = 1.0MHz                             ±2.5                     LSB
+    Integral Nonlinearity (INL)                                                                                                                ±3.0                     LSB
+    DYNAMIC PERFORMANCE                                                                            TA = +25°C
+    Spurious-Free Dynamic Range (SFDR)                                                             To Nyquist
+     fOUT = 1.0MHz, fCLOCK = 25MSPS                                                                                                 72         79                        dBc
+     fOUT = 2.1MHz, fCLOCK = 50MSPS                                                                                                            76                        dBc
+     fOUT = 5.04MHz, fCLOCK = 50MSPS                                                                                                           68                        dBc
+     fOUT = 5.04MHz, fCLOCK = 100MSPS                                                                                                          68                        dBc
+     fOUT = 20.2MHz, fCLOCK = 100MSPS                                                                                                          64                        dBc
+     fOUT = 25.3MHz, fCLOCK = 125MSPS                                                                                                          60                        dBc
+     fOUT = 41.5MHz, fCLOCK = 125MSPS                                                                                                          55                        dBc
+     fOUT = 27.4MHz, fCLOCK = 165MSPS                                                                                                          60                        dBc
+     fOUT = 54.8MHz, fCLOCK = 165MSPS                                                                                                          55                        dBc
+    Spurious-Free Dynamic Range within a Window
+     fOUT = 5.04MHz, fCLOCK = 50MSPS                                                               2MHz Span                                   82                        dBc
+     fOUT = 5.04MHz, fCLOCK = 100MSPS                                                              4MHz Span                                   82                        dBc
+    Total Harmonic Distortion (THD)
+     fOUT = 2.1MHz, fCLOCK = 50MSPS                                                                                                            –75                       dBc
+     fOUT = 2.1MHz, fCLOCK = 125MSPS                                                                                                           –74                       dBc
+    Two Tone
+     fOUT1 = 13.5MHz, fOUT2 = 14.5MHz, fCLOCK = 100MSPS                                                                                        63                        dBc
+
+
+
+
+2
+                                                                                                                                                                    DAC904
+                                                                                                       www.ti.com                                                    SBAS095C
+ELECTRICAL CHARACTERISTICS (Cont.)
+At TA = +25°C, +VA = +5V, +VD = +5V, differential transformer coupled output, 50Ω doubly terminated, unless otherwise specified.
+
+                                                                                                                       DAC904U, E
+
+ PARAMETER                                                             CONDITIONS                           MIN             TYP            MAX            UNITS
+
+ DYNAMIC PERFORMANCE (Cont.)
+ Output Settling Time(2)                                                  to 0.1%                                            30                             ns
+ Output Rise Time(2)                                                    10% to 90%                                            2                             ns
+ Output Fall Time(2)                                                    10% to 90%                                            2                             ns
+ Glitch Impulse                                                                                                               3                            pV-s
+ DC-ACCURACY
+ Full-Scale Output Range(3)(FSR)                                     All Bits HIGH, IOUT                    2.0                            20.0            mA
+ Output Compliance Range                                                                                    –1.0                           +1.25            V
+ Gain Error                                                       With Internal Reference                   –10             ±1              +10          %FSR
+ Gain Error                                                       With External Reference                   –10             ±2              +10          %FSR
+ Gain Drift                                                       With Internal Reference                                  ±120                        ppmFSR/°C
+ Offset Error                                                     With Internal Reference                  –0.025                          +0.025        %FSR
+ Offset Drift                                                     With Internal Reference                                   ±0.1                       ppmFSR/°C
+ Power-Supply Rejection, +VA                                                                                –0.2                            +0.2        %FSR/V
+ Power-Supply Rejection, +VD                                                                               –0.025                          +0.025       %FSR/V
+ Output Noise                                                    IOUT = 20mA, RLOAD = 50Ω                                   50                           pA/√Hz
+ Output Resistance                                                                                                          200                            kΩ
+ Output Capacitance                                                 IOUT, IOUT to Ground                                    12                             pF
+ REFERENCE
+ Reference Voltage                                                                                                         +1.24                           V
+ Reference Tolerance                                                                                                        ±10                            %
+ Reference Voltage Drift                                                                                                    ±50                        ppmFSR/°C
+ Reference Output Current                                                                                                   10                            µA
+ Reference Input Resistance                                                                                                  1                            MΩ
+ Reference Input Compliance Range                                                                            0.1                            1.25           V
+ Reference Small-Signal Bandwidth(4)                                                                                        1.3                           MHz
+ DIGITAL INPUTS
+ Logic Coding                                                                                                          Straight Binary
+ Latch Command                                                                                                      Rising Edge of Clock
+ Logic HIGH Voltage, VIH                                                 +VD = +5V                           3.5              5                             V
+ Logic LOW Voltage, VIL                                                  +VD = +5V                                            0             1.2             V
+ Logic HIGH Voltage, VIH                                                 +VD = +3V                            2               3                             V
+ Logic LOW Voltage, VIL                                                  +VD = +3V                                            0             0.8             V
+ Logic HIGH Current, IIH(5)                                              +VD = +5V                                           ±20                            µA
+ Logic LOW Current, IIL                                                  +VD = +5V                                           ±20                            µA
+ Input Capacitance                                                                                                            5                             pF
+ POWER SUPPLY
+ Supply Voltages
+  +VA                                                                                                       +2.7             +5             +5.5             V
+  +VD                                                                                                       +2.7             +5             +5.5             V
+ Supply Current(6)
+  IVA                                                                                                                       24              30              mA
+  IVA, Power-Down Mode                                                                                                      1.1              2              mA
+  IVD                                                                                                                        8              15              mA
+ Power Dissipation                                                   +5V, IOUT = 20mA                                       170             230             mW
+                                                                     +3V, IOUT = 2mA                                        50                              mW
+ Power Dissipation, Power-Down Mode                                                                                         45                              mW
+ Thermal Resistance, θJA
+  SO-28                                                                                                                      75                            °C/W
+  TSSOP-28                                                                                                                   50                            °C/W
+
+NOTES: (1) At output IOUT, while driving a virtual ground. (2) Measured single-ended into 50Ω Load. (3) Nominal full-scale output current is 32x IREF; see Application
+Section for details. (4) Reference bandwidth depends on size of external capacitor at the BW pin and signal level. (5) Typically 45µA for the PD pin, which has an
+internal pull-down resistor. (6) Measured at fCLOCK = 50MSPS and fOUT = 1.0MHz.
+
+
+
+
+DAC904                                                                                                                                                              3
+ SBAS095C                                                                  www.ti.com
+PIN CONFIGURATION                                                                               PIN DESCRIPTIONS
+                                                                                                  PIN      DESIGNATOR          DESCRIPTION
+    Top View                                                           SO, TSSOP
+                                                                                                  1             Bit 1          Data Bit 1 (D13), MSB
+                                                                                                  2             Bit 2          Data Bit 2 (D12)
+                                                                                                  3             Bit 3          Data Bit 3 (D11)
+                                                                                                  4             Bit 4          Data Bit 4 (D10)
+                                                                                                  5             Bit 5          Data Bit 5 (D9)
+                  Bit 1   1                            28    CLK                                  6             Bit 6          Data Bit 6 (D8)
+                                                                                                  7             Bit 7          Data Bit 7 (D7)
+                  Bit 2   2                            27    +VD                                  8             Bit 8          Data Bit 8 (D6)
+                                                                                                  9             Bit 9          Data Bit 9 (D5)
+                  Bit 3   3                            26    DGND
+                                                                                                  10            Bit 10         Data Bit 10 (D4)
+                  Bit 4   4                            25    NC                                   11            Bit 11         Data Bit 11 (D3)
+                                                                                                  12            Bit 12         Data Bit 12 (D2)
+                  Bit 5   5                            24    +VA
+                                                                                                  13            Bit 13         Data Bit 13 (D1)
+                  Bit 6   6                            23    BYP                                  14            Bit 14         Data Bit 14 (D0), LSB
+                                                                                                  15             PD            Power Down, Control Input; Active
+                  Bit 7   7                            22    IOUT                                                              HIGH. Contains internal pull-down circuit;
+                                   DAC904                                                                                      may be left unconnected if not used.
+                  Bit 8   8                            21    IOUT
+                                                                                                  16           INT/EXT         Reference Select Pin; Internal ( = 0) or
+                  Bit 9   9                            20    AGND                                                              External ( = 1) Reference Operation
+                                                                                                  17            REFIN          Reference Input/Ouput. See Applications
+                 Bit 10 10                             19    BW                                                                section for further details.
+                                                                                                  18             FSA           Full-Scale Output Adjust
+                 Bit 11 11                             18    FSA
+                                                                                                  19             BW            Bandwidth/Noise Reduction Pin:
+                 Bit 12 12                             17    REFIN                                                             Bypass with 0.1µF to +VA for Optimum
+                                                                                                                               Performance. (Optional)
+                 Bit 13 13                             16    INT/EXT                              20            AGND           Analog Ground
+                                                                                                  21             IOUT          Complementary DAC Current Output
+                 Bit 14 14                             15    PD
+                                                                                                  22             IOUT          DAC Current Output
+                                                                                                  23             BYP           Bypass Node: Use 0.1µF to AGND
+                                                                                                  24             +VA           Analog Supply Voltage, 2.7V to 5.5V
+                                                                                                  25              NC           No Internal Connection
+                                                                                                  26            DGND           Digital Ground
+                                                                                                  27             +VD           Digital Supply Voltage, 2.7V to 5.5V
+                                                                                                  28             CLK           Clock Input
+
+
+
+TYPICAL CONNECTION CIRCUIT
+
+                                      +5V                               +5V
+                                            0.1µF(1)
+
+                                +VA                         BW             +VD
+
+                          DAC904
+                                                                                                        IOUT                                               1:1
+                                                                                                                                                                    VOUT
+                                                                                       LSB              IOUT
+                  FSA                                                                Switches
+                                                                                                        BYP
+                                                              Current
+                REFIN                                         Sources
+                                                                                  Segmented                    0.1µF     50Ω
+       RSET                                                                         MSB                                        20pF(1)     50Ω        20pF(1)
+                 0.1µF                                                             Switches
+
+
+               INT/EXT
+                                                                                                        PD
+                                                                           Latches
+                              +1.24V Ref.
+
+                                                                       14-Bit Data Input
+
+                                  AGND                      CLK          D13.......D0               DGND
+
+
+
+                                                                                                                                     NOTE: (1) Optional components.
+
+
+
+
+4
+                                                                                                                                                           DAC904
+                                                                                  www.ti.com                                                                    SBAS095C
+TIMING DIAGRAM
+
+
+                                 t2                       t1
+
+    CLOCK
+
+
+                                tS                   tH
+
+    D13 D0       Data Changes                                    Data Changes
+                                       Stable Valid Data
+
+                                                                tPD               tSET
+
+
+
+     Iout or
+     Iout
+
+
+
+
+                    SYMBOL             DESCRIPTION                    MIN   TYP     MAX   UNITS
+
+                    t1             Clock Pulse HIGH Time                     3             ns
+                    t2             Clock Pulse LOW Time                      3             ns
+                    tS                Data Setup Time                       1.0            ns
+                    tH                 Data Hold Time                       1.5            ns
+                    tPD            Propagation Delay Time                    1             ns
+                    tSET         Output Settling Time to 0.1%               30             ns
+
+
+
+
+DAC904                                                                                            5
+SBAS095C                                               www.ti.com
+TYPICAL CHARACTERISTICS: VD = VA = +5V
+At TA = +25°C, Differential IOUT = 20mA, 50Ω double-terminated load, SFDR up to Nyquist, unless otherwise specified.
+
+
+
+
+                                                TYPICAL DNL                                                                                                TYPICAL INL
+                     10                                                                                                      10
+                      8                                                                                                       8
+                      6                                                                                                       6
+                      4                                                                                                       4
+
+
+
+
+                                                                                                              Error (LSBs)
+      Error (LSBs)
+
+
+
+
+                      2                                                                                                       2
+                      0                                                                                                       0
+                     –2                                                                                                      –2
+                     –4                                                                                                      –4
+                     –6                                                                                                      –6
+                     –8                                                                                                      –8
+                 –10                                                                                                     –10
+
+
+
+
+                                                                                                                                  0
+
+
+                                                                                                                                      2k
+
+
+                                                                                                                                                 4k
+
+
+                                                                                                                                                          6k
+
+
+                                                                                                                                                                 8k
+
+
+                                                                                                                                                                          10k
+
+
+                                                                                                                                                                                12k
+
+
+                                                                                                                                                                                             14k
+
+
+                                                                                                                                                                                                     16k
+                                                                                                                                                                                                   16384
+                          0
+
+
+                              2k
+
+
+                                      4k
+
+
+                                              6k
+
+
+                                                     8k
+
+
+                                                              10k
+
+
+                                                                    12k
+
+
+                                                                                 14k
+
+
+                                                                                         16k
+                                                                                       16384
+                                                   DAC Code                                                                                                    DAC Code
+
+
+
+
+                                           SFDR vs fOUT AT 25MSPS                                                                                     SFDR vs fOUT AT 50MSPS
+                     90                                                                                                      85
+
+
+                     85                                                                                                      80
+
+                     80                                                                                                      75
+    SFDR (dBc)
+
+
+
+
+                                                                                                            SFDR (dBc)
+
+
+
+
+                                              –6dBFS                                                                                                           –6dBFS
+                     75                                                                                                      70
+
+                     70                                                                                                      65
+                                     0dBFS
+                                                                                                                                                 0dBFS
+                     65                                                                                                      60
+
+                     60                                                                                                      55
+                          0    2.0          4.0      6.0      8.0          10.0        12.0                                       0        5.0           10.0       15.0              20.0         25.0
+                                               Frequency (MHz)                                                                                           Frequency (MHz)
+
+
+
+
+                                          SFDR vs fOUT AT 100MSPS                                                                                 SFDR vs fOUT AT 125MSPS
+                     85                                                                                                      85
+
+                     80                                                                                                      80
+
+                     75                                                                                                      75
+                                                                                                                                                  –6dBFS
+    SFDR (dBc)
+
+
+
+
+                                                                                                            SFDR (dBc)
+
+
+
+
+                     70                                                                                                      70
+                                                          –6dBFS
+                     65                                                                                                      65
+
+                     60                                                                                                      60
+                                                                                                                                           0dBFS
+                     55                                                                                                      55
+                                                    0dBFS
+                     50                                                                                                      50
+
+                     45                                                                                                      45
+                          0        10.0       20.0       30.0             40.0         50.0                                       0    10.0            20.0     30.0    40.0           50.0        60.0
+                                              Frequency (MHz)                                                                                             Frequency (MHz)
+
+
+
+
+6
+                                                                                                                                                                                             DAC904
+                                                                                               www.ti.com                                                                                      SBAS095C
+TYPICAL CHARACTERISTICS: VD = VA = +5V (Cont.)
+At TA = +25°C, Differential IOUT = 20mA, 50Ω double-terminated load, SFDR up to Nyquist, unless otherwise specified.
+
+
+
+
+                                                 SFDR vs fOUT AT 165MSPS                                                                               SFDR vs fOUT AT 200MSPS
+                    80                                                                                                            80
+
+                    75                                                                                                            75
+
+                    70                                                                                                            70
+                                                                   –6dBFS                                                                                                –6dBFS
+       SFDR (dBc)
+
+
+
+
+                                                                                                                     SFDR (dBc)
+                    65                                                                                                            65
+
+                    60                                                                                                            60
+
+                    55                                                                                                            55
+                                                                 0dBFS                                                                                          0dBFS
+                    50                                                                                                            50
+
+                    45                                                                                                            45
+
+                    40                                                                                                            40
+                          0       10.0        20.0   30.0 40.0 50.0             60.0       70.0   80.0                                 0   10.0 20.0    30.0 40.0 50.0 60.0 70.0 80.0           90.0
+                                                      Frequency (MHz)                                                                                      Frequency (MHz)
+
+
+
+
+                                  DIFFERENTIAL vs SINGLE-ENDED SFDR vs fOUT
+                                                 AT 100MSPS                                                                                 SFDR vs IOUTFS and fOUT AT 100MSPS, 0dBFS
+                    85                                                                                                            80
+
+                    80                                                                                                            75
+                                                                                                                                                                                       2.1MHz
+                    75        X                                                                                                   70
+                                  X
+                                                               Diff (–6dBFS)                                                           *                 *        10.1MHz     *       5.04MHz    *
+       SFDR (dBc)
+
+
+
+
+                                                                                                                     SFDR (dBc)
+                    70                                                                                                            65
+                                          X
+                                                                                                                                            20.2MHz
+                    65                                                                                                            60
+                                                     X                     IOUT (–6dBFS)
+                    60                                     X                                                                      55
+                                                                                                                                                          X
+                              Diff (0dBFS)                                                                                             X                                      X       40.4MHz
+                                                                                                                                                                                                 X
+                    55                                                      X                                                     50
+                                                                                       X
+                                          IOUT (0dBFS)
+                    50                                                                                                            45
+
+                    45                                                                                                            40
+                          0              10.0            20.0       30.0          40.0            50.0                                 2                 5                    10                 20
+                                                         Frequency (MHz)                                                                                        IOUTFS (mA)
+
+
+
+
+                                               THD vs fCLOCK AT fOUT = 2.1MHz                                                              SFDR vs TEMPERATURE AT 100MSPS, 0dBFS
+                    –70                                                                                                           85
+
+                                                                                                                                  80
+                    –75
+                                                                                                                                                                                   2.1MHz
+                                                                                                                                  75
+                                                                                2HD
+                    –80
+                                                                                                                     SFDR (dBc)
+
+
+
+
+                                                                                                                                  70
+  THD (dBc)
+
+
+
+
+                                                                                4HD                                               65
+                    –85                                                                                                                                                           10.1MHz
+                                          X                            X
+                                                           X
+                                                                                       X                                          60
+                    –90
+                                                                                                                                  55
+                                                                                3HD                                                                                               40.4MHz
+                    –95                                                                                                                                              X        X
+                                                                                                                                  50   X       X          X                                 X    X
+
+
+
+              –100                                                                                                                45
+                          0               25              50        100            125            150                               –40       –20        0          25        50        70       85
+                                                          fCLOCK (MSPS)                                                                                       Temperature (°C)
+
+
+
+
+DAC904                                                                                                                                                                                                 7
+ SBAS095C                                                                                               www.ti.com
+TYPICAL CHARACTERISTICS: VD = VA = +5V (Cont.)
+At TA = +25°C, Differential IOUT = 20mA, 50Ω double-terminated load, SFDR up to Nyquist, unless otherwise specified.
+
+
+
+
+                                            DUAL-TONE OUTPUT SPECTRUM                                                                         FOUR-TONE OUTPUT SPECTRUM
+                         0                                                                                                        0
+                        –10                                                                                                      –10
+                                                                                                                                                                     fCLOCK = 50MSPS
+                        –20                                      fCLOCK = 100MSPS                                                –20
+                                                                                                                                                                     fOUT1 = 6.25MHz
+                                                                 fOUT1 = 13.5MHz
+                        –30                                                                                                      –30                                 fOUT2 = 6.75MHz
+    Magnitude (dBm)
+
+
+
+
+                                                                                                            Magnitude (dBm)
+                                                                 fOUT2 = 14.5MHz
+                        –40                                                                                                      –40                                 fOUT3 = 7.25MHz
+                                                                 SFDR = 63dBc
+                        –50                                                                                                      –50                                 fOUT4 = 7.75MHz
+                                                                 Amplitude = 0dBFS
+                                                                                                                                                                     SFDR = 66dBc
+                        –60                                                                                                      –60
+                                                                                                                                                                     Amplitude = 0dBFS
+                        –70                                                                                                      –70
+                        –80                                                                                                      –80
+                        –90                                                                                                      –90
+                      –100                                                                                                    –100
+                              0   5     10     15     20    25     30     35    40     45    50                                        0      5             10           15        20         25
+                                                     Frequency (MHz)                                                                                       Frequency (MHz)
+
+
+
+
+TYPICAL CHARACTERISTICS: VD = VA = +3V
+At TA = +25°C, Differential IOUT = 20mA, 50Ω double-terminated load, SFDR up to Nyquist, unless otherwise specified.
+
+
+
+
+                                              SFDR vs fOUT AT 25MSPS                                                                                SFDR vs fOUT AT 50MSPS
+                        85                                                                                                       85
+
+
+                        80                                                                                                       80
+                                                             –6dBFS                                                                                –6dBFS
+                        75                                                                                                       75
+          SFDR (dBc)
+
+
+
+
+                                                                                                                    SFDR (dBc)
+
+
+
+
+                        70                                                                                                       70
+                                             0dBFS
+                        65                                                                                                       65
+                                                                                                                                                   0dBFS
+                        60                                                                                                       60
+
+                        55                                                                                                       55
+                              0       2.0       4.0      6.0      8.0           10.0        12.0                                       0     5.0           10.0       15.0        20.0       25.0
+                                                   Frequency (MHz)                                                                                         Frequency (MHz)
+
+
+
+
+                                              SFDR vs fOUT AT 100MSPS                                                                               SFDR vs fOUT AT 125MSPS
+                        85                                                                                                       85
+
+                        80                                                                                                       80
+
+                        75                                                                                                       75
+                                                                                                                    SFDR (dBc)
+           SFDR (dBc)
+
+
+
+
+                        70                                                                                                       70
+                                                                 –6dBFS
+                        65                                                                                                       65
+                                                                                                                                                                         –6dBFS
+                        60                                                                                                       60
+
+                        55                                                                                                       55
+                                                           0dBFS                                                                                                 0dBFS
+                        50                                                                                                       50
+
+                        45                                                                                                       45
+                              0        10.0          20.0       30.0           40.0         50.0                                       0   10.0      20.0     30.0    40.0         50.0      60.0
+                                                     Frequency (MHz)                                                                                    Frequency (MHz)
+
+
+
+
+8
+                                                                                                                                                                                         DAC904
+                                                                                                   www.ti.com                                                                             SBAS095C
+TYPICAL CHARACTERISTICS: VD = VA = +3V (Cont.)
+At TA = +25°C, Differential IOUT = 20mA, 50Ω double-terminated load, SFDR up to Nyquist, unless otherwise specified.
+
+
+
+                                                                                                                                    DIFFERENTIAL vs SINGLE-ENDED SFDR vs fOUT
+                                     SFDR vs fOUT AT 165MSPS                                                                                       AT 100MSPS
+                 80                                                                                                     85
+
+                 75                                                                                                     80
+
+                 70                                                                                                     75
+                                                     –6dBFS                                                                                                      Diff (–6dBFS)
+
+
+
+
+                                                                                                           SFDR (dBc)
+    SFDR (dBc)
+
+
+
+
+                 65                                                                                                     70
+
+                 60                                                                                                     65
+                                                                                                                                                                            IOUT (–6dBFS)
+                 55                                                                                                     60
+                                  0dBFS                                                                                           Diff (0dBFS)
+                 50                                                                                                     55
+
+                 45                                                                                                     50
+                                                                                                                                                        IOUT (0dBFS)
+                 40                                                                                                     45
+                      0   10.0    20.0    30.0 40.0 50.0            60.0    70.0   80.0                                       0          10.0           20.0       30.0           40.0        50.0
+                                           Frequency (MHz)                                                                                              Frequency (MHz)
+
+
+
+
+                                 SFDR vs IOUTFS and fOUT AT 100MSPS                                                                             THD vs fCLOCK AT fOUT = 2.1MHz
+                 80                                                                                                     –70
+                                                                       2.1MHz
+                 75                                                                                                                                                         2HD
+                                                                                                                        –75
+                 70                                                    5.04MHz
+                                                                                    X
+                                          X                   X
+                      X
+                                                                                                                        –80
+    SFDR (dBc)
+
+
+
+
+                 65                              10.1MHz
+                                                                                                 THD (dBc)
+
+
+
+                                                                                                                                                                            4HD
+                 60       20.2MHz                                                                                       –85
+
+                 55
+                                         *                                                                              –90
+                 50
+                      *                                       *        40.4MHz
+                                                                                    *                                                                                       3HD
+                                                                                                                        –95
+                 45
+
+                 40                                                                                                 –100
+                      2                  5                    10                   20                                         0           25              50        100           125         150
+                                                IOUTFS (mA)                                                                                               fCLOCK (MSPS)
+
+
+
+
+                          SFDR vs TEMPERATURE AT 100MSPS, 0dBFS                                                                             DUAL-TONE OUTPUT SPECTRUM
+                 80                                                                                                       0
+                                                                   2.1MHz
+                 75                                                                                                     –10
+                                                                                                                        –20                                         fCLOCK = 100MSPS
+                 70                                                                                                                                                 fOUT1 = 13.5MHz
+                                                                                                                        –30
+                                                                                                  Magnitude (dBm)
+
+
+
+
+                                                                  10.1MHz                                                                                           fOUT2 = 14.5MHz
+    SFDR (dBc)
+
+
+
+
+                 65
+                                                                                                                        –40                                         SFDR = 64dBc
+                 60                                                                                                     –50                                         Amplitude = 0dBFS
+
+                 55                                                                                                     –60
+                                                                                                                        –70
+                 50                                               40.4MHz
+                                                                            X       X
+                                                     X        X                                                         –80
+                             X            X
+                 45   X
+                                                                                                                        –90
+                 40                                                                                                 –100
+                   –40      –20           0         25        50           70      85                                         0      5     10      15     20   25      30   35     40    45    50
+                                              Temperature (°C)                                                                                           Frequency (MHz)
+
+
+
+
+DAC904                                                                                                                                                                                               9
+ SBAS095C                                                                               www.ti.com
+TYPICAL CHARACTERISTICS: VD = VA = +3V (Cont.)
+At TA = +25°C, Differential IOUT = 20mA, 50Ω double-terminated load, SFDR up to Nyquist, unless otherwise specified.
+
+
+
+                                                                                                   FOUR-TONE OUTPUT SPECTRUM
+                                                                           0
+                                                                        –10
+                                                                                                                                fCLOCK = 50MSPS
+                                                                        –20
+                                                                                                                                fOUT1 = 6.25MHz
+                                                                        –30                                                     fOUT2 = 6.75MHz
+
+
+
+
+                                                      Magnitude (dBm)
+                                                                        –40                                                     fOUT3 = 7.25MHz
+                                                                        –50                                                     fOUT4 = 7.75MHz
+                                                                                                                                SFDR = 67dBc
+                                                                        –60
+                                                                                                                                Amplitude = 0dBFS
+                                                                        –70
+                                                                        –80
+                                                                        –90
+                                                                        –100
+                                                                               0                  5                10             15             20               25
+                                                                                                                 Frequency (MHz)
+
+
+
+
+APPLICATION INFORMATION                                                                                                   The segmented architecture results in a significant reduction
+                                                                                                                          of the glitch energy, and improves the dynamic performance
+THEORY OF OPERATION                                                                                                       (SFDR) and DNL. The current outputs maintain a very high
+The architecture of the DAC904 uses the current steering                                                                  output impedance of greater than 200kΩ.
+technique to enable fast switching and a high update rate. The                                                            The full-scale output current is determined by the ratio of the
+core element within the monolithic DAC is an array of seg-                                                                internal reference voltage (1.24V) and an external resistor,
+mented current sources that are designed to deliver a full-scale                                                          RSET. The resulting IREF is internally multiplied by a factor of
+output current of up to 20mA, as shown in Figure 1. An internal                                                           32 to produce an effective DAC output current that can range
+decoder addresses the differential current switches each time                                                             from 2mA to 20mA, depending on the value of RSET.
+the DAC is updated and a corresponding output current is
+                                                                                                                          The DAC904 is split into a digital and an analog portion, each
+formed by steering all currents to either output summing node,
+                                                                                                                          of which is powered through its own supply pin. The digital
+IOUT or IOUT. The complementary outputs deliver a differential
+                                                                                                                          section includes edge-triggered input latches and the de-
+output signal that improves the dynamic performance through
+                                                                                                                          coder logic, while the analog section comprises the current
+reduction of even-order harmonics, common-mode signals
+                                                                                                                          source array with its associated switches and the reference
+(noise), and double the peak-to-peak output signal swing by a
+                                                                                                                          circuitry.
+factor of two, compared to single-ended operation.
+
+
+                                               +3V to +5V                                         +3V to +5V
+                                                 Analog                                             Digital
+                                                                        0.1µF(1)
+                                                                                         Bandwidth
+                                                                                         Control
+
+                                     DAC904       +VA                                BW               +VD
+              Full-Scale                                                                                                           IOUT                                                      1:1
+                Adjust                                                                                                                                                                             VOUT
+                                                                                                                       LSB
+               Resistor              FSA                                                             PMOS                          IOUT
+                                                                                                                     Switches
+                                                               Ref                                   Current
+                                Ref                           Control
+                              Input REFIN                                                            Source
+                                                               Amp                                                 Segmented
+                   RSET                                                                   400pF       Array                                            50Ω
+                                                                                                                     MSB                                          20pF(1)    50Ω       20pF(1)
+                   2kΩ                                                                                              Switches                0.1µF
+                             0.1µF
+                                                                                                                                   BYP
+                                     INT/EXT
+                                              Ref
+                                             Buffer
+                                                                                                      Latches and Switch
+                                                                                                        Decoder Logic               PD
+                                           +1.24V Ref                                                                                          Power Down
+                                                                                                                                           (internal pull-down)
+                                           AGND                                    CLK                   14-Bit Data Input       DGND
+                                               Analog                                Clock                     D13...D0                Digital
+                                               Ground                                Input                                             Ground
+
+
+
+
+              NOTE: Supply bypassing not shown.                                                                                                                             NOTE: (1) Optional.
+
+
+FIGURE 1. Functional Block Diagram of the DAC904.
+
+
+10
+                                                                                                                                                                                                     DAC904
+                                                                                                            www.ti.com                                                                                    SBAS095C
+DAC TRANSFER FUNCTION
+The total output current, IOUTFS, of the DAC904 is the sum-                                                       +VA
+mation of the two complementary output currents:
+                                                                                                                        DAC904
+
+                     IOUTFS = IOUT + IOUT                  (1)
+
+
+The individual output currents depend on the DAC code and
+can be expressed as:
+
+
+                IOUT = IOUTFS • (Code/16384)               (2)
+                                                                                                                IOUT     IOUT
+            IOUT = IOUTFS • (16383 – Code/16384)           (3)                                                   RL       RL
+
+
+where ‘Code’ is the decimal representation of the DAC data
+input word. Additionally, IOUTFS is a function of the reference
+current IREF, which is determined by the reference voltage         FIGURE 2. Equivalent Analog Output.
+and the external setting resistor, RSET.
+                                                                   +VD = 5V. Note that the compliance range decreases to
+             IOUTFS = 32 • IREF = 32 • VREF /RSET          (4)     about 1V for a selected output current of IOUTFS = 2mA.
+                                                                   Care should be taken that the configuration of the DAC904
+                                                                   does not exceed the compliance range to avoid degradation
+In most cases the complementary outputs will drive resistive
+                                                                   of the distortion performance and integral linearity.
+loads or a terminated transformer. A signal voltage will
+develop at each output according to:                               Best distortion performance is typically achieved with the
+                                                                   maximum full-scale output signal limited to approximately
+                                                                   0.5V. This is the case for a 50Ω doubly-terminated load and
+                    VOUT = IOUT • RLOAD                    (5)
+                                                                   a 20mA full-scale output current. A variety of loads can be
+                                                                   adapted to the output of the DAC904 by selecting a suitable
+                    VOUT = IOUT • RLOAD                    (6)     transformer while maintaining optimum voltage levels at
+                                                                   IOUT and IOUT. Furthermore, using the differential output
+The value of the load resistance is limited by the output          configuration in combination with a transformer will be instru-
+compliance specification of the DAC904. To maintain speci-         mental for achieving excellent distortion performance. Com-
+fied linearity performance, the voltage for IOUT and IOUT          mon-mode errors, such as even-order harmonics or noise,
+should not exceed the maximum allowable compliance range.          can be substantially reduced. This is particularly the case
+                                                                   with high output frequencies and/or output amplitudes below
+The two single-ended output voltages can be combined to
+                                                                   full-scale.
+find the total differential output swing:
+                                                                   For those applications requiring the optimum distortion and
+                                                            (7)
+                                                                   noise performance, it is recommended to select a full-scale
+                           (2 • Code – 16383)
+VOUTDIFF = VOUT – VOUT =                      • IOUTFS • RLOAD     output of 20mA. A lower full-scale range down to 2mA may
+                                 16384
+                                                                   be considered for applications that require a low power
+                                                                   consumption, but can tolerate a reduced performance level.
+ANALOG OUTPUTS
+The DAC904 provides two complementary current outputs,
+                                                                     INPUT CODE (D13 - D0)         IOUT                 IOUT
+IOUT and IOUT. The simplified circuit of the analog output
+                                                                     11 1111 1111 1111            20mA                  0mA
+stage representing the differential topology is shown in
+                                                                     10 0000 0000 0000            10mA                  10mA
+Figure 2. The output impedance of 200kΩ 12pF for IOUT
+                                                                     00 0000 0000 0000             0mA                  20mA
+and IOUT results from the parallel combination of the differen-
+tial switches, along with the current sources and associated       TABLE I. Input Coding versus Analog Output Current.
+parasitic capacitances.
+                                                                   OUTPUT CONFIGURATIONS
+The signal voltage swing that may develop at the two
+outputs, IOUT and IOUT, is limited by a negative and positive      The current output of the DAC904 allows for a variety of
+compliance. The negative limit of –1V is given by the break-       configurations, some of which are illustrated below. As men-
+down voltage of the CMOS process, and exceeding it will            tioned previously, utilizing the converter’s differential outputs
+compromise the reliability of the DAC904, or even cause            will yield the best dynamic performance. Such a differential
+permanent damage. With the full-scale output set to 20mA,          output circuit may consist of an RF transformer (see Figure 3)
+the positive compliance equals 1.25V, operating with               or a differential amplifier configuration (see Figure 4). The
+
+
+
+
+DAC904                                                                                                                           11
+ SBAS095C                                                   www.ti.com
+transformer configuration is ideal for most applications with ac    DIFFERENTIAL CONFIGURATION USING AN OP AMP
+coupling, while op amps will be suitable for a DC-coupled           If the application requires a DC-coupled output, a difference
+configuration.                                                      amplifier may be considered, as shown in Figure 4. Four
+The single-ended configuration (see Figure 6) may be consid-        external resistors are needed to configure the voltage-feed-
+ered for applications requiring a unipolar output voltage. Con-     back op amp OPA680 as a difference amplifier performing
+necting a resistor from either one of the outputs to ground will    the differential to single-ended conversion. Under the shown
+convert the output current into a ground-referenced voltage         configuration, the DAC904 generates a differential output
+signal. To improve on the DC linearity, an I-to-V converter can     signal of 0.5Vp-p at the load resistors, RL. The resistor values
+be used instead. This will result in a negative signal excursion    shown were selected to result in a symmetric 25Ω loading for
+and, therefore, requires a dual supply amplifier.                   each of the current outputs since the input impedance of the
+                                                                    difference amplifier is in parallel to resistors RL, and should
+                                                                    be considered.
+DIFFERENTIAL WITH TRANSFORMER
+Using an RF transformer provides a convenient way of
+converting the differential output signal into a single-ended
+                                                                                                                   R2
+signal while achieving excellent dynamic performance, as                                                          402Ω
+shown in Figure 3. The appropriate transformer should be                                             R1
+carefully selected based on the output frequency spectrum                                           200Ω
+and impedance requirements. The differential transformer                       IOUT
+configuration has the benefit of significantly reducing com-              DAC904                                OPA680          VOUT
+mon-mode signals, thus improving the dynamic performance                       IOUT
+                                                                                         CDIFF        R3
+over a wide range of frequencies. Furthermore, by selecting
+                                                                                                     200Ω
+a suitable impedance ratio (winding ratio), the transformer                                                     –5V +5V
+
+can be used to provide optimum impedance matching while                                 RL        RL           R4
+controlling the compliance voltage for the converter outputs.                           26.1Ω     28.7Ω        402Ω
+The model shown in Figure 3 has a 1:1 ratio and may be
+used to interface the DAC904 to a 50Ω load. This results in
+a 25Ω load for each of the outputs, IOUT and IOUT. The output
+signals are ac coupled and inherently isolated because of the       FIGURE 4. Difference Amplifier Provides Differential to Single-
+transformer's magnetic coupling.                                              Ended Conversion and AC-Coupling.
+As shown in Figure 3, the transformer’s center tap is con-
+nected to ground. This forces the voltage swing on IOUT and         The OPA680 is configured for a gain of 2. Therefore, oper-
+IOUT to be centered at 0V. In this case the two resistors, RS,      ating the DAC904 with a 20mA full-scale output will produce
+may be replaced with one, RDIFF, or omitted altogether. This        a voltage output of ±1V. This requires the amplifier to operate
+approach should only be used if all components are close to         off of a dual power supply (±5V). The tolerance of the
+each other, and if the VSWR is not important. A complete            resistors typically sets the limit for the achievable common-
+power transfer from the DAC output to the load can be               mode rejection. An improvement can be obtained by fine
+realized, but the output compliance range should be ob-             tuning resistor R4.
+served. Alternatively, if the center tap is not connected, the
+                                                                    This configuration typically delivers a lower level of ac perfor-
+signal swing will be centered at RS • IOUTFS /2. However, in
+                                                                    mance than the previously discussed transformer solution
+this case, the two resistors (RS) must be used to enable the
+                                                                    because the amplifier introduces another source of distor-
+necessary DC-current flow for both outputs.
+                                                                    tion. Suitable amplifiers should be selected based on their
+                                                                    slew-rate, harmonic distortion, and output swing capabilities.
+                                                                    High-speed amplifiers like the OPA680 or OPA687 may be
+                                           ADT1-1WT                 considered. The ac performance of this circuit may be
+                                          (Mini-Circuits)
+                                               1:1                  improved by adding a small capacitor, CDIFF, between the
+               IOUT
+                                                                    outputs IOUT and IOUT, as shown in Figure 4. This will introduce
+                                    RS                              a real pole to create a low-pass filter in order to slew-limit the
+                        Optional    50Ω
+      DAC904                                                RL
+                        RDIFF                                       DAC’s fast output signal steps that otherwise could drive the
+                                                                    amplifier into slew-limitations or into an overload condition;
+               IOUT                                                 both would cause excessive distortion. The difference ampli-
+                        RS                                          fier can easily be modified to add a level shift for applications
+                        50Ω
+                                                                    requiring the single-ended output voltage to be unipolar, i.e.,
+                                                                    swing between 0V and +2V.
+
+FIGURE 3. Differential Output Configuration Using an RF
+          Transformer.
+
+
+
+
+12
+                                                                                                                          DAC904
+                                                             www.ti.com                                                   SBAS095C
+DUAL TRANSIMPEDANCE OUTPUT CONFIGURATION                             The full-scale output voltage is defined by the product of
+The circuit example of Figure 5 shows the signal output              IOUTFS • RF, and has a negative unipolar excursion. To
+currents connected into the summing junction of the OPA2680,         improve on the ac performance of this circuit, adjustment of
+which is set up as a transimpedance stage, or I-to-V con-            RF and/or IOUTFS should be considered. Further extensions of
+verter. With this circuit, the DAC’s output will be kept at a        this application example may include adding a differential
+virtual ground, minimizing the effects of output impedance           filter at the OPA2680’s output followed by a transformer, in
+variations, and resulting in the best DC linearity (INL). How-       order to convert to a single-ended signal.
+ever, as mentioned previously, the amplifier may be driven
+into slew-rate limitations, and produce unwanted distortion.         SINGLE-ENDED CONFIGURATION
+This may occur especially at high DAC update rates.                  Using a single load resistor connected to the one of the DAC
+                                                                     outputs, a simple current-to-voltage conversion can be ac-
+                                                                     complished. The circuit in Figure 6 shows a 50Ω resistor
+                                                                     connected to IOUT, providing the termination of the further
+                                   +5V
+                                                                     connected 50Ω cable. Therefore, with a nominal output
+                                                                     current of 20mA, the DAC produces a total signal swing of
+                        50Ω
+                                                                     0V to 0.5V into the 25Ω load.
+                                1/2
+                              OPA2680        –VOUT = IOUT • RF       Different load resistor values may be selected as long as the
+                                                                     output compliance range is not exceeded. Additionally, the
+         DAC904                    RF1                               output current, IOUTFS, and the load resistor may be mutually
+                                                                     adjusted to provide the desired output signal swing and
+                                   CF1                               performance.
+         IOUT     CD1
+
+
+                                   RF2
+
+
+                                   CF2                                                     IOUTFS = 20mA
+         IOUT     CD2                                                                                            VOUT = 0V to +0.5V
+                                                                                    IOUT
+                                                                           DAC904
+                                1/2                                                 IOUT                   50Ω          50Ω
+                              OPA2680         –VOUT = IOUT • RF
+                                                                                               25Ω
+                    50Ω
+                                   –5V
+
+
+
+                                                                     FIGURE 6. Driving a Doubly-Terminated 50Ω Cable Directly.
+
+FIGURE 5. Dual, Voltage-Feedback Amplifier OPA2680 Forms
+                                                                     INTERNAL REFERENCE OPERATION
+          Differential Transimpedance Amplifier.
+                                                                     The DAC904 has an on-chip reference circuit that comprises
+                                                                     a 1.24V bandgap reference and a control amplifier. Ground-
+The DC gain for this circuit is equal to feedback resistor RF.       ing pin 16, INT/EXT, enables the internal reference opera-
+At high frequencies, the DAC output impedance (CD1, CD2)             tion. The full-scale output current, IOUTFS, of the DAC904 is
+will produce a zero in the noise gain for the OPA2680 that           determined by the reference voltage, VREF, and the value of
+may cause peaking in the closed-loop frequency response.             resistor RSET. IOUTFS can be calculated by:
+CF is added across RF to compensate for this noise-gain
+peaking. To achieve a flat transimpedance frequency re-
+                                                                                IOUTFS = 32 • IREF = 32 • VREF / RSET          (10)
+sponse, the pole in each feedback network should be set to:
+
+                       1       GBP                                   The external resistor RSET connects to the FSA pin (Full-
+                           =                                 (8)     Scale Adjust), see Figure 7. The reference control amplifier
+                    2πRF CF 4 πRF CD
+                                                                     operates as a V-to-I converter producing a reference current,
+with GBP = Gain Bandwidth Product of OPA,                            IREF, which is determined by the ratio of VREF and RSET, as
+which will give a corner frequency f-3dB of approximately:           shown in Equation 10. The full-scale output current, IOUTFS,
+                                                                     results from multiplying IREF by a fixed factor of 32.
+                                    GBP
+                        f−3dB =                              (9)
+                                  2πRF CD
+
+
+
+
+DAC904                                                                                                                           13
+ SBAS095C                                                     www.ti.com
+                           Optional
+                          Bandlimiting       CCOMPEXT +5V
+                           Capacitor          0.1µF
+                                                                                                                                      CCOMPEXT +5V
+                                                                                                                                       0.1µF
+
+
+
+                                            BW           +VA
+                     DAC904                                                                                                           BW          +VA
+                                                                                                              DAC904
+           V
+     IREF = REF                                                                                       V
+                                                                                                IREF = REF
+           RSET                                                                                       RSET
+                    FSA                                                                                      FSA
+                                                                                                                             Ref              Current
+                                   Ref               Current                                                                Control
+                                  Control                                     External                       REFIN                            Sources
+                                                     Sources                                                                 Amp
+                    REFIN          Amp                                       Reference                                                CCOMP
+     RSET                                                                                                                             400pF
+                                             CCOMP
+     2kΩ
+            0.1µF                            400pF                                       RSET                INT/EXT
+                                                                                                    +5V
+                    INT/EXT
+
+                                                                                                                   +1.24V Ref.
+
+
+                          +1.24V Ref.
+
+
+
+FIGURE 7. Internal Reference Configuration.                            FIGURE 8. External Reference Configuration.
+
+
+Using the internal reference, a 2kΩ resistor value results in a        DIGITAL INPUTS
+20mA full-scale output. Resistors with a tolerance of 1% or            The digital inputs, D0 (LSB) through D13 (MSB) of the
+better should be considered. Selecting higher values, the con-         DAC904 accepts standard-positive binary coding. The digital
+verter output can be adjusted from 20mA down to 2mA.                   input word is latched into a master-slave latch with the rising
+Operating the DAC904 at lower than 20mA output currents may            edge of the clock. The DAC output becomes updated with
+be desirable for reasons of reducing the total power consump-          the following falling clock edge (refer to the electrical charac-
+tion, improving the distortion performance, or observing the           teristic table and timing diagram for details). The best perfor-
+output compliance voltage limitations for a given load condition.      mance will be achieved with a 50% clock duty cycle, how-
+It is recommended to bypass the REFIN pin with a ceramic chip          ever, the duty cycle may vary as long as the timing specifi-
+capacitor of 0.1µF or more. The control amplifier is internally        cations are met. Additionally, the setup and hold times may
+compensated, and its small signal bandwidth is approximately           be chosen within their specified limits.
+1.3MHz. For optional ac performance, an additional capacitor           All digital inputs are CMOS compatible. The logic thresholds
+(CCOMPEXT) should be applied between the BW pin and the                depend on the applied digital supply voltage such that they
+analog supply, +VA, as shown in Figure 7. Using a 0.1µF                are set to approximately half the supply voltage;
+capacitor, the small-signal bandwidth and output impedance of          V th = +VD / 2 (±20% tolerance). The DAC904 is designed to
+the control amplifier is further diminished, reducing the noise        operate over a supply range of 2.7V to 5.5V.
+that is fed into the current source array. This also helps shunting
+feedthrough signals more effectively, and improving the noise
+performance of the DAC904.
+                                                                       POWER-DOWN MODE
+                                                                       The DAC904 features a power-down function that can be
+                                                                       used to reduce the supply current to less than 9mA over the
+EXTERNAL REFERENCE OPERATION
+                                                                       specified supply range of 2.7V to 5.5V. Applying a logic HIGH
+The internal reference can be disabled by applying a logic             to the PD pin will initiate the power-down mode, while a logic
+HIGH (+VA) to pin INT/EXT. An external reference voltage               LOW enables normal operation. When left unconnected, an
+can then be driven into the REFIN pin, which in this case              internal active pull-down circuit will enable the normal opera-
+functions as an input, as shown in Figure 8. The use of an             tion of the converter.
+external reference may be considered for applications that
+require higher accuracy and drift performance, or to add the
+                                                                       GROUNDING, DECOUPLING, AND
+ability of dynamic gain control.
+                                                                       LAYOUT INFORMATION
+While a 0.1µF capacitor is recommended to be used with the             Proper grounding and bypassing, short lead length, and the
+internal reference, it is optional for the external reference          use of ground planes are particularly important for high
+operation. The reference input, REFIN, has a high input                frequency designs. Multilayer pc-boards are recommended
+impedance (1MΩ) and can easily be driven by various                    for best performance since they offer distinct advantages
+sources. Note that the voltage range of the external refer-            such as minimization of ground impedance, separation of
+ence should stay within the compliance range of the refer-             signal layers by ground layers, etc.
+ence input (0.1V to 1.25V).
+
+
+
+
+14
+                                                                                                                                              DAC904
+                                                                www.ti.com                                                                      SBAS095C
+The DAC904 uses separate pins for its analog and digital             different supply currents and signal traces. Generally, analog
+supply and ground connections. The placement of the decou-           supply and ground planes should only extend into analog
+pling capacitor should be such that the analog supply (+VA)          signal areas, such as the DAC output signal and the refer-
+is bypassed to the analog ground (AGND), and the digital             ence signal. Digital supply and ground planes must be
+supply bypassed to the digital ground (DGND). In most cases          confined to areas covering digital circuitry, including the
+0.1µF ceramic chip capacitors at each supply pin are ad-             digital input lines connecting to the converter, as well as the
+equate to provide a low impedance decoupling path. Keep in           clock signal. The analog and digital ground planes should be
+mind that their effectiveness largely depends on the proximity       joined together at one point underneath the DAC. This can be
+to the individual supply and ground pins. Therefore, they            realized with a short track of approximately 1/8 inch (3mm).
+should be located as close as physically possible to those           The power to the DAC904 should be provided through the
+device leads. Whenever possible, the capacitors should be            use of wide pcb runs or planes. Wide runs will present a
+located immediately under each pair of supply/ground pins            lower trace impedance, further optimizing the supply decou-
+on the reverse side of the pc-board. This layout approach will       pling. The analog and digital supplies for the converter
+minimize the parasitic inductance of component leads and             should only be connected together at the supply connector of
+pcb runs.                                                            the pc-board. In the case of only one supply voltage being
+Further supply decoupling with surface mount tantalum ca-            available to power the DAC, ferrite beads along with bypass
+pacitors (1µF to 4.7µF) may be added as needed in proximity          capacitors may be used to create an LC filter. This will
+of the converter.                                                    generate a low-noise analog supply voltage that can then be
+Low noise is required for all supply and ground connections          connected to the +VA supply pin of the DAC904.
+to the DAC904. It is recommended to use a multilayer pc-             While designing the layout, it is important to keep the analog
+board utilizing separate power and ground planes. Mixed              signal traces separate from any digital line, in order to
+signal designs require particular attention to the routing of the    prevent noise coupling onto the analog signal path.
+
+
+
+
+DAC904                                                                                                                           15
+ SBAS095C                                                     www.ti.com
+                                                                                                                                                    PACKAGE OPTION ADDENDUM
+
+
+www.ti.com                                                                                                                                                                                          10-Dec-2020
+
+
+PACKAGING INFORMATION
+
+           Orderable Device             Status    Package Type Package Pins Package             Eco Plan           Lead finish/           MSL Peak Temp         Op Temp (°C)                Device Marking        Samples
+                                          (1)                  Drawing        Qty                   (2)            Ball material                  (3)                                             (4/5)
+                                                                                                                         (6)
+
+               DAC904E                 ACTIVE        TSSOP           PW       28       50     RoHS & Green            NIPDAU            Level-2-260C-1 YEAR        -40 to 85         DAC904E
+
+             DAC904E/2K5               ACTIVE        TSSOP           PW       28     2500     RoHS & Green            NIPDAU            Level-2-260C-1 YEAR        -40 to 85         DAC904E
+
+               DAC904U                 ACTIVE         SOIC           DW       28       20     RoHS & Green            NIPDAU            Level-2-260C-1 YEAR        -40 to 85         DAC904U
+
+(1)
+   The marketing status values are defined as follows:
+ACTIVE: Product device recommended for new designs.
+LIFEBUY: TI has announced that the device will be discontinued, and a lifetime-buy period is in effect.
+NRND: Not recommended for new designs. Device is in production to support existing customers, but TI does not recommend using this part in a new design.
+PREVIEW: Device has been announced but is not in production. Samples may or may not be available.
+OBSOLETE: TI has discontinued the production of the device.
+
+(2)
+   RoHS: TI defines "RoHS" to mean semiconductor products that are compliant with the current EU RoHS requirements for all 10 RoHS substances, including the requirement that RoHS substance
+do not exceed 0.1% by weight in homogeneous materials. Where designed to be soldered at high temperatures, "RoHS" products are suitable for use in specified lead-free processes. TI may
+reference these types of products as "Pb-Free".
+RoHS Exempt: TI defines "RoHS Exempt" to mean products that contain lead but are compliant with EU RoHS pursuant to a specific EU RoHS exemption.
+Green: TI defines "Green" to mean the content of Chlorine (Cl) and Bromine (Br) based flame retardants meet JS709B low halogen requirements of <=1000ppm threshold. Antimony trioxide based
+flame retardants must also meet the <=1000ppm threshold requirement.
+
+(3)
+      MSL, Peak Temp. - The Moisture Sensitivity Level rating according to the JEDEC industry standard classifications, and peak solder temperature.
+
+(4)
+      There may be additional marking, which relates to the logo, the lot trace code information, or the environmental category on the device.
+
+(5)
+   Multiple Device Markings will be inside parentheses. Only one Device Marking contained in parentheses and separated by a "~" will appear on a device. If a line is indented then it is a continuation
+of the previous line and the two combined represent the entire Device Marking for that device.
+
+(6)
+   Lead finish/Ball material - Orderable Devices may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two
+lines if the finish value exceeds the maximum column width.
+
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information
+provided by third parties, and makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and
+continues to take reasonable steps to provide representative and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals.
+TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers and other limited information may not be available for release.
+
+
+
+
+                                                                                                Addendum-Page 1
+                                                                                                                                                     PACKAGE OPTION ADDENDUM
+
+
+www.ti.com                                                                                                                                                                                10-Dec-2020
+
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+
+
+
+                                                                                                Addendum-Page 2
+                                                                   PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                                 5-Jan-2022
+
+
+
+TAPE AND REEL INFORMATION
+
+
+
+
+*All dimensions are nominal
+             Device           Package Package Pins   SPQ       Reel   Reel   A0           B0     K0     P1     W     Pin1
+                               Type Drawing                  Diameter Width (mm)         (mm)   (mm)   (mm)   (mm) Quadrant
+                                                               (mm) W1 (mm)
+      DAC904E/2K5             TSSOP     PW     28    2500      330.0     16.4      6.9   10.2   1.8    12.0   16.0    Q1
+
+
+
+
+                                                           Pack Materials-Page 1
+                                                                PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                           5-Jan-2022
+
+
+
+
+*All dimensions are nominal
+             Device           Package Type   Package Drawing   Pins     SPQ     Length (mm)   Width (mm)   Height (mm)
+       DAC904E/2K5              TSSOP              PW           28      2500       367.0        367.0         38.0
+
+
+
+
+                                                        Pack Materials-Page 2
+                                                               PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                       5-Jan-2022
+
+
+
+TUBE
+
+
+
+
+*All dimensions are nominal
+             Device           Package Name   Package Type   Pins       SPQ     L (mm)   W (mm)   T (µm)   B (mm)
+         DAC904E                  PW           TSSOP         28         50      530      10.2     3600     3.5
+         DAC904U                  DW            SOIC         28         20     506.98    12.7     4826     6.6
+
+
+
+
+                                                       Pack Materials-Page 3
+                                       IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATA SHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you
+will fully indemnify TI and its representatives against, any claims, damages, costs, losses, and liabilities arising out of your use of these
+resources.
+TI’s products are provided subject to TI’s Terms of Sale or other applicable terms available either on ti.com or provided in conjunction with
+such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable warranties or warranty disclaimers for
+TI products.
+TI objects to and rejects any additional or different terms you may have proposed. IMPORTANT NOTICE
+
+                             Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+                                            Copyright © 2022, Texas Instruments Incorporated
+

@@ -1,0 +1,80 @@
+# BASELINE_DATA_MANIFEST.txt
+# 任务：十二类调制识别模型 V2 鲁棒性改进 · 阶段四 / Phase 1（V1 基线数据清单）
+# 生成：2026-10-07。只读冻结，绝不修改上游资产。
+#
+# 目的：冻结 V1 十二类基线所用/涉及的全部数据域的来源、食谱与状态，
+#       并与 V2 四数据域（D1–D4）逐一对齐。V1 基线覆盖 D1/D2/D3，D4 为空（V2 目标）。
+
+## 总览：四数据域 vs V1 基线状态
+
+| 域 | 内容 | V1 基线 | V2 目标 |
+|----|------|---------|---------|
+| D1 | 合成训练集 | 程序化生成（非落盘） | 复用 + 可选增广消融 |
+| D2 | 冻结合成测试集 | 程序化生成（非落盘） | 复用 |
+| D3 | 公开数据（RadioML/TorchSig） | RadioML2018.01A（预训练） | 复用 + 跨域验证 |
+| D4 | 真实 Pluto 采集（SigMF） | **无** | 新增采集工具 + 导入 |
+
+---
+
+## D1 合成训练集（程序化，食谱冻结）
+
+- 生成器：`datasets/modulation_generator.py`（SHA `74207b4a…`，见 BASELINE_SOURCE_SHA256.txt）
+  调用 `generate_iq`（RMS=1.0）→ `channel/channel_pipeline.py`（SHA `8ec33141…`）域随机化信道。
+- 食谱 = `configs/ad_amr_v1_1.yaml` + `ad_amr_v1_1_data_v2.yaml` + `ad_amr_v1_1_data_v3_12class.yaml`
+  （SHA `99cb1cf4…` / `f0f676d5…` / `4a27a771…`）。
+- 规模：train_samples = 37800，val_samples = 7560。
+  精确平衡 = 21 SNR × 12 类 × 150（train）/ 30（val）重复。
+- SNR 网格：[-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]。
+- 关键差异点（data-v3 相对 data-v2 十类）：新增 OOK + 4ASK，精确名蒸馏 `class_aliases: null`
+  （不把 CPFSK 改标 GFSK）。
+- 存储：无落盘文件（每 epoch 程序化即时生成，确定性由 seed + SeedSequence 保证）。
+
+## D2 冻结合成测试集（程序化，食谱冻结）
+
+- 同一生成器/信道/食谱。
+- ID 验证集：7560 条（`split = ad_amr_v1_1_validation`）。
+- OOD 验证集：每域 2520 条 × 6 域（cfo_strong / phase_noise / iq_imbalance / multipath /
+  clipping / multi_impairment），`split = ad_amr_v1_1_data_v3_12class_validation_ood_<域>`。
+- fake-int8 验证集：7560 条（对称 INT8 权重 / fp32 激活）。
+- 存储：无落盘文件（程序化）。
+
+## D3 公开数据 RadioML2018.01A（预训练 trunk，24 类）
+
+- 用途：V1 公开预训练（`public_pretraining` 30 epoch），随后十二类合成数据微调。
+- 落盘文件（冻结源内）：`data/radioml2018/classes.txt`（SHA `0814d7b5…`）、
+  `data/radioml2018/README.md`（SHA `b9e9160b…`）。
+- 运行时下载（AutoDL）：`data/radioml2018/GOLD_XYZ_OSC.0001_1024.hdf5`、
+  `split_indices.npz`、`audit.json`（config 引用路径，不在冻结源内）。
+- 配置：expected_samples 2,555,904；expected_per_stratum 4096；split_seed 20261003；
+  split_ratios [0.60, 0.20, 0.20]；allowed_snrs [-20..20]。
+- 注意：RadioML 是 24 类 trunk（仅预训练）；目标头（12 类）**全新初始化**后微调，不直接复用 trunk 标签。
+
+## D4 真实 Pluto 采集（SigMF）
+
+- V1 基线：**无**（V1 纯合成 + 公开数据，未经实机 RF）。
+- V2 目标：新增采集工具（`scripts/capture_real_rf_12class.sh`、`tools/build_sigmf_manifest.py`、
+  `tools/verify_sigmf_dataset.py`、`tools/split_by_session.py`、`tools/check_data_leakage.py`），
+  按 SigMF 规范采集、校验、按 session 切分、防泄漏检查。
+- 状态：导入真实 RF 前最高标 `NEEDS-REAL-RF-DATA`；导入但未上板标
+  `READY-FOR-12CLASS-V2-NPU-HARDWARE-TEST`。
+
+---
+
+## 防泄漏与切分安全（冻结）
+
+- 切分按**来源**（source）而非随机窗口切分；公开数据、合成数据、真实 RF 各自独立命名空间，
+  禁止跨源混切。
+- RNG：训练数据用 `numpy.random.SeedSequence([seed, split_code, 0, index])`，split_code =
+  `blake2s("<split 名>")[:4]`；量化校准集复刻 `ADAMRPairDataset.__getitem__`（seed 2026，
+  split_code = blake2s("ad_amr_v1_1_train")[:4]）。
+- `FORBIDDEN_SELECTION_TOKENS`：禁止用测试/盲测集的 token 作为任何训练/选择信号，防止选择泄漏。
+- 盲测集（final_blind_test）在 V1 全程未访问（`final_blind_test_accessed: false`，
+  门禁 `public_and_final_blind_untouched` PASS）。
+
+---
+
+## 状态红线
+
+- 本清单只记录基线数据事实；不据此改任何上游数据/生成器。
+- 真实 RF（D4）采集与导入由后续里程碑处理；导入前不写 `REAL_RF_PASS`。
+- 我禁碰板、禁写 Flash；上板由用户本人执行。

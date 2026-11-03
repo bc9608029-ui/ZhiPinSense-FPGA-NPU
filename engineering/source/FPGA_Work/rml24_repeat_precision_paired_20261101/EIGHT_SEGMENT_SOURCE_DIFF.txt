@@ -1,0 +1,14 @@
+--- frozen
+
++++ adaptive8
+
+@@ -1,7 +1,7 @@
+
+ def recover(y):
+     # CFO from repeating public training; same reference for every class.
+     c=correlate(y,train,mode='valid',method='fft')
+-    peaks,_=find_peaks(np.abs(c),distance=14000)
++    peaks,_=find_peaks(np.abs(c),distance=12288)
+     peaks=sorted(peaks,key=lambda p:abs(c[p]),reverse=True)
+     for s in peaks:
+         if s+12288>len(y):continue

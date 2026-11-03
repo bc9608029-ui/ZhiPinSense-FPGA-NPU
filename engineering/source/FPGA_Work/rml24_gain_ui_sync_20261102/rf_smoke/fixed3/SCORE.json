@@ -1,0 +1,36 @@
+{
+  "name": "fixed3",
+  "denominator": 3,
+  "correct": 3,
+  "missing": 0,
+  "minimum_correct": 3,
+  "clock_drift_ns": -6367890,
+  "rows": [
+    {
+      "index": 0,
+      "expected": 23,
+      "pred": 23,
+      "chosen_frame": 118,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 1,
+      "expected": 19,
+      "pred": 19,
+      "chosen_frame": 131,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 2,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 144,
+      "correct": true,
+      "missing": false
+    }
+  ],
+  "candidate_identity_sha256": "d960b668f1298962ec230db661fbcf2f7881206ba49c1ceb4d39dc25518c611b",
+  "gate_pass": true
+}

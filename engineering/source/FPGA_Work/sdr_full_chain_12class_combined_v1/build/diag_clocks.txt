@@ -1,0 +1,558 @@
+=== report_clocks ===
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Oct  6 18:21:01 2026
+| Host         : colorfulshadow running 64-bit major release  (build 9200)
+| Command      : report_clocks -return_string
+| Design       : pl_ddr_mandatory_core_top_combined
+| Device       : 7z030-ffg676
+| Speed File   : -2  PRODUCTION 1.11 2025-11-03
+------------------------------------------------------------------------------------
+
+Clock Report
+
+
+Attributes
+  P: Propagated
+  G: Generated
+  A: Auto-derived
+  R: Renamed
+  V: Virtual
+  I: Inverted
+  S: Pin phase-shifted with Latency mode
+
+Clock                                                                                                                                                        Period(ns)  Waveform(ns)    Attributes  Sources
+clk_fpga_0                                                                                                                                                   20.000      {0.000 10.000}  P           {u_ps_ai_peripheral/ps_ai_wrapper_u0/ps_ai_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]}
+u_clk_wiz_core_50/inst/clk_in1                                                                                                                               5.000       {0.000 2.500}   P           {u_clk_wiz_core_50/inst/clk_in1}
+clkfbout_clk_wiz_0                                                                                                                                           20.000      {0.000 10.000}  P,G,A       {u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKFBOUT}
+clk_out1_clk_wiz_0                                                                                                                                           10.000      {0.000 5.000}   P,G,A       {u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT0}
+clk_out2_clk_wiz_0                                                                                                                                           5.000       {0.000 2.500}   P,G,A       {u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT1}
+clkfbout_clk_wiz_core_50                                                                                                                                     5.000       {0.000 2.500}   P,G,A       {u_clk_wiz_core_50/inst/mmcm_adv_inst/CLKFBOUT}
+clk_out1_clk_wiz_core_50                                                                                                                                     20.000      {0.000 10.000}  P,G,A       {u_clk_wiz_core_50/inst/mmcm_adv_inst/CLKOUT0}
+clkfb_hdmi                                                                                                                                                   50.000      {0.000 25.000}  P,G,A       {u_mmcm_hdmi/CLKFBOUT}
+clk_74m25                                                                                                                                                    13.468      {0.000 6.734}   P,G,A       {u_mmcm_hdmi/CLKOUT0}
+clk_371m25                                                                                                                                                   2.694       {0.000 1.347}   P,G,A       {u_mmcm_hdmi/CLKOUT1}
+pl_ddr_refclk                                                                                                                                                5.000       {0.000 2.500}   P           {sys_clk_p}
+jtag_clk                                                                                                                                                     20.000      {0.000 10.000}  P           {PJTAG_TCK}
+pll_clkfbout_1                                                                                                                                               5.000       {0.000 2.500}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKFBOUT}
+freq_refclk_1                                                                                                                                                1.250       {1.094 1.719}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT0}
+mem_refclk_1                                                                                                                                                 1.250       {0.000 0.625}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT1}
+sync_pulse_1                                                                                                                                                 20.000      {0.547 1.797}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT2}
+pll_clk3_out_1                                                                                                                                               5.000       {0.000 2.500}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3}
+mmcm_clkfbout_1                                                                                                                                              5.000       {0.000 2.500}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_iodelay_ctrl/clk_ref_mmcm_gen.mmcm_i/CLKFBOUT}
+clk_ref_mmcm_400_1                                                                                                                                           2.500       {0.000 1.250}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_iodelay_ctrl/clk_ref_mmcm_gen.mmcm_i/CLKOUT1}
+u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk_1  1.250       {1.094 1.719}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLK}
+oserdes_clk_11                                                                                                                                               1.250       {0.000 0.625}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLK}
+u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clk_1  1.250       {1.094 1.719}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in/ICLK}
+oserdes_clk_12                                                                                                                                               1.250       {0.000 0.625}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLK}
+u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk_1  1.250       {1.094 1.719}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in/ICLK}
+oserdes_clk_13                                                                                                                                               1.250       {0.000 0.625}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLK}
+u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk_1  1.250       {1.094 1.719}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLK}
+oserdes_clk_14                                                                                                                                               1.250       {0.000 0.625}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLK}
+oserdes_clk_15                                                                                                                                               1.250       {0.000 0.625}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLK}
+oserdes_clk_16                                                                                                                                               1.250       {0.000 0.625}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLK}
+oserdes_clk_17                                                                                                                                               1.250       {0.000 0.625}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out/OCLK}
+u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk_1  1.250       {1.094 1.719}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLK}
+oserdes_clk_18                                                                                                                                               1.250       {0.000 0.625}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLK}
+u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clk_1  1.250       {1.094 1.719}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in/ICLK}
+oserdes_clk_19                                                                                                                                               1.250       {0.000 0.625}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLK}
+u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk_1  1.250       {1.094 1.719}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in/ICLK}
+oserdes_clk_20                                                                                                                                               1.250       {0.000 0.625}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLK}
+u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clk_1  1.250       {1.094 1.719}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_in_gen.phaser_in/ICLK}
+oserdes_clk_21                                                                                                                                               1.250       {0.000 0.625}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out/OCLK}
+clk_pll_i_1                                                                                                                                                  5.000       {0.000 2.500}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT}
+mmcm_ps_clk_bufg_in_1                                                                                                                                        10.000      {0.000 5.000}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKOUT0}
+clk_div2_bufg_in_1                                                                                                                                           2.500       {0.000 1.250}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKOUT1}
+iserdes_clkdiv_8                                                                                                                                             2.500       {1.094 2.344}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLKDIV}
+oserdes_clkdiv_11                                                                                                                                            2.500       {0.000 1.250}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLKDIV}
+iserdes_clkdiv_9                                                                                                                                             2.500       {1.094 2.344}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in/ICLKDIV}
+oserdes_clkdiv_12                                                                                                                                            2.500       {0.000 1.250}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLKDIV}
+iserdes_clkdiv_10                                                                                                                                            2.500       {1.094 2.344}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in/ICLKDIV}
+oserdes_clkdiv_13                                                                                                                                            2.500       {0.000 1.250}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLKDIV}
+iserdes_clkdiv_11                                                                                                                                            2.500       {1.094 2.344}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLKDIV}
+oserdes_clkdiv_14                                                                                                                                            2.500       {0.000 1.250}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLKDIV}
+oserdes_clkdiv_15                                                                                                                                            5.000       {0.000 2.500}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLKDIV}
+oserdes_clkdiv_16                                                                                                                                            5.000       {0.000 2.500}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLKDIV}
+oserdes_clkdiv_17                                                                                                                                            5.000       {0.000 2.500}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out/OCLKDIV}
+iserdes_clkdiv_12                                                                                                                                            2.500       {1.094 2.344}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLKDIV}
+oserdes_clkdiv_18                                                                                                                                            2.500       {0.000 1.250}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLKDIV}
+iserdes_clkdiv_13                                                                                                                                            2.500       {1.094 2.344}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in/ICLKDIV}
+oserdes_clkdiv_19                                                                                                                                            2.500       {0.000 1.250}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLKDIV}
+iserdes_clkdiv_14                                                                                                                                            2.500       {1.094 2.344}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in/ICLKDIV}
+oserdes_clkdiv_20                                                                                                                                            2.500       {0.000 1.250}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLKDIV}
+iserdes_clkdiv_15                                                                                                                                            2.500       {1.094 2.344}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_in_gen.phaser_in/ICLKDIV}
+oserdes_clkdiv_21                                                                                                                                            2.500       {0.000 1.250}   P,G,A       {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out/OCLKDIV}
+clkfbout_AI_CORE_CLK_ST_1                                                                                                                                    5.000       {0.000 2.500}   P,G,A       {u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKFBOUT}
+clk_out1_AI_CORE_CLK_ST_1                                                                                                                                    1.000       {0.000 0.500}   P,G,A       {u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKOUT0}
+
+
+====================================================
+Generated Clocks
+====================================================
+
+Generated Clock     : clkfbout_clk_wiz_0
+Master Source       : u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKIN1
+Master Clock        : clk_fpga_0
+Multiply By         : 1
+Generated Sources   : {u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKFBOUT}
+
+Generated Clock     : clk_out1_clk_wiz_0
+Master Source       : u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKIN1
+Master Clock        : clk_fpga_0
+Multiply By         : 2
+Generated Sources   : {u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT0}
+
+Generated Clock     : clk_out2_clk_wiz_0
+Master Source       : u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKIN1
+Master Clock        : clk_fpga_0
+Multiply By         : 4
+Generated Sources   : {u_ps_ai_peripheral/ps_ai_wrapper_u0/clk_wiz_0_inst/inst/plle2_adv_inst/CLKOUT1}
+
+Generated Clock     : clkfbout_clk_wiz_core_50
+Master Source       : u_clk_wiz_core_50/inst/mmcm_adv_inst/CLKIN1
+Master Clock        : u_clk_wiz_core_50/inst/clk_in1
+Multiply By         : 1
+Generated Sources   : {u_clk_wiz_core_50/inst/mmcm_adv_inst/CLKFBOUT}
+
+Generated Clock     : clk_out1_clk_wiz_core_50
+Master Source       : u_clk_wiz_core_50/inst/mmcm_adv_inst/CLKIN1
+Master Clock        : u_clk_wiz_core_50/inst/clk_in1
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 7.500 15.000}
+Generated Sources   : {u_clk_wiz_core_50/inst/mmcm_adv_inst/CLKOUT0}
+
+Generated Clock     : clkfb_hdmi
+Master Source       : u_mmcm_hdmi/CLKIN1
+Master Clock        : clk_out1_clk_wiz_0
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 20.000 40.000}
+Generated Sources   : {u_mmcm_hdmi/CLKFBOUT}
+
+Generated Clock     : clk_74m25
+Master Source       : u_mmcm_hdmi/CLKIN1
+Master Clock        : clk_out1_clk_wiz_0
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 1.734 3.468}
+Generated Sources   : {u_mmcm_hdmi/CLKOUT0}
+
+Generated Clock     : clk_371m25
+Master Source       : u_mmcm_hdmi/CLKIN1
+Master Clock        : clk_out1_clk_wiz_0
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -3.653 -7.306}
+Generated Sources   : {u_mmcm_hdmi/CLKOUT1}
+
+Generated Clock     : pll_clkfbout_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+Master Clock        : pl_ddr_refclk
+Multiply By         : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKFBOUT}
+
+Generated Clock     : freq_refclk_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+Master Clock        : pl_ddr_refclk
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {1.094 -0.781 -2.656}
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT0}
+
+Generated Clock     : mem_refclk_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+Master Clock        : pl_ddr_refclk
+Multiply By         : 4
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT1}
+
+Generated Clock     : sync_pulse_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+Master Clock        : pl_ddr_refclk
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.547 -0.703 15.547}
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT2}
+
+Generated Clock     : pll_clk3_out_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKIN1
+Master Clock        : pl_ddr_refclk
+Multiply By         : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3}
+
+Generated Clock     : mmcm_clkfbout_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_iodelay_ctrl/clk_ref_mmcm_gen.mmcm_i/CLKIN1
+Master Clock        : pl_ddr_refclk
+Multiply By         : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_iodelay_ctrl/clk_ref_mmcm_gen.mmcm_i/CLKFBOUT}
+
+Generated Clock     : clk_ref_mmcm_400_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_iodelay_ctrl/clk_ref_mmcm_gen.mmcm_i/CLKIN1
+Master Clock        : pl_ddr_refclk
+Multiply By         : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_iodelay_ctrl/clk_ref_mmcm_gen.mmcm_i/CLKOUT1}
+
+Generated Clock     : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/FREQREFCLK
+Master Clock        : freq_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLK}
+
+Generated Clock     : oserdes_clk_11
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/MEMREFCLK
+Master Clock        : mem_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLK}
+
+Generated Clock     : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clk_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in/FREQREFCLK
+Master Clock        : freq_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in/ICLK}
+
+Generated Clock     : oserdes_clk_12
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/MEMREFCLK
+Master Clock        : mem_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLK}
+
+Generated Clock     : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in/FREQREFCLK
+Master Clock        : freq_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in/ICLK}
+
+Generated Clock     : oserdes_clk_13
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/MEMREFCLK
+Master Clock        : mem_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLK}
+
+Generated Clock     : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/FREQREFCLK
+Master Clock        : freq_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLK}
+
+Generated Clock     : oserdes_clk_14
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/MEMREFCLK
+Master Clock        : mem_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLK}
+
+Generated Clock     : oserdes_clk_15
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/MEMREFCLK
+Master Clock        : mem_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLK}
+
+Generated Clock     : oserdes_clk_16
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/MEMREFCLK
+Master Clock        : mem_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLK}
+
+Generated Clock     : oserdes_clk_17
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out/MEMREFCLK
+Master Clock        : mem_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out/OCLK}
+
+Generated Clock     : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/FREQREFCLK
+Master Clock        : freq_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLK}
+
+Generated Clock     : oserdes_clk_18
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/MEMREFCLK
+Master Clock        : mem_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLK}
+
+Generated Clock     : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clk_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in/FREQREFCLK
+Master Clock        : freq_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in/ICLK}
+
+Generated Clock     : oserdes_clk_19
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/MEMREFCLK
+Master Clock        : mem_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLK}
+
+Generated Clock     : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in/FREQREFCLK
+Master Clock        : freq_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in/ICLK}
+
+Generated Clock     : oserdes_clk_20
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/MEMREFCLK
+Master Clock        : mem_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLK}
+
+Generated Clock     : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clk_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_in_gen.phaser_in/FREQREFCLK
+Master Clock        : freq_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_in_gen.phaser_in/ICLK}
+
+Generated Clock     : oserdes_clk_21
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out/MEMREFCLK
+Master Clock        : mem_refclk_1
+Divide By           : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out/OCLK}
+
+Generated Clock     : clk_pll_i_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+Master Clock        : pll_clk3_out_1
+Multiply By         : 1
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT}
+
+Generated Clock     : mmcm_ps_clk_bufg_in_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+Master Clock        : pll_clk3_out_1
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 2.500 5.000}
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKOUT0}
+
+Generated Clock     : clk_div2_bufg_in_1
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKIN1
+Master Clock        : pll_clk3_out_1
+Multiply By         : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKOUT1}
+
+Generated Clock     : iserdes_clkdiv_8
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLK
+Master Clock        : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk_1
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLKDIV}
+
+Generated Clock     : oserdes_clkdiv_11
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLK
+Master Clock        : oserdes_clk_11
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLKDIV}
+
+Generated Clock     : iserdes_clkdiv_9
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in/ICLK
+Master Clock        : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clk_1
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in/ICLKDIV}
+
+Generated Clock     : oserdes_clkdiv_12
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLK
+Master Clock        : oserdes_clk_12
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLKDIV}
+
+Generated Clock     : iserdes_clkdiv_10
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in/ICLK
+Master Clock        : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk_1
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in/ICLKDIV}
+
+Generated Clock     : oserdes_clkdiv_13
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLK
+Master Clock        : oserdes_clk_13
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLKDIV}
+
+Generated Clock     : iserdes_clkdiv_11
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLK
+Master Clock        : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk_1
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLKDIV}
+
+Generated Clock     : oserdes_clkdiv_14
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLK
+Master Clock        : oserdes_clk_14
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLKDIV}
+
+Generated Clock     : oserdes_clkdiv_15
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLK
+Master Clock        : oserdes_clk_15
+Divide By           : 4
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLKDIV}
+
+Generated Clock     : oserdes_clkdiv_16
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLK
+Master Clock        : oserdes_clk_16
+Divide By           : 4
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLKDIV}
+
+Generated Clock     : oserdes_clkdiv_17
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out/OCLK
+Master Clock        : oserdes_clk_17
+Divide By           : 4
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out/OCLKDIV}
+
+Generated Clock     : iserdes_clkdiv_12
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLK
+Master Clock        : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk_1
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_in_gen.phaser_in/ICLKDIV}
+
+Generated Clock     : oserdes_clkdiv_18
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLK
+Master Clock        : oserdes_clk_18
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/phaser_out/OCLKDIV}
+
+Generated Clock     : iserdes_clkdiv_13
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in/ICLK
+Master Clock        : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clk_1
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_in_gen.phaser_in/ICLKDIV}
+
+Generated Clock     : oserdes_clkdiv_19
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLK
+Master Clock        : oserdes_clk_19
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/phaser_out/OCLKDIV}
+
+Generated Clock     : iserdes_clkdiv_14
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in/ICLK
+Master Clock        : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk_1
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in/ICLKDIV}
+
+Generated Clock     : oserdes_clkdiv_20
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLK
+Master Clock        : oserdes_clk_20
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out/OCLKDIV}
+
+Generated Clock     : iserdes_clkdiv_15
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_in_gen.phaser_in/ICLK
+Master Clock        : u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clk_1
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_in_gen.phaser_in/ICLKDIV}
+
+Generated Clock     : oserdes_clkdiv_21
+Master Source       : u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out/OCLK
+Master Clock        : oserdes_clk_21
+Divide By           : 2
+Generated Sources   : {u_ps_ai_peripheral/mig_ddr3_u0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out/OCLKDIV}
+
+Generated Clock     : clkfbout_AI_CORE_CLK_ST_1
+Master Source       : u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKIN1
+Master Clock        : clk_pll_i_1
+Multiply By         : 1
+Generated Sources   : {u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKFBOUT}
+
+Generated Clock     : clk_out1_AI_CORE_CLK_ST_1
+Master Source       : u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKIN1
+Master Clock        : clk_pll_i_1
+Multiply By         : 5
+Generated Sources   : {u_ps_ai_peripheral/ZGolo/u_AI_Mate_top/clkrst_wrapper_u0/AI_CORE_CLK/inst/plle2_adv_inst/CLKOUT0}
+
+
+
+====================================================
+User Uncertainty
+====================================================
+
+
+
+====================================================
+User Jitter
+====================================================
+
+Clock                           Jitter(ns)
+clk_fpga_0                      0.600
+u_clk_wiz_core_50/inst/clk_in1  0.050
+
+
+=== report_clock_interaction (summary) ===
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Oct  6 18:21:22 2026
+| Host         : colorfulshadow running 64-bit major release  (build 9200)
+| Command      : report_clock_interaction -return_string
+| Design       : pl_ddr_mandatory_core_top_combined
+| Device       : 7z030-ffg676
+| Speed File   : -2  PRODUCTION 1.11 2025-11-03
+------------------------------------------------------------------------------------
+
+Clock Interaction Report
+
+Clock Interaction Table
+-----------------------
+
+                                                                                                                                                                                                                                                                                                                          WNS                            TNS Failing  TNS Total    WNS Path         Clock-Pair           Inter-Clock          
+From Clock                                                                                                                                                   To Clock                                                                                                                                                     Clock Edges  WNS(ns)  TNS(ns)    Endpoints    Endpoints  Requirement(ns)  Classification       Constraints          
+-----------------------------------------------------------------------------------------------------------------------------------------------------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------  -----------  -------  -------  -----------  -----------  ---------------  -------------------  -------------------  
+clk_74m25                                                                                                                                                    clk_74m25                                                                                                                                                    rise - fall     5.45     0.00            0         3093             6.73  Clean                Partial False Path   
+clk_74m25                                                                                                                                                    clk_out1_clk_wiz_0                                                                                                                                           rise - rise    -3.75  -111.39           34           34             0.03  Clean                Timed                
+clk_74m25                                                                                                                                                    clk_pll_i_1                                                                                                                                                                                           0           49                   Ignored              Asynchronous Groups  
+clk_div2_bufg_in_1                                                                                                                                           clk_div2_bufg_in_1                                                                                                                                           rise - rise     1.78     0.00            0           12             2.50  Clean                Timed                
+clk_out1_clk_wiz_0                                                                                                                                           clk_74m25                                                                                                                                                    rise - rise    -4.72  -793.99          290          291             0.03  Clean                Partial False Path   
+clk_out1_clk_wiz_0                                                                                                                                           clk_out1_clk_wiz_0                                                                                                                                           rise - rise     5.50     0.00            0        18078            10.00  Clean                Partial False Path   
+clk_out1_clk_wiz_0                                                                                                                                           clk_out1_clk_wiz_core_50                                                                                                                                                                              0           33                   Ignored              Asynchronous Groups  
+clk_out1_clk_wiz_0                                                                                                                                           clk_pll_i_1                                                                                                                                                                                           0        11598                   Ignored              Asynchronous Groups  
+clk_out1_clk_wiz_core_50                                                                                                                                     clk_out1_clk_wiz_core_50                                                                                                                                     rise - rise    10.25     0.00            0        31251            20.00  Clean                Timed                
+clk_out1_clk_wiz_core_50                                                                                                                                     clk_pll_i_1                                                                                                                                                                                           0          619                   Ignored              Asynchronous Groups  
+clk_pll_i_1                                                                                                                                                  clk_74m25                                                                                                                                                                                             0           48                   Ignored              Asynchronous Groups  
+clk_pll_i_1                                                                                                                                                  clk_out1_clk_wiz_0                                                                                                                                                                                    0          143                   Ignored              Asynchronous Groups  
+clk_pll_i_1                                                                                                                                                  clk_out1_clk_wiz_core_50                                                                                                                                                                              0          525                   Ignored              Asynchronous Groups  
+clk_pll_i_1                                                                                                                                                  clk_pll_i_1                                                                                                                                                  rise - rise     0.65     0.00            0       198426             5.00  Clean                Partial False Path   
+clk_pll_i_1                                                                                                                                                  mmcm_ps_clk_bufg_in_1                                                                                                                                        rise - rise     4.05     0.00            0            1             5.00  Clean                Timed                
+clk_pll_i_1                                                                                                                                                  pl_ddr_refclk                                                                                                                                                                                         0            2                   Ignored              False Path           
+clk_pll_i_1                                                                                                                                                  u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk_1  rise - fall     5.35     0.00            0            8             6.72  Clean                Timed                
+clk_pll_i_1                                                                                                                                                  u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clk_1  rise - fall     5.33     0.00            0            8             6.72  Clean                Timed                
+clk_pll_i_1                                                                                                                                                  u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk_1  rise - fall     5.32     0.00            0            8             6.72  Clean                Timed                
+clk_pll_i_1                                                                                                                                                  u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk_1  rise - fall     4.73     0.00            0            8             6.72  Clean                Timed                
+clk_pll_i_1                                                                                                                                                  u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk_1  rise - fall     5.35     0.00            0            8             6.72  Clean                Timed                
+clk_pll_i_1                                                                                                                                                  u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clk_1  rise - fall     5.33     0.00            0            8             6.72  Clean                Timed                
+clk_pll_i_1                                                                                                                                                  u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk_1  rise - fall     5.32     0.00            0            8             6.72  Clean                Timed                
+clk_pll_i_1                                                                                                                                                  u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clk_1  rise - fall     5.33     0.00            0            8             6.72  Clean                Timed                
+clk_ref_mmcm_400_1                                                                                                                                           clk_ref_mmcm_400_1                                                                                                                                           rise - rise     1.79     0.00            0           14             2.50  Clean                Timed                
+iserdes_clkdiv_10                                                                                                                                            iserdes_clkdiv_10                                                                                                                                            rise - rise     1.00     0.00            0           33             2.50  Clean                Timed                
+iserdes_clkdiv_11                                                                                                                                            iserdes_clkdiv_11                                                                                                                                            rise - rise     1.00     0.00            0           33             2.50  Clean                Timed                
+iserdes_clkdiv_12                                                                                                                                            iserdes_clkdiv_12                                                                                                                                            rise - rise     0.98     0.00            0           33             2.50  Clean                Timed                
+iserdes_clkdiv_13                                                                                                                                            iserdes_clkdiv_13                                                                                                                                            rise - rise     1.01     0.00            0           33             2.50  Clean                Timed                
+iserdes_clkdiv_14                                                                                                                                            iserdes_clkdiv_14                                                                                                                                            rise - rise     1.00     0.00            0           33             2.50  Clean                Timed                
+iserdes_clkdiv_15                                                                                                                                            iserdes_clkdiv_15                                                                                                                                            rise - rise     0.99     0.00            0           33             2.50  Clean                Timed                
+iserdes_clkdiv_8                                                                                                                                             iserdes_clkdiv_8                                                                                                                                             rise - rise     1.00     0.00            0           33             2.50  Clean                Timed                
+iserdes_clkdiv_9                                                                                                                                             iserdes_clkdiv_9                                                                                                                                             rise - rise     1.00     0.00            0           33             2.50  Clean                Timed                
+mem_refclk_1                                                                                                                                                 clk_pll_i_1                                                                                                                                                                                           0           16                   Ignored              False Path           
+mem_refclk_1                                                                                                                                                 mem_refclk_1                                                                                                                                                 rise - rise     0.07     0.00            0            3             1.25  Clean                Timed                
+mmcm_ps_clk_bufg_in_1                                                                                                                                        clk_pll_i_1                                                                                                                                                  rise - rise     3.78     0.00            0            9             5.00  Clean                Timed                
+mmcm_ps_clk_bufg_in_1                                                                                                                                        mmcm_ps_clk_bufg_in_1                                                                                                                                        rise - fall     3.57     0.00            0           20             5.00  Clean                Timed                
+oserdes_clk_11                                                                                                                                               oserdes_clk_11                                                                                                                                               fall - fall     0.22     0.00            0            4             1.25  Clean                Timed                
+oserdes_clk_11                                                                                                                                               oserdes_clkdiv_11                                                                                                                                            rise - rise     0.51     0.00            0           15             1.25  Clean                Timed                
+oserdes_clk_12                                                                                                                                               oserdes_clk_12                                                                                                                                               fall - fall     0.20     0.00            0            4             1.25  Clean                Timed                
+oserdes_clk_12                                                                                                                                               oserdes_clkdiv_12                                                                                                                                            rise - rise     0.51     0.00            0           15             1.25  Clean                Timed                
+oserdes_clk_13                                                                                                                                               oserdes_clk_13                                                                                                                                               fall - fall     0.21     0.00            0            4             1.25  Clean                Timed                
+oserdes_clk_13                                                                                                                                               oserdes_clkdiv_13                                                                                                                                            rise - rise     0.51     0.00            0           15             1.25  Clean                Timed                
+oserdes_clk_14                                                                                                                                               oserdes_clk_14                                                                                                                                               fall - fall     0.22     0.00            0            4             1.25  Clean                Timed                
+oserdes_clk_14                                                                                                                                               oserdes_clkdiv_14                                                                                                                                            rise - rise     0.51     0.00            0           15             1.25  Clean                Timed                
+oserdes_clk_15                                                                                                                                               oserdes_clkdiv_15                                                                                                                                            rise - rise     0.51     0.00            0           10             1.25  Clean                Timed                
+oserdes_clk_16                                                                                                                                               oserdes_clkdiv_16                                                                                                                                            rise - rise     0.51     0.00            0            9             1.25  Clean                Timed                
+oserdes_clk_17                                                                                                                                               oserdes_clkdiv_17                                                                                                                                            rise - rise     0.51     0.00            0            8             1.25  Clean                Timed                
+oserdes_clk_18                                                                                                                                               oserdes_clk_18                                                                                                                                               fall - fall     0.22     0.00            0            4             1.25  Clean                Timed                
+oserdes_clk_18                                                                                                                                               oserdes_clkdiv_18                                                                                                                                            rise - rise     0.51     0.00            0           15             1.25  Clean                Timed                
+oserdes_clk_19                                                                                                                                               oserdes_clk_19                                                                                                                                               fall - fall     0.20     0.00            0            4             1.25  Clean                Timed                
+oserdes_clk_19                                                                                                                                               oserdes_clkdiv_19                                                                                                                                            rise - rise     0.51     0.00            0           15             1.25  Clean                Timed                
+oserdes_clk_20                                                                                                                                               oserdes_clk_20                                                                                                                                               fall - fall     0.21     0.00            0            4             1.25  Clean                Timed                
+oserdes_clk_20                                                                                                                                               oserdes_clkdiv_20                                                                                                                                            rise - rise     0.51     0.00            0           15             1.25  Clean                Timed                
+oserdes_clk_21                                                                                                                                               oserdes_clk_21                                                                                                                                               fall - fall     0.22     0.00            0            4             1.25  Clean                Timed                
+oserdes_clk_21                                                                                                                                               oserdes_clkdiv_21                                                                                                                                            rise - rise     0.51     0.00            0           15             1.25  Clean                Timed                
+oserdes_clkdiv_11                                                                                                                                            oserdes_clkdiv_11                                                                                                                                            rise - rise     1.55     0.00            0           36             2.50  Clean                Timed                
+oserdes_clkdiv_12                                                                                                                                            oserdes_clkdiv_12                                                                                                                                            rise - rise     1.53     0.00            0           36             2.50  Clean                Timed                
+oserdes_clkdiv_13                                                                                                                                            oserdes_clkdiv_13                                                                                                                                            rise - rise     1.54     0.00            0           36             2.50  Clean                Timed                
+oserdes_clkdiv_14                                                                                                                                            oserdes_clkdiv_14                                                                                                                                            rise - rise     1.55     0.00            0           36             2.50  Clean                Timed                
+oserdes_clkdiv_15                                                                                                                                            oserdes_clkdiv_15                                                                                                                                            rise - rise     4.03     0.00            0           36             5.00  Clean                Timed                
+oserdes_clkdiv_16                                                                                                                                            oserdes_clkdiv_16                                                                                                                                            rise - rise     4.04     0.00            0           32             5.00  Clean                Timed                
+oserdes_clkdiv_17                                                                                                                                            oserdes_clkdiv_17                                                                                                                                            rise - rise     4.05     0.00            0           28             5.00  Clean                Timed                
+oserdes_clkdiv_18                                                                                                                                            oserdes_clkdiv_18                                                                                                                                            rise - rise     1.55     0.00            0           36             2.50  Clean                Timed                
+oserdes_clkdiv_19                                                                                                                                            oserdes_clkdiv_19                                                                                                                                            rise - rise     1.53     0.00            0           36             2.50  Clean                Timed                
+oserdes_clkdiv_20                                                                                                                                            oserdes_clkdiv_20                                                                                                                                            rise - rise     1.54     0.00            0           36             2.50  Clean                Timed                
+oserdes_clkdiv_21                                                                                                                                            oserdes_clkdiv_21                                                                                                                                            rise - rise     1.55     0.00            0           36             2.50  Clean                Timed                
+pl_ddr_refclk                                                                                                                                                clk_pll_i_1                                                                                                                                                                                           0            4                   Ignored              False Path           
+pl_ddr_refclk                                                                                                                                                pl_ddr_refclk                                                                                                                                                rise - rise     2.24     0.00            0          253             5.00  Clean                Timed                
+sync_pulse_1                                                                                                                                                 mem_refclk_1                                                                                                                                                 rise - rise     0.18     0.00            0            3             0.70  Clean                Timed                
+
+
+

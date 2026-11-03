@@ -1,0 +1,41 @@
+{
+  "best_epoch": 50,
+  "checkpoint_sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+  "label_correct": "2/2",
+  "n_samples": 2,
+  "prediction_agreement": "2/2",
+  "samples": [
+    {
+      "deployed23_class": 1,
+      "frozen_deployed23_pred": 1,
+      "label_correct": true,
+      "modulation": "4ASK",
+      "prediction_agreement": true,
+      "quantized_sha256": "a413e2d40d259597a0492c813c29a3b9701445e962527c835c61eb1a423af11f",
+      "recovered_sha256": "c677f61ac6c593c15e923367425699071f43c714fb63f8ea93b84b266365b4aa",
+      "rms_scale_error": 0.001320315202296981,
+      "roundtrip_deployed23_label": "4ASK",
+      "roundtrip_deployed23_pred": 1,
+      "source_index": 500,
+      "source_sha256": "af2787ecb4fb0dcfc0ec622f92107873020c7c367f685b2b7b4c82c7b102446f",
+      "tensor_correlation": 0.9999248167955656,
+      "tensor_nmse": 0.00015229601899884173
+    },
+    {
+      "deployed23_class": 3,
+      "frozen_deployed23_pred": 3,
+      "label_correct": true,
+      "modulation": "BPSK",
+      "prediction_agreement": true,
+      "quantized_sha256": "4713bc2e2f0612748ef7fc05c95d5ecd3ee0368b7cf3b3935ff36f4e367843ee",
+      "recovered_sha256": "38ba788a3bcbe20c16d91b3dbed1835c7b8697d8f575a1c5b20da96303bd2f79",
+      "rms_scale_error": 0.0042716264724731445,
+      "roundtrip_deployed23_label": "BPSK",
+      "roundtrip_deployed23_pred": 3,
+      "source_index": 1500,
+      "source_sha256": "2bd781bfdc21b327cefd360306095beaefcf601edb1e649764d1cfc7c243d880",
+      "tensor_correlation": 0.999877147555417,
+      "tensor_nmse": 0.00026485740090720356
+    }
+  ]
+}

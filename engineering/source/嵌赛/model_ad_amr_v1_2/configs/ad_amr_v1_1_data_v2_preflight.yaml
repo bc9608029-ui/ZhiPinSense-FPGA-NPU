@@ -1,0 +1,28 @@
+_base: configs/ad_amr_v1_1_data_v2.yaml
+device: cuda:0
+output_root: outputs/ad_amr_v1_1_data_v2/preflight/target
+dataset:
+  train_samples: 420
+  val_samples: 420
+  num_workers: 0
+training:
+  epochs: 2
+  batch_size: 32
+  minimum_epochs_before_stopping: 2
+  early_stopping_patience: 2
+public_pretraining:
+  output_root: outputs/ad_amr_v1_1_data_v2/preflight/public
+  epochs: 2
+  batch_size: 64
+  minimum_epochs_before_stopping: 2
+  early_stopping_patience: 2
+  num_workers: 0
+  max_train_per_stratum: 2
+  max_validation_per_stratum: 2
+initialization:
+  public_checkpoint: outputs/ad_amr_v1_1_data_v2/preflight/public/checkpoints/best.pt
+evaluation:
+  batch_size: 64
+  samples: 420
+  ood_samples: 210
+

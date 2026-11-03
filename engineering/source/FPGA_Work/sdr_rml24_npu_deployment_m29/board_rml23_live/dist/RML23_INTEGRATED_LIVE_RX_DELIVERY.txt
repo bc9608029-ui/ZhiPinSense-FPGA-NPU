@@ -1,0 +1,93 @@
+================================================================================
+ M29 Phase F5 RML23 -- 最终集成交付（Task A 心跳 + Task B UI + Task C live-rx）
+================================================================================
+状态: M29-RML23-INTEGRATED-LIVE-RX-UI-READY-FOR-BOARD-TEST
+      （板端最终验收由用户执行；本轮未碰板 / 未写任何 *_PASS / PROJECT_COMPLETE）
+
+基线（本交付的相对基准，全部 patch 均相对它）:
+  sdr_rml23_live_board_package_correctness_fix.tar.gz   (479 内容)
+
+--------------------------------------------------------------------------------
+ 四份最终工件（均含 SHA256SUMS manifest，且已独立解包 sha256sum -c 校验通过）
+--------------------------------------------------------------------------------
+
+[A] Task A 心跳功能修复补丁
+    dist/sdr_rml23_live_heartbeat_errata_patch.tar.gz
+      40626 B  sha256 5109f2ff9cfc044ebcee0a6736930873b4b704d5415b846007aa7ad3173c3e89
+      manifest: HEARTBEAT_ERRATA_PATCH_SHA256SUMS.txt  (9 内容)
+      校验: sha256sum -c  => 9 OK / 0 FAIL
+
+[B] Task B UI 视觉重构补丁
+    dist/sdr_rml23_live_ui_redesign_patch.tar.gz
+      38038 B  sha256 83368ae7a62ed7970dcc00020cfb5f97932299e0f2a36787aa9aacfa22a91fde
+      manifest: UI_REDESIGN_PATCH_SHA256SUMS.txt  (19 内容)
+      校验: sha256sum -c  => 19 OK / 0 FAIL
+
+[C] Task C live-rx 补丁
+    dist/sdr_rml23_live_rx_patch.tar.gz
+      20041 B  sha256 8f022d501395775c2a36a4d4ec2472036c9efa90b613f591b5af622998a81cb8
+      manifest: LIVE_RX_PATCH_SHA256SUMS.txt  (6 内容)
+      校验: sha256sum -c  => 6 OK / 0 FAIL
+
+[A+B+C] 合并全量板端测试包
+    dist/sdr_rml23_live_board_package_integrated_live_rx.tar.gz
+      3583664 B  sha256 5167649b89b0b588194b4590814adf091451de592d8f412d820a7bb56fb1cccf
+      manifest: sdr_rml23_live_board_package_integrated_live_rx.SHA256SUMS.txt (494 内容)
+      校验: sha256sum -c  => 494 OK / 0 FAIL
+
+  确定性: package_live_rx.py 连跑两次，tar.gz SHA 逐字节一致（固定 uid/gid/mtime=0）。
+  历史包未覆盖: correctness_fix / rf_fix / heartbeat / UI / integrated(A+B) 全部原样保留。
+
+--------------------------------------------------------------------------------
+ 文件差异证明（baseline vs merged，全量递归 diff）
+--------------------------------------------------------------------------------
+模型 / 标签 / golden / 预处理契约 / RTL / XDC / 位流 / Flash 全部未变化：
+
+  未变化（逐字节一致，diff 无差异）:
+    model_rml23/model_24class_ZG.json   sha256 d43a22848fad56195265fc98f9009039e4e9d9e8da7f58fc5042fb2a602edb2d
+    model_rml23/model_24class_ZG.raw    sha256 2425d990dbac0761cfcdb578c2225795e3b700c4afc6800a0b544ff4d50e0cba
+    contracts/rml23_merged_contract.{json,py}        （23 类标签序冻结）
+    deployment_golden/  (240 input_N.bin + expected_argmax.tsv + expected_logits*.tsv/json
+                         + manifest.json + coverage_report.json + coverage_supplemental/)
+    sdr_adapter/preprocess.hpp  signal_presence.hpp  dsp_measure.hpp  nco.hpp  categories.hpp
+    board_package/chain_common.hpp  rml23_merged.hpp  producer_12class.hpp
+    （包内不含 RTL/XDC/位流/Flash，此类资产冻结于工程外，本交付未触碰）
+
+  changed（15，均为 .cpp/.hpp/.sh，无模型/数据）:
+    board_package/board_gate9_full_chain_rml23.cpp   (A 心跳 SOCKET_STATS + C live-rx)
+    board_package/board_ui_live_rml23.cpp            (A)
+    board_package/gate9_phase.hpp                    (C, 新增 live-rx 相位)
+    board_package/ui_state_map.hpp                   (A)
+    host_tests/build_host_tests.sh                   (A+B+C 测试行)
+    host_tests/run_tests.sh                          (A+B+C 测试行)
+    host_tests/test_ui_layout_m19.cpp                (B)
+    sdr_adapter/unix_socket_sink.hpp                 (A, send_attempted/ok/failed/dropped)
+    ui_sw/direct_framebuffer_backend.{cpp,hpp}       (A)
+    ui_sw/font_atlas.{cpp,hpp}  ui_sw/ui_layout.hpp  ui_sw/ui_render.cpp  (B)
+
+  added（仅新增文件，不覆盖历史）:
+    board_package/live_rx_gating.hpp                 (C)
+    host_tests/test_heartbeat_socket.cpp             (A)
+    host_tests/test_live_rx_gating.cpp               (C)
+    host_tests/test_ui_boundary.cpp 及 B 的 UI 快照/审计脚本/工具 (B)
+    docs/M29_RML23_UI_{DESIGN_SPEC,REDESIGN_AUDIT}.md (B)
+
+  Task A 与 Task C 共享 board_gate9_full_chain_rml23.cpp：C 补丁携带「基线 + live-rx 仅」
+  版本（SOCKET_STATS 已剔除），diff 只含 5 处 C 改动；合并包携带工作树全量（基线+A+C）。
+
+--------------------------------------------------------------------------------
+ 离线测试结果（本轮全绿，未碰板）
+--------------------------------------------------------------------------------
+  host_tests:      build_host_tests.sh  OK（含 test_live_rx_gating 51/51）
+                   run_tests.sh  => ALL HOST TESTS PASSED
+                   test_board_build.sh 24 passed / 0 failed
+                   test_rml23_build.sh  7 passed / 0 failed
+  board 语法:      工作树 board_gate9_full_chain_rml23.cpp  -fsyntax-only -Wall -Wextra -Werror OK
+                   C 补丁 board 文件（剔除 SOCKET_STATS）同法 OK
+  shell:           bash -n 全部改动/派生 .sh（工作树 + C 补丁 + 合并包）OK
+  打包:            package_live_rx.py 自校验 + 独立 sha256sum -c 全部通过（见上）
+
+  offline gate ≥0.90 只能由用户在板端
+    ./scripts/run_gate9_rml23.sh --phase=offline --count=240
+  验证；本交付只可声明 READY-FOR-BOARD-TEST。
+================================================================================

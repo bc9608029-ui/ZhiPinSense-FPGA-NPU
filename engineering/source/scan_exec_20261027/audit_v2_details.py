@@ -1,0 +1,6 @@
+import pathlib,json,collections,numpy as np
+p=pathlib.Path(__file__).parent;t=json.loads(pathlib.Path('E:/嵌赛/rml24_stage7_execution_20261027/pc/rml24_final_stage7_pc_selftest/truth/expected_private.json').read_text());tr={r['seq']:r for r in t['records']};out={}
+for name,hz in [('centered_narrow_v2',2401300000),('centered_wide_v2',2397400000)]:
+ rows=json.loads((p/(name+'_results.json')).read_text())['records'];c=[r['public_centering'] for r in rows if 'public_centering' in r];err=[{'seq':r['seq'],'truth':tr[r['seq']]['class_name'],'pred':r['candidate'].get('class_name')} for r in rows if r['candidate'].get('pred')!=tr[r['seq']]['class_index']]
+ out[name]={'centering_count':len(c),'centering_readback_max_error_hz':max(abs(x['actual_lo_hz']-x['requested_lo_hz']) for x in c),'centering_max_abs_residual_hz':max(abs(x['residual_cfo_hz']) for x in c),'centering_min_public_score':min(x['public_score'] for x in c),'full_scan_rows':[r['seq'] for r in rows if any(not s.get('locked_check',False) for s in r['scan_steps'])],'errors':err,'latency_median_ms':float(np.median([r['elapsed_ms'] for r in rows])),'latency_p95_ms':float(np.quantile([r['elapsed_ms'] for r in rows],.95))}
+(p/'candidate_v2_detail_audit.json').write_text(json.dumps(out,indent=2));print(json.dumps(out))

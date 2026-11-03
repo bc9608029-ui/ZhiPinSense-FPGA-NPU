@@ -1,0 +1,53 @@
+{
+  "capture_id": "dual_bf16_rms2048_run2",
+  "source_index": 11500,
+  "source_class": 23,
+  "backend": "HOST_BF16",
+  "diagnostic_gate_bypass": 1,
+  "production_gate_modified": 0,
+  "merge_marker": "HYBRID_BOARD_GATED_PLUS_HOST_FORCED",
+  "gate_bypassed_for_diagnostic": 1,
+  "original_valid": 0,
+  "original_failure": "PAYLOAD_TRAINING_RESIDUAL_TOO_HIGH",
+  "original_failure_enum": 10,
+  "target_rms": 2048,
+  "tx_scale": 2.29203,
+  "raw_rx_sha256": "870e208769d0dc7fd626838efdc2162ec42dc3d12b796079622155775de1a830",
+  "timing_offset": 40672,
+  "coarse_cfo_hz": -138.70438073769049,
+  "fine_cfo_hz": -4.7092371982168011,
+  "sro_ppm": 0,
+  "fractional_timing_samples": 0.400390625,
+  "payload_training_corr": 0.98882574774335841,
+  "payload_training_residual": 0.15076059270025421,
+  "payload_gain_mag": 0.030227758484991936,
+  "payload_phase_deg": 166.05768706688116,
+  "payload_rms_gain_mag": 0.03142470485940612,
+  "wide_linear": {
+    "enabled": 1,
+    "scalar_validation_residual": 0.16378486644458384,
+    "validation_residual": 0.15045190718875026,
+    "image_ratio": 0.053628647635817074
+  },
+  "canonical_crosscheck": {"timing_ok": 1, "coarse_ok": 1, "fine_ok": 1, "corr_ok": 1, "resid_ok": 1},
+  "reconstruction_consistent": 1,
+  "classification_chain": {
+    "fs_in_hz": 2560000,
+    "nco_offset_hz": 0.0,
+    "preprocess_gain": 1.0,
+    "recovered_tensor_file": "recovered_tensor_oqpsk.f32",
+    "recovered_tensor_sha256": "140c716fcef8636a4d67b867f82ff90abf445c571ac9f7442cbf5092e0888494",
+    "classification_window_valid": 1,
+    "delay_offset": 263,
+    "tensor_corr": 0.99529306510957283,
+    "tensor_nmse": 0.0093917145447922224,
+    "recovered_frames": 2,
+    "model_input_equals_classification_window": 1
+  },
+  "outputs": {
+    "provisional_recovered_payload_sha256": "5e094ad6dc6995666830e6747ecbf023012090fe2e504e377c80554ecabb04bb",
+    "classification_window_sha256": "7c22c031c2f451565699a31433a681090df5b2729ec8fcec7f4f24405be0cb3e",
+    "model_input_sha256": "7c22c031c2f451565699a31433a681090df5b2729ec8fcec7f4f24405be0cb3e"
+  },
+  "model_input_finite": 1
+}

@@ -1,0 +1,195 @@
+{
+  "status": "preparation_only_no_formal_training",
+  "baseline_contract_verified": true,
+  "formal_data": {
+    "train_samples": 25200,
+    "validation_samples": 5040,
+    "test_samples": 8400,
+    "snr_values": [
+      -20,
+      -18,
+      -16,
+      -14,
+      -12,
+      -10,
+      -8,
+      -6,
+      -4,
+      -2,
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "seed": 2026,
+    "epochs_max": 40
+  },
+  "smoke_data": {
+    "train_samples": 672,
+    "validation_samples": 336,
+    "test_samples": 336,
+    "epochs": 2
+  },
+  "variants": {
+    "time_only": {
+      "formal_model_profile": {
+        "parameters": 36232,
+        "trainable_parameters": 36232,
+        "parameter_size_mb_fp32": 0.138214111328125,
+        "fixed_non_trainable_state_elements": 615,
+        "fixed_non_trainable_state_mb": 0.00237274169921875,
+        "frontend_fixed_state_elements": 0,
+        "frontend_fixed_state_mb": 0.0,
+        "neural_macs": 4837888,
+        "neural_flops": 9675776,
+        "frontend_macs_pc_reference": 0,
+        "frontend_flops_pc_reference": 0,
+        "total_software_macs": 4837888,
+        "total_software_flops": 9675776,
+        "checkpoint_tensor_state_size_mb": 0.14058685302734375,
+        "serialized_state_dict_mb": 0.15541934967041016,
+        "projected_npu_model_size_mb": 0.14058685302734375,
+        "hardware_partition_status": "PLANNED ONLY: fixed DFT/power frontend is intended for FPGA; no hardware performance is claimed.",
+        "approx_macs": 4837888,
+        "approx_flops": 9675776,
+        "cpu_latency_ms_untrained": 0.4682090000005701,
+        "cpu_batch128_throughput_untrained": 10234.461109637712
+      },
+      "smoke": {
+        "epochs": 2,
+        "training_time_sec": 8.311545000000024,
+        "overall_accuracy_not_for_comparison": 0.125,
+        "macro_f1_not_for_comparison": 0.03626373626373626
+      },
+      "onnx_checker_passed": true,
+      "smoke_onnx_size_mib": 0.03975391387939453,
+      "estimated_formal_cpu_training_minutes": [
+        40,
+        50
+      ]
+    },
+    "frequency_only": {
+      "formal_model_profile": {
+        "parameters": 36120,
+        "trainable_parameters": 36120,
+        "parameter_size_mb_fp32": 0.137786865234375,
+        "fixed_non_trainable_state_elements": 131687,
+        "fixed_non_trainable_state_mb": 0.5023727416992188,
+        "frontend_fixed_state_elements": 131072,
+        "frontend_fixed_state_mb": 0.5,
+        "neural_macs": 1198592,
+        "neural_flops": 2397184,
+        "frontend_macs_pc_reference": 1048576,
+        "frontend_flops_pc_reference": 2097152,
+        "total_software_macs": 2247168,
+        "total_software_flops": 4494336,
+        "checkpoint_tensor_state_size_mb": 0.6401596069335938,
+        "serialized_state_dict_mb": 0.6559629440307617,
+        "projected_npu_model_size_mb": 0.14015960693359375,
+        "hardware_partition_status": "PLANNED ONLY: fixed DFT/power frontend is intended for FPGA; no hardware performance is claimed.",
+        "approx_macs": 2247168,
+        "approx_flops": 4494336,
+        "cpu_latency_ms_untrained": 1.7725640000026033,
+        "cpu_batch128_throughput_untrained": 16711.67721917519
+      },
+      "smoke": {
+        "epochs": 2,
+        "training_time_sec": 5.467654400000356,
+        "overall_accuracy_not_for_comparison": 0.13095238095238096,
+        "macro_f1_not_for_comparison": 0.05842139679630372
+      },
+      "onnx_checker_passed": true,
+      "smoke_onnx_size_mib": 0.5463666915893555,
+      "estimated_formal_cpu_training_minutes": [
+        38,
+        48
+      ]
+    },
+    "time_only_wide": {
+      "formal_model_profile": {
+        "parameters": 71148,
+        "trainable_parameters": 71148,
+        "parameter_size_mb_fp32": 0.2714080810546875,
+        "fixed_non_trainable_state_elements": 881,
+        "fixed_non_trainable_state_mb": 0.003387451171875,
+        "frontend_fixed_state_elements": 0,
+        "frontend_fixed_state_mb": 0.0,
+        "neural_macs": 9921792,
+        "neural_flops": 19843584,
+        "frontend_macs_pc_reference": 0,
+        "frontend_flops_pc_reference": 0,
+        "total_software_macs": 9921792,
+        "total_software_flops": 19843584,
+        "checkpoint_tensor_state_size_mb": 0.2747955322265625,
+        "serialized_state_dict_mb": 0.28865909576416016,
+        "projected_npu_model_size_mb": 0.2747955322265625,
+        "hardware_partition_status": "PLANNED ONLY: fixed DFT/power frontend is intended for FPGA; no hardware performance is claimed.",
+        "approx_macs": 9921792,
+        "approx_flops": 19843584,
+        "cpu_latency_ms_untrained": 1.5570339999976568,
+        "cpu_batch128_throughput_untrained": 6999.4064175247095
+      },
+      "smoke": {
+        "epochs": 2,
+        "training_time_sec": 7.922906199999943,
+        "overall_accuracy_not_for_comparison": 0.12797619047619047,
+        "macro_f1_not_for_comparison": 0.04621312929696163
+      },
+      "onnx_checker_passed": true,
+      "smoke_onnx_size_mib": 0.07883548736572266,
+      "estimated_formal_cpu_training_minutes": [
+        50,
+        65
+      ]
+    },
+    "dual": {
+      "formal_model_profile": {
+        "parameters": 71768,
+        "trainable_parameters": 71768,
+        "parameter_size_mb_fp32": 0.273773193359375,
+        "fixed_non_trainable_state_elements": 132302,
+        "fixed_non_trainable_state_mb": 0.5047454833984375,
+        "frontend_fixed_state_elements": 131072,
+        "frontend_fixed_state_mb": 0.5,
+        "neural_macs": 6035968,
+        "neural_flops": 12071936,
+        "frontend_macs_pc_reference": 1048576,
+        "frontend_flops_pc_reference": 2097152,
+        "total_software_macs": 7084544,
+        "total_software_flops": 14169088,
+        "checkpoint_tensor_state_size_mb": 0.7785186767578125,
+        "serialized_state_dict_mb": 0.8076372146606445,
+        "projected_npu_model_size_mb": 0.2785186767578125,
+        "hardware_partition_status": "PLANNED ONLY: fixed DFT/power frontend is intended for FPGA; no hardware performance is claimed.",
+        "approx_macs": 7084544,
+        "approx_flops": 14169088,
+        "cpu_latency_ms_untrained": 3.160453000000416,
+        "cpu_batch128_throughput_untrained": 6952.610895502018
+      },
+      "smoke": {
+        "epochs": 2,
+        "training_time_sec": 6.883683399999882,
+        "overall_accuracy_not_for_comparison": 0.11607142857142858,
+        "macro_f1_not_for_comparison": 0.02671232876712329
+      },
+      "onnx_checker_passed": true,
+      "smoke_onnx_size_mib": 0.5843381881713867,
+      "estimated_formal_cpu_training_minutes": [
+        48,
+        62
+      ]
+    }
+  },
+  "estimate_basis": "Observed Baseline V1 CPU time, two-epoch ablation smoke throughput, and formal/smoke record-count scaling; ranges include host-load variation.",
+  "estimated_all_four_cpu_training_minutes": [
+    176,
+    225
+  ]
+}

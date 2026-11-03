@@ -1,0 +1,1 @@
+--relax -mt "2" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -s "pspl_fixed" "tb_smart_scan_pspl" "glbl" 

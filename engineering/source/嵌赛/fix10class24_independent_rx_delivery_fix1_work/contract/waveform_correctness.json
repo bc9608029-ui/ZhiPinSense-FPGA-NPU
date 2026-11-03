@@ -1,0 +1,64 @@
+{
+  "am_dsb": {
+    "AM-DSB-SC": {
+      "carrier_power": 1045512.677957794,
+      "carrier_sideband_db": 25.331366479897707,
+      "mean_imag": 0.00014596874489472225,
+      "mean_real": 0.00014596874489472225,
+      "sideband_power": 3063.322039250168
+    },
+    "AM-DSB-WC": {
+      "carrier_power": 1047208.7152549109,
+      "carrier_sideband_db": 28.84174280489814,
+      "mean_imag": 0.0004691176124547114,
+      "mean_real": 0.0004691176124547114,
+      "sideband_power": 1367.2847421265906
+    }
+  },
+  "am_ssb": {
+    "AM-SSB-SC": {
+      "carrier_sideband_db": 17.916752919710774,
+      "dc_power": 63310206.97085212,
+      "hilbert_ortho_gen": 0.9999999999999997,
+      "hilbert_ortho_true": -2.4288571769954056e-17,
+      "mean_imag": 5.501384278924402,
+      "mean_real": 5.487448347826979,
+      "neg_energy": 511409.0930299158,
+      "pos_energy": 511409.0930299157,
+      "sideband_power": 1022818.1860598315
+    },
+    "AM-SSB-WC": {
+      "carrier_sideband_db": 21.411339060584915,
+      "dc_power": 143466405.5001522,
+      "hilbert_ortho_gen": 1.0000000000000002,
+      "hilbert_ortho_true": 1.7642093776262983e-18,
+      "mean_imag": 8.245146582361095,
+      "mean_real": 8.296853863242305,
+      "neg_energy": 518306.09462776873,
+      "pos_energy": 518306.09462776897,
+      "sideband_power": 1036612.1892555377
+    }
+  },
+  "findings": [
+    {
+      "declared": "AM-SSB z = a + 1j*Hilbert(a)\uff08\u89e3\u6790/\u5355\u8fb9\u5e26\u4f34\uff09",
+      "id": "F1-hilbert-is-identity",
+      "measured": "GEN._hilbert(a) == a\uff08ortho=1.0\uff0c\u771f Hilbert \u5e94 ortho\u22480\uff09",
+      "verdict": "DEFECT: _hilbert \u8fd4\u56de .real\uff08\u539f\u4fe1\u53f7\uff09\u975e .imag\uff08Hilbert \u53d8\u6362\uff09"
+    },
+    {
+      "declared": "SSB\uff08\u4e0a\u8fb9\u5e26 USB\uff0c\u8d1f\u9891\u22480\uff09",
+      "id": "F2-ssb-is-dsb",
+      "measured": "AM-SSB-WC pos=5.18e+05 neg=5.18e+05\uff08pos\u2248neg \u2192 \u53cc\u8fb9\u5e26\uff09",
+      "verdict": "DEFECT: \u56e0 F1\uff0cAM-SSB \u5b9e\u4e3a\u53cc\u8fb9\u5e26\uff0c\u975e USB"
+    },
+    {
+      "declared": "SC = suppressed carrier\uff08\u6291\u5236\u8f7d\u6ce2\uff09",
+      "id": "F3-sc-not-suppressed",
+      "measured": "SSB-SC \u8f7d\u6ce2/\u8fb9\u5e26 +17.9 dB\u3001DSB-SC +25.3 dB\uff08\u8f7d\u6ce2\u4ecd\u5f3a\uff09",
+      "verdict": "DEFECT: SC \u672a\u6291\u5236\u8f7d\u6ce2\uff0c\u4ec5\u8c03\u5236\u6307\u6570 m \u66f4\u5927"
+    }
+  ],
+  "token": "M29-RML24-FIX10CLASS24-INDEPENDENT-RX-DELIVERY-FIX1-WAVEFORM-CORRECTNESS",
+  "verdict": "F1/F2/F3\uff1aHilbert \u4f34\u662f\u6052\u7b49\u3001SSB \u5b9e\u4e3a DSB\u3001SC \u672a\u6291\u5236\u8f7d\u6ce2\u2014\u2014\u751f\u6210\u5668\u58f0\u660e\u4e0e\u5b9e\u73b0\u4e0d\u4e00\u81f4\uff1b\u5386\u53f2\u8d44\u4ea7\u4fdd\u6301\u4e0d\u53d8\uff0c\u4fee\u6b63\u9700\u65b0\u589e\u7248\u672c\u3002"
+}

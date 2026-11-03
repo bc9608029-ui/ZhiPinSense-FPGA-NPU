@@ -1,0 +1,55 @@
+{
+  "contract_version": "rml24-final-integration-v1",
+  "status": "READY_FOR_STAGE7_BOARD_INTEGRATION_RAW_REPLAY_PENDING",
+  "class_count": 24,
+  "classes": [
+    "OOK", "4ASK", "8ASK", "BPSK", "QPSK", "8PSK", "16PSK", "32PSK",
+    "16APSK", "32APSK", "64APSK", "128APSK", "16QAM", "32QAM", "64QAM",
+    "128QAM", "256QAM", "AM-SSB-WC", "AM-SSB-SC", "AM-DSB-WC",
+    "AM-DSB-SC", "FM", "GMSK", "OQPSK"
+  ],
+  "tensor": {
+    "windows": 8,
+    "channels": 2,
+    "complex_samples_per_window": 1024,
+    "dtype": "float32-little-endian",
+    "layout": "[window, I/Q, sample]",
+    "decision": "mean 24-logit vector over 8 windows, then argmax"
+  },
+  "rf": {
+    "center_hz": 2400000000,
+    "sample_rate_sps": 2560000,
+    "bandwidth_hz": 18000000,
+    "tx_attenuation_db": -40.0,
+    "rx_gain_mode": "manual",
+    "rx_gain_db": 35.0,
+    "path": "direct-cable",
+    "payload_complex_samples": 1024,
+    "payload_repetitions": 8,
+    "public_reference_only": true
+  },
+  "frozen_sha256": {
+    "candidate_two_dc.py": "e0aa12029e9c5aa670a9340d9c078814b10dcfb0ee82c580adaad4f55affcf3a",
+    "model_raw": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+    "model_json": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+    "validation_expected": "67d94d4587100e39a90c0f1589f1d187caea1272a30a3c4bf764f5e6ff8b8a45",
+    "development_expected": "17561cb9a8ebf77174435cfe3d8543097b846e10293908fd1fddfe29c8c025c4",
+    "validation_generator": "c46dff2ac2710cec84c9cff92d776b3caab6a976dff997e29b9538a66ae5bef4",
+    "validation_r1_board_results": "898882c42e83d51a1f264af890bd288ecf0c480446fa81167ab32060d20b0283",
+    "validation_r2_board_results": "8a728e14f86b3ede7c0b1ac5a69c8ef8785f0e48c4a913ce6794c410bddbc6d5"
+  },
+  "validated_results": {
+    "development": {"baseline_correct": 108, "candidate_correct": 119, "total": 120},
+    "validation_r1": {"baseline_correct": 205, "candidate_correct": 233, "total": 240},
+    "validation_r2": {"baseline_correct": 198, "candidate_correct": 230, "total": 240},
+    "validation_combined": {"baseline_correct": 403, "candidate_correct": 463, "total": 480}
+  },
+  "red_lines": [
+    "No labels, expected outputs, source payload, or private truth in receiver runtime.",
+    "No per-class or per-sample recovery branch.",
+    "No model, waveform, gate, or RF parameter change during integration.",
+    "No accuracy claim from missing, failed, or filtered-out frames.",
+    "The original candidate source is vendored byte-for-byte and imported, not rewritten."
+  ]
+}
+

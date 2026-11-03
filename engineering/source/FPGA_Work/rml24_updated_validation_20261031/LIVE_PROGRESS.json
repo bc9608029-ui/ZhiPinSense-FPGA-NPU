@@ -1,0 +1,46 @@
+{
+  "status": "ALL_SCORED",
+  "updated": "2026-10-31T22:38:43.594571",
+  "fixed_carry_forward": "235/240",
+  "phases": [
+    {
+      "name": "search240",
+      "state": "DEVICE_PHASE_ENDED_ORIGINAL_RESTORED",
+      "completed_tx": 240,
+      "score": {
+        "name": "search240",
+        "denominator": 240,
+        "correct": 237,
+        "missing": 0,
+        "clock_contract": "windows-qpc-board-monotonic-v1",
+        "clock_drift_ns": -25093040,
+        "pre_uncertainty_ns": 52714650,
+        "post_uncertainty_ns": 58962400,
+        "minimum_correct": 235,
+        "promotion_gate_pass": true,
+        "kind": "NEW_RF_EXISTING_FROZEN_WAVEFORMS_NOT_UNSEEN_GENERALIZATION"
+      },
+      "failure": false
+    },
+    {
+      "name": "sweep24",
+      "state": "DEVICE_PHASE_ENDED_ORIGINAL_RESTORED",
+      "completed_tx": 24,
+      "score": {
+        "name": "sweep24",
+        "denominator": 24,
+        "correct": 0,
+        "missing": 24,
+        "clock_contract": "windows-qpc-board-monotonic-v1",
+        "clock_drift_ns": -15727930,
+        "pre_uncertainty_ns": 52364500,
+        "post_uncertainty_ns": 54908800,
+        "minimum_correct": 23,
+        "promotion_gate_pass": false,
+        "kind": "NEW_RF_EXISTING_FROZEN_WAVEFORMS_NOT_UNSEEN_GENERALIZATION"
+      },
+      "failure": false
+    }
+  ],
+  "official_deployment_done": false
+}

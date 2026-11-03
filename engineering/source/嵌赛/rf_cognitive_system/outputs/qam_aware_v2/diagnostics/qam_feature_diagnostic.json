@@ -1,0 +1,199 @@
+{
+  "scope": "Existing frozen snr_sweep namespaces at +10/+20 dB; not final_blind_test",
+  "samples_per_class_per_snr": 250,
+  "rows": 1000,
+  "all_finite": true,
+  "summary": [
+    {
+      "snr_db": 10.0,
+      "modulation": "16QAM",
+      "mean_power_mean": 1.1256976960633398,
+      "mean_power_std": 0.26012652743602444,
+      "second_moment_power_mean": 2.0790561392453464,
+      "second_moment_power_std": 0.979129015973979,
+      "power_variance_mean": 0.7444656892882137,
+      "power_variance_std": 0.35673050502616804,
+      "lag_correlation_magnitude_mean_mean": 1.0673966993387036,
+      "lag_correlation_magnitude_mean_std": 0.2466401078066274,
+      "lag_correlation_magnitude_second_moment_mean": 1.8063761570837955,
+      "lag_correlation_magnitude_second_moment_std": 0.8528254748018985,
+      "lag_correlation_magnitude_std_mean": 0.7576740179691014,
+      "lag_correlation_magnitude_std_std": 0.18031239182604467
+    },
+    {
+      "snr_db": 10.0,
+      "modulation": "64QAM",
+      "mean_power_mean": 1.1155809470225557,
+      "mean_power_std": 0.2610702583465699,
+      "second_moment_power_mean": 2.1094476890291696,
+      "second_moment_power_std": 1.0321956807283936,
+      "power_variance_mean": 0.7970417905954552,
+      "power_variance_std": 0.39989365221779044,
+      "lag_correlation_magnitude_mean_mean": 1.0577069594514177,
+      "lag_correlation_magnitude_mean_std": 0.24769428158381473,
+      "lag_correlation_magnitude_second_moment_mean": 1.8367498203139885,
+      "lag_correlation_magnitude_second_moment_std": 0.8999291276135395,
+      "lag_correlation_magnitude_std_mean": 0.7878057068202239,
+      "lag_correlation_magnitude_std_std": 0.1908050194952063
+    },
+    {
+      "snr_db": 20.0,
+      "modulation": "16QAM",
+      "mean_power_mean": 1.0482510084200896,
+      "mean_power_std": 0.2523287245549032,
+      "second_moment_power_mean": 1.718912844606949,
+      "second_moment_power_std": 0.8514163883206273,
+      "power_variance_mean": 0.556667561858652,
+      "power_variance_std": 0.27758695793268184,
+      "lag_correlation_magnitude_mean_mean": 1.0304413023720467,
+      "lag_correlation_magnitude_mean_std": 0.2481081651790553,
+      "lag_correlation_magnitude_second_moment_mean": 1.6515988557995016,
+      "lag_correlation_magnitude_second_moment_std": 0.8183862294781623,
+      "lag_correlation_magnitude_std_mean": 0.7065751251964947,
+      "lag_correlation_magnitude_std_std": 0.17131003516856186
+    },
+    {
+      "snr_db": 20.0,
+      "modulation": "64QAM",
+      "mean_power_mean": 1.0284912077817165,
+      "mean_power_std": 0.23084708021530237,
+      "second_moment_power_mean": 1.7035139826022023,
+      "second_moment_power_std": 0.778889270839804,
+      "power_variance_mean": 0.5926426051717533,
+      "power_variance_std": 0.28331932006241256,
+      "lag_correlation_magnitude_mean_mean": 1.010844447883287,
+      "lag_correlation_magnitude_mean_std": 0.22653554459090502,
+      "lag_correlation_magnitude_second_moment_mean": 1.6367435617944874,
+      "lag_correlation_magnitude_second_moment_std": 0.746838639151302,
+      "lag_correlation_magnitude_std_mean": 0.7308800116043087,
+      "lag_correlation_magnitude_std_std": 0.1725033992565968
+    }
+  ],
+  "differences": [
+    {
+      "snr_db": 10.0,
+      "metric": "mean_power",
+      "mean_16qam": 1.1256976960633398,
+      "mean_64qam": 1.1155809470225557,
+      "64qam_minus_16qam": -0.010116749040784079,
+      "cohens_d_64_minus_16": -0.03882116211087883
+    },
+    {
+      "snr_db": 10.0,
+      "metric": "second_moment_power",
+      "mean_16qam": 2.079056139245346,
+      "mean_64qam": 2.1094476890291696,
+      "64qam_minus_16qam": 0.030391549783823635,
+      "cohens_d_64_minus_16": 0.030209918258847435
+    },
+    {
+      "snr_db": 10.0,
+      "metric": "power_variance",
+      "mean_16qam": 0.7444656892882138,
+      "mean_64qam": 0.7970417905954552,
+      "64qam_minus_16qam": 0.05257610130724144,
+      "cohens_d_64_minus_16": 0.13874988851127343
+    },
+    {
+      "snr_db": 10.0,
+      "metric": "lag_correlation_magnitude_mean",
+      "mean_16qam": 1.0673966993387036,
+      "mean_64qam": 1.057706959451418,
+      "64qam_minus_16qam": -0.00968973988728572,
+      "cohens_d_64_minus_16": -0.03920309030797
+    },
+    {
+      "snr_db": 10.0,
+      "metric": "lag_correlation_magnitude_second_moment",
+      "mean_16qam": 1.8063761570837955,
+      "mean_64qam": 1.8367498203139885,
+      "64qam_minus_16qam": 0.03037366323019297,
+      "cohens_d_64_minus_16": 0.03464569536107283
+    },
+    {
+      "snr_db": 10.0,
+      "metric": "lag_correlation_magnitude_std",
+      "mean_16qam": 0.7576740179691014,
+      "mean_64qam": 0.7878057068202239,
+      "64qam_minus_16qam": 0.030131688851122496,
+      "cohens_d_64_minus_16": 0.16231872727351448
+    },
+    {
+      "snr_db": 20.0,
+      "metric": "mean_power",
+      "mean_16qam": 1.0482510084200896,
+      "mean_64qam": 1.0284912077817165,
+      "64qam_minus_16qam": -0.019759800638373015,
+      "cohens_d_64_minus_16": -0.08171063397953912
+    },
+    {
+      "snr_db": 20.0,
+      "metric": "second_moment_power",
+      "mean_16qam": 1.7189128446069493,
+      "mean_64qam": 1.7035139826022023,
+      "64qam_minus_16qam": -0.015398862004746938,
+      "cohens_d_64_minus_16": -0.018872101350232165
+    },
+    {
+      "snr_db": 20.0,
+      "metric": "power_variance",
+      "mean_16qam": 0.556667561858652,
+      "mean_64qam": 0.5926426051717533,
+      "64qam_minus_16qam": 0.03597504331310131,
+      "cohens_d_64_minus_16": 0.12826800543772818
+    },
+    {
+      "snr_db": 20.0,
+      "metric": "lag_correlation_magnitude_mean",
+      "mean_16qam": 1.0304413023720467,
+      "mean_64qam": 1.010844447883287,
+      "64qam_minus_16qam": -0.019596854488759696,
+      "cohens_d_64_minus_16": -0.08248985348345253
+    },
+    {
+      "snr_db": 20.0,
+      "metric": "lag_correlation_magnitude_second_moment",
+      "mean_16qam": 1.6515988557995016,
+      "mean_64qam": 1.6367435617944877,
+      "64qam_minus_16qam": -0.014855294005013953,
+      "cohens_d_64_minus_16": -0.018961874068537454
+    },
+    {
+      "snr_db": 20.0,
+      "metric": "lag_correlation_magnitude_std",
+      "mean_16qam": 0.7065751251964947,
+      "mean_64qam": 0.7308800116043087,
+      "64qam_minus_16qam": 0.02430488640781403,
+      "cohens_d_64_minus_16": 0.14138330599034615
+    }
+  ],
+  "raw_feature_range_current_test_first_512": {
+    "power": {
+      "minimum": 2.4854091407178203e-06,
+      "maximum": 1430.652099609375,
+      "mean": 15.610052108764648,
+      "std": 43.79959487915039,
+      "p01": 0.03153787925839424,
+      "p99": 218.84764099121094,
+      "all_finite": true
+    },
+    "lag_real": {
+      "minimum": -865.5256958007812,
+      "maximum": 744.2373046875,
+      "mean": 0.9971523284912109,
+      "std": 23.223970413208008,
+      "p01": -75.6082534790039,
+      "p99": 79.01731872558594,
+      "all_finite": true
+    },
+    "lag_imag": {
+      "minimum": -741.2822265625,
+      "maximum": 545.0571899414062,
+      "mean": 0.03805312514305115,
+      "std": 23.363492965698242,
+      "p01": -76.99449920654297,
+      "p99": 77.54306030273438,
+      "all_finite": true
+    }
+  }
+}

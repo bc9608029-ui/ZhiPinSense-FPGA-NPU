@@ -1,0 +1,30 @@
+{
+  "baseline_lock_verified": true,
+  "checkpoint": "outputs/baseline_v1/checkpoints/best.pt",
+  "frozen_evaluation_split_pattern": "snr_sweep_{snr}",
+  "samples_per_class_per_snr": 250,
+  "snr_values": [
+    -10,
+    -6,
+    0,
+    10,
+    20
+  ],
+  "classes": [
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM"
+  ],
+  "high_snr_qam_mean_accuracy": 0.587,
+  "high_snr_qam_normalized_embedding_separation": 0.2214779515618696,
+  "high_snr_qam_pca_2d_silhouette": {
+    "10": 0.004694447387009859,
+    "20": 0.008872962556779385
+  },
+  "interpretation": [
+    "Raw distribution distances remain non-zero at high SNR, so the QAM classes retain measurable statistical differences.",
+    "Baseline high-SNR QAM accuracy and embedding separation are substantially weaker than for the other selected classes.",
+    "This supports a representation/capacity limitation in the time-only baseline; it does not prove that every raw statistic is independently sufficient for classification."
+  ]
+}

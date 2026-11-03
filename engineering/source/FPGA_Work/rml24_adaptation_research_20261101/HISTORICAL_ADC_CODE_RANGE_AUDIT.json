@@ -1,0 +1,140 @@
+{
+  "scope": "Historical local archived raw captures, same IIO parser; not current single-repeat raw clipping proof",
+  "rows": [
+    {
+      "member": "rml24_weak_bandwidth_rf_20261101/gainfreeze_bw3/raw_050.npy",
+      "min": -243.0,
+      "max": 291.0,
+      "fraction_divisible16": 0.06293487548828125,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_weak_bandwidth_rf_20261101/gainfreeze_bw3/raw_100.npy",
+      "min": -168.0,
+      "max": 161.0,
+      "fraction_divisible16": 0.0637359619140625,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_weak_bandwidth_rf_20261101/gainfreeze_bw5/raw_050.npy",
+      "min": -162.0,
+      "max": 156.0,
+      "fraction_divisible16": 0.0635986328125,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_weak_bandwidth_rf_20261101/gainfreeze_bw5/raw_100.npy",
+      "min": -157.0,
+      "max": 154.0,
+      "fraction_divisible16": 0.0614776611328125,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_gainfreeze_range_paired_20261101/gainfreeze_bw5/raw_050.npy",
+      "min": -1927.0,
+      "max": 1978.0,
+      "fraction_divisible16": 0.06353759765625,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_gainfreeze_range_paired_20261101/gainfreeze_bw5/raw_100.npy",
+      "min": -420.0,
+      "max": 415.0,
+      "fraction_divisible16": 0.06290435791015625,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_gainfreeze_range_paired_20261101/gainfreeze_bw5/raw_150.npy",
+      "min": -104.0,
+      "max": 102.0,
+      "fraction_divisible16": 0.06235504150390625,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_gainfreeze_range_paired_20261101/manual_bw5/raw_050.npy",
+      "min": -71.0,
+      "max": 72.0,
+      "fraction_divisible16": 0.0608367919921875,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_gainfreeze_range_paired_20261101/manual_bw5/raw_100.npy",
+      "min": -10.0,
+      "max": 10.0,
+      "fraction_divisible16": 0.186004638671875,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_gainfreeze_range_paired_20261101/manual_bw5/raw_150.npy",
+      "min": -62.0,
+      "max": 62.0,
+      "fraction_divisible16": 0.059814453125,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_weak_adaptive_rf_20261101/gainfreeze_bw5/raw_050.npy",
+      "min": -224.0,
+      "max": 223.0,
+      "fraction_divisible16": 0.06296539306640625,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_weak_adaptive_rf_20261101/gainfreeze_bw5/raw_100.npy",
+      "min": -250.0,
+      "max": 252.0,
+      "fraction_divisible16": 0.063201904296875,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_weak_adaptive_rf_20261101/gainfreeze_bw5/raw_150.npy",
+      "min": -158.0,
+      "max": 155.0,
+      "fraction_divisible16": 0.06201934814453125,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_weak_adaptive_rf_20261101/gainfreeze_bw5/raw_200.npy",
+      "min": -187.0,
+      "max": 188.0,
+      "fraction_divisible16": 0.0639801025390625,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    },
+    {
+      "member": "rml24_weak_adaptive_rf_20261101/gainfreeze_bw5/raw_250.npy",
+      "min": -351.0,
+      "max": 380.0,
+      "fraction_divisible16": 0.06253814697265625,
+      "at_12bit_rails": 0,
+      "above_12bit_range": 0,
+      "at_16bit_rails": 0
+    }
+  ]
+}

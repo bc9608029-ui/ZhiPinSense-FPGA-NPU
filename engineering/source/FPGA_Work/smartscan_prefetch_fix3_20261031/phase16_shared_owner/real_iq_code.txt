@@ -1,0 +1,2 @@
+from pathlib import Path
+exec(compile(Path('/root/rml24_three_modes_execution_20261029/fpga_ui_integration_20261031/shared_owner_test.py').read_text(),'shared_owner_test.py','exec'))

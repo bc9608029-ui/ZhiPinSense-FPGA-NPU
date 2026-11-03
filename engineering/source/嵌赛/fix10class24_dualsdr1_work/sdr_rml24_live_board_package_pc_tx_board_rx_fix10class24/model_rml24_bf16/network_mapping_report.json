@@ -1,0 +1,85 @@
+{
+  "activation_values": {
+    "plain": {
+      "@fp(32)": 2
+    },
+    "quantized_expressed": {
+      "@fp(32)": 121
+    },
+    "quantized_storage": {
+      "@bf(16)": 113,
+      "@tf(32)": 8
+    },
+    "unique_count": 123
+  },
+  "ai_target": "@zhuget(330)",
+  "audit": "M29-RML24-FIX10CLASS24-BF16-NETWORK-AUDIT",
+  "compile_target": {
+    "@hostt": 2,
+    "@zhuget(330)": 122
+  },
+  "deployability": {
+    "host_ops": 2,
+    "npu_ops": 122,
+    "verdict": "DEPLOYABLE_FULL_NETWORK_BF16"
+  },
+  "framework_kind": "ONNX",
+  "framework_version": "opset17",
+  "hard_op_node_types": {
+    "icraft::xir::AddNode": 12,
+    "icraft::xir::CastNode": 6,
+    "icraft::xir::Conv2dNode": 28,
+    "icraft::xir::MatmulNode": 2,
+    "icraft::xir::MeanNode": 1,
+    "icraft::xir::PruneAxisNode": 1,
+    "icraft::xir::ReshapeNode": 39,
+    "icraft::xir::TransposeNode": 33
+  },
+  "host_ops": 2,
+  "icraft_version": "v3.39.0",
+  "icraft_xir_version": "3.39.0.0",
+  "int8_tensors": 0,
+  "model_json_sha256": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+  "model_name": "rml24_adamrv11_bf16",
+  "model_raw_sha256": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+  "network_io": {
+    "input_dtype": "fp32",
+    "input_shape": [
+      1,
+      2,
+      1024
+    ],
+    "output_dtype": "fp32",
+    "output_shape": [
+      1,
+      24
+    ]
+  },
+  "network_name": "model_24class",
+  "npu_resident_ops": 122,
+  "op_inventory": {
+    "hard_op": 122,
+    "input": 1,
+    "output": 1,
+    "total": 124
+  },
+  "params": {
+    "count": 181,
+    "plain": {
+      "@fp(16)": 29,
+      "@uint(64)": 122
+    },
+    "quantized_expressed": {
+      "@fp(32)": 30
+    },
+    "quantized_storage": {
+      "@bf(16)": 30
+    }
+  },
+  "params_bytes": 778732,
+  "params_md5": "0c9b60b82ea1f634469b598db45738fb",
+  "tags": {
+    "bgr_order": true,
+    "stage": "quantized"
+  }
+}

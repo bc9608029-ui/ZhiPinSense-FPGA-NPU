@@ -1,0 +1,52 @@
+{
+  "task": "M29-RML24-FIX10CLASS24-TF32-AB1",
+  "phase": "B",
+  "network_name": "model_24class",
+  "model_name": "rml24_adamrv11_tf32",
+  "quantization_scheme": "full_network_tf32",
+  "qdtype": "tf32",
+  "bits": 8,
+  "saturation": "kld",
+  "per": "channel",
+  "no_transinput": true,
+  "no_imagemake": true,
+  "target": "zhuge",
+  "ai_target": "@zhuget(330)",
+  "compile_target": {
+    "@hostt": 2,
+    "@zhuget(330)": 118
+  },
+  "op_inventory": {
+    "input": 1,
+    "hard_op": 118,
+    "output": 1
+  },
+  "storage_dtype_activation": "tf32",
+  "storage_dtype_params": "tf32",
+  "expressed_dtype": "fp32",
+  "activation_storage_census": {
+    "@tf(32)": 117
+  },
+  "params_storage_census": {
+    "@tf(32)": 59,
+    "@uint(64)": 118
+  },
+  "int8_tensors": 0,
+  "bf16_tensors": 0,
+  "fp16_tensors": 0,
+  "params_bytes": 1423004,
+  "params_md5": "e48e59f5a2da56a99875ade883d508da",
+  "model_json_sha256": "8d00a1c31835611f18064389e5b9ecab755afefa5bacd78a983119757e65fa37",
+  "model_raw_sha256": "f8366a109576ea53c9b3ddfd2e7b690590515ff3dfb33c6af7cf6ccafcdb392e",
+  "source_checkpoint_sha256": "96cd25f87d6f6f8cacda94432136db9420f74300cecba71df3c9fbe49817be6d",
+  "source_onnx_sha256": "976618a131e75f23bd46e04e71a114cbbea245d6afdd4c7ea7fa008e0ce9ed51",
+  "source_label_contract_sha256": "3e1382d1242a206dae3f73535deba30b461e8573889b60004db9d2ce055fa549",
+  "icraft_version": "v3.39.0",
+  "icraft_binary": "C:/Icraft/CLI v3.39.0/bin/icraft.exe",
+  "network_io": {
+    "input_shape": [1, 2, 1024],
+    "input_dtype": "fp32",
+    "output_shape": [1, 24],
+    "output_dtype": "fp32"
+  }
+}

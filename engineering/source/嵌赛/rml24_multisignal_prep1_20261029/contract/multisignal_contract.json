@@ -1,0 +1,79 @@
+{
+  "contract_id": "rml24-multisignal-prep1-20261029-v1",
+  "status": "OFFLINE_PREP_COMPLETE_RF_PENDING",
+  "scope": "C-line multi-signal scan offline preparation; no RF, no board, no flash, no training",
+  "frequency_unit": "Hz integer, *_hz field names only",
+  "sample_rate_hz": 2560000,
+  "fft_length": 1024,
+  "bin_hz": 2500,
+  "scan": {
+    "default_step_hz": 1000000,
+    "min_step_hz": 1,
+    "max_step_hz": 2304000,
+    "note_step": "tuning step is NOT inherently a multiple of 2500 Hz (contract sec. 3, 2026-10-29 revision): impose no multiple restriction unless the real receiver/controller has a verified alignment premise; spectral stitching uses real integer-Hz coordinates",
+    "note_max_step": "2304000 = 0.9 * 2560000 is the main-chain EXISTING scan span / upper limit (ScanConfig.validate value); it is NOT fs and NOT a bin-alignment requirement -- keep the real frequency coordinate, do not force 2302500"
+  },
+  "public_frame": {
+    "train_samples": 2048,
+    "payload_windows": 8,
+    "payload_samples": 8192,
+    "frame_samples": 10240,
+    "min_public_score": 0.10
+  },
+  "multi_target_resolution": {
+    "status": "OFFLINE TEST TARGETS (board verification pending, NOT frozen commitments)",
+    "resolvable_separation_hz": 12500,
+    "resolvable_separation_bins": 5,
+    "merge_radius_hz": 6250,
+    "near_neighbor_dynamic_range_db": 25.0,
+    "min_target_bw_hz": 2500,
+    "max_target_bw_hz": 1152000,
+    "occupied_bw_db": 20.0,
+    "peak_threshold_db": 14.0,
+    "noise_floor_quantile": 0.50,
+    "note": "separation and dynamic-range numbers are Hann-window PSD model targets to be re-verified against the REAL public-frame occupied bandwidth, guard band and detection algorithm before any claim"
+  },
+  "power_contract": {
+    "field": "power_valid",
+    "type": "number (not a bare boolean flag)",
+    "source": "detection PSD peak power minus the dwell's adaptive median noise floor (prominence of the selected peak)",
+    "unit": "dB above adaptive median noise floor (relative scale; NOT dBm, NOT dBFS)",
+    "valid_range_db": [14.0, 80.0],
+    "valid_means": "a value >= 14 dB means a valid detection (the detector only reports peaks >= median + 14 dB); NaN/absent means unmeasured or invalid",
+    "no_dbm": "no absolute metrological contract exists offline, so dBm must never be reported from this field"
+  },
+  "aging": {
+    "default_cycles": 3,
+    "configurable": true,
+    "note": "drop after N consecutive revisit cycles without re-detection"
+  },
+  "dwell": {
+    "capture_samples": 65536,
+    "flush_captures": 2,
+    "dwell_budget_seconds": 0.25,
+    "note_dwell_budget": "offline upper bound; board-measured dwell time to be filled during RF phase"
+  },
+  "tx_synthesis": {
+    "tx_sample_rate_hz": 2560000,
+    "tx_full_scale": 30000,
+    "tx_usable_half_band_hz": 1152000,
+    "tx_guard_band_hz": 12500,
+    "tx_headroom_db": 12.0,
+    "max_carrier_occupied_bw_hz": 10000,
+    "default_symbol_rate_hz": 8000,
+    "assumptions": [
+      "TX baseband sample rate == RX sample rate (board-verified pending)",
+      "real public-frame train/tail occupied bandwidth VERIFIED offline 2026-10-29 = FULL-BAND QPSK (~2.56 MHz Nyquist, -20 dB occupied BW ~1.00x fs); NOT <=10 kHz",
+      "offline TX synthesis uses a narrow-band stand-in carrier that does NOT represent the real public frame; real payload waveform occupied bandwidth still pending (dataset-defined, not in this tree)"
+    ]
+  },
+  "non_committed": [
+    "overlapping signals closer than 12500 Hz: separation NOT promised (12500 Hz is an offline test target pending board verification)",
+    "a neighbour weaker than 25 dB below an adjacent strong signal: separation NOT promised (25 dB is an offline test target pending board verification)",
+    "signals in different tuning bands or beyond a single TX/RX instantaneous bandwidth require extra hardware",
+    "rapid TX retuning is NOT simultaneous multi-signal",
+    "list timestamps are sequential tuning times, NOT simultaneous identifications"
+  ],
+  "backend_enum": ["software", "fpga", "auto"],
+  "target_status_enum": ["new", "tracking", "missing", "expired"]
+}

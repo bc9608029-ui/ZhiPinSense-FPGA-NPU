@@ -1,0 +1,28 @@
+{
+  "all_passed": true,
+  "fixed_correct": 235,
+  "search_correct": 237,
+  "sweep_correct": 24,
+  "missing": 0,
+  "evidence": [
+    {
+      "path": "E:\\FPGA_Work\\rml24_final_deployment_20261031\\fixed240\\SCORE.json",
+      "sha256": "11c71b0849ce4aaa0d0a9ce9a893d8ddf67bf8521142e5705668b69f4b4c87f7",
+      "correct": 235,
+      "denominator": 240
+    },
+    {
+      "path": "E:\\FPGA_Work\\rml24_updated_validation_20261031\\search240\\SCORE.json",
+      "sha256": "30285dfdd658c00865cf731f6c9f42d1e7a72fe57ef01d25519a69569e9ad37e",
+      "correct": 237,
+      "denominator": 240
+    },
+    {
+      "path": "E:\\FPGA_Work\\rml24_sweep_timing_retry_20261031\\sweep24\\SCORE.json",
+      "sha256": "2b30bae2c14a7833108d7ca1caf3eb10f576a705f162bd2577714de3fbe95146",
+      "correct": 24,
+      "denominator": 24
+    }
+  ],
+  "physical_acceptance_pending": true
+}

@@ -1,0 +1,130 @@
+{
+  "n": 24,
+  "correct": 24,
+  "records": [
+    {
+      "seq": 0,
+      "pred": 15,
+      "error": null
+    },
+    {
+      "seq": 1,
+      "pred": 1,
+      "error": null
+    },
+    {
+      "seq": 2,
+      "pred": 18,
+      "error": null
+    },
+    {
+      "seq": 3,
+      "pred": 10,
+      "error": null
+    },
+    {
+      "seq": 4,
+      "pred": 2,
+      "error": null
+    },
+    {
+      "seq": 5,
+      "pred": 17,
+      "error": null
+    },
+    {
+      "seq": 6,
+      "pred": 20,
+      "error": null
+    },
+    {
+      "seq": 7,
+      "pred": 12,
+      "error": null
+    },
+    {
+      "seq": 8,
+      "pred": 9,
+      "error": null
+    },
+    {
+      "seq": 9,
+      "pred": 16,
+      "error": null
+    },
+    {
+      "seq": 10,
+      "pred": 6,
+      "error": null
+    },
+    {
+      "seq": 11,
+      "pred": 7,
+      "error": null
+    },
+    {
+      "seq": 12,
+      "pred": 0,
+      "error": null
+    },
+    {
+      "seq": 13,
+      "pred": 14,
+      "error": null
+    },
+    {
+      "seq": 14,
+      "pred": 19,
+      "error": null
+    },
+    {
+      "seq": 15,
+      "pred": 22,
+      "error": null
+    },
+    {
+      "seq": 16,
+      "pred": 3,
+      "error": null
+    },
+    {
+      "seq": 17,
+      "pred": 13,
+      "error": null
+    },
+    {
+      "seq": 18,
+      "pred": 8,
+      "error": null
+    },
+    {
+      "seq": 19,
+      "pred": 4,
+      "error": null
+    },
+    {
+      "seq": 20,
+      "pred": 21,
+      "error": null
+    },
+    {
+      "seq": 21,
+      "pred": 5,
+      "error": null
+    },
+    {
+      "seq": 22,
+      "pred": 11,
+      "error": null
+    },
+    {
+      "seq": 23,
+      "pred": 23,
+      "error": null
+    }
+  ],
+  "rx_restore_errors": [],
+  "npu_apply": 1,
+  "npu_reset": 191,
+  "npu_discipline": true
+}

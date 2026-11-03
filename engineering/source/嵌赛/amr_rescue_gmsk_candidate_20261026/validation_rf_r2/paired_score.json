@@ -1,0 +1,2541 @@
+{
+  "n": 240,
+  "received": 240,
+  "complete": true,
+  "arms": {
+    "baseline": {
+      "correct": 198,
+      "total": 240,
+      "accuracy": 0.825,
+      "failures": 0,
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "OOK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 1,
+          "class_name": "4ASK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 2,
+          "class_name": "8ASK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 3,
+          "class_name": "BPSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 4,
+          "class_name": "QPSK",
+          "total": 10,
+          "correct": 9,
+          "failures": 0
+        },
+        {
+          "class_index": 5,
+          "class_name": "8PSK",
+          "total": 10,
+          "correct": 9,
+          "failures": 0
+        },
+        {
+          "class_index": 6,
+          "class_name": "16PSK",
+          "total": 10,
+          "correct": 0,
+          "failures": 0
+        },
+        {
+          "class_index": 7,
+          "class_name": "32PSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 8,
+          "class_name": "16APSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 9,
+          "class_name": "32APSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 10,
+          "class_name": "64APSK",
+          "total": 10,
+          "correct": 9,
+          "failures": 0
+        },
+        {
+          "class_index": 11,
+          "class_name": "128APSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 12,
+          "class_name": "16QAM",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 13,
+          "class_name": "32QAM",
+          "total": 10,
+          "correct": 4,
+          "failures": 0
+        },
+        {
+          "class_index": 14,
+          "class_name": "64QAM",
+          "total": 10,
+          "correct": 1,
+          "failures": 0
+        },
+        {
+          "class_index": 15,
+          "class_name": "128QAM",
+          "total": 10,
+          "correct": 8,
+          "failures": 0
+        },
+        {
+          "class_index": 16,
+          "class_name": "256QAM",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 17,
+          "class_name": "AM-SSB-WC",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 18,
+          "class_name": "AM-SSB-SC",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 19,
+          "class_name": "AM-DSB-WC",
+          "total": 10,
+          "correct": 5,
+          "failures": 0
+        },
+        {
+          "class_index": 20,
+          "class_name": "AM-DSB-SC",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 21,
+          "class_name": "FM",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 22,
+          "class_name": "GMSK",
+          "total": 10,
+          "correct": 9,
+          "failures": 0
+        },
+        {
+          "class_index": 23,
+          "class_name": "OQPSK",
+          "total": 10,
+          "correct": 4,
+          "failures": 0
+        }
+      ]
+    },
+    "candidate": {
+      "correct": 230,
+      "total": 240,
+      "accuracy": 0.9583333333333334,
+      "failures": 0,
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "OOK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 1,
+          "class_name": "4ASK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 2,
+          "class_name": "8ASK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 3,
+          "class_name": "BPSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 4,
+          "class_name": "QPSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 5,
+          "class_name": "8PSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 6,
+          "class_name": "16PSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 7,
+          "class_name": "32PSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 8,
+          "class_name": "16APSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 9,
+          "class_name": "32APSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 10,
+          "class_name": "64APSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 11,
+          "class_name": "128APSK",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 12,
+          "class_name": "16QAM",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 13,
+          "class_name": "32QAM",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 14,
+          "class_name": "64QAM",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 15,
+          "class_name": "128QAM",
+          "total": 10,
+          "correct": 9,
+          "failures": 0
+        },
+        {
+          "class_index": 16,
+          "class_name": "256QAM",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 17,
+          "class_name": "AM-SSB-WC",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 18,
+          "class_name": "AM-SSB-SC",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 19,
+          "class_name": "AM-DSB-WC",
+          "total": 10,
+          "correct": 5,
+          "failures": 0
+        },
+        {
+          "class_index": 20,
+          "class_name": "AM-DSB-SC",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 21,
+          "class_name": "FM",
+          "total": 10,
+          "correct": 10,
+          "failures": 0
+        },
+        {
+          "class_index": 22,
+          "class_name": "GMSK",
+          "total": 10,
+          "correct": 9,
+          "failures": 0
+        },
+        {
+          "class_index": 23,
+          "class_name": "OQPSK",
+          "total": 10,
+          "correct": 7,
+          "failures": 0
+        }
+      ]
+    }
+  },
+  "fixes": [
+    {
+      "seq": 3,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100806,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 6,
+      "class_index": 15,
+      "class_name": "128QAM",
+      "seed": 5100215,
+      "baseline": 16,
+      "candidate": 15
+    },
+    {
+      "seq": 23,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100114,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 31,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100814,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 54,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100306,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 57,
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 5100523,
+      "baseline": 7,
+      "candidate": 23
+    },
+    {
+      "seq": 75,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100506,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 85,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100514,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 87,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100314,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 93,
+      "class_index": 10,
+      "class_name": "64APSK",
+      "seed": 5100710,
+      "baseline": 15,
+      "candidate": 10
+    },
+    {
+      "seq": 107,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100413,
+      "baseline": 16,
+      "candidate": 13
+    },
+    {
+      "seq": 115,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100113,
+      "baseline": 15,
+      "candidate": 13
+    },
+    {
+      "seq": 118,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100414,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 119,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100006,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 127,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100714,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 143,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100206,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 146,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100813,
+      "baseline": 15,
+      "candidate": 13
+    },
+    {
+      "seq": 160,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100313,
+      "baseline": 15,
+      "candidate": 13
+    },
+    {
+      "seq": 179,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100906,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 181,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100013,
+      "baseline": 15,
+      "candidate": 13
+    },
+    {
+      "seq": 182,
+      "class_index": 5,
+      "class_name": "8PSK",
+      "seed": 5100905,
+      "baseline": 7,
+      "candidate": 5
+    },
+    {
+      "seq": 184,
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 5100323,
+      "baseline": 10,
+      "candidate": 23
+    },
+    {
+      "seq": 197,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100914,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 199,
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 5100923,
+      "baseline": 7,
+      "candidate": 23
+    },
+    {
+      "seq": 207,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100406,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 218,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100106,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 223,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100513,
+      "baseline": 15,
+      "candidate": 13
+    },
+    {
+      "seq": 226,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100614,
+      "baseline": 15,
+      "candidate": 14
+    },
+    {
+      "seq": 227,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100214,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 234,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100606,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 235,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100706,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 236,
+      "class_index": 4,
+      "class_name": "QPSK",
+      "seed": 5100304,
+      "baseline": 7,
+      "candidate": 4
+    }
+  ],
+  "regressions": [],
+  "records": [
+    {
+      "seq": 0,
+      "class_index": 8,
+      "class_name": "16APSK",
+      "seed": 5100508,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "seq": 1,
+      "class_index": 15,
+      "class_name": "128QAM",
+      "seed": 5100415,
+      "baseline": 15,
+      "candidate": 15
+    },
+    {
+      "seq": 2,
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 5100723,
+      "baseline": 15,
+      "candidate": 10
+    },
+    {
+      "seq": 3,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100806,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 4,
+      "class_index": 0,
+      "class_name": "OOK",
+      "seed": 5100700,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "seq": 5,
+      "class_index": 22,
+      "class_name": "GMSK",
+      "seed": 5100422,
+      "baseline": 22,
+      "candidate": 22
+    },
+    {
+      "seq": 6,
+      "class_index": 15,
+      "class_name": "128QAM",
+      "seed": 5100215,
+      "baseline": 16,
+      "candidate": 15
+    },
+    {
+      "seq": 7,
+      "class_index": 22,
+      "class_name": "GMSK",
+      "seed": 5100822,
+      "baseline": 22,
+      "candidate": 22
+    },
+    {
+      "seq": 8,
+      "class_index": 0,
+      "class_name": "OOK",
+      "seed": 5100100,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "seq": 9,
+      "class_index": 1,
+      "class_name": "4ASK",
+      "seed": 5100101,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "seq": 10,
+      "class_index": 8,
+      "class_name": "16APSK",
+      "seed": 5100008,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "seq": 11,
+      "class_index": 12,
+      "class_name": "16QAM",
+      "seed": 5100512,
+      "baseline": 12,
+      "candidate": 12
+    },
+    {
+      "seq": 12,
+      "class_index": 2,
+      "class_name": "8ASK",
+      "seed": 5100402,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "seq": 13,
+      "class_index": 15,
+      "class_name": "128QAM",
+      "seed": 5100615,
+      "baseline": 14,
+      "candidate": 16
+    },
+    {
+      "seq": 14,
+      "class_index": 2,
+      "class_name": "8ASK",
+      "seed": 5100602,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "seq": 15,
+      "class_index": 11,
+      "class_name": "128APSK",
+      "seed": 5100111,
+      "baseline": 11,
+      "candidate": 11
+    },
+    {
+      "seq": 16,
+      "class_index": 4,
+      "class_name": "QPSK",
+      "seed": 5100404,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "seq": 17,
+      "class_index": 5,
+      "class_name": "8PSK",
+      "seed": 5100005,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "seq": 18,
+      "class_index": 3,
+      "class_name": "BPSK",
+      "seed": 5100203,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "seq": 19,
+      "class_index": 8,
+      "class_name": "16APSK",
+      "seed": 5100308,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "seq": 20,
+      "class_index": 11,
+      "class_name": "128APSK",
+      "seed": 5100611,
+      "baseline": 11,
+      "candidate": 11
+    },
+    {
+      "seq": 21,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100913,
+      "baseline": 13,
+      "candidate": 13
+    },
+    {
+      "seq": 22,
+      "class_index": 9,
+      "class_name": "32APSK",
+      "seed": 5100909,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "seq": 23,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100114,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 24,
+      "class_index": 11,
+      "class_name": "128APSK",
+      "seed": 5100511,
+      "baseline": 11,
+      "candidate": 11
+    },
+    {
+      "seq": 25,
+      "class_index": 19,
+      "class_name": "AM-DSB-WC",
+      "seed": 5100019,
+      "baseline": 19,
+      "candidate": 19
+    },
+    {
+      "seq": 26,
+      "class_index": 8,
+      "class_name": "16APSK",
+      "seed": 5100208,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "seq": 27,
+      "class_index": 10,
+      "class_name": "64APSK",
+      "seed": 5100910,
+      "baseline": 10,
+      "candidate": 10
+    },
+    {
+      "seq": 28,
+      "class_index": 16,
+      "class_name": "256QAM",
+      "seed": 5100016,
+      "baseline": 16,
+      "candidate": 16
+    },
+    {
+      "seq": 29,
+      "class_index": 21,
+      "class_name": "FM",
+      "seed": 5100021,
+      "baseline": 21,
+      "candidate": 21
+    },
+    {
+      "seq": 30,
+      "class_index": 21,
+      "class_name": "FM",
+      "seed": 5100321,
+      "baseline": 21,
+      "candidate": 21
+    },
+    {
+      "seq": 31,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100814,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 32,
+      "class_index": 2,
+      "class_name": "8ASK",
+      "seed": 5100102,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "seq": 33,
+      "class_index": 3,
+      "class_name": "BPSK",
+      "seed": 5100003,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "seq": 34,
+      "class_index": 7,
+      "class_name": "32PSK",
+      "seed": 5100907,
+      "baseline": 7,
+      "candidate": 7
+    },
+    {
+      "seq": 35,
+      "class_index": 5,
+      "class_name": "8PSK",
+      "seed": 5100105,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "seq": 36,
+      "class_index": 5,
+      "class_name": "8PSK",
+      "seed": 5100805,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "seq": 37,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100713,
+      "baseline": 13,
+      "candidate": 13
+    },
+    {
+      "seq": 38,
+      "class_index": 5,
+      "class_name": "8PSK",
+      "seed": 5100405,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "seq": 39,
+      "class_index": 4,
+      "class_name": "QPSK",
+      "seed": 5100904,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "seq": 40,
+      "class_index": 20,
+      "class_name": "AM-DSB-SC",
+      "seed": 5100520,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 41,
+      "class_index": 11,
+      "class_name": "128APSK",
+      "seed": 5100711,
+      "baseline": 11,
+      "candidate": 11
+    },
+    {
+      "seq": 42,
+      "class_index": 11,
+      "class_name": "128APSK",
+      "seed": 5100811,
+      "baseline": 11,
+      "candidate": 11
+    },
+    {
+      "seq": 43,
+      "class_index": 20,
+      "class_name": "AM-DSB-SC",
+      "seed": 5100420,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 44,
+      "class_index": 20,
+      "class_name": "AM-DSB-SC",
+      "seed": 5100220,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 45,
+      "class_index": 16,
+      "class_name": "256QAM",
+      "seed": 5100916,
+      "baseline": 16,
+      "candidate": 16
+    },
+    {
+      "seq": 46,
+      "class_index": 17,
+      "class_name": "AM-SSB-WC",
+      "seed": 5100117,
+      "baseline": 17,
+      "candidate": 17
+    },
+    {
+      "seq": 47,
+      "class_index": 20,
+      "class_name": "AM-DSB-SC",
+      "seed": 5100920,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 48,
+      "class_index": 9,
+      "class_name": "32APSK",
+      "seed": 5100009,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "seq": 49,
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 5100823,
+      "baseline": 23,
+      "candidate": 23
+    },
+    {
+      "seq": 50,
+      "class_index": 18,
+      "class_name": "AM-SSB-SC",
+      "seed": 5100318,
+      "baseline": 18,
+      "candidate": 18
+    },
+    {
+      "seq": 51,
+      "class_index": 4,
+      "class_name": "QPSK",
+      "seed": 5100704,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "seq": 52,
+      "class_index": 7,
+      "class_name": "32PSK",
+      "seed": 5100307,
+      "baseline": 7,
+      "candidate": 7
+    },
+    {
+      "seq": 53,
+      "class_index": 1,
+      "class_name": "4ASK",
+      "seed": 5100801,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "seq": 54,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100306,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 55,
+      "class_index": 10,
+      "class_name": "64APSK",
+      "seed": 5100610,
+      "baseline": 10,
+      "candidate": 10
+    },
+    {
+      "seq": 56,
+      "class_index": 3,
+      "class_name": "BPSK",
+      "seed": 5100303,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "seq": 57,
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 5100523,
+      "baseline": 7,
+      "candidate": 23
+    },
+    {
+      "seq": 58,
+      "class_index": 3,
+      "class_name": "BPSK",
+      "seed": 5100803,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "seq": 59,
+      "class_index": 21,
+      "class_name": "FM",
+      "seed": 5100821,
+      "baseline": 21,
+      "candidate": 21
+    },
+    {
+      "seq": 60,
+      "class_index": 10,
+      "class_name": "64APSK",
+      "seed": 5100210,
+      "baseline": 10,
+      "candidate": 10
+    },
+    {
+      "seq": 61,
+      "class_index": 0,
+      "class_name": "OOK",
+      "seed": 5100500,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "seq": 62,
+      "class_index": 1,
+      "class_name": "4ASK",
+      "seed": 5100501,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "seq": 63,
+      "class_index": 7,
+      "class_name": "32PSK",
+      "seed": 5100007,
+      "baseline": 7,
+      "candidate": 7
+    },
+    {
+      "seq": 64,
+      "class_index": 17,
+      "class_name": "AM-SSB-WC",
+      "seed": 5100817,
+      "baseline": 17,
+      "candidate": 17
+    },
+    {
+      "seq": 65,
+      "class_index": 17,
+      "class_name": "AM-SSB-WC",
+      "seed": 5100317,
+      "baseline": 17,
+      "candidate": 17
+    },
+    {
+      "seq": 66,
+      "class_index": 22,
+      "class_name": "GMSK",
+      "seed": 5100222,
+      "baseline": 22,
+      "candidate": 22
+    },
+    {
+      "seq": 67,
+      "class_index": 0,
+      "class_name": "OOK",
+      "seed": 5100000,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "seq": 68,
+      "class_index": 0,
+      "class_name": "OOK",
+      "seed": 5100300,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "seq": 69,
+      "class_index": 20,
+      "class_name": "AM-DSB-SC",
+      "seed": 5100820,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 70,
+      "class_index": 11,
+      "class_name": "128APSK",
+      "seed": 5100411,
+      "baseline": 11,
+      "candidate": 11
+    },
+    {
+      "seq": 71,
+      "class_index": 1,
+      "class_name": "4ASK",
+      "seed": 5100401,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "seq": 72,
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 5100623,
+      "baseline": 23,
+      "candidate": 23
+    },
+    {
+      "seq": 73,
+      "class_index": 3,
+      "class_name": "BPSK",
+      "seed": 5100103,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "seq": 74,
+      "class_index": 18,
+      "class_name": "AM-SSB-SC",
+      "seed": 5100918,
+      "baseline": 18,
+      "candidate": 18
+    },
+    {
+      "seq": 75,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100506,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 76,
+      "class_index": 19,
+      "class_name": "AM-DSB-WC",
+      "seed": 5100819,
+      "baseline": 19,
+      "candidate": 19
+    },
+    {
+      "seq": 77,
+      "class_index": 10,
+      "class_name": "64APSK",
+      "seed": 5100510,
+      "baseline": 10,
+      "candidate": 10
+    },
+    {
+      "seq": 78,
+      "class_index": 4,
+      "class_name": "QPSK",
+      "seed": 5100604,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "seq": 79,
+      "class_index": 18,
+      "class_name": "AM-SSB-SC",
+      "seed": 5100818,
+      "baseline": 18,
+      "candidate": 18
+    },
+    {
+      "seq": 80,
+      "class_index": 8,
+      "class_name": "16APSK",
+      "seed": 5100108,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "seq": 81,
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 5100223,
+      "baseline": 13,
+      "candidate": 10
+    },
+    {
+      "seq": 82,
+      "class_index": 9,
+      "class_name": "32APSK",
+      "seed": 5100809,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "seq": 83,
+      "class_index": 12,
+      "class_name": "16QAM",
+      "seed": 5100412,
+      "baseline": 12,
+      "candidate": 12
+    },
+    {
+      "seq": 84,
+      "class_index": 0,
+      "class_name": "OOK",
+      "seed": 5100600,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "seq": 85,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100514,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 86,
+      "class_index": 19,
+      "class_name": "AM-DSB-WC",
+      "seed": 5100219,
+      "baseline": 19,
+      "candidate": 19
+    },
+    {
+      "seq": 87,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100314,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 88,
+      "class_index": 7,
+      "class_name": "32PSK",
+      "seed": 5100507,
+      "baseline": 7,
+      "candidate": 7
+    },
+    {
+      "seq": 89,
+      "class_index": 3,
+      "class_name": "BPSK",
+      "seed": 5100603,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "seq": 90,
+      "class_index": 20,
+      "class_name": "AM-DSB-SC",
+      "seed": 5100320,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 91,
+      "class_index": 1,
+      "class_name": "4ASK",
+      "seed": 5100201,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "seq": 92,
+      "class_index": 1,
+      "class_name": "4ASK",
+      "seed": 5100301,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "seq": 93,
+      "class_index": 10,
+      "class_name": "64APSK",
+      "seed": 5100710,
+      "baseline": 15,
+      "candidate": 10
+    },
+    {
+      "seq": 94,
+      "class_index": 9,
+      "class_name": "32APSK",
+      "seed": 5100309,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "seq": 95,
+      "class_index": 10,
+      "class_name": "64APSK",
+      "seed": 5100110,
+      "baseline": 10,
+      "candidate": 10
+    },
+    {
+      "seq": 96,
+      "class_index": 9,
+      "class_name": "32APSK",
+      "seed": 5100109,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "seq": 97,
+      "class_index": 17,
+      "class_name": "AM-SSB-WC",
+      "seed": 5100217,
+      "baseline": 17,
+      "candidate": 17
+    },
+    {
+      "seq": 98,
+      "class_index": 7,
+      "class_name": "32PSK",
+      "seed": 5100707,
+      "baseline": 7,
+      "candidate": 7
+    },
+    {
+      "seq": 99,
+      "class_index": 20,
+      "class_name": "AM-DSB-SC",
+      "seed": 5100120,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 100,
+      "class_index": 11,
+      "class_name": "128APSK",
+      "seed": 5100011,
+      "baseline": 11,
+      "candidate": 11
+    },
+    {
+      "seq": 101,
+      "class_index": 21,
+      "class_name": "FM",
+      "seed": 5100721,
+      "baseline": 21,
+      "candidate": 21
+    },
+    {
+      "seq": 102,
+      "class_index": 21,
+      "class_name": "FM",
+      "seed": 5100121,
+      "baseline": 21,
+      "candidate": 21
+    },
+    {
+      "seq": 103,
+      "class_index": 12,
+      "class_name": "16QAM",
+      "seed": 5100812,
+      "baseline": 12,
+      "candidate": 12
+    },
+    {
+      "seq": 104,
+      "class_index": 20,
+      "class_name": "AM-DSB-SC",
+      "seed": 5100720,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 105,
+      "class_index": 20,
+      "class_name": "AM-DSB-SC",
+      "seed": 5100020,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 106,
+      "class_index": 2,
+      "class_name": "8ASK",
+      "seed": 5100802,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "seq": 107,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100413,
+      "baseline": 16,
+      "candidate": 13
+    },
+    {
+      "seq": 108,
+      "class_index": 9,
+      "class_name": "32APSK",
+      "seed": 5100209,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "seq": 109,
+      "class_index": 7,
+      "class_name": "32PSK",
+      "seed": 5100107,
+      "baseline": 7,
+      "candidate": 7
+    },
+    {
+      "seq": 110,
+      "class_index": 4,
+      "class_name": "QPSK",
+      "seed": 5100504,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "seq": 111,
+      "class_index": 19,
+      "class_name": "AM-DSB-WC",
+      "seed": 5100419,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 112,
+      "class_index": 1,
+      "class_name": "4ASK",
+      "seed": 5100001,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "seq": 113,
+      "class_index": 10,
+      "class_name": "64APSK",
+      "seed": 5100310,
+      "baseline": 10,
+      "candidate": 10
+    },
+    {
+      "seq": 114,
+      "class_index": 8,
+      "class_name": "16APSK",
+      "seed": 5100408,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "seq": 115,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100113,
+      "baseline": 15,
+      "candidate": 13
+    },
+    {
+      "seq": 116,
+      "class_index": 16,
+      "class_name": "256QAM",
+      "seed": 5100216,
+      "baseline": 16,
+      "candidate": 16
+    },
+    {
+      "seq": 117,
+      "class_index": 21,
+      "class_name": "FM",
+      "seed": 5100421,
+      "baseline": 21,
+      "candidate": 21
+    },
+    {
+      "seq": 118,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100414,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 119,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100006,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 120,
+      "class_index": 17,
+      "class_name": "AM-SSB-WC",
+      "seed": 5100417,
+      "baseline": 17,
+      "candidate": 17
+    },
+    {
+      "seq": 121,
+      "class_index": 16,
+      "class_name": "256QAM",
+      "seed": 5100416,
+      "baseline": 16,
+      "candidate": 16
+    },
+    {
+      "seq": 122,
+      "class_index": 2,
+      "class_name": "8ASK",
+      "seed": 5100202,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "seq": 123,
+      "class_index": 9,
+      "class_name": "32APSK",
+      "seed": 5100409,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "seq": 124,
+      "class_index": 19,
+      "class_name": "AM-DSB-WC",
+      "seed": 5100919,
+      "baseline": 19,
+      "candidate": 19
+    },
+    {
+      "seq": 125,
+      "class_index": 3,
+      "class_name": "BPSK",
+      "seed": 5100503,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "seq": 126,
+      "class_index": 18,
+      "class_name": "AM-SSB-SC",
+      "seed": 5100218,
+      "baseline": 18,
+      "candidate": 18
+    },
+    {
+      "seq": 127,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100714,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 128,
+      "class_index": 1,
+      "class_name": "4ASK",
+      "seed": 5100601,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "seq": 129,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100613,
+      "baseline": 13,
+      "candidate": 13
+    },
+    {
+      "seq": 130,
+      "class_index": 12,
+      "class_name": "16QAM",
+      "seed": 5100912,
+      "baseline": 12,
+      "candidate": 12
+    },
+    {
+      "seq": 131,
+      "class_index": 20,
+      "class_name": "AM-DSB-SC",
+      "seed": 5100620,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 132,
+      "class_index": 19,
+      "class_name": "AM-DSB-WC",
+      "seed": 5100619,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 133,
+      "class_index": 22,
+      "class_name": "GMSK",
+      "seed": 5100622,
+      "baseline": 22,
+      "candidate": 22
+    },
+    {
+      "seq": 134,
+      "class_index": 9,
+      "class_name": "32APSK",
+      "seed": 5100609,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "seq": 135,
+      "class_index": 9,
+      "class_name": "32APSK",
+      "seed": 5100509,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "seq": 136,
+      "class_index": 16,
+      "class_name": "256QAM",
+      "seed": 5100616,
+      "baseline": 16,
+      "candidate": 16
+    },
+    {
+      "seq": 137,
+      "class_index": 22,
+      "class_name": "GMSK",
+      "seed": 5100722,
+      "baseline": 17,
+      "candidate": 17
+    },
+    {
+      "seq": 138,
+      "class_index": 21,
+      "class_name": "FM",
+      "seed": 5100621,
+      "baseline": 21,
+      "candidate": 21
+    },
+    {
+      "seq": 139,
+      "class_index": 7,
+      "class_name": "32PSK",
+      "seed": 5100607,
+      "baseline": 7,
+      "candidate": 7
+    },
+    {
+      "seq": 140,
+      "class_index": 12,
+      "class_name": "16QAM",
+      "seed": 5100312,
+      "baseline": 12,
+      "candidate": 12
+    },
+    {
+      "seq": 141,
+      "class_index": 12,
+      "class_name": "16QAM",
+      "seed": 5100112,
+      "baseline": 12,
+      "candidate": 12
+    },
+    {
+      "seq": 142,
+      "class_index": 1,
+      "class_name": "4ASK",
+      "seed": 5100701,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "seq": 143,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100206,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 144,
+      "class_index": 7,
+      "class_name": "32PSK",
+      "seed": 5100407,
+      "baseline": 7,
+      "candidate": 7
+    },
+    {
+      "seq": 145,
+      "class_index": 17,
+      "class_name": "AM-SSB-WC",
+      "seed": 5100017,
+      "baseline": 17,
+      "candidate": 17
+    },
+    {
+      "seq": 146,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100813,
+      "baseline": 15,
+      "candidate": 13
+    },
+    {
+      "seq": 147,
+      "class_index": 15,
+      "class_name": "128QAM",
+      "seed": 5100315,
+      "baseline": 15,
+      "candidate": 15
+    },
+    {
+      "seq": 148,
+      "class_index": 18,
+      "class_name": "AM-SSB-SC",
+      "seed": 5100618,
+      "baseline": 18,
+      "candidate": 18
+    },
+    {
+      "seq": 149,
+      "class_index": 19,
+      "class_name": "AM-DSB-WC",
+      "seed": 5100119,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 150,
+      "class_index": 5,
+      "class_name": "8PSK",
+      "seed": 5100605,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "seq": 151,
+      "class_index": 10,
+      "class_name": "64APSK",
+      "seed": 5100810,
+      "baseline": 10,
+      "candidate": 10
+    },
+    {
+      "seq": 152,
+      "class_index": 1,
+      "class_name": "4ASK",
+      "seed": 5100901,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "seq": 153,
+      "class_index": 2,
+      "class_name": "8ASK",
+      "seed": 5100502,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "seq": 154,
+      "class_index": 2,
+      "class_name": "8ASK",
+      "seed": 5100902,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "seq": 155,
+      "class_index": 22,
+      "class_name": "GMSK",
+      "seed": 5100522,
+      "baseline": 22,
+      "candidate": 22
+    },
+    {
+      "seq": 156,
+      "class_index": 19,
+      "class_name": "AM-DSB-WC",
+      "seed": 5100719,
+      "baseline": 19,
+      "candidate": 19
+    },
+    {
+      "seq": 157,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100213,
+      "baseline": 13,
+      "candidate": 13
+    },
+    {
+      "seq": 158,
+      "class_index": 12,
+      "class_name": "16QAM",
+      "seed": 5100612,
+      "baseline": 12,
+      "candidate": 12
+    },
+    {
+      "seq": 159,
+      "class_index": 17,
+      "class_name": "AM-SSB-WC",
+      "seed": 5100517,
+      "baseline": 17,
+      "candidate": 17
+    },
+    {
+      "seq": 160,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100313,
+      "baseline": 15,
+      "candidate": 13
+    },
+    {
+      "seq": 161,
+      "class_index": 15,
+      "class_name": "128QAM",
+      "seed": 5100515,
+      "baseline": 15,
+      "candidate": 15
+    },
+    {
+      "seq": 162,
+      "class_index": 0,
+      "class_name": "OOK",
+      "seed": 5100200,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "seq": 163,
+      "class_index": 2,
+      "class_name": "8ASK",
+      "seed": 5100302,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "seq": 164,
+      "class_index": 0,
+      "class_name": "OOK",
+      "seed": 5100800,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "seq": 165,
+      "class_index": 11,
+      "class_name": "128APSK",
+      "seed": 5100211,
+      "baseline": 11,
+      "candidate": 11
+    },
+    {
+      "seq": 166,
+      "class_index": 15,
+      "class_name": "128QAM",
+      "seed": 5100115,
+      "baseline": 15,
+      "candidate": 15
+    },
+    {
+      "seq": 167,
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 5100123,
+      "baseline": 23,
+      "candidate": 23
+    },
+    {
+      "seq": 168,
+      "class_index": 16,
+      "class_name": "256QAM",
+      "seed": 5100516,
+      "baseline": 16,
+      "candidate": 16
+    },
+    {
+      "seq": 169,
+      "class_index": 21,
+      "class_name": "FM",
+      "seed": 5100521,
+      "baseline": 21,
+      "candidate": 21
+    },
+    {
+      "seq": 170,
+      "class_index": 15,
+      "class_name": "128QAM",
+      "seed": 5100715,
+      "baseline": 15,
+      "candidate": 15
+    },
+    {
+      "seq": 171,
+      "class_index": 10,
+      "class_name": "64APSK",
+      "seed": 5100410,
+      "baseline": 10,
+      "candidate": 10
+    },
+    {
+      "seq": 172,
+      "class_index": 15,
+      "class_name": "128QAM",
+      "seed": 5100915,
+      "baseline": 15,
+      "candidate": 15
+    },
+    {
+      "seq": 173,
+      "class_index": 15,
+      "class_name": "128QAM",
+      "seed": 5100815,
+      "baseline": 15,
+      "candidate": 15
+    },
+    {
+      "seq": 174,
+      "class_index": 4,
+      "class_name": "QPSK",
+      "seed": 5100104,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "seq": 175,
+      "class_index": 3,
+      "class_name": "BPSK",
+      "seed": 5100403,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "seq": 176,
+      "class_index": 18,
+      "class_name": "AM-SSB-SC",
+      "seed": 5100118,
+      "baseline": 18,
+      "candidate": 18
+    },
+    {
+      "seq": 177,
+      "class_index": 22,
+      "class_name": "GMSK",
+      "seed": 5100122,
+      "baseline": 22,
+      "candidate": 22
+    },
+    {
+      "seq": 178,
+      "class_index": 19,
+      "class_name": "AM-DSB-WC",
+      "seed": 5100519,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 179,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100906,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 180,
+      "class_index": 8,
+      "class_name": "16APSK",
+      "seed": 5100708,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "seq": 181,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100013,
+      "baseline": 15,
+      "candidate": 13
+    },
+    {
+      "seq": 182,
+      "class_index": 5,
+      "class_name": "8PSK",
+      "seed": 5100905,
+      "baseline": 7,
+      "candidate": 5
+    },
+    {
+      "seq": 183,
+      "class_index": 19,
+      "class_name": "AM-DSB-WC",
+      "seed": 5100319,
+      "baseline": 20,
+      "candidate": 20
+    },
+    {
+      "seq": 184,
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 5100323,
+      "baseline": 10,
+      "candidate": 23
+    },
+    {
+      "seq": 185,
+      "class_index": 18,
+      "class_name": "AM-SSB-SC",
+      "seed": 5100418,
+      "baseline": 18,
+      "candidate": 18
+    },
+    {
+      "seq": 186,
+      "class_index": 22,
+      "class_name": "GMSK",
+      "seed": 5100322,
+      "baseline": 22,
+      "candidate": 22
+    },
+    {
+      "seq": 187,
+      "class_index": 17,
+      "class_name": "AM-SSB-WC",
+      "seed": 5100917,
+      "baseline": 17,
+      "candidate": 17
+    },
+    {
+      "seq": 188,
+      "class_index": 2,
+      "class_name": "8ASK",
+      "seed": 5100002,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "seq": 189,
+      "class_index": 21,
+      "class_name": "FM",
+      "seed": 5100221,
+      "baseline": 21,
+      "candidate": 21
+    },
+    {
+      "seq": 190,
+      "class_index": 11,
+      "class_name": "128APSK",
+      "seed": 5100311,
+      "baseline": 11,
+      "candidate": 11
+    },
+    {
+      "seq": 191,
+      "class_index": 4,
+      "class_name": "QPSK",
+      "seed": 5100804,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "seq": 192,
+      "class_index": 9,
+      "class_name": "32APSK",
+      "seed": 5100709,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "seq": 193,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100014,
+      "baseline": 14,
+      "candidate": 14
+    },
+    {
+      "seq": 194,
+      "class_index": 16,
+      "class_name": "256QAM",
+      "seed": 5100316,
+      "baseline": 16,
+      "candidate": 16
+    },
+    {
+      "seq": 195,
+      "class_index": 18,
+      "class_name": "AM-SSB-SC",
+      "seed": 5100518,
+      "baseline": 18,
+      "candidate": 18
+    },
+    {
+      "seq": 196,
+      "class_index": 5,
+      "class_name": "8PSK",
+      "seed": 5100505,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "seq": 197,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100914,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 198,
+      "class_index": 0,
+      "class_name": "OOK",
+      "seed": 5100900,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "seq": 199,
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 5100923,
+      "baseline": 7,
+      "candidate": 23
+    },
+    {
+      "seq": 200,
+      "class_index": 22,
+      "class_name": "GMSK",
+      "seed": 5100922,
+      "baseline": 22,
+      "candidate": 22
+    },
+    {
+      "seq": 201,
+      "class_index": 3,
+      "class_name": "BPSK",
+      "seed": 5100903,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "seq": 202,
+      "class_index": 15,
+      "class_name": "128QAM",
+      "seed": 5100015,
+      "baseline": 15,
+      "candidate": 15
+    },
+    {
+      "seq": 203,
+      "class_index": 5,
+      "class_name": "8PSK",
+      "seed": 5100305,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "seq": 204,
+      "class_index": 0,
+      "class_name": "OOK",
+      "seed": 5100400,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "seq": 205,
+      "class_index": 16,
+      "class_name": "256QAM",
+      "seed": 5100116,
+      "baseline": 16,
+      "candidate": 16
+    },
+    {
+      "seq": 206,
+      "class_index": 5,
+      "class_name": "8PSK",
+      "seed": 5100705,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "seq": 207,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100406,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 208,
+      "class_index": 4,
+      "class_name": "QPSK",
+      "seed": 5100204,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "seq": 209,
+      "class_index": 12,
+      "class_name": "16QAM",
+      "seed": 5100712,
+      "baseline": 12,
+      "candidate": 12
+    },
+    {
+      "seq": 210,
+      "class_index": 18,
+      "class_name": "AM-SSB-SC",
+      "seed": 5100018,
+      "baseline": 18,
+      "candidate": 18
+    },
+    {
+      "seq": 211,
+      "class_index": 22,
+      "class_name": "GMSK",
+      "seed": 5100022,
+      "baseline": 22,
+      "candidate": 22
+    },
+    {
+      "seq": 212,
+      "class_index": 3,
+      "class_name": "BPSK",
+      "seed": 5100703,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "seq": 213,
+      "class_index": 10,
+      "class_name": "64APSK",
+      "seed": 5100010,
+      "baseline": 10,
+      "candidate": 10
+    },
+    {
+      "seq": 214,
+      "class_index": 4,
+      "class_name": "QPSK",
+      "seed": 5100004,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "seq": 215,
+      "class_index": 5,
+      "class_name": "8PSK",
+      "seed": 5100205,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "seq": 216,
+      "class_index": 16,
+      "class_name": "256QAM",
+      "seed": 5100816,
+      "baseline": 16,
+      "candidate": 16
+    },
+    {
+      "seq": 217,
+      "class_index": 18,
+      "class_name": "AM-SSB-SC",
+      "seed": 5100718,
+      "baseline": 18,
+      "candidate": 18
+    },
+    {
+      "seq": 218,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100106,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 219,
+      "class_index": 8,
+      "class_name": "16APSK",
+      "seed": 5100808,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "seq": 220,
+      "class_index": 12,
+      "class_name": "16QAM",
+      "seed": 5100212,
+      "baseline": 12,
+      "candidate": 12
+    },
+    {
+      "seq": 221,
+      "class_index": 21,
+      "class_name": "FM",
+      "seed": 5100921,
+      "baseline": 21,
+      "candidate": 21
+    },
+    {
+      "seq": 222,
+      "class_index": 17,
+      "class_name": "AM-SSB-WC",
+      "seed": 5100717,
+      "baseline": 17,
+      "candidate": 17
+    },
+    {
+      "seq": 223,
+      "class_index": 13,
+      "class_name": "32QAM",
+      "seed": 5100513,
+      "baseline": 15,
+      "candidate": 13
+    },
+    {
+      "seq": 224,
+      "class_index": 2,
+      "class_name": "8ASK",
+      "seed": 5100702,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "seq": 225,
+      "class_index": 7,
+      "class_name": "32PSK",
+      "seed": 5100207,
+      "baseline": 7,
+      "candidate": 7
+    },
+    {
+      "seq": 226,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100614,
+      "baseline": 15,
+      "candidate": 14
+    },
+    {
+      "seq": 227,
+      "class_index": 14,
+      "class_name": "64QAM",
+      "seed": 5100214,
+      "baseline": 16,
+      "candidate": 14
+    },
+    {
+      "seq": 228,
+      "class_index": 16,
+      "class_name": "256QAM",
+      "seed": 5100716,
+      "baseline": 16,
+      "candidate": 16
+    },
+    {
+      "seq": 229,
+      "class_index": 12,
+      "class_name": "16QAM",
+      "seed": 5100012,
+      "baseline": 12,
+      "candidate": 12
+    },
+    {
+      "seq": 230,
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 5100023,
+      "baseline": 10,
+      "candidate": 15
+    },
+    {
+      "seq": 231,
+      "class_index": 11,
+      "class_name": "128APSK",
+      "seed": 5100911,
+      "baseline": 11,
+      "candidate": 11
+    },
+    {
+      "seq": 232,
+      "class_index": 17,
+      "class_name": "AM-SSB-WC",
+      "seed": 5100617,
+      "baseline": 17,
+      "candidate": 17
+    },
+    {
+      "seq": 233,
+      "class_index": 8,
+      "class_name": "16APSK",
+      "seed": 5100608,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "seq": 234,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100606,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 235,
+      "class_index": 6,
+      "class_name": "16PSK",
+      "seed": 5100706,
+      "baseline": 7,
+      "candidate": 6
+    },
+    {
+      "seq": 236,
+      "class_index": 4,
+      "class_name": "QPSK",
+      "seed": 5100304,
+      "baseline": 7,
+      "candidate": 4
+    },
+    {
+      "seq": 237,
+      "class_index": 23,
+      "class_name": "OQPSK",
+      "seed": 5100423,
+      "baseline": 23,
+      "candidate": 23
+    },
+    {
+      "seq": 238,
+      "class_index": 8,
+      "class_name": "16APSK",
+      "seed": 5100908,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "seq": 239,
+      "class_index": 7,
+      "class_name": "32PSK",
+      "seed": 5100807,
+      "baseline": 7,
+      "candidate": 7
+    }
+  ],
+  "candidate_clears_strict_no_regression_gate": true
+}

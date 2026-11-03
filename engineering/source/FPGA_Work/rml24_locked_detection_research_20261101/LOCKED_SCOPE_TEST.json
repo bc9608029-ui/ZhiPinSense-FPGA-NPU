@@ -1,0 +1,287 @@
+{
+  "scope": "PC synthetic development; not RF qualification; only centered-lock use",
+  "cfo_cases": [
+    {
+      "cfo": -500000,
+      "accepted": false,
+      "detection": {
+        "start": 59229,
+        "coarse_cfo_hz": -0.010013247664851036,
+        "score": 0.09210593949583157
+      }
+    },
+    {
+      "cfo": -2000,
+      "accepted": false,
+      "detection": {
+        "start": 35531,
+        "coarse_cfo_hz": -1076.4194312840134,
+        "score": 0.5587202907764639
+      }
+    },
+    {
+      "cfo": -500,
+      "accepted": true,
+      "detection": {
+        "start": 3787,
+        "coarse_cfo_hz": -499.9564632320046,
+        "score": 0.9999979305673591
+      }
+    },
+    {
+      "cfo": 0,
+      "accepted": true,
+      "detection": {
+        "start": 36555,
+        "coarse_cfo_hz": -0.04134095438419183,
+        "score": 0.9999979084711659
+      }
+    },
+    {
+      "cfo": 500,
+      "accepted": true,
+      "detection": {
+        "start": 3787,
+        "coarse_cfo_hz": 500.0232741496939,
+        "score": 0.9999979061872506
+      }
+    },
+    {
+      "cfo": 2000,
+      "accepted": false,
+      "detection": {
+        "start": 19147,
+        "coarse_cfo_hz": 1113.6036522911375,
+        "score": 0.5696809880838036
+      }
+    },
+    {
+      "cfo": 500000,
+      "accepted": false,
+      "detection": {
+        "start": 36554,
+        "coarse_cfo_hz": 0.009701669320382796,
+        "score": 0.08599046967589323
+      }
+    }
+  ],
+  "noise_cases": [
+    {
+      "index": 0,
+      "accepted": false,
+      "detection": {
+        "start": 23849,
+        "coarse_cfo_hz": 305.87155196163764,
+        "score": 0.08127567808623398
+      }
+    },
+    {
+      "index": 1,
+      "accepted": false,
+      "detection": {
+        "start": 6850,
+        "coarse_cfo_hz": -156.62054443952596,
+        "score": 0.07010040849546781
+      }
+    },
+    {
+      "index": 2,
+      "accepted": false,
+      "detection": {
+        "start": 55997,
+        "coarse_cfo_hz": 106.40405912628658,
+        "score": 0.0685001312730994
+      }
+    },
+    {
+      "index": 3,
+      "accepted": false,
+      "detection": {
+        "start": 26660,
+        "coarse_cfo_hz": 299.9061375917901,
+        "score": 0.06833909012579004
+      }
+    },
+    {
+      "index": 4,
+      "accepted": false,
+      "detection": {
+        "start": 1918,
+        "coarse_cfo_hz": 237.69299020236963,
+        "score": 0.06637310336087766
+      }
+    },
+    {
+      "index": 5,
+      "accepted": false,
+      "detection": {
+        "start": 1198,
+        "coarse_cfo_hz": -694.4689406288861,
+        "score": 0.06640226744907862
+      }
+    },
+    {
+      "index": 6,
+      "accepted": false,
+      "detection": {
+        "start": 37498,
+        "coarse_cfo_hz": -624.5442386084795,
+        "score": 0.06841522049471087
+      }
+    },
+    {
+      "index": 7,
+      "accepted": false,
+      "detection": {
+        "start": 9126,
+        "coarse_cfo_hz": -181.34789157620716,
+        "score": 0.06939292720483577
+      }
+    },
+    {
+      "index": 8,
+      "accepted": false,
+      "detection": {
+        "start": 53870,
+        "coarse_cfo_hz": 2.027719439814451,
+        "score": 0.07198751124596686
+      }
+    },
+    {
+      "index": 9,
+      "accepted": false,
+      "detection": {
+        "start": 8555,
+        "coarse_cfo_hz": -102.21170307500043,
+        "score": 0.06880765415653121
+      }
+    },
+    {
+      "index": 10,
+      "accepted": false,
+      "detection": {
+        "start": 47712,
+        "coarse_cfo_hz": 85.80657236085924,
+        "score": 0.0714530833195401
+      }
+    },
+    {
+      "index": 11,
+      "accepted": false,
+      "detection": {
+        "start": 54619,
+        "coarse_cfo_hz": -296.1859981794872,
+        "score": 0.06835994105466707
+      }
+    },
+    {
+      "index": 12,
+      "accepted": false,
+      "detection": {
+        "start": 18639,
+        "coarse_cfo_hz": 65.55019154478536,
+        "score": 0.07767468053901729
+      }
+    },
+    {
+      "index": 13,
+      "accepted": false,
+      "detection": {
+        "start": 36629,
+        "coarse_cfo_hz": 299.0382985358475,
+        "score": 0.07977631139623222
+      }
+    },
+    {
+      "index": 14,
+      "accepted": false,
+      "detection": {
+        "start": 49254,
+        "coarse_cfo_hz": -103.99113826347107,
+        "score": 0.07273419811948531
+      }
+    },
+    {
+      "index": 15,
+      "accepted": false,
+      "detection": {
+        "start": 35325,
+        "coarse_cfo_hz": -264.0692131865049,
+        "score": 0.07091650583382259
+      }
+    },
+    {
+      "index": 16,
+      "accepted": false,
+      "detection": {
+        "start": 615,
+        "coarse_cfo_hz": -4.303447973917893,
+        "score": 0.07706388954208378
+      }
+    },
+    {
+      "index": 17,
+      "accepted": false,
+      "detection": {
+        "start": 50413,
+        "coarse_cfo_hz": -378.2817977338593,
+        "score": 0.07082268966302803
+      }
+    },
+    {
+      "index": 18,
+      "accepted": false,
+      "detection": {
+        "start": 59673,
+        "coarse_cfo_hz": -27.96826768626189,
+        "score": 0.06886217197164875
+      }
+    },
+    {
+      "index": 19,
+      "accepted": false,
+      "detection": {
+        "start": 30759,
+        "coarse_cfo_hz": -123.9745228550419,
+        "score": 0.08955567089535288
+      }
+    },
+    {
+      "index": 20,
+      "accepted": false,
+      "detection": {
+        "start": 37386,
+        "coarse_cfo_hz": 46.62292279919825,
+        "score": 0.0693356827785385
+      }
+    },
+    {
+      "index": 21,
+      "accepted": false,
+      "detection": {
+        "start": 38570,
+        "coarse_cfo_hz": 498.65281049507774,
+        "score": 0.06536640157088976
+      }
+    },
+    {
+      "index": 22,
+      "accepted": false,
+      "detection": {
+        "start": 25440,
+        "coarse_cfo_hz": -37.210961053026494,
+        "score": 0.07751284093957479
+      }
+    },
+    {
+      "index": 23,
+      "accepted": false,
+      "detection": {
+        "start": 16540,
+        "coarse_cfo_hz": 45.95690449802453,
+        "score": 0.07237224815968023
+      }
+    }
+  ],
+  "false_noise_accepts": 0
+}

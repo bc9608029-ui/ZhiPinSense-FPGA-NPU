@@ -1,0 +1,18 @@
+{
+  "80": {
+    "peak_display_bin": 148,
+    "centroid_hz": 202080.07815551027,
+    "true_tone_hz": 200000,
+    "papr_db": 1.928654933106574e-15
+  },
+  "-80": {
+    "peak_display_bin": 108,
+    "centroid_hz": -197919.92184448923,
+    "true_tone_hz": -200000,
+    "papr_db": 1.928654933106574e-15
+  },
+  "zero_invalid": true,
+  "nonzero_unsampled_impulse_invalid": true,
+  "impulse_papr_db": 30.102999566398122,
+  "relative_spectrum_scale_invariant": true
+}

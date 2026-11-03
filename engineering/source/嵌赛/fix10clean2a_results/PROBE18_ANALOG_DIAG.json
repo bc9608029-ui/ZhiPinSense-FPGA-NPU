@@ -1,0 +1,102 @@
+{
+  "OQPSK": {
+    "real": {
+      "rms": 1.001676,
+      "mean_abs": 0.082263,
+      "papr_db": 4.414,
+      "spec_center_hz": -33.445499999999996,
+      "inst_freq_std_hz": 14658.9545,
+      "env_min": 0.0193605,
+      "env_max": 1.666112
+    },
+    "clean": {
+      "rms": 1.0,
+      "mean_abs": 0.08950949999999999,
+      "papr_db": 3.58225,
+      "spec_center_hz": 34.786,
+      "inst_freq_std_hz": 7746.278,
+      "env_min": 0.29688249999999994,
+      "env_max": 1.5107755
+    }
+  },
+  "AM-SSB-WC": {
+    "real": {
+      "rms": 10.550852999999996,
+      "mean_abs": 10.529063500000001,
+      "papr_db": 0.7317000000000001,
+      "spec_center_hz": -0.0325,
+      "inst_freq_std_hz": 31.964499999999997,
+      "env_min": 9.5642845,
+      "env_max": 11.488625000000003
+    },
+    "clean": {
+      "rms": 11.7392,
+      "mean_abs": 0.032950999999999994,
+      "papr_db": 1.2059,
+      "spec_center_hz": 6218.901,
+      "inst_freq_std_hz": 326.2145,
+      "env_min": 9.9254005,
+      "env_max": 13.488605000000002
+    }
+  },
+  "AM-SSB-SC": {
+    "real": {
+      "rms": 7.9519425,
+      "mean_abs": 7.919377,
+      "papr_db": 1.1735,
+      "spec_center_hz": -0.008999999999999985,
+      "inst_freq_std_hz": 32.088499999999996,
+      "env_min": 6.737076999999999,
+      "env_max": 9.092520500000001
+    },
+    "clean": {
+      "rms": 7.832800000000002,
+      "mean_abs": 0.084849,
+      "papr_db": 3.79025,
+      "spec_center_hz": 5786.8369999999995,
+      "inst_freq_std_hz": 1458.985,
+      "env_min": 2.9489395000000003,
+      "env_max": 12.1272105
+    }
+  },
+  "AM-DSB-WC": {
+    "real": {
+      "rms": 1.0016695,
+      "mean_abs": 0.0008774999999999999,
+      "papr_db": 3.5770500000000003,
+      "spec_center_hz": -0.41350000000000003,
+      "inst_freq_std_hz": 23887.734,
+      "env_min": 0.0056489999999999995,
+      "env_max": 1.5126594999999998
+    },
+    "clean": {
+      "rms": 1.0,
+      "mean_abs": 0.95781,
+      "papr_db": 4.019,
+      "spec_center_hz": 0.0,
+      "inst_freq_std_hz": 0.0,
+      "env_min": 0.32509350000000004,
+      "env_max": 1.5902205
+    }
+  },
+  "AM-DSB-SC": {
+    "real": {
+      "rms": 1.007143,
+      "mean_abs": 0.000999,
+      "papr_db": 4.082249999999999,
+      "spec_center_hz": 0.06149999999999995,
+      "inst_freq_std_hz": 24089.81,
+      "env_min": 0.0056675,
+      "env_max": 1.6128564999999997
+    },
+    "clean": {
+      "rms": 1.0,
+      "mean_abs": 0.039796,
+      "papr_db": 7.2967,
+      "spec_center_hz": -0.0495,
+      "inst_freq_std_hz": 13006.712,
+      "env_min": 0.0014050000000000002,
+      "env_max": 2.325371
+    }
+  }
+}

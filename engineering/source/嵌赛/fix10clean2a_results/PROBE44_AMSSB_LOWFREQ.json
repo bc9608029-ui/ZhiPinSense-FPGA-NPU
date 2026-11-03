@@ -1,0 +1,63 @@
+{
+ "measured_ref": "WC instF32.7 SC instF32.8 @SNR30; WC sideband/carrier0.052 SC0.0875",
+ "sine195_AM-SSB-WC": {
+  "m": 0.06,
+  "recall": 0.62,
+  "instF": 11.8,
+  "conf": "AM-SSB-WC=310, AM-SSB-SC=190"
+ },
+ "sine195_AM-SSB-SC": {
+  "m": 0.09,
+  "recall": 1.0,
+  "instF": 17.9,
+  "conf": "AM-SSB-SC=500"
+ },
+ "sawtooth195_AM-SSB-WC": {
+  "m": 0.06,
+  "recall": 1.0,
+  "instF": 119.7,
+  "conf": "AM-SSB-WC=500"
+ },
+ "sawtooth195_AM-SSB-SC": {
+  "m": 0.09,
+  "recall": 0.28,
+  "instF": 180.0,
+  "conf": "AM-SSB-WC=360, AM-SSB-SC=140"
+ },
+ "matched5_AM-SSB-WC": {
+  "m": 0.06,
+  "recall": 0.512,
+  "instF": 15.4,
+  "conf": "AM-SSB-WC=256, AM-SSB-SC=244"
+ },
+ "matched5_AM-SSB-SC": {
+  "m": 0.09,
+  "recall": 1.0,
+  "instF": 23.4,
+  "conf": "AM-SSB-SC=500"
+ },
+ "matched16_AM-SSB-WC": {
+  "m": 0.06,
+  "recall": 0.482,
+  "instF": 17.3,
+  "conf": "AM-SSB-SC=259, AM-SSB-WC=241"
+ },
+ "matched16_AM-SSB-SC": {
+  "m": 0.09,
+  "recall": 1.0,
+  "instF": 26.5,
+  "conf": "AM-SSB-SC=500"
+ },
+ "multitone_AM-SSB-WC": {
+  "m": 0.06,
+  "recall": 0.968,
+  "instF": 108.8,
+  "conf": "AM-SSB-WC=484, AM-SSB-SC=16"
+ },
+ "multitone_AM-SSB-SC": {
+  "m": 0.09,
+  "recall": 1.0,
+  "instF": 165.5,
+  "conf": "AM-SSB-SC=500"
+ }
+}

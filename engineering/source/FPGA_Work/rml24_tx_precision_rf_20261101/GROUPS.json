@@ -1,0 +1,806 @@
+[
+  {
+    "file": "14_05.bin",
+    "event": {
+      "file": "14_05.bin",
+      "start_mono_ns": 30368638661100,
+      "end_mono_ns": 30377646418100,
+      "scale": 1211.9810229537425,
+      "tx_gain_db": -65.0,
+      "ideal_pilot_mismatch_db": 0.034791690952218346
+    },
+    "rows": [
+      {
+        "index": 6,
+        "capture_monotonic_ns": 26940543689830,
+        "file": "raw_006.npy",
+        "old": {
+          "score": 0.9189501437501673,
+          "coarse_cfo_hz": -93.34352481284651,
+          "start": 8728
+        },
+        "new": {
+          "start": 8728,
+          "coarse_cfo_hz": -93.34352481284651,
+          "score": 0.9189501437501673
+        },
+        "gain": {
+          "selected_gain_db": 61.0,
+          "readback_gain_db": 61.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -82.4105664232553,
+          "training_residual": 0.43177726848718645,
+          "fir_training_residual": 0.026416838407723582,
+          "head_reference_relative_error": 0.024278105061842827,
+          "tail_reference_relative_error": 0.027260291966327083,
+          "tail_residual": 0.41034287705901307,
+          "gain": 498.29936829378323,
+          "dc": 9.300721024479612
+        }
+      },
+      {
+        "index": 7,
+        "capture_monotonic_ns": 26942433730570,
+        "file": "raw_007.npy",
+        "old": {
+          "score": 0.7852272948832969,
+          "coarse_cfo_hz": -94.16473682060516,
+          "start": 3412
+        },
+        "new": {
+          "start": 3412,
+          "coarse_cfo_hz": -94.16473682060516,
+          "score": 0.7852272948832969
+        },
+        "gain": {
+          "selected_gain_db": 63.0,
+          "readback_gain_db": 63.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -79.55542284153323,
+          "training_residual": 0.7916001749769946,
+          "fir_training_residual": 0.031707093212688234,
+          "head_reference_relative_error": 0.024885705527724258,
+          "tail_reference_relative_error": 0.031139995885741612,
+          "tail_residual": 0.7441716644403022,
+          "gain": 534.3917867848841,
+          "dc": 11.740941389959369
+        }
+      },
+      {
+        "index": 8,
+        "capture_monotonic_ns": 26944309275130,
+        "file": "raw_008.npy",
+        "old": {
+          "score": 0.749357089429459,
+          "coarse_cfo_hz": -84.55267343478157,
+          "start": 51697
+        },
+        "new": {
+          "start": 51697,
+          "coarse_cfo_hz": -84.55267343478157,
+          "score": 0.749357089429459
+        },
+        "gain": {
+          "selected_gain_db": 63.0,
+          "readback_gain_db": 63.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -83.16625096392643,
+          "training_residual": 0.8894011099111718,
+          "fir_training_residual": 0.025993489591938278,
+          "head_reference_relative_error": 0.019438792307198197,
+          "tail_reference_relative_error": 0.02917964254902224,
+          "tail_residual": 0.8326918268060759,
+          "gain": 509.1531382837048,
+          "dc": 9.922690206799937
+        }
+      },
+      {
+        "index": 9,
+        "capture_monotonic_ns": 26946193695600,
+        "file": "raw_009.npy",
+        "old": {
+          "score": 0.8961098852685011,
+          "coarse_cfo_hz": -82.83369619175701,
+          "start": 60723
+        },
+        "new": {
+          "start": 60723,
+          "coarse_cfo_hz": -82.83369619175701,
+          "score": 0.8961098852685011
+        },
+        "gain": {
+          "selected_gain_db": 63.0,
+          "readback_gain_db": 63.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -79.05753643914449,
+          "training_residual": 0.49613113484902044,
+          "fir_training_residual": 0.02692196497563219,
+          "head_reference_relative_error": 0.024135911673626102,
+          "tail_reference_relative_error": 0.033727509306061075,
+          "tail_residual": 0.4715526830308706,
+          "gain": 616.6424303319293,
+          "dc": 8.299480623403937
+        }
+      }
+    ]
+  },
+  {
+    "file": "13_01.bin",
+    "event": {
+      "file": "13_01.bin",
+      "start_mono_ns": 30378169666600,
+      "end_mono_ns": 30387185357500,
+      "scale": 1090.3586565896564,
+      "tx_gain_db": -64.0,
+      "ideal_pilot_mismatch_db": 0.11626281350739731
+    },
+    "rows": [
+      {
+        "index": 11,
+        "capture_monotonic_ns": 26949983916970,
+        "file": "raw_011.npy",
+        "old": {
+          "score": 0.9697872238142721,
+          "coarse_cfo_hz": -93.16855508311771,
+          "start": 12126
+        },
+        "new": {
+          "start": 12126,
+          "coarse_cfo_hz": -93.16855508311771,
+          "score": 0.9697872238142721
+        },
+        "gain": {
+          "selected_gain_db": 62.0,
+          "readback_gain_db": 62.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -82.70115184114722,
+          "training_residual": 0.25341881834134466,
+          "fir_training_residual": 0.029128320308583422,
+          "head_reference_relative_error": 0.028264144918186462,
+          "tail_reference_relative_error": 0.0258774792663032,
+          "tail_residual": 0.24053813283589848,
+          "gain": 603.7904753207303,
+          "dc": 7.014977476153847
+        }
+      },
+      {
+        "index": 12,
+        "capture_monotonic_ns": 26951863842960,
+        "file": "raw_012.npy",
+        "old": {
+          "score": 0.8961394327565745,
+          "coarse_cfo_hz": -79.52186488694828,
+          "start": 32
+        },
+        "new": {
+          "start": 32,
+          "coarse_cfo_hz": -79.52186488694828,
+          "score": 0.8961394327565745
+        },
+        "gain": {
+          "selected_gain_db": 63.0,
+          "readback_gain_db": 63.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -79.52186479404861,
+          "training_residual": 0.49510666111486074,
+          "fir_training_residual": 0.0302972496135594,
+          "head_reference_relative_error": 0.02717843742784952,
+          "tail_reference_relative_error": 0.03371904456677264,
+          "tail_residual": 0.46997680682973875,
+          "gain": 621.1107660797578,
+          "dc": 6.052069680014438
+        }
+      },
+      {
+        "index": 13,
+        "capture_monotonic_ns": 26953754007110,
+        "file": "raw_013.npy",
+        "old": {
+          "score": 0.7509364549660337,
+          "coarse_cfo_hz": -78.52974189474902,
+          "start": 11026
+        },
+        "new": {
+          "start": 11026,
+          "coarse_cfo_hz": -78.52974189474902,
+          "score": 0.7509364549660337
+        },
+        "gain": {
+          "selected_gain_db": 64.0,
+          "readback_gain_db": 64.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -78.52972645625137,
+          "training_residual": 0.8792777933484416,
+          "fir_training_residual": 0.03546475959599811,
+          "head_reference_relative_error": 0.02666224361379735,
+          "tail_reference_relative_error": 0.07669054891131946,
+          "tail_residual": 0.8270503428304339,
+          "gain": 594.5877479238976,
+          "dc": 9.72802945464484
+        }
+      },
+      {
+        "index": 14,
+        "capture_monotonic_ns": 26955633928670,
+        "file": "raw_014.npy",
+        "old": {
+          "score": 0.7805692185775132,
+          "coarse_cfo_hz": -83.71597667588891,
+          "start": 47861
+        },
+        "new": {
+          "start": 47861,
+          "coarse_cfo_hz": -83.71597667588891,
+          "score": 0.7805692185775132
+        },
+        "gain": {
+          "selected_gain_db": 66.0,
+          "readback_gain_db": 66.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -77.50389963332911,
+          "training_residual": 0.8014527496498742,
+          "fir_training_residual": 0.02965246349834447,
+          "head_reference_relative_error": 0.023160714387302748,
+          "tail_reference_relative_error": 0.0229898039617216,
+          "tail_residual": 0.7549322678436625,
+          "gain": 804.0265123181364,
+          "dc": 11.572553938769447
+        }
+      }
+    ]
+  },
+  {
+    "file": "17_00.bin",
+    "event": {
+      "file": "17_00.bin",
+      "start_mono_ns": 30387710127600,
+      "end_mono_ns": 30396715809400,
+      "scale": 186.67619023324855,
+      "tx_gain_db": -48.75,
+      "ideal_pilot_mismatch_db": 0.03665387660524999
+    },
+    "rows": [
+      {
+        "index": 16,
+        "capture_monotonic_ns": 26959454150340,
+        "file": "raw_016.npy",
+        "old": {
+          "score": 0.6242475176657887,
+          "coarse_cfo_hz": -75.49044544820917,
+          "start": 27983
+        },
+        "new": {
+          "start": 27983,
+          "coarse_cfo_hz": -75.49044544820917,
+          "score": 0.6242475176657887
+        },
+        "gain": {
+          "selected_gain_db": 49.0,
+          "readback_gain_db": 49.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -79.60454447111097,
+          "training_residual": 0.2833489183590934,
+          "fir_training_residual": 0.05349908949472087,
+          "head_reference_relative_error": 0.051577142178362095,
+          "tail_reference_relative_error": 0.10237422342120364,
+          "tail_residual": 0.2942046543441773,
+          "gain": 147.72788258444342,
+          "dc": 182.9430566691352
+        }
+      },
+      {
+        "index": 17,
+        "capture_monotonic_ns": 26961344099550,
+        "file": "raw_017.npy",
+        "old": {
+          "score": 0.6240359375669815,
+          "coarse_cfo_hz": -75.34294043003013,
+          "start": 7057
+        },
+        "new": {
+          "start": 7057,
+          "coarse_cfo_hz": -75.34294043003013,
+          "score": 0.6240359375669815
+        },
+        "gain": {
+          "selected_gain_db": 44.0,
+          "readback_gain_db": 44.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -75.34290959991151,
+          "training_residual": 0.3027002277645358,
+          "fir_training_residual": 0.05132593017963855,
+          "head_reference_relative_error": 0.04920219158623776,
+          "tail_reference_relative_error": 0.05156883414905694,
+          "tail_residual": 0.3087274743373508,
+          "gain": 82.88862951642106,
+          "dc": 101.22830597328681
+        }
+      },
+      {
+        "index": 18,
+        "capture_monotonic_ns": 26963234115200,
+        "file": "raw_018.npy",
+        "old": {
+          "score": 0.5663586069430967,
+          "coarse_cfo_hz": -75.39252447107916,
+          "start": 34635
+        },
+        "new": {
+          "start": 34635,
+          "coarse_cfo_hz": -75.39252447107916,
+          "score": 0.5663586069430967
+        },
+        "gain": {
+          "selected_gain_db": 44.0,
+          "readback_gain_db": 44.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -71.9376749147226,
+          "training_residual": 0.544618759145244,
+          "fir_training_residual": 0.055706570118162685,
+          "head_reference_relative_error": 0.04900459751044026,
+          "tail_reference_relative_error": 0.05991413559531709,
+          "tail_residual": 0.5382781607147793,
+          "gain": 79.98431499524999,
+          "dc": 110.22883949675315
+        }
+      },
+      {
+        "index": 19,
+        "capture_monotonic_ns": 26965083914170,
+        "file": "raw_019.npy",
+        "old": {
+          "score": 0.47085387848048704,
+          "coarse_cfo_hz": -74.44437748467939,
+          "start": 17291
+        },
+        "new": {
+          "start": 17291,
+          "coarse_cfo_hz": -74.44437748467939,
+          "score": 0.47085387848048704
+        },
+        "gain": {
+          "selected_gain_db": 45.0,
+          "readback_gain_db": 45.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -74.44436026910095,
+          "training_residual": 0.918729713476159,
+          "fir_training_residual": 0.0696657624303357,
+          "head_reference_relative_error": 0.051401933890724304,
+          "tail_reference_relative_error": 0.061783627567116584,
+          "tail_residual": 0.895883749995405,
+          "gain": 74.08842325084501,
+          "dc": 121.63185732087648
+        }
+      }
+    ]
+  },
+  {
+    "file": "18_06.bin",
+    "event": {
+      "file": "18_06.bin",
+      "start_mono_ns": 30397241302400,
+      "end_mono_ns": 30406246195400,
+      "scale": 84.8528137423857,
+      "tx_gain_db": -42.0,
+      "ideal_pilot_mismatch_db": -0.06179973983887521
+    },
+    "rows": [
+      {
+        "index": 22,
+        "capture_monotonic_ns": 26970734052090,
+        "file": "raw_022.npy",
+        "old": {
+          "score": 0.14553671461266537,
+          "coarse_cfo_hz": -75.24359268615416,
+          "start": 7609
+        },
+        "new": {
+          "start": 40378,
+          "coarse_cfo_hz": -78.19444430261919,
+          "score": 0.9594549399212473
+        },
+        "gain": {
+          "selected_gain_db": 48.0,
+          "readback_gain_db": 48.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -74.73198712414926,
+          "training_residual": 0.2560222171870855,
+          "fir_training_residual": 0.04338376247541525,
+          "head_reference_relative_error": 0.042311299250930696,
+          "tail_reference_relative_error": 0.049173986760836945,
+          "tail_residual": 0.2580606907975789,
+          "gain": 138.2821734182821,
+          "dc": 22.301437559926008
+        }
+      },
+      {
+        "index": 23,
+        "capture_monotonic_ns": 26972594346600,
+        "file": "raw_023.npy",
+        "old": {
+          "score": 0.95423012379417,
+          "coarse_cfo_hz": -82.19625906722587,
+          "start": 45604
+        },
+        "new": {
+          "start": 45604,
+          "coarse_cfo_hz": -82.19625906722587,
+          "score": 0.95423012379417
+        },
+        "gain": {
+          "selected_gain_db": 50.0,
+          "readback_gain_db": 50.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -76.52922215239445,
+          "training_residual": 0.26190362012217416,
+          "fir_training_residual": 0.03969449868624813,
+          "head_reference_relative_error": 0.03846094665974018,
+          "tail_reference_relative_error": 0.04661949152138744,
+          "tail_residual": 0.290621985549333,
+          "gain": 170.03460867508528,
+          "dc": 31.232715390550958
+        }
+      },
+      {
+        "index": 24,
+        "capture_monotonic_ns": 26974474395000,
+        "file": "raw_024.npy",
+        "old": {
+          "score": 0.8839590826925009,
+          "coarse_cfo_hz": -78.68507236858869,
+          "start": 712
+        },
+        "new": {
+          "start": 712,
+          "coarse_cfo_hz": -78.68507236858869,
+          "score": 0.8839590826925009
+        },
+        "gain": {
+          "selected_gain_db": 50.0,
+          "readback_gain_db": 50.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -78.68507768596723,
+          "training_residual": 0.495211830340959,
+          "fir_training_residual": 0.048593826933705425,
+          "head_reference_relative_error": 0.043587137073198945,
+          "tail_reference_relative_error": 0.05038756271266838,
+          "tail_residual": 0.5149620670570566,
+          "gain": 155.1334603235182,
+          "dc": 29.69440702225775
+        }
+      }
+    ]
+  },
+  {
+    "file": "18_07.bin",
+    "event": {
+      "file": "18_07.bin",
+      "start_mono_ns": 30406770779800,
+      "end_mono_ns": 30415784711600,
+      "scale": 91.92388155425118,
+      "tx_gain_db": -42.75,
+      "ideal_pilot_mismatch_db": -0.11655761465463144
+    },
+    "rows": [
+      {
+        "index": 27,
+        "capture_monotonic_ns": 26980134405120,
+        "file": "raw_027.npy",
+        "old": {
+          "score": 0.3575068872215088,
+          "coarse_cfo_hz": -79.6469731056111,
+          "start": 11479
+        },
+        "new": {
+          "start": 60632,
+          "coarse_cfo_hz": -75.56392291256711,
+          "score": 0.8703210595877151
+        },
+        "gain": {
+          "selected_gain_db": 52.0,
+          "readback_gain_db": 52.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -75.91923645604962,
+          "training_residual": 0.5091497652382101,
+          "fir_training_residual": 0.03239720884925237,
+          "head_reference_relative_error": 0.029092099024672205,
+          "tail_reference_relative_error": 0.03215325887084489,
+          "tail_residual": 0.4609175060215407,
+          "gain": 187.8413603053968,
+          "dc": 49.02271492566069
+        }
+      },
+      {
+        "index": 28,
+        "capture_monotonic_ns": 26982024324020,
+        "file": "raw_028.npy",
+        "old": {
+          "score": 0.16996392429107354,
+          "coarse_cfo_hz": -85.52936931380268,
+          "start": 6097
+        },
+        "new": {
+          "start": 6098,
+          "coarse_cfo_hz": -85.72473301679261,
+          "score": 0.9438730522250307
+        },
+        "gain": {
+          "selected_gain_db": 50.0,
+          "readback_gain_db": 50.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -81.37055747143143,
+          "training_residual": 0.26936013102952855,
+          "fir_training_residual": 0.03353611723768499,
+          "head_reference_relative_error": 0.032484402442850266,
+          "tail_reference_relative_error": 0.03117523292724388,
+          "tail_residual": 0.25496242511852274,
+          "gain": 160.30856043479008,
+          "dc": 37.804528098007154
+        }
+      },
+      {
+        "index": 29,
+        "capture_monotonic_ns": 26983904503090,
+        "file": "raw_029.npy",
+        "old": {
+          "score": 0.95285057506359,
+          "coarse_cfo_hz": -75.97350365424035,
+          "start": 26492
+        },
+        "new": {
+          "start": 26492,
+          "coarse_cfo_hz": -75.97350365424035,
+          "score": 0.95285057506359
+        },
+        "gain": {
+          "selected_gain_db": 49.0,
+          "readback_gain_db": 49.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -73.1408909996046,
+          "training_residual": 0.23975218316650404,
+          "fir_training_residual": 0.03603903206027028,
+          "head_reference_relative_error": 0.03508629600662232,
+          "tail_reference_relative_error": 0.03993849383809001,
+          "tail_residual": 0.27187193193923587,
+          "gain": 147.7645967810206,
+          "dc": 35.85854698073515
+        }
+      }
+    ]
+  },
+  {
+    "file": "23_04.bin",
+    "event": {
+      "file": "23_04.bin",
+      "start_mono_ns": 30416310450700,
+      "end_mono_ns": 30425313767200,
+      "scale": 1568.3628406717626,
+      "tx_gain_db": -67.25,
+      "ideal_pilot_mismatch_db": 0.02380617547145647
+    },
+    "rows": [
+      {
+        "index": 32,
+        "capture_monotonic_ns": 26989544639440,
+        "file": "raw_032.npy",
+        "old": {
+          "score": 0.7358040144173192,
+          "coarse_cfo_hz": -85.33154362574872,
+          "start": 48169
+        },
+        "new": {
+          "start": 48169,
+          "coarse_cfo_hz": -85.33154362574872,
+          "score": 0.7358040144173192
+        },
+        "gain": {
+          "selected_gain_db": 64.0,
+          "readback_gain_db": 64.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -82.42441060008862,
+          "training_residual": 0.9234343435148494,
+          "fir_training_residual": 0.029200967508456604,
+          "head_reference_relative_error": 0.021471220012792697,
+          "tail_reference_relative_error": 0.015472708474017525,
+          "tail_residual": 0.8616650702229891,
+          "gain": 567.3150473086797,
+          "dc": 7.967669756195095
+        }
+      },
+      {
+        "index": 33,
+        "capture_monotonic_ns": 26991424567680,
+        "file": "raw_033.npy",
+        "old": {
+          "score": 0.878006923697908,
+          "coarse_cfo_hz": -82.9014695132882,
+          "start": 52751
+        },
+        "new": {
+          "start": 52751,
+          "coarse_cfo_hz": -82.9014695132882,
+          "score": 0.878006923697908
+        },
+        "gain": {
+          "selected_gain_db": 63.0,
+          "readback_gain_db": 63.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -82.90146255391535,
+          "training_residual": 0.5451825926548293,
+          "fir_training_residual": 0.02471299764204431,
+          "head_reference_relative_error": 0.021717534538948403,
+          "tail_reference_relative_error": 0.02222842413574341,
+          "tail_residual": 0.5161028273342956,
+          "gain": 594.357239114488,
+          "dc": 4.050069283918674
+        }
+      },
+      {
+        "index": 34,
+        "capture_monotonic_ns": 26993314610200,
+        "file": "raw_034.npy",
+        "old": {
+          "score": 0.9596953742013932,
+          "coarse_cfo_hz": -79.20656580946347,
+          "start": 47167
+        },
+        "new": {
+          "start": 47167,
+          "coarse_cfo_hz": -79.20656580946347,
+          "score": 0.9596953742013932
+        },
+        "gain": {
+          "selected_gain_db": 65.0,
+          "readback_gain_db": 65.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -79.20654365635001,
+          "training_residual": 0.2928143206276327,
+          "fir_training_residual": 0.020856874680050517,
+          "head_reference_relative_error": 0.02003557070637526,
+          "tail_reference_relative_error": 0.026692551366204516,
+          "tail_residual": 0.2784273746568002,
+          "gain": 844.8069751920791,
+          "dc": 5.3026213769484105
+        }
+      },
+      {
+        "index": 35,
+        "capture_monotonic_ns": 26995194528180,
+        "file": "raw_035.npy",
+        "old": {
+          "score": 0.9778622663510994,
+          "coarse_cfo_hz": -84.16639898409659,
+          "start": 18583
+        },
+        "new": {
+          "start": 18583,
+          "coarse_cfo_hz": -84.16639898409659,
+          "score": 0.9778622663510994
+        },
+        "gain": {
+          "selected_gain_db": 60.0,
+          "readback_gain_db": 60.0,
+          "settle_buffers": 3
+        },
+        "old_accepted": true,
+        "new_accepted": true,
+        "recovered": true,
+        "recovery": {
+          "cfo_hz": -83.42125062192389,
+          "training_residual": 0.21419841943444554,
+          "fir_training_residual": 0.018551958555501104,
+          "head_reference_relative_error": 0.018159408197502207,
+          "tail_reference_relative_error": 0.026253570060990262,
+          "tail_residual": 0.20374025641615243,
+          "gain": 490.2931750011592,
+          "dc": 1.4043263809871518
+        }
+      }
+    ]
+  }
+]

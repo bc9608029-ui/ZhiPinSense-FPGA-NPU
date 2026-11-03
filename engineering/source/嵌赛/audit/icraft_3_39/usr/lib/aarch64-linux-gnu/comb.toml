@@ -1,0 +1,2 @@
+[[compile]]
+sequence = ["parse", "optimize", "quantize", "adapt", "generate"]

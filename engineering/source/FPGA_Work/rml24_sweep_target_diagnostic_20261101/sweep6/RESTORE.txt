@@ -1,0 +1,11 @@
+python3 /root/rml24_three_modes_execution_20261029/fpga_ui_integgration_20261031/sweep_target_device.py stop sweep6
+
+Failed to stop rml24-sweep-target-diagnostic-sweep6.service: Unit rml24-sweep-target-diagnostic-sweep6.service not loaded.
+Traceback (most recent call last):
+  File "/root/rml24_three_modes_execution_20261029/fpga_ui_integration_20261031/sweep_target_device.py", line 26, in <module>
+    subprocess.run(['systemctl','stop',unit],check=True);absent=not Path('/var/lib/rml24-fpga-shared-guard/reset_required.json').exists();assert absent,'hardware recovery required; no restart attempted';assert shutil.disk_usage('/').free>1024**3;subprocess.run(['systemctl','start','rml24-integrated'],check=True);health={}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['systemctl', 'stop', 'rml24-sweep-target-diagnostic-sweep6']' returned non-zero exit status 5.
+(base) root@U:~# 

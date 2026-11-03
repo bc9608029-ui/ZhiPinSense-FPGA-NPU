@@ -1,0 +1,57 @@
+{
+  "checkpoint": "/root/autodl-tmp/qam_aware_v3_autodl/outputs/qam_aware_v3/formal/checkpoints/best.pt",
+  "checkpoint_epoch": 4,
+  "e2e": {
+    "checker_passed": true,
+    "opset": 17,
+    "op_types": {
+      "Add": 11,
+      "BatchNormalization": 3,
+      "Ceil": 3,
+      "Clip": 3,
+      "Concat": 8,
+      "Constant": 51,
+      "Conv": 24,
+      "Div": 2,
+      "Floor": 3,
+      "Gemm": 2,
+      "GreaterOrEqual": 3,
+      "Mul": 12,
+      "ReduceMean": 4,
+      "Relu": 22,
+      "Slice": 6,
+      "Sub": 4,
+      "Where": 3
+    },
+    "file_size_bytes": 2052222
+  },
+  "npu_partition": {
+    "checker_passed": true,
+    "opset": 17,
+    "op_types": {
+      "Add": 6,
+      "BatchNormalization": 3,
+      "Concat": 5,
+      "Constant": 4,
+      "Conv": 24,
+      "Gemm": 2,
+      "Mul": 2,
+      "ReduceMean": 4,
+      "Relu": 22
+    },
+    "file_size_bytes": 2033860,
+    "unexpected_operators": [
+      "Constant"
+    ]
+  },
+  "allowed_operator_policy": [
+    "Add",
+    "BatchNormalization",
+    "Concat",
+    "Conv",
+    "Gemm",
+    "Mul",
+    "ReduceMean",
+    "Relu"
+  ]
+}

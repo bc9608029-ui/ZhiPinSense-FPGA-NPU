@@ -1,0 +1,25 @@
+
+import subprocess,socket,time,struct,json,sys,os
+from pathlib import Path
+npu,model,folder=sys.argv[1:];folder=Path(folder);folder.mkdir()
+log=(folder/'npu.log').open('w')
+p=subprocess.Popen([npu,model+'/rml24_adamrv11_bf16.json',model+'/rml24_adamrv11_bf16.raw',str(folder/'npu.sock')],stdout=log,stderr=subprocess.STDOUT)
+try:
+ for i in range(200):
+  if (folder/'npu.sock').exists():break
+  assert p.poll() is None,'NPU exited';time.sleep(.1)
+ with socket.socket(socket.AF_UNIX,socket.SOCK_STREAM) as s:
+  s.settimeout(30);s.connect(str(folder/'npu.sock'));answers=[]
+  for i in range(8):
+   s.sendall(bytes(8192));data=b''
+   while len(data)<96:
+    b=s.recv(96-len(data));assert b,'NPU EOF';data+=b
+   values=struct.unpack('<24f',data)
+   assert all(__import__('math').isfinite(v) for v in values),'nonfinite canary'
+   answers.append(max(range(24),key=lambda k:values[k]))
+ print(json.dumps(dict(kind='ZERO_INPUT_NPU_LIVENESS_ONLY',finite=8,total=8,pred=answers)))
+finally:
+ p.terminate()
+ try:p.wait(timeout=15)
+ except subprocess.TimeoutExpired:p.kill();p.wait();raise RuntimeError('NPU cleanup required hard kill')
+ log.close()

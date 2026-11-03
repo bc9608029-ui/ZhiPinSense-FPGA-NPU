@@ -1,0 +1,1822 @@
+{
+  "seed": 2026,
+  "split": "ad_amr_v1_1_train",
+  "split_code": 940786221,
+  "num_samples": 252,
+  "modulations": [
+    "OOK",
+    "4ASK",
+    "AM-DSB",
+    "WBFM",
+    "2FSK",
+    "GFSK",
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16QAM",
+    "64QAM",
+    "OFDM"
+  ],
+  "snr_values": [
+    -20.0,
+    -18.0,
+    -16.0,
+    -14.0,
+    -12.0,
+    -10.0,
+    -8.0,
+    -6.0,
+    -4.0,
+    -2.0,
+    0.0,
+    2.0,
+    4.0,
+    6.0,
+    8.0,
+    10.0,
+    12.0,
+    14.0,
+    16.0,
+    18.0,
+    20.0
+  ],
+  "amplitude": 1.0,
+  "sample_rate": 128000.0,
+  "input_shape": [
+    1,
+    2,
+    1024
+  ],
+  "input_layout": "FD",
+  "input_dtype": "fp32",
+  "bytes_per_sample": 8192,
+  "single_input": true,
+  "domain": "raw training I/Q (RMS-normalized, ChannelPipeline domain randomization)",
+  "forward_list": "F:\\FPGA_Work\\sdr_full_chain_12class_v1\\model_12class\\calibration\\forward_list.txt",
+  "rows": [
+    {
+      "index": 0,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": -20.0,
+      "iq_file": "iq_0.bin"
+    },
+    {
+      "index": 1,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": -20.0,
+      "iq_file": "iq_1.bin"
+    },
+    {
+      "index": 2,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": -20.0,
+      "iq_file": "iq_2.bin"
+    },
+    {
+      "index": 3,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": -20.0,
+      "iq_file": "iq_3.bin"
+    },
+    {
+      "index": 4,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": -20.0,
+      "iq_file": "iq_4.bin"
+    },
+    {
+      "index": 5,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": -20.0,
+      "iq_file": "iq_5.bin"
+    },
+    {
+      "index": 6,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": -20.0,
+      "iq_file": "iq_6.bin"
+    },
+    {
+      "index": 7,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": -20.0,
+      "iq_file": "iq_7.bin"
+    },
+    {
+      "index": 8,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": -20.0,
+      "iq_file": "iq_8.bin"
+    },
+    {
+      "index": 9,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": -20.0,
+      "iq_file": "iq_9.bin"
+    },
+    {
+      "index": 10,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": -20.0,
+      "iq_file": "iq_10.bin"
+    },
+    {
+      "index": 11,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": -20.0,
+      "iq_file": "iq_11.bin"
+    },
+    {
+      "index": 12,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": -18.0,
+      "iq_file": "iq_12.bin"
+    },
+    {
+      "index": 13,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": -18.0,
+      "iq_file": "iq_13.bin"
+    },
+    {
+      "index": 14,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": -18.0,
+      "iq_file": "iq_14.bin"
+    },
+    {
+      "index": 15,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": -18.0,
+      "iq_file": "iq_15.bin"
+    },
+    {
+      "index": 16,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": -18.0,
+      "iq_file": "iq_16.bin"
+    },
+    {
+      "index": 17,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": -18.0,
+      "iq_file": "iq_17.bin"
+    },
+    {
+      "index": 18,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": -18.0,
+      "iq_file": "iq_18.bin"
+    },
+    {
+      "index": 19,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": -18.0,
+      "iq_file": "iq_19.bin"
+    },
+    {
+      "index": 20,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": -18.0,
+      "iq_file": "iq_20.bin"
+    },
+    {
+      "index": 21,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": -18.0,
+      "iq_file": "iq_21.bin"
+    },
+    {
+      "index": 22,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": -18.0,
+      "iq_file": "iq_22.bin"
+    },
+    {
+      "index": 23,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": -18.0,
+      "iq_file": "iq_23.bin"
+    },
+    {
+      "index": 24,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": -16.0,
+      "iq_file": "iq_24.bin"
+    },
+    {
+      "index": 25,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": -16.0,
+      "iq_file": "iq_25.bin"
+    },
+    {
+      "index": 26,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": -16.0,
+      "iq_file": "iq_26.bin"
+    },
+    {
+      "index": 27,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": -16.0,
+      "iq_file": "iq_27.bin"
+    },
+    {
+      "index": 28,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": -16.0,
+      "iq_file": "iq_28.bin"
+    },
+    {
+      "index": 29,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": -16.0,
+      "iq_file": "iq_29.bin"
+    },
+    {
+      "index": 30,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": -16.0,
+      "iq_file": "iq_30.bin"
+    },
+    {
+      "index": 31,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": -16.0,
+      "iq_file": "iq_31.bin"
+    },
+    {
+      "index": 32,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": -16.0,
+      "iq_file": "iq_32.bin"
+    },
+    {
+      "index": 33,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": -16.0,
+      "iq_file": "iq_33.bin"
+    },
+    {
+      "index": 34,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": -16.0,
+      "iq_file": "iq_34.bin"
+    },
+    {
+      "index": 35,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": -16.0,
+      "iq_file": "iq_35.bin"
+    },
+    {
+      "index": 36,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": -14.0,
+      "iq_file": "iq_36.bin"
+    },
+    {
+      "index": 37,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": -14.0,
+      "iq_file": "iq_37.bin"
+    },
+    {
+      "index": 38,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": -14.0,
+      "iq_file": "iq_38.bin"
+    },
+    {
+      "index": 39,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": -14.0,
+      "iq_file": "iq_39.bin"
+    },
+    {
+      "index": 40,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": -14.0,
+      "iq_file": "iq_40.bin"
+    },
+    {
+      "index": 41,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": -14.0,
+      "iq_file": "iq_41.bin"
+    },
+    {
+      "index": 42,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": -14.0,
+      "iq_file": "iq_42.bin"
+    },
+    {
+      "index": 43,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": -14.0,
+      "iq_file": "iq_43.bin"
+    },
+    {
+      "index": 44,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": -14.0,
+      "iq_file": "iq_44.bin"
+    },
+    {
+      "index": 45,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": -14.0,
+      "iq_file": "iq_45.bin"
+    },
+    {
+      "index": 46,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": -14.0,
+      "iq_file": "iq_46.bin"
+    },
+    {
+      "index": 47,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": -14.0,
+      "iq_file": "iq_47.bin"
+    },
+    {
+      "index": 48,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": -12.0,
+      "iq_file": "iq_48.bin"
+    },
+    {
+      "index": 49,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": -12.0,
+      "iq_file": "iq_49.bin"
+    },
+    {
+      "index": 50,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": -12.0,
+      "iq_file": "iq_50.bin"
+    },
+    {
+      "index": 51,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": -12.0,
+      "iq_file": "iq_51.bin"
+    },
+    {
+      "index": 52,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": -12.0,
+      "iq_file": "iq_52.bin"
+    },
+    {
+      "index": 53,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": -12.0,
+      "iq_file": "iq_53.bin"
+    },
+    {
+      "index": 54,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": -12.0,
+      "iq_file": "iq_54.bin"
+    },
+    {
+      "index": 55,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": -12.0,
+      "iq_file": "iq_55.bin"
+    },
+    {
+      "index": 56,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": -12.0,
+      "iq_file": "iq_56.bin"
+    },
+    {
+      "index": 57,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": -12.0,
+      "iq_file": "iq_57.bin"
+    },
+    {
+      "index": 58,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": -12.0,
+      "iq_file": "iq_58.bin"
+    },
+    {
+      "index": 59,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": -12.0,
+      "iq_file": "iq_59.bin"
+    },
+    {
+      "index": 60,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": -10.0,
+      "iq_file": "iq_60.bin"
+    },
+    {
+      "index": 61,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": -10.0,
+      "iq_file": "iq_61.bin"
+    },
+    {
+      "index": 62,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": -10.0,
+      "iq_file": "iq_62.bin"
+    },
+    {
+      "index": 63,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": -10.0,
+      "iq_file": "iq_63.bin"
+    },
+    {
+      "index": 64,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": -10.0,
+      "iq_file": "iq_64.bin"
+    },
+    {
+      "index": 65,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": -10.0,
+      "iq_file": "iq_65.bin"
+    },
+    {
+      "index": 66,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": -10.0,
+      "iq_file": "iq_66.bin"
+    },
+    {
+      "index": 67,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": -10.0,
+      "iq_file": "iq_67.bin"
+    },
+    {
+      "index": 68,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": -10.0,
+      "iq_file": "iq_68.bin"
+    },
+    {
+      "index": 69,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": -10.0,
+      "iq_file": "iq_69.bin"
+    },
+    {
+      "index": 70,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": -10.0,
+      "iq_file": "iq_70.bin"
+    },
+    {
+      "index": 71,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": -10.0,
+      "iq_file": "iq_71.bin"
+    },
+    {
+      "index": 72,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": -8.0,
+      "iq_file": "iq_72.bin"
+    },
+    {
+      "index": 73,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": -8.0,
+      "iq_file": "iq_73.bin"
+    },
+    {
+      "index": 74,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": -8.0,
+      "iq_file": "iq_74.bin"
+    },
+    {
+      "index": 75,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": -8.0,
+      "iq_file": "iq_75.bin"
+    },
+    {
+      "index": 76,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": -8.0,
+      "iq_file": "iq_76.bin"
+    },
+    {
+      "index": 77,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": -8.0,
+      "iq_file": "iq_77.bin"
+    },
+    {
+      "index": 78,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": -8.0,
+      "iq_file": "iq_78.bin"
+    },
+    {
+      "index": 79,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": -8.0,
+      "iq_file": "iq_79.bin"
+    },
+    {
+      "index": 80,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": -8.0,
+      "iq_file": "iq_80.bin"
+    },
+    {
+      "index": 81,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": -8.0,
+      "iq_file": "iq_81.bin"
+    },
+    {
+      "index": 82,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": -8.0,
+      "iq_file": "iq_82.bin"
+    },
+    {
+      "index": 83,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": -8.0,
+      "iq_file": "iq_83.bin"
+    },
+    {
+      "index": 84,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": -6.0,
+      "iq_file": "iq_84.bin"
+    },
+    {
+      "index": 85,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": -6.0,
+      "iq_file": "iq_85.bin"
+    },
+    {
+      "index": 86,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": -6.0,
+      "iq_file": "iq_86.bin"
+    },
+    {
+      "index": 87,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": -6.0,
+      "iq_file": "iq_87.bin"
+    },
+    {
+      "index": 88,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": -6.0,
+      "iq_file": "iq_88.bin"
+    },
+    {
+      "index": 89,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": -6.0,
+      "iq_file": "iq_89.bin"
+    },
+    {
+      "index": 90,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": -6.0,
+      "iq_file": "iq_90.bin"
+    },
+    {
+      "index": 91,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": -6.0,
+      "iq_file": "iq_91.bin"
+    },
+    {
+      "index": 92,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": -6.0,
+      "iq_file": "iq_92.bin"
+    },
+    {
+      "index": 93,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": -6.0,
+      "iq_file": "iq_93.bin"
+    },
+    {
+      "index": 94,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": -6.0,
+      "iq_file": "iq_94.bin"
+    },
+    {
+      "index": 95,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": -6.0,
+      "iq_file": "iq_95.bin"
+    },
+    {
+      "index": 96,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": -4.0,
+      "iq_file": "iq_96.bin"
+    },
+    {
+      "index": 97,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": -4.0,
+      "iq_file": "iq_97.bin"
+    },
+    {
+      "index": 98,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": -4.0,
+      "iq_file": "iq_98.bin"
+    },
+    {
+      "index": 99,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": -4.0,
+      "iq_file": "iq_99.bin"
+    },
+    {
+      "index": 100,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": -4.0,
+      "iq_file": "iq_100.bin"
+    },
+    {
+      "index": 101,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": -4.0,
+      "iq_file": "iq_101.bin"
+    },
+    {
+      "index": 102,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": -4.0,
+      "iq_file": "iq_102.bin"
+    },
+    {
+      "index": 103,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": -4.0,
+      "iq_file": "iq_103.bin"
+    },
+    {
+      "index": 104,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": -4.0,
+      "iq_file": "iq_104.bin"
+    },
+    {
+      "index": 105,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": -4.0,
+      "iq_file": "iq_105.bin"
+    },
+    {
+      "index": 106,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": -4.0,
+      "iq_file": "iq_106.bin"
+    },
+    {
+      "index": 107,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": -4.0,
+      "iq_file": "iq_107.bin"
+    },
+    {
+      "index": 108,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": -2.0,
+      "iq_file": "iq_108.bin"
+    },
+    {
+      "index": 109,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": -2.0,
+      "iq_file": "iq_109.bin"
+    },
+    {
+      "index": 110,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": -2.0,
+      "iq_file": "iq_110.bin"
+    },
+    {
+      "index": 111,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": -2.0,
+      "iq_file": "iq_111.bin"
+    },
+    {
+      "index": 112,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": -2.0,
+      "iq_file": "iq_112.bin"
+    },
+    {
+      "index": 113,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": -2.0,
+      "iq_file": "iq_113.bin"
+    },
+    {
+      "index": 114,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": -2.0,
+      "iq_file": "iq_114.bin"
+    },
+    {
+      "index": 115,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": -2.0,
+      "iq_file": "iq_115.bin"
+    },
+    {
+      "index": 116,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": -2.0,
+      "iq_file": "iq_116.bin"
+    },
+    {
+      "index": 117,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": -2.0,
+      "iq_file": "iq_117.bin"
+    },
+    {
+      "index": 118,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": -2.0,
+      "iq_file": "iq_118.bin"
+    },
+    {
+      "index": 119,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": -2.0,
+      "iq_file": "iq_119.bin"
+    },
+    {
+      "index": 120,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": 0.0,
+      "iq_file": "iq_120.bin"
+    },
+    {
+      "index": 121,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": 0.0,
+      "iq_file": "iq_121.bin"
+    },
+    {
+      "index": 122,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": 0.0,
+      "iq_file": "iq_122.bin"
+    },
+    {
+      "index": 123,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": 0.0,
+      "iq_file": "iq_123.bin"
+    },
+    {
+      "index": 124,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": 0.0,
+      "iq_file": "iq_124.bin"
+    },
+    {
+      "index": 125,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": 0.0,
+      "iq_file": "iq_125.bin"
+    },
+    {
+      "index": 126,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": 0.0,
+      "iq_file": "iq_126.bin"
+    },
+    {
+      "index": 127,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": 0.0,
+      "iq_file": "iq_127.bin"
+    },
+    {
+      "index": 128,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": 0.0,
+      "iq_file": "iq_128.bin"
+    },
+    {
+      "index": 129,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": 0.0,
+      "iq_file": "iq_129.bin"
+    },
+    {
+      "index": 130,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": 0.0,
+      "iq_file": "iq_130.bin"
+    },
+    {
+      "index": 131,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": 0.0,
+      "iq_file": "iq_131.bin"
+    },
+    {
+      "index": 132,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": 2.0,
+      "iq_file": "iq_132.bin"
+    },
+    {
+      "index": 133,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": 2.0,
+      "iq_file": "iq_133.bin"
+    },
+    {
+      "index": 134,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": 2.0,
+      "iq_file": "iq_134.bin"
+    },
+    {
+      "index": 135,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": 2.0,
+      "iq_file": "iq_135.bin"
+    },
+    {
+      "index": 136,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": 2.0,
+      "iq_file": "iq_136.bin"
+    },
+    {
+      "index": 137,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": 2.0,
+      "iq_file": "iq_137.bin"
+    },
+    {
+      "index": 138,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": 2.0,
+      "iq_file": "iq_138.bin"
+    },
+    {
+      "index": 139,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": 2.0,
+      "iq_file": "iq_139.bin"
+    },
+    {
+      "index": 140,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": 2.0,
+      "iq_file": "iq_140.bin"
+    },
+    {
+      "index": 141,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": 2.0,
+      "iq_file": "iq_141.bin"
+    },
+    {
+      "index": 142,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": 2.0,
+      "iq_file": "iq_142.bin"
+    },
+    {
+      "index": 143,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": 2.0,
+      "iq_file": "iq_143.bin"
+    },
+    {
+      "index": 144,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": 4.0,
+      "iq_file": "iq_144.bin"
+    },
+    {
+      "index": 145,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": 4.0,
+      "iq_file": "iq_145.bin"
+    },
+    {
+      "index": 146,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": 4.0,
+      "iq_file": "iq_146.bin"
+    },
+    {
+      "index": 147,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": 4.0,
+      "iq_file": "iq_147.bin"
+    },
+    {
+      "index": 148,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": 4.0,
+      "iq_file": "iq_148.bin"
+    },
+    {
+      "index": 149,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": 4.0,
+      "iq_file": "iq_149.bin"
+    },
+    {
+      "index": 150,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": 4.0,
+      "iq_file": "iq_150.bin"
+    },
+    {
+      "index": 151,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": 4.0,
+      "iq_file": "iq_151.bin"
+    },
+    {
+      "index": 152,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": 4.0,
+      "iq_file": "iq_152.bin"
+    },
+    {
+      "index": 153,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": 4.0,
+      "iq_file": "iq_153.bin"
+    },
+    {
+      "index": 154,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": 4.0,
+      "iq_file": "iq_154.bin"
+    },
+    {
+      "index": 155,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": 4.0,
+      "iq_file": "iq_155.bin"
+    },
+    {
+      "index": 156,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": 6.0,
+      "iq_file": "iq_156.bin"
+    },
+    {
+      "index": 157,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": 6.0,
+      "iq_file": "iq_157.bin"
+    },
+    {
+      "index": 158,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": 6.0,
+      "iq_file": "iq_158.bin"
+    },
+    {
+      "index": 159,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": 6.0,
+      "iq_file": "iq_159.bin"
+    },
+    {
+      "index": 160,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": 6.0,
+      "iq_file": "iq_160.bin"
+    },
+    {
+      "index": 161,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": 6.0,
+      "iq_file": "iq_161.bin"
+    },
+    {
+      "index": 162,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": 6.0,
+      "iq_file": "iq_162.bin"
+    },
+    {
+      "index": 163,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": 6.0,
+      "iq_file": "iq_163.bin"
+    },
+    {
+      "index": 164,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": 6.0,
+      "iq_file": "iq_164.bin"
+    },
+    {
+      "index": 165,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": 6.0,
+      "iq_file": "iq_165.bin"
+    },
+    {
+      "index": 166,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": 6.0,
+      "iq_file": "iq_166.bin"
+    },
+    {
+      "index": 167,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": 6.0,
+      "iq_file": "iq_167.bin"
+    },
+    {
+      "index": 168,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": 8.0,
+      "iq_file": "iq_168.bin"
+    },
+    {
+      "index": 169,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": 8.0,
+      "iq_file": "iq_169.bin"
+    },
+    {
+      "index": 170,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": 8.0,
+      "iq_file": "iq_170.bin"
+    },
+    {
+      "index": 171,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": 8.0,
+      "iq_file": "iq_171.bin"
+    },
+    {
+      "index": 172,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": 8.0,
+      "iq_file": "iq_172.bin"
+    },
+    {
+      "index": 173,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": 8.0,
+      "iq_file": "iq_173.bin"
+    },
+    {
+      "index": 174,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": 8.0,
+      "iq_file": "iq_174.bin"
+    },
+    {
+      "index": 175,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": 8.0,
+      "iq_file": "iq_175.bin"
+    },
+    {
+      "index": 176,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": 8.0,
+      "iq_file": "iq_176.bin"
+    },
+    {
+      "index": 177,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": 8.0,
+      "iq_file": "iq_177.bin"
+    },
+    {
+      "index": 178,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": 8.0,
+      "iq_file": "iq_178.bin"
+    },
+    {
+      "index": 179,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": 8.0,
+      "iq_file": "iq_179.bin"
+    },
+    {
+      "index": 180,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": 10.0,
+      "iq_file": "iq_180.bin"
+    },
+    {
+      "index": 181,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": 10.0,
+      "iq_file": "iq_181.bin"
+    },
+    {
+      "index": 182,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": 10.0,
+      "iq_file": "iq_182.bin"
+    },
+    {
+      "index": 183,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": 10.0,
+      "iq_file": "iq_183.bin"
+    },
+    {
+      "index": 184,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": 10.0,
+      "iq_file": "iq_184.bin"
+    },
+    {
+      "index": 185,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": 10.0,
+      "iq_file": "iq_185.bin"
+    },
+    {
+      "index": 186,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": 10.0,
+      "iq_file": "iq_186.bin"
+    },
+    {
+      "index": 187,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": 10.0,
+      "iq_file": "iq_187.bin"
+    },
+    {
+      "index": 188,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": 10.0,
+      "iq_file": "iq_188.bin"
+    },
+    {
+      "index": 189,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": 10.0,
+      "iq_file": "iq_189.bin"
+    },
+    {
+      "index": 190,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": 10.0,
+      "iq_file": "iq_190.bin"
+    },
+    {
+      "index": 191,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": 10.0,
+      "iq_file": "iq_191.bin"
+    },
+    {
+      "index": 192,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": 12.0,
+      "iq_file": "iq_192.bin"
+    },
+    {
+      "index": 193,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": 12.0,
+      "iq_file": "iq_193.bin"
+    },
+    {
+      "index": 194,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": 12.0,
+      "iq_file": "iq_194.bin"
+    },
+    {
+      "index": 195,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": 12.0,
+      "iq_file": "iq_195.bin"
+    },
+    {
+      "index": 196,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": 12.0,
+      "iq_file": "iq_196.bin"
+    },
+    {
+      "index": 197,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": 12.0,
+      "iq_file": "iq_197.bin"
+    },
+    {
+      "index": 198,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": 12.0,
+      "iq_file": "iq_198.bin"
+    },
+    {
+      "index": 199,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": 12.0,
+      "iq_file": "iq_199.bin"
+    },
+    {
+      "index": 200,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": 12.0,
+      "iq_file": "iq_200.bin"
+    },
+    {
+      "index": 201,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": 12.0,
+      "iq_file": "iq_201.bin"
+    },
+    {
+      "index": 202,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": 12.0,
+      "iq_file": "iq_202.bin"
+    },
+    {
+      "index": 203,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": 12.0,
+      "iq_file": "iq_203.bin"
+    },
+    {
+      "index": 204,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": 14.0,
+      "iq_file": "iq_204.bin"
+    },
+    {
+      "index": 205,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": 14.0,
+      "iq_file": "iq_205.bin"
+    },
+    {
+      "index": 206,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": 14.0,
+      "iq_file": "iq_206.bin"
+    },
+    {
+      "index": 207,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": 14.0,
+      "iq_file": "iq_207.bin"
+    },
+    {
+      "index": 208,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": 14.0,
+      "iq_file": "iq_208.bin"
+    },
+    {
+      "index": 209,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": 14.0,
+      "iq_file": "iq_209.bin"
+    },
+    {
+      "index": 210,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": 14.0,
+      "iq_file": "iq_210.bin"
+    },
+    {
+      "index": 211,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": 14.0,
+      "iq_file": "iq_211.bin"
+    },
+    {
+      "index": 212,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": 14.0,
+      "iq_file": "iq_212.bin"
+    },
+    {
+      "index": 213,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": 14.0,
+      "iq_file": "iq_213.bin"
+    },
+    {
+      "index": 214,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": 14.0,
+      "iq_file": "iq_214.bin"
+    },
+    {
+      "index": 215,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": 14.0,
+      "iq_file": "iq_215.bin"
+    },
+    {
+      "index": 216,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": 16.0,
+      "iq_file": "iq_216.bin"
+    },
+    {
+      "index": 217,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": 16.0,
+      "iq_file": "iq_217.bin"
+    },
+    {
+      "index": 218,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": 16.0,
+      "iq_file": "iq_218.bin"
+    },
+    {
+      "index": 219,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": 16.0,
+      "iq_file": "iq_219.bin"
+    },
+    {
+      "index": 220,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": 16.0,
+      "iq_file": "iq_220.bin"
+    },
+    {
+      "index": 221,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": 16.0,
+      "iq_file": "iq_221.bin"
+    },
+    {
+      "index": 222,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": 16.0,
+      "iq_file": "iq_222.bin"
+    },
+    {
+      "index": 223,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": 16.0,
+      "iq_file": "iq_223.bin"
+    },
+    {
+      "index": 224,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": 16.0,
+      "iq_file": "iq_224.bin"
+    },
+    {
+      "index": 225,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": 16.0,
+      "iq_file": "iq_225.bin"
+    },
+    {
+      "index": 226,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": 16.0,
+      "iq_file": "iq_226.bin"
+    },
+    {
+      "index": 227,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": 16.0,
+      "iq_file": "iq_227.bin"
+    },
+    {
+      "index": 228,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": 18.0,
+      "iq_file": "iq_228.bin"
+    },
+    {
+      "index": 229,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": 18.0,
+      "iq_file": "iq_229.bin"
+    },
+    {
+      "index": 230,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": 18.0,
+      "iq_file": "iq_230.bin"
+    },
+    {
+      "index": 231,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": 18.0,
+      "iq_file": "iq_231.bin"
+    },
+    {
+      "index": 232,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": 18.0,
+      "iq_file": "iq_232.bin"
+    },
+    {
+      "index": 233,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": 18.0,
+      "iq_file": "iq_233.bin"
+    },
+    {
+      "index": 234,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": 18.0,
+      "iq_file": "iq_234.bin"
+    },
+    {
+      "index": 235,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": 18.0,
+      "iq_file": "iq_235.bin"
+    },
+    {
+      "index": 236,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": 18.0,
+      "iq_file": "iq_236.bin"
+    },
+    {
+      "index": 237,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": 18.0,
+      "iq_file": "iq_237.bin"
+    },
+    {
+      "index": 238,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": 18.0,
+      "iq_file": "iq_238.bin"
+    },
+    {
+      "index": 239,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": 18.0,
+      "iq_file": "iq_239.bin"
+    },
+    {
+      "index": 240,
+      "modulation": "OOK",
+      "label": 0,
+      "snr_db": 20.0,
+      "iq_file": "iq_240.bin"
+    },
+    {
+      "index": 241,
+      "modulation": "4ASK",
+      "label": 1,
+      "snr_db": 20.0,
+      "iq_file": "iq_241.bin"
+    },
+    {
+      "index": 242,
+      "modulation": "AM-DSB",
+      "label": 2,
+      "snr_db": 20.0,
+      "iq_file": "iq_242.bin"
+    },
+    {
+      "index": 243,
+      "modulation": "WBFM",
+      "label": 3,
+      "snr_db": 20.0,
+      "iq_file": "iq_243.bin"
+    },
+    {
+      "index": 244,
+      "modulation": "2FSK",
+      "label": 4,
+      "snr_db": 20.0,
+      "iq_file": "iq_244.bin"
+    },
+    {
+      "index": 245,
+      "modulation": "GFSK",
+      "label": 5,
+      "snr_db": 20.0,
+      "iq_file": "iq_245.bin"
+    },
+    {
+      "index": 246,
+      "modulation": "BPSK",
+      "label": 6,
+      "snr_db": 20.0,
+      "iq_file": "iq_246.bin"
+    },
+    {
+      "index": 247,
+      "modulation": "QPSK",
+      "label": 7,
+      "snr_db": 20.0,
+      "iq_file": "iq_247.bin"
+    },
+    {
+      "index": 248,
+      "modulation": "8PSK",
+      "label": 8,
+      "snr_db": 20.0,
+      "iq_file": "iq_248.bin"
+    },
+    {
+      "index": 249,
+      "modulation": "16QAM",
+      "label": 9,
+      "snr_db": 20.0,
+      "iq_file": "iq_249.bin"
+    },
+    {
+      "index": 250,
+      "modulation": "64QAM",
+      "label": 10,
+      "snr_db": 20.0,
+      "iq_file": "iq_250.bin"
+    },
+    {
+      "index": 251,
+      "modulation": "OFDM",
+      "label": 11,
+      "snr_db": 20.0,
+      "iq_file": "iq_251.bin"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+nohup python3 /root/rml24_three_modes_execution_20261029/fpga_uii_integration_20261031/software_deploy_gain_ui.py final_start > /root/rml24_gain__ui_sync_20261102/final_start.log 2>&1 < /dev/null &
+[1] 7332
+(base) root@U:~# 

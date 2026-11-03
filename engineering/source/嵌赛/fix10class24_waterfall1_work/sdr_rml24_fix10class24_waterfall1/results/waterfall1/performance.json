@@ -1,0 +1,11 @@
+{
+  "images": 6,
+  "render_total_us": 4718,
+  "render_max_us": 2226,
+  "history_bytes": 65584,
+  "history_max_rows": 128,
+  "spectrum_bins": 256,
+  "real_rx_rows_per_image": 52,
+  "synthetic_rows_per_image": 128,
+  "note": "real RX = recovered payload f32 (counts, full-scale 2048), 52 consecutive 1024-sample windows, gate-rejected captures; noise/dual-tone = synthetic host IQ"
+}

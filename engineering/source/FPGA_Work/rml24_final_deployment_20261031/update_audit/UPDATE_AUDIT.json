@@ -1,0 +1,63 @@
+{
+  "updated": "2026-10-31T21:17:16.717228",
+  "scope": "Recent canonical handoffs, patch identity, root execution handoffs and archives through2026-10-31",
+  "rows": [
+    {
+      "item": "History same-frequency class change",
+      "status": "MISSED_UI_PATCH_IDENTIFIED_STAGED_CROSS_BUILT_BOARD_PENDING",
+      "source": "E:/\u5d4c\u8d5b/rml24_history_uptime_fix1_20261029/HANDOFF.md",
+      "detail": "3 consecutive valid new-class observations create a new row; retain previous class; maximum10"
+    },
+    {
+      "item": "Boot-relative history/received time",
+      "status": "MISSED_SAME_UI_PATCH_BOARD_PENDING",
+      "detail": "CLOCK_BOOTTIME HH:MM:SS, boot_id and PREVIOUS RUN; legacy V1 load compatible"
+    },
+    {
+      "item": "SWEEP progress when no signal",
+      "status": "ALREADY_IN_LIVE_BOARD_UI; PATCH_PRESERVES_IT",
+      "detail": "Live source895d82ef...; new patch40c98dc... keeps progress before NoSignal early return"
+    },
+    {
+      "item": "Three modes/history pagination/control",
+      "status": "PREVIOUSLY_BOARD_TESTED_AND_IN_CURRENT_CANDIDATE",
+      "detail": "Source HANDOFF_TEST_RESULTS.md; old same-frequency-only history superseded by new patch"
+    },
+    {
+      "item": "TX console / message selection / restore readback",
+      "status": "INTEGRATED_IN_INDEPENDENT_PC_CONSOLE",
+      "detail": "Real GUI24-class, frequency, gain and message tests recorded; simultaneous multi-carrier entry disabled"
+    },
+    {
+      "item": "Multi-frequency simultaneous source",
+      "status": "SEPARATE_OFFLINE_PREP_AND_OLDER_RF_SHORT_EVIDENCE; NOT_GENERAL_MULTITARGET_PASS",
+      "detail": "Do not replace stable receiver with failed AC scheduling"
+    },
+    {
+      "item": "Gain and1/2/4/8 repeats",
+      "status": "COMPLETED_EXPERIMENT_NO_AUTOMATIC_PARAMETER_PROMOTION",
+      "detail": "Existing independent raw per gain; current default35dB/eight repeats retained"
+    },
+    {
+      "item": "FPGA synchronous PSD BRAM read",
+      "status": "PRESENT_IN_CURRENT_FIX3_RTL_AND_IMPLEMENTATION",
+      "detail": "No use of stale routed checkpoint; prefetch added independently"
+    },
+    {
+      "item": "FPGA prefetch/shared XRT owner/restart guard",
+      "status": "CURRENT_TEST_CANDIDATE; NOT_PERSISTENTLY_DEPLOYED",
+      "detail": "Display HannFFT/PSD only; no claim of scan decision orEnergy/Peak migration"
+    },
+    {
+      "item": "Full unsafe-hardware automatic fallback",
+      "status": "NOT_IMPLEMENTED; FAIL_CLOSED_GUARD_VERIFIED",
+      "detail": "Known limit, not an unnoticed completed update"
+    },
+    {
+      "item": "Multi-target AC",
+      "status": "PREVIOUS_RF_FAILED; SUPERSEDED_FOR_STABLE_MAINCHAIN",
+      "detail": "rml24_ac_execution_20261029/NEXT_AGENT_HANDOFF.md; preserve failed evidence"
+    }
+  ],
+  "live_formal_unchanged": true
+}

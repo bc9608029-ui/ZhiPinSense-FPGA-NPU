@@ -1,0 +1,12 @@
+[Unit]
+Description=One-boot RML24 acceptance reporter (no RF configuration)
+After=rml24-integrated.service rc-local.service network.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/root/miniconda3/envs/torch_v2.0.1_aarch64/bin/python3 /root/rml24_final_install_20261031/board_acceptance_server.py --seconds 600
+TimeoutStartSec=660
+
+[Install]
+WantedBy=multi-user.target

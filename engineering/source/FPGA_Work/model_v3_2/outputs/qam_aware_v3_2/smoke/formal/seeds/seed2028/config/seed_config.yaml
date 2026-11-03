@@ -1,0 +1,15 @@
+experiment_config: configs/qam_aware_v3_2_smoke_full.yaml
+seed: 2028
+output_root: outputs/qam_aware_v3_2/smoke/formal/seeds/seed2028
+training:
+  distillation:
+    enabled: false
+  class_weights:
+    BPSK: 1.0
+    QPSK: 1.0
+    8PSK: 1.0
+    16QAM: 1.0
+    64QAM: 1.0
+    2FSK: 1.0
+    CPFSK: 1.0
+    OFDM: 1.0

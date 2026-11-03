@@ -1,0 +1,22 @@
+baseline_config: configs/baseline.yaml
+output_root: outputs/dual_domain_v1_smoke
+variants: [time_only, frequency_only, time_only_wide, dual]
+model:
+  base_channels: 8
+  wide_base_channels: 12
+  fusion_features: 32
+  dropout: 0.1
+  fft_length: 256
+dataset:
+  train_samples: 672
+  val_samples: 336
+  test_samples: 336
+  num_workers: 0
+training:
+  epochs: 2
+  batch_size: 64
+  early_stopping_patience: 3
+evaluation:
+  batch_size: 128
+  samples_per_modulation_per_snr: 8
+  snr_values: [-20, -10, 0, 10, 20]

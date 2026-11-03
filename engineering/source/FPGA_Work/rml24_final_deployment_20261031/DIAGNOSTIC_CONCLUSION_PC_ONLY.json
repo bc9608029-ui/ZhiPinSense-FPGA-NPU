@@ -1,0 +1,37 @@
+{
+  "diagnostic_rf_result": "2/3 on previously failing sources; not a promotion measurement",
+  "results": [
+    {
+      "index": 0,
+      "expected": 17,
+      "clean_pred": 18,
+      "recovered_counts": {
+        "18": 2,
+        "17": 14
+      },
+      "clean_model_misclassification": true
+    },
+    {
+      "index": 1,
+      "expected": 23,
+      "clean_pred": 23,
+      "recovered_counts": {
+        "23": 11,
+        "15": 5,
+        "10": 1
+      },
+      "clean_model_misclassification": false
+    },
+    {
+      "index": 2,
+      "expected": 10,
+      "clean_pred": 9,
+      "recovered_counts": {
+        "10": 8,
+        "9": 8
+      },
+      "clean_model_misclassification": true
+    }
+  ],
+  "conclusion": "Two of three pure source inputs themselves misclassified by frozen NPU. Receiver-only fix cannot guarantee correct classification; do not modify model or sources to hide this."
+}

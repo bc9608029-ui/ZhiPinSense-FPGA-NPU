@@ -1,0 +1,41 @@
+M29 Phase F5 RML23 23-class live -- RF LO/BW fix + harness PID fix delivery
+===========================================================================
+Status: M29-RML23-LIVE-RF-FIX-READY-FOR-BOARD-TEST (NOT RF_PASS / HARDWARE_PASS)
+
+Original F5 package (preserved, NOT overwritten):
+  dist/sdr_rml23_live_board_package.tar.gz
+    SHA256 cb3f204edfa235b66a829fbdfff0af29012095631221674e6bc476ffc78bd62f
+    bytes 3343378  files 439  (copy: dist/sdr_rml23_live_board_package.F5_ORIGINAL_cb3f204e.tar.gz)
+
+Incremental patch (17 changed/new files -- RF fix + harness fix):
+  dist/sdr_rml23_live_rf_fix_patch.tar.gz
+    SHA256 e988707cf96117743e6dbea6e477b02f35e1f128470c3bd64000da712b3638d8
+    manifest dist/RF_FIX_PATCH_SHA256SUMS.txt (17 lines, 17 files)
+  Changed: board_package/board_gate9_full_chain_rml23.cpp
+           board_package/ui_state_map.hpp
+           sdr_adapter/pluto_device.hpp
+           sdr_adapter/pluto_device_libiio.cpp
+           ui_sw/ui_render.cpp
+           ui_sw/ui_render.hpp
+           scripts/m22_harness.sh
+           scripts/run_gate9_rml23.sh
+           scripts/run_m22_runtime_baseline.sh
+           scripts/run_m22_runtime_regression.sh
+           scripts/test_live_10000_frames.sh
+           scripts/test_live_1000_frames.sh
+           host_tests/build_host_tests.sh
+           host_tests/run_tests.sh
+  New:       board_package/rf_fix_helpers.hpp
+           host_tests/test_rf_fix_rml23.cpp
+           scripts/test_rml23_harness_errata.sh
+
+Full regenerated board package (source-only):
+  dist/sdr_rml23_live_board_package_rf_fix.tar.gz
+    SHA256 e166bb32ce146939528972f7d8123ebc8ff5b5c37bf87db84a696d66ece353be
+    manifest dist/sdr_rml23_live_board_package_rf_fix.SHA256SUMS.txt (441 lines, 441 files)
+
+Verification: both tarballs unpacked to a fresh temp dir and 'sha256sum -c'
+  on their embedded manifests returned "OK" for every file (see stdout above).
+
+Red lines honoured: no model retrain, no RTL/XDC/bitstream/Flash change,
+  no real TX, no RF_PASS/HARDWARE_PASS/PROJECT_COMPLETE written.

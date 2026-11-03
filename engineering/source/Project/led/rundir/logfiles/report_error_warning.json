@@ -1,0 +1,22 @@
+{
+    "all": {
+        "error": [
+        ]
+    },
+    "last_cmd": "load_design",
+    "last_cmd_stage": 2,
+    "load_design": {
+        "error": [
+        ],
+        "log": ">>load_design -stage_elaborate -no_hier\n  -- Analyzing Verilog file 'F:/Project/led/sources/led.v' (VERI-1482)\n  load_design elapsed_time 1.02 seconds, cpu_time 1.06 seconds\n  load_design used memory 12MB, procise used peak memory 842MB, current used memory 695MB\n\n"
+    },
+    "out_of_date": {
+    },
+    "set_device": {
+        "error": [
+        ],
+        "log": ">>set_device fmk230t8\n  set_device elapsed_time 2.79 seconds, cpu_time 2.91 seconds\n  set_device used memory 770MB, procise used peak memory 842MB, current used memory 622MB\n\n"
+    },
+    "timer": {
+    }
+}

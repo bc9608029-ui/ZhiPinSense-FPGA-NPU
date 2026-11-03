@@ -1,0 +1,21 @@
+{
+  "clip_post": 0,
+  "clip_pre": 0,
+  "corr_dc_min": 0.999999979659,
+  "corr_direct_min": 0.999999979598,
+  "frames": 24,
+  "nmse_dc_max": 4.069e-08,
+  "nmse_direct_max": 4.081e-08,
+  "non_finite": 0,
+  "prediction_agreement": {
+    "dc_agrees_direct": "24/24",
+    "dc_agrees_original": "24/24",
+    "dc_correct": "24/24",
+    "direct_agrees_original": "24/24",
+    "direct_correct": "24/24",
+    "original_correct": "24/24",
+    "original_reproduces_arm_a_host_pred": 24
+  },
+  "recovery_assumption": "DIGITAL_IDENTITY_ASSUMED (wide-linear/CFO/timing \u5f85\u677f\u7aef\u9a8c\u8bc1)",
+  "token": "M29-RML24-FIX10CLASS24-ORIGINAL-RADIOML-DC-AB1-DIGITAL-VERIFICATION"
+}

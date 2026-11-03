@@ -1,0 +1,15 @@
+{
+  "frames": 19,
+  "expected_samples": 19456,
+  "actual_samples": 19456,
+  "compared_fields": [
+    "frame_id",
+    "sample_index",
+    "power",
+    "lag_re",
+    "lag_im"
+  ],
+  "mismatches": 0,
+  "pass": true,
+  "note": "Projection required: frozen CSV also contains unrelated INT8 and address columns."
+}

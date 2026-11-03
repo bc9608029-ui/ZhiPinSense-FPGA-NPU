@@ -1,0 +1,93 @@
+{
+  "phase": "M29-Phase-D.1-sensitive-layer-isolation",
+  "scales": {
+    "final_logits": 1.2439321,
+    "classifier_fc1": 0.12692387
+  },
+  "fp32": {
+    "accuracy": 0.5540364583333334,
+    "min_class": 0.40625,
+    "min_class_idx": 10,
+    "min_class_name": "64APSK",
+    "am_ssb_sc_acc": 0.515625,
+    "am_ssb_sc_confusion": {
+      "AM-SSB-WC(17)": 16,
+      "OOK(0)": 3,
+      "AM-SSB-SC(18)": 33,
+      "other": 12
+    }
+  },
+  "output_only_quantized": {
+    "accuracy": 0.546875,
+    "min_class": 0.3125,
+    "min_class_idx": 18,
+    "min_class_name": "AM-SSB-SC",
+    "am_ssb_sc_acc": 0.3125,
+    "am_ssb_sc_confusion": {
+      "AM-SSB-WC(17)": 24,
+      "OOK(0)": 14,
+      "AM-SSB-SC(18)": 20,
+      "other": 6
+    }
+  },
+  "fc1_only_quantized": {
+    "accuracy": 0.5559895833333334,
+    "min_class": 0.40625,
+    "min_class_idx": 15,
+    "min_class_name": "128QAM",
+    "am_ssb_sc_acc": 0.5,
+    "am_ssb_sc_confusion": {
+      "AM-SSB-WC(17)": 17,
+      "OOK(0)": 2,
+      "AM-SSB-SC(18)": 32,
+      "other": 13
+    }
+  },
+  "vendor_full_int8": {
+    "accuracy": 0.5390625,
+    "min_class": 0.078125,
+    "min_class_idx": 18,
+    "min_class_name": "AM-SSB-SC",
+    "am_ssb_sc_acc": 0.078125,
+    "am_ssb_sc_confusion": {
+      "AM-SSB-WC(17)": 39,
+      "OOK(0)": 14,
+      "AM-SSB-SC(18)": 5,
+      "other": 6
+    }
+  },
+  "top1_agreement": {
+    "output_only_vs_vendor_full": 0.8990885416666666,
+    "fp32_vs_vendor_full": 0.615234375,
+    "fc1_only_vs_fp32": 0.9388020833333334
+  },
+  "label_order": [
+    "OOK",
+    "4ASK",
+    "8ASK",
+    "BPSK",
+    "QPSK",
+    "8PSK",
+    "16PSK",
+    "32PSK",
+    "16APSK",
+    "32APSK",
+    "64APSK",
+    "128APSK",
+    "16QAM",
+    "32QAM",
+    "64QAM",
+    "128QAM",
+    "256QAM",
+    "AM-SSB-WC",
+    "AM-SSB-SC",
+    "AM-DSB-WC",
+    "AM-DSB-SC",
+    "FM",
+    "GMSK",
+    "OQPSK"
+  ],
+  "split": "radioml2018_validation",
+  "test_split_touched": false,
+  "read_only": true
+}

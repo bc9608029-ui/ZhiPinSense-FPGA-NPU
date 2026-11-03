@@ -1,0 +1,27 @@
+# Tiny ablation spec for rehearsing the selection step.  Uses the full smoke
+# config as the experiment so the loader can resolve ``model`` at every level.
+experiment_config: configs/qam_aware_v3_2_smoke_full.yaml
+output_root: outputs/qam_aware_v3_2/smoke/ablation
+ablation_epochs: 1
+
+selection:
+  scope: train/validation only
+  metric: val_macro_f1
+  tiebreak: val_accuracy
+  forbid_peek: [test, v2_compatible, final_blind_test]
+
+variants:
+  a1_zero_gated_plain:
+    description: "V2 + zero-gated QAM branch, plain cross-entropy"
+    distillation: {enabled: false}
+    class_weights: {BPSK: 1.0, QPSK: 1.0, 8PSK: 1.0, 16QAM: 1.0, 64QAM: 1.0, 2FSK: 1.0, CPFSK: 1.0, OFDM: 1.0}
+
+  a2_zero_gated_distill:
+    description: "A1 + knowledge distillation"
+    distillation: {enabled: true, temperature: 4.0, alpha: 0.7}
+    class_weights: {BPSK: 1.0, QPSK: 1.0, 8PSK: 1.0, 16QAM: 1.0, 64QAM: 1.0, 2FSK: 1.0, CPFSK: 1.0, OFDM: 1.0}
+
+  a3_distill_mild_qam_105:
+    description: "A2 + mild QAM weights (16QAM/64QAM = 1.05)"
+    distillation: {enabled: true, temperature: 4.0, alpha: 0.7}
+    class_weights: {BPSK: 1.0, QPSK: 1.0, 8PSK: 1.0, 16QAM: 1.05, 64QAM: 1.05, 2FSK: 1.0, CPFSK: 1.0, OFDM: 1.0}

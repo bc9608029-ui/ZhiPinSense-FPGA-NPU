@@ -1,0 +1,469 @@
+                                                                                                                                                            2024 IEEE International Conference on Communications (ICC): Cognitive Radio and AI-Enabled Networks
+
+
+
+
+                                                                                                                                                     Adaptive Denoising With Efficient Channel
+                                                                                                                                                   Attention for Automatic Modulation Recognition
+                                                                                                                                                                                   Hao Zhu∗ , Yuan Ma∗ , Xingjian Zhang† , and Caiyong Hao‡§
+                                                                                                                                                                             ∗ College of Electronics and Information Engineering, Shenzhen University
+                                                                                                                                                               † College of Electronics and Information Engineering, Harbin Institute of Technology (Shenzhen)
+                                                                                                                                                                                 ‡ Shenzhen Station, State Radio Monitoring Center, Shenzhen, China
+                                                                                                                                                                                 § School of Electronic Information, Wuhan University, Wuhan, China
+
+                                                                                                                                                                 Email: {2110436240, mayuan}@szu.edu.cn, x.zhang@hit.edu.cn, and haocaiyong@whu.edu.cn
+
+
+                                                                                                                                                 Abstract—Automatic modulation recognition (AMR) is crucial                   type of the received signals is then determined by comparing
+                                                                                                                                              for efficient modulation type recognition in modern wireless sys-               the likelihood ratio with a predefined threshold. Although
+                                                                                                                                              tems, but its performance suffers from low signal-to-noise ratios               likelihood-based methods are optimal in the Bayesian sense,
+                                                                                                                                              (SNR). This paper proposes an adaptive denoising automatic
+ICC 2024 - IEEE International Conference on Communications | 978-1-7281-9054-9/24/$31.00 ©2024 IEEE | DOI: 10.1109/ICC51166.2024.10622929
+
+
+
+
+                                                                                                                                              modulation recognition network (AD-AMR Net) to improve its                      they often require high computational complexity and prior
+                                                                                                                                              performance, which incorporates an adaptive denoising module                    knowledge for modulation recognition, which would be sensi-
+                                                                                                                                              (ADM) to alleviate noise and a feature extraction module (FEM)                  tive to unknown channel conditions [7]. Feature-based methods
+                                                                                                                                              to extract multi-scale features from the denoised signals. Com-                 have been shown to give sub-optimal solutions but are easier to
+                                                                                                                                              pared to conventional AMR schemes, AD-AMR Net demonstrates                      be implemented and have lower computational complexity [8],
+                                                                                                                                              better recognition accuracy under low SNRs, achieving 84.8%
+                                                                                                                                              average accuracy in the 0 - 10 dB range versus 80 - 82%                         in which the modulation type is determined using relevant
+                                                                                                                                              for conventional methods. Overall, the proposed model achieves                  features from the received signals.
+                                                                                                                                              64.6% accuracy on the RadioML dataset, substantially outper-                       Recently, Deep Learning (DL) has been employed in AMR
+                                                                                                                                              forming previous deep learning techniques. Key innovations of                   to autonomously extract complex features directly from raw
+                                                                                                                                              adaptive denoising approach and multi-scale feature extraction                  signals. O’Shea et al. [9] proposed a convolutional neu-
+                                                                                                                                              enable major performance gains in low SNR scenarios.
+                                                                                                                                                 Index Terms—Automatic modulation recognition, deep learn-                    ral network (CNN) for AMR. Their work originated DL
+                                                                                                                                              ing, efficient channel attention, adaptive denoising.                           in AMR and achieved better performance than traditional
+                                                                                                                                                                                                                              methods that use hand-crafted features. Though pioneering,
+                                                                                                                                                                        I. I NTRODUCTION                                      their model does not consider real environment interfer-
+                                                                                                                                                                                                                              ences. Sainath et al. [10] combined convolutional layers,
+                                                                                                                                                 Automatic modulation recognition (AMR) is crucial for
+                                                                                                                                                                                                                              long short-term memory (LSTM), and fully connected lay-
+                                                                                                                                              modern wireless communication systems to efficiently clas-
+                                                                                                                                                                                                                              ers to extract spatial and temporal features from the input
+                                                                                                                                              sify modulation types, laying the groundwork for subsequent
+                                                                                                                                                                                                                              signals. Unfortunately, LSTM struggles with long input se-
+                                                                                                                                              signal processing and enhancing communication security and
+                                                                                                                                                                                                                              quences. Liu et al. [11] employs residual network (ResNet) for
+                                                                                                                                              efficiency. AMR’s role extends beyond spectrum management;
+                                                                                                                                                                                                                              AMR, which uses skip connection [12] to reduce the vanishing
+                                                                                                                                              it is pivotal in distinguishing between jamming noise and
+                                                                                                                                                                                                                              gradient problem of deep neural networks. Nonetheless, it does
+                                                                                                                                              legitimate signals, thereby ensuring the reliability and integrity
+                                                                                                                                                                                                                              not address low SNR issues. Recent works have focused on
+                                                                                                                                              of communications in scenarios susceptible to interference and
+                                                                                                                                                                                                                              frequency domain features. Zhang et al. [13] introduced an
+                                                                                                                                              malicious disruptions [2]. This capability is increasingly vital
+                                                                                                                                                                                                                              adaptive wavelet network (AWN) that uses adaptive wavelet
+                                                                                                                                              in complex wireless environments characterized by pervasive
+                                                                                                                                                                                                                              transforms to extract multi-level frequency features from sig-
+                                                                                                                                              noise, interference, and distortion, where traditional AMR
+                                                                                                                                                                                                                              nals. Zhang et al. [14] proposed a frequency learning attention
+                                                                                                                                              approaches often falter [3].
+                                                                                                                                                                                                                              network that integrated squeeze and excitation (SE) blocks [15]
+                                                                                                                                                 Generally, AMR can be addressed as a pattern recognition
+                                                                                                                                                                                                                              with ResNet to further improve the performance of AMR. On
+                                                                                                                                              task. Traditional techniques used for AMR tasks can be divided
+                                                                                                                                                                                                                              this basis, Zhang et al. [16] proposed a network that uses
+                                                                                                                                              into two categories: likelihood-based methods [4] and feature-
+                                                                                                                                                                                                                              frequency domain features to improve performance under low
+                                                                                                                                              based methods [5]. Likelihood-based methods treat AMR as a
+                                                                                                                                                                                                                              SNRs but still struggles with long input sequences of wideband
+                                                                                                                                              multiple-hypothesis testing problem [6], make assumptions for
+                                                                                                                                                                                                                              signals.
+                                                                                                                                              different modulation schemes, and compute the likelihood ratio
+                                                                                                                                                                                                                                 To address the above limitations, this paper proposes a novel
+                                                                                                                                              of received signals under different hypotheses. The modulation
+                                                                                                                                                                                                                              deep-learning framework for AMR, named adaptive denoising
+                                                                                                                                                 This work was supported in part by the National Natural Science Foundation   automatic modulation recognition network (AD-AMR Net),
+                                                                                                                                              of China under Grant 62101295; in part by the Young Elite Scientists Spon-      which significantly improves the performance of AMR under
+                                                                                                                                              sorship Program by CAST under Grant 2020QNRC001 and 2023QNRC001;                low SNR conditions, and is time-efficient to deal with long
+                                                                                                                                              in part by the Shenzhen Natural Science Fund (Stable Support Program) under
+                                                                                                                                              Grant GXWD20231129104413002; and in part by the Guangdong Office of             input sequence of wideband signals. The main contributions
+                                                                                                                                              Education under Grant 2023KTSCX229. (Corresponding author: Yuan Ma)             of this paper are summarized as follows:
+
+
+
+                                                                                                                                            978-1-7281-9054-9/24/$31.00 ©2024 IEEE                                      2113
+                                                                                                                                                   Authorized licensed use limited to: SHENZHEN UNIVERSITY. Downloaded on September 01,2026 at 02:13:53 UTC from IEEE Xplore. Restrictions apply.
+             2024 IEEE International Conference on Communications (ICC): Cognitive Radio and AI-Enabled Networks
+
+
+
+
+      Input Signal                    Corrected Signal
+                        MSE Loss                                      Feature                    Fully   Softmax                CE Loss
+                                                                     Extraction                Connected
+                                                                      Module           Flatten   Layer
+                 Adaptive Denoising                                   (FEM)                     (FCL)
+                  Module (ADM)
+
+
+                                                 Fig. 1. The overview of the proposed AD-AMR Net.
+
+
+
+
+   1) A novel Adaptive Denoising Module (ADM) is proposed                   B. Adaptive Denoising Module
+       by integrating Efficient Channel Attention (ECA) [17]
+       into the WaveUNet [18] architecture, which can adap-                    To address noise and offset in complex time series, we
+       tively focus on the most relevant features and effectively           integrated ECA with WaveUNet to create the ADM. This
+       suppress noise simultaneously.                                       design enhances signal clarity by selectively suppressing noise
+   2) An Efficient Residual Shrinkage Block (ERSB) is pro-                  while maintaining the original signal’s integrity. Empirical
+       posed to improve Residual Shrinkage Blocks (RSB) [19]                evidence supports the efficacy of this technique, showing it
+       for feature extraction. By replacing the heavy SE block              produces a denoised signal version, effectively isolating clean
+       in RSB with lightweight ECA, the proposed ERSB mod-                  components from noise and offsets. [21]. By passing noisy
+       ule can extract rich multi-channel features with lower               signals through the ADM, we can disentangle the clean signal
+       computation costs. Therefore, compared to RSB, the                   components from the noise and offsets.
+       proposed ERSB significantly reduces model complexity                    The ADM architecture, depicted in the left part of Fig. 2,
+       while still effectively integrating multi-scale representa-          employs a sequence of downsample and upsample blocks to
+       tions from the denoised signals.                                     enhance signal quality by integrating key information and
+   3) In addition, the proposed ADM is designed to be more                  reducing noise. Initially, the signal undergoes L downsample
+       easily integrated into existing models. We verify this               blocks, each comprising a 1D convolutional layer with a kernel
+       capability by incorporating the ADM into current state-              size of 15, followed by downsampling and an Efficient Channel
+       of-the-art networks. Results show integrating the ADM                Attention (ECA) module. This process condenses information,
+       can improve the average performance of these models by               focusing on broader signal patterns and diminishing fine-
+       2 - 7% in the 0 - 10 dB SNR range, with manageable ad-               grained noise. Subsequently, L upsample blocks, each featur-
+       ditional computational costs. This verifies the module’s             ing a 1D convolutional layer (kernel size 5), upsampling, and
+       effectiveness and versatility to improve performance                 an ECA, refine the resolution, re-incorporating details from
+       under low SNRs across various architectures.                         the broader context. ECAs within these blocks are designed
+   The performance of the proposed scheme is verified by nu-                to emphasize salient features. Skip connections facilitate the
+merical analyses and further tested on the RadioML 2018.01A                 merging of local and global features, ensuring comprehensive
+dataset [20]. It demonstrates better performance and time                   context integration. A concluding 1D convolutional layer (ker-
+efficiency compared with conventional schemes.                              nel size 1) synthesizes the denoised output by consolidating
+                                                                            channel-wise information, allowing the ADM to effectively
+    II. P ROPOSED A DAPTIVE D ENOISING AUTOMATIC                            distinguish between noise and relevant signal components
+          M ODULATION R ECOGNITION N ETWORK                                 through multi-scale processing.
+A. Model Architecture
+   Fig. 1 depicts the overall architecture of the proposed AD-              C. Feature Extraction Module
+AMR Net. The input signal x ∈ R2×L is first input into
+the ADM to automatically extract pertinent information and                     FEM is designed to extract multi-scale features from the de-
+lower the noise level, in which we also integrated ECA to                   noised signals. The FEM is built by stacking multiple ERSBs
+improve its generalization ability. The output of the ADM is                in a hierarchical manner adopted from the ResNet architecture.
+then fed into the FEM that is built by stacking multiple ERSBs              Based on the RSB of Deep Residual Shrinkage Network [19],
+to extract multi-scale features from the denoised signals. The              ERSB replaces the original SE block with a more efficient
+ERSB is an improved version of RSB that also utilizes ECA                   ECA module. As shown in the top right of Fig. 2. ERSB can
+to improve performance and reduce computational complexity.                 be broken down into two convolutional layers with an identity
+Finally, the extracted features are flattened and put into a Fully          shortcut, an adaptive soft-thresholding operation, and an ECA
+Connected Layer (FCL) followed by a softmax layer to obtain                 module. The identity shortcuts allow unimpeded information
+the predicted probability distribution of modulation types.                 flow and gradient propagation through the network during
+
+
+
+                                                                       2114
+    Authorized licensed use limited to: SHENZHEN UNIVERSITY. Downloaded on September 01,2026 at 02:13:53 UTC from IEEE Xplore. Restrictions apply.
+               2024 IEEE International Conference on Communications (ICC): Cognitive Radio and AI-Enabled Networks
+
+
+
+
+                                                                                                                                                                 Element-wise
+                              Adaptive Denoising Module                      Corrected Signal                                                                    multiplication
+                                       (ADM)                                                                                                                     Element-wise
+                                                                                                                               Conv1d, BN, ReLU
+                                                                                                                                                                  summation
+               Raw Signal
+                                                                                                                                                                      Soft
+                                                                                                                               Conv1d, BN, ReLU                   thresholding
+
+
+                                                                       1D Convolution, Kernel Size 1
+                                                                                                                                         Absolute,
+                                                                                                                   Identity                                          Efficient
+                                                 Crop and concate                                                                         GAP
+                                                                                                                   Shortcut
+                                                                                                                                                                    Residual
+     1D Convolution, Kernel Size 15                                    1D Convolution, Kernel Size 5                                                                Shrinkage
+                                            Crop and concate                                                                                         Efficient        Block
+             Downsampling                                                      Upsampling
+                                                                                                                                                     Channel         (ERSB)
+       Efficient Channel Attention                                      Efficient Channel Attention                                                  Attention
+
+                 Downsampling block 1                                                Upsampling block 1
+
+                                            Crop and concate
+         Downsampling block 2                                               Upsampling block 2
+
+                                                                                                                               Efficient Channel Attention (ECA)
+                   ...                                                              ...
+                                                                                                                                       Conv1d
+                                            Crop and concate
+         Downsampling block L                                               Upsampling block L                                GAP
+                                                                                                               L                                                   L
+
+
+
+                                      1D Convolution, Kernel Size 15
+                                                                                                                     C                                                   C
+
+
+    Fig. 2. The left part illustrates the architecture of ADM. The top right part is the proposed ERSB. The bottom right presents the detail of ECA.
+
+
+
+
+training. Soft-thresholding, which is defined as:                                                tention mechanism that uses a squeeze and excitation operation
+                                                                                                to capture channel-wise dependencies. However, the SE block
+                               x − λ, x > λ
+                              
+                                                                                                 relies on a computationally expensive fully connected layer
+        soft-threshold(x, λ) = 0,          −λ ≤ x ≤ λ                                     (1)    to learn attention weights, which may lead to overfitting. To
+                              
+                                 x + λ, x < −λ,                                                  address this issue, we introduce the ECA module, a lightweight
+                              
+
+has been widely used in signal processing for noise sup-                                         yet effective channel attention mechanism designed specifi-
+pression by zeroing out insignificantly small values. Rather                                     cally for high generalization ability. As shown in the bottom
+than using traditional hand-crafted filters that require expert                                  right of Fig. 2, the ECA module consists of a global average
+knowledge, the adaptive soft-thresholding operation inside the                                   pooling (GAP) layer, a 1D convolutional layer, and a sigmoid
+ERSB is trained to determine the threshold automatically.                                        activation, therefore requiring far fewer parameters than the
+The ECA module helps refine the features by integrating                                          SE block. The GAP layer summarizes feature maps into a
+information across channels, which uses fewer parameters and                                     global context vector that captures cross-channel dependen-
+provides better generalization ability than the SE module. By                                    cies. The 1D convolutional layer then transforms this context
+stacking multiple ERSBs with identity shortcuts, the FEM                                         into channel-wise attention weights, which are scaled between
+can hierarchically extract multiscale representations of the                                     0 and 1 by the sigmoid function, which is defined as:
+input features while zeroing out irrelevant features adaptively.                                                                             1
+                                                                                                                    sigmoid(x) =                    .                             (2)
+Together, the identity shortcuts, soft-thresholding operation,                                                                          1 + exp(−x)
+and ECA module allow the FEM to robustly extracts clean
+and informative multiscale features from input signals.                                          By performing element-wise multiplication with the input fea-
+   The detailed configuration of the FEM is outlined in Table I.                                 tures, the ECA highlights informative features and suppresses
+Unlike the setup in computer vision tasks, the FEM uses 1D                                       less relevant ones. Despite its simplicity, empirical results show
+convolutional layers as stems and uses fewer output channels                                     that the ECA module can achieve better performance than the
+to fit in the task of signal classification while reducing com-                                  SE block while using fewer parameters and less computation.
+putational complexity.                                                                           E. Fully Connected Layer
+D. Efficient Channel Attention                                                                      The goal of the FCL is to map the extracted features to
+ Channel attention mechanisms are widely used in today’s                                         the corresponding modulation types. Extracted signal features
+CNNs for various tasks. The SE block is a popular channel at-                                    from the FEM first get flattened into a long one-dimensional
+
+
+
+                                                                                           2115
+    Authorized licensed use limited to: SHENZHEN UNIVERSITY. Downloaded on September 01,2026 at 02:13:53 UTC from IEEE Xplore. Restrictions apply.
+             2024 IEEE International Conference on Communications (ICC): Cognitive Radio and AI-Enabled Networks
+
+
+                              TABLE I                                       Algorithm 1 Offline training process of AD-AMR Net.
+               T HE DETAILED CONFIGURATION OF FEM.                           1: Input: The training dataset D = {(xi , mi )}N
+                                                                                                                            i=1 , the
+            Layer         Kernel Size    Stride    Channel                      number of epochs E.
+          Convolution         3            1         16                      2: Output: The trained AD-AMR Net.
+            ERSB              3            2         16                      3: Initialize: The AD-AMR Net.
+            ERSB              3            2         32
+            ERSB              3            2         32                      4: for e = 1 to E do
+            ERSB              3            2         64                      5:   for i = 1 to N do
+                                                                             6:       x̂i ← ADM(xi )
+                             TABLE II                                        7:       fi ← FEM(x̂i )
+                        DATASET I NFORMATION                                 8:       ŷi ← FC(fi )
+       Dataset Name          RadioML 2018.01A
+                                                                             9:       L ← LMSE + LCE
+                             OOK, 4ASK, 8ASK, BPSK, QPSK,                   10:       Backward(L)
+                             8PSK, 16PSK, 32PSK, 16APSK,                    11:       Update(ADM, FEM, FC)
+                             32APSK,     64APSK, 128APSK,
+    Modulation Schemes       16QAM, 32QAM, 64QAM, 128QAM,
+                                                                            12:   end for
+                             256QAM, AM-SSB-WC, AM-SSB-                     13: end for
+                             SC, AM-DSB-WC, AM-DSB-SC,
+                             FM, GMSK, OQPSK
+        SNR Range            -20:2:30 dB
+      Sample Number          2559604                                        Algorithm 2 Online inference process of AD-AMR Net.
+                                                                             1: Input: The trained AD-AMR Net, the received signal
+                                                                                x ∈ R2×L .
+tensor. The FCL then projects the long tensor into a tensor                  2: Output: The predicted modulation type m̂.
+with the same length as the number of modulation types,                      3: Initialize: None.
+followed by a softmax function to obtain the probability of                  4: x̂ ← ADM(x)
+each modulation type, in which the probability of modulation                 5: f ← FEM(x̂)
+type mi is calculated as                                                     6: ŷ ← FC(f)
+                                                                             7: m̂ ← argmax(ŷ)
+                                       exp(xi )
+       P(m = mi |x) = softmax(xi ) = PM            ,                  (3)
+                                      j=1 exp(xj )
+
+where M denotes the number of modulations, xi denotes the                     The final loss function is the weighted sum of the MSE and
+i-th element of the output tensor of the fully connected layer,             cross-entropy losses, which is formulated as:
+and x represents the input signal. The predicted modulation
+type is the one with the highest probability.                                                         L = αLMSE + LCE .                              (6)
+
+F. Loss Function                                                               To accommodate the diverse noise levels and characteristics
+   The ADM performs unsupervised learning, trained to fit the               inherent in AMR tasks, our approach incorporates a weighting
+input noisy signals. The first part of the loss function is thus            factor α, to balance between recovery loss and task-specific
+the mean squared error (MSE) between the input noisy signals                loss. By adjusting α, we finely tune the model’s ability
+and the output denoised signals, which can be formulated as:                to mitigate noise while preserving relevant information for
+                                                                            each specific task. Based on empirical evaluation, we found
+                               1 X
+                                     N                                      setting α to 0.1 effectively balances denoising and information
+                    LMSE =           (xi − x̂i )2 ,                   (4)   retention across different AMR scenarios.
+                               N i=1
+                                                                               The proposed framework consists of an offline training
+where xi denotes the input noisy signal, x̂i denotes the output             process and an online inference process.
+denoised signal, and N denotes the number of samples.                              III. E XPERIMENTAL R ESULTS AND D ISCUSSION
+   The second part of the loss function is the cross-entropy
+loss between the predicted and ground truth modulation types,               A. Evaluation Settings and Datasets
+which can be addressed as:                                                     In our experimental framework, we applied a consistent
+                                                                            training methodology to both the proposed AD-AMR Net
+                                 N   M
+                         1 XX                                               and the baseline models to ensure fairness and accuracy
+                 LCE = −           yij log(ŷij ),                    (5)   in our comparative analysis. All models were trained using
+                         N i=1 j=1
+                                                                            PyTorch on an NVIDIA RTX 3090 GPU, following a uniform
+where yij denotes the ground truth label of the i-th sample                 procedure: 100 epochs of training with the Adam optimizer
+for the j-th modulation, ŷij denotes the predicted probability             at a learning rate of 0.001, augmented by early stopping
+of the i-th sample for the j-th modulation, and M denotes the               and the reduce learning rate on plateau strategy to optimize
+number of modulations.                                                      performance. This uniform approach extended to the use of
+
+
+
+                                                                       2116
+    Authorized licensed use limited to: SHENZHEN UNIVERSITY. Downloaded on September 01,2026 at 02:13:53 UTC from IEEE Xplore. Restrictions apply.
+             2024 IEEE International Conference on Communications (ICC): Cognitive Radio and AI-Enabled Networks
+
+
+
+
+Fig. 3. Accuracy of different models over SNRs on RadioML 2018.01A                     Fig. 4. Ablation study on RadioML 2018.01A dataset.
+dataset.
+
+
+                          TABLE III                                                                       TABLE IV
+          P ERFORMANCE ON R ADIO ML 2018.01A DATASET                                   A BLATION S TUDY ON R ADIO ML 2018.01A DATASET
+
+                                                    0 - 10dB                                                                      0 - 10dB
+     Model           OA      F1-score    Kappa                  Param             Model           OA       F1-score    Kappa                  Param
+                                                    Avg Acc                                                                       Avg Acc
+    CNN [9]        0.5820     0.5854     0.5639     0.7229      0.48M         AD-AMR - 1         0.6235      0.6269     0.6072    0.8018       0.14M
+  CLDNN [10]       0.5772     0.5755     0.5588     0.7213      1.32M             ∆             -2.25%      -2.11%     -2.34%     -4.62%      -0.11M
+   ResNet [11]     0.6211     0.6226     0.6047     0.8072      7.23M         AD-AMR - 2         0.6241      0.6254     0.6078    0.8097       0.25M
+   SENet [14]      0.6327     0.6391     0.6168     0.8287      7.39M             ∆             -2.23%      -2.26%     -2.28%     -3.83%      -0.00M
+   AWN [13]        0.6262     0.6262     0.6099     0.8036      0.38M         AD-AMR - 3         0.6067      0.6086     0.5896    0.7794      0.14M
+  AD-AMR Net       0.6460     0.6480     0.6306     0.8480      0.25M             ∆             -3.93%      -3.94%     -4.10%     -6.86%      -0.11M
+                                                                              AD-AMR Net         0.6460      0.6480     0.6306    0.8480       0.25M
+
+
+
+the RadioML 2018.01A [20] dataset for both training and
+                                                                            C. Results
+evaluation, ensuring that any observed performance differences
+are directly attributable to the models’ architectures and not                Fig. 3 and Table. III show the performance of different
+to variances in training conditions. The detailed dataset in-               models on the RadioML 2018.01A dataset. As shown in
+formation is listed in Table II. The dataset was partitioned                Fig. 3, the proposed AD-AMR Net model achieves better
+into training, validation, and test sets in a 6:2:2 ratio for               accuracy than that of other existing methods. In summary, the
+each SNR. We confirm that the performance of the baseline                   proposed AD-AMR Net attains an overall accuracy of 64.6%,
+models, under these standardized conditions, closely matches                F1 score of 64.8%, and Kappa score of 63.1%. It’s worth
+the results reported in their respective original publications,             pointing out that our model maintains accuracy in low SNR
+validating our experimental setup and the comparative efficacy              environments, in which it achieves 84.8% accuracy in the 0 -
+of AD-AMR Net.                                                              10 dB SNR range compared to 80 - 82% of other methods.
+                                                                            More importantly, the proposed scheme achieves the highest
+B. Baseline and Metrics                                                     accuracy with a reduced number of parameters.
+  For evaluation, the following methods will be compared                    D. Ablation Studies
+with the proposed scheme as benchmarks:
+                                                                               Ablation experiments were conducted to assess the contri-
+   1) CNN [9]: CNN is a vanilla convolutional neural network                butions of each proposed module. The experimental configu-
+      that uses convolutional layers to extract features from               rations are as follows:
+      complex signal inputs and classify modulation types.
+   2) CLDNN [10]: CLDNN combines CNN and RNN ar-                                                        TABLE V
+      chitectures, using four convolutional layers, one LSTM                 D ISCUSSIONS ON THE PERFORMANCE OF EXISTING MODELS WITH ADM
+      layer, and two fully connected layers.
+   3) ResNet [11]: ResNet is a deep convolution network                                                                            0 - 10dB
+                                                                                  Model           OA        F1-score    Kappa                  Param
+      architecture that uses skip connection to reduce the                                                                         Avg Acc
+                                                                               ADM-CNN           0.6157     0.6138      0.5990     0.7896      0.59M
+      vanishing gradient problem of deep neural networks.                         ∆             +3.37%      +3.29%      +3.51%     +6.67%      +0.11M
+   4) SENet [14]: SENet integrated squeeze and excitation                     ADM-CLDNN         0.5994       0.6126      0.5820    0.7638       1.43M
+      (SE) blocks with ResNet to improve feature learning.                        ∆             +2.22%      +3.71%      +2.32%     +4.25%      +0.11M
+   5) AWN [13]: Adaptive Wavelet Network (AWN) utilizes                        ADM-AWN          0.6300      0.6300       0.6139    0.8271       0.49M
+                                                                                  ∆             +0.38%      +0.38%       +0.4%     +2.35%      +0.11M
+      wavelet transforms to extract frequency information.
+  We use the overall accuracy (OA), macro-averaged F1-score,
+Kappa coefficient, and number of parameters as the evaluation                   1) AD-AMR Net: The full proposed model.
+metrics.                                                                        2) AD-AMR - 1: The proposed model without the ADM.
+
+
+
+                                                                        2117
+    Authorized licensed use limited to: SHENZHEN UNIVERSITY. Downloaded on September 01,2026 at 02:13:53 UTC from IEEE Xplore. Restrictions apply.
+             2024 IEEE International Conference on Communications (ICC): Cognitive Radio and AI-Enabled Networks
+
+
+   3) AD-AMR - 2: The proposed model without the ERSB                       the proposed AD-AMR Net architecture achieves better per-
+      In the FEM.                                                           formance on the RadioML 2018.01A dataset compared with
+   4) AD-AMR - 3: The proposed model without both the                       existing schemes.
+      ADM and ERSB in the FEM.
+                                                                                                           R EFERENCES
+   Table IV presents our ablation study, highlighting the impact             [1] Z. Zhu and A. K. Nandi, Automatic modulation classification: principles,
+of the ADM and the ERSB in the AD-AMR Net. Removal of                            algorithms and applications. John Wiley & Sons, 2015.
+the ADM (AD-AMR -1) significantly reduces accuracy by 2 -                    [2] D. Boudreau, C. Dubuc, F. Patenaude, M. Dufour, J. Lodge, and
+                                                                                 R. Inkol, “A fast automatic modulation recognition algorithm and its
+5%, underscoring its importance in noise mitigation, crucial                     implementation in a spectrum monitoring application,” in Proc. 21st
+for applications like signal jamming detection. On the other                     Century Mil. Commun. Archit. Technol. Inf. Superiority, vol. 2, Los
+hand, excluding the ERSB (AD-AMR - 2) slightly affects                           Angeles, CA, USA, Oct. 2000, pp. 732–736.
+                                                                             [3] R. Li, Z. Zhao, X. Zhou, G. Ding, Y. Chen, Z. Wang, and H. Zhang,
+performance, with a negligible impact on the parameter count,                    “Intelligent 5g: When cellular networks meet artificial intelligence,”
+suggesting its utility in a resource-efficient version of the                    IEEE Trans. Wireless Commun., vol. 24, no. 5, pp. 175–183, Oct. 2017.
+framework suitable for user equipment (UE). The combined                     [4] F. Hameed, O. A. Dobre, and D. C. Popescu, “On the likelihood-based
+                                                                                 approach to modulation classification,” IEEE Trans. Wireless Commun.,
+removal of both modules (AD-AMR - 3) leads to the most                           vol. 8, no. 12, pp. 5884–5892, Dec. 2009.
+considerable accuracy decline, demonstrating their synergis-                 [5] A. Hazza, M. Shoaib, S. A. Alshebeili, and A. Fahad, “An overview of
+tic effect in maintaining high performance under low SNR                         feature-based methods for digital modulation classification,” in Proc. Int.
+                                                                                 Conf. Commun. Signal Process. Appl., Sharjah, United Arab Emirates,
+conditions. Our AD-AMR Net is already optimized for low-                         Feb. 2013, pp. 1–6.
+computation devices, striking a balance between performance                  [6] J. L. Xu, W. Su, and M. Zhou, “Software-defined radio equipped with
+and efficiency. In highly constrained scenarios, selectively                     rapid modulation recognition,” IEEE Trans. Veh. Technol., vol. 59, no. 4,
+                                                                                 pp. 1659–1667, Feb. 2010.
+removing the ADM further streamlines the model, offering a                   [7] O. A. Dobre, A. Abdi, Y. Bar-Ness, and W. Su, “Survey of auto-
+practical option for the most resource-sensitive applications.                   matic modulation classification techniques: classical approaches and new
+This adjustment, while enhancing computational efficiency,                       trends,” IET Commun., vol. 1, no. 2, pp. 137–156, Apr. 2007.
+                                                                             [8] E. Moser, M. K. Moran, E. Hillen, D. Li, and Z. Wu, “Automatic
+incurs a slight accuracy trade-off, maintaining a viable per-                    modulation classification via instantaneous features,” in Proc. IEEE Nat.
+formance level for a wide range of scenarios.                                    Aerosp. Electron. Conf. (NAECON), Dayton, Ohio, USA, Jun. 2015, pp.
+                                                                                 218–223.
+                                                                             [9] T. J. O’Shea, J. Corgan, and T. C. Clancy, “Convolutional radio mod-
+E. Discussions                                                                   ulation recognition networks,” in Proc. 17th Int. Conf. Eng. App. Neur.
+                                                                                 Netw., Aberdeen, UK, Aug. 2016, pp. 213–226.
+   Since the ADM can be used as a standalone module                         [10] T. N. Sainath, O. Vinyals, A. Senior, and H. Sak, “Convolutional, long
+that can be integrated into various existing models, we also                     short-term memory, fully connected deep neural networks,” in Proc.
+conducted experiments to assess the plug-and-play ability of                     IEEE Int. conf. on Acoust., Speech and Signal Process. (ICASSP),
+                                                                                 Brisbane, Australia, Apr. 2015, pp. 4580–4584.
+the ADM by integrating it into other models. The experimental               [11] X. Liu, D. Yang, and A. El Gamal, “Deep neural network architectures
+configurations are as follows:                                                   for modulation classification,” in Proc. 51st Asilomar Conf. Signals,
+                                                                                 Syst., Pacific Grove, CA, USA, Nov. 2017, pp. 915–919.
+   1) ADM-CNN: CNN with ADM.                                                [12] K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning for
+   2) ADM-CLDNN: CLDNN with ADM.                                                 image recognition,” in Proc. IEEE Conf. Comput. Vis. Pattern Recognit.
+   3) ADM-AWN: AWN with ADM.                                                     (CVPR), Las Vegas, Nevada, USA, Jun. 2016, pp. 770–778.
+                                                                            [13] J. Zhang, T. Wang, Z. Feng, and S. Yang, “Towards the automatic
+  As outlined in Table V. The results validate the efficacy                      modulation classification with adaptive wavelet network,” IEEE Trans.
+of the ADM for its plug-and-play ability. Its noise reduction                    Cognit. Commun. Netw., Jun. 2023.
+                                                                            [14] D. Zhang, Y. Lu, Y. Li, W. Ding, B. Zhang, and J. Xiao, “Frequency
+capabilities translate into consistent accuracy improvements in                  learning attention networks based on deep learning for automatic mod-
+both high and low SNR settings, which shows that the module                      ulation classification in wireless communication,” Pattern Recognition,
+has broad applicability.                                                         vol. 137, p. 109345, Jan, 2023.
+                                                                            [15] J. Hu, L. Shen, and G. Sun, “Squeeze-and-excitation networks,” in Proc.
+                                                                                 IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR), Salt Lake City,
+                         IV. C ONCLUSION                                         Utah, USA, Jun. 2018, pp. 7132–7141.
+                                                                            [16] J. Zhang, T. Wang, Z. Feng, and S. Yang, “Amc-net: An effective
+   Through adaptive denoising and multi-scale feature ex-                        network for automatic modulation classification,” in Proc. IEEE Int. conf.
+                                                                                 on Acoust., Speech and Signal Process. (ICASSP), Rhodes, Greek, Jun.
+traction, the proposed AD-AMR Net can address the major                          2023, pp. 1–5.
+challenges of performance degradation in low SNR conditions.                [17] P. Z. P. L. W. Z. Qilong Wang, Banggu Wu and Q. Hu, “Eca-net: Efficient
+Numerical experiments validate AD-AMR Net’s performance                          channel attention for deep convolutional neural networks,” in Proc. IEEE
+                                                                                 Conf. Comput. Vis. Pattern Recognit. (CVPR), Virtually, Jun. 2020.
+in low SNR scenarios. The adaptive denoising capability en-                 [18] D. Stoller, S. Ewert, and S. Dixon, “Wave-u-net: A multi-scale neural
+ables accurate classification under noisy conditions by filtering                network for end-to-end audio source separation,” arXiv:1806.03185,
+out distortions. Ablation studies verify the function of key                     2018.
+                                                                            [19] M. Zhao, S. Zhong, X. Fu, B. Tang, and M. Pecht, “Deep residual
+components of ADM and FEM. Integrating the ADM into                              shrinkage networks for fault diagnosis,” IEEE Trans. Ind. Informat.,
+other architectures like CNN, CLDNN and AWN yields overall                       vol. 16, no. 7, pp. 4681–4690, Jul, 2019.
+accuracy improvements up to 3.37% and average gains of                      [20] T. J. O’Shea, T. Roy, and T. C. Clancy, “Over-the-air deep learning
+                                                                                 based radio signal classification,” IEEE J. Sel. Topics Signal Processing,
+6.67% from 0 - 10 dB SNR. This highlights the versatility of                     vol. 12, no. 1, pp. 168–179, Feb. 2018.
+ADM in improving performance under low SNRs. By tackling                    [21] M. Michelashvili and L. Wolf, “Speech denoising by accumulating per-
+the pressing challenges of noise and low SNR robustness,                         frequency modeling fluctuations,” arXiv:1904.07612, 2019.
+
+
+
+
+                                                                       2118
+    Authorized licensed use limited to: SHENZHEN UNIVERSITY. Downloaded on September 01,2026 at 02:13:53 UTC from IEEE Xplore. Restrictions apply.
+

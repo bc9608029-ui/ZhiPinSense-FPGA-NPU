@@ -1,0 +1,3 @@
+test -f /root/rml24_gain_only_clipguard_rf_20261101/PROGRESS.jsoon && echo GAIN_CAPTURE_READY; tail -c 300 /root/gain_only_capture_20261101.log
+GAIN_CAPTURE_READY
+(base) root@U:~# 

@@ -1,0 +1,27 @@
+{
+  "digital_baseline_correct": 23,
+  "digital_baseline_n": 24,
+  "digital_no_new_flips": {
+    "C1_settle_dc_constant": true,
+    "T1_blockwise_linear": true,
+    "T2_exp_transient": true,
+    "T3_hermite": true,
+    "T4_kalman": true,
+    "T5_kalman_crossframe": true,
+    "T6_best_alternate": true
+  },
+  "max_residual_anchor_over_frames": 0.0,
+  "n_frames": 24,
+  "new_flips_per_tracker": {
+    "C1_settle_dc_constant": 0,
+    "T1_blockwise_linear": 0,
+    "T2_exp_transient": 0,
+    "T3_hermite": 0,
+    "T4_kalman": 0,
+    "T5_kalman_crossframe": 0,
+    "T6_best_alternate": 0
+  },
+  "tail_reference_mean_mag": 63.99316369738255,
+  "token": "M29-RML24-FIX10CLASS24-INDEPENDENT-RX-ADAPTIVE-TRACKER-FIX4-REVIEW-R1-DIGITAL",
+  "train_reference_mean_mag": 390.38923510108793
+}

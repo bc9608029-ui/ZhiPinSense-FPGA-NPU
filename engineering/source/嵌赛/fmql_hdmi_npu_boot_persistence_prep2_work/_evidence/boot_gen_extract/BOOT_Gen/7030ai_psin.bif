@@ -1,0 +1,9 @@
+//arch = fmql; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader, destination_device = ps]C:/Users/admin/Downloads/BOOT_Gen/FSBL251210_ddr400_demo.out
+	[destination_device = pl]C:/Users/admin/Downloads/BOOT_Gen/ai7030_edif_top.bit
+	[destination_cpu = apu_0, destination_device = ps]C:/Users/admin/Downloads/BOOT_Gen/bl31.elf
+	[destination_cpu = apu_0, destination_device = ps]C:/Users/admin/Downloads/BOOT_Gen/u-boot
+	[fsbl_config]apu_x32
+}

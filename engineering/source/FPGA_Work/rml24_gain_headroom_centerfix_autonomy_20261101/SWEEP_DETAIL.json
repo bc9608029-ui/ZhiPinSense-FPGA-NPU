@@ -1,0 +1,478 @@
+[
+  {
+    "frame_id": 41,
+    "mode": "CONTINUOUS_SCAN",
+    "capture_time_ns": 1773415663062369670,
+    "capture_monotonic_ns": 43176060738760,
+    "clock_id": "board-monotonic-v1",
+    "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+    "board_monotonic": 43177.68042287,
+    "center_hz": 2403599929,
+    "actual_lo_hz": 2403599928,
+    "candidate": {
+      "cfo_hz": -1.2023662947716272,
+      "training_residual": 0.24606511210369195,
+      "fir_training_residual": 0.04520774159486861,
+      "head_reference_relative_error": 0.043941952165404106,
+      "tail_reference_relative_error": 0.04447328638098911,
+      "tail_residual": 0.2332697616193792,
+      "gain": 536.7303634908322,
+      "dc": 16.030473047151148,
+      "repeat_average": 8.0,
+      "input_sha256": "9bc25a0f10c3612b38086002fc8e26a95bd4f4580aeb2438585826cdd23b0bf0",
+      "pred": 10,
+      "class_name": "64APSK",
+      "confidence": 0.6139545961814953,
+      "top3": [
+        {
+          "index": 10,
+          "class_name": "64APSK",
+          "probability": 0.6139545961814953
+        },
+        {
+          "index": 23,
+          "class_name": "OQPSK",
+          "probability": 0.3723822862555658
+        },
+        {
+          "index": 15,
+          "class_name": "128QAM",
+          "probability": 0.009923651792759164
+        }
+      ],
+      "window_predictions": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "mean_logits": [
+        -45.25,
+        -40.0,
+        -44.75,
+        -39.0,
+        -38.25,
+        -43.0,
+        -27.875,
+        -19.0,
+        -34.25,
+        -35.25,
+        -13.875,
+        -27.75,
+        -40.0,
+        -30.875,
+        -22.75,
+        -18.0,
+        -26.625,
+        -32.75,
+        -36.25,
+        -35.25,
+        -40.25,
+        -61.75,
+        -59.75,
+        -14.375
+      ],
+      "finite": true
+    },
+    "scan_steps": [
+      {
+        "scan_index": 9,
+        "scan_points": 11,
+        "sweep_cycle": 3,
+        "lo_hz": 2403000000,
+        "public_score": 0.8368072418745472,
+        "cfo_hz": 599929.6731361991,
+        "captured_ns": 1773415660822830320,
+        "captured_monotonic_ns": 43173821199500,
+        "accepted": true,
+        "centred_fallback_used": false,
+        "primary_confirmed_score": 0.9710153924729372,
+        "primary_confirmed_cfo_hz": 1.3281744338404822,
+        "confirmed_lo_hz": 2403599928,
+        "confirmed_ns": 1773415663062369670,
+        "confirmed_monotonic_ns": 43176060738760,
+        "confirmed_score": 0.9710153924729372,
+        "confirmed_cfo_hz": 1.3281744338404822,
+        "reason": "CENTRED_PUBLIC_FRAME"
+      }
+    ],
+    "elapsed_ms": 4689.5626000041375,
+    "gain_diagnostic": {
+      "selected_gain_db": 60.0,
+      "readback_gain_db": 60.0,
+      "settle_buffers": 3,
+      "initial_adc_stats": {
+        "peak": 826.0,
+        "rail_count": 0
+      },
+      "final_adc_stats": {
+        "peak": 826.0,
+        "rail_count": 0
+      },
+      "final_gain_db": 60.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    }
+  },
+  {
+    "frame_id": 42,
+    "mode": "CONTINUOUS_SCAN",
+    "capture_time_ns": 1773415667772924710,
+    "capture_monotonic_ns": 43180771293880,
+    "clock_id": "board-monotonic-v1",
+    "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+    "board_monotonic": 43182.37746448,
+    "center_hz": 2403599927,
+    "actual_lo_hz": 2403599928,
+    "candidate": {
+      "cfo_hz": -0.5682269380623214,
+      "training_residual": 0.5374906218243226,
+      "fir_training_residual": 0.024146565466360757,
+      "head_reference_relative_error": 0.02129352255076607,
+      "tail_reference_relative_error": 0.022314460340258867,
+      "tail_residual": 0.5092421012636231,
+      "gain": 626.2638426633177,
+      "dc": 19.366032717102463,
+      "repeat_average": 8.0,
+      "input_sha256": "5b499f3ae871441d5bf505d99e020a1ca6db227e5dc43763298d47ab0261c2e4",
+      "pred": 23,
+      "class_name": "OQPSK",
+      "confidence": 0.9013309500145783,
+      "top3": [
+        {
+          "index": 23,
+          "class_name": "OQPSK",
+          "probability": 0.9013309500145783
+        },
+        {
+          "index": 15,
+          "class_name": "128QAM",
+          "probability": 0.050849612615094616
+        },
+        {
+          "index": 7,
+          "class_name": "32PSK",
+          "probability": 0.047768790329624784
+        }
+      ],
+      "window_predictions": [
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23
+      ],
+      "mean_logits": [
+        -57.75,
+        -42.25,
+        -46.75,
+        -44.25,
+        -39.75,
+        -42.5,
+        -25.375,
+        -11.5,
+        -38.0,
+        -45.25,
+        -18.375,
+        -24.875,
+        -36.5,
+        -27.625,
+        -28.125,
+        -11.4375,
+        -22.125,
+        -38.0,
+        -43.75,
+        -49.0,
+        -45.0,
+        -77.0,
+        -66.0,
+        -8.5625
+      ],
+      "finite": true
+    },
+    "scan_steps": [
+      {
+        "scan_index": 10,
+        "scan_points": 11,
+        "sweep_cycle": 3,
+        "lo_hz": 2404000000,
+        "public_score": 0.9107202486231616,
+        "cfo_hz": -400070.976075604,
+        "captured_ns": 1773415665522515160,
+        "captured_monotonic_ns": 43178520883960,
+        "accepted": true,
+        "centred_fallback_used": false,
+        "primary_confirmed_score": 0.8806245826972686,
+        "primary_confirmed_cfo_hz": -0.568227018190105,
+        "confirmed_lo_hz": 2403599928,
+        "confirmed_ns": 1773415667772924710,
+        "confirmed_monotonic_ns": 43180771293880,
+        "confirmed_score": 0.8806245826972686,
+        "confirmed_cfo_hz": -0.568227018190105,
+        "reason": "CENTRED_PUBLIC_FRAME"
+      }
+    ],
+    "elapsed_ms": 4693.948399995861,
+    "gain_diagnostic": {
+      "selected_gain_db": 63.0,
+      "readback_gain_db": 63.0,
+      "settle_buffers": 3,
+      "initial_adc_stats": {
+        "peak": 1155.0,
+        "rail_count": 0
+      },
+      "final_adc_stats": {
+        "peak": 1155.0,
+        "rail_count": 0
+      },
+      "final_gain_db": 63.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    }
+  },
+  {
+    "frame_id": 195,
+    "mode": "CONTINUOUS_SCAN",
+    "capture_time_ns": 1773416234072762780,
+    "capture_monotonic_ns": 43747071131970,
+    "clock_id": "board-monotonic-v1",
+    "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+    "board_monotonic": 43748.66552718,
+    "center_hz": 2403599938,
+    "actual_lo_hz": 2403599940,
+    "candidate": {
+      "cfo_hz": 0.2737759617882028,
+      "training_residual": 0.5871275196572074,
+      "fir_training_residual": 0.05977023438607295,
+      "head_reference_relative_error": 0.05160041742780153,
+      "tail_reference_relative_error": 0.053036564005438554,
+      "tail_residual": 0.5560070386387327,
+      "gain": 442.37967400945,
+      "dc": 6.899807156372522,
+      "repeat_average": 8.0,
+      "input_sha256": "2f9458df1d284d16fb027680c6a14e454898c2c2cfcb0e767f7e1f6f73709c06",
+      "pred": 20,
+      "class_name": "AM-DSB-SC",
+      "confidence": 0.7853042662726657,
+      "top3": [
+        {
+          "index": 20,
+          "class_name": "AM-DSB-SC",
+          "probability": 0.7853042662726657
+        },
+        {
+          "index": 19,
+          "class_name": "AM-DSB-WC",
+          "probability": 0.21469023956211392
+        },
+        {
+          "index": 17,
+          "class_name": "AM-SSB-WC",
+          "probability": 5.299309462706861e-06
+        }
+      ],
+      "window_predictions": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "mean_logits": [
+        -24.625,
+        -20.875,
+        -21.25,
+        -18.25,
+        -16.375,
+        -16.5,
+        -17.0,
+        -19.75,
+        -12.25,
+        -15.125,
+        -17.25,
+        -16.5,
+        -17.75,
+        -13.0625,
+        -19.125,
+        -14.8125,
+        -18.375,
+        -7.40625,
+        -11.1875,
+        3.203125,
+        4.5,
+        -16.125,
+        -29.375,
+        -14.5
+      ],
+      "finite": true
+    },
+    "scan_steps": [
+      {
+        "scan_index": 9,
+        "scan_points": 11,
+        "sweep_cycle": 17,
+        "lo_hz": 2403000000,
+        "public_score": 0.8689811724629097,
+        "cfo_hz": 599941.2801205014,
+        "captured_ns": 1773416231852975290,
+        "captured_monotonic_ns": 43744851344090,
+        "accepted": true,
+        "centred_fallback_used": false,
+        "primary_confirmed_score": 0.8629606833517407,
+        "primary_confirmed_cfo_hz": -2.46038210331398,
+        "confirmed_lo_hz": 2403599940,
+        "confirmed_ns": 1773416234072762780,
+        "confirmed_monotonic_ns": 43747071131970,
+        "confirmed_score": 0.8629606833517407,
+        "confirmed_cfo_hz": -2.46038210331398,
+        "reason": "CENTRED_PUBLIC_FRAME"
+      }
+    ],
+    "elapsed_ms": 4668.728810000175,
+    "gain_diagnostic": {
+      "selected_gain_db": 60.0,
+      "readback_gain_db": 60.0,
+      "settle_buffers": 3,
+      "initial_adc_stats": {
+        "peak": 724.0,
+        "rail_count": 0
+      },
+      "final_adc_stats": {
+        "peak": 724.0,
+        "rail_count": 0
+      },
+      "final_gain_db": 60.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    }
+  },
+  {
+    "frame_id": 196,
+    "mode": "CONTINUOUS_SCAN",
+    "capture_time_ns": 1773416238803199160,
+    "capture_monotonic_ns": 43751801568420,
+    "clock_id": "board-monotonic-v1",
+    "boot_id": "fe307438-4fe1-427b-98de-dca81ca2c7b4",
+    "board_monotonic": 43753.4568796,
+    "center_hz": 2403599942,
+    "actual_lo_hz": 2403599938,
+    "candidate": {
+      "cfo_hz": -0.7574928343655782,
+      "training_residual": 0.7875870383325999,
+      "fir_training_residual": 0.048445948683176414,
+      "head_reference_relative_error": 0.03809144038928476,
+      "tail_reference_relative_error": 0.04019951764391037,
+      "tail_residual": 0.7394954291530129,
+      "gain": 425.65658462570116,
+      "dc": 28.136944279497776,
+      "repeat_average": 8.0,
+      "input_sha256": "1d22ffcb767c2bb9ce2d08f75db7fa5751f91af85be6c547d41d91eaa4a0248b",
+      "pred": 19,
+      "class_name": "AM-DSB-WC",
+      "confidence": 0.9241385806764566,
+      "top3": [
+        {
+          "index": 19,
+          "class_name": "AM-DSB-WC",
+          "probability": 0.9241385806764566
+        },
+        {
+          "index": 20,
+          "class_name": "AM-DSB-SC",
+          "probability": 0.07585791412311872
+        },
+        {
+          "index": 17,
+          "class_name": "AM-SSB-WC",
+          "probability": 3.4439439731181974e-06
+        }
+      ],
+      "window_predictions": [
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "mean_logits": [
+        -20.25,
+        -21.75,
+        -20.875,
+        -17.125,
+        -16.375,
+        -15.6875,
+        -17.875,
+        -18.75,
+        -11.625,
+        -13.625,
+        -13.9375,
+        -15.25,
+        -18.0,
+        -13.9375,
+        -17.375,
+        -14.4375,
+        -18.0,
+        -5.8125,
+        -10.4375,
+        6.6875,
+        4.1875,
+        -17.125,
+        -34.75,
+        -11.4375
+      ],
+      "finite": true
+    },
+    "scan_steps": [
+      {
+        "scan_index": 10,
+        "scan_points": 11,
+        "sweep_cycle": 17,
+        "lo_hz": 2404000000,
+        "public_score": 0.6970480070871764,
+        "cfo_hz": -400060.9382247018,
+        "captured_ns": 1773416236503166280,
+        "captured_monotonic_ns": 43749501535480,
+        "accepted": true,
+        "centred_fallback_used": false,
+        "primary_confirmed_score": 0.7856277614938013,
+        "primary_confirmed_cfo_hz": 3.900833518822053,
+        "confirmed_lo_hz": 2403599938,
+        "confirmed_ns": 1773416238803199160,
+        "confirmed_monotonic_ns": 43751801568420,
+        "confirmed_score": 0.7856277614938013,
+        "confirmed_cfo_hz": 3.900833518822053,
+        "reason": "CENTRED_PUBLIC_FRAME"
+      }
+    ],
+    "elapsed_ms": 4786.384689999977,
+    "gain_diagnostic": {
+      "selected_gain_db": 61.0,
+      "readback_gain_db": 61.0,
+      "settle_buffers": 3,
+      "initial_adc_stats": {
+        "peak": 953.0,
+        "rail_count": 0
+      },
+      "final_adc_stats": {
+        "peak": 953.0,
+        "rail_count": 0
+      },
+      "final_gain_db": 61.0,
+      "backoff_steps": [],
+      "headroom_resolved": true
+    }
+  }
+]

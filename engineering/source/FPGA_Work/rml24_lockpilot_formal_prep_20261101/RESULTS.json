@@ -1,0 +1,39 @@
+[
+  {
+    "name": "fixed240",
+    "denominator": 240,
+    "correct": 239,
+    "missing": 0,
+    "minimum_correct": 235,
+    "clock_drift_ns": -23748150,
+    "promotion_gate_pass": true
+  },
+  {
+    "name": "search240",
+    "denominator": 240,
+    "correct": 237,
+    "missing": 0,
+    "minimum_correct": 237,
+    "clock_drift_ns": -24671400,
+    "promotion_gate_pass": true
+  },
+  {
+    "name": "sweep24",
+    "denominator": 24,
+    "correct": 23,
+    "missing": 0,
+    "minimum_correct": 24,
+    "clock_drift_ns": -13488970,
+    "promotion_gate_pass": false
+  },
+  {
+    "name": "wide13",
+    "denominator": 13,
+    "correct": 13,
+    "missing": 0,
+    "minimum_correct": 13,
+    "clock_drift_ns": -2239230,
+    "attempt": "retry1_after_serial_abort_before_any_scored_item",
+    "promotion_gate_pass": true
+  }
+]

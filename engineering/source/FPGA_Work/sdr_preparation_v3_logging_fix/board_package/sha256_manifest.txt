@@ -1,0 +1,36 @@
+# SHA-256 manifest — sdr_preparation_v3_logging_fix/board_package
+# Generated 2026-10-05 (logging-fix offline preparation; no board).
+# Format: <sha256>  <filename>   (compute with: sha256sum -c sha256_manifest.txt)
+#
+# Frozen files (iq_input.bin, expected_tensor_plddr.bin, model.json, model.raw,
+# reference_argmax.txt, pl_ddr_register_map.hpp) plus iq_source.* and
+# file_iq_source.cpp were byte-verified IDENTICAL to sdr_preparation_v1/board_package.
+#
+# v3 root-cause reversal: the 425~978ms spikes were the observer effect of live
+# per-frame serial logging, NOT input Tensor allocation. baseline_diag reports a
+# diagnostic-only BASELINE_SPIKE_REPRODUCED plus a correctness+latency gate; fixed
+# keeps input reuse but must not claim it removed spikes.
+950e5eca26edf528836b2f4927b269458228aceed05df4fabc699d6cb84e0ec5  CMakeLists.txt
+f1efdd020856ff769681d6bb5ccbb23aa68969b881de00ba4fab15c92d1c5152  README.md
+946a34792159a20028ace794d1ba271a7652b8c6d29dcda3885c51a02d2b24fb  build_on_board.sh
+2d47177c15ff254f2c4ee94190ad940c426e45699c6014693f8b20a5dfa1605a  continuous_joint_stress.cpp
+a5e830e47e6ba121b50fb3008fc4f033020257de7beedce0cbfa1fdeff171423  continuous_joint_stress_baseline_diag.cpp
+d1ac979dfa987747dcdda9c6692f6eaaf4f4cca9b96ae09505acf3721e471270  continuous_joint_stress_fixed.cpp
+7f4bce133fd00cbd6161eb278ad4f2506e12d74fc223fbda0afb664fc8fe2af5  expected_tensor_plddr.bin
+eb8d9f1320f731b886eaf284e2334af562636f56e0dad0628db4ff97b0099d35  file_iq_source.cpp
+c5945d4da94ba0df9067b93c18496f74da8ce2d58c20346c6f0a346fda7d6003  iq_input.bin
+8ec092d200cf29ec2cc873a6d7922bd79f2f190b8a6ead97825d0eb6b660ea55  iq_source.cpp
+7a7806df234d0a2b11248d0883d85eb55e8dc4b21c7434b13e7a606ac2ec5247  iq_source.hpp
+d6954483bc25c859fc7dd0f3f2001651e7afa9fe0a91241300f24bc471d6fcb5  latency_diag.hpp
+ad57fc0b4a9ec5ae6e8cd2d2c2c0c91f81ef4e5fc7898447b322dc00c349a2e4  model.json
+c48979b3ab1bc62fa2efcfb07202ee640513f424244d15d089c89a6d2260b42a  model.raw
+db9f57c8bf5c4555618779a6f1b4dbf83af8c0edb6c9f02296af40b7b88a61d4  pl_ddr_register_map.hpp
+f7019cd46d99dac52a4bfc47e8082059eaf4b63aa8d80e8af2d818d6f23b9d9e  reference_argmax.txt
+18a10076878823343778fe082d9ea41499444592d9c8273e553c74577413af90  run_baseline_diag_100.sh
+a5e55ffe07977ad481d08d0d2d212fcf3979e3144577f731aeb86245dfbdefed  run_basic.sh
+29cfe9e8697937ca703a3406f5c4032e1b2b731018fe8cd1f5e08aef1f44f4cf  run_fixed_basic.sh
+5cd95cbb7bfb884bfb551f08fcd373249918d6aea2ce691c713cb49b93c61006  run_fixed_smoke.sh
+ec7b0724230334c45a9dfc56cbbe8802da7b1e95def2edf103289d3109d8dd94  run_fixed_stress_100.sh
+ed004a51e892b630d999c6b19cfced06d0281e7f463f68122db48f2b9bb11cf3  run_fixed_stress_1000.sh
+3a2401657fa2dadd340ee910068c7e14671591bffb31d730eae546f457159b2d  run_smoke.sh
+b974c2805bb1fe8f975c148570e86d905ac9d52e4cc984e4411080bbc73dcdd0  run_stress.sh

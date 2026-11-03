@@ -1,0 +1,100 @@
+{
+  "token": "M29-RML24-FIX10CLASS24-DUALSDR-BLIND-CLEAN1-SAMPLING-CONTRACT",
+  "version": 1,
+  "task": "fix10class24-dualsdr-blind-clean1",
+  "scope": "blind (no-sample-prior) pure-modulation dual-SDR RF classification",
+  "rx_info_boundary": {
+    "may_use": [
+      "received IQ (RX capture only)",
+      "frozen BF16 model (json 28272abc / raw c1781aec / ckpt 96cd25f8)",
+      "common RX config (LO/sample-rate/BW/gain, fixed for all samples)",
+      "fixed frozen reconstruction scale (rx_scale, same for all classes)",
+      "frozen window rule (offset + length, same for all classes)",
+      "anonymous run_id (session_id + run_nonce; correlates records only)"
+    ],
+    "must_not_read": [
+      "source sample / reference IQ",
+      "DC / AC-RMS / TX-scale / sidecar values",
+      "class / baseline-prediction / source_index-to-class mapping",
+      "correct start point / model window beyond the frozen rule",
+      "TX waveform template"
+    ],
+    "run_id_is_anonymous": true,
+    "run_id_must_not_encode_class": true
+  },
+  "model_input_contract": {
+    "shape": [2, 1024],
+    "dtype": "float32",
+    "byte_order": "little-endian",
+    "bytes": 8192,
+    "row0": "real",
+    "row1": "imag",
+    "reconstruction": "z[k] = int16_received[k] / adc_full_scale * rx_scale  (real and imag)",
+    "no_rescaling_after_reconstruction": true
+  },
+  "frozen_constants": {
+    "adc_full_scale": 2048.0,
+    "tx_scale": 117.84922023433009,
+    "rx_scale": 17.37813789457223,
+    "tx_peak_target": 1600.0,
+    "max_peak_over_24_production_seeds": 13.576670230134553,
+    "max_lround_ci16_abs": 1599,
+    "seed_base": 3000000,
+    "shuffle_seed": 20261020,
+    "flush_complex": 4096,
+    "capture_complex": 2048,
+    "window_complex": 1024,
+    "window_offset": 512,
+    "measurements": 25,
+    "sample_rate_hz": 2560000,
+    "center_hz": 2400000000,
+    "rx_bw_hz": 18000000,
+    "rx_gain_db": 35.0,
+    "tx_atten_db": -40.0
+  },
+  "tx_convention": {
+    "generator": "scripts/radioml_clean_contract.py (frozen clean2a, byte-identical)",
+    "generator_sha256": "aa5fe816dbfddbd26512ac2240c504eccfe3769293aac2fbf2caf7c172fa76d5",
+    "waveform": "generate_class(name, seed) -> complex (1024,), per-class TARGET_RMS",
+    "ci16_quantization": "lround(x * tx_scale)  (half-away-from-zero, NOT rint/round-half-to-even)",
+    "seed_rule": "seed = seed_base + class_index",
+    "order_randomization": "source_index 1..24 -> class permutation (shuffle_seed), recorded in manifest",
+    "negative_control": "source_index 0 = TX off (no transmission)",
+    "no_training_frame": true,
+    "no_preamble_or_tail": true
+  },
+  "rx_convention": {
+    "blind_cfo_timing_estimation": "NA (out of scope; fixed minimal processing)",
+    "fixed_amplitude_scale": "rx_scale = adc_full_scale / tx_scale (NO per-sample amplitude estimation)",
+    "window_rule": "flush flush_complex -> capture capture_complex contiguous -> window = [window_offset, window_offset+window_complex)",
+    "training_residual": "NA",
+    "training_gate": "NOT_APPLICABLE",
+    "no_per_label_switching": true,
+    "no_window_selection_by_reference": true
+  },
+  "protocol": {
+    "topology": "PC controls TX (SERVER, tcp://<host>:39010), board controls RX (CLIENT)",
+    "messages": ["HELLO", "HELLO_ACK", "TRANSMIT", "TX_READY", "CAPTURED", "CAPTURED_ACK", "STOP", "STOP_ACK"],
+    "board_never_receives_class": true,
+    "source_index_semantics": "0 = negative control, 1..24 = waveform ordinal (board never learns class)"
+  },
+  "output_schema": {
+    "per_sample": [
+      "run_id", "source_index", "capture_time_us", "finite", "repeat_deterministic",
+      "raw24_pred", "raw24_margin", "clip", "overflow", "dropped", "discontinuity",
+      "short_block", "timeouts", "training_residual", "training_gate",
+      "model_input_sha256", "model_sha", "rx_sample_rate", "rx_lo", "rx_bw",
+      "rx_gain", "status"
+    ],
+    "per_sample_artifacts": ["recovered/<source_index>.raw.i16 (full capture)", "recovered/<source_index>.tensor.bin ([2,1024] f32)"],
+    "logits": "board_logits.tsv (run_id, source_index, logit_00..23, pred_pass1, pred_pass2)"
+  },
+  "six_statistics": [
+    "completion_of_24_samples (all present, no missing)",
+    "e2e_correct_over_24 (failures stay in denominator)",
+    "accuracy_plus_coverage",
+    "per_class_prediction_confusion_anomaly",
+    "digital_vs_real_rf",
+    "negative_control_result"
+  ]
+}

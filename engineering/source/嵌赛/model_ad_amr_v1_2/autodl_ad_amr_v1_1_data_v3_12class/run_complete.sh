@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+bash autodl_ad_amr_v1_1_data_v3_12class/setup_env.sh
+bash autodl_ad_amr_v1_1_data_v3_12class/run_data_audit.sh
+bash autodl_ad_amr_v1_1_data_v3_12class/run_preflight.sh
+bash autodl_ad_amr_v1_1_data_v3_12class/run_public_pretrain.sh
+bash autodl_ad_amr_v1_1_data_v3_12class/run_pilot.sh
+bash autodl_ad_amr_v1_1_data_v3_12class/run_formal.sh

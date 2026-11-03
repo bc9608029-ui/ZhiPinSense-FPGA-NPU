@@ -1,0 +1,2171 @@
+{
+  "name": "fixed240",
+  "denominator": 240,
+  "correct": 235,
+  "missing": 0,
+  "minimum_correct": 235,
+  "promotion_gate_pass": true,
+  "rows": [
+    {
+      "index": 0,
+      "expected": 8,
+      "pred": 8,
+      "chosen_frame": 217,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 1,
+      "expected": 15,
+      "pred": 15,
+      "chosen_frame": 234,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 2,
+      "expected": 23,
+      "pred": 23,
+      "chosen_frame": 250,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 3,
+      "expected": 6,
+      "pred": 6,
+      "chosen_frame": 267,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 4,
+      "expected": 0,
+      "pred": 0,
+      "chosen_frame": 283,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 5,
+      "expected": 22,
+      "pred": 22,
+      "chosen_frame": 300,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 6,
+      "expected": 15,
+      "pred": 15,
+      "chosen_frame": 316,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 7,
+      "expected": 22,
+      "pred": 22,
+      "chosen_frame": 332,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 8,
+      "expected": 0,
+      "pred": 0,
+      "chosen_frame": 349,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 9,
+      "expected": 1,
+      "pred": 1,
+      "chosen_frame": 365,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 10,
+      "expected": 8,
+      "pred": 8,
+      "chosen_frame": 381,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 11,
+      "expected": 12,
+      "pred": 12,
+      "chosen_frame": 398,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 12,
+      "expected": 2,
+      "pred": 2,
+      "chosen_frame": 414,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 13,
+      "expected": 15,
+      "pred": 15,
+      "chosen_frame": 430,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 14,
+      "expected": 2,
+      "pred": 2,
+      "chosen_frame": 447,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 15,
+      "expected": 11,
+      "pred": 11,
+      "chosen_frame": 463,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 16,
+      "expected": 4,
+      "pred": 4,
+      "chosen_frame": 480,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 17,
+      "expected": 5,
+      "pred": 5,
+      "chosen_frame": 496,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 18,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 513,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 19,
+      "expected": 8,
+      "pred": 8,
+      "chosen_frame": 529,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 20,
+      "expected": 11,
+      "pred": 11,
+      "chosen_frame": 545,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 21,
+      "expected": 13,
+      "pred": 13,
+      "chosen_frame": 562,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 22,
+      "expected": 9,
+      "pred": 9,
+      "chosen_frame": 578,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 23,
+      "expected": 14,
+      "pred": 14,
+      "chosen_frame": 594,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 24,
+      "expected": 11,
+      "pred": 11,
+      "chosen_frame": 610,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 25,
+      "expected": 19,
+      "pred": 19,
+      "chosen_frame": 626,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 26,
+      "expected": 8,
+      "pred": 8,
+      "chosen_frame": 643,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 27,
+      "expected": 10,
+      "pred": 10,
+      "chosen_frame": 659,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 28,
+      "expected": 16,
+      "pred": 16,
+      "chosen_frame": 676,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 29,
+      "expected": 21,
+      "pred": 21,
+      "chosen_frame": 692,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 30,
+      "expected": 21,
+      "pred": 21,
+      "chosen_frame": 708,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 31,
+      "expected": 14,
+      "pred": 14,
+      "chosen_frame": 725,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 32,
+      "expected": 2,
+      "pred": 2,
+      "chosen_frame": 741,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 33,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 758,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 34,
+      "expected": 7,
+      "pred": 7,
+      "chosen_frame": 774,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 35,
+      "expected": 5,
+      "pred": 5,
+      "chosen_frame": 790,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 36,
+      "expected": 5,
+      "pred": 5,
+      "chosen_frame": 806,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 37,
+      "expected": 13,
+      "pred": 13,
+      "chosen_frame": 823,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 38,
+      "expected": 5,
+      "pred": 5,
+      "chosen_frame": 839,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 39,
+      "expected": 4,
+      "pred": 4,
+      "chosen_frame": 855,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 40,
+      "expected": 20,
+      "pred": 20,
+      "chosen_frame": 871,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 41,
+      "expected": 11,
+      "pred": 11,
+      "chosen_frame": 887,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 42,
+      "expected": 11,
+      "pred": 11,
+      "chosen_frame": 904,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 43,
+      "expected": 20,
+      "pred": 20,
+      "chosen_frame": 920,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 44,
+      "expected": 20,
+      "pred": 20,
+      "chosen_frame": 937,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 45,
+      "expected": 16,
+      "pred": 16,
+      "chosen_frame": 953,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 46,
+      "expected": 17,
+      "pred": 17,
+      "chosen_frame": 970,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 47,
+      "expected": 20,
+      "pred": 20,
+      "chosen_frame": 987,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 48,
+      "expected": 9,
+      "pred": 9,
+      "chosen_frame": 1003,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 49,
+      "expected": 23,
+      "pred": 23,
+      "chosen_frame": 1019,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 50,
+      "expected": 18,
+      "pred": 18,
+      "chosen_frame": 1036,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 51,
+      "expected": 4,
+      "pred": 4,
+      "chosen_frame": 1052,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 52,
+      "expected": 7,
+      "pred": 7,
+      "chosen_frame": 1068,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 53,
+      "expected": 1,
+      "pred": 1,
+      "chosen_frame": 1085,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 54,
+      "expected": 6,
+      "pred": 6,
+      "chosen_frame": 1101,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 55,
+      "expected": 10,
+      "pred": 10,
+      "chosen_frame": 1117,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 56,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 1134,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 57,
+      "expected": 23,
+      "pred": 23,
+      "chosen_frame": 1150,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 58,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 1167,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 59,
+      "expected": 21,
+      "pred": 21,
+      "chosen_frame": 1183,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 60,
+      "expected": 10,
+      "pred": 10,
+      "chosen_frame": 1199,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 61,
+      "expected": 0,
+      "pred": 0,
+      "chosen_frame": 1215,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 62,
+      "expected": 1,
+      "pred": 1,
+      "chosen_frame": 1232,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 63,
+      "expected": 7,
+      "pred": 7,
+      "chosen_frame": 1248,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 64,
+      "expected": 17,
+      "pred": 17,
+      "chosen_frame": 1264,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 65,
+      "expected": 17,
+      "pred": 17,
+      "chosen_frame": 1280,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 66,
+      "expected": 22,
+      "pred": 16,
+      "chosen_frame": 1297,
+      "correct": false,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 67,
+      "expected": 0,
+      "pred": 0,
+      "chosen_frame": 1313,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 68,
+      "expected": 0,
+      "pred": 0,
+      "chosen_frame": 1329,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 69,
+      "expected": 20,
+      "pred": 20,
+      "chosen_frame": 1345,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 70,
+      "expected": 11,
+      "pred": 11,
+      "chosen_frame": 1361,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 71,
+      "expected": 1,
+      "pred": 1,
+      "chosen_frame": 1377,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 72,
+      "expected": 23,
+      "pred": 23,
+      "chosen_frame": 1393,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 73,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 1410,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 74,
+      "expected": 18,
+      "pred": 18,
+      "chosen_frame": 1426,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 75,
+      "expected": 6,
+      "pred": 6,
+      "chosen_frame": 1443,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 76,
+      "expected": 19,
+      "pred": 19,
+      "chosen_frame": 1459,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 77,
+      "expected": 10,
+      "pred": 10,
+      "chosen_frame": 1475,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 78,
+      "expected": 4,
+      "pred": 4,
+      "chosen_frame": 1491,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 79,
+      "expected": 18,
+      "pred": 18,
+      "chosen_frame": 1508,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 80,
+      "expected": 8,
+      "pred": 8,
+      "chosen_frame": 1524,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 81,
+      "expected": 23,
+      "pred": 23,
+      "chosen_frame": 1541,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 82,
+      "expected": 9,
+      "pred": 9,
+      "chosen_frame": 1557,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 83,
+      "expected": 12,
+      "pred": 12,
+      "chosen_frame": 1574,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 84,
+      "expected": 0,
+      "pred": 0,
+      "chosen_frame": 1590,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 85,
+      "expected": 14,
+      "pred": 14,
+      "chosen_frame": 1607,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 86,
+      "expected": 19,
+      "pred": 19,
+      "chosen_frame": 1623,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 87,
+      "expected": 14,
+      "pred": 14,
+      "chosen_frame": 1639,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 88,
+      "expected": 7,
+      "pred": 7,
+      "chosen_frame": 1656,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 89,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 1672,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 90,
+      "expected": 20,
+      "pred": 20,
+      "chosen_frame": 1689,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 91,
+      "expected": 1,
+      "pred": 1,
+      "chosen_frame": 1705,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 92,
+      "expected": 1,
+      "pred": 1,
+      "chosen_frame": 1722,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 93,
+      "expected": 10,
+      "pred": 10,
+      "chosen_frame": 1738,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 94,
+      "expected": 9,
+      "pred": 9,
+      "chosen_frame": 1755,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 95,
+      "expected": 10,
+      "pred": 10,
+      "chosen_frame": 1770,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 96,
+      "expected": 9,
+      "pred": 9,
+      "chosen_frame": 1787,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 97,
+      "expected": 17,
+      "pred": 17,
+      "chosen_frame": 1803,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 98,
+      "expected": 7,
+      "pred": 7,
+      "chosen_frame": 1819,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 99,
+      "expected": 20,
+      "pred": 20,
+      "chosen_frame": 1836,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 100,
+      "expected": 11,
+      "pred": 11,
+      "chosen_frame": 1852,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 101,
+      "expected": 21,
+      "pred": 21,
+      "chosen_frame": 1868,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 102,
+      "expected": 21,
+      "pred": 21,
+      "chosen_frame": 1885,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 103,
+      "expected": 12,
+      "pred": 12,
+      "chosen_frame": 1901,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 104,
+      "expected": 20,
+      "pred": 20,
+      "chosen_frame": 1917,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 105,
+      "expected": 20,
+      "pred": 20,
+      "chosen_frame": 1933,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 106,
+      "expected": 2,
+      "pred": 2,
+      "chosen_frame": 1950,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 107,
+      "expected": 13,
+      "pred": 13,
+      "chosen_frame": 1966,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 108,
+      "expected": 9,
+      "pred": 9,
+      "chosen_frame": 1982,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 109,
+      "expected": 7,
+      "pred": 7,
+      "chosen_frame": 1999,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 110,
+      "expected": 4,
+      "pred": 4,
+      "chosen_frame": 2015,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 111,
+      "expected": 19,
+      "pred": 19,
+      "chosen_frame": 2032,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 112,
+      "expected": 1,
+      "pred": 1,
+      "chosen_frame": 2048,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 113,
+      "expected": 10,
+      "pred": 10,
+      "chosen_frame": 2065,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 114,
+      "expected": 8,
+      "pred": 8,
+      "chosen_frame": 2081,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 115,
+      "expected": 13,
+      "pred": 13,
+      "chosen_frame": 2097,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 116,
+      "expected": 16,
+      "pred": 16,
+      "chosen_frame": 2114,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 117,
+      "expected": 21,
+      "pred": 21,
+      "chosen_frame": 2130,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 118,
+      "expected": 14,
+      "pred": 14,
+      "chosen_frame": 2146,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 119,
+      "expected": 6,
+      "pred": 6,
+      "chosen_frame": 2163,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 120,
+      "expected": 17,
+      "pred": 17,
+      "chosen_frame": 2179,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 121,
+      "expected": 16,
+      "pred": 16,
+      "chosen_frame": 2196,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 122,
+      "expected": 2,
+      "pred": 2,
+      "chosen_frame": 2212,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 123,
+      "expected": 9,
+      "pred": 9,
+      "chosen_frame": 2229,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 124,
+      "expected": 19,
+      "pred": 19,
+      "chosen_frame": 2245,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 125,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 2261,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 126,
+      "expected": 18,
+      "pred": 18,
+      "chosen_frame": 2277,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 127,
+      "expected": 14,
+      "pred": 14,
+      "chosen_frame": 2294,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 128,
+      "expected": 1,
+      "pred": 1,
+      "chosen_frame": 2310,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 129,
+      "expected": 13,
+      "pred": 13,
+      "chosen_frame": 2326,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 130,
+      "expected": 12,
+      "pred": 12,
+      "chosen_frame": 2343,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 131,
+      "expected": 20,
+      "pred": 20,
+      "chosen_frame": 2359,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 132,
+      "expected": 19,
+      "pred": 19,
+      "chosen_frame": 2375,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 133,
+      "expected": 22,
+      "pred": 22,
+      "chosen_frame": 2391,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 134,
+      "expected": 9,
+      "pred": 9,
+      "chosen_frame": 2408,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 135,
+      "expected": 9,
+      "pred": 9,
+      "chosen_frame": 2424,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 136,
+      "expected": 16,
+      "pred": 16,
+      "chosen_frame": 2440,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 137,
+      "expected": 22,
+      "pred": 22,
+      "chosen_frame": 2457,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 138,
+      "expected": 21,
+      "pred": 21,
+      "chosen_frame": 2473,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 139,
+      "expected": 7,
+      "pred": 7,
+      "chosen_frame": 2490,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 140,
+      "expected": 12,
+      "pred": 12,
+      "chosen_frame": 2506,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 141,
+      "expected": 12,
+      "pred": 12,
+      "chosen_frame": 2523,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 142,
+      "expected": 1,
+      "pred": 1,
+      "chosen_frame": 2539,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 143,
+      "expected": 6,
+      "pred": 6,
+      "chosen_frame": 2555,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 144,
+      "expected": 7,
+      "pred": 7,
+      "chosen_frame": 2572,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 145,
+      "expected": 17,
+      "pred": 17,
+      "chosen_frame": 2588,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 146,
+      "expected": 13,
+      "pred": 13,
+      "chosen_frame": 2604,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 147,
+      "expected": 15,
+      "pred": 15,
+      "chosen_frame": 2620,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 148,
+      "expected": 18,
+      "pred": 18,
+      "chosen_frame": 2636,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 149,
+      "expected": 19,
+      "pred": 19,
+      "chosen_frame": 2653,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 150,
+      "expected": 5,
+      "pred": 5,
+      "chosen_frame": 2668,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 151,
+      "expected": 10,
+      "pred": 10,
+      "chosen_frame": 2685,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 152,
+      "expected": 1,
+      "pred": 1,
+      "chosen_frame": 2701,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 153,
+      "expected": 2,
+      "pred": 2,
+      "chosen_frame": 2717,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 154,
+      "expected": 2,
+      "pred": 2,
+      "chosen_frame": 2734,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 155,
+      "expected": 22,
+      "pred": 16,
+      "chosen_frame": 2750,
+      "correct": false,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 156,
+      "expected": 19,
+      "pred": 19,
+      "chosen_frame": 2766,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 157,
+      "expected": 13,
+      "pred": 13,
+      "chosen_frame": 2783,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 158,
+      "expected": 12,
+      "pred": 12,
+      "chosen_frame": 2799,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 159,
+      "expected": 17,
+      "pred": 17,
+      "chosen_frame": 2815,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 160,
+      "expected": 13,
+      "pred": 13,
+      "chosen_frame": 2830,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 161,
+      "expected": 15,
+      "pred": 15,
+      "chosen_frame": 2846,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 162,
+      "expected": 0,
+      "pred": 0,
+      "chosen_frame": 2862,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 163,
+      "expected": 2,
+      "pred": 2,
+      "chosen_frame": 2878,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 164,
+      "expected": 0,
+      "pred": 0,
+      "chosen_frame": 2894,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 165,
+      "expected": 11,
+      "pred": 11,
+      "chosen_frame": 2911,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 166,
+      "expected": 15,
+      "pred": 15,
+      "chosen_frame": 2927,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 167,
+      "expected": 23,
+      "pred": 23,
+      "chosen_frame": 2943,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 168,
+      "expected": 16,
+      "pred": 16,
+      "chosen_frame": 2960,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 169,
+      "expected": 21,
+      "pred": 21,
+      "chosen_frame": 2976,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 170,
+      "expected": 15,
+      "pred": 15,
+      "chosen_frame": 2992,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 171,
+      "expected": 10,
+      "pred": 10,
+      "chosen_frame": 3009,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 172,
+      "expected": 15,
+      "pred": 15,
+      "chosen_frame": 3025,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 173,
+      "expected": 15,
+      "pred": 15,
+      "chosen_frame": 3042,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 174,
+      "expected": 4,
+      "pred": 4,
+      "chosen_frame": 3058,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 175,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 3074,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 176,
+      "expected": 18,
+      "pred": 18,
+      "chosen_frame": 3091,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 177,
+      "expected": 22,
+      "pred": 16,
+      "chosen_frame": 3107,
+      "correct": false,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 178,
+      "expected": 19,
+      "pred": 19,
+      "chosen_frame": 3124,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 179,
+      "expected": 6,
+      "pred": 6,
+      "chosen_frame": 3140,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 180,
+      "expected": 8,
+      "pred": 8,
+      "chosen_frame": 3157,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 181,
+      "expected": 13,
+      "pred": 13,
+      "chosen_frame": 3173,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 182,
+      "expected": 5,
+      "pred": 5,
+      "chosen_frame": 3189,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 183,
+      "expected": 19,
+      "pred": 19,
+      "chosen_frame": 3206,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 184,
+      "expected": 23,
+      "pred": 23,
+      "chosen_frame": 3222,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 185,
+      "expected": 18,
+      "pred": 18,
+      "chosen_frame": 3239,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 186,
+      "expected": 22,
+      "pred": 16,
+      "chosen_frame": 3255,
+      "correct": false,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 187,
+      "expected": 17,
+      "pred": 17,
+      "chosen_frame": 3271,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 188,
+      "expected": 2,
+      "pred": 2,
+      "chosen_frame": 3288,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 189,
+      "expected": 21,
+      "pred": 21,
+      "chosen_frame": 3304,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 190,
+      "expected": 11,
+      "pred": 11,
+      "chosen_frame": 3320,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 191,
+      "expected": 4,
+      "pred": 4,
+      "chosen_frame": 3337,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 192,
+      "expected": 9,
+      "pred": 9,
+      "chosen_frame": 3353,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 193,
+      "expected": 14,
+      "pred": 14,
+      "chosen_frame": 3370,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 194,
+      "expected": 16,
+      "pred": 16,
+      "chosen_frame": 3386,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 195,
+      "expected": 18,
+      "pred": 18,
+      "chosen_frame": 3403,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 196,
+      "expected": 5,
+      "pred": 5,
+      "chosen_frame": 3419,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 197,
+      "expected": 14,
+      "pred": 14,
+      "chosen_frame": 3436,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 198,
+      "expected": 0,
+      "pred": 0,
+      "chosen_frame": 3452,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 199,
+      "expected": 23,
+      "pred": 23,
+      "chosen_frame": 3469,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 200,
+      "expected": 22,
+      "pred": 16,
+      "chosen_frame": 3485,
+      "correct": false,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 201,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 3501,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 202,
+      "expected": 15,
+      "pred": 15,
+      "chosen_frame": 3518,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 203,
+      "expected": 5,
+      "pred": 5,
+      "chosen_frame": 3534,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 204,
+      "expected": 0,
+      "pred": 0,
+      "chosen_frame": 3551,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 205,
+      "expected": 16,
+      "pred": 16,
+      "chosen_frame": 3567,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 206,
+      "expected": 5,
+      "pred": 5,
+      "chosen_frame": 3583,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 207,
+      "expected": 6,
+      "pred": 6,
+      "chosen_frame": 3599,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 208,
+      "expected": 4,
+      "pred": 4,
+      "chosen_frame": 3616,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 209,
+      "expected": 12,
+      "pred": 12,
+      "chosen_frame": 3632,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 210,
+      "expected": 18,
+      "pred": 18,
+      "chosen_frame": 3648,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 211,
+      "expected": 22,
+      "pred": 22,
+      "chosen_frame": 3665,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 212,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 3681,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 213,
+      "expected": 10,
+      "pred": 10,
+      "chosen_frame": 3698,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 214,
+      "expected": 4,
+      "pred": 4,
+      "chosen_frame": 3714,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 215,
+      "expected": 5,
+      "pred": 5,
+      "chosen_frame": 3731,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 216,
+      "expected": 16,
+      "pred": 16,
+      "chosen_frame": 3747,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 217,
+      "expected": 18,
+      "pred": 18,
+      "chosen_frame": 3763,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 218,
+      "expected": 6,
+      "pred": 6,
+      "chosen_frame": 3780,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 219,
+      "expected": 8,
+      "pred": 8,
+      "chosen_frame": 3796,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 220,
+      "expected": 12,
+      "pred": 12,
+      "chosen_frame": 3813,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 221,
+      "expected": 21,
+      "pred": 21,
+      "chosen_frame": 3829,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 222,
+      "expected": 17,
+      "pred": 17,
+      "chosen_frame": 3845,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 223,
+      "expected": 13,
+      "pred": 13,
+      "chosen_frame": 3862,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 224,
+      "expected": 2,
+      "pred": 2,
+      "chosen_frame": 3878,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 225,
+      "expected": 7,
+      "pred": 7,
+      "chosen_frame": 3894,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 226,
+      "expected": 14,
+      "pred": 14,
+      "chosen_frame": 3910,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 227,
+      "expected": 14,
+      "pred": 14,
+      "chosen_frame": 3927,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 228,
+      "expected": 16,
+      "pred": 16,
+      "chosen_frame": 3944,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 229,
+      "expected": 12,
+      "pred": 12,
+      "chosen_frame": 3960,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 230,
+      "expected": 23,
+      "pred": 23,
+      "chosen_frame": 3976,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 231,
+      "expected": 11,
+      "pred": 11,
+      "chosen_frame": 3992,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 232,
+      "expected": 17,
+      "pred": 17,
+      "chosen_frame": 4009,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 233,
+      "expected": 8,
+      "pred": 8,
+      "chosen_frame": 4025,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 234,
+      "expected": 6,
+      "pred": 6,
+      "chosen_frame": 4041,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 235,
+      "expected": 6,
+      "pred": 6,
+      "chosen_frame": 4058,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 236,
+      "expected": 4,
+      "pred": 4,
+      "chosen_frame": 4074,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 237,
+      "expected": 23,
+      "pred": 23,
+      "chosen_frame": 4091,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 238,
+      "expected": 8,
+      "pred": 8,
+      "chosen_frame": 4107,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    },
+    {
+      "index": 239,
+      "expected": 7,
+      "pred": 7,
+      "chosen_frame": 4124,
+      "correct": true,
+      "missing": false,
+      "frequency_ok": true
+    }
+  ],
+  "kind": "NEW_RF_EXISTING_FROZEN_WAVEFORMS_NOT_UNSEEN_GENERALIZATION"
+}

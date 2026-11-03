@@ -1,0 +1,24 @@
+{
+  "verdict": "PROMOTION_CANDIDATE",
+  "checks": {
+    "fixed_no_missing": true,
+    "scan_no_missing": true,
+    "fixed_not_regressed": true,
+    "scan_not_regressed": true,
+    "fixed_gain": 6,
+    "scan_gain": 5,
+    "candidate_files_checked": 32
+  },
+  "scores": {
+    "baseline_fixed": 227,
+    "candidate_fixed": 233,
+    "baseline_scan": 232,
+    "candidate_scan": 237,
+    "denominator_each": 240
+  },
+  "limits": [
+    "decision-only; this script does not install or start services",
+    "UI2 has offline tests but still requires target C++ build and physical touch/display acceptance",
+    "candidate uses the same existing 240 source identities, not unseen-waveform generalization"
+  ]
+}

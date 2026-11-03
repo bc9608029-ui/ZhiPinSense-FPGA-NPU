@@ -1,0 +1,13 @@
+{
+  "records": 24,
+  "modes_seen": [
+    "BAND_SCAN",
+    "FIXED"
+  ],
+  "stop_stable": true,
+  "auto_lock_rejected": true,
+  "four_supported_commands_two_ack": true,
+  "worker_error": null,
+  "note": "ACK denotes control-state update; subsequent actual RF rows prove mode behavior. One in-flight frame completed after STOP before counts became stable.",
+  "pass": true
+}

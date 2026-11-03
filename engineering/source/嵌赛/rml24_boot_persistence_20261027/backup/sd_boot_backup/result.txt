@@ -1,0 +1,5 @@
+device=/dev/mmcblk0p1 parent=mmcblk0 mounted=0 mountpoint=/root/rml24_boot_persistence_20261027/sd_boot_backup/mnt_ro created_ro_mount=1
+capacity_bytes=1073741824
+file_count=11
+backup_dir=/root/rml24_boot_persistence_20261027/sd_boot_backup/backup
+RESULT=OK (read-only audit complete)

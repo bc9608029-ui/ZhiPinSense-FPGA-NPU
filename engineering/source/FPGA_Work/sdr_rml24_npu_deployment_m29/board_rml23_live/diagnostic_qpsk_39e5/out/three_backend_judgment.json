@@ -1,0 +1,5035 @@
+{
+  "summary": {
+    "num_frames": 78,
+    "model_json_sha256": "d43a22848fad56195265fc98f9009039e4e9d9e8da7f58fc5042fb2a602edb2d",
+    "model_raw_sha256": "2425d990dbac0761cfcdb578c2225795e3b700c4afc6800a0b544ff4d50e0cba",
+    "params_md5": "7966a4829fc713b2e8ea6c04168be263",
+    "backend_versions": {
+      "board_npu": "iCraft ZG330 NPU, compiled bf16 model_24class_ZG",
+      "host_quantized": "iCraft v3.39.0 HostBackend (icraft-run --backends Host)",
+      "fp32_onnx": "onnxruntime CPU, rml24_24class_opset17.onnx"
+    },
+    "confusion_histogram": {
+      "board_npu": {
+        "256QAM": 28,
+        "16QAM": 25,
+        "64QAM": 19,
+        "128QAM": 6
+      },
+      "host_quantized": {
+        "256QAM": 28,
+        "16QAM": 25,
+        "64QAM": 19,
+        "128QAM": 6
+      },
+      "fp32_onnx": {
+        "256QAM": 37,
+        "16QAM": 21,
+        "64QAM": 15,
+        "128QAM": 5
+      }
+    },
+    "agreement": {
+      "npu_vs_fp32_top1": "63/78",
+      "npu_vs_host_top1": "78/78",
+      "host_vs_fp32_top1": "63/78",
+      "all_three_top1_agree": "63/78"
+    },
+    "verdict": "MODEL_DOMAIN_GENERALIZATION",
+    "verdict_detail": "FP32 / Host / NPU \u4e09\u540e\u7aef\u5168\u90e8\u5224 QAM\uff080\u00d7QPSK\uff09\uff1a\u6a21\u578b\u5728\u771f\u5b9e\u57df QPSK \u4e0a\u6cdb\u5316\u5931\u8d25\uff0c\u975e\u91cf\u5316\u3001\u975e\u7f16\u8bd1\u3001\u975e\u677f\u7aef NPU \u95ee\u9898\uff1b\u677f\u7aef\u5fe0\u5b9e\u590d\u73b0\u4e86\u6a21\u578b\u672c\u8eab\u7684\u9519\u8bef\u5206\u7c7b\u3002"
+  },
+  "frames": [
+    {
+      "frame_id": 3,
+      "tensor_sha256": "5518dfd69e960761a5b27bbbfb3d747f766cbcada3858202f168373d726a3287",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9608046259863482,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -61.75,
+          "QPSK": -45.75,
+          "16QAM": -20.75,
+          "64QAM": -4.03125,
+          "128QAM": -16,
+          "256QAM": -0.83203125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9898644469080164,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -68.05781555175781,
+          "QPSK": -49.960426330566406,
+          "16QAM": -27.575014114379883,
+          "64QAM": -4.385983943939209,
+          "128QAM": -15.595169067382812,
+          "256QAM": 0.19554826617240906
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9608046259863482,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -61.75,
+          "QPSK": -45.75,
+          "16QAM": -20.75,
+          "64QAM": -4.03125,
+          "128QAM": -16.0,
+          "256QAM": -0.83203125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 6.825014114379883,
+          "mean_abs_error": 2.4322843042512736,
+          "cosine": 0.9982437781088475
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 6.825014114379883,
+          "mean_abs_error": 2.4322843042512736,
+          "cosine": 0.9982437781088475
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 4,
+      "tensor_sha256": "0c0da7b6457ffcc26f2c2724e6a54042578deeb306eea7cfe0dce316e9719b74",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9539656527397595,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -80,
+          "QPSK": -65,
+          "16QAM": -21.375,
+          "64QAM": -9.875,
+          "128QAM": -35.5,
+          "256QAM": -6.84375
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9837844446236941,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -84.37479400634766,
+          "QPSK": -69.3870620727539,
+          "16QAM": -27.0280818939209,
+          "64QAM": -9.542241096496582,
+          "128QAM": -37.28983688354492,
+          "256QAM": -5.436805248260498
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9539656527397595,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -80.0,
+          "QPSK": -65.0,
+          "16QAM": -21.375,
+          "64QAM": -9.875,
+          "128QAM": -35.5,
+          "256QAM": -6.84375
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999998
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 5.796905517578125,
+          "mean_abs_error": 2.54202006260554,
+          "cosine": 0.9993541613247898
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 5.796905517578125,
+          "mean_abs_error": 2.54202006260554,
+          "cosine": 0.9993541613247898
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 5,
+      "tensor_sha256": "8905681f14bd8e568f7d2a0a461fa0af9bd92de9be111208fb44c2481e75ef9c",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.6842658646407971,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -56,
+          "QPSK": -36.5,
+          "16QAM": -14.8125,
+          "64QAM": -2.734375,
+          "128QAM": -4.625,
+          "256QAM": -1.8203125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.758683656674313,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -58.712684631347656,
+          "QPSK": -38.54999542236328,
+          "16QAM": -15.742852210998535,
+          "64QAM": -2.8413403034210205,
+          "128QAM": -3.0132367610931396,
+          "256QAM": -1.0849746465682983
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.6842658646407971,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -56.0,
+          "QPSK": -36.5,
+          "16QAM": -14.8125,
+          "64QAM": -2.734375,
+          "128QAM": -4.625,
+          "256QAM": -1.8203125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999999
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 5.051231384277344,
+          "mean_abs_error": 1.7673889050881069,
+          "cosine": 0.9991445627338498
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 5.051231384277344,
+          "mean_abs_error": 1.7673889050881069,
+          "cosine": 0.9991445627338498
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 6,
+      "tensor_sha256": "4aeb0039e92140b4e259e102bfdc66c480a2505153222d50f2cab5dab38e825c",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.7606506456578243,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -64.5,
+          "QPSK": -45.25,
+          "16QAM": -24,
+          "64QAM": -6.5,
+          "128QAM": -24.625,
+          "256QAM": -5.34375
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.7850060622717613,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -69.60868072509766,
+          "QPSK": -49.50294876098633,
+          "16QAM": -28.31111717224121,
+          "64QAM": -5.769167900085449,
+          "128QAM": -24.699012756347656,
+          "256QAM": -4.474086284637451
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.7606506456578243,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -64.5,
+          "QPSK": -45.25,
+          "16QAM": -24.0,
+          "64QAM": -6.5,
+          "128QAM": -24.625,
+          "256QAM": -5.34375
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 5.108680725097656,
+          "mean_abs_error": 1.6067000826199849,
+          "cosine": 0.9993659621867664
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 5.108680725097656,
+          "mean_abs_error": 1.6067000826199849,
+          "cosine": 0.9993659621867664
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 7,
+      "tensor_sha256": "bdf293127ae75a1ce4c983bcb11c528d838f8bdf5a0582707980e14a5bef281b",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.832549126771066,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -43.75,
+          "QPSK": -35.5,
+          "16QAM": -17.125,
+          "64QAM": -2.21875,
+          "128QAM": -4.4375,
+          "256QAM": -0.51171875
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9117680054860144,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -45.494041442871094,
+          "QPSK": -37.13288497924805,
+          "16QAM": -19.107601165771484,
+          "64QAM": -3.537536144256592,
+          "128QAM": -3.8229753971099854,
+          "256QAM": -0.6415424346923828
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.832549126771066,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -43.75,
+          "QPSK": -35.5,
+          "16QAM": -17.125,
+          "64QAM": -2.21875,
+          "128QAM": -4.4375,
+          "256QAM": -0.51171875
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 5.526737213134766,
+          "mean_abs_error": 2.090119808912277,
+          "cosine": 0.9982999337875235
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 5.526737213134766,
+          "mean_abs_error": 2.090119808912277,
+          "cosine": 0.9982999337875235
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 8,
+      "tensor_sha256": "18c4b316c034285a561a5c545a905acb731168d63d0166ae5220c8d34c126ac1",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9951373600929698,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -49.5,
+          "QPSK": -38.25,
+          "16QAM": -6.75,
+          "64QAM": -13.125,
+          "128QAM": -29.625,
+          "256QAM": -12.5
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9229204522870172,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -47.8419303894043,
+          "QPSK": -33.79719161987305,
+          "16QAM": -7.094421863555908,
+          "64QAM": -10.164153099060059,
+          "128QAM": -24.32758331298828,
+          "256QAM": -10.389009475708008
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9951373600929698,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -49.5,
+          "QPSK": -38.25,
+          "16QAM": -6.75,
+          "64QAM": -13.125,
+          "128QAM": -29.625,
+          "256QAM": -12.5
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999999
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 12.768547058105469,
+          "mean_abs_error": 5.984749138355255,
+          "cosine": 0.9995894879388827
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 12.768547058105469,
+          "mean_abs_error": 5.984749138355255,
+          "cosine": 0.9995894879388827
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 9,
+      "tensor_sha256": "fdf9d78d78774f8e254c5852ac3e10a46b773371d25157b536e261c8030e9f49",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.7143899821240314,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -42.25,
+          "QPSK": -25.75,
+          "16QAM": -11.875,
+          "64QAM": -7.25,
+          "128QAM": -11.0625,
+          "256QAM": -8.25
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.8663388474584878,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -44.78880310058594,
+          "QPSK": -30.264596939086914,
+          "16QAM": -18.271894454956055,
+          "64QAM": -7.595303535461426,
+          "128QAM": -10.51816463470459,
+          "256QAM": -5.673928737640381
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.7143899821240314,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -42.25,
+          "QPSK": -25.75,
+          "16QAM": -11.875,
+          "64QAM": -7.25,
+          "128QAM": -11.0625,
+          "256QAM": -8.25
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999998
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 7.822868347167969,
+          "mean_abs_error": 3.2567527492841086,
+          "cosine": 0.9952848329145858
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 7.822868347167969,
+          "mean_abs_error": 3.2567527492841086,
+          "cosine": 0.9952848329145858
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 10,
+      "tensor_sha256": "3742e5f7686898c94ec8d96e60e38ac0f435c0cb915805319ef28f389701b0b0",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.6656439685526463,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -42.5,
+          "QPSK": -16.875,
+          "16QAM": -8.375,
+          "64QAM": -7.65625,
+          "128QAM": -16.625,
+          "256QAM": -11.875
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.95840579216901,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -44.43442916870117,
+          "QPSK": -14.612801551818848,
+          "16QAM": -10.381072044372559,
+          "64QAM": -6.9505414962768555,
+          "128QAM": -12.942221641540527,
+          "256QAM": -11.771461486816406
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.6656439685526463,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -42.5,
+          "QPSK": -16.875,
+          "16QAM": -8.375,
+          "64QAM": -7.65625,
+          "128QAM": -16.625,
+          "256QAM": -11.875
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 7.881656646728516,
+          "mean_abs_error": 3.1312878926595054,
+          "cosine": 0.9983719664499938
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 7.881656646728516,
+          "mean_abs_error": 3.1312878926595054,
+          "cosine": 0.9983719664499938
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 11,
+      "tensor_sha256": "7aeedf6d3013e3898c56042db0701163343c140932ddaa4a13105b213e3b344e",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.5032739345041184,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -63,
+          "QPSK": -45.5,
+          "16QAM": -9.25,
+          "64QAM": -5.25,
+          "128QAM": -17.625,
+          "256QAM": -5.21875
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.7783226399569978,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -59.25071334838867,
+          "QPSK": -41.40560531616211,
+          "16QAM": -10.005471229553223,
+          "64QAM": -4.476848125457764,
+          "128QAM": -12.64197063446045,
+          "256QAM": -3.2166831493377686
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.5032739345041184,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -63.0,
+          "QPSK": -45.5,
+          "16QAM": -9.25,
+          "64QAM": -5.25,
+          "128QAM": -17.625,
+          "256QAM": -5.21875
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 10.419166564941406,
+          "mean_abs_error": 5.782640685637792,
+          "cosine": 0.9993628312408731
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 10.419166564941406,
+          "mean_abs_error": 5.782640685637792,
+          "cosine": 0.9993628312408731
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 12,
+      "tensor_sha256": "66978f1b2f154f4a32a69fae7c0591bddf67f2b5dde33f68603efc4bcaf4bd17",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.4206516123715569,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -68,
+          "QPSK": -50.5,
+          "16QAM": -13.0625,
+          "64QAM": -12.625,
+          "128QAM": -37.25,
+          "256QAM": -12.9375
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.7131668064907469,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -65.9470443725586,
+          "QPSK": -49.69131088256836,
+          "16QAM": -17.59427261352539,
+          "64QAM": -10.453271865844727,
+          "128QAM": -36.15396499633789,
+          "256QAM": -11.366057395935059
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.4206516123715569,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -68.0,
+          "QPSK": -50.5,
+          "16QAM": -13.0625,
+          "64QAM": -12.625,
+          "128QAM": -37.25,
+          "256QAM": -12.9375
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 12.104545593261719,
+          "mean_abs_error": 4.73063878218333,
+          "cosine": 0.9992914830477826
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 12.104545593261719,
+          "mean_abs_error": 4.73063878218333,
+          "cosine": 0.9992914830477826
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 13,
+      "tensor_sha256": "4faa1f9f692265f17ec7e1ce09fccb808111cad69ddf81829e7f35f287819149",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9773642136658153,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -53.75,
+          "QPSK": -33.25,
+          "16QAM": -11.3125,
+          "64QAM": -1.2265625,
+          "128QAM": -10.0625,
+          "256QAM": -5
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9255626795394916,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -55.07133483886719,
+          "QPSK": -32.73459243774414,
+          "16QAM": -12.162432670593262,
+          "64QAM": -1.2272578477859497,
+          "128QAM": -6.331456184387207,
+          "256QAM": -3.8264336585998535
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9773642136658153,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -53.75,
+          "QPSK": -33.25,
+          "16QAM": -11.3125,
+          "64QAM": -1.2265625,
+          "128QAM": -10.0625,
+          "256QAM": -5.0
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 6.664632797241211,
+          "mean_abs_error": 3.10430338482062,
+          "cosine": 0.9986993183105659
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 6.664632797241211,
+          "mean_abs_error": 3.10430338482062,
+          "cosine": 0.9986993183105659
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 14,
+      "tensor_sha256": "8b2b41519306eda418a98e6a6a77f07eec0bb7520ad2c5e13ca182e61e7e06d1",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9661559636038434,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -69.5,
+          "QPSK": -48,
+          "16QAM": -28.5,
+          "64QAM": -1.2734375,
+          "128QAM": -21.875,
+          "256QAM": -4.625
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.7237802669388409,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -70.62461853027344,
+          "QPSK": -50.39091110229492,
+          "16QAM": -33.57857131958008,
+          "64QAM": -3.864433765411377,
+          "128QAM": -24.204252243041992,
+          "256QAM": -4.827724933624268
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9661559636038434,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -69.5,
+          "QPSK": -48.0,
+          "16QAM": -28.5,
+          "64QAM": -1.2734375,
+          "128QAM": -21.875,
+          "256QAM": -4.625
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999998
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 5.078571319580078,
+          "mean_abs_error": 2.327987472216288,
+          "cosine": 0.9989307966500458
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 5.078571319580078,
+          "mean_abs_error": 2.327987472216288,
+          "cosine": 0.9989307966500458
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 15,
+      "tensor_sha256": "46fe767c06b83aea8610bba0759b54cd57a107c634975d80e88f51ecebc287a1",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.6807058640742198,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -45.25,
+          "QPSK": -35.5,
+          "16QAM": -13.0625,
+          "64QAM": -1.359375,
+          "128QAM": -6.71875,
+          "256QAM": -0.59765625
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9761635067919365,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -45.90668487548828,
+          "QPSK": -35.87698745727539,
+          "16QAM": -16.931140899658203,
+          "64QAM": -4.878856182098389,
+          "128QAM": -4.611058235168457,
+          "256QAM": -0.33044755458831787
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.6807058640742198,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -45.25,
+          "QPSK": -35.5,
+          "16QAM": -13.0625,
+          "64QAM": -1.359375,
+          "128QAM": -6.71875,
+          "256QAM": -0.59765625
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 12.696800231933594,
+          "mean_abs_error": 3.7646872252225876,
+          "cosine": 0.9976847275638115
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 12.696800231933594,
+          "mean_abs_error": 3.7646872252225876,
+          "cosine": 0.9976847275638115
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 16,
+      "tensor_sha256": "c0176d6221d04b998c73f0d09efb9c8c80cded27065dff4b039bcae891094625",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.7306791288793197,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -50.5,
+          "QPSK": -38.25,
+          "16QAM": -8.25,
+          "64QAM": -9.5,
+          "128QAM": -29.5,
+          "256QAM": -10.75
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.8783176264168698,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -47.98301696777344,
+          "QPSK": -35.65186309814453,
+          "16QAM": -10.739812850952148,
+          "64QAM": -7.293536186218262,
+          "128QAM": -26.14543342590332,
+          "256QAM": -9.531493186950684
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.7306791288793197,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -50.5,
+          "QPSK": -38.25,
+          "16QAM": -8.25,
+          "64QAM": -9.5,
+          "128QAM": -29.5,
+          "256QAM": -10.75
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 11.616081237792969,
+          "mean_abs_error": 4.4078601996103925,
+          "cosine": 0.9994701258019175
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 11.616081237792969,
+          "mean_abs_error": 4.4078601996103925,
+          "cosine": 0.9994701258019175
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 17,
+      "tensor_sha256": "f27f6551dfea2a9473810bea89cb1144b6af3eeaddc842ebee451ca27ee40ec7",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999910478502723,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -33.25,
+          "QPSK": -21.125,
+          "16QAM": -5.8125,
+          "64QAM": -17.5,
+          "128QAM": -25,
+          "256QAM": -20.75
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999706889887643,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -36.48393630981445,
+          "QPSK": -20.324504852294922,
+          "16QAM": -6.7359418869018555,
+          "64QAM": -17.327167510986328,
+          "128QAM": -21.390899658203125,
+          "256QAM": -19.639381408691406
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999910478502723,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -33.25,
+          "QPSK": -21.125,
+          "16QAM": -5.8125,
+          "64QAM": -17.5,
+          "128QAM": -25.0,
+          "256QAM": -20.75
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 5.434846878051758,
+          "mean_abs_error": 2.333630919456482,
+          "cosine": 0.9992086259318159
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 5.434846878051758,
+          "mean_abs_error": 2.333630919456482,
+          "cosine": 0.9992086259318159
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 18,
+      "tensor_sha256": "b70c1aa3abff348682b91a9816730cd457e140f32151845201e7cf39878536e0",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9067395050631062,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -52.5,
+          "QPSK": -43.5,
+          "16QAM": -8,
+          "64QAM": -13.5625,
+          "128QAM": -27.875,
+          "256QAM": -10.3125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.687905189530625,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -46.31044387817383,
+          "QPSK": -37.58019256591797,
+          "16QAM": -9.243857383728027,
+          "64QAM": -12.424203872680664,
+          "128QAM": -24.144512176513672,
+          "256QAM": -8.412782669067383
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9067395050631062,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -52.5,
+          "QPSK": -43.5,
+          "16QAM": -8.0,
+          "64QAM": -13.5625,
+          "128QAM": -27.875,
+          "256QAM": -10.3125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 12.1146240234375,
+          "mean_abs_error": 4.797384222348531,
+          "cosine": 0.9995181093687125
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 12.1146240234375,
+          "mean_abs_error": 4.797384222348531,
+          "cosine": 0.9995181093687125
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 19,
+      "tensor_sha256": "0d76f839d84858269b570ff1e22c184bedb7f6b45451bd29728e5c39d1d066aa",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.3543698905200545,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -55,
+          "QPSK": -46.5,
+          "16QAM": -13.3125,
+          "64QAM": -13.375,
+          "128QAM": -28.625,
+          "256QAM": -13.25
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.8989204283891955,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -52.3175048828125,
+          "QPSK": -47.087093353271484,
+          "16QAM": -13.793730735778809,
+          "64QAM": -13.809288024902344,
+          "128QAM": -26.12612533569336,
+          "256QAM": -10.923043251037598
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.3543698905200545,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -55.0,
+          "QPSK": -46.5,
+          "16QAM": -13.3125,
+          "64QAM": -13.375,
+          "128QAM": -28.625,
+          "256QAM": -13.25
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 5.090545654296875,
+          "mean_abs_error": 2.37794295946757,
+          "cosine": 0.9997470035396533
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 5.090545654296875,
+          "mean_abs_error": 2.37794295946757,
+          "cosine": 0.9997470035396533
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 20,
+      "tensor_sha256": "5e1757cdfe6e64e1d34b6fddc229a8ab299df7216e9b0dda7141c691f45ef5e0",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9933130583281664,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -56.5,
+          "QPSK": -40,
+          "16QAM": -5.46875,
+          "64QAM": -11.5,
+          "128QAM": -13.375,
+          "256QAM": -11
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.5157149650612574,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -60.25202941894531,
+          "QPSK": -37.10004806518555,
+          "16QAM": -8.967347145080566,
+          "64QAM": -12.362112045288086,
+          "128QAM": -11.712735176086426,
+          "256QAM": -8.81118392944336
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9933130583281664,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -56.5,
+          "QPSK": -40.0,
+          "16QAM": -5.46875,
+          "64QAM": -11.5,
+          "128QAM": -13.375,
+          "256QAM": -11.0
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 12.834060668945312,
+          "mean_abs_error": 3.749914805094401,
+          "cosine": 0.9987519924275096
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 12.834060668945312,
+          "mean_abs_error": 3.749914805094401,
+          "cosine": 0.9987519924275096
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 21,
+      "tensor_sha256": "0a518cc8a3e9055d0adab9de9843d7245054a3c3102a91c6d2f7a1baac283aba",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.5992576300662525,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -46.5,
+          "QPSK": -31.875,
+          "16QAM": -13.6875,
+          "64QAM": -8.0625,
+          "128QAM": -16.25,
+          "256QAM": -7.65625
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9842151993889974,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -53.18657302856445,
+          "QPSK": -36.93375778198242,
+          "16QAM": -19.39794158935547,
+          "64QAM": -9.797233581542969,
+          "128QAM": -16.53246307373047,
+          "256QAM": -5.663181304931641
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.5992576300662525,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -46.5,
+          "QPSK": -31.875,
+          "16QAM": -13.6875,
+          "64QAM": -8.0625,
+          "128QAM": -16.25,
+          "256QAM": -7.65625
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 6.935813903808594,
+          "mean_abs_error": 2.980715274810791,
+          "cosine": 0.9974728071398452
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 6.935813903808594,
+          "mean_abs_error": 2.980715274810791,
+          "cosine": 0.9974728071398452
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 22,
+      "tensor_sha256": "e3ee34efff3ab8fb67e9aaae430898d1bffc8292b077755d2e64c87bb1950de5",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.5698920486408848,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -28.625,
+          "QPSK": -29,
+          "16QAM": -8.1875,
+          "64QAM": -4.15625,
+          "128QAM": -8.4375,
+          "256QAM": -3.84375
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.6172061320968213,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -28.1497859954834,
+          "QPSK": -26.760704040527344,
+          "16QAM": -10.307616233825684,
+          "64QAM": -3.5866341590881348,
+          "128QAM": -7.197617530822754,
+          "256QAM": -4.110927581787109
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.5698920486408848,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -28.625,
+          "QPSK": -29.0,
+          "16QAM": -8.1875,
+          "64QAM": -4.15625,
+          "128QAM": -8.4375,
+          "256QAM": -3.84375
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 7.857765197753906,
+          "mean_abs_error": 2.965098043282827,
+          "cosine": 0.9987539910775799
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 7.857765197753906,
+          "mean_abs_error": 2.965098043282827,
+          "cosine": 0.9987539910775799
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 23,
+      "tensor_sha256": "752ed1d0b640c7793c4090f4468e049b4c743a6a75c4b6004ecc06813d2c8cdf",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9480173179045233,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -48.25,
+          "QPSK": -40.25,
+          "16QAM": -8.8125,
+          "64QAM": -15.1875,
+          "128QAM": -17.75,
+          "256QAM": -11.75
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9984997544093079,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -50.22715759277344,
+          "QPSK": -37.78303527832031,
+          "16QAM": -9.624505043029785,
+          "64QAM": -20.479557037353516,
+          "128QAM": -19.351736068725586,
+          "256QAM": -16.179107666015625
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9480173179045233,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -48.25,
+          "QPSK": -40.25,
+          "16QAM": -8.8125,
+          "64QAM": -15.1875,
+          "128QAM": -17.75,
+          "256QAM": -11.75
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999998
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 10.338264465332031,
+          "mean_abs_error": 3.1032439470291138,
+          "cosine": 0.9977132497605959
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 10.338264465332031,
+          "mean_abs_error": 3.1032439470291138,
+          "cosine": 0.9977132497605959
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 24,
+      "tensor_sha256": "cfe42fef329d866025a255b8131d946d37511998ae73c3281096fe4c801cf821",
+      "board_npu": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.7791974714122821,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -56.75,
+          "QPSK": -30.25,
+          "16QAM": -18.75,
+          "64QAM": -23.5,
+          "128QAM": -15.25,
+          "256QAM": -16.625
+        }
+      },
+      "fp32_onnx": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.731448710614068,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -54.945587158203125,
+          "QPSK": -32.46070861816406,
+          "16QAM": -22.604646682739258,
+          "64QAM": -24.952472686767578,
+          "128QAM": -14.612523078918457,
+          "256QAM": -15.61563777923584
+        }
+      },
+      "host_quantized": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.7791974714122821,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -56.75,
+          "QPSK": -30.25,
+          "16QAM": -18.75,
+          "64QAM": -23.5,
+          "128QAM": -15.25,
+          "256QAM": -16.625
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 6.967231750488281,
+          "mean_abs_error": 2.1225317319234214,
+          "cosine": 0.9988166927159113
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 6.967231750488281,
+          "mean_abs_error": 2.1225317319234214,
+          "cosine": 0.9988166927159113
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 25,
+      "tensor_sha256": "252836842fdd78deb78845ed1454548bdbc44ee37773d5963f10db394e1763a1",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999997489130859,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -39.25,
+          "QPSK": -23.875,
+          "16QAM": -3.296875,
+          "64QAM": -18.5,
+          "128QAM": -30,
+          "256QAM": -25.375
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999995954960426,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -37.71198272705078,
+          "QPSK": -21.255109786987305,
+          "16QAM": -6.1175642013549805,
+          "64QAM": -21.928688049316406,
+          "128QAM": -29.96646499633789,
+          "256QAM": -26.192005157470703
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999997489130859,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -39.25,
+          "QPSK": -23.875,
+          "16QAM": -3.296875,
+          "64QAM": -18.5,
+          "128QAM": -30.0,
+          "256QAM": -25.375
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 9.820106506347656,
+          "mean_abs_error": 3.285479029019674,
+          "cosine": 0.9995019843836375
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 9.820106506347656,
+          "mean_abs_error": 3.285479029019674,
+          "cosine": 0.9995019843836375
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 26,
+      "tensor_sha256": "613ab814055e75c825d73b71211c21abb46424fed7ce22938110cd2f4b2f3e73",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9874747084969129,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -56.5,
+          "QPSK": -48.5,
+          "16QAM": -8.875,
+          "64QAM": -13.875,
+          "128QAM": -35.25,
+          "256QAM": -14
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9939923919760169,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -52.20166778564453,
+          "QPSK": -40.25819778442383,
+          "16QAM": -7.969132900238037,
+          "64QAM": -13.371573448181152,
+          "128QAM": -32.32252502441406,
+          "256QAM": -14.44618034362793
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9874747084969129,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -56.5,
+          "QPSK": -48.5,
+          "16QAM": -8.875,
+          "64QAM": -13.875,
+          "128QAM": -35.25,
+          "256QAM": -14.0
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999999
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 12.049674987792969,
+          "mean_abs_error": 5.122800091902415,
+          "cosine": 0.9995718398501755
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 12.049674987792969,
+          "mean_abs_error": 5.122800091902415,
+          "cosine": 0.9995718398501755
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 27,
+      "tensor_sha256": "7926661b5f33589d20bd27189f2381c7756f4f273820fc021c67dc355dd939c4",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.4857088785753143,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -59.75,
+          "QPSK": -56.5,
+          "16QAM": -9.8125,
+          "64QAM": -11.9375,
+          "128QAM": -24.5,
+          "256QAM": -9.875
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.5936993044296727,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -55.54326248168945,
+          "QPSK": -49.12017822265625,
+          "16QAM": -9.579191207885742,
+          "64QAM": -10.324797630310059,
+          "128QAM": -22.704509735107422,
+          "256QAM": -11.140287399291992
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.4857088785753143,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -59.75,
+          "QPSK": -56.5,
+          "16QAM": -9.8125,
+          "64QAM": -11.9375,
+          "128QAM": -24.5,
+          "256QAM": -9.875
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999999
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 10.828323364257812,
+          "mean_abs_error": 5.032660524050395,
+          "cosine": 0.9993798243105191
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 10.828323364257812,
+          "mean_abs_error": 5.032660524050395,
+          "cosine": 0.9993798243105191
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 28,
+      "tensor_sha256": "bafe3263535d670ce96f0859337049f19dca579db5e1eedcc9d49859a01d4cbc",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.8729927010091815,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -52.25,
+          "QPSK": -35.5,
+          "16QAM": -11.0625,
+          "64QAM": -15.6875,
+          "128QAM": -20.75,
+          "256QAM": -9.125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.831813540792495,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -51.21517562866211,
+          "QPSK": -33.51515197753906,
+          "16QAM": -12.645342826843262,
+          "64QAM": -18.289066314697266,
+          "128QAM": -17.817291259765625,
+          "256QAM": -11.037636756896973
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.8729927010091815,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -52.25,
+          "QPSK": -35.5,
+          "16QAM": -11.0625,
+          "64QAM": -15.6875,
+          "128QAM": -20.75,
+          "256QAM": -9.125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999998
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 6.9550018310546875,
+          "mean_abs_error": 2.7811530431111655,
+          "cosine": 0.9988028668198666
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 6.9550018310546875,
+          "mean_abs_error": 2.7811530431111655,
+          "cosine": 0.9988028668198666
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 29,
+      "tensor_sha256": "6fef803147faf52e440e8f69fdeca0c846cc0cd59a0c32eb34185993747b78cf",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.5621764663286966,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -59.25,
+          "QPSK": -45.75,
+          "16QAM": -28.5,
+          "64QAM": -6.71875,
+          "128QAM": -22.5,
+          "256QAM": -6.46875
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9791771545589837,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -57.78675079345703,
+          "QPSK": -41.43228530883789,
+          "16QAM": -25.79115867614746,
+          "64QAM": -10.03591251373291,
+          "128QAM": -21.852380752563477,
+          "256QAM": -6.185243129730225
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.5621764663286966,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -59.25,
+          "QPSK": -45.75,
+          "16QAM": -28.5,
+          "64QAM": -6.71875,
+          "128QAM": -22.5,
+          "256QAM": -6.46875
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 4.317714691162109,
+          "mean_abs_error": 2.060780346393585,
+          "cosine": 0.9993902910019236
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 4.317714691162109,
+          "mean_abs_error": 2.060780346393585,
+          "cosine": 0.9993902910019236
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 30,
+      "tensor_sha256": "a35e07fc025535178869f613fdfba20de7b4fe38dbe140ed2caec93131b03d2c",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.5389776969576635,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -42,
+          "QPSK": -42.5,
+          "16QAM": -16.875,
+          "64QAM": -5.8125,
+          "128QAM": -17.75,
+          "256QAM": -5.65625
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.6707452560111015,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -41.61421585083008,
+          "QPSK": -40.908607482910156,
+          "16QAM": -15.757344245910645,
+          "64QAM": -4.163450241088867,
+          "128QAM": -13.128205299377441,
+          "256QAM": -3.4517555236816406
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.5389776969576635,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -42.0,
+          "QPSK": -42.5,
+          "16QAM": -16.875,
+          "64QAM": -5.8125,
+          "128QAM": -17.75,
+          "256QAM": -5.65625
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 6.1588287353515625,
+          "mean_abs_error": 3.2049864133199057,
+          "cosine": 0.9994792065840111
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 6.1588287353515625,
+          "mean_abs_error": 3.2049864133199057,
+          "cosine": 0.9994792065840111
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 31,
+      "tensor_sha256": "085fb16309974a083a7b188b42d7a7d52b3549448c12fe6d40f7bc4760767c1a",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9989472854056356,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -48.75,
+          "QPSK": -38.75,
+          "16QAM": -11.3125,
+          "64QAM": -21.25,
+          "128QAM": -20.125,
+          "256QAM": -18.375
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9819872558057011,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -51.89711380004883,
+          "QPSK": -34.81101989746094,
+          "16QAM": -14.39489459991455,
+          "64QAM": -26.312259674072266,
+          "128QAM": -18.432117462158203,
+          "256QAM": -21.680673599243164
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9989472854056356,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -48.75,
+          "QPSK": -38.75,
+          "16QAM": -11.3125,
+          "64QAM": -21.25,
+          "128QAM": -20.125,
+          "256QAM": -18.375
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 11.432113647460938,
+          "mean_abs_error": 4.776813705762227,
+          "cosine": 0.9964320689956154
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 11.432113647460938,
+          "mean_abs_error": 4.776813705762227,
+          "cosine": 0.9964320689956154
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 32,
+      "tensor_sha256": "5e5f8d6579e61a544a27f627f408ba6db01eaada8542e1c1598341c0bfad439c",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9918374717428301,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -48.75,
+          "QPSK": -33.75,
+          "16QAM": -16.25,
+          "64QAM": -14.25,
+          "128QAM": -13.375,
+          "256QAM": -8.1875
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9983877731119228,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -55.8051872253418,
+          "QPSK": -38.00982666015625,
+          "16QAM": -21.949766159057617,
+          "64QAM": -17.0855655670166,
+          "128QAM": -14.636170387268066,
+          "256QAM": -8.1242094039917
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9918374717428301,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -48.75,
+          "QPSK": -33.75,
+          "16QAM": -16.25,
+          "64QAM": -14.25,
+          "128QAM": -13.375,
+          "256QAM": -8.1875
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 7.259986877441406,
+          "mean_abs_error": 3.0373078187306723,
+          "cosine": 0.9984337365033132
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 7.259986877441406,
+          "mean_abs_error": 3.0373078187306723,
+          "cosine": 0.9984337365033132
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 33,
+      "tensor_sha256": "12bd0ea4a618d8981eb0c38f9b402a1340473bb6ddef1d6a271a9f28d9b438f1",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9572772113054627,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -55.5,
+          "QPSK": -48,
+          "16QAM": -16.5,
+          "64QAM": -2.203125,
+          "128QAM": -19.625,
+          "256QAM": -5.3125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.8244572315202965,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -54.55260467529297,
+          "QPSK": -48.931785583496094,
+          "16QAM": -16.5528564453125,
+          "64QAM": -2.4411208629608154,
+          "128QAM": -16.995115280151367,
+          "256QAM": -3.987969160079956
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9572772113054627,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -55.5,
+          "QPSK": -48.0,
+          "16QAM": -16.5,
+          "64QAM": -2.203125,
+          "128QAM": -19.625,
+          "256QAM": -5.3125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 3.1713409423828125,
+          "mean_abs_error": 1.171082894007365,
+          "cosine": 0.9997467031618116
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 3.1713409423828125,
+          "mean_abs_error": 1.171082894007365,
+          "cosine": 0.9997467031618116
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 34,
+      "tensor_sha256": "b687155a3aecb23ee95ea397798560c461621d31a40034e58184ed62e9c067bf",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.6440986290316132,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -63.5,
+          "QPSK": -53.25,
+          "16QAM": -13.75,
+          "64QAM": -1.9609375,
+          "128QAM": -7.34375,
+          "256QAM": -2.5625
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.5172331463694068,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -67.83705139160156,
+          "QPSK": -54.105594635009766,
+          "16QAM": -19.71306037902832,
+          "64QAM": -0.610952615737915,
+          "128QAM": -8.318446159362793,
+          "256QAM": -0.5415433645248413
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.6440986290316132,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -63.5,
+          "QPSK": -53.25,
+          "16QAM": -13.75,
+          "64QAM": -1.9609375,
+          "128QAM": -7.34375,
+          "256QAM": -2.5625
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 5.96306037902832,
+          "mean_abs_error": 2.6340875377257666,
+          "cosine": 0.9980520451516671
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 5.96306037902832,
+          "mean_abs_error": 2.6340875377257666,
+          "cosine": 0.9980520451516671
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 35,
+      "tensor_sha256": "1b4dd92c93faeedd775f9097f4a44afd4f956b6b31eb24410639c2abd00e148c",
+      "board_npu": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.9852558607670736,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -80.5,
+          "QPSK": -42.25,
+          "16QAM": -15.25,
+          "64QAM": -17.125,
+          "128QAM": -9.0625,
+          "256QAM": -13.4375
+        }
+      },
+      "fp32_onnx": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.990239772096466,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -77.60586547851562,
+          "QPSK": -39.66581726074219,
+          "16QAM": -15.99496841430664,
+          "64QAM": -17.780471801757812,
+          "128QAM": -7.795078277587891,
+          "256QAM": -12.447846412658691
+        }
+      },
+      "host_quantized": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.9852558607670736,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -80.5,
+          "QPSK": -42.25,
+          "16QAM": -15.25,
+          "64QAM": -17.125,
+          "128QAM": -9.0625,
+          "256QAM": -13.4375
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 6.856536865234375,
+          "mean_abs_error": 2.0337865749994912,
+          "cosine": 0.9990742015866235
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 6.856536865234375,
+          "mean_abs_error": 2.0337865749994912,
+          "cosine": 0.9990742015866235
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 36,
+      "tensor_sha256": "acd4b379689f15a38956f47d05d5db81b09e875dc3a968305003b5be1b914441",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.8633407911549639,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -51.25,
+          "QPSK": -35.5,
+          "16QAM": -21.875,
+          "64QAM": -6.125,
+          "128QAM": -13.875,
+          "256QAM": -4.28125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.8266547513522015,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -56.66084671020508,
+          "QPSK": -38.487369537353516,
+          "16QAM": -28.78091049194336,
+          "64QAM": -5.914728164672852,
+          "128QAM": -16.622148513793945,
+          "256QAM": -4.352603912353516
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.8633407911549639,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -51.25,
+          "QPSK": -35.5,
+          "16QAM": -21.875,
+          "64QAM": -6.125,
+          "128QAM": -13.875,
+          "256QAM": -4.28125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 6.905910491943359,
+          "mean_abs_error": 3.1423601309458413,
+          "cosine": 0.9977775167545341
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 6.905910491943359,
+          "mean_abs_error": 3.1423601309458413,
+          "cosine": 0.9977775167545341
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 37,
+      "tensor_sha256": "04847f813e58fb5005743eb1ebb8523bd8420d058ba68fe00d74f023becff96b",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.98638216974387,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -46.5,
+          "QPSK": -43,
+          "16QAM": -17.5,
+          "64QAM": -3.265625,
+          "128QAM": -11.8125,
+          "256QAM": -7.5625
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9590000094677218,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -47.66435623168945,
+          "QPSK": -42.2753791809082,
+          "16QAM": -22.107580184936523,
+          "64QAM": -4.587494850158691,
+          "128QAM": -12.108575820922852,
+          "256QAM": -7.752562522888184
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.98638216974387,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -46.5,
+          "QPSK": -43.0,
+          "16QAM": -17.5,
+          "64QAM": -3.265625,
+          "128QAM": -11.8125,
+          "256QAM": -7.5625
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999999
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 9.228408813476562,
+          "mean_abs_error": 2.6197117964426675,
+          "cosine": 0.9986038300493936
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 9.228408813476562,
+          "mean_abs_error": 2.6197117964426675,
+          "cosine": 0.9986038300493936
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 38,
+      "tensor_sha256": "ea1a65e010a1075c9d7ddd6f0e4f697e786da568178bc65a78b6314c7d198de4",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.8989769049591937,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -39.5,
+          "QPSK": -34.25,
+          "16QAM": -12.25,
+          "64QAM": -6.40625,
+          "128QAM": -13.625,
+          "256QAM": -8.625
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.8780494508296905,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -40.46157455444336,
+          "QPSK": -34.67338562011719,
+          "16QAM": -12.594011306762695,
+          "64QAM": -7.416903972625732,
+          "128QAM": -9.899669647216797,
+          "256QAM": -5.357413291931152
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.8989769049591937,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -39.5,
+          "QPSK": -34.25,
+          "16QAM": -12.25,
+          "64QAM": -6.40625,
+          "128QAM": -13.625,
+          "256QAM": -8.625
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999999
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 8.423225402832031,
+          "mean_abs_error": 4.012107630570729,
+          "cosine": 0.9990516983288875
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 8.423225402832031,
+          "mean_abs_error": 4.012107630570729,
+          "cosine": 0.9990516983288875
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 39,
+      "tensor_sha256": "d49ed527ecf8da5ecf0625fd9d582e1ed50db83c7b4510f1b4f279246e02bf29",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.8302623093123801,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -51,
+          "QPSK": -26.875,
+          "16QAM": -17.375,
+          "64QAM": -10.875,
+          "128QAM": -11.375,
+          "256QAM": -8.8125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.8767698544554615,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -51.2248649597168,
+          "QPSK": -26.94350242614746,
+          "16QAM": -20.172367095947266,
+          "64QAM": -10.9037504196167,
+          "128QAM": -12.77945327758789,
+          "256QAM": -8.798895835876465
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.8302623093123801,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -51.0,
+          "QPSK": -26.875,
+          "16QAM": -17.375,
+          "64QAM": -10.875,
+          "128QAM": -11.375,
+          "256QAM": -8.8125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 3.1071090698242188,
+          "mean_abs_error": 1.1462513605753581,
+          "cosine": 0.9994265324281209
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 3.1071090698242188,
+          "mean_abs_error": 1.1462513605753581,
+          "cosine": 0.9994265324281209
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 40,
+      "tensor_sha256": "a6ef80616a2d3e282fe3a3cc02953893f2689cebfe32199ff58561f6eae1c07a",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.86059694082994,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -39.5,
+          "QPSK": -37.5,
+          "16QAM": -7.5,
+          "64QAM": -9.6875,
+          "128QAM": -23,
+          "256QAM": -10.5
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9881907850111923,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -34.77368927001953,
+          "QPSK": -32.2411994934082,
+          "16QAM": -5.1865339279174805,
+          "64QAM": -10.201080322265625,
+          "128QAM": -18.132221221923828,
+          "256QAM": -10.425204277038574
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.86059694082994,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -39.5,
+          "QPSK": -37.5,
+          "16QAM": -7.5,
+          "64QAM": -9.6875,
+          "128QAM": -23.0,
+          "256QAM": -10.5
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999998
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 10.301795959472656,
+          "mean_abs_error": 4.3483390013376875,
+          "cosine": 0.9990859869573726
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 10.301795959472656,
+          "mean_abs_error": 4.3483390013376875,
+          "cosine": 0.9990859869573726
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 41,
+      "tensor_sha256": "322fe433bc52a77609c7569f12183cbf3c959b479f47bcdc21569b23f733bb58",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.7490762517479828,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -54.25,
+          "QPSK": -48.75,
+          "16QAM": -14.5,
+          "64QAM": -3.65625,
+          "128QAM": -22.25,
+          "256QAM": -4.75
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.6251241390843952,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -53.18826675415039,
+          "QPSK": -46.400238037109375,
+          "16QAM": -13.506973266601562,
+          "64QAM": -4.240767002105713,
+          "128QAM": -16.800840377807617,
+          "256QAM": -3.729313611984253
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.7490762517479828,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -54.25,
+          "QPSK": -48.75,
+          "16QAM": -14.5,
+          "64QAM": -3.65625,
+          "128QAM": -22.25,
+          "256QAM": -4.75
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 10.454086303710938,
+          "mean_abs_error": 4.645665397246678,
+          "cosine": 0.9994523401114611
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 10.454086303710938,
+          "mean_abs_error": 4.645665397246678,
+          "cosine": 0.9994523401114611
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 42,
+      "tensor_sha256": "7ec23a5ffc24904ad91a766b65920d79a5d86136a85ae19900ddba6b6db2693b",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9556071207053887,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -74,
+          "QPSK": -60.25,
+          "16QAM": -24.875,
+          "64QAM": -2.96875,
+          "128QAM": -12.5625,
+          "256QAM": 0.100585938
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9747335312281556,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -72.29996490478516,
+          "QPSK": -59.45220184326172,
+          "16QAM": -26.52945899963379,
+          "64QAM": -4.6301188468933105,
+          "128QAM": -14.48269271850586,
+          "256QAM": -0.9773802757263184
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9556071206841775,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -74.0,
+          "QPSK": -60.25,
+          "16QAM": -24.875,
+          "64QAM": -2.96875,
+          "128QAM": -12.5625,
+          "256QAM": 0.1005859375
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 4.999999997368221e-10,
+          "mean_abs_error": 2.0833333322367587e-11,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 6.1803131103515625,
+          "mean_abs_error": 2.431118130683899,
+          "cosine": 0.9994556280531217
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 6.1803131103515625,
+          "mean_abs_error": 2.4311181307047325,
+          "cosine": 0.9994556280531144
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 43,
+      "tensor_sha256": "c5481a2e49f438f62331118a7ee06ca8a9cfc7d9a17a3b7f7fce745cc6647f3c",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.8919022835408993,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -71,
+          "QPSK": -41,
+          "16QAM": -11.6875,
+          "64QAM": -18.375,
+          "128QAM": -13.8125,
+          "256QAM": -19.25
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.896414600222087,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -72.66343688964844,
+          "QPSK": -39.13803482055664,
+          "16QAM": -11.381632804870605,
+          "64QAM": -20.980600357055664,
+          "128QAM": -13.542868614196777,
+          "256QAM": -19.48093605041504
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.8919022835408993,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -71.0,
+          "QPSK": -41.0,
+          "16QAM": -11.6875,
+          "64QAM": -18.375,
+          "128QAM": -13.8125,
+          "256QAM": -19.25
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 4.5861968994140625,
+          "mean_abs_error": 1.7393399874369304,
+          "cosine": 0.9992840781327648
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 4.5861968994140625,
+          "mean_abs_error": 1.7393399874369304,
+          "cosine": 0.9992840781327648
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 44,
+      "tensor_sha256": "9a9c83145dd4cd3cf014a15335eba8013a70c0f7bc2b58a12e1c096f777e56df",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9984510226596118,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -67.5,
+          "QPSK": -50.5,
+          "16QAM": -33.75,
+          "64QAM": -8.625,
+          "128QAM": -17.5,
+          "256QAM": -2.15625
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9992995414599053,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -62.89863586425781,
+          "QPSK": -43.980430603027344,
+          "16QAM": -30.892990112304688,
+          "64QAM": -9.425424575805664,
+          "128QAM": -14.608478546142578,
+          "256QAM": -2.156754732131958
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9984510226596118,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -67.5,
+          "QPSK": -50.5,
+          "16QAM": -33.75,
+          "64QAM": -8.625,
+          "128QAM": -17.5,
+          "256QAM": -2.15625
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 10.321456909179688,
+          "mean_abs_error": 4.176080753405889,
+          "cosine": 0.9990771929634298
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 10.321456909179688,
+          "mean_abs_error": 4.176080753405889,
+          "cosine": 0.9990771929634298
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 45,
+      "tensor_sha256": "853200a43d22d090b2288b6bc47acbb19e015ae5a18a23600b1455268958b396",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9991020600633549,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -39.75,
+          "QPSK": -43.5,
+          "16QAM": -15.125,
+          "64QAM": -5.53125,
+          "128QAM": -20.5,
+          "256QAM": -12.625
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.979703194187858,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -38.29615020751953,
+          "QPSK": -37.5062255859375,
+          "16QAM": -11.920096397399902,
+          "64QAM": -5.4884562492370605,
+          "128QAM": -14.097174644470215,
+          "256QAM": -9.455728530883789
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9991020600633549,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -39.75,
+          "QPSK": -43.5,
+          "16QAM": -15.125,
+          "64QAM": -5.53125,
+          "128QAM": -20.5,
+          "256QAM": -12.625
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 14.976837158203125,
+          "mean_abs_error": 6.8517133593559265,
+          "cosine": 0.9991058919460407
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 14.976837158203125,
+          "mean_abs_error": 6.8517133593559265,
+          "cosine": 0.9991058919460407
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 46,
+      "tensor_sha256": "45af151a7f34985469344490680daa2c1d2a139823dd92fff3e52cff75974685",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.748294167054401,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -49,
+          "QPSK": -44,
+          "16QAM": -16.25,
+          "64QAM": -4.40625,
+          "128QAM": -9.875,
+          "256QAM": -3.3125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.6775123310988642,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -44.36091995239258,
+          "QPSK": -40.44989776611328,
+          "16QAM": -14.981156349182129,
+          "64QAM": -2.995382785797119,
+          "128QAM": -7.661073684692383,
+          "256QAM": -3.75773286819458
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.748294167054401,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -49.0,
+          "QPSK": -44.0,
+          "16QAM": -16.25,
+          "64QAM": -4.40625,
+          "128QAM": -9.875,
+          "256QAM": -3.3125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 7.275653839111328,
+          "mean_abs_error": 2.4076513051986694,
+          "cosine": 0.9990639862901914
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 7.275653839111328,
+          "mean_abs_error": 2.4076513051986694,
+          "cosine": 0.9990639862901914
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 47,
+      "tensor_sha256": "0aee523ad905c71b5918d61427d560f9c41c1d2e80fefffe83408b8646e8d6b9",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.7121320720402073,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -50.75,
+          "QPSK": -27,
+          "16QAM": -22.125,
+          "64QAM": -6.53125,
+          "128QAM": -15.0625,
+          "256QAM": -7.4375
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.923853278597438,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -51.293357849121094,
+          "QPSK": -27.548282623291016,
+          "16QAM": -22.229835510253906,
+          "64QAM": -10.909540176391602,
+          "128QAM": -12.06724739074707,
+          "256QAM": -8.140406608581543
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.7121320720402073,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -50.75,
+          "QPSK": -27.0,
+          "16QAM": -22.125,
+          "64QAM": -6.53125,
+          "128QAM": -15.0625,
+          "256QAM": -7.4375
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 8.0548095703125,
+          "mean_abs_error": 2.098506490389506,
+          "cosine": 0.9975376137288908
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 8.0548095703125,
+          "mean_abs_error": 2.098506490389506,
+          "cosine": 0.9975376137288908
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 48,
+      "tensor_sha256": "1d80f4144f24cb232f89fc0713b7d700cad33a08fae74e7b9fa9277213044328",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.6837835878678492,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -42.75,
+          "QPSK": -36,
+          "16QAM": -12.0625,
+          "64QAM": -10.6875,
+          "128QAM": -28.125,
+          "256QAM": -12.25
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.8906834685168389,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -35.27893829345703,
+          "QPSK": -33.02952194213867,
+          "16QAM": -8.448956489562988,
+          "64QAM": -11.201133728027344,
+          "128QAM": -22.71158218383789,
+          "256QAM": -11.280126571655273
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.6837835878678492,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -42.75,
+          "QPSK": -36.0,
+          "16QAM": -12.0625,
+          "64QAM": -10.6875,
+          "128QAM": -28.125,
+          "256QAM": -12.25
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 8.863975524902344,
+          "mean_abs_error": 4.085358500480652,
+          "cosine": 0.9989207746284163
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 8.863975524902344,
+          "mean_abs_error": 4.085358500480652,
+          "cosine": 0.9989207746284163
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 49,
+      "tensor_sha256": "e9877b55deb09517827e773e2933e6849665fb45e59929d4f75cdc984a05023c",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999359632047999,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -52,
+          "QPSK": -44,
+          "16QAM": -6.71875,
+          "64QAM": -16.375,
+          "128QAM": -32.5,
+          "256QAM": -24.625
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999790357854568,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -49.03279113769531,
+          "QPSK": -41.61455154418945,
+          "16QAM": -8.405743598937988,
+          "64QAM": -19.17855453491211,
+          "128QAM": -36.10405349731445,
+          "256QAM": -28.065248489379883
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999359632047999,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -52.0,
+          "QPSK": -44.0,
+          "16QAM": -6.71875,
+          "64QAM": -16.375,
+          "128QAM": -32.5,
+          "256QAM": -24.625
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 3.604053497314453,
+          "mean_abs_error": 2.1409862438837686,
+          "cosine": 0.9993874817893853
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 3.604053497314453,
+          "mean_abs_error": 2.1409862438837686,
+          "cosine": 0.9993874817893853
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 50,
+      "tensor_sha256": "581c2a5fe4fb3294e2cd8111be0c3de72d33113522b3ea54f101af95c53c9474",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9917628077674001,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -59,
+          "QPSK": -36.25,
+          "16QAM": -10.1875,
+          "64QAM": -17.875,
+          "128QAM": -15.125,
+          "256QAM": -17.5
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.974537581890705,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -56.55152893066406,
+          "QPSK": -31.130722045898438,
+          "16QAM": -12.691682815551758,
+          "64QAM": -18.179283142089844,
+          "128QAM": -16.64451026916504,
+          "256QAM": -18.57857894897461
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9917628077674001,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -59.0,
+          "QPSK": -36.25,
+          "16QAM": -10.1875,
+          "64QAM": -17.875,
+          "128QAM": -15.125,
+          "256QAM": -17.5
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 10.755538940429688,
+          "mean_abs_error": 3.2251620292663574,
+          "cosine": 0.9976721140678846
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 10.755538940429688,
+          "mean_abs_error": 3.2251620292663574,
+          "cosine": 0.9976721140678846
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 51,
+      "tensor_sha256": "618234713e80e41693b69a0f9e34f682d4f0f47e4e2c1472724b596776b17815",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9944285585064555,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -51.5,
+          "QPSK": -41,
+          "16QAM": -15.1875,
+          "64QAM": -10,
+          "128QAM": -31.625,
+          "256QAM": -21
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9999720872501209,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -52.75906753540039,
+          "QPSK": -39.76469039916992,
+          "16QAM": -19.719289779663086,
+          "64QAM": -8.947118759155273,
+          "128QAM": -31.754610061645508,
+          "256QAM": -20.82558250427246
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9944285585064555,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -51.5,
+          "QPSK": -41.0,
+          "16QAM": -15.1875,
+          "64QAM": -10.0,
+          "128QAM": -31.625,
+          "256QAM": -21.0
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 5.979949951171875,
+          "mean_abs_error": 2.1213610967000327,
+          "cosine": 0.9993234257719755
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 5.979949951171875,
+          "mean_abs_error": 2.1213610967000327,
+          "cosine": 0.9993234257719755
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 52,
+      "tensor_sha256": "c179779111ddccfe1be3ce46f7a7a1b0c64b20f8c881a302f74769a4731137cf",
+      "board_npu": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.8261068882698698,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -59.75,
+          "QPSK": -40.5,
+          "16QAM": -13.6875,
+          "64QAM": -8.875,
+          "128QAM": -5.5625,
+          "256QAM": -7.3125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.7624989704068015,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -52.88202667236328,
+          "QPSK": -36.84197998046875,
+          "16QAM": -15.133090019226074,
+          "64QAM": -7.267507553100586,
+          "128QAM": -5.674105644226074,
+          "256QAM": -4.322591304779053
+        }
+      },
+      "host_quantized": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.8261068882698698,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -59.75,
+          "QPSK": -40.5,
+          "16QAM": -13.6875,
+          "64QAM": -8.875,
+          "128QAM": -5.5625,
+          "256QAM": -7.3125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 12.139877319335938,
+          "mean_abs_error": 3.845739225546519,
+          "cosine": 0.998763190572032
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 12.139877319335938,
+          "mean_abs_error": 3.845739225546519,
+          "cosine": 0.998763190572032
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 53,
+      "tensor_sha256": "357a024e2350dbbf7077cd8ac60549301a24075178042c206c2c75f8d3300580",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.999998808594231,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -40.75,
+          "QPSK": -38,
+          "16QAM": -3.984375,
+          "64QAM": -17.625,
+          "128QAM": -28.5,
+          "256QAM": -26
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999603684875543,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -42.09714889526367,
+          "QPSK": -32.13987731933594,
+          "16QAM": -4.447441101074219,
+          "64QAM": -14.583417892456055,
+          "128QAM": -25.79118537902832,
+          "256QAM": -23.63836097717285
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.999998808594231,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -40.75,
+          "QPSK": -38.0,
+          "16QAM": -3.984375,
+          "64QAM": -17.625,
+          "128QAM": -28.5,
+          "256QAM": -26.0
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 12.611740112304688,
+          "mean_abs_error": 4.5478089650472,
+          "cosine": 0.9992296472801455
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 12.611740112304688,
+          "mean_abs_error": 4.5478089650472,
+          "cosine": 0.9992296472801455
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 54,
+      "tensor_sha256": "c6ca1a353be927870c727d3020d8360498e64c0b5ccd98cf8011744ca2e7797e",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.990806921526381,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -48.75,
+          "QPSK": -40,
+          "16QAM": -16.5,
+          "64QAM": -11.625,
+          "128QAM": -20.5,
+          "256QAM": -18.125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9998201792484871,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -45.32350540161133,
+          "QPSK": -34.892333984375,
+          "16QAM": -17.74318504333496,
+          "64QAM": -8.59838581085205,
+          "128QAM": -22.03466033935547,
+          "256QAM": -18.142547607421875
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.990806921526381,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -48.75,
+          "QPSK": -40.0,
+          "16QAM": -16.5,
+          "64QAM": -11.625,
+          "128QAM": -20.5,
+          "256QAM": -18.125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 13.636436462402344,
+          "mean_abs_error": 3.403582294782003,
+          "cosine": 0.9990278136440807
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 13.636436462402344,
+          "mean_abs_error": 3.403582294782003,
+          "cosine": 0.9990278136440807
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 55,
+      "tensor_sha256": "01be29bcc1e263ad746c51d360447a555670556893579ad9092da11d8b33d297",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999939715701119,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -45,
+          "QPSK": -21.75,
+          "16QAM": -8.3125,
+          "64QAM": -20.625,
+          "128QAM": -28.875,
+          "256QAM": -24.75
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9993078445547332,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -47.670135498046875,
+          "QPSK": -18.523387908935547,
+          "16QAM": -11.246233940124512,
+          "64QAM": -24.781028747558594,
+          "128QAM": -27.901973724365234,
+          "256QAM": -27.725906372070312
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999939715701119,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -45.0,
+          "QPSK": -21.75,
+          "16QAM": -8.3125,
+          "64QAM": -20.625,
+          "128QAM": -28.875,
+          "256QAM": -24.75
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 5.292472839355469,
+          "mean_abs_error": 2.950199007987976,
+          "cosine": 0.9984485495274342
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 5.292472839355469,
+          "mean_abs_error": 2.950199007987976,
+          "cosine": 0.9984485495274342
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 56,
+      "tensor_sha256": "4c70cde3523939b840cffba2326dcf224566938e6efb65510b364aa7da9b52f3",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.958945073349515,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -58.5,
+          "QPSK": -48.75,
+          "16QAM": -9.875,
+          "64QAM": -13.5,
+          "128QAM": -29.625,
+          "256QAM": -14
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.6753190087166858,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -54.188751220703125,
+          "QPSK": -45.024532318115234,
+          "16QAM": -13.55078411102295,
+          "64QAM": -10.635388374328613,
+          "128QAM": -22.857885360717773,
+          "256QAM": -9.850275993347168
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.958945073349515,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -58.5,
+          "QPSK": -48.75,
+          "16QAM": -9.875,
+          "64QAM": -13.5,
+          "128QAM": -29.625,
+          "256QAM": -14.0
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 16.90679168701172,
+          "mean_abs_error": 7.743257403373718,
+          "cosine": 0.9992470870592746
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 16.90679168701172,
+          "mean_abs_error": 7.743257403373718,
+          "cosine": 0.9992470870592746
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 57,
+      "tensor_sha256": "d8c98faa301a670e586b548f0db3287487444f17371735d59a968f5aee8bb83f",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9872395290897162,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -55.25,
+          "QPSK": -52.5,
+          "16QAM": -13.8125,
+          "64QAM": -18.25,
+          "128QAM": -35.75,
+          "256QAM": -20.625
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9937744198257079,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -55.62255096435547,
+          "QPSK": -50.73122024536133,
+          "16QAM": -12.634821891784668,
+          "64QAM": -17.939620971679688,
+          "128QAM": -32.69406509399414,
+          "256QAM": -19.28261375427246
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9872395290897162,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -55.25,
+          "QPSK": -52.5,
+          "16QAM": -13.8125,
+          "64QAM": -18.25,
+          "128QAM": -35.75,
+          "256QAM": -20.625
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 6.10430908203125,
+          "mean_abs_error": 2.714136083920797,
+          "cosine": 0.9997549090052249
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 6.10430908203125,
+          "mean_abs_error": 2.714136083920797,
+          "cosine": 0.9997549090052249
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 58,
+      "tensor_sha256": "4ec50fed9e15930bad9e72d658ce5a9adf6656e7958507187ab393b8e843c305",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9398010452933716,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -54.75,
+          "QPSK": -31,
+          "16QAM": -12.25,
+          "64QAM": -9.5,
+          "128QAM": -22,
+          "256QAM": -18.5
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9357282786214782,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -61.88473129272461,
+          "QPSK": -32.53798294067383,
+          "16QAM": -14.94730281829834,
+          "64QAM": -10.480286598205566,
+          "128QAM": -14.77137279510498,
+          "256QAM": -13.614946365356445
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9398010452933716,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -54.75,
+          "QPSK": -31.0,
+          "16QAM": -12.25,
+          "64QAM": -9.5,
+          "128QAM": -22.0,
+          "256QAM": -18.5
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 13.483695983886719,
+          "mean_abs_error": 5.251296639442444,
+          "cosine": 0.996353051118398
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 13.483695983886719,
+          "mean_abs_error": 5.251296639442444,
+          "cosine": 0.996353051118398
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 59,
+      "tensor_sha256": "69d1f6a10ddf1692c465677ac014a190459b8bad572baa2301f0bbfa85452833",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9945214027480856,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -53.5,
+          "QPSK": -40,
+          "16QAM": -16,
+          "64QAM": -10.75,
+          "128QAM": -31.875,
+          "256QAM": -19
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9998799763898976,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -53.58317565917969,
+          "QPSK": -38.81193161010742,
+          "16QAM": -18.849740982055664,
+          "64QAM": -9.021880149841309,
+          "128QAM": -29.859800338745117,
+          "256QAM": -18.64608383178711
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9945214027480856,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -53.5,
+          "QPSK": -40.0,
+          "16QAM": -16.0,
+          "64QAM": -10.75,
+          "128QAM": -31.875,
+          "256QAM": -19.0
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 4.492591857910156,
+          "mean_abs_error": 1.969214955965678,
+          "cosine": 0.9996374204310307
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 4.492591857910156,
+          "mean_abs_error": 1.969214955965678,
+          "cosine": 0.9996374204310307
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 60,
+      "tensor_sha256": "eed77ad23a87691869dd78643ec14efa1ef705fea176fd8ef777218a54c0e480",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9045493062864174,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -46.5,
+          "QPSK": -32.5,
+          "16QAM": -17.125,
+          "64QAM": -4.71875,
+          "128QAM": -13.75,
+          "256QAM": -6.96875
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.970650790157664,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -51.323299407958984,
+          "QPSK": -35.926849365234375,
+          "16QAM": -21.993999481201172,
+          "64QAM": -8.924399375915527,
+          "128QAM": -10.851391792297363,
+          "256QAM": -5.289780616760254
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9045493062864174,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -46.5,
+          "QPSK": -32.5,
+          "16QAM": -17.125,
+          "64QAM": -4.71875,
+          "128QAM": -13.75,
+          "256QAM": -6.96875
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 7.796131134033203,
+          "mean_abs_error": 3.0454009771347046,
+          "cosine": 0.9969043813978873
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 7.796131134033203,
+          "mean_abs_error": 3.0454009771347046,
+          "cosine": 0.9969043813978873
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 61,
+      "tensor_sha256": "b8b32db9d729809eaba7d4b974cee5f94adadf455c190c9ef0de5c5241ca8ec4",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9998204614169389,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -39.75,
+          "QPSK": -42,
+          "16QAM": -8.875,
+          "64QAM": -17.5,
+          "128QAM": -31.75,
+          "256QAM": -27.25
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.995410694221365,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -37.67253112792969,
+          "QPSK": -37.59727096557617,
+          "16QAM": -7.309568405151367,
+          "64QAM": -12.689005851745605,
+          "128QAM": -28.502531051635742,
+          "256QAM": -24.138671875
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9998204614169389,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -39.75,
+          "QPSK": -42.0,
+          "16QAM": -8.875,
+          "64QAM": -17.5,
+          "128QAM": -31.75,
+          "256QAM": -27.25
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 8.181167602539062,
+          "mean_abs_error": 3.7037554184595742,
+          "cosine": 0.9993115489076677
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 8.181167602539062,
+          "mean_abs_error": 3.7037554184595742,
+          "cosine": 0.9993115489076677
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 62,
+      "tensor_sha256": "b8147dcd54a32e2fcc42dce4db8d2bd2462e02bfb7e195fc8dfca95676396e25",
+      "board_npu": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.5957720002444665,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -42.5,
+          "QPSK": -33.25,
+          "16QAM": -10.9375,
+          "64QAM": -10.1875,
+          "128QAM": -14.875,
+          "256QAM": -11.8125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.9471295653756158,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -44.012939453125,
+          "QPSK": -30.963632583618164,
+          "16QAM": -13.419099807739258,
+          "64QAM": -9.515035629272461,
+          "128QAM": -14.323845863342285,
+          "256QAM": -13.108622550964355
+        }
+      },
+      "host_quantized": {
+        "top1": 14,
+        "class": "64QAM",
+        "confidence": 0.5957720002444665,
+        "raw24_top1": 14,
+        "class_logits": {
+          "BPSK": -42.5,
+          "QPSK": -33.25,
+          "16QAM": -10.9375,
+          "64QAM": -10.1875,
+          "128QAM": -14.875,
+          "256QAM": -11.8125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999999
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 4.425212860107422,
+          "mean_abs_error": 1.8598462740580242,
+          "cosine": 0.9988639725057445
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 4.425212860107422,
+          "mean_abs_error": 1.8598462740580242,
+          "cosine": 0.9988639725057445
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 63,
+      "tensor_sha256": "5d702757b3e61a9b3db90a4d98cd0819050bc813a9c8eeeb730b17306c2bc5a2",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999999873693036,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -40.25,
+          "QPSK": -26.125,
+          "16QAM": -5.09375,
+          "64QAM": -23.875,
+          "128QAM": -27.875,
+          "256QAM": -24.25
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999981790201851,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -44.394344329833984,
+          "QPSK": -21.904104232788086,
+          "16QAM": -8.599411010742188,
+          "64QAM": -24.422348022460938,
+          "128QAM": -26.984025955200195,
+          "256QAM": -27.359426498413086
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999999873693036,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -40.25,
+          "QPSK": -26.125,
+          "16QAM": -5.09375,
+          "64QAM": -23.875,
+          "128QAM": -27.875,
+          "256QAM": -24.25
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999998
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 13.294937133789062,
+          "mean_abs_error": 3.973410447438558,
+          "cosine": 0.9959961404862172
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 13.294937133789062,
+          "mean_abs_error": 3.973410447438558,
+          "cosine": 0.9959961404862172
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 64,
+      "tensor_sha256": "1f4dcad7e2b693971ecb76bd14a0753060aa47fcc905e3cccdaadd56baf2e0fd",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.664823616706181,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -55,
+          "QPSK": -46,
+          "16QAM": -10.75,
+          "64QAM": -11.4375,
+          "128QAM": -34,
+          "256QAM": -17.375
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9979477185408427,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -51.5381965637207,
+          "QPSK": -41.7684326171875,
+          "16QAM": -9.620574951171875,
+          "64QAM": -15.808788299560547,
+          "128QAM": -34.786842346191406,
+          "256QAM": -22.3343563079834
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.664823616706181,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -55.0,
+          "QPSK": -46.0,
+          "16QAM": -10.75,
+          "64QAM": -11.4375,
+          "128QAM": -34.0,
+          "256QAM": -17.375
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 8.446052551269531,
+          "mean_abs_error": 3.045355955759684,
+          "cosine": 0.9986867064215286
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 8.446052551269531,
+          "mean_abs_error": 3.045355955759684,
+          "cosine": 0.9986867064215286
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 65,
+      "tensor_sha256": "bee22de9d38b792d80963f768e04074810481c2a9485430cdf1193f6277b3082",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999799974347627,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -53.5,
+          "QPSK": -30.375,
+          "16QAM": -8.625,
+          "64QAM": -20,
+          "128QAM": -21.125,
+          "256QAM": -20.875
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999058862935589,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -56.77418518066406,
+          "QPSK": -26.535520553588867,
+          "16QAM": -12.854204177856445,
+          "64QAM": -23.290372848510742,
+          "128QAM": -22.67083168029785,
+          "256QAM": -24.82390594482422
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9999799974347627,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -53.5,
+          "QPSK": -30.375,
+          "16QAM": -8.625,
+          "64QAM": -20.0,
+          "128QAM": -21.125,
+          "256QAM": -20.875
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 8.45526123046875,
+          "mean_abs_error": 2.932408014933268,
+          "cosine": 0.9978948566367014
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 8.45526123046875,
+          "mean_abs_error": 2.932408014933268,
+          "cosine": 0.9978948566367014
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 66,
+      "tensor_sha256": "c0ad4bb8a1f90c5dde6740d4fd55e392dea25f1826dd3bacb421cb7d7593571c",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9820754481160183,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -44.25,
+          "QPSK": -38.75,
+          "16QAM": -11.3125,
+          "64QAM": -9.5,
+          "128QAM": -12.75,
+          "256QAM": -5.3125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.7037833531427922,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -39.998558044433594,
+          "QPSK": -32.63645935058594,
+          "16QAM": -9.837871551513672,
+          "64QAM": -11.732935905456543,
+          "128QAM": -12.91037654876709,
+          "256QAM": -8.792996406555176
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9820754481160183,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -44.25,
+          "QPSK": -38.75,
+          "16QAM": -11.3125,
+          "64QAM": -9.5,
+          "128QAM": -12.75,
+          "256QAM": -5.3125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 8.788314819335938,
+          "mean_abs_error": 2.511494755744934,
+          "cosine": 0.9986388477918857
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 8.788314819335938,
+          "mean_abs_error": 2.511494755744934,
+          "cosine": 0.9986388477918857
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 67,
+      "tensor_sha256": "a0a29cb7ecc2f6ecede2c7f873bfd62d6e8c0be90a73d3990837059247aca853",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9937091074169937,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -68,
+          "QPSK": -64.5,
+          "16QAM": -21.25,
+          "64QAM": -12.5,
+          "128QAM": -32.75,
+          "256QAM": -7.4375
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9996336817426474,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -66.5140609741211,
+          "QPSK": -65.95198822021484,
+          "16QAM": -19.82266616821289,
+          "64QAM": -16.669963836669922,
+          "128QAM": -32.70106887817383,
+          "256QAM": -8.716473579406738
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9937091074169937,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -68.0,
+          "QPSK": -64.5,
+          "16QAM": -21.25,
+          "64QAM": -12.5,
+          "128QAM": -32.75,
+          "256QAM": -7.4375
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 4.169963836669922,
+          "mean_abs_error": 1.280687689781189,
+          "cosine": 0.9997873343182752
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 4.169963836669922,
+          "mean_abs_error": 1.280687689781189,
+          "cosine": 0.9997873343182752
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 68,
+      "tensor_sha256": "b85c21f26dcff93a2923220e54f42b85f37a0b507c239cc2c37a35b60c213cb9",
+      "board_npu": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.7528409633131489,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -65.5,
+          "QPSK": -48,
+          "16QAM": -13.6875,
+          "64QAM": -11.125,
+          "128QAM": -5.4375,
+          "256QAM": -6.5625
+        }
+      },
+      "fp32_onnx": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.9947236877713381,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -73.15599822998047,
+          "QPSK": -48.463375091552734,
+          "16QAM": -16.34031105041504,
+          "64QAM": -16.02960205078125,
+          "128QAM": -5.845161437988281,
+          "256QAM": -11.096817016601562
+        }
+      },
+      "host_quantized": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.7528409633131489,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -65.5,
+          "QPSK": -48.0,
+          "16QAM": -13.6875,
+          "64QAM": -11.125,
+          "128QAM": -5.4375,
+          "256QAM": -6.5625
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 8.614696502685547,
+          "mean_abs_error": 3.473759651184082,
+          "cosine": 0.9969151017326764
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 8.614696502685547,
+          "mean_abs_error": 3.473759651184082,
+          "cosine": 0.9969151017326764
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 69,
+      "tensor_sha256": "ab188efba1c60e6b5372eb385f0c3b828fb13390c27f4397c5005739d5c53ebe",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.6513471208270974,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -62.25,
+          "QPSK": -49.75,
+          "16QAM": -22.125,
+          "64QAM": -11.8125,
+          "128QAM": -25.75,
+          "256QAM": -11.1875
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.7789112225450137,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -56.6525993347168,
+          "QPSK": -43.578956604003906,
+          "16QAM": -18.157421112060547,
+          "64QAM": -13.058145523071289,
+          "128QAM": -20.42426109313965,
+          "256QAM": -11.792101860046387
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.6513471208270974,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -62.25,
+          "QPSK": -49.75,
+          "16QAM": -22.125,
+          "64QAM": -11.8125,
+          "128QAM": -25.75,
+          "256QAM": -11.1875
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 14.5374755859375,
+          "mean_abs_error": 5.799660960833232,
+          "cosine": 0.9988784943833481
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 14.5374755859375,
+          "mean_abs_error": 5.799660960833232,
+          "cosine": 0.9988784943833481
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 70,
+      "tensor_sha256": "0a804afc30e899a06abab0e201c1bd66557f866fd33450472b17e3aca54ac85c",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9974528074100236,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -43.25,
+          "QPSK": -40,
+          "16QAM": -18.5,
+          "64QAM": -8.3125,
+          "128QAM": -11.8125,
+          "256QAM": -2.3125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9970503425229812,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -41.6273078918457,
+          "QPSK": -38.06987380981445,
+          "16QAM": -17.19841957092285,
+          "64QAM": -9.679607391357422,
+          "128QAM": -8.058934211730957,
+          "256QAM": -2.055274486541748
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9974528074100236,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -43.25,
+          "QPSK": -40.0,
+          "16QAM": -18.5,
+          "64QAM": -8.3125,
+          "128QAM": -11.8125,
+          "256QAM": -2.3125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 5.789043426513672,
+          "mean_abs_error": 2.6522895296414695,
+          "cosine": 0.9992045686051645
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 5.789043426513672,
+          "mean_abs_error": 2.6522895296414695,
+          "cosine": 0.9992045686051645
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 71,
+      "tensor_sha256": "547ab99fd449071f221515a6e122bda32e39ca0e7e73e3e8045b21726bee5597",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.7297070529443676,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -52.75,
+          "QPSK": -45.25,
+          "16QAM": -15.1875,
+          "64QAM": -10.1875,
+          "128QAM": -19,
+          "256QAM": -9.1875
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.6495044519607014,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -48.77578353881836,
+          "QPSK": -39.508094787597656,
+          "16QAM": -13.48904037475586,
+          "64QAM": -10.457937240600586,
+          "128QAM": -15.993157386779785,
+          "256QAM": -9.79018497467041
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.7297070529443676,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -52.75,
+          "QPSK": -45.25,
+          "16QAM": -15.1875,
+          "64QAM": -10.1875,
+          "128QAM": -19.0,
+          "256QAM": -9.1875
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999998
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 7.019824981689453,
+          "mean_abs_error": 3.6575282414754233,
+          "cosine": 0.9994344268947192
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 7.019824981689453,
+          "mean_abs_error": 3.6575282414754233,
+          "cosine": 0.9994344268947192
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 72,
+      "tensor_sha256": "f1c1d3e99349eb26069db69ae21c077539eef7a21ad91e7aa15b40ab3840a8bc",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.764565892606832,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -38.75,
+          "QPSK": -30.5,
+          "16QAM": -16.625,
+          "64QAM": -13.625,
+          "128QAM": -8.9375,
+          "256QAM": -7.75
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.6576321719328619,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -38.46260070800781,
+          "QPSK": -28.585927963256836,
+          "16QAM": -18.48727035522461,
+          "64QAM": -19.289640426635742,
+          "128QAM": -11.244154930114746,
+          "256QAM": -10.59027099609375
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.764565892606832,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -38.75,
+          "QPSK": -30.5,
+          "16QAM": -16.625,
+          "64QAM": -13.625,
+          "128QAM": -8.9375,
+          "256QAM": -7.75
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999998
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 7.96197509765625,
+          "mean_abs_error": 2.7537584702173867,
+          "cosine": 0.9967492413339674
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 7.96197509765625,
+          "mean_abs_error": 2.7537584702173867,
+          "cosine": 0.9967492413339674
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 73,
+      "tensor_sha256": "9ae559c2d3a9742be3b3a12eb720530ed81b5956d0025e5f1dfdb2938c0f3b80",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.8894641299061788,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -50.75,
+          "QPSK": -28,
+          "16QAM": -15.6875,
+          "64QAM": -17.875,
+          "128QAM": -24,
+          "256QAM": -20.125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.7118823971455246,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -52.10166549682617,
+          "QPSK": -23.54421043395996,
+          "16QAM": -16.444316864013672,
+          "64QAM": -17.38088607788086,
+          "128QAM": -21.654193878173828,
+          "256QAM": -21.485733032226562
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.8894641299061788,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -50.75,
+          "QPSK": -28.0,
+          "16QAM": -15.6875,
+          "64QAM": -17.875,
+          "128QAM": -24.0,
+          "256QAM": -20.125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 5.244602203369141,
+          "mean_abs_error": 2.148324966430664,
+          "cosine": 0.9988641180483919
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 5.244602203369141,
+          "mean_abs_error": 2.148324966430664,
+          "cosine": 0.9988641180483919
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 74,
+      "tensor_sha256": "637db107595f1404cb88a66819667179daac99b65faf4423c4797cc8bf814728",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.999098359394691,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -43.5,
+          "QPSK": -37.75,
+          "16QAM": -12.625,
+          "64QAM": -12.1875,
+          "128QAM": -11.625,
+          "256QAM": -3.953125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9884953868263541,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -39.41169357299805,
+          "QPSK": -30.3070125579834,
+          "16QAM": -12.584623336791992,
+          "64QAM": -10.346479415893555,
+          "128QAM": -9.176297187805176,
+          "256QAM": -4.427652359008789
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.999098359394691,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -43.5,
+          "QPSK": -37.75,
+          "16QAM": -12.625,
+          "64QAM": -12.1875,
+          "128QAM": -11.625,
+          "256QAM": -3.953125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 8.94705581665039,
+          "mean_abs_error": 3.704470912615458,
+          "cosine": 0.9988364842379448
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 8.94705581665039,
+          "mean_abs_error": 3.704470912615458,
+          "cosine": 0.9988364842379448
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 75,
+      "tensor_sha256": "c596415f4d447bf174ea14aa30cf52c531d625c1b9e190d98cd64135b337a4f3",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9971987665193425,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -72.5,
+          "QPSK": -67.5,
+          "16QAM": -19.5,
+          "64QAM": -10.375,
+          "128QAM": -24.375,
+          "256QAM": -4.5
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9983058340704757,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -67.40406799316406,
+          "QPSK": -64.85283660888672,
+          "16QAM": -18.56252670288086,
+          "64QAM": -12.014510154724121,
+          "128QAM": -24.50670051574707,
+          "256QAM": -5.634205341339111
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9971987665193425,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -72.5,
+          "QPSK": -67.5,
+          "16QAM": -19.5,
+          "64QAM": -10.375,
+          "128QAM": -24.375,
+          "256QAM": -4.5
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 5.0959320068359375,
+          "mean_abs_error": 1.8227863907814026,
+          "cosine": 0.9996318174743556
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 5.0959320068359375,
+          "mean_abs_error": 1.8227863907814026,
+          "cosine": 0.9996318174743556
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 76,
+      "tensor_sha256": "6bd8a0d3edc737295f20f788ae8ce7c9f6847556a813f635d993d74400ec7344",
+      "board_npu": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.8217221555735051,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -58,
+          "QPSK": -40.5,
+          "16QAM": -11.125,
+          "64QAM": -11.125,
+          "128QAM": -7.40625,
+          "256QAM": -9.1875
+        }
+      },
+      "fp32_onnx": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.9377813510226111,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -62.67784881591797,
+          "QPSK": -40.686588287353516,
+          "16QAM": -13.647314071655273,
+          "64QAM": -16.087472915649414,
+          "128QAM": -6.496737480163574,
+          "256QAM": -9.222577095031738
+        }
+      },
+      "host_quantized": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.8217221555735051,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -58.0,
+          "QPSK": -40.5,
+          "16QAM": -11.125,
+          "64QAM": -11.125,
+          "128QAM": -7.40625,
+          "256QAM": -9.1875
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 8.869369506835938,
+          "mean_abs_error": 3.4482573668162027,
+          "cosine": 0.9969718848345483
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 8.869369506835938,
+          "mean_abs_error": 3.4482573668162027,
+          "cosine": 0.9969718848345483
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 77,
+      "tensor_sha256": "5835fdb6183e6d80473c873645571ed9e69202d43b25a4a91c88e0be84f8ad31",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.8936788488046028,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -54.75,
+          "QPSK": -33.75,
+          "16QAM": -13.125,
+          "64QAM": -15.3125,
+          "128QAM": -23.375,
+          "256QAM": -18.125
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.7640988883397544,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -55.67255401611328,
+          "QPSK": -35.22646713256836,
+          "16QAM": -17.42848777770996,
+          "64QAM": -14.807357788085938,
+          "128QAM": -20.881765365600586,
+          "256QAM": -13.559732437133789
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.8936788488046028,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -54.75,
+          "QPSK": -33.75,
+          "16QAM": -13.125,
+          "64QAM": -15.3125,
+          "128QAM": -23.375,
+          "256QAM": -18.125
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 16.361061096191406,
+          "mean_abs_error": 4.1821887493133545,
+          "cosine": 0.9984376718524788
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 16.361061096191406,
+          "mean_abs_error": 4.1821887493133545,
+          "cosine": 0.9984376718524788
+        }
+      },
+      "top1_all_agree": false
+    },
+    {
+      "frame_id": 78,
+      "tensor_sha256": "6f761bacf0d5ec1d42be495433c3526ceda0ad789811b536b39260a0aea328bc",
+      "board_npu": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9631689441138475,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -50,
+          "QPSK": -40.25,
+          "16QAM": -16.75,
+          "64QAM": -12.875,
+          "128QAM": -6.5,
+          "256QAM": -3.234375
+        }
+      },
+      "fp32_onnx": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9818015724172491,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -46.88386917114258,
+          "QPSK": -36.032936096191406,
+          "16QAM": -18.103546142578125,
+          "64QAM": -8.2294282913208,
+          "128QAM": -6.3118896484375,
+          "256QAM": -2.186706066131592
+        }
+      },
+      "host_quantized": {
+        "top1": 16,
+        "class": "256QAM",
+        "confidence": 0.9631689441138475,
+        "raw24_top1": 16,
+        "class_logits": {
+          "BPSK": -50.0,
+          "QPSK": -40.25,
+          "16QAM": -16.75,
+          "64QAM": -12.875,
+          "128QAM": -6.5,
+          "256QAM": -3.234375
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 11.453567504882812,
+          "mean_abs_error": 4.205341001351674,
+          "cosine": 0.9985508324305469
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 11.453567504882812,
+          "mean_abs_error": 4.205341001351674,
+          "cosine": 0.9985508324305469
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 79,
+      "tensor_sha256": "14d6061084eee7f5b1282c1d86d8826ac19053c26804d81df6f6ca51ec59de25",
+      "board_npu": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.7540591215363948,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -45.75,
+          "QPSK": -40.75,
+          "16QAM": -11.375,
+          "64QAM": -12.5,
+          "128QAM": -28.125,
+          "256QAM": -17.875
+        }
+      },
+      "fp32_onnx": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.9031586692631778,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -49.91606140136719,
+          "QPSK": -41.325069427490234,
+          "16QAM": -12.114225387573242,
+          "64QAM": -14.70004653930664,
+          "128QAM": -23.986440658569336,
+          "256QAM": -15.559877395629883
+        }
+      },
+      "host_quantized": {
+        "top1": 12,
+        "class": "16QAM",
+        "confidence": 0.7540591215363948,
+        "raw24_top1": 12,
+        "class_logits": {
+          "BPSK": -45.75,
+          "QPSK": -40.75,
+          "16QAM": -11.375,
+          "64QAM": -12.5,
+          "128QAM": -28.125,
+          "256QAM": -17.875
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 1.0000000000000002
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 11.128746032714844,
+          "mean_abs_error": 3.560072898864746,
+          "cosine": 0.9990657772238241
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 11.128746032714844,
+          "mean_abs_error": 3.560072898864746,
+          "cosine": 0.9990657772238241
+        }
+      },
+      "top1_all_agree": true
+    },
+    {
+      "frame_id": 80,
+      "tensor_sha256": "143331d09fa5b63cda0ddf5a9d28b98ecbbc10fa59908abd22a53e70adedfd36",
+      "board_npu": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.9723234060047754,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -48,
+          "QPSK": -33.5,
+          "16QAM": -17.875,
+          "64QAM": -18.875,
+          "128QAM": -8.3125,
+          "256QAM": -11.875
+        }
+      },
+      "fp32_onnx": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.9032849593473364,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -39.277896881103516,
+          "QPSK": -28.356401443481445,
+          "16QAM": -19.344518661499023,
+          "64QAM": -19.634376525878906,
+          "128QAM": -10.110298156738281,
+          "256QAM": -12.346600532531738
+        }
+      },
+      "host_quantized": {
+        "top1": 15,
+        "class": "128QAM",
+        "confidence": 0.9723234060047754,
+        "raw24_top1": 15,
+        "class_logits": {
+          "BPSK": -48.0,
+          "QPSK": -33.5,
+          "16QAM": -17.875,
+          "64QAM": -18.875,
+          "128QAM": -8.3125,
+          "256QAM": -11.875
+        }
+      },
+      "pairwise": {
+        "npu_vs_host": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "cosine": 0.9999999999999999
+        },
+        "host_vs_fp32": {
+          "max_abs_error": 12.012470245361328,
+          "mean_abs_error": 3.7398398319880166,
+          "cosine": 0.9982318942055086
+        },
+        "npu_vs_fp32": {
+          "max_abs_error": 12.012470245361328,
+          "mean_abs_error": 3.7398398319880166,
+          "cosine": 0.9982318942055086
+        }
+      },
+      "top1_all_agree": true
+    }
+  ]
+}

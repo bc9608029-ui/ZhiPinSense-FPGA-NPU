@@ -1,0 +1,88 @@
+M29 Phase F5 RML23 23-class live -- correctness fix delivery (conformance golden rebuild + 4 integration items)
+================================================================================================================
+Status: M29-RML23-LIVE-CORRECTNESS-FIX-READY-FOR-BOARD-TEST (NOT correctness PASS / HARDWARE_PASS)
+
+What this round fixes
+---------------------
+Board gate `run_gate9_rml23.sh --phase=offline --count=240` previously failed with
+match_rate=0.000000 because deployment_golden/ still carried the M22 12-class golden
+(different model / different label contract / different input source), incomparable
+with the 23-class RML23 output. This round rebuilds a dedicated RML23 conformance
+golden from the frozen expA_bf16_head product (24 source classes x 10 = 240 frames),
+plus 4 integration leftovers (one-click start/stop, RML23 socket alignment, 1000 ms
+steady-clock state heartbeat, state protocol version rml23-chain-v2).
+
+Conformance golden is a deployment-consistency reference, NOT an accuracy eval.
+match_rate is never described as "model accuracy". 1000/10000-frame results are
+relabelled runtime-stability-only (NOT a correctness gate).
+
+Preserved (NOT overwritten)
+---------------------------
+  dist/sdr_rml23_live_board_package.tar.gz                (F5 original, cb3f204e)
+    SHA256 cb3f204edfa235b66a829fbdfff0af29012095631221674e6bc476ffc78bd62f
+    bytes 3343378  files 439
+    copy: dist/sdr_rml23_live_board_package.F5_ORIGINAL_cb3f204e.tar.gz
+  dist/sdr_rml23_live_rf_fix_patch.tar.gz                 (RF fix, e988707c)
+    SHA256 e988707cf96117743e6dbea6e477b02f35e1f128470c3bd64000da712b3638d8
+  dist/sdr_rml23_live_board_package_rf_fix.tar.gz         (RF fix full, e166bb32)
+    SHA256 e166bb32ce146939528972f7d8123ebc8ff5b5c37bf87db84a696d66ece353be
+  (durable backup of all historical artifacts also kept in dist_hist/)
+
+Incremental patch (294 files = 38 new + 256 changed, 0 removed)
+---------------------------------------------------------------
+  dist/sdr_rml23_live_correctness_fix_patch.tar.gz
+    SHA256 4abe1546f8928404565acee873823c9295434d9464de366f30b052092b8b7015
+    bytes 2194457
+    manifest dist/CORRECTNESS_FIX_PATCH_SHA256SUMS.txt (294 lines, 294 files)
+
+  NEW (38):
+    deployment_golden/coverage_report.json
+    deployment_golden/coverage_supplemental/{manifest.json,expected_argmax.tsv,
+      input_000.bin .. input_029.bin}                       (coverage audit, board gate does not read it)
+    host_tests/test_golden_rml23.cpp
+    scripts/gen_rml23_golden.py
+    scripts/verify_golden_rml23.py
+    scripts/start_all_rml23.sh
+    scripts/stop_all_rml23.sh
+
+  CHANGED (256):
+    deployment_golden/{expected_argmax.tsv, expected_logits.tsv,
+      expected_logits_or_argmax.json, manifest.json,
+      input_000.bin .. input_239.bin}                       (24x10 conformance golden, 8192 B/frame)
+    README.md
+    board_package/board_gate9_full_chain_rml23.cpp          (state heartbeat + _rml23 socket defaults)
+    board_package/board_ui_live_rml23.cpp                   (_rml23 socket defaults)
+    board_package/result_frame_v2_parse.hpp                 (state event rml23-chain-v2 + model_sha)
+    sdr_adapter/ui_report.hpp                               (state_line version/model_sha params)
+    host_tests/{build_host_tests.sh, run_tests.sh, test_control_channel.cpp}
+    scripts/{package_board_release_rml23.sh, run_gate9_rml23.sh,
+      test_live_1000_frames.sh, test_live_10000_frames.sh}
+
+Full regenerated board package (source-only)
+--------------------------------------------
+  dist/sdr_rml23_live_board_package_correctness_fix.tar.gz
+    SHA256 81d66586fa28854d75d89570e99af32eaace44ab34f529b6b3a818f4df5a8652
+    bytes 3604486
+    manifest dist/sdr_rml23_live_board_package_correctness_fix.SHA256SUMS.txt
+      (479 lines = 479 content files; 480 files incl. SHA256SUMS.txt)
+    internal dir name: sdr_rml23_live_board_package_correctness_fix
+
+Verification (all offline, board untouched)
+-------------------------------------------
+  - Both tarballs unpacked to fresh temp dirs and `sha256sum -c` on their embedded
+    manifests returned OK for every file (FULL_SELFCHECK_OK / PATCH_SELFCHECK_OK).
+  - gen_rml23_golden.py: merged-23 argmax == frozen expA_pred23_ref_i32.bin over all
+    1536 frames (0 mismatch); main set strictly 24 source classes x 10, covering BPSK
+    and QPSK; expected_argmax.tsv f[1] in 0..22.
+  - test_golden_rml23.cpp (17/0) + verify_golden_rml23.py positive + 8 negative cases.
+  - Full host suite green (test_control_channel 71/0 with rml23-chain-v2 + model_sha).
+  - offline gate >=0.90 must be confirmed ON BOARD by the user via
+    run_gate9_rml23.sh --phase=offline --count=240; host self-consistency does not
+    substitute for that.
+
+Red lines honoured: no model retrain, no RTL/XDC/bitstream/Flash change, no real TX,
+no match-rate lowering, no failed-sample removal; no NPU_PASS/RML23_LIVE_HARDWARE_PASS/
+UI_HARDWARE_PASS/PROJECT_COMPLETE/FINAL_* written.
+
+Task B (UI visual redesign) is a SEPARATE, deferred patch and is NOT included in this
+round's diff/patch/package (no ui_render/ui_layout/font/snapshot/pixel changes here).

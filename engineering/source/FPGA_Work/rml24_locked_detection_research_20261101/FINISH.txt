@@ -1,0 +1,5 @@
+test -f /root/rml24_locked_detection_research_20261101/RESULT.jsson && echo DIAG_FINISHED; tail -c 300 /root/locked_diag_20261101.log
+DIAG_FINISHED
+LOCKED_DIAG_COMPLETE 58 []
+[1]+  Done                    nohup /root/miniconda3/envs/torch_v2.0.1_aarch64/bin/python3 /root/rml24_three_modes_execution_20261029/fpga_ui_integration_20261031/capture_locked.py > /root/locked_diag_20261101.log 2>&1 < /dev/null
+(base) root@U:~# 

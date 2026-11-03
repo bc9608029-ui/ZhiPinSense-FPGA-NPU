@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "frame_id": 5,
+  "stage": "RAW_RX",
+  "dtype": "<i2",
+  "layout": "interleaved",
+  "complex_count": 53760,
+  "sample_rate_hz": 2560000,
+  "source_index": 1500,
+  "modulation": "BPSK",
+  "predicted_class": "BPSK",
+  "baseline_class": "BPSK",
+  "confidence": 0.98,
+  "cfo_hz": 0.0,
+  "sro_ppm": 0.0,
+  "gain_mag": 1.0,
+  "symbol_timing_valid": false,
+  "payload_sha256": "4713bc2e2f0612748ef7fc05c95d5ecd3ee0368b7cf3b3935ff36f4e367843ee",
+  "iq_file": "bpsk_raw_rx.ci16"
+}

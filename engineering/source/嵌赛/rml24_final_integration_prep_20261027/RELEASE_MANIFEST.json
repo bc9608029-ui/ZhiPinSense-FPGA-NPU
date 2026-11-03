@@ -1,0 +1,53 @@
+{
+  "status": "PC_PREPARATION_COMPLETE_BOARD_INTEGRATION_PENDING",
+  "date": "2026-10-27",
+  "authoritative_paths": {
+    "scan_evidence_root": "F:\\scan_exec_20261027",
+    "stage7_root": "F:\\嵌赛\\rml24_stage7_execution_20261027",
+    "boot_persistence_root": "F:\\嵌赛\\rml24_boot_persistence_20261027"
+  },
+  "artifacts": [
+    {
+      "role": "scan_candidate_board_tree",
+      "path": "F:\\scan_exec_20261027\\candidate_v2_fourpage_waterfall_tree.tar.gz",
+      "sha256": "cbd524d60bd9e66de3520bb5e1a410b69be3ea683d4c056cf18cd7ef7815a4d2"
+    },
+    {
+      "role": "scan_pc_evidence",
+      "path": "F:\\scan_exec_20261027\\rml24_scan_autotest_evidence_20261027.zip",
+      "sha256": "eb56319d398465e12bc5415856b99740833abbbaa27391bb4d5d9e59a610d8ec"
+    },
+    {
+      "role": "stage7_board_tree",
+      "path": "F:\\嵌赛\\rml24_stage7_execution_20261027\\stage7_waterfall_fix1_board_tree.tar.gz",
+      "sha256": "beac8e07f661e1e4dcdea74c9ad5fd4324cfb72ea4dcc25667b0675e42023062"
+    },
+    {
+      "role": "boot_persistence_delivery",
+      "path": "F:\\嵌赛\\rml24_boot_persistence_20261027\\rml24_sd_persistent_autostart_verified_20261027.zip",
+      "sha256": "37d576f46b12347a55c5f5b9ba6c2cc9ebccb16b367e39834320a1f90874a043"
+    }
+  ],
+  "verified_metrics": {
+    "historical_fixed": {"correct": 475, "total": 480},
+    "current_fixed": {"correct": 464, "total": 480},
+    "centered_scan": {"correct": 472, "total": 480},
+    "scan_each_frequency": [
+      {"correct": 236, "total": 240},
+      {"correct": 236, "total": 240}
+    ],
+    "hop_challenge": {
+      "signal_correct": 68,
+      "signal_total": 72,
+      "silence_rejected": 6,
+      "silence_total": 6
+    }
+  },
+  "claims_not_yet_authorized": [
+    "independent_new_waveform_scan_accuracy",
+    "new_candidate_cold_boot_pass",
+    "long_duration_stability_pass",
+    "arbitrary_transmitter_blind_recognition",
+    "real_time_continuous_wideband_scan"
+  ]
+}

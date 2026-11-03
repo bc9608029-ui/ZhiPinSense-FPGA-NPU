@@ -1,0 +1,21 @@
+python3 /root/rml24_three_modes_execution_20261029/fpga_ui_integgration_20261031/restore_after_smoke.py
+
+Traceback (most recent call last):
+  File "/root/rml24_three_modes_execution_20261029/fpga_ui_integration_20261031/live_status.py", line 3, in <module>
+    pid=int(subprocess.check_output(['systemctl','show','rml24-integrated','-p','MainPID','--value']).strip());args=Path('/proc/%d/cmdline'%pid).read_bytes().decode().strip('\0').split('\0');r=Path(args[args.index('--run')+1]);children=json.loads((r/'children.json').read_text());alive={}
+                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/0/cmdline'
+Traceback (most recent call last):
+  File "/root/rml24_three_modes_execution_20261029/fpga_ui_integration_20261031/restore_after_smoke.py", line 4, in <module>
+    subprocess.run(['python3','/root/rml24_three_modes_execution_20261029/fpga_ui_integration_20261031/live_status.py'],check=True)
+  File "/root/miniconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', '/root/rml24_three_modes
+_execution_20261029/fpga_ui_integration_20261031/live_status.py']' returned non-zero exit status 1.
+(base) root@U:~# 

@@ -1,0 +1,54 @@
+{
+  "status": "OFFLINE_TOOLS_SELFTESTED_DEVICE_VALIDATION_PENDING",
+  "scope": "RX gain comparison and same-capture averaging ablation; no production deployment",
+  "baseline": {
+    "rx_gain_mode": "manual",
+    "rx_gain_db": 35,
+    "sample_rate_hz": 2560000,
+    "rx_bandwidth_hz": 18000000,
+    "tx_gain_db": -40,
+    "tx_payload_repetitions": 8
+  },
+  "repeat_ablation": {
+    "counts": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "selection": "first N recovered unaveraged windows, predetermined; no best-window selection",
+    "npu_input": "mean selected windows in float64, cast LE-f32, broadcast to [8,2,1024]",
+    "warning": "NOT evidence of shortened-frame RF performance; cannot use an already averaged tensor"
+  },
+  "gain_candidates": [
+    {
+      "mode": "manual",
+      "db": 25
+    },
+    {
+      "mode": "manual",
+      "db": 35
+    },
+    {
+      "mode": "manual",
+      "db": 45
+    },
+    {
+      "mode": "slow_attack",
+      "db": null
+    }
+  ],
+  "scoring": {
+    "fixed_denominator": true,
+    "missing_and_rejected_count_wrong": true,
+    "same_payloads_across_arms": true,
+    "rf_gain_arms_are_separate_captures": true
+  },
+  "red_lines": [
+    "no RF in preparation",
+    "no model training",
+    "no label-aware selection",
+    "no threshold relaxation",
+    "do not change production services or bitstream"
+  ]
+}

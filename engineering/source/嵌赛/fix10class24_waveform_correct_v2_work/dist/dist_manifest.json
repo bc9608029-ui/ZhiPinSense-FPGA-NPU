@@ -1,0 +1,37 @@
+{
+  "built_utc": "2026-10-20T05:04:28Z",
+  "honest_gap": "\u7eaf\u79bb\u7ebf\uff1b\u4e0d\u78b0\u677f/\u4e0d\u53d1\u5c04/\u4e0d\u8bad\u7ec3\uff1b\u677f\u7aef C++ \u672a\u5728 aarch64 \u7f16\u8bd1\u3002",
+  "tarballs": {
+    "v2_waveform_correct_INPUTS.tar.gz": {
+      "bytes": 227032,
+      "note": "24 v2 bursts + manifest + SHA256SUMS",
+      "sha256": "1743b784f8d4b2f3663b850b4982175c7c36074ea33d490210c15438a4c1d320"
+    },
+    "v2_waveform_correct_PATCH.tar.gz": {
+      "bytes": 33856,
+      "files": [
+        "contract/v2_waveform_correctness.json",
+        "contract/v2_waveform_definitions.md",
+        "docs/v2_AUDIT_NOTES.md",
+        "host_tests/run_regression_v2.py",
+        "scripts/judge_radioml_v2.py",
+        "scripts/package_v2.py",
+        "scripts/radioml_clean_contract.py",
+        "scripts/radioml_dualsdr_burst.py",
+        "scripts/radioml_dualsdr_common.py",
+        "scripts/radioml_independent_rx_contract.py",
+        "scripts/radioml_v2_contract.py",
+        "scripts/radioml_v2_replay.py",
+        "scripts/radioml_v2_tx.py",
+        "scripts/radioml_waveform_correct_v2.py"
+      ],
+      "sha256": "83548e0ff7de100161b0ed3c2004b4bab7c2ce40a07917d11a4c1a9079f979c8"
+    }
+  },
+  "token": "M29-RML24-FIX10CLASS24-WAVEFORM-CORRECT-V2-DIST",
+  "v1_untouched_proof": {
+    "note": "v1 \u5728 fix10class24_independent_rx_delivery_fix1_work/ \u9010\u5b57\u4e0d\u52a8\uff1b\u672c v2 \u5728\u72ec\u7acb\u76ee\u5f55 fix10class24_waveform_correct_v2_work/\u3002",
+    "v1_inputs_sha": "898bcaa50530e8a06345d4163f3845f7c79ca0fbf8ff6ce45090a4e9a99a7466",
+    "v1_patch_sha": "06c3ce495e2415d9f8b343f11c9e1c0923e897aa7a8d6b5465c56f7dce94df79"
+  }
+}

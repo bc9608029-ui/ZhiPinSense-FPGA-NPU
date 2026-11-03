@@ -1,0 +1,63 @@
+contract_version: 1
+status: reference_contract_not_final_radio_calibration
+
+frozen_training_path:
+  generated_clean_record:
+    normalization: per_record_complex_rms
+    formula: x_clean = x_raw * amplitude / sqrt(mean(I^2 + Q^2))
+    amplitude: 1.0
+    zero_guard: numpy_float64_epsilon
+  channel_order:
+    - flat_fading
+    - multipath
+    - cfo
+    - phase_offset
+    - phase_noise
+    - sfo
+    - iq_imbalance
+    - dc_offset
+    - amplitude_scaling
+    - clipping
+    - capture_desired_signal_power
+    - narrowband_interference
+    - burst_interference
+    - awgn
+  post_channel_normalization: none
+  tensor_conversion: stack_real_imag_then_float32
+  model_input_layout: NCL
+
+sdr_reference_conversion:
+  input_layout: interleaved_signed_int16_iq
+  adc_lsb_reference: 0.000030517578125
+  formula: x_model[n] = adc_count[n] * adc_lsb * receiver_scale
+  receiver_scale_reference: 1.0
+  per_record_rms_normalization: forbidden_for_frozen_candidate
+  note: receiver_scale must be calibrated and frozen using non-blind replay data.
+
+physical_frontend:
+  formulas:
+    power_integer: P_int = I_int^2 + Q_int^2
+    lag_real_integer: Re_int = I[n]I[n-1] + Q[n]Q[n-1]
+    lag_imag_integer: Im_int = Q[n]I[n-1] - I[n]Q[n-1]
+    power_float: P_float = adc_lsb^2 * receiver_scale^2 * P_int
+    lag_float: C_float = adc_lsb^2 * receiver_scale^2 * C_int
+  exact_width_bits:
+    power_unsigned: 32
+    lag_real_signed: 33
+    lag_imag_signed: 33
+  first_lag_sample: zero
+
+int8_reference_test_scales:
+  rounding: nearest_ties_away_from_zero
+  saturation: [-127, 127]
+  zero_points:
+    iq: 0
+    power: 0
+    lag_real: 0
+    lag_imag: 0
+  scales:
+    iq: 0.007874015748031496
+    power: 0.015748031496062992
+    lag_real: 0.015748031496062992
+    lag_imag: 0.015748031496062992
+  note: Final NPU scales must come from training-distribution calibration and replace these reference-test values.

@@ -1,0 +1,215 @@
+{
+  "reference": "frozen_qam_aware_v2_time_power_phase",
+  "scope": "V2 exact development namespace; final blind set not accessed",
+  "seeds": [
+    "2026",
+    "2027",
+    "2028"
+  ],
+  "per_seed": [
+    {
+      "seed": "2026",
+      "checkpoint": "/root/autodl-tmp/v32_run_20261002_093450/qam_aware_v3_2_autodl/outputs/qam_aware_v3_2/formal/seeds/seed2026/checkpoints/best.pt",
+      "accuracy": 0.7044047619047619,
+      "macro_f1": 0.7031329078713382,
+      "qam_mean_accuracy": 0.5076190476190476,
+      "per_class_accuracy": {
+        "BPSK": 0.7866666666666666,
+        "QPSK": 0.6085714285714285,
+        "8PSK": 0.6133333333333333,
+        "16QAM": 0.5371428571428571,
+        "64QAM": 0.4780952380952381,
+        "2FSK": 0.8790476190476191,
+        "CPFSK": 0.8695238095238095,
+        "OFDM": 0.8628571428571429
+      },
+      "snr_accuracy": {
+        "0": 0.855,
+        "10": 0.9405,
+        "20": 0.9495
+      }
+    },
+    {
+      "seed": "2027",
+      "checkpoint": "/root/autodl-tmp/v32_run_20261002_093450/qam_aware_v3_2_autodl/outputs/qam_aware_v3_2/formal/seeds/seed2027/checkpoints/best.pt",
+      "accuracy": 0.7060714285714286,
+      "macro_f1": 0.7067083311669737,
+      "qam_mean_accuracy": 0.5090476190476191,
+      "per_class_accuracy": {
+        "BPSK": 0.7857142857142857,
+        "QPSK": 0.6247619047619047,
+        "8PSK": 0.6304761904761905,
+        "16QAM": 0.52,
+        "64QAM": 0.4980952380952381,
+        "2FSK": 0.9333333333333333,
+        "CPFSK": 0.8314285714285714,
+        "OFDM": 0.8247619047619048
+      },
+      "snr_accuracy": {
+        "0": 0.851,
+        "10": 0.9375,
+        "20": 0.9395
+      }
+    },
+    {
+      "seed": "2028",
+      "checkpoint": "/root/autodl-tmp/v32_run_20261002_093450/qam_aware_v3_2_autodl/outputs/qam_aware_v3_2/formal/seeds/seed2028/checkpoints/best.pt",
+      "accuracy": 0.6954761904761905,
+      "macro_f1": 0.6928306498760387,
+      "qam_mean_accuracy": 0.47000000000000003,
+      "per_class_accuracy": {
+        "BPSK": 0.7952380952380952,
+        "QPSK": 0.6485714285714286,
+        "8PSK": 0.6333333333333333,
+        "16QAM": 0.4247619047619048,
+        "64QAM": 0.5152380952380953,
+        "2FSK": 0.9552380952380952,
+        "CPFSK": 0.8,
+        "OFDM": 0.7914285714285715
+      },
+      "snr_accuracy": {
+        "0": 0.85,
+        "10": 0.9295,
+        "20": 0.931
+      }
+    }
+  ],
+  "mean": {
+    "accuracy": 0.701984126984127,
+    "macro_f1": 0.7008906296381169,
+    "qam_mean_accuracy": 0.4955555555555556
+  },
+  "std": {
+    "accuracy": 0.004651836385625503,
+    "macro_f1": 0.005883217275129633,
+    "qam_mean_accuracy": 0.018079915539928968
+  },
+  "per_class_summary": {
+    "BPSK": {
+      "mean": 0.7892063492063492,
+      "std": 0.004282773829597463
+    },
+    "QPSK": {
+      "mean": 0.6273015873015874,
+      "std": 0.016428379724362695
+    },
+    "8PSK": {
+      "mean": 0.6257142857142858,
+      "std": 0.008832017614757836
+    },
+    "16QAM": {
+      "mean": 0.493968253968254,
+      "std": 0.049434188342404387
+    },
+    "64QAM": {
+      "mean": 0.49714285714285716,
+      "std": 0.015178454714770716
+    },
+    "2FSK": {
+      "mean": 0.9225396825396825,
+      "std": 0.032027325194010366
+    },
+    "CPFSK": {
+      "mean": 0.8336507936507936,
+      "std": 0.02842643988002997
+    },
+    "OFDM": {
+      "mean": 0.8263492063492063,
+      "std": 0.029182184620397185
+    }
+  },
+  "snr_summary": {
+    "0": {
+      "mean": 0.852,
+      "std": 0.0021602468994692888
+    },
+    "10": {
+      "mean": 0.9358333333333334,
+      "std": 0.00464279609239471
+    },
+    "20": {
+      "mean": 0.9400000000000001,
+      "std": 0.007560864148142488
+    }
+  },
+  "rule": "mean_improvement_and_per_seed_regression_floors",
+  "improvement_on": "mean",
+  "regression_floors_on": "every_seed",
+  "checks": {
+    "mean_accuracy_gain": false,
+    "mean_macro_f1_gain": false,
+    "mean_qam_mean_gain": false,
+    "seed2026_per_class_BPSK": true,
+    "seed2026_per_class_QPSK": false,
+    "seed2026_per_class_8PSK": true,
+    "seed2026_per_class_16QAM": true,
+    "seed2026_per_class_64QAM": true,
+    "seed2026_per_class_2FSK": true,
+    "seed2026_per_class_CPFSK": true,
+    "seed2026_per_class_OFDM": true,
+    "seed2026_snr_0": true,
+    "seed2026_snr_10": true,
+    "seed2026_snr_20": true,
+    "seed2027_per_class_BPSK": true,
+    "seed2027_per_class_QPSK": true,
+    "seed2027_per_class_8PSK": true,
+    "seed2027_per_class_16QAM": true,
+    "seed2027_per_class_64QAM": true,
+    "seed2027_per_class_2FSK": true,
+    "seed2027_per_class_CPFSK": false,
+    "seed2027_per_class_OFDM": false,
+    "seed2027_snr_0": true,
+    "seed2027_snr_10": true,
+    "seed2027_snr_20": true,
+    "seed2028_per_class_BPSK": true,
+    "seed2028_per_class_QPSK": true,
+    "seed2028_per_class_8PSK": true,
+    "seed2028_per_class_16QAM": false,
+    "seed2028_per_class_64QAM": true,
+    "seed2028_per_class_2FSK": true,
+    "seed2028_per_class_CPFSK": false,
+    "seed2028_per_class_OFDM": false,
+    "seed2028_snr_0": true,
+    "seed2028_snr_10": true,
+    "seed2028_snr_20": true
+  },
+  "values": {
+    "mean_accuracy_gain": -0.0034920634920634352,
+    "mean_macro_f1_gain": 0.0033524676874349124,
+    "mean_qam_mean_gain": 0.030793650793650817,
+    "seed2026_per_class_delta_BPSK": -0.008571428571428563,
+    "seed2026_per_class_delta_QPSK": -0.03142857142857147,
+    "seed2026_per_class_delta_8PSK": -0.021904761904761982,
+    "seed2026_per_class_delta_16QAM": 0.029523809523809508,
+    "seed2026_per_class_delta_64QAM": 0.05619047619047618,
+    "seed2026_per_class_delta_2FSK": -0.02857142857142858,
+    "seed2026_per_class_delta_CPFSK": -0.007619047619047636,
+    "seed2026_per_class_delta_OFDM": 0.003809523809523818,
+    "seed2026_snr_delta_0": 0.0014999999999999458,
+    "seed2026_snr_delta_10": 0.014000000000000012,
+    "seed2026_snr_delta_20": 0.01649999999999996,
+    "seed2027_per_class_delta_BPSK": -0.00952380952380949,
+    "seed2027_per_class_delta_QPSK": -0.015238095238095273,
+    "seed2027_per_class_delta_8PSK": -0.004761904761904745,
+    "seed2027_per_class_delta_16QAM": 0.012380952380952381,
+    "seed2027_per_class_delta_64QAM": 0.0761904761904762,
+    "seed2027_per_class_delta_2FSK": 0.02571428571428569,
+    "seed2027_per_class_delta_CPFSK": -0.04571428571428571,
+    "seed2027_per_class_delta_OFDM": -0.03428571428571425,
+    "seed2027_snr_delta_0": -0.0025000000000000577,
+    "seed2027_snr_delta_10": 0.01100000000000001,
+    "seed2027_snr_delta_20": 0.00649999999999995,
+    "seed2028_per_class_delta_BPSK": -0.0,
+    "seed2028_per_class_delta_QPSK": 0.008571428571428563,
+    "seed2028_per_class_delta_8PSK": -0.0019047619047619646,
+    "seed2028_per_class_delta_16QAM": -0.08285714285714285,
+    "seed2028_per_class_delta_64QAM": 0.09333333333333338,
+    "seed2028_per_class_delta_2FSK": 0.04761904761904756,
+    "seed2028_per_class_delta_CPFSK": -0.07714285714285707,
+    "seed2028_per_class_delta_OFDM": -0.06761904761904758,
+    "seed2028_snr_delta_0": -0.0035000000000000586,
+    "seed2028_snr_delta_10": 0.0030000000000000027,
+    "seed2028_snr_delta_20": -0.0020000000000000018
+  },
+  "passed": false
+}

@@ -1,0 +1,2187 @@
+a                                                                                       Complete 12-Bit, 65 MSPS
+                                                                                                  ADC Converter
+                                                                                                       AD9226
+   FEATURES                                                                                FUNCTIONAL BLOCK DIAGRAM
+   Signal-to-Noise Ratio: 69 dB @ f IN = 31 MHz
+   Spurious-Free Dynamic Range: 85 dB @ fIN = 31 MHz                                                           CLK         AVDD      DRVDD
+
+   Intermodulation Distortion of –75 dBFS @ fIN = 140 MHz
+   ENOB = 11.1 @ fIN = 10 MHz                                                                       DUTY CYCLE STABILIZER
+                                                                                     SHA
+   Low-Power Dissipation: 475 mW                                              VINA                         8-STAGE
+                                                                                               MDAC1                                A/D
+   No Missing Codes Guaranteed                                                VINB                         1-1/2-BIT PIPELINE
+
+   Differential Nonlinearity Error: ⴞ0.6 LSB                                                  A/D
+                                                                                                       4
+                                                                                                                                      3
+                                                                                                                     16
+   Integral Nonlinearity Error: ⴞ0.6 LSB                                      CAPT   CALIBRATION
+   Clock Duty Cycle Stabilizer                                                CAPB       ROM                  CORRECTION LOGIC
+   Patented On-Chip Sample-and-Hold with                                      VREF
+                                                                                                                    12
+                                                                                                            OUTPUT BUFFERS                   OTR
+     Full Power Bandwidth of 750 MHz                                                                                                         BIT 1
+                                                                             SENSE
+   Straight Binary or Two’s Complement Output Data                                    REF      1V           MODE
+                                                                                                                                             (MSB)
+   28-Lead SSOP, 48-Lead LQFP                                                        SELECT                SELECT                AD9226      BIT 12
+                                                                                                                                             (LSB)
+   Single 5 V Analog Supply, 3 V/5 V Driver Supply
+                                                                                               REFCOM      MODE           AVSS     DRVSS
+   Pin-Compatible to AD9220, AD9221, AD9223,
+     AD9224, AD9225
+
+
+
+PRODUCT DESCRIPTION                                                          The AD9226 has two important mode functions. One will set
+The AD9226 is a monolithic, single-supply, 12-bit, 65 MSPS                   the data format to binary or two’s complement. The second will
+analog-to-digital converter with an on-chip, high-performance                make the ADC immune to clock duty cycle variations.
+sample-and-hold amplifier and voltage reference. The AD9226
+uses a multistage differential pipelined architecture with a pat-            PRODUCT HIGHLIGHTS
+ented input stage and output error correction logic to provide               IF Sampling—The patented SHA input can be configured for
+12-bit accuracy at 65 MSPS data rates. There are no missing                  either single-ended or differential inputs. It will maintain out-
+codes over the full operating temperature range (guaranteed).                standing AC performance up to input frequencies of 300 MHz.
+The input of the AD9226 allows for easy interfacing to both                  Low Power—The AD9226 at 475 mW consumes a fraction of
+imaging and communications systems. With a truly differential                the power presently available in existing, high-speed monolithic
+input structure, the user can select a variety of input ranges and           solutions.
+offsets including single-ended applications.                                 Out of Range (OTR)—The OTR output bit indicates when
+The sample-and-hold amplifier (SHA) is well suited for IF                    the input signal is beyond the AD9226’s input range.
+undersampling schemes such as in single-channel communi-                     Single Supply—The AD9226 uses a single 5 V power supply
+cation applications with input frequencies up to and well                    simplifying system power supply design. It also features a sepa-
+beyond Nyquist frequencies.                                                  rate digital output driver supply line to accommodate 3 V and
+The AD9226 has an on-board programmable reference. For sys-                  5 V logic families.
+tem design flexibility, an external reference can also be chosen.            Pin Compatibility—The AD9226 is similar to the AD9220,
+A single clock input is used to control all internal conversion              AD9221, AD9223, AD9224, and AD9225 ADCs.
+cycles. An out-of-range signal indicates an overflow condition               Clock Duty Cycle Stabilizer—Makes conversion immune to
+that can be used with the most significant bit to determine low              varying clock pulsewidths.
+or high overflow.
+
+
+
+
+REV. B
+Information furnished by Analog Devices is believed to be accurate and
+reliable. However, no responsibility is assumed by Analog Devices for its
+use, nor for any infringements of patents or other rights of third parties   One Technology Way, P.O. Box 9106, Norwood, MA 02062-9106, U.S.A.
+which may result from its use. No license is granted by implication or       Tel: 781/329-4700   World Wide Web Site: http://www.analog.com
+otherwise under any patent or patent rights of Analog Devices.               Fax: 781/326-8703                     © Analog Devices, Inc., 2001
+AD9226–SPECIFICATIONS
+                                         (AVDD = 5 V, DRVDD = 3 V, fSAMPLE = 65 MSPS, VREF = 2.0 V, Differential inputs, TMIN to TMAX unless otherwise
+DC SPECIFICATIONS noted.)
+Parameter                                                     Temp          Test Level    Min      Typ      Max          Unit
+RESOLUTION                                                                                12                             Bits
+ACCURACY
+ Integral Nonlinearity (INL)                                  Full          V                      ± 0.6                 LSB
+                                                              25°C          I                               ± 1.6        LSB
+  Differential Nonlinearity (DNL)                             Full          V                      ± 0.6                 LSB
+                                                              25°C          I                               ± 1.0        LSB
+  No Missing Codes Guaranteed                                 Full          I             12                             Bits
+  Zero Error                                                  Full          V                      ± 0.3                 % FSR
+                                                              25°C          I                               ± 1.4        % FSR
+  Gain Error                                                  25°C          I                               ± 2.0        % FSR
+                                                              Full          V                      ± 0.6                 % FSR
+TEMPERATURE DRIFT
+ Zero Error                                                   Full          V                      ±2                    ppm/°C
+ Gain Error1                                                  Full          V                      ± 26                  ppm/°C
+ Gain Error2                                                  Full          V                      ± 0.4                 ppm/°C
+POWER SUPPLY REJECTION
+  AVDD (5 V ± 0.25 V)                                         Full          V                      ± 0.05                % FSR
+                                                              25°C          I                               ± 0.4        % FSR
+INPUT REFERRED NOISE
+  VREF = 1.0 V                                                Full          V                      0.5                   LSB rms
+  VREF = 2.0 V                                                Full          V                      0.25                  LSB rms
+ANALOG INPUT
+ Input Span (VREF = 1 V)                                      Full          V                      1                     V p-p
+            (VREF = 2 V)                                      Full          V                      2                     V p-p
+ Input (VINA or VINB) Range                                   Full          IV            0                  AVDD        V
+ Input Capacitance                                            Full          V                      7                     pF
+INTERNAL VOLTAGE REFERENCE
+  Output Voltage (1 V Mode)                                   Full          V                      1.0                   V
+  Output Voltage Tolerance (1 V Mode)                         25°C          I                               ± 15         mV
+  Output Voltage (2.0 V Mode)                                 Full          V                      2.0                   V
+  Output Voltage Tolerance (2.0 V Mode)                       25°C          I                               ± 29         mV
+  Output Current (Available for External Loads)               Full          V                      1.0                   mA
+  Load Regulation3                                            Full          V                      0.7                   mV
+                                                              25°C          I                               1.5          mV
+REFERENCE INPUT RESISTANCE                                    Full          V                      5                     kΩ
+POWER SUPPLIES
+  Supply Voltages
+    AVDD                                                      Full          V             4.75     5        5.25         V (± 5% AVDD Operating)
+    DRVDD                                                     Full          V             2.85              5.25         V (± 5% DRVDD Operating)
+  Supply Current
+    IAVDD4                                                    Full          V                      86                    mA (2 V External VREF)
+                                                              25°C          I                               90.5         mA (2 V External VREF)
+     IDRVDD5                                                  Full          V                      14.6                  mA (2 V External VREF)
+                                                              25°C          I                               16.5         mA (2 V External VREF)
+                                  4, 5
+POWER CONSUMPTION                                             Full          V                      475
+                                                              25°C          I                               500          mW (2 V External VREF)
+NOTES
+1
+  Includes internal voltage reference error.
+2
+  Excludes internal voltage reference error.
+3
+  Load regulation with 1 mA load current (in addition to that required by the AD9226).
+4
+  AVDD = 5 V
+5
+  DRVDD = 3 V
+Specifications subject to change without notice.
+
+
+
+
+                                                                                 –2–                                                           REV. B
+                                                                                                                                                      AD9226
+DIGITAL SPECIFICATIONS (AVDD = 5 V, DRVDD = 3 V, f                                   SAMPLE = 65 MSPS, VREF = 2.0 V, TMIN to TMAX, unless otherwise noted.)
+
+Parameters                                                            Temp          Test Level        Min                    Typ        Max            Unit
+                                       1                 1
+LOGIC INPUTS (Clock, DFS , Duty Cycle , and
+Output Enable1)
+ High-Level Input Voltage                                             Full          IV                2.4                                              V
+ Low-Level Input Voltage                                              Full          IV                                                  0.8            V
+ High-Level Input Current (VIN = AVDD)                                Full          IV                –10                               +10            µA
+ Low-Level Input Current (VIN = 0 V)                                  Full          IV                –10                               +10            µA
+ Input Capacitance                                                    Full          V                                        5                         pF
+ Output Enable1                                                       Full          IV                DRVDD
+                                                                                                            – 0.5
+                                                                                                                                        DRVDD
+                                                                                                                                              + 0.5    V
+                                                                                                        2                                 2
+LOGIC OUTPUTS (With DRVDD = 5 V)
+ High-Level Output Voltage (IOH = 50 µA)                              Full          IV                4.5                                              V
+ High-Level Output Voltage (IOH = 0.5 mA)                             Full          IV                2.4                                              V
+ Low-Level Output Voltage (IOL = 1.6 mA)                              Full          IV                                                  0.4            V
+ Low-Level Output Voltage (IOL = 50 µA)                               Full          IV                                                  0.1            V
+ Output Capacitance                                                                                                          5                         pF
+LOGIC OUTPUTS (With DRVDD = 3 V)
+ High-Level Output Voltage (IOH = 50 µA)                              Full          IV                2.95                                             V
+ High-Level Output Voltage (IOH = 0.5 mA)                             Full          IV                2.80                                             V
+ Low-Level Output Voltage (IOL = 1.6 mA)                              Full          IV                                                  0.4            V
+ Low-Level Output Voltage (IOL = 50 µA)                               Full          IV                                                  0.05           V
+NOTES
+1
+  LQFP package.
+Specifications subject to change without notice.
+
+
+SWITCHING SPECIFICATIONS (T to T with AVDD = 5 V, DRVDD = 3 V, C = 20 pF)
+                                                              MIN     MAX                                          L
+
+Parameters                                                                 Temp            Test Level          Min                Typ          Max   Unit
+Max Conversion Rate                                                        Full            VI                  65                                    MHz
+Clock Period1                                                              Full            V                   15.38                                 ns
+CLOCK Pulsewidth High2                                                     Full            V                   3                                     ns
+CLOCK Pulsewidth Low2                                                      Full            V                   3                                     ns
+Output Delay                                                               Full            V                   3.5                             7     ns
+Pipeline Delay (Latency)                                                   Full            V                                      7                  Clock Cycles
+Output Enable Delay3                                                       Full            V                                      15                 ns
+NOTES
+1
+  The clock period may be extended to 10 µs without degradation in specified performance @ 25°C.
+2
+  When MODE pin is tied to AVDD or grounded, the AD9226 SSOP is not affected by clock duty cycle.
+3
+  LQFP package.
+Specifications subject to change without notice.
+
+
+                                                                    n+2
+                                                         n+1
+                                                                              n+3
+                                                   n                                                                   n+8
+                                     ANALOG                                          n+4
+                                       INPUT
+                                                                                                             n+7
+                                                                                             n+5
+                                                                                                      n+6
+
+
+
+
+                                      CLOCK
+
+
+
+                                        DATA
+                                                   n–8       n–7     n–6      n–5    n–4        n–3   n–2      n–1       n       n+1
+                                         OUT
+
+
+
+                                                                                                                       TOD = 7.0 MAX
+                                                                                                                             3.5 MIN
+                                                                    Figure 1. Timing Diagram
+
+
+REV. B                                                                               –3–
+AD9226–SPECIFICATIONS
+AC SPECIFICATIONS (AVDD = 5 V, DRVDD = 3 V, f      SAMPLE = 65 MSPS, VREF = 2.0 V, TMIN to TMAX, Differential Input unless otherwise noted.)
+
+Parameter                                                 Temp              Test Level            Min       Typ       Max            Unit
+SIGNAL-TO-NOISE RATIO
+  fIN = 2.5 MHz                                           Full              V                               68.9                     dBc
+                                                          25°C              I                    68                                  dBc
+  fIN = 15 MHz                                            Full              V                               68.4                     dBc
+                                                          25°C              I                    67.4                                dBc
+  fIN = 31 MHz                                            Full              V                               68                       dBc
+  fIN = 60 MHz                                            Full              V                               68                       dBc
+  fIN = 200 MHz1                                          Full              V                               65                       dBc
+SIGNAL-TO-NOISE RATIO AND DISTORTION
+  fIN = 2.5 MHz                                           Full              V                               68.8                     dBc
+                                                          25°C              I                    67.9                                dBc
+  fIN = 15 MHz                                            Full              V                               68.3                     dBc
+                                                          25°C              I                    67.3                                dBc
+  fIN = 31 MHz                                            Full              V                               67                       dBc
+  fIN = 60 MHz                                            Full              V                               67                       dBc
+  fIN = 200 MHz1                                          Full              V                               60                       dBc
+TOTAL HARMONIC DISTORTION
+ fIN = 2.5 MHz                                            Full              V                               –84                      dBc
+                                                          25°C              I                                         –77.0          dBc
+  fIN = 15 MHz                                            Full              V                               –82.3                    dBc
+                                                          25°C              I                                         –76.0          dBc
+  fIN = 31 MHz                                            Full              V                               –68                      dBc
+  fIN = 60 MHz                                            Full              V                               –68                      dBc
+  fIN = 200 MHz1                                          Full              V                               –61                      dBc
+SECOND AND THIRD HARMONIC DISTORTION
+  fIN = 2.5 MHz                                           Full              V                               –86.5                    dBc
+                                                          25°C              I                                         –78            dBc
+  fIN = 15 MHz                                            Full              V                               –86.7                    dBc
+                                                          25°C              I                                         –76            dBc
+  fIN = 31 MHz                                            Full              V                               –83                      dBc
+  fIN = 60 MHz                                            Full              V                               –82                      dBc
+  fIN = 200 MHz1                                          Full              V                               –75                      dBc
+SPURIOUS FREE DYNAMIC RANGE
+  fIN = 2.5 MHz                                           Full              V                               86.4                     dBc
+                                                          25°C              I                    78                                  dBc
+  fIN = 15 MHz                                            Full              V                               85.5                     dBc
+                                                          25°C              I                    76                                  dBc
+  fIN = 31 MHz                                            Full              V                               82                       dBc
+  fIN = 60 MHz                                            Full              V                               81                       dBc
+  fIN = 200 MHz1                                          Full              V                               60                       dBc
+ANALOG INPUT BANDWIDTH                                    25°C              V                               750                      MHz
+NOTES
+1
+  1.0 V Reference and Input Span
+Specifications subject to change without notice.
+
+
+
+
+                                                            –4–                                                                   REV. B
+                                                                                                                                                         AD9226
+EXPLANATION OF TEST LEVELS                                                                ABSOLUTE MAXIMUM RATINGS 1
+Test Level                                                                                                         With
+I.   100% production tested.                                                              Pin Name                 Respect to          Min        Max                    Unit
+II. 100% production tested at 25°C and sample tested at                                   AVDD             AVSS                        –0.3       +6.5                   V
+    specified temperatures. AC testing done on sample basis.                              DRVDD            DRVSS                       –0.3       +6.5                   V
+III. Sample tested only.                                                                  AVSS             DRVSS                       –0.3       +0.3                   V
+IV. Parameter is guaranteed by design and characterization                                AVDD             DRVDD                       –6.5       +6.5                   V
+    testing.                                                                              REFCOM           AVSS                        –0.3       +0.3                   V
+                                                                                          CLK, MODE        AVSS                        –0.3       AVDD + 0.3             V
+V. Parameter is a typical value only.                                                     Digital Outputs DRVSS                        –0.3       DRVDD + 0.3            V
+VI. All devices are 100% production tested at 25°C; sample tested                         VINA, VINB       AVSS                        –0.3       AVDD + 0.3             V
+    at temperature extremes.                                                              VREF             AVSS                        –0.3       AVDD + 0.3             V
+                                                                                          SENSE            AVSS                        –0.3       AVDD + 0.3             V
+                                                                                          CAPB, CAPT       AVSS                        –0.3       AVDD + 0.3             V
+THERMAL RESISTANCE                                                                        OEB2             DRVSS                       –0.3       DRVDD + 0.3            V
+θJC SSOP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23°C/W     CM LEVEL2        AVSS                        –0.3       AVDD + 0.3             V
+θJA SSOP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63.3°C/W     VR2              AVSS                        –0.3       AVDD + 0.3             V
+θJC LQFP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17°C/W     Junction Temperature                                    150                    °C
+θJA LQFP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76.2°C/W     Storage Temperature                          –65        +150                   °C
+                                                                                          Lead Temperature (10 sec)                               300                    °C
+                                                                                          NOTES
+                                                                                          1
+                                                                                           Stresses above those listed under Absolute Maximum Ratings may cause perma-
+                                                                                            nent damage to the device. This is a stress rating only; functional operation of the
+                                                                                            device at these or any other conditions above those indicated in the operational
+                                                                                            sections of this specification is not implied. Exposure to absolute maximum ratings
+                                                                                            for extended periods may affect device reliability.
+                                                                                          2
+                                                                                           LQFP package.
+
+
+                                                                         ORDERING GUIDE
+
+Model                           Temperature Range                           Package Description                                                     Package Option
+AD9226ARS                       –40°C to +85°C                              28-Lead Shrink Small Outline (SSOP)                                     RS-28
+AD9226AST                       –40°C to +85°C                              48-Lead Thin Plastic Quad Flatpack (LQFP)                               ST-48
+AD9226-EB                                                                   Evaluation Board (SSOP)
+AD9226-LQFP-EB                                                              Evaluation Board (LQFP)
+
+
+
+CAUTION
+ESD (electrostatic discharge) sensitive device. Electrostatic charges as high as 4000 V readily
+accumulate on the human body and test equipment and can discharge without detection. Although                                           WARNING!
+the AD9226 features proprietary ESD protection circuitry, permanent damage may occur on
+devices subjected to high-energy electrostatic discharges. Therefore, proper ESD precautions are
+                                                                                                                                                      ESD SENSITIVE DEVICE
+recommended to avoid performance degradation or loss of functionality.
+
+
+
+
+REV. B                                                                                  –5–
+AD9226
+                                PIN CONNECTION                                                                         PIN CONNECTION
+                                  48-Lead LQFP                                                                           28-Lead SSOP
+
+
+
+
+                                             REF COM (AVSS)
+                                                                                                                     CLK     1              28   DRVDD
+
+
+                                CM LEVEL
+                                                                                                              (LSB) BIT 12   2              27   DRVSS
+
+
+
+                                             MODE1
+
+
+
+                                             CAPB
+                                             CAPB
+                                                                                                                   BIT 11    3              26   AVDD
+
+
+
+                                             CAPT
+                                             CAPT
+
+
+
+
+                                                                      VREF
+                                VINB
+                                VINA
+
+
+                                NC
+                       VR
+
+
+
+
+                                                                                                                   BIT 10    4              25   AVSS
+                       48 47 46 45 44 43 42 41 40 39 38 37                                                           BIT 9   5              24   VINB
+
+           AVSS   1                                                          36   SENSE                              BIT 8   6              23   VINA
+                            PIN 1                                                                                                  AD9226
+           AVSS 2           IDENTIFIER                                       35 MODE2                                BIT 7   7
+                                                                                                                                 TOP VIEW 22 MODE
+           AVDD 3                                                            34 AVDD                                 BIT 6   8 (Not to Scale) 21 CAPT
+           AVDD 4                                                            33 AVSS
+                                                                                                                     BIT 5   9              20   CAPB
+              NC  5                                                          32 AVSS
+                                           AD9226                                                                    BIT 4 10               19   REFCOM (AVSS)
+              NC 6                                                           31   AVDD
+                                           TOP VIEW                                                                  BIT 3 11               18   VREF
+            CLK 7                                                            30   DRVSS
+                                         (Not to Scale)
+             NC 8                                                            29 DRVDD                                BIT 2 12               17   SENSE
+            OEB 9                                                            28 OTR                            (MSB) BIT 1 13               16   AVSS
+             NC 10                                                           27 BIT 1 (MSB)
+                                                                                                                     OTR 14                 15   AVDD
+              NC 11                                                          26 BIT 2
+     (LSB) BIT 12 12                                                         25 BIT 3
+
+
+   NC = NO CONNECT     13 14 15 16 17 18 19 20 21 22 23 24
+                       BIT 11
+                                DRVSS
+                                DRVDD
+                                 BIT 10
+                                  BIT 9
+                                             BIT 8
+                                             BIT 7
+                                             BIT 6
+                                             BIT 5
+                                                          DRVSS
+                                                                  DRVDD
+                                                                    BIT 4
+
+
+
+
+              48-PIN FUNCTION DESCRIPTIONS                                                                   28-PIN FUNCTION DESCRIPTIONS
+
+Pin                                                                                                 Pin
+Number        Name                           Description                                            Number   Name                Description
+1, 2, 32, 33 AVSS                            Analog Ground                                          1        CLK                 Clock Input Pin
+3, 4, 31, 34 AVDD                            5 V Analog Supply                                      2        BIT 12              Least Significant Data Bit (LSB)
+5, 6, 8, 10, NC                              No Connect                                             3–12     BITS 11–2           Data Output Bits
+11, 44                                                                                              13       BIT 1               Most Significant Data Bit (MSB)
+7            CLK                             Clock Input Pin                                        14       OTR                 Out of Range
+9            OEB                             Output Enable (Active Low)                             15, 26   AVDD                5 V Analog Supply
+12           BIT 12                          Least Significant Data Bit (LSB)                       16, 25   AVSS                Analog Ground
+13           BIT 11                          Data Output Bit                                        17       SENSE               Reference Select
+14, 22, 30 DRVSS                             Digital Output Driver Ground                           18       VREF                Input Span Select (Reference I/O)
+15, 23, 29 DRVDD                             3 V to 5 V Digital Output                              19       REFCOM              Reference Common
+                                             Driver Supply                                                   (AVSS)
+16–21,        BITS 10–5,                     Data Output Bits                                       20       CAPB                Noise Reduction Pin
+24–26         BITS 4–2                                                                              21       CAPT                Noise Reduction Pin
+27            BIT 1                          Most Significant Data Bit (MSB)                        22       MODE                Data Format Select /Clock Stabilizer
+28            OTR                            Out of Range                                           23       VINA                Analog Input Pin (+)
+35            MODE2                          Data Format Select                                     24       VINB                Analog Input Pin (–)
+36            SENSE                          Reference Select                                       27       DRVSS               Digital Output Driver Ground
+37            VREF                           Reference In/Out                                       28       DRVDD               3 V to 5 V Digital Output
+38            REFCOM                         Reference Common                                                                    Driver Supply
+              (AVSS)
+39, 40        CAPB                           Noise Reduction Pin
+41, 42        CAPT                           Noise Reduction Pin
+43            MODE1                          Clock Stabilizer
+45            CM LEVEL                       Midsupply Reference
+46            VINA                           Analog Input Pin (+)
+47            VINB                           Analog Input Pin (–)
+48            VR                             Noise Reduction Pin
+
+
+
+
+                                                                                              –6–                                                                REV. B
+                                                                                                                             AD9226
+DEFINITIONS OF SPECIFICATIONS                                              EFFECTIVE NUMBER OF BITS (ENOB)
+INTEGRAL NONLINEARITY (INL)                                                For a sine wave, SINAD can be expressed in terms of the num-
+INL refers to the deviation of each individual code from a line            ber of bits. Using the following formula,
+drawn from “negative full scale” through “positive full scale.”                                N = (SINAD – 1.76)/6.02
+The point used as “negative full scale” occurs 1/2 LSB before
+the first code transition. “Positive full scale” is defined as a level     it is possible to obtain a measure of performance expressed as
+1 1/2 LSB beyond the last code transition. The deviation is                N, the effective number of bits.
+measured from the middle of each particular code to the true               Thus, effective number of bits for a device for sine wave inputs
+straight line.                                                             at a given input frequency can be calculated directly from its
+                                                                           measured SINAD.
+DIFFERENTIAL NONLINEARITY (DNL, NO MISSING
+CODES)                                                                     TOTAL HARMONIC DISTORTION (THD)
+An ideal ADC exhibits code transitions that are exactly 1 LSB              THD is the ratio of the rms sum of the first six harmonic com-
+apart. DNL is the deviation from this ideal value. Guaranteed              ponents to the rms value of the measured input signal and is
+no missing codes to 12-bit resolution indicates that all 4096              expressed as a percentage or in decibels.
+codes, respectively, must be present over all operating ranges.
+                                                                           SIGNAL-TO-NOISE RATIO (SNR)
+ZERO ERROR                                                                 SNR is the ratio of the rms value of the measured input signal to
+The major carry transition should occur for an analog value                the rms sum of all other spectral components below the Nyquist
+1/2 LSB below VINA = VINB. Zero error is defined as the                    frequency, excluding the first six harmonics and dc. The value
+deviation of the actual transition from that point.                        for SNR is expressed in decibels.
+
+GAIN ERROR                                                                 SPURIOUS FREE DYNAMIC RANGE (SFDR)
+The first code transition should occur at an analog value                  SFDR is the difference in dB between the rms amplitude of the
+1/2 LSB above negative full scale. The last transition should              input signal and the peak spurious signal.
+occur at an analog value 1 1/2 LSB below the positive full scale.
+Gain error is the deviation of the actual difference between first         ENCODE PULSEWIDTH DUTY CYCLE
+and last code transitions and the ideal difference between first           Pulsewidth high is the minimum amount of time that the clock
+and last code transitions.                                                 pulse should be left in the logic “1” state to achieve rated per-
+                                                                           formance; pulsewidth low is the minimum time the clock pulse
+TEMPERATURE DRIFT                                                          should be left in the low state. At a given clock rate, these specs
+The temperature drift for zero error and gain error specifies the          define an acceptable clock duty cycle.
+maximum change from the initial (25°C) value to the value at
+TMIN or TMAX.                                                              MINIMUM CONVERSION RATE
+                                                                           The clock rate at which the SNR of the lowest analog signal
+POWER SUPPLY REJECTION                                                     frequency drops by no more than 3 dB below the guaranteed limit.
+The specification shows the maximum change in full scale from
+the value with the supply at the minimum limit to the value with           MAXIMUM CONVERSION RATE
+the supply at its maximum limit.                                           The encode rate at which parametric testing is performed.
+
+APERTURE JITTER                                                            OUTPUT PROPAGATION DELAY
+Aperture jitter is the variation in aperture delay for successive          The delay between the clock logic threshold and the time when
+samples and can be manifested as noise on the input to the ADC.            all bits are within valid logic levels.
+
+APERTURE DELAY                                                             TWO TONE SFDR
+Aperture delay is a measure of the sample-and-hold amplifier               The ratio of the rms value of either input tone to the rms value
+(SHA) performance and is measured from the rising edge of the              of the peak spurious component. The peak spurious component
+clock input to when the input signal is held for conversion.               may or may not be an IMD product. May be reported in dBc
+                                                                           (i.e., degrades as signal levels are lowered) or in dBFS (always
+SIGNAL-TO-NOISE AND DISTORTION (S/N+D, SINAD)                              related back to converter full scale).
+RATIO
+S/N+D is the ratio of the rms value of the measured input
+signal to the rms sum of all other spectral components below
+the Nyquist frequency, including harmonics but excluding dc.
+The value for S/N+D is expressed in decibels.
+
+
+
+
+REV. B                                                                   –7–
+AD9226
+               DRVDD
+
+                        DRVDD             DRVDD                        AVDD
+
+
+
+
+                                          DRVSS                        AVSS
+
+
+                        DRVSS
+
+
+         a. D0–D11, OTR                 b. Three-State (OEB)                  c. CLK
+
+
+
+                                                                AVDD
+                 AVDD
+
+
+
+
+                 AVSS
+                                                                AVSS
+
+                 d. AIN                           e. CAPT, CAPB, MODE, SENSE, VREF
+
+
+                                Figure 2. Equivalent Circuits
+
+
+
+
+                                            –8–                                        REV. B
+                                                                               Typical Performance Characteristics–AD9226
+(AVDD = 5.0 V, DRVDD = 3.0 V, fSAMPLE = 65 MSPS with CLK Stabilizer Enabled, TA = 25ⴗC, 2 V Differential Input Span, VCM = 2.5 V, AIN = –0.5 dBFS,
+VREF = 2.0 V, unless otherwise noted.)
+
+               0                                                                                             100
+             –10                                           SNR = 69.9dBc
+                                                           SINAD = 69.8dBc                                                         SFDR – dBFS
+             –20                                           ENOB = 11.4BITS                                     90
+                                                           THD = –86.4dBc
+             –30                                           SFDR = 88.7dBc
+             –40                                                                                               80
+
+
+
+
+                                                                                              dBFS AND dBc
+                                                                                                                                   SFDR – dBc           SNR – dBFS
+             –50
+     dBFS
+
+
+
+
+             –60                                                                                               70
+             –70
+             –80                                                                                               60
+             –90                                                                                                                                        SNR – dBc
+
+            –100                                                                                               50
+            –110
+            –120                                                                                               40
+                    0         6.5          13       19.5           26        32.5                               –30        –25     –20      –15       –10        –5         0
+                                          FREQUENCY – MHz                                                                                AIN – dBFS
+
+               TPC 1. Single-Tone 8K FFT with fIN = 5 MHz                                 TPC 4. Single-Tone SNR/SFDR vs. AIN with fIN = 5 MHz
+
+
+
+               0                                                                                               100
+             –10        SNR = 70.4dBFS                                                                                                                      SFDR – dBFS
+                        SFDR = 87.5dBFS
+             –20                                                                                               90
+                                                                                                                                     SFDR – dBc
+             –30
+             –40                                                                                               80
+                                                                                                dBFS AND dBc
+
+
+
+                                                                                                                                                               SNR – dBFS
+             –50
+     dBFS
+
+
+
+
+             –60                                                                                                70
+             –70
+             –80                                                                                               60
+             –90                                                                                                                                            SNR – dBc
+            –100                                                                                               50
+
+            –110
+            –120                                                                                               40
+                   0          6.5          13       19.5          26         32.5                               –30       –25      –20      –15       –10        –5         0
+                                          FREQUENCY – MHz                                                                                AIN – dBFS
+
+
+     TPC 2. Dual-Tone 8K FFT with fIN–1 = 18 MHz and                                      TPC 5. Dual-Tone SNR/SFDR vs. AIN with fIN–1 = 18 MHz
+     fIN–2 = 20 MHz (AIN–1 = AIN–2 = –6.5 dBFS)                                           and fIN–2 = 20 MHz
+
+
+                0                                                                                            100
+              –10       SNR = 69.5dBc                                                                                                SFDR – dBFS
+                        SINAD = 69.4dBc
+              –20       ENOB = 11.3BITS                                                                        90
+                        THD = –85dBc
+              –30       SFDR = 87.6dBc
+              –40                                                                                              80     SNR – dBFS
+                                                                                              dBFS AND dBc
+
+
+
+
+              –50
+      dBFS
+
+
+
+
+              –60                                                                                               70
+              –70
+
+              –80                                                                                              60
+              –90                                                                                                     SFDR – dBc                       SNR – dBc
+
+             –100                                                                                              50
+
+             –110
+
+             –120                                                                                              40
+                    0         6.5          13       19.5           26        32.5                               –30        –25     –20      –15       –10        –5         0
+                                          FREQUENCY – MHz                                                                                AIN – dBFS
+
+
+             TPC 3. Single-Tone 8K FFT with fIN = 31 MHz                                  TPC 6. Single-Tone SNR/SFDR vs. AIN with fIN = 31 MHz
+
+
+
+REV. B                                                                              –9–
+AD9226
+                75                                                          12.2                                           71
+
+                                          2V SPAN, DIFFERENTIAL                                                            70                             2V SPAN, DIFFERENTIAL
+                70                                                          11.4
+                                                                                                                           69
+                                                            1V SPAN,
+                                                            DIFFERENTIAL                                                   68        2V SPAN, SINGLE-ENDED
+                65                                                          10.6
+
+
+
+
+                                                                                   ENOB – Bits
+  SINAD – dBc
+
+
+
+
+                                                                                                                           67                    1V SPAN,
+
+
+
+
+                                                                                                           SNR – dBc
+                                                                                                                                                 DIFFERENTIAL
+                60                                                          9.8                                            66
+                                                           1V SPAN,
+                                                           SINGLE-ENDED                                                    65
+                55                                                          8.9                                                               1V SPAN,
+                                                                                                                           64
+                                                                                                                                              SINGLE-ENDED
+                                                                                                                           63
+                50                                                          8.1
+                                                                                                                           62
+                                   2V SPAN, SINGLE-ENDED
+                45                                                        7.3                                              61
+                     1              10              100                1000                                                  1                10              100                  1000
+                                      FREQUENCY – MHz                                                                                           FREQUENCY – MHz
+
+                          TPC 7. SINAD/ENOB vs. Frequency                                                                           TPC 10. SNR vs. Frequency
+
+
+                –45                                                                                                        95
+                                  2V SPAN, SINGLE-ENDED
+            –50                                                                                                            90                                       1V SPAN,
+                                                                                                                                                                    DIFFERENTIAL
+                –55                                                                                                        85
+
+                                                           1V SPAN,                                                        80
+            –60                                            SINGLE-ENDED                                                                                               2V SPAN,
+                                                                                                                           75                                         DIFFERENTIAL
+                                                                                                              SFDR – dBc
+  THD – dBc
+
+
+
+
+                –65
+                                                                                                                           70
+            –70
+                                                                                                                           65
+                                                             2V SPAN,
+                –75                                          DIFFERENTIAL                                                                                            1V SPAN,
+                                                                                                                           60                                        SINGLE-ENDED
+                –80                                                                                                        55         2V SPAN, SINGLE-ENDED
+                                                           1V SPAN,
+                –85                                        DIFFERENTIAL                                                    50
+
+            –90                                                                                                            45
+                      1             10              100                   1000                                                  1             10              100                  1000
+                                      FREQUENCY – MHz                                                                                           FREQUENCY – MHz
+
+                             TPC 8. THD vs. Frequency                                                                               TPC 11. SFDR vs. Frequency
+
+
+                72                                                                                                  –70
+                                 –40ⴗC                                                                              –72
+                                             +25ⴗC
+                70                                                                                                  –74
+
+                                                                                                                    –76
+
+                68                                                                                                  –78
+   SNR – dBc
+
+
+
+
+                                                                                                        THD – dBc
+
+
+
+
+                                         +85ⴗC                                                                                                          +85ⴗC
+                                                                                                                    –80
+                                                                                                                                      +25ⴗC
+                66                                                                                                  –82
+
+                                                                                                                    –84
+
+                64                                                                                                  –86
+
+                                                                                                                    –88
+                                                                                                                                         –40ⴗC
+                62                                                                                                  –90
+                      1             10              100                   1000                                                  1                    10                            100
+                                      FREQUENCY – MHz                                                                                          FREQUENCY – MHz
+
+                TPC 9. SNR vs. Temperature and Frequency                                                            TPC 12. THD vs. Temperature and Frequency
+
+
+
+
+                                                                                                 –10–                                                                                REV. B
+                                                                                                                                                                                                                     AD9226
+                            105                                                                                                                       70.5
+
+
+                                                                                               4th HARMONIC                                 70.25                                                 fIN = 2MHz
+                                   95
+                 HARMONICS – dBc
+
+
+
+
+                                                                                                                                                             70
+                                                                                                                                                                      fIN = 12MHz
+
+
+
+
+                                                                                                                           SINAD – dBc
+                                   85
+
+                                                                                                                                            69.75
+                                                                  3RD HARMONIC
+                                   75
+                                                                                                                                                      69.5
+
+                                                                                                                                                                                         fIN = 20MHz
+                                   65
+                                                                               2ND HARMONIC                                                 69.25
+
+
+                                   55                                                                                                                        69
+                                         1                        10              100                       1000                                               10            20           30      40      50           60         70
+                                                                    FREQUENCY – MHz                                                                                                       SAMPLE RATE – MSPS
+
+                                              TPC 13. Harmonics vs. Frequency                                                                                         TPC 16. SINAD vs. Sample Rate
+
+
+                                   100                                                                                                                      90
+                                                                                                                                                                                                    SFDR – CLOCK STABILIZER ON
+                                                                                                                                                            85
+
+                                                                                                                                                            80
+                                   95                                                                                                                                        SFDR – CLOCK STABILIZER OFF
+                                                fIN = 2MHz
+
+
+                                                                                                                                         SINAD/SFDR – dBc
+                                                                                                                                                            75
+                                                                                                                                                                      SINAD – CLOCK STABILIZER ON
+               SFDR – dBc
+
+
+
+
+                                                                                fIN = 12MHz                                                                 70
+                                   90
+                                                                                                                                                            65
+
+                                                                                                                                                            60
+
+                                   85                                                                                                                                                   SINAD – CLOCK STABILIZER OFF
+                                                                                                                                                            55
+                                                                 fIN = 20MHz
+                                                                                                                                                            50
+
+                                   80                                                                                                                       45
+                                         10          20            30      40      50                60       70                                              30        35         40       45     50    55    60       65       70
+                                                                   SAMPLE RATE – MSPS                                                                                                    % POSITIVE DUTY CYCLE
+
+                                               TPC 14. SFDR vs. Sample Rate                                               TPC 17. SINAD/SFDR vs. Duty Cycle @ fIN = 20 MHz
+
+
+                                   1.0                                                                                                                       1
+
+                                   0.8                                                                                                                      0.8
+
+                                   0.6                                                                                                                      0.6
+
+                                   0.4                                                                                                                      0.4
+
+                                   0.2                                                                                                                      0.2
+                                                                                                                                DNL – LSB
+   INL – LSB
+
+
+
+
+                                   0.0                                                                                                                       0
+
+                         –0.2                                                                                                                     –0.2
+
+                         –0.4                                                                                                                     –0.4
+
+                         –0.6                                                                                                                     –0.6
+
+                         –0.8                                                                                                                     –0.8
+
+                         –1.0                                                                                                                               –1
+                             0                 500        1000      1500    2000    2500      3000   3500   4000                                                  0    500        1k       1500     2k   2500   3k   3500    4k
+                                                                           CODE                                                                                                                     CODE
+
+                                                          TPC 15. Typical INL                                                                                                     TPC 18. Typical DNL
+
+
+
+
+REV. B                                                                                                             –11–
+AD9226–Typical IF Sampling Performance Characteristics
+(AVDD = 5.0 V, DRVDD = 3.0 V, fSAMPLE = 65 MSPS with CLK Stabilizer Enabled, TA = 25ⴗC, 2 V Differential Input Span, VCM = 2.5 V, AIN = –6.5 dBFS,
+VREF = 2.0 V, unless otherwise noted.)
+
+               0                                                                                          95                                                      170.1
+            –10        SNR = 70.2dBFS
+                       SFDR = 89dBFS
+             –20       NOISE FLOOR = 145.33dBFS/Hz                                                        90                                                      165.1
+                                                                                                                         SFDR – 2V SPAN
+            –30
+
+
+
+
+                                                                                                                                                                          NOISE FLOOR – dBFS/Hz
+                                                                                                                                                                  160.1
+
+
+
+
+                                                                                        SNR/SFDR – dBFS
+             –40                                                                                          85
+            –50
+     dBFS
+
+
+
+
+             –60                                                                                          80                                                      155.1
+
+            –70
+             –80                                                                                          75             SNR/NOISE FLOOR – 2V SPAN                150.1
+
+            –90
+            –100                                                                                          70                                                      145.1
+
+            –110
+            –120                                                                                          65                                                      140.1
+                   0       4      8     12     16    20    24     28      32                               –24     –21      –18        –15        –12      –9   –6
+                                        FREQUENCY – MHz                                                                              AIN – dBFS
+
+  TPC 19. Dual-Tone 8K FFT with fIN–1 = 44.2 MHz and                                  TPC 22. Dual-Tone SNR and SFDR with fIN–1 = 44.2 MHz
+  fIN–2 = 45.6 MHz                                                                    and fIN–2 = 45.6 MHz
+
+
+               0                                                                                          90                                                      165.1
+             –10                             SNR = 68.5dBFS                                                                  SFDR – 2V SPAN
+                                             SFDR = 75dBFS
+             –20                             NOISE FLOOR = 143.6dBFS/Hz                                   85                                                      160.1
+
+             –30
+
+
+
+
+                                                                                                                                                                           NOISE FLOOR – dBFS/Hz
+                                                                                                                                                                  155.1
+                                                                                        SNR/SFDR – dBFS
+
+
+
+
+             –40                                                                                          80
+             –50                                                                                                  SFDR – 1V SPAN
+     dBFS
+
+
+
+
+             –60                                                                                          75                                                      150.1
+
+             –70
+                                                                                                                   SNR/NOISE FLOOR – 2V SPAN
+             –80                                                                                          70                                                      145.1
+
+             –90
+            –100                                                                                          65                                                      140.1
+
+            –110                                                                                                         SNR/NOISE FLOOR – 1V SPAN
+            –120                                                                                          60                                                      135.1
+                   0       4      8     12     16    20    24     28      32                               –24     –21      –18         –15       –12      –9   –6
+                                        FREQUENCY – MHz                                                                              AIN – dBFS
+
+
+   TPC 20. Dual-Tone 8K FFT with fIN–1 = 69.2 MHz and                                 TPC 23. Dual-Tone SNR and SFDR with fIN–1 = 69.2 MHz
+   fIN–2 = 70.6 MHz                                                                   and fIN–2 = 70.6 MHz
+
+
+               0                                                                                          90                                                      165.1
+             –10                             SNR = 67.5dBFS                                                                               SFDR – 2V SPAN
+                                             SFDR = 75dBFS
+             –20                             NOISE FLOOR = 142.6dBFS/Hz                                   85                                                      160.1
+
+             –30
+                                                                                                                                                                          NOISE FLOOR – dBFS/Hz
+
+
+
+
+             –40
+                                                                                        SNR/SFDR – dBFS
+
+
+
+
+                                                                                                          80                                                      155.1
+                                                                                                                           SFDR – 1V SPAN
+             –50
+     dBFS
+
+
+
+
+             –60                                                                                          75                                                      150.1
+             –70                                                                                                                  SNR/NOISE FLOOR – 2V SPAN
+
+             –80                                                                                          70                                                      145.1
+             –90
+                                                                                                                 SNR/NOISE FLOOR – 1V SPAN
+            –100                                                                                          65                                                      140.1
+
+            –110
+
+            –120                                                                                          60                                                      135.1
+                   0       4      8     12     16    20    24     28      32                               –24     –21      –18        –15        –12      –9   –6
+                                        FREQUENCY – MHz                                                                              AIN – dBFS
+
+ TPC 21. Dual-Tone 8K FFT with fIN–1 = 139.2 MHz and                                  TPC 24. Dual-Tone SNR and SFDR with fIN–1 = 139.2 MHz
+ fIN–2 = 140.7 MHz                                                                    and fIN–2 = 140.7 MHz
+
+                                                                               –12–                                                                                 REV. B
+                                                                                                                                                                                   AD9226
+                    0                                                                                                   90                                                                165.1
+                  –10                                         fIN = 190.82MHz                                                                                SFDR – 2V SPAN
+                                                              fSAMPLE = 61.44MSPS
+                  –20                                                                                                   85                                                                160.1
+
+                  –30
+
+
+
+
+                                                                                                                                                                                                  NOISE FLOOR – dBFS/Hz
+                                                                                                      SNR/SFDR – dBFS
+                  –40                                                                                                   80                                                                155.1
+                                                                                                                                         SFDR – 1V SPAN
+                  –50
+    dBFS
+
+
+
+
+                  –60                                                                                                   75                                                                150.1
+                                                                                                                                                    SNR/NOISE FLOOR – 2V SPAN
+                  –70
+                  –80                                                                                                   70                                                                145.1
+
+                  –90
+              –100                                                                                                      65                                                                140.1
+
+              –110                                                                                                                   SNR/NOISE FLOOR – 1V SPAN
+
+              –120                                                                                                      60                                                             135.1
+                        0           5       10        15       20           25        30                                 –24       –21        –18      –15        –12         –9     –6
+                                                 FREQUENCY – MHz                                                                                     AIN – dBFS
+
+ TPC 25. Single-Tone 8K FFT at IF = 190 MHz–WCDMA                                               TPC 28. Single-Tone SNR and SFDR vs. AIN at IF = 190 MHz
+ (fIN = 190.82 MHz, fSAMPLE = 61.44 MSPS)                                                       –WCDMA (fIN–1 = 190.8 MHz, fSAMPLE = 61.44 MSPS)
+
+
+                    0                                                                                                   85                                                                160.1
+                  –10       SNR = 65.1dBFS
+                            SFDR = 59dBFS                                                                                            SFDR – 2V SPAN
+                  –20       NOISE FLOOR = 140.2dBFS/Hz                                                                  80                                                                155.1
+
+                  –30
+
+
+
+
+                                                                                                                                                                                                  NOISE FLOOR – dBFS/Hz
+                  –40
+                                                                                                      SNR/SFDR – dBFS
+                                                                                                                        75                                        SFDR – 1V SPAN          150.1
+                  –50
+    dBFS
+
+
+
+
+                                                                                                                             SNR/NOISE FLOOR – 2V SPAN
+                  –60                                                                                                   70                                                                145.1
+                  –70
+
+                  –80                                                                                                   65                                                                140.1
+
+                  –90
+                                                                                                                                  SNR/NOISE FLOOR – 1V SPAN
+           –100                                                                                                         60                                                                135.1
+           –110
+
+           –120                                                                                                         55                                                                130.1
+                        0       4       8    12        16     20       24        28   32                                 –24       –21        –18       –15       –12         –9     –6
+                                             FREQUENCY – MHz                                                                                         AIN – dBFS
+
+  TPC 26. Dual-Tone 8K FFT with fIN–1 = 239.1 MHz and                                               TPC 29. Dual-Tone SNR and SFDR with fIN–1 = 239.1 MHz
+  fIN–2 = 240.7 MHz                                                                                 and fIN–2 = 240.7 MHz
+
+
+                  –35
+
+
+                  –45
+
+
+                  –55
+     CMRR – dBc
+
+
+
+
+                  –65        INPUT SPAN = 2V p–p
+
+
+
+                  –75
+
+
+                  –85                            INPUT SPAN = 1V p–p
+
+
+                  –95
+                        1                   10             100                        1000
+                                             FREQUENCY – MHz
+
+    TPC 27. CMRR vs. Frequency (AIN = –0 dBFS and
+    CML = 2.5 V)
+
+
+
+
+REV. B                                                                                       –13–
+AD9226
+THEORY OF OPERATION                                                      and/or shunt capacitor can help limit the wideband noise at the
+The AD9226 is a high-performance, single-supply 12-bit ADC.              ADC’s input by forming a low-pass filter. The source imped-
+The analog input of the AD9226 is very flexible allowing for both        ance driving VINA and VINB should be matched. Failure to
+single-ended or differential inputs of varying amplitudes that can       provide matching will result in degradation of the AD9226’s
+be ac- or dc-coupled.                                                    SNR, THD, and SFDR.
+It utilizes a nine-stage pipeline architecture with a wideband,                                                                       CH
+sample-and-hold amplifier (SHA) implemented on a cost-
+effective CMOS process. A patented structure is used in the                                                                           QS2
+                                                                                                 CPIN
+SHA to greatly improve high frequency SFDR/distortion. This                                      CPAR     QS1              CS
+also improves performance in IF undersampling applications.                       VINA
+Each stage of the pipeline, excluding the last stage, consists of a                                       QS1       QH1    CS
+                                                                                  VINB
+low resolution flash ADC connected to a switched capacitor                                       CPIN
+                                                                                                                                      QS2
+DAC and interstage residue amplifier (MDAC). The residue                                         CPAR
+amplifier amplifies the difference between the reconstructed DAC                                                                      CH
+output and the flash input for the next stage in the pipeline. One
+bit of redundancy is used in each of the stages to facilitate digital
+correction of flash errors. The last stage simply consists of a                           Figure 3. Equivalent Input Circuit
+flash ADC.
+                                                                                         VCC
+Factory calibration ensures high linearity and low distortion.                                           RS
+                                                                                                        33⍀                       AD9226
+                                                                                                                           VINA
+ANALOG INPUT OPERATION                                                                                              15pF
+                                                                                                               RS
+Figure 3 shows the equivalent analog input of the AD9226 which                           VEE
+                                                                                                              33⍀
+                                                                                                                           VINB
+consists of a 750 MHz differential SHA. The differential input
+structure of the SHA is highly flexible, allowing the device to be                                                         VREF
+
+easily configured for either a differential or single-ended input.                             10␮F      0.1␮F
+                                                                                                                           SENSE
+The analog inputs, VINA and VINB, are interchangeable with
+                                                                                                                           REFCOM
+the exception that reversing the inputs to the VINA and VINB
+pins results in a data inversion (complementing the output word).
+The optimum noise and dc linearity performance for either                   Figure 4. Series Resistor Isolates Switched-Capacitor
+differential or single-ended inputs is achieved with the largest input      SHA Input from Op Amp; Matching Resistors Improve
+signal voltage span (i.e., 2 V input span) and matched input                SNR Performance
+impedance for VINA and VINB. Only a slight degradation in
+dc linearity performance exists between the 2 V and 1 V input            OVERVIEW OF INPUT AND REFERENCE
+spans.                                                                   CONNECTIONS
+                                                                         The overall input span of the AD9226 is equal to the potential
+High frequency inputs may find the 1 V span better suited to             at the VREF pin. The VREF potential may be obtained from
+achieve superior SFDR performance. (See Typical Perfor-                  the internal AD9226 reference or an external source (see
+mance Characteristics.)                                                  Reference Operation section).
+The ADC samples the analog input on the rising edge of the clock         In differential applications, the center point of the span is
+input. During the clock low time (between the falling edge and           obtained by the common-mode level of the signals. In single-
+rising edge of the clock), the input SHA is in the sample mode;          ended applications, the center point is the dc potential applied
+during the clock high time it is in hold. System disturbances just       to one input pin while the signal is applied to the opposite input
+prior to the rising edge of the clock and/or excessive clock jitter      pin. Figures 5a–5f show various system configurations.
+on the rising edge may cause the input SHA to acquire the wrong
+value and should be minimized.                                           DRIVING THE ANALOG INPUTS
+When the ADC is driven by an op amp and a capacitive load is             The AD9226 has a very flexible input structure allowing it to
+switched onto the output of the op amp, the output will momen-           interface with single-ended or differential input interface circuitry.
+tarily drop due to its effective output impedance. As the output         The optimum mode of operation, analog input range, and asso-
+recovers, ringing may occur. To remedy the situation, a series           ciated interface circuitry will be determined by the particular
+resistor can be inserted between the op amp and the SHA                  applications performance requirements as well as power sup-
+input as shown in Figure 4. A shunt capacitance also acts like           ply options.
+a charge reservoir, sinking or sourcing the additional charge
+required by the hold capacitor, CH, further reducing current             DIFFERENTIAL DRIVER CIRCUITS
+transients seen at the op amp’s output.                                  Differential operation requires that VINA and VINB be simulta-
+The optimum size of this resistor is dependent on several factors,       neously driven with two equal signals that are 180ⴗ out of phase
+including the ADC sampling rate, the selected op amp, and the            with each other.
+particular application. In most applications, a 30 Ω to 100 Ω            Differential modes of operation (ac- or dc-coupled input) provide
+resistor is sufficient.                                                  the best THD and SFDR performance over a wide frequency
+For noise-sensitive applications, the very high bandwidth of the         range. They should be considered for the most demanding
+AD9226 may be detrimental and the addition of a series resistor          spectral-based applications (e.g., direct IF conversion to digital).
+
+                                                                     –14–                                                                   REV. B
+                                                                                                                                                       AD9226
+          1.5V
+                                                                                                                           2.5V
+          0.5V      33⍀                     AD9226                                                                                 CMLEVEL
+                                                                                               3.0V                    0.1␮F
+                                         VINA                                                  2.5V                                    AD9226
+                          15pF                                                                 2.0V                                    (LQFP)
+                                                               0.1␮F                                           33⍀
+                                         VINB
+                    33⍀                                                                                                            VINA
+                                                        CAPT
+                          1V                                                                           49.9⍀           15pF                            0.1␮F
+                                         VREF                  0.1␮F   10␮F
+                                                                                                                                   VINB        CAPT
+                     0.1␮F                                                                                     33⍀
+           10␮F                          SENSE          CAPB
+                                                                                                                           2V                          0.1␮F   10␮F
+                                                                       0.1␮F                                                       VREF
+                                         REFCOM                                               3.0V
+                                                                                              2.5V                                             CAPB
+                                                                                                               10␮F    0.1␮F
+                                                                                              2.0V                                                             0.1␮F
+  Figure 5a. 1 V Single-Ended Input, Common-Mode                                                                                   SENSE
+
+  Voltage = 1 V
+                                                                                              Figure 5e. 2 V Differential Input, Common-Mode
+                                                                                              Voltage = 2.5 V
+    1.25V
+    0.75V                                          AD9226
+                                 33⍀
+                                                                                                               10k⍀    10k⍀
+                                                VINA                                                                            AVDD
+            49.9⍀                                                  0.1␮F
+                                 15pF
+                                                           CAPT                                                        0.1␮F
+                                                VINB
+                    33⍀                                                                        2.75V            2.5V
+                                                                   0.1␮F      10␮F              2.5V                                      AD9226
+                                    1V
+                                                VREF                                            2.0V
+   1.25V                                                   CAPB                                                33⍀
+                    10␮F         0.1␮F                                        0.1␮F                                                VINA
+   0.75V
+                                                                                                       49.9⍀            15pF                           0.1␮F
+                                                SENSE
+                                                                                                                                   VINB         CAPT
+                                                                                                               33⍀
+                                                                                                                           1V                          0.1␮F   10␮F
+   Figure 5b. 1 V Differential Input, Common-Mode                                             2.75V
+                                                                                                                                   VREF
+                                                                                                                                               CAPB
+                                                                                               2.5V
+   Voltage = 1 V                                                                              2.25V
+                                                                                                               10␮F     0.1␮F
+                                                                                                                                                               0.1␮F
+                                                                                                                                   SENSE
+
+
+
+    2.5V                                                                                     Figure 5f. 1 V Differential Input, Common-Mode
+    1.5V                                           AD9226                                    Voltage = 2.5 V (Recommended for IF Undersampling)
+                           33⍀
+                                                VINA
+            49.9⍀                15pF                              0.1␮F
+                                                                                         The differential input characterization for this data sheet was
+                                                VINB       CAPT                          performed using the configuration shown in Figure 7.
+                    33⍀
+                                    2V                             0.1␮F      10␮F
+                                                VREF                                     Since not all applications have a signal preconditioned for
+   2.5V
+                    10␮F         0.1␮F
+                                                           CAPB                          differential operation, there is often a need to perform a single-
+   1.5V                                                                       0.1␮F
+                                                                                         ended-to-differential conversion. In systems that do not need to
+                                                SENSE
+                                                                                         be dc-coupled, an RF transformer with a center tap is the best
+                                                                                         method to generate differential inputs for the AD9226. It pro-
+   Figure 5c. 2 V Differential Input, Common-Mode                                        vides all the benefits of operating the ADC in the differential
+   Voltage = 2 V                                                                         mode without contributing additional noise or distortion. An RF
+                                                                                         transformer also has the added benefit of providing electrical
+                                                                                         isolation between the signal source and the ADC. An improvement
+                                                                                         in THD and SFDR performance can be realized by operating
+          3.0V                                                                           the AD9226 in the differential mode. The performance enhance-
+          1.0V      33⍀                     AD9226                                       ment between the differential and single-ended mode is most
+                                         VINA                                            noteworthy as the input frequency approaches and goes beyond
+                          15pF
+                                                               0.1␮F                     the Nyquist frequency (i.e., fIN > FS /2).
+                                         VINB
+                    33⍀                                 CAPT
+                               2V                                                        The circuit shown in Figure 6a is an ideal method of applying
+                                         VREF                  0.1␮F   10␮F
+                                                                                         a differential dc drive to the AD9226. It uses an AD8138 to
+           10␮F      0.1␮F               SENSE          CAPB                             derive a differential signal from a single-ended one. Figure 6b
+                                                                       0.1␮F             illustrates its performance.
+                                         REFCOM
+
+                                                                                         Figure 7 presents the schematic of the suggested transformer
+   Figure 5d. 2 V Single-Ended Input, Common-Mode                                        circuit. The circuit uses a Minicircuits RF transformer, model
+   Voltage = 2 V                                                                         T1-1T, which has an impedance ratio of four (turns ratio of 2).
+                                                                                         The schematic assumes that the signal source has a 50 Ω source
+                                                                                         impedance. The center tap of the transformer provides a con-
+                                                                                         venient means of level-shifting the input signal to a desired
+                                                                                         common-mode voltage. In Figure 7 the transformer centertap
+                                                                                         is connected to a resistor divider at the midsupply voltage.
+REV. B                                                                                –15–
+AD9226
+                                               10␮F                                                            SINGLE-ENDED DRIVER CIRCUITS
+                                                                5V
+                         0.1␮F
+                                               0.1␮F
+                                                                           10␮F                                The AD9226 can be configured for single-ended operation using
+                                                                                                               dc- or ac-coupling. In either case, the input of the ADC must be
+                          1k⍀       1k⍀                                    0.1␮F
+                                                                                                               driven from an operational amplifier that will not degrade the
+                                                                                      0.1␮F
+                                                                                                               ADC’s performance. Because the ADC operates from a single
+                                                                     AVDD
+  0V                1V p-p                     499⍀                                                            supply, it will be necessary to level-shift ground-based bipolar
+                                                                 VINA
+                                   450⍀                                    CAPT
+                                                                                                               signals to comply with its input requirements. Both dc- and
+                                                                                      0.1␮F                    ac-coupling provide this necessary function, but each method
+                         49.9⍀                      AD8138           AD9226                     10␮F           results in different interface issues which may influence the
+                                    499⍀                                   CAPB                                system design and performance.
+                                                                                       0.1␮F
+                                                                 VINB
+                                                   499⍀                                                        Single-ended operation requires that VINA be ac- or dc-coupled
+                                                                                                               to the input signal source, while VINB of the AD9226 be biased
+                                                                                                               to the appropriate voltage corresponding to the middle of the input
+  Figure 6a. Direct-Coupled Drive Circuit with AD8138
+                                                                                                               span. The single-ended specifications for the AD9226 are char-
+  Differential Op Amp
+                                                                                                               acterized using Figure 9a circuitry with input spans of 1 V and
+                0
+                                                                                                               2 V. The common-mode level is 2.5 V.
+                                                                          SNR = 66.9dBc
+                                                                          SFDR = 70.0dBc
+                                                                                                               If the analog inputs exceed the supply limits, internal parasitic
+              –20                                                                                              diodes will turn on. This will result in transient currents within
+                                                                                                               the device. Figure 8 shows a simple means of clamping an input.
+              –40
+                                                                                                               It uses a series resistor and two diodes. An optional capacitor is
+                                                                                                               shown for ac-coupled applications. A larger series resistor can
+                                                                                                               be used to limit the fault current through D1 and D2. This
+       dBc
+
+
+
+
+              –60
+                                                                                                               can cause a degradation in overall performance. A similar
+                                                                                                               clamping circuit can also be used for each input if a differen-
+              –80
+                                                                                                               tial input signal is being applied. A better method to ensure
+                                                                                                               the input is not overdriven is to use amplifiers powered by a single
+             –100                                                                                              5 V supply such as the AD8138.
+
+             –120                                                                                                            OPTIONAL
+                    0        4           8         12     16         20      24       28       32                            AC-COUPLING      AVDD
+                                                          MHz                                                          VCC   CAPACITOR
+                                                                                                                                        RS1               RS2
+                                                                                                                                                 D2
+Figure 6b. FS = 65 MSPS, fIN = 30 MHz, Input Span = 1 V p-p                                                                             30⍀               20⍀
+                                                                                                                                                                    AD9226
+The same midsupply potential may be obtained from the                                                                                            D1
+CMLEVEL pin of the AD9226 in the LQFP package.                                                                         VEE
+Referring to Figure 7, a series resistor, RS, is inserted between the
+AD9226 and the secondary of the transformer. The value of                                                                    Figure 8. Simple Clamping Circuit
+33 ohm was selected to specifically optimize both the THD and
+SNR performance of the ADC. RS and the internal capacitance                                                    AC-COUPLING AND INTERFACE ISSUES
+help provide a low-pass filter to block high-frequency noise.                                                  For applications where ac-coupling is appropriate, the op amp
+                                                                                                               output can be easily level-shifted by means of a coupling
+Transformers with other turns ratios may also be selected to                                                   capacitor. This has the advantage of allowing the op amp’s com-
+optimize the performance of a given application. For example, a                                                mon-mode level to be symmetrically biased to its midsupply
+given input signal source or amplifier may realize an improve-                                                 level (i.e., (AVDD/2). Op amps that operate symmetrically with
+ment in distortion performance at reduced output power levels                                                  respect to their power supplies typically provide the best ac
+and signal swings. By selecting a transformer with a higher                                                    performance as well as greatest input/output span. Various high-
+impedance ratio (e.g., Minicircuits T16-6T with a 1:16 imped-                                                  speed performance amplifiers that are restricted to +5 V/–5 V
+ance ratio), the signal level is effectively “stepped up” thus                                                 operation and/or specified for 5 V single-supply operation can be
+further reducing the driving requirements of signal source.                                                    easily configured for the 2 V or 1 V input span of the AD9226.
+                                                   AVDD                                                        Simple AC Interface
+                                     RS                 1k⍀
+                                                                                                               Figure 9a shows a typical example of an ac-coupled, single-
+                                    33⍀                                               0.1␮F                    ended configuration of the SSOP package. The bias voltage
+                                                                      VINA
+                                                                               CAPT                            shifts the bipolar, ground-referenced input signal to approxi-
+        49.9⍀                    0.1␮F                        15pF        AD9226      0.1␮F         10␮F       mately AVDD/2. The capacitors, C1 and C2, are 0.1 µF ceramic
+                                               1k⍀
+                                                                                                               and 10 µF tantalum capacitors in parallel to achieve a low
+                                                                               CAPB
+                                                                                                    0.1␮F
+                                                                                                               cutoff frequency while maintaining a low impedance over a
+                                                                      VINB
+             MINICIRCUITS                     RS                                                               wide frequency range. The combination of the capacitor and the
+                 T1-1T                       33⍀
+                                                                                                               resistor form a high-pass network with a high-pass –3 dB fre-
+                        Figure 7. Transformer-Coupled Input                                                    quency determined by the equation,
+                                                                                                                               f–3 dB = 1/(2 × π × R × (C1 + C2))
+
+
+                                                                                                            –16–                                                          REV. B
+                                                                                                                                                                    AD9226
+The low-impedance VREF output can be used to provide dc                                                            Figure 10 illustrates the relation between common-mode voltage
+bias levels to the fixed VINB pin and the signal on VINA. Fig-                                                     and THD. Note that optimal performance occurs when the
+ure 9b shows the VREF configured for 2.0 V, thus the input                                                         reference voltage is set to 2.0 V (input span = 2.0 V).
+range of the ADC is 1.0 V to 3.0 V. Other input ranges could
+be selected by changing VREF.                                                                                      DC-COUPLING AND INTERFACE ISSUES
+When the inputs are biased from the reference (Figure 9b),                                                         Many applications require the analog input signal to be dc-coupled
+there may be a slight degeneration of dynamic performance. A                                                       to the AD9226. An operational amplifier can be configured to
+midsupply output level is available at the CM LEVEL pin of the                                                     rescale and level-shift the input signal to make it compatible
+LQFP package.                                                                                                      with the selected input range of the ADC.
+                                                                                                                   The selected input range of the AD9226 should be considered
+ +1V                       C1           V         V                                                                with the headroom requirements of the particular op amp to
+  0V                      10␮F
+ –1V                                        R         R                                                            prevent clipping of the signal. Many of the new high-performance
+VIN
+               +5V                                                                                                 op amps are specified for only ± 5 V operation and have limited
+                                                       RS
+                                                                     VINA                   0.1␮F                  input/output swing capabilities. Also, since the output of a dual
+                             C2
+                                                                              CAPT
+                                                                                                                   supply amplifier can swing below absolute minimum (–0.3 V),
+               –5V         0.1␮F
+                                                      15pF                                                         clamping its output should be considered in some applications
+                                                                       AD9226               0.1␮F        10␮F
+                                                                                                                   (see Figure 8). When single-ended, dc-coupling is needed, the
+                                                                              CAPB
+                                                       RS                                                          use of the AD8138 in a differential configuration (Figure 9a) is
+                                                                     VINB                   0.1␮F
+       0.1␮F            10␮F                R         R                                                            highly recommended.
+                                                                           VREF
+                                                                                                                   Simple Op Amp Buffer
+                           3.5
+                                                                                                                   In the simplest case, the input signal to the AD9226 will already
+                           2.5                            10␮F                0.1␮F                                be biased at levels in accordance with the selected input range. It
+                           1.5
+                                                                                                                   is necessary to provide an adequately low source impedance for
+                                                                                                                   the VINA and VINB analog pins of the ADC.
+              Figure 9a. AC-Coupled Input Configuration
+
+                                 0.1␮F
+                                                                                                                   REFERENCE OPERATION
+                                                                                                                   The AD9226 contains an on-board bandgap reference that
+ VIN                             10␮F           RS                         AD9226
+                                                                                                                   provides a pin-strappable option to generate either a 1 V or
+                                                                    VINA                                           2 V output. With the addition of two external resistors, the user
+                                                                                           0.1␮F
+                                                1k⍀                                                                can generate reference voltages between 1 V and 2 V. See
+                                                                                   CAPT
+                                                                                                                   Figures 5a-5f for a summary of the pin-strapping options for the
+                                                          15pF                             0.1␮F     10␮F          AD9226 reference configurations. Another alternative is to use
+                                                1k⍀
+                                                                                   CAPB                            an external reference for designs requiring enhanced accuracy
+                                                RS                                                   0.1␮F         and/or drift performance described later in this section.
+                                                                    VINB
+                                 10␮F           0.1␮F                                                              Figure 11a shows a simplified model of the internal voltage refer-
+                                                                            VREF
+                                                                                                                   ence of the AD9226. A reference amplifier buffers a 1 V fixed
+                                                                                                                   reference. The output from the reference amplifier, A1, appears
+                                                             10␮F                 0.1␮F                            on the VREF pin. The voltage on the VREF pin determines
+                                                                                                                   the full-scale input span of the ADC. This input span equals,
+      Figure 9b. Alternate AC-Coupled Input Configuration                                                                            Full-Scale Input Span = VREF
+                                                                                                                   The voltage appearing at the VREF pin, and the state of the
+              –84
+                                                                                                                   internal reference amplifier, A1, are determined by the voltage
+              –83
+                                                                                                                   appearing at the SENSE pin. The logic circuitry contains com-
+                                                                                                                   parators that monitor the voltage at the SENSE pin. If the
+              –82                                                                                                  SENSE pin is tied to AVSS, the switch is connected to the
+                                                                                                                   internal resistor network thus providing a VREF of 2.0 V. If the
+              –81
+                                                                                                                   SENSE pin is tied to the VREF pin via a short or resistor, the
+                                                                                                                   switch will connect to the SENSE pin. This connection will pro-
+        dBc
+
+
+
+
+              –80
+                                                                                                                   vide a VREF of 1.0 V. An external resistor network will provide
+              –79                                                                                                  an alternative VREF between 1.0 V and 2.0 V (see Figure 12).
+                                                                                                                   Another comparator controls internal circuitry that will disable
+              –78
+                                                                                                                   the reference amplifier if the SENSE pin is tied to AVDD.
+              –77                                                                                                  Disabling the reference amplifier allows the VREF pin to be
+                                                                                                                   driven by an external voltage reference.
+              –76
+                    0    0.5     1.0        1.5        2.0    2.5     3.0    3.5     4.0   4.5     5.0
+                                                             Volts
+
+         Figure 10. THD vs. Common-Mode Voltage
+         (2 V Differential Input Span, fIN = 10 MHz)
+
+
+
+REV. B                                                                                                          –17–
+AD9226
+                               AD9226
+                                                                       to determine appropriate values for R1 and R2. These resistors
+                  TO                                                   should be in the 2 kΩ to 10 kΩ range. For the example shown,
+                  A/D
+                                                                       R1 equals 2.5 kΩ and R2 equals 5 kΩ. From the equation above,
+                                                    CAPT               the resultant reference voltage on the VREF pin is 1.5 V. This
+                        2.5V    A2                                     sets the input span to be 1.5 V p-p. The midscale voltage can
+                                                                       also be set to VREF by connecting VINB to VREF. Alterna-
+                                                    CAPB
+                                                                       tively, the midscale voltage can be set to 2.5 V by connecting
+                                                                       VINB to a low-impedance 2.5 V source as shown in Figure 12.
+
+                                                    VREF
+                                                                                   3.25V               33⍀                   AD9226
+                                A1
+                   1V                                                                                                   VINA
+                                                                                   1.75V                   15pF
+                                                                                                                                              0.1␮F
+                                                                                           2.5V                         VINB
+                                                    SENSE                                              33⍀                             CAPT
+                                                                                                               1.5V
+                  DISABLE                                                                                               VREF
+                                 LOGIC                                                                 R1                                     0.1␮F     10␮F
+                       A1
+                                                                            10␮F            0.1␮F      2.5k⍀
+                                                    REFCOM                                                              SENSE
+                                                                                                       R2                              CAPB
+                                                                                                       5k⍀                                              0.1␮F
+                                                                                                                        REFCOM
+          Figure 11a. Equivalent Reference Circuit
+
+                                                           0.1␮F
+                                                                           Figure 12. Resistor Programmable Reference (1.5 V p-p
+                          VREF       CAPT
+                                                                           Input Span, Differential Input VCM = 2.5 V)
+          10␮F    0.1␮F        AD9226       0.1␮F      10␮F
+                                                                       USING AN EXTERNAL REFERENCE
+                                     CAPB                              The AD9226 contains an internal reference buffer, A2 (see
+                                                           0.1␮F
+                                                                       Figure 11b), that simplifies the drive requirements of an external
+         Figure 11b. CAPT and CAPB DC-Coupling                         reference. The external reference must be able to drive about
+                                                                       5 kΩ (± 20%) load. Note that the bandwidth of the reference
+The actual reference voltages used by the internal circuitry of the    buffer is deliberately left small to minimize the reference noise
+AD9226 appear on the CAPT and CAPB pins. The voltages                  contribution. As a result, it is not possible to rapidly change the
+on these pins are symmetrical about the analog supply. For             reference voltage in this mode.
+proper operation when using an internal or external reference, it
+is necessary to add a capacitor network to decouple these pins.        Figure 13 shows an example of an external reference driving
+Figure 11b shows the recommended decoupling network. The               both VINB and VREF. In this case, both the common-mode
+turn-on time of the reference voltage appearing between CAPT           voltage and input span are directly dependent on the value of
+and CAPB is approximately 10 ms and should be evaluated in             VREF. Both the input span and the center of the input span are
+any power-down mode of operation.                                      equal to the external VREF. Thus the valid input range extends
+                                                                       from (VREF + VREF/2) to (VREF – VREF/2). For example,
+USING THE INTERNAL REFERENCE                                           if the REF191, a 2.048 V external reference, is selected, the
+The AD9226 can be easily configured for either a 1 V p-p input         input span extends to 2.048 V. In this case, 1 LSB of the AD9226
+span or 2 V p-p input span by setting the internal reference.          corresponds to 0.5 mV. It is essential that a minimum of a 10 µF
+Other input spans can be realized with two external gain-              capacitor, in parallel with a 0.1 µF low-inductance ceramic
+setting resistors as shown in Figure 12 of this data sheet, or         capacitor, decouple the reference output to ground.
+using an external reference.                                           To use an external reference, the SENSE pin must be connected
+Pin Programmable Reference                                             to AVDD. This connection will disable the internal reference.
+By shorting the VREF pin directly to the SENSE pin, the inter-
+nal reference amplifier is placed in a unity-gain mode and the                 VINA+VREF/2                      33⍀              AD9226
+resultant VREF output is 1 V. By shorting the SENSE pin                                                                         VINA
+                                                                               VINB–VREF/2
+directly to the REFCOM pin, the internal reference amplifier is                                                       15pF
+                                                                                                                                                0.1␮F
+                                                                             5V              VREF
+configured for a gain of 2.0 and the resultant VREF output is                  0.1␮F                              33⍀
+                                                                                                                                VINB
+                                                                                                                                        CAPT
+                                                                                                    10␮F
+2.0 V. The VREF pin should be bypassed to the REFCOM pin                                                                                        0.1␮F     10␮F
+with a 10 µF tantalum capacitor in parallel with a low-inductance                                              0.1␮F
+                                                                                                                                VREF
+
+0.1 µF ceramic capacitor as shown in Figure 11b.                                                                                        CAPB
+                                                                                                                                                          0.1␮F
+                                                                                                                       5V       SENSE
+Resistor Programmable Reference
+Figure 12 shows an example of how to generate a reference
+voltage other than 1.0 V or 2.0 V with the addition of two exter-                      Figure 13. Using an External Reference
+nal resistors. Use the equation,
+                   VREF = 1 V × (1 + R1/R2)
+
+
+
+
+                                                                    –18–                                                                                REV. B
+                                                                                                                                            AD9226
+MODE CONTROLS                                                               DIGITAL INPUTS AND OUTPUTS
+Clock Stabilizer                                                            Digital Outputs
+The clock stabilizer is a circuit that desensitizes the ADC from            Table IV details the relationship among the ADC input, OTR, and
+clock duty cycle variations. The AD9226 eases system clock                  straight binary output.
+constraints by incorporating a circuit that restores the internal duty
+cycle to 50%, independent of the input duty cycle. Low jitter on                                  Table IV. Output Data Format
+the rising edge (sampling edge) of the clock is preserved while
+the noncritical falling edge is generated on-chip.                                                                                      Two’s
+                                                                                                                       Binary           Complement
+It may be desirable to disable the clock stabilizer, and may be             Input (V)        Condition (V)             Output Mode      Mode                OTR
+necessary when the clock frequency speed is varied or completely
+stopped. Once the clock frequency is changed, over 100 clock                VINA–VINB < – VREF                         0000 0000 0000   1000 0000 0000      1
+cycles may be required for the clock stabilizer to settle to a dif-         VINA–VINB = – VREF                         0000 0000 0000   1000 0000 0000      0
+ferent speed. When the stabilizer is disabled, the internal switching       VINA–VINB = 0                              1000 0000 0000   0000 0000 0000      0
+will be directly affected by the clock state. If the external clock is      VINA–VINB = + VREF – 1 LSB                 1111 1111 1111   0111 1111 1111      0
+high, the SHA will be in hold. If the clock pulse is low, the SHA           VINA–VINB ≥ + VREF                         1111 1111 1111   0111 1111 1111      1
+will be in track. TPC 16 shows the benefits of using the clock
+stabilizer. See Tables I and III.                                           Out of Range (OTR)
+                                                                            An out-of-range condition exists when the analog input voltage
+Data Format Select (DFS)                                                    is beyond the input range of the converter. OTR is a digital
+The AD9226 may be set for binary or two’s complement data                   output that is updated along with the data output corresponding
+output formats. See Tables I and II.                                        to the particular sampled analog input voltage. Hence, OTR has
+                                                                            the same pipeline delay (latency) as the digital data. It is LOW
+SSOP Package                                                                when the analog input voltage is within the analog input range.
+The SSOP mode control (Pin 22) has two functions. It enables/               It is HIGH when the analog input voltage exceeds the input
+disables the clock stabilizer and determines the output data format.        range as shown in Figure 14. OTR will remain HIGH until the
+The exact functions of the mode pin are outlined in Table I.                analog input returns within the input range and another conversion
+                                                                            is completed. By logical ANDing OTR with the MSB and its
+                  Table I. Mode Select (SSOP)                               complement, overrange high or underrange low conditions can be
+                                                                            detected. Table V is a truth table for the over/underrange
+Mode         DFS                      Clock Duty Cycle Shaping
+                                                                            circuit in Figure 15, which uses NAND gates. Systems requiring
+DNC          Binary                   Clock Stabilizer Disabled             programmable gain conditioning of the AD9226 input signal
+AVDD         Binary                   Clock Stabilizer Enabled              can immediately detect an out-of-range condition, thus elimi-
+GND          Two’s Complement         Clock Stabilizer Enabled              nating gain selection iterations. Also, OTR can be used for
+10 kΩ        Two’s Complement         Clock Stabilizer Disabled             digital offset and gain calibration.
+Resistor     To GND
+                                                                                               Table V. Out-of-Range Truth Table
+LQFP Package                                                                            OTR                  MSB                Analog Input Is
+Pin 35 of the LQFP package determines the output data format
+(DFS). If it is connected to AVSS, the output word will be straight                     0                    0                  In Range
+binary. If it is connected to AVDD, the output data format will                         0                    1                  In Range
+be two’s complement. See Table II.                                                      1                    0                  Underrange
+                                                                                        1                    1                  Overrange
+Pin 43 of the LQFP package controls the clock stabilizer function
+of the AD9226. If the pin is connected to AVSS, both clock
+                                                                                                                                          +FS – 1 1/2 LSB
+edges will be used in the conversion architecture. When Pin 43                    OTR DATA OUTPUTS
+is connected to AVDD, the internal duty cycle will be determined                   1        1111 1111 1111       OTR
+                                                                                   0        1111 1111 1111
+by the clock stabilizer function within the ADC. See Table III.
+                                                                                   0        1111 1111 1110
+                                                                                                                        –FS +1/2 LSB
+                   Table II. DFS Pin Controls
+                                                                                   0        0000 0000 0001
+      DFS Function                      Pin 35 Connection                          0        0000 0000 0000
+                                                                                   1        0000 0000 0000
+      Straight Binary                   AVSS                                                                             –FS                  +FS
+      Two’s Complement                  AVDD                                                                       –FS – 1/2 LSB            +FS – 1/2 LSB
+
+                                                                            Figure 14. OTR Relation to Input Voltage and Output Data
+                  Table III. Clock Stabilizer Pin
+                                                                                        MSB
+                                                                                                                                          OVER = 1
+      Clock Restore Function            Pin 43 Connection                               OTR
+
+      Clock Stabilizer Enabled          AVDD                                            MSB
+                                                                                                                                          UNDER = 1
+      Clock Stabilizer Disabled         AVSS
+                                                                                        Figure 15. Overrange or Underrange Logic
+
+
+REV. B                                                                   –19–
+AD9226
+Digital Output Driver Considerations                                                          3. The inherent distributed capacitor formed by the power
+The AD9226 output drivers can be configured to interface with                                    plane, PCB insulation, and ground plane.
+5 V or 3.3 V logic families by setting DRVDD to 5 V or 3.3 V
+                                                                                              It is important to design a layout that prevents noise from cou-
+respectively. The output drivers are sized to provide sufficient
+                                                                                              pling onto the input signal. Digital signals should not be run in
+output current to drive a wide variety of logic families. However,
+                                                                                              parallel with input signal traces and should be routed away from
+large drive currents tend to cause glitches on the supplies and may
+                                                                                              the input circuitry. While the AD9226 features separate analog
+affect converter performance. Applications requiring the ADC to
+                                                                                              and driver ground pins, it should be treated as an analog com-
+drive large capacitive loads or large fan outs may require external
+                                                                                              ponent. The AVSS and DRVSS pins must be joined together
+buffers or latches.
+                                                                                              directly under the AD9226. A solid ground plane under the
+OEB Function (Three-State)                                                                    ADC is acceptable if the power and ground return currents are
+The LQFP-packaged AD9226 has Three-State (OEB) ability. If                                    carefully managed.
+the OEB pin is held low, the output data drivers are enabled. If
+the OEB pin is high, the output data drivers are placed in a high
+impedance state. It is not intended for rapid access to buss.                                                                       AVDD
+                                                                                                                 10␮F   0.1␮F             AD9226
+Clock Input Considerations                                                                                                           AVSS
+High-speed, high-resolution ADCs are sensitive to the quality of
+the clock input. The clock input should be treated as an analog
+signal in cases where aperture jitter may affect the dynamic                                            Figure 17. Analog Supply Decoupling
+performance of the AD9226. Power supplies for clock drivers                                   Analog and Digital Driver Supply Decoupling
+should be separated from the ADC output driver supplies to                                    The AD9226 features separate analog and digital supply and
+avoid modulating the clock signal with digital noise. Low-jitter                              ground pins, helping to minimize digital corruption of sensitive
+crystal controlled oscillators make the best clock sources.                                   analog signals. In general, AVDD (analog power) should be
+The quality of the clock input, particularly the rising edge, is                              decoupled to AVSS (analog ground). The AVDD and AVSS
+critical in realizing the best possible jitter performance of the                             pins are adjacent to one another. Also, DRVDD (digital power)
+part. Faster rising edges often have less jitter.                                             should be decoupled to DRVDD (digital ground). The decoupling
+Clock Input and Power Dissipation                                                             capacitors (especially 0.1 µF) should be located as close to the
+Most of the power dissipated by the AD9226 is from the analog                                 pins as possible. Figure 17 shows the recommended decoupling
+power supplies. However, lower clock speeds will reduce digital                               for the pair of analog supplies; 0.1 µF ceramic chip and 10 µF
+current. Figure 16 shows the relationship between power and                                   tantalum capacitors should provide adequately low impedance
+clock rate.                                                                                   over a wide frequency range.
+
+                              600                                                                                         CML            VR
+                                                                                                         0.1␮F                  AD9226             0.1␮F
+                              550
+     POWER DISSIPATION – mW
+
+
+
+
+                              500
+                                                           DRVDD = 5V                                      Figure 18. CML Decoupling (LQFP)
+                              450
+                                                                                              Bias Decoupling
+                              400
+                                                                                              The CML and VR are analog bias points used internally by the
+                                                                    DRVDD = 3V
+                                                                                              AD9226. These pins must be decoupled with at least a 0.1 µF
+                              350                                                             capacitor as shown in Figure 18. The dc level of CML is approxi-
+                                                                                              mately AVDD/2. This voltage should be buffered if it is to be
+                              300
+                                                                                              used for any external biasing. CML and VR outputs are only
+                              250                                                             available in the LQFP package.
+                              200
+                                    5   15   25       35       45       55       65   75
+                                                                                                                                    DRVDD
+                                                  SAMPLE RATE – Msps
+                                                                                                                 10␮F   0.1␮F             AD9226
+                                                                                                                                     DRVSS
+     Figure 16. Power Consumption vs. Sample Rate
+
+GROUNDING AND DECOUPLING
+                                                                                                         Figure 19. Digital Supply Decoupling
+Analog and Digital Grounding
+Proper grounding is essential in any high-speed, high-resolution
+                                                                                              CML
+system. Multilayer printed circuit boards (PCBs) are recom-
+                                                                                              The LQFP-packaged AD9226 has a midsupply reference point.
+mended to provide optimal grounding and power schemes. The
+                                                                                              This midsupply point is used within the internal architecture of
+use of ground and power planes offers distinct advantages:
+                                                                                              the AD9226 and must be decoupled with a 0.1 µF capacitor. It
+1. The minimization of the loop area encompassed by a signal                                  will source or sink a load of up to 300 µA. If more current is
+   and its return path.                                                                       required, it should be buffered with a high impedance amplifier.
+2. The minimization of the impedance associated with ground
+   and power paths.
+
+
+                                                                                           –20–                                                            REV. B
+                                                                                                                                 AD9226
+VR                                                                          The clock input signal to the AD9226 evaluation board can be
+VR is an internal bias point on the LQFP package. It must be                applied to one of two inputs, CLOCK and AUXCLK. The
+decoupled to ground with a 0.1 µF capacitor.                                CLOCK input should be selected if the frequency of the input
+The digital activity on the AD9226 chip falls into two general              clock signal is at the target sample rate of the AD9226. The
+categories: correction logic and output drivers. The internal               input clock signal is ac-coupled and level-shifted to the switch-
+correction logic draws relatively small surges of current, mainly           ing threshold of a 74VHC02 clock driver. The AUXCLK input
+during the clock transitions. The output drivers draw large                 should be selected in applications requiring the lowest jitter and
+current impulses while the output bits are changing. The size               SNR performance (i.e., IF Undersampling characterization). It
+and duration of these currents are a function of the load on the            allows the user to apply a clock input signal that is 4× the target
+output bits: large capacitive loads are to be avoided.                      sample rate of the AD9226. A low-jitter, differential divide-by-4
+                                                                            counter, the MC100EL33D, provides a 1× clock output that is
+For the digital decoupling shown in Figure 19, 0.1 µF ceramic               subsequently returned back to the CLOCK input via JP7. For
+chip and 10 µF tantalum capacitors are appropriate. Reason-                 example, a 260 MHz signal (sinusoid) will be divided down to
+able capacitive loads on the data pins are less than 20 pF per              a 65 MHz signal for clocking the ADC. Note, R1 must be
+bit. Applications involving greater digital loads should consider           removed with the AUXCLK interface. Lower jitter is often
+increasing the digital decoupling proportionally and/or using               achieved with this interface since many RF signal generators
+external buffers/latches.                                                   display improved phase noise at higher output frequencies and
+A complete decoupling scheme will also include large tantalum               the slew rate of the sinusoidal output signal is 4× that of a 1×
+or electrolytic capacitors on the power supply connector to                 signal of equal amplitude.
+reduce low-frequency ripple to negligible levels.                           Figure 20 shows the bench characterization setup used to evalu-
+                                                                            ate the AD9226’s ac performance for many of the data sheet
+EVALUATION BOARD AND TYPICAL BENCH                                          characterization curves. Signal and Clock RF generators A and
+CHARACTERIZATION TEST SETUP                                                 B are high-frequency, “very” low-phase noise frequency sources.
+The AD9226 evaluation board is configured to operate upon                   These generators should be phase locked by sharing the same
+applying both power and the analog and clock input signals. It              10 MHz REF signal (located on the instruments back panel) to
+provides three possible analog input interfaces to characterize             allow for nonwindowed, coherent FFTs. Also, the AUXCLK
+the AD9226’s ac and dc performance. For ac characterization, it             option on the AD9226 evaluation board should be used to
+provides a transformer coupled input with the common-mode                   achieve the best SNR performance. Since the distortion and
+input voltage (CMV) set to AVDD/2. Note, the evaluation                     broadband noise of an RF generator can often be a limiting
+board is shipped with a transformer coupled interface and a 2 V             factor in measuring the true performance of an ADC, a high Q
+input span. For differential dc coupled applications, the evalua-           passive bandpass filter should be inserted between the generator
+tion board has provisions to be driven by the AD8138 amplifier.             and AD9226 evaluation board.
+If a single-ended input is desired, it may be driven through the
+S3 connector. The various input signal options are accessible by
+the jumper connections. Refer to the Evaluation Board schematic.
+
+
+                                                                             5V        5V            3V             3V
+
+
+
+
+                                                                          AVDD      GND    DUT GND         DUT     DVDD
+                                                                                          AVDD            DVDD
+                            SIGNAL SYNTHESIZER                            S4
+                                                            1MHz          INPUT
+                   REFIN    65(OR 260MHz), 4V p-p      BANDPASS FILTER
+                                   HP8644                                 xFMR              AD9226               OUTPUT       DSP
+                                                                                    EVALUATION BOARD              WORD     EQUIPMENT
+                                                                                                                    (P1)
+                                                                          S1               S4
+                   10MHz     CLK SYNTHESIZER                                           AUX CLOCK
+                            65(OR 260MHz), 4V p-p                         INPUT
+                   REFOUT                                                 CLOCK           (ⴜ4)
+                                   HP8644
+
+
+
+                                                    Figure 20. Evaluation Board Connections
+
+
+
+
+REV. B                                                                   –21–
+AD9226
+                     TP5                                                   DUTAVDD
+                       WHT                        JP23     JP22
+
+                                                                    C1
+                                                                               C36          C39        AD9226LQFP
+                                                  JP25            10␮F
+                   R3                                                        0.1␮F      0.001␮F
+                                                                   10V                            3                           28
+                 10k⍀                                                                                  AVDD1           OTR              OTR0
+                                                  JP24                                            4                           27
+                                                                                                       AVDD2      MSB-B1                D130
+                                                                                                  1                           26
+                   R4        C21                                                                       AVSS1             B2             D120
+                                      C35                                                         2                           25
+                 10k⍀       10␮F                                                                       AVSS2             B3             D110
+                                    0.1␮F
+                             10V                                                                  36                          24
+                                                                                                       SENSE             B4             D100
+                                                                                                  37                          21
+                                                                                                       VREF              B5             D90
+                                                                                                  38                          20
+                                                   C34                                                 REFCOM            B6             D80
+                                                  0.1␮F                                           39                          19
+                                                                                                       CAPB1             B7             D70
+                                                          C20                                     40                          18
+                                                                      C33                              CAPB2             B8             D60
+                                                         10␮F                                     41                          17
+                                                                    0.1␮F                              CAPT1             B9             D50
+                                                          10V
+                                                                                                  42                          16
+                                                           C32                                         CAPT2            B10             D40
+                                                         0.1␮F                                    45                          13
+                                                                                                       CML     U1       B11             D30             AVDD
+                                                                      C50                         46                          12
+                                                                    0.1␮F                  VINA        VINA             B12             D20           JP6
+                                                                                 SHEET 3          47                          11
+                                         TP2                                               VINB        VINB             B13             D10
+                            FBEAD   L1      RED
+                              2     1                                                              5                          10                      JP1
+                                                                                                       NC1       LSB-B14                D00
+   DUTAVDDIN TB1 2                            DUTAVDD
+                      C58                                                                          6                          8
+                                  C59                                                                  NC2              NC3
+                     22␮F                                                                                                                             JP2
+                                0.1␮F                                                             32                          9
+                      25V                                                                              AVSS3           OEB
+       AGND TB1 3                                                                                 33                          48
+                                                                                                       AVSS4            VR
+                                                     DUTAVDD                                      31                          35                            C2
+                                                                                                       AVDD3            DFS                           R42
+                                         TP1                                                                                                                0.1␮F
+                            FBEAD   L2                       C23                                  34                          43                      1k⍀
+                                            RED                            C38        C41              AVDD4           DUTY
+                              2     1                       10␮F
+      AVDDIN TB1 1                            AVDD                       0.1␮F    0.001␮F         30                          7                        R6
+                      C47                                    10V                                       DRVSS3          CLK
+                                  C52                                                                                                                 1k⍀
+                     22␮F                                                                         29                          44
+                                0.1␮F                                                                  DRVDD3           NC4                           R10
+                      25V
+                                                                                                  23                          15                      1k⍀
+                                                                                                       DRVDD1    DRVDD2
+                                                                                                  22                          14
+                                                                                                       DRVSS1     DRVSS2
+                                         TP3                                                                                                      DUTCLK
+                            FBEAD   L3      RED                                                                                                 WHT
+                              2     1
+     DRVDDIN TB1 5                            DUTDRVDD               DUTDRVDD                                                                 TP6
+                      C48                                                              C3
+                                  C53                                                                            C37              C40
+                     22␮F                                                            10␮F
+                                0.1␮F                                                                          0.1␮F          0.001␮F
+                      25V                                                             10V
+       AGND TB1 4
+
+                                                                                                                                    NC = NO CONNECT
+                                         TP4
+                            FBEAD   L4      RED
+                              2     1
+      DVDDIN TB1 6                            DVDD
+                       C6
+                                  C14     TP11   TP12   TP13   TP14
+                     22␮F
+                                0.1␮F        BLK    BLK    BLK    BLK
+                      25V
+
+
+
+
+                                                    Figure 21. AD9226 Evaluation Board
+
+
+
+
+                                                                                 –22–                                                                          REV. B
+                                                                                                                                                                           AD9226
+                                                                                                                         C12                    DVDD
+                                                                                                                        0.1␮F
+
+
+                                                                                                                   10V C4 10␮F
+                                                                                                                     2    1
+
+
+                                                                                                               1 74VHC541 20                                  RP1
+                                                                                                                   G1         VCC
+    AUXCLK
+                                                                                                             19                                             1 22⍀ 16
+                                                                                1N5712                                                10                                 1 P1    P1 2
+      S5                                       T1–1T                                                               G2         GND
+         1                           6                        1                                                                                               RP1
+                                                                                                               2                      18                    2 22⍀ 15
+         2                           5                        2                 D2        2      D13               A1           Y1                                       3 P1    P1 4
+                R11
+                49.9⍀                                                                                          3                      17                      RP1
+                                                                                 2   D1          D12               A2           Y2
+                                     4                        3                                                                                             3 22⍀ 14
+                                                T2                                                             4                      16                                 5 P1    P1 6
+                                                                                                 D11               A3    U6     Y3                            RP1
+                                                                                     1N5712
+                                                                                                               5                      15                    4 22⍀ 13
+                                                                                                 D10               A4           Y4                                       7 P1    P1 8
+                                                                                                               6                      14                      RP1
+                                                                                                  D9               A5           Y5                          5 22⍀ 12
+                                                                                                               7                      13                                 9 P1    P1 10
+                                          MC100EL33D                                              D8               A6           Y6                            RP1
+                                     8                        1
+                        AVDD              VCC           NC                                                     8                      12                    6 22⍀ 11
+                                                                                                  D7               A7           Y7                                       11 P1   P1 12
+                                     7
+                                          OUT
+                                                U3      INA
+                                                              2                                                                                               RP1
+                                                                                                               9                      11
+                                     6                        3
+                                                                                                  D6               A8           Y8                          7 22⍀ 10
+                                                                                                                                                                         13 P1   P1 14
+                                          REF           INB
+                                     5                        4                                                                                               RP1
+                                          VEE     INCOM                                                                                                     8 22⍀ 9
+                                                                                                                              C11                                        15 P1   P1 16
+                                                                                                                             0.1␮F                            RP2
+    AVDD                     AVDD                    AVDD
+                                                                                                                                                            1 22⍀ 16
+                                                                                          C26                                                                            17 P1   P1 18
+                                                                           C18                                          10V C5 10␮F
+                                                                           0.1␮F          10␮F                                                                RP2
+         R12    C17              R13                                                      10V                             2    1
+                                                                                                                                                            2 22⍀ 15
+         113⍀   0.1␮F            113⍀                                                                                                                                    19 P1   P1 20
+                                                C19           U3
+                                                                                                                    1 74VHC541 20
+                                                0.1␮F                                                                                                         RP2
+         R14                     R15                      DECOUPLING                                                                                        3 22⍀ 14
+         90⍀                     90⍀                                                                                    G1           VCC                                 21 P1   P1 22
+                                                                                                                   19                      10
+                 JP7                                                                                                    G2         GND                        RP2
+                                                                                                                    2                      18               4 22⍀ 13
+                                                                                                       D5               A1            Y1                                 23 P1   P1 24
+                    R19 R2 R18                                                                                      3                      17                 RP2
+                                                                                                       D4               A2            Y2
+                                                                                                                                                            5 22⍀ 12
+                    4k⍀ 5k⍀ 4k⍀                                                                                                                                          25 P1
+                                                 AVDD                                                               4                      16                                    P1 26
+                                                                                                       D3               A3    U7      Y3
+                                                                                                                                                              RP2
+                                                                                                                    5                      15               6 22⍀ 11
+                             JP17                                                                      D2               A4            Y4                                 27 P1   P1 28
+                         3    1
+                            AB                                                                                      6                      14
+    CLOCK                  2 TP7                                                                       D1               A5            Y5
+                      C13                                                       R7
+      S1            0.10␮F      WHT 8a                                8b           DUTCLK                           7                      13                            29 P1   P1 30
+         1                        13   12                     11            10 22⍀                     D0               A6            Y6
+                                                                                                                    8                      12
+         2                                                                                     R9 OTR                   A7            Y7
+                 R1                        74VHC04            74VHC04 JP4                                                                                                31 P1   P1 32
+                 49.9⍀                                                                        22⍀                   9                      11
+                                                                                                                        A8            Y8
+                                                                                                                                                              RP2
+                                                                      8c         JP3
+                                                                  1         2                                                                               8 22⍀ 9
+                                                                                                                                                                         33 P1   P1 34
+                                     8d                       74VHC04
+                                 9         8                                                                                                                             35 P1   P1 36
+                                                                            AVDD
+                                 74VHC04                                                                C3
+                                                                                              C10
+                                                                                              0.1␮F     10␮F
+                                                                                                                                                                         37 P1   P1 38
+                                     8e                                                                 10V
+                                 5         6                                                                                                                  RP2
+                                                                                      U8                                                                    7 22⍀ 10
+                                 74VHC04                                                                                                                                 39 P1   P1 40
+                                                                                  DECOUPLING
+                                     8f                                                                                                                NC = NO CONNECT
+                                 3         4
+
+                                 74VHC04
+
+                                                                            Figure 22. AD9226 Evaluation Board
+
+
+
+
+REV. B                                                                                                      –23–
+AD9226
+             RP3
+           1 22⍀ 8
+   OTRO                 OTR
+             RP3
+           2 22⍀ 7
+    D130                D13                                                           JP5
+             RP3
+                                                                   SINGLE                                      AVDD
+           3 22⍀ 6
+    D120                D12                                         INPUT          C9            R40   C7
+             RP3                                                      S3         0.33␮F          1k⍀   0.1␮F
+           4 22⍀ 5                                                       1
+    D110                D11                                                                                                    JP42
+                                                                       2      R5
+                                                                                                 R41
+               RP4                                                            49.9⍀
+                                               C15                                               1k⍀
+           1   22⍀ 8                                                                                                           JP40
+   D100                 D10       AVDD        10␮F          AVDD
+               RP4                             10V                                                                                               C44
+           2   22⍀ 7                         1     2                                                                                     R21
+    D90                 D9                                                                                                     JP45              TBD
+                                                               R32                                                                       22⍀
+               RP4                            C69              10k⍀                                                                                   VINA
+           3   22⍀ 6                         0.1␮F                                                                                       R22       C24
+    D80                 D8                                                                                                     JP46                      SHEET 1
+               RP4                                                                                                                       22⍀       50pF
+                                                                        C8                                                                             VINB
+           4   22⍀ 5                                           R33
+    D70                 D7                    R37                       0.1␮F
+                                                               10k⍀                                                                              C43
+                                             499⍀                                                                              JP41              TBD
+                                   3
+                  R34
+                 523⍀             VCC                                                                                          JP43
+                              1                4                                                                                                    RP5
+                                  –W
+                                             VOⴙ                                                                                                  1 22⍀ 8
+  AMP INPUT                                            2                                                                                  D60                 D6
+                  R35                   U2     VDC
+                                                                                                                                                    RP5
+     S2          499⍀                        VO–
+        1                     8
+                                  ⴙW
+                                                                                                                                                  2 22⍀ 7
+                                               5                                                                                          D50                 D5
+       2        R31
+                                  VEE
+                                                           XFMR INPUT                                          DUTAVDD                              RP5
+                                         AD8138
+                49.9⍀              6                          S4                        T1–1T                                                     3 22⍀ 6
+                                              R36                                6                1            R38                        D40                 D4
+                                                                  1                                                                                 RP5
+                                             499⍀                                                              1k⍀
+                                                                 2   R24         5                2                                               4 22⍀ 5
+                                                                      49.9⍀
+                                                                                 4                3            R8     C25        C16
+                                                                                            T2                 1k⍀    0.33␮F     0.1␮F              RP6
+                                                                                                                                                  1 22⍀ 8
+                                                                                                                                           D30                D3
+                                                                                                                                                    RP6
+                                                                                                                                                  2 22⍀ 7
+                                                                                                                                          D20                 D2
+                                                                                                                                                    RP6
+                                                                                                                                                  3 22⍀ 6
+                                                                                                                                          D10                 D1
+                                                                                                                                                    RP6
+                                                                                                                                                  4 22⍀ 5
+                                                                                                                                          D00                 D0
+
+                                                           Figure 23. AD9226 Evaluation Board
+
+
+
+
+                                  Figure 24. Evaluation Board Component Side Layout (Not to Scale)
+
+
+                                                                                –24–                                                                           REV. B
+                                                                         AD9226
+
+
+
+
+         Figure 25. Evaluation Board Solder Side Layout (Not to Scale)
+
+
+
+
+                   Figure 26. Evaluation Board Power Plane
+REV. B                               –25–
+AD9226
+
+
+
+
+                 Figure 27. Evaluation Board Ground Plane
+
+
+
+
+         Figure 28. Evaluation Board Component Side (Not to Scale)
+                                  –26–                               REV. B
+                                                                  AD9226
+
+
+
+
+         Figure 29. Evaluation Board Solder Side (Not to Scale)
+
+
+
+
+REV. B                           –27–
+AD9226
+                                                                    OUTLINE DIMENSIONS
+                                                                 Dimensions shown in inches and (mm).
+
+
+                        28-Lead Shrink Small Outline                                                 48-Lead Thin Plastic Quad Flatpack
+                                  (RS-28)                                                                         (ST-48)
+
+
+
+
+                                                                                                                                                                                     C01027–0–3/01(B)
+                        0.407 (10.34)                                                                    0.063 (1.60)
+                        0.397 (10.08)                                                                       MAX
+                                                                                                                                  0.354 (9.00) BSC SQ
+                                                                                              0.030 (0.75)
+                                                                                                                                 48                    37
+                                                                                              0.018 (0.45)
+                                                                                                                             1                              36
+                  28                       15   0.212 (5.38)
+                                                0.205 (5.21)
+   0.301 (7.64)
+    0.311 (7.9)
+
+
+
+
+                                                                                                                                                                 0.276
+                                                                                                                                       TOP VIEW                  (7.00)
+                                                                                                                                      (PINS DOWN)                 BSC
+                                                                                                                                                                  SQ
+                  1                        14
+                                                                                            COPLANARITY
+                                                                                                                           12                               25
+                                                                                              0.003 (0.08)             0ⴗ     13                       24
+                                                                                                                       MIN
+
+0.078 (1.98) PIN 1                          0.07 (1.79)                                                  0.008 (0.2)             0.019 (0.5)   0.011 (0.27)
+                                                                                                        0.004 (0.09)                BSC        0.006 (0.17)
+0.068 (1.73)                               0.066 (1.67)
+                                                                                                                                                                   0.057 (1.45)
+                                                                                                                        7ⴗ                                         0.053 (1.35)
+                                                                                                                        0ⴗ
+                                                            8°    0.03 (0.762)
+                                                                                                                             0.006 (0.15) SEATING
+ 0.008 (0.203) 0.0256    0.015 (0.38)
+                                      SEATING 0.009 (0.229)
+                                                            0°   0.022 (0.558)                                               0.002 (0.05) PLANE
+               (0.65)    0.010 (0.25)
+ 0.002 (0.050) BSC                      PLANE
+                                              0.005 (0.127)
+
+
+
+
+                                                                                                                                                                                          PRINTED IN U.S.A.
+
+
+
+
+                                                                                 –28–                                                                                       REV. B
+

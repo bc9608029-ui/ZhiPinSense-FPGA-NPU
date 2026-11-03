@@ -1,0 +1,228 @@
+{
+  "seed": 2026,
+  "device": "auto",
+  "output_dir": "outputs/baseline_v1",
+  "signal": {
+    "sample_rate": 128000.0,
+    "symbol_rate": 16000.0,
+    "samples_per_symbol": 8,
+    "sample_length": 1024,
+    "amplitude": 1.0,
+    "frequency_offset": 0.0,
+    "phase_offset": 0.0,
+    "pulse_shape": {
+      "type": "rrc",
+      "rolloff": 0.35,
+      "span_symbols": 8
+    },
+    "ofdm": {
+      "fft_length": 256,
+      "cyclic_prefix": 64,
+      "active_subcarriers": 48,
+      "subcarrier_modulation": "QPSK"
+    },
+    "modulations": [
+      "BPSK",
+      "QPSK",
+      "8PSK",
+      "16QAM",
+      "64QAM",
+      "2FSK",
+      "CPFSK",
+      "OFDM"
+    ]
+  },
+  "channel": {
+    "domain_randomization": true,
+    "awgn": {
+      "enabled": true,
+      "probability": 1.0,
+      "snr_db": [
+        -20.0,
+        20.0
+      ]
+    },
+    "rayleigh": {
+      "enabled": true,
+      "probability": 0.15
+    },
+    "rician": {
+      "enabled": true,
+      "probability": 0.15,
+      "k_factor": [
+        3.0,
+        12.0
+      ]
+    },
+    "multipath": {
+      "enabled": true,
+      "probability": 0.25,
+      "num_taps": [
+        2,
+        5
+      ],
+      "max_delay": 12
+    },
+    "cfo": {
+      "enabled": true,
+      "probability": 0.8,
+      "hz": [
+        -2000.0,
+        2000.0
+      ]
+    },
+    "phase_offset": {
+      "enabled": true,
+      "probability": 0.8,
+      "radians": [
+        -3.14159,
+        3.14159
+      ]
+    },
+    "phase_noise": {
+      "enabled": true,
+      "probability": 0.25,
+      "std_rad": [
+        0.0001,
+        0.006
+      ]
+    },
+    "sfo": {
+      "enabled": true,
+      "probability": 0.2,
+      "ppm": [
+        -80.0,
+        80.0
+      ]
+    },
+    "iq_imbalance": {
+      "enabled": true,
+      "probability": 0.25,
+      "gain_db": [
+        -1.2,
+        1.2
+      ],
+      "phase_deg": [
+        -6.0,
+        6.0
+      ]
+    },
+    "dc_offset": {
+      "enabled": true,
+      "probability": 0.2,
+      "magnitude": [
+        0.0,
+        0.08
+      ]
+    },
+    "amplitude_scaling": {
+      "enabled": true,
+      "probability": 0.7,
+      "scale": [
+        0.55,
+        1.45
+      ]
+    },
+    "clipping": {
+      "enabled": true,
+      "probability": 0.12,
+      "level_rms": [
+        1.4,
+        2.5
+      ]
+    },
+    "narrowband_interference": {
+      "enabled": true,
+      "probability": 0.1,
+      "sir_db": [
+        0.0,
+        20.0
+      ]
+    },
+    "burst_interference": {
+      "enabled": true,
+      "probability": 0.1,
+      "sir_db": [
+        0.0,
+        18.0
+      ],
+      "duty_cycle": [
+        0.03,
+        0.25
+      ]
+    }
+  },
+  "dataset": {
+    "train_samples": 512,
+    "val_samples": 256,
+    "test_samples": 256,
+    "snr_values": [
+      -10,
+      0,
+      10
+    ],
+    "num_workers": 0
+  },
+  "training": {
+    "epochs": 2,
+    "batch_size": 32,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0002,
+    "scheduler": "cosine",
+    "early_stopping_patience": 2,
+    "min_delta": 0.0001,
+    "label_smoothing": 0.03,
+    "gradient_clip_norm": 5.0,
+    "amp": false
+  },
+  "model": {
+    "simulate_hardware_inputs": true,
+    "iq_branch_channels": 12,
+    "iq_stem_channels": 32,
+    "physical_branch_channels": 8,
+    "physical_stem_channels": 24,
+    "fusion_channels": 64,
+    "stage_channels": [
+      64,
+      96,
+      128
+    ],
+    "classifier_features": 128,
+    "dropout": 0.15
+  },
+  "evaluation": {
+    "batch_size": 64,
+    "samples_per_modulation_per_snr": 4,
+    "snr_values": [
+      -10,
+      0,
+      10
+    ],
+    "comparison_config": "configs/qam_aware_v2.yaml"
+  },
+  "audit": {
+    "samples_per_modulation": 128
+  },
+  "output_root": "outputs/qam_aware_v3/smoke",
+  "model_contract": {
+    "iq_channels": 2,
+    "physical_channels": 3,
+    "sample_length": 1024,
+    "class_order": [
+      "BPSK",
+      "QPSK",
+      "8PSK",
+      "16QAM",
+      "64QAM",
+      "2FSK",
+      "CPFSK",
+      "OFDM"
+    ]
+  },
+  "final_blind_test": {
+    "seed": 26093031,
+    "split": "v3_final_blind_test",
+    "samples": 16800
+  }
+}

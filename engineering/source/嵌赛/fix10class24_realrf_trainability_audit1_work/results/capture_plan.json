@@ -1,0 +1,44 @@
+{
+  "token": "M29-RML24-REALRF-TRAINABILITY-AUDIT1-CAPTURE-PLAN",
+  "goal": "lift data sufficiency to FULL-FINETUNE-CANDIDATE (final finetune only)",
+  "n_classes": 24,
+  "sessions": {
+    "n_independent_real_rf_sessions": 5,
+    "session_role_split": "train:val:test = 3:1:1 by SESSION (never within-session)",
+    "reason": "single session uses one shared LO/SDR/temperature state; splitting within a session leaks that state across train/val/test"
+  },
+  "source_waveforms": {
+    "n_independent_realizations_per_class": 20,
+    "n_total": 480,
+    "requirement": "each of the 24 classes gets >=20 DISTINCT source realizations (distinct symbol sequences / seeds), not the same 24 bursts repeated across sessions",
+    "forbidden": "re-using the current 24 tx_package source waveforms as the only realizations (they are already consumed as the 2-session audit set)"
+  },
+  "capture_contract": {
+    "points_per_frame": 1024,
+    "dtype": "complex64 / [2,1024] float32 model input",
+    "per_frame_record": [
+      "source_index",
+      "class_index",
+      "realization_seed",
+      "source_sha256",
+      "raw_rx_sha256",
+      "recovered_tensor_sha256",
+      "training_residual_rel",
+      "gated",
+      "board_pred",
+      "forced_logits_sha256"
+    ],
+    "forced_export": "gate-rejected frames MUST still export recovered tensor + frozen-model logits (diagnostic bypass), never dropped",
+    "no_label_driven_selection": "recovery / DC / scale params chosen WITHOUT using labels or per-sample source identity"
+  },
+  "leakage_controls": {
+    "split_unit": "SESSION (a whole session goes to exactly one of train/val/test)",
+    "no_realization_duplication": "a source realization may not appear in more than one session split",
+    "no_gate_exclusion": "all 24 classes stay in the 24 denominator; no dropping of gate-rejected / wrong / non-finite samples"
+  },
+  "stop_conditions": {
+    "proceed_to_final_finetune": ">=5 sessions captured, >=20 realizations/class, residual distribution passes recovery gate at a rate making finetune meaningful (else fix RX first)",
+    "do_not_finetune_until": "receive-chain residual no longer systematically exceeds the 0.100 gate (finetuning on residual-limited recoveries reinforces the RX distortion)",
+    "authorization_required": "training/finetuning requires explicit user authorization; the standing red line is 不训练"
+  }
+}

@@ -1,0 +1,18 @@
+[Unit]
+Description=RML24 verified classification spectrum waterfall and constellation UI
+After=local-fs.target systemd-udev-trigger.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/rml24-system
+ExecStartPre=/bin/bash /opt/rml24-system/startup/check-ui.sh
+ExecStart=/opt/rml24-system/bin/board_ui_live_rml24_final --sock=/run/sdr_amr_ui_rml24_final.sock --ctl-sock=/run/sdr_amr_control_rml24_final.sock --display-refresh-hz=30
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=15
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target

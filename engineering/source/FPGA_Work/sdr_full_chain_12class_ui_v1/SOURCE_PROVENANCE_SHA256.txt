@@ -1,0 +1,74 @@
+SOURCE_PROVENANCE_SHA256.txt — 十二类 SDR→NPU→UI 全链路（Gate 6–9）来源冻结清单
+生成时间（UTC）: 2026-10-06T07:22:48Z
+约定: 每行 = '<SHA256>  <绝对路径>  # <来源说明>'；本清单只读哈希，不修改上游。
+
+# ==== §A 十二类 ONNX 模型（链路上唯一推理模型，标 12CLASS_CHAIN_VALIDATION_MODEL）====
+f77587152b52cda9a467b28790bc62d0eb0c639db2c39da82642c00ca8deda5a  /f/FPGA_Work/_tmp_ad_amr_results_verify/ad_amr_data_v3_12class_ff2b3fb3_run/outputs/ad_amr_v1_1_data_v3_12class/formal/export/onnx/ad_amr_v1_1_opset17.onnx  # 12class ONNX (input [1,2,1024] -> logits [1,12], opset17)
+de8a37a14883f1f41ff6d41f498ecc0c9399c7c3346302f01d04cf381745e752  /f/FPGA_Work/_tmp_ad_amr_results_verify/ad_amr_data_v3_12class_ff2b3fb3_run/outputs/ad_amr_v1_1_data_v3_12class/formal/export/onnx/export_report.json  # 12class export_report.json
+fc9b359a1c071b25a842da0abd4771f61170b3d830bd65bad81bee4e8f8a3bc0  /f/FPGA_Work/_tmp_ad_amr_results_verify/ad_amr_data_v3_12class_ff2b3fb3_run/outputs/ad_amr_v1_1_data_v3_12class/formal/acceptance.json  # 12class acceptance.json (OOD gate NO_GO)
+# ==== §B 类别契约（十二类顺序权威源）====
+cd3f336d043ec8fabece7b6bae837b6d5288aff999b24419748581d11bfc55a6  /f/FPGA_Work/sdr_preparation_v3_logging_fix/sdr_adapter/categories.hpp  # categories.hpp (target_12, 两处一致 cd3f336d...)
+cd3f336d043ec8fabece7b6bae837b6d5288aff999b24419748581d11bfc55a6  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/categories.hpp  # categories.hpp (sdr_pluto 副本, 与上逐字节一致)
+# ==== §C FPGA↔NPU 寄存器契约 ====
+db9f57c8bf5c4555618779a6f1b4dbf83af8c0edb6c9f02296af40b7b88a61d4  /f/FPGA_Work/sdr_preparation_v3_logging_fix/board_package/pl_ddr_register_map.hpp  # pl_ddr_register_map.hpp (VERSION 0x20260929)
+# ==== §D 现有位流（权威上板位流，只读冻结，禁写 Flash）====
+df8a0c669812835f7e6698ae0db0bb8524e6681bb211dfd1255bffe4ad1551b7  /f/FPGA_Work/hdmi_framebuffer_ui_v4_fix/fpga/vivado_prj/hdmi_framebuffer_720p.runs/impl_1/hdmi_framebuffer_720p_top_disable_icap.bit  # v4_fix 权威 HDMI 位流 (df8a0c66...)
+70a0e21eccdbe8f559476a8750c761d7b609daa3d76c924a5057a2f316b5abd7  /f/FPGA_Work/pl_ddr_mandatory_core_v1/fpai_demo_fpga/fpai_demo_vivado.runs/impl_1/pl_ddr_mandatory_core_top_disable_icap.bit  # PL-DDR Mandatory Core 位流 (70a0e21e...)
+# ==== §E UI 渲染核心（十二类 UI，本链路不改）====
+51c3340d35671f8c417d127eee44b15b790a3736459f9afdc801b70c8d9942f2  /f/FPGA_Work/hdmi_framebuffer_ui_v5_visual/sw/ui_render.hpp  # ui_render.hpp (UiState/classes_12/card_grid)
+f64d1013ab4771b3bc963853c0a8c4c14131e5b4706400f484f8eaebad0c96ad  /f/FPGA_Work/hdmi_framebuffer_ui_v5_visual/sw/ui_render.cpp  # ui_render.cpp (Style A 三页渲染)
+# ==== §F 八类参考模型资产（仅资产审计，不接入十二类）====
+ad57fc0b4a9ec5ae6e8cd2d2c2c0c91f81ef4e5fc7898447b322dc00c349a2e4  /f/FPGA_Work/npu_stage_v1/compile/jsonraw/rfnet_npu_ZG.json  # 8class 编译产物 rfnet_npu_ZG.json
+c48979b3ab1bc62fa2efcfb07202ee640513f424244d15d089c89a6d2260b42a  /f/FPGA_Work/npu_stage_v1/compile/jsonraw/rfnet_npu_ZG.raw  # 8class 编译产物 rfnet_npu_ZG.raw
+2e50146503bbe3df564b244515e0ed74d23d6f06f44e3cd715194a3bdd50051d  /f/FPGA_Work/npu_stage_v1/models/time_power_phase_npu_partition_opset17.onnx  # 8class 源模型 time_power_phase_npu_partition_opset17.onnx
+ad57fc0b4a9ec5ae6e8cd2d2c2c0c91f81ef4e5fc7898447b322dc00c349a2e4  /f/FPGA_Work/npu_stage_v1/board_package/model.json  # 8class board model.json
+c48979b3ab1bc62fa2efcfb07202ee640513f424244d15d089c89a6d2260b42a  /f/FPGA_Work/npu_stage_v1/board_package/model.raw  # 8class board model.raw
+# ==== §G Gate 1–5 核心源码（复用来源，逐文件冻结）====
+b6e9adaac03d188b4b45683c452d7724cf733ec1bf0418ad02803bf3e7349fcd  /f/FPGA_Work/sdr_pluto_board_integration_v1/board_package/board_common.hpp  # Gate1-5 源码
+e83e83cca5565baadd15adbf9ad308679f5efcfe985e71881d8f12298702dc98  /f/FPGA_Work/sdr_pluto_board_integration_v1/board_package/board_detect_pluto.cpp  # Gate1-5 源码
+e88e8be5e4ed768b7fafe8b8766837e7f069a20172509ec41220a7a16011fdb6  /f/FPGA_Work/sdr_pluto_board_integration_v1/board_package/board_digital_loopback.cpp  # Gate1-5 源码
+a1ca197752eda780d7d668813f223297418f4e2b803f0a319aef95964748395d  /f/FPGA_Work/sdr_pluto_board_integration_v1/board_package/board_resampler_test.cpp  # Gate1-5 源码
+dc20bb7c380e7a89ba49c79613452abb5b1ac26c17bf6a2f321ee35ad28d1565  /f/FPGA_Work/sdr_pluto_board_integration_v1/board_package/board_rf_loopback.cpp  # Gate1-5 源码
+86ef2058a705496e660e4aaf7fea46edd511e23d30d13f4da20bbd19f022de87  /f/FPGA_Work/sdr_pluto_board_integration_v1/board_package/board_rx_only.cpp  # Gate1-5 源码
+907b4a156659eba337a2820ddc56dd38f51f15c312f63bfc7b8664a9ba0c7590  /f/FPGA_Work/sdr_pluto_board_integration_v1/board_package/build_on_board.sh  # Gate1-5 源码
+ea37236b04571bf45f8c755253275f232a5730c3dde3b9d3253bda6f3702c9ea  /f/FPGA_Work/sdr_pluto_board_integration_v1/contracts/pluto_config_contract.md  # Gate1-5 源码
+45dbf040e89cf74c40f2cb385fc32e76aa13e9c80c04d8a61ae4918346abe969  /f/FPGA_Work/sdr_pluto_board_integration_v1/contracts/rx_iq_format_contract.md  # Gate1-5 源码
+7e9b332799f944cf75b2ec2d3ee61417faaeb08bf18901e1f1bc520ef78aa194  /f/FPGA_Work/sdr_pluto_board_integration_v1/contracts/sampling_and_iq_contract.md  # Gate1-5 源码
+3eb15313e764788ecd1dc6b726f3e0fcd6bf56b56c8b1eb6457c2778acfaf39f  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/build_libiio_gate.sh  # Gate1-5 源码
+cd3f336d043ec8fabece7b6bae837b6d5288aff999b24419748581d11bfc55a6  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/categories.hpp  # Gate1-5 源码
+d80c2aedd423696c58f0f37216a7dd68fd96943b7b9d9f9c2c1094471b832674  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/classify.hpp  # Gate1-5 源码
+6a27f26c1c68a313945794c5cb10926e5bb5dbc95e6beecc4f8dfdb5f54e6621  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/config.hpp  # Gate1-5 源码
+df381387e1eac6aaa14251ecbd1efe3fd44c1bb312afe88fd35b2e096b66745b  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/device_state_guard.hpp  # Gate1-5 源码
+c80b34c72cc6c7879208c7a0c62095de44755607a25356e8a477308a87785874  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/fir_coeffs.h  # Gate1-5 源码
+888ee6cca55f4c3d749b6fc8c6efb10213404a239fc6abbb881339dda8390716  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/frame_analysis.hpp  # Gate1-5 源码
+433c656bd7d864c387efc45bc55e47e588f860697762e1d052fc6bab655edbe7  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/iio_attr_routing.hpp  # Gate1-5 源码
+6c0e8724bde7ca16e80a2fd1d9971113cea7310c033d737e5668eb61c4fac09d  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/iio_backend.hpp  # Gate1-5 源码
+18d237d2e1e77126e8786c39edf908c33898d4caaf64a3d6827074c843e83919  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/iq_frame.hpp  # Gate1-5 源码
+03ef043c8785ab1090952d345548202a5c51a7f75c5e4862f7f3b450f269e9e0  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/iq_source.cpp  # Gate1-5 源码
+41afcead0989013df6d92a11c8c30f96edafc3d1817af58ce6f23619408ead2d  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/iq_source.hpp  # Gate1-5 源码
+51cad8b3d42183b763ee6de9ac75cb14884c25e02fd942b8f66dbaf8d8e8b2b1  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/libiio_gate.cpp  # Gate1-5 源码
+cc2c4dc5a503804dac3b1972a968dfe2c8aef06465d84ce109dcebdbac7f9f00  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/libiio_offline/README.md  # Gate1-5 源码
+95bc0752fb3d9fbe6a89665aab9fd49f5e1b9c7db3835def44b247b7ac85f97f  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/libiio_offline/install_offline.sh  # Gate1-5 源码
+68feeadf0df2a0a569faab6c2631dc83ade8f0b7ffb97f02fb3ce2297d0b60dc  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/logging.hpp  # Gate1-5 源码
+94877719860fbd3406f027df8359a9565b667367f71d9993fa728de3ecf5d454  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/mock_iio.hpp  # Gate1-5 源码
+4bf27416a17c25151c4ebde1ebe4fd34f3ea2ca59583919798624ad07b8c087a  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/nco.hpp  # Gate1-5 源码
+a4e9d32fa9b61e9efbc6b2aa35f45210a374930fa24625320b9800cfe9ac69b7  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/offline_chain.hpp  # Gate1-5 源码
+0a591200aeaba320a0933c0b42843f6a7b244c535449ea5cd32fc505f1919445  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/perf_stats.hpp  # Gate1-5 源码
+6f72d60c4d06f219b911011bdc365c1ad8d51299bd4991a81d0a15bda46043c6  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/pipeline.hpp  # Gate1-5 源码
+13e0c012fcf39b18e9a16647026d7732d9bfee0dbd7e95a3d5b5168c346fb1df  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/pluto.hpp  # Gate1-5 源码
+62f5ec3a6a6f1937875f693646f0083555fbd138e75bffc72a6c22cf0cf4a1e0  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/pluto_device.hpp  # Gate1-5 源码
+381b9dfe901e9ae3737bb9b68970e39346ef36ce9d1b9ab12599196d35cafd2a  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/pluto_device_libiio.cpp  # Gate1-5 源码
+74b7c6b468c866f32d04cdd5d621314726c65e4240850c793b28bea7a4ac6d74  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/pluto_libiio.cpp  # Gate1-5 源码
+525b9e81d479624755476158a79f69cafd7009621718734c9f8f74619689f93a  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/pluto_tx.cpp  # Gate1-5 源码
+4c7229832d221d07b1f83121df5f7995d664d1cfa4b09cba01ef384ec7f135bb  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/pluto_tx.hpp  # Gate1-5 源码
+9272ae699a2e6087ee528a640b0133a1f65ab167a52d797b2670e9b2f4ab55c1  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/preprocess.hpp  # Gate1-5 源码
+76855de44b82d8f5eb59bb25ddc3263fd32e119bf009042c629c4a68c55baa44  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/receiver_scale.hpp  # Gate1-5 源码
+be11f7a6b4ac65a12c09ee222e9a2442e67efe487125b45c635b681d04f2d241  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/resampler.cpp  # Gate1-5 源码
+8bfbcf72d214135a274eb3ae85643066784c77410301a649b50c0814a3f9cf67  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/resampler.hpp  # Gate1-5 源码
+a16f2efaf02e84f4983ff5ebe769034047e815f5d6516432a9ac7a23d1d5a311  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/result_frame.hpp  # Gate1-5 源码
+a2a9135beb2c93a4566b46b67a93443732bb3926b7c4c9cadb8d48a6b9d2afc9  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/rx_format.hpp  # Gate1-5 源码
+549ccc8f381bfa416d98a32d2bc2841181be759624fd458fb2b80b6a34472c07  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/sample_rate_negotiate.cpp  # Gate1-5 源码
+f64a1854bd573b16a9e23137922e7838ef62b5b92ca316e0c1debbaf0202b43c  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/sample_rate_negotiate.hpp  # Gate1-5 源码
+68c22ed11fdd400cce128372a7b7e35eae93d66cb3c647ada302610673198694  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/sequence_monitor.hpp  # Gate1-5 源码
+bccf83e2e9fe7904c9d74c5e155fd53170bc1900595822d2545671ac04578515  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/ui_report.hpp  # Gate1-5 源码
+83fb3d3d62b098a092d47e685df40d70cec90a4817ae5b877287635dc1584706  /f/FPGA_Work/sdr_pluto_board_integration_v1/sdr_adapter/unix_socket_sink.hpp  # Gate1-5 源码

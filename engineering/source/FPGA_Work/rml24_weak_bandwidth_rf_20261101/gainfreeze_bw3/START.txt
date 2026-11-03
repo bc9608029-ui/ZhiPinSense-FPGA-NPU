@@ -1,0 +1,3 @@
+nohup python3 /root/rml24_three_modes_execution_20261029/fpga_uii_integration_20261031/run_paired.py gainfreeze_bw3 > /root/rml24_paired_gainfreeeze_bw3.log 2>&1 < /dev/null &
+[1] 2318
+(base) root@U:~# 

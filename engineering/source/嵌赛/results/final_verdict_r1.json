@@ -1,0 +1,145 @@
+{
+  "checks": [
+    {
+      "check": "V1_model_json_sha",
+      "detail": "json sha 28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+      "ok": true
+    },
+    {
+      "check": "V1_model_raw_sha",
+      "detail": "raw sha c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+      "ok": true
+    },
+    {
+      "check": "V2_host_reproduces_collapse",
+      "detail": "Phase A: correct=1 gated=23 reject=1",
+      "ok": true
+    },
+    {
+      "check": "V3_reestimate_M0_faithful",
+      "detail": "target M0 gate_pass=23 e2e_correct=1 (board: 23 gated, 1 correct)",
+      "ok": true
+    },
+    {
+      "check": "V4_wide_linear_well_conditioned",
+      "detail": "median cond_2x2=1.105 (well-conditioned, NOT near-singular)",
+      "ok": true
+    },
+    {
+      "check": "V5_candidate_metrics_present",
+      "detail": "per-model metrics parsed",
+      "ok": true
+    },
+    {
+      "check": "V6_old_rf_session_present",
+      "detail": "old session M0 gate_pass=23",
+      "ok": true
+    }
+  ],
+  "conclusion": "With full re-estimation after DC compensation (review item 1), the tested no-oracle static/linear DC candidates improve end-to-end accuracy only marginally (M0=1/24 -> best no-oracle=2/24), which does NOT recover 24-class accuracy.  The entire gain is the re-admission of the previously gate-rejected frame(s) sid 18 (AM-SSB-WC), whose training residual drops below 0.100 under DC compensation and is then classified correctly.  20/24 frames still collapse to the two SSB classes (AM-SSB-WC/SC) under the best candidate (M0 baseline: 22/24).  The wide-linear 2x2 matrix is WELL-conditioned (median cond=1.11, |b|/|a|~0.050, bias gain ~1/|a|=32.3), retiring the earlier 'small denom = 1000x amplification' claim.  This negates ONLY the explicitly tested candidates (M1-M4 static/linear DC); it does NOT exhaust the space of category-independent no-training recovery, and does NOT establish that fine-tuning is required.",
+  "conditioning": {
+    "median_cond_2x2": 1.1052,
+    "median_inverse_gain_1_over_a": 32.26,
+    "median_ratio_b_over_a": 0.04998,
+    "replacement": "well-conditioned 2x2 (cond~1.1); bias gain ~1/|a|",
+    "retired_claim": "small denom = ill-conditioned / 1000x amplification"
+  },
+  "models_old_rf_session": {
+    "M0_baseline": {
+      "end_to_end_accuracy": 0.041666666666666664,
+      "end_to_end_correct": 1,
+      "gate_pass": 23,
+      "gated_accuracy": 0.043478260869565216
+    },
+    "M1_settle_dc": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gated_accuracy": 0.08333333333333333
+    },
+    "M2_guard_dc": {
+      "end_to_end_accuracy": 0.0,
+      "end_to_end_correct": 0,
+      "gate_pass": 0,
+      "gated_accuracy": null
+    },
+    "M3_settle_guard_avg": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gated_accuracy": 0.08333333333333333
+    },
+    "M4_linear_drift": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gated_accuracy": 0.08333333333333333
+    },
+    "M5_payload_mean_bound": {
+      "end_to_end_accuracy": 0.041666666666666664,
+      "end_to_end_correct": 1,
+      "gate_pass": 23,
+      "gated_accuracy": 0.043478260869565216
+    }
+  },
+  "models_target_session": {
+    "M0_baseline": {
+      "end_to_end_accuracy": 0.041666666666666664,
+      "end_to_end_correct": 1,
+      "gate_pass": 23,
+      "gated_accuracy": 0.043478260869565216,
+      "gated_correct": 1
+    },
+    "M1_settle_dc": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2
+    },
+    "M2_guard_dc": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 22,
+      "gated_accuracy": 0.09090909090909091,
+      "gated_correct": 2
+    },
+    "M3_settle_guard_avg": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2
+    },
+    "M4_linear_drift": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2
+    },
+    "M5_payload_mean_bound": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2
+    }
+  },
+  "recovered_frames_target_session": {
+    "best_collapse_to_ssb": 20,
+    "best_model": "M1_settle_dc",
+    "m0_collapse_to_ssb": 22,
+    "m0_correct_sids": [
+      19
+    ],
+    "newly_correct_classes": [
+      "AM-SSB-WC"
+    ],
+    "newly_correct_sids": [
+      18
+    ]
+  },
+  "scope": "Only the explicitly tested candidates (M0-M4, M5 bound) are evaluated; the conclusion is limited to them.",
+  "status": "FIX3_REVIEW_R1_STATIC_DC_MARGINAL_NO_RECOVERY"
+}

@@ -1,0 +1,18 @@
+experiment_config: configs/qam_aware_v3.yaml
+output_root: outputs/qam_aware_v3/smoke
+device: auto
+dataset:
+  train_samples: 512
+  val_samples: 256
+  test_samples: 256
+  snr_values: [-10, 0, 10]
+  num_workers: 0
+training:
+  epochs: 2
+  batch_size: 32
+  early_stopping_patience: 2
+  amp: false
+evaluation:
+  batch_size: 64
+  samples_per_modulation_per_snr: 4
+  snr_values: [-10, 0, 10]

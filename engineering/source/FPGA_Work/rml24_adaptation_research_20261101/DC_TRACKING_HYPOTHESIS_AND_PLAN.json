@@ -1,0 +1,22 @@
+{
+  "state": "DOCUMENTED_HYPOTHESIS_ONLY_NOT_TESTED_OR_INTEGRATED",
+  "hypothesis": "Receiver near-DC tracking may contribute to carrier-sensitive AM errors; investigate independently of quantization and clipping",
+  "primary_source": "https://ez.analog.com/rf/wide-band-rf-transceivers/design-support/a/documents/DO26515/ad936x_dcoffset_issue",
+  "source_summary": "ADI describes RF/baseband DC correction interacting with wanted signals near DC and potentially changing signal level and AGC response. This does not establish the current devices configuration or the cause of the observed errors.",
+  "observed_local_context": "Recovered CFO in current actual1-repeat failures is around-67 to-75Hz; AM carrier-sensitive classes are among failures. Co-occurrence is not causal proof.",
+  "no_current_device_changes": true,
+  "next_order": [
+    "Finish frozen four-round formal and queued raw IQ replay first",
+    "Read and save actual DC tracking settings and IQ rail/DC statistics without altering baseline",
+    "If justified, isolate receiver-offset tuning or tracking-control experiment with exact restoration and public-signal/frozen-model controls",
+    "Receiver offset requires wide-CFO removal or oversampling/resampling; existing direct frozen recovery is not a drop-in50kHz-CFO decoder",
+    "Ensure sample-rate/filter bandwidth supports the shifted signal, and keep signal-center vs hardware-LO/UI semantics correct",
+    "Compare all classes, nominal and weak signals; retain failures and original baseline"
+  ],
+  "cannot_claim": [
+    "Do not claim DC tracking is confirmed root cause",
+    "Do not disable tracking, calibrate radio or change LO during active formal",
+    "Do not add an RX offset then feed uncorrected IQ to the old narrow-residual-CFO recovery",
+    "Do not require a new TX frequency convention as a workaround"
+  ]
+}

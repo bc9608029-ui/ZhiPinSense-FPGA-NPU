@@ -1,0 +1,29 @@
+{
+  "runtime_before.tar.gz": {
+    "sha256": "b4fab53e1e036fe8246d5758ee02804b54d57263d81171cce79988a5ce03524b",
+    "bytes": 1837403,
+    "members": 190,
+    "tar_readable": true,
+    "single_gzip": true
+  },
+  "sd_boot_before.tar.gz": {
+    "sha256": "f4fbd761fe0e3becd6d25a470c060d1d06dfb6a2281fd067e4c494822fced900",
+    "bytes": 16219503,
+    "members": 15,
+    "tar_readable": true,
+    "single_gzip": true
+  },
+  "sd_file_hashes": {
+    "./BOOT.bin": "ff350477e624c50d2f8180fb4b9130ec7688fbc7ca553412ed7c3dd2a68b31ef",
+    "./Image": "ee88eae627df17fdf615b44cb9fc5a7a7a37d2baaa3f21e90d613f48bedf0929",
+    "./uEnv.txt": "b81563447febf35023b7c99a918bd204270518a87ea9cff169a11fbf26d1f4a9",
+    "./download.bit": "22fec95c64f3db727dd250e5768cdadec82f4c4d2de088392980b95a632932e9"
+  },
+  "runtime_identity_hashes": {
+    "root/realrf_finetune_pilot1_test_1773373090/model_rml24_bf16/rml24_adamrv11_bf16.json": "28272abc054b26a58d4fa9301b7d65cc5dc40b248abd8924d4900b8e58a14a42",
+    "root/realrf_finetune_pilot1_test_1773373090/model_rml24_bf16/rml24_adamrv11_bf16.raw": "c1781aec264f38e2cab32a23ccb3d77f30230c3a369f9b19a9234de9dc8b9151",
+    "opt/rml24-system/rml24_final/recovery/candidate_two_dc.py": "e0aa12029e9c5aa670a9340d9c078814b10dcfb0ee82c580adaad4f55affcf3a",
+    "etc/systemd/system/rml24-ui.service": "6ee4461dfae6f1b513e1ae136dc489982ab95318e6aa3b8213654a17e2b8e00e",
+    "etc/systemd/system/rml24-receiver.service": "febdfe0940585b56d6725f04fdcad1a8a71b9fd703a3a4bc5fc6493b34229c7e"
+  }
+}

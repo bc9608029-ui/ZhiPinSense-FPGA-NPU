@@ -1,0 +1,437 @@
+{
+  "scope": "Synthetic channel fidelity only, no RF or NPU classification; public head/tail context instead of per-payload circular boundary",
+  "rows": [
+    {
+      "case": 0,
+      "fractional_delay": 0,
+      "circular1024": 0.0047326540203154336,
+      "fullframe_linear_context": 0.004732697143889668
+    },
+    {
+      "case": 0,
+      "fractional_delay": 0.25,
+      "circular1024": 0.00817966017561345,
+      "fullframe_linear_context": 0.00491431583316775
+    },
+    {
+      "case": 0,
+      "fractional_delay": 0.5,
+      "circular1024": 0.026879845432376998,
+      "fullframe_linear_context": 0.008036666219186707
+    },
+    {
+      "case": 1,
+      "fractional_delay": 0,
+      "circular1024": 0.004104538880659498,
+      "fullframe_linear_context": 0.004104644615429866
+    },
+    {
+      "case": 1,
+      "fractional_delay": 0.25,
+      "circular1024": 0.008275260344809578,
+      "fullframe_linear_context": 0.004095579456320494
+    },
+    {
+      "case": 1,
+      "fractional_delay": 0.5,
+      "circular1024": 0.029536441895020284,
+      "fullframe_linear_context": 0.006591846103866016
+    },
+    {
+      "case": 2,
+      "fractional_delay": 0,
+      "circular1024": 0.003726637357983668,
+      "fullframe_linear_context": 0.003726685614250249
+    },
+    {
+      "case": 2,
+      "fractional_delay": 0.25,
+      "circular1024": 0.00702065538142788,
+      "fullframe_linear_context": 0.0038663580969797787
+    },
+    {
+      "case": 2,
+      "fractional_delay": 0.5,
+      "circular1024": 0.023246849829949384,
+      "fullframe_linear_context": 0.0065434133630675635
+    },
+    {
+      "case": 3,
+      "fractional_delay": 0,
+      "circular1024": 0.006871657804461631,
+      "fullframe_linear_context": 0.006872268697824699
+    },
+    {
+      "case": 3,
+      "fractional_delay": 0.25,
+      "circular1024": 0.013718086106156744,
+      "fullframe_linear_context": 0.00723621015547128
+    },
+    {
+      "case": 3,
+      "fractional_delay": 0.5,
+      "circular1024": 0.040424530970251775,
+      "fullframe_linear_context": 0.01109015063892749
+    },
+    {
+      "case": 4,
+      "fractional_delay": 0,
+      "circular1024": 0.0070154675533811,
+      "fullframe_linear_context": 0.007016291013054133
+    },
+    {
+      "case": 4,
+      "fractional_delay": 0.25,
+      "circular1024": 0.012292908656711926,
+      "fullframe_linear_context": 0.007151171447927873
+    },
+    {
+      "case": 4,
+      "fractional_delay": 0.5,
+      "circular1024": 0.03871099303026955,
+      "fullframe_linear_context": 0.011242101688710539
+    },
+    {
+      "case": 5,
+      "fractional_delay": 0,
+      "circular1024": 0.007359897536984766,
+      "fullframe_linear_context": 0.007361599197750601
+    },
+    {
+      "case": 5,
+      "fractional_delay": 0.25,
+      "circular1024": 0.013390980563364342,
+      "fullframe_linear_context": 0.007221082716843335
+    },
+    {
+      "case": 5,
+      "fractional_delay": 0.5,
+      "circular1024": 0.04853363335178934,
+      "fullframe_linear_context": 0.010942373723936126
+    },
+    {
+      "case": 6,
+      "fractional_delay": 0,
+      "circular1024": 0.007113360185606659,
+      "fullframe_linear_context": 0.007112796367755192
+    },
+    {
+      "case": 6,
+      "fractional_delay": 0.25,
+      "circular1024": 0.012898647393335148,
+      "fullframe_linear_context": 0.007298267785059886
+    },
+    {
+      "case": 6,
+      "fractional_delay": 0.5,
+      "circular1024": 0.042893412000088046,
+      "fullframe_linear_context": 0.011109119532818902
+    },
+    {
+      "case": 7,
+      "fractional_delay": 0,
+      "circular1024": 0.006988943428975301,
+      "fullframe_linear_context": 0.006989549028538806
+    },
+    {
+      "case": 7,
+      "fractional_delay": 0.25,
+      "circular1024": 0.012210709267974502,
+      "fullframe_linear_context": 0.007430274350867945
+    },
+    {
+      "case": 7,
+      "fractional_delay": 0.5,
+      "circular1024": 0.031577405191456354,
+      "fullframe_linear_context": 0.010770797496708038
+    },
+    {
+      "case": 8,
+      "fractional_delay": 0,
+      "circular1024": 0.007299270563131598,
+      "fullframe_linear_context": 0.00729884324824019
+    },
+    {
+      "case": 8,
+      "fractional_delay": 0.25,
+      "circular1024": 0.011699595646022753,
+      "fullframe_linear_context": 0.007343457553258599
+    },
+    {
+      "case": 8,
+      "fractional_delay": 0.5,
+      "circular1024": 0.033749215881239886,
+      "fullframe_linear_context": 0.010345488095785508
+    },
+    {
+      "case": 9,
+      "fractional_delay": 0,
+      "circular1024": 0.0069332022594396575,
+      "fullframe_linear_context": 0.00693368255610959
+    },
+    {
+      "case": 9,
+      "fractional_delay": 0.25,
+      "circular1024": 0.01270586460430809,
+      "fullframe_linear_context": 0.007282858599408175
+    },
+    {
+      "case": 9,
+      "fractional_delay": 0.5,
+      "circular1024": 0.046685918236436384,
+      "fullframe_linear_context": 0.011366666201112378
+    },
+    {
+      "case": 10,
+      "fractional_delay": 0,
+      "circular1024": 0.007108914211304684,
+      "fullframe_linear_context": 0.007109979748820779
+    },
+    {
+      "case": 10,
+      "fractional_delay": 0.25,
+      "circular1024": 0.012454641872788066,
+      "fullframe_linear_context": 0.007261640973781724
+    },
+    {
+      "case": 10,
+      "fractional_delay": 0.5,
+      "circular1024": 0.04026278008683429,
+      "fullframe_linear_context": 0.011273250390592906
+    },
+    {
+      "case": 11,
+      "fractional_delay": 0,
+      "circular1024": 0.006933784112851907,
+      "fullframe_linear_context": 0.0069333589395704906
+    },
+    {
+      "case": 11,
+      "fractional_delay": 0.25,
+      "circular1024": 0.01233985177532451,
+      "fullframe_linear_context": 0.007420910401206916
+    },
+    {
+      "case": 11,
+      "fractional_delay": 0.5,
+      "circular1024": 0.04240398230799456,
+      "fullframe_linear_context": 0.011653173778146852
+    },
+    {
+      "case": 12,
+      "fractional_delay": 0,
+      "circular1024": 0.0072135808929400325,
+      "fullframe_linear_context": 0.0072131627672349105
+    },
+    {
+      "case": 12,
+      "fractional_delay": 0.25,
+      "circular1024": 0.01343116930607792,
+      "fullframe_linear_context": 0.007217119988404995
+    },
+    {
+      "case": 12,
+      "fractional_delay": 0.5,
+      "circular1024": 0.03349580326553477,
+      "fullframe_linear_context": 0.010599984713445528
+    },
+    {
+      "case": 13,
+      "fractional_delay": 0,
+      "circular1024": 0.006973092783248548,
+      "fullframe_linear_context": 0.006973137297042857
+    },
+    {
+      "case": 13,
+      "fractional_delay": 0.25,
+      "circular1024": 0.01211186726803229,
+      "fullframe_linear_context": 0.007107333257326606
+    },
+    {
+      "case": 13,
+      "fractional_delay": 0.5,
+      "circular1024": 0.04212700538527976,
+      "fullframe_linear_context": 0.011296992082783884
+    },
+    {
+      "case": 14,
+      "fractional_delay": 0,
+      "circular1024": 0.007137365284973274,
+      "fullframe_linear_context": 0.007136740325539392
+    },
+    {
+      "case": 14,
+      "fractional_delay": 0.25,
+      "circular1024": 0.013385160909263054,
+      "fullframe_linear_context": 0.007320315243835281
+    },
+    {
+      "case": 14,
+      "fractional_delay": 0.5,
+      "circular1024": 0.047701154245462826,
+      "fullframe_linear_context": 0.011849936382020759
+    },
+    {
+      "case": 15,
+      "fractional_delay": 0,
+      "circular1024": 0.007210932478903439,
+      "fullframe_linear_context": 0.007210848272452407
+    },
+    {
+      "case": 15,
+      "fractional_delay": 0.25,
+      "circular1024": 0.011774021910826294,
+      "fullframe_linear_context": 0.007443196469284966
+    },
+    {
+      "case": 15,
+      "fractional_delay": 0.5,
+      "circular1024": 0.03823853116067584,
+      "fullframe_linear_context": 0.010480229238532797
+    },
+    {
+      "case": 16,
+      "fractional_delay": 0,
+      "circular1024": 0.007280857238775014,
+      "fullframe_linear_context": 0.0072801581173763
+    },
+    {
+      "case": 16,
+      "fractional_delay": 0.25,
+      "circular1024": 0.012543217072100949,
+      "fullframe_linear_context": 0.007347111299399064
+    },
+    {
+      "case": 16,
+      "fractional_delay": 0.5,
+      "circular1024": 0.04290092104780285,
+      "fullframe_linear_context": 0.01088210892115931
+    },
+    {
+      "case": 17,
+      "fractional_delay": 0,
+      "circular1024": 0.0006620028376390678,
+      "fullframe_linear_context": 0.0006602855945702839
+    },
+    {
+      "case": 17,
+      "fractional_delay": 0.25,
+      "circular1024": 0.010724314416574253,
+      "fullframe_linear_context": 0.0010115109906932136
+    },
+    {
+      "case": 17,
+      "fractional_delay": 0.5,
+      "circular1024": 0.04687483905935379,
+      "fullframe_linear_context": 0.0010310775924267774
+    },
+    {
+      "case": 18,
+      "fractional_delay": 0,
+      "circular1024": 0.00104145391194079,
+      "fullframe_linear_context": 0.0010410027081496768
+    },
+    {
+      "case": 18,
+      "fractional_delay": 0.25,
+      "circular1024": 0.005562476847965391,
+      "fullframe_linear_context": 0.0010341699507966015
+    },
+    {
+      "case": 18,
+      "fractional_delay": 0.5,
+      "circular1024": 0.024298333963846012,
+      "fullframe_linear_context": 0.0015491802560482029
+    },
+    {
+      "case": 19,
+      "fractional_delay": 0,
+      "circular1024": 0.00730209794709075,
+      "fullframe_linear_context": 0.007300514634645497
+    },
+    {
+      "case": 19,
+      "fractional_delay": 0.25,
+      "circular1024": 0.019635449171154822,
+      "fullframe_linear_context": 0.007359386653648692
+    },
+    {
+      "case": 19,
+      "fractional_delay": 0.5,
+      "circular1024": 0.07741443412082182,
+      "fullframe_linear_context": 0.010342661840180128
+    },
+    {
+      "case": 20,
+      "fractional_delay": 0,
+      "circular1024": 0.0070311339305632325,
+      "fullframe_linear_context": 0.007029437380029937
+    },
+    {
+      "case": 20,
+      "fractional_delay": 0.25,
+      "circular1024": 0.018439270009469724,
+      "fullframe_linear_context": 0.00736799272007118
+    },
+    {
+      "case": 20,
+      "fractional_delay": 0.5,
+      "circular1024": 0.07497553379183998,
+      "fullframe_linear_context": 0.010659429130208897
+    },
+    {
+      "case": 21,
+      "fractional_delay": 0,
+      "circular1024": 0.007128223309906718,
+      "fullframe_linear_context": 0.007126737948234042
+    },
+    {
+      "case": 21,
+      "fractional_delay": 0.25,
+      "circular1024": 0.018867472996141325,
+      "fullframe_linear_context": 0.007356891955002568
+    },
+    {
+      "case": 21,
+      "fractional_delay": 0.5,
+      "circular1024": 0.07475677422176925,
+      "fullframe_linear_context": 0.01130033330840223
+    },
+    {
+      "case": 22,
+      "fractional_delay": 0,
+      "circular1024": 0.007026843085787683,
+      "fullframe_linear_context": 0.007027963051344224
+    },
+    {
+      "case": 22,
+      "fractional_delay": 0.25,
+      "circular1024": 0.017780468005498467,
+      "fullframe_linear_context": 0.007301816561598997
+    },
+    {
+      "case": 22,
+      "fractional_delay": 0.5,
+      "circular1024": 0.06906301677892465,
+      "fullframe_linear_context": 0.010992649809227505
+    },
+    {
+      "case": 23,
+      "fractional_delay": 0,
+      "circular1024": 0.007091141987556445,
+      "fullframe_linear_context": 0.007091793370299679
+    },
+    {
+      "case": 23,
+      "fractional_delay": 0.25,
+      "circular1024": 0.012412635015533,
+      "fullframe_linear_context": 0.007309447111342924
+    },
+    {
+      "case": 23,
+      "fractional_delay": 0.5,
+      "circular1024": 0.040255467467651435,
+      "fullframe_linear_context": 0.010938193766138662
+    }
+  ]
+}

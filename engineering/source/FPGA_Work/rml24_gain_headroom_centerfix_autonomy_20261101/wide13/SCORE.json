@@ -1,0 +1,116 @@
+{
+  "name": "wide13",
+  "denominator": 13,
+  "correct": 13,
+  "missing": 0,
+  "minimum_correct": 13,
+  "clock_drift_ns": -1347680,
+  "rows": [
+    {
+      "index": 0,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 120,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 1,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 143,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 2,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 165,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 3,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 188,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 4,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 211,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 5,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 233,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 6,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 256,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 7,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 279,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 8,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 298,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 9,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 312,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 10,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 335,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 11,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 358,
+      "correct": true,
+      "missing": false
+    },
+    {
+      "index": 12,
+      "expected": 3,
+      "pred": 3,
+      "chosen_frame": 380,
+      "correct": true,
+      "missing": false
+    }
+  ],
+  "candidate_identity_sha256": "bf43d2c52a3d06831496e76d51b7acff7505dc2edb64871008a1043af718a753",
+  "gate_pass": true
+}

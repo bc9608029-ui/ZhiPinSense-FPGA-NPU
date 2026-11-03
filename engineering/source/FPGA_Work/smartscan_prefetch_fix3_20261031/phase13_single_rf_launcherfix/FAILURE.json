@@ -1,0 +1,1 @@
+{"error": "Traceback (most recent call last):\n  File \"E:\\FPGA_Work\\smartscan_prefetch_fix3_20261031\\phase13_single_rf_launcherfix\\continue_device.py\", line 35, in <module>\n    assert 'PL_USERS_STOPPED' in s.splitlines() and 'NPU_OCCUPIED' not in s.splitlines()\nAssertionError\n", "board_evidence": "/root/rml24_fix3_1793431613"}

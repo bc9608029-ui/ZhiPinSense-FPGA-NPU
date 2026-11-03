@@ -1,0 +1,59 @@
+{
+  "token": "M29-RML24-REALRF-TRAINABILITY-AUDIT1-INVENTORY",
+  "n_source_waveforms": 24,
+  "n_unique_source_sha_total": 24,
+  "source_ids": [
+    "fix1v2-waveform-corrected-24waveforms"
+  ],
+  "waveform_versions": [
+    "v2"
+  ],
+  "n_real_rf_sessions": 2,
+  "per_session": {
+    "rf_fix2_target": {
+      "n_frames": 24,
+      "n_unique_sources": 24,
+      "dup_tensor": 0,
+      "classes": 24,
+      "gate_pass": 23,
+      "correct": 1
+    },
+    "rf_independent_v2": {
+      "n_frames": 24,
+      "n_unique_sources": 24,
+      "dup_tensor": 0,
+      "classes": 24,
+      "gate_pass": 0,
+      "correct": 0
+    },
+    "digital_fix2_v2": {
+      "n_frames": 24,
+      "n_unique_sources": 24,
+      "dup_tensor": 0,
+      "classes": 24,
+      "gate_pass": 24,
+      "correct": 23
+    },
+    "digital_independent_v2": {
+      "n_frames": 24,
+      "n_unique_sources": 24,
+      "dup_tensor": 1,
+      "classes": 24,
+      "gate_pass": 24,
+      "correct": 23
+    }
+  },
+  "cross_session_source_overlap": {
+    "rf_fix2_target|rf_independent_v2": 24,
+    "rf_fix2_target|digital_fix2_v2": 24,
+    "rf_fix2_target|digital_independent_v2": 24,
+    "rf_independent_v2|digital_fix2_v2": 24,
+    "rf_independent_v2|digital_independent_v2": 24,
+    "digital_fix2_v2|digital_independent_v2": 24
+  },
+  "same_24_source_waveforms_repeated_across_sessions": true,
+  "duplicate_tensor_sha_count": 1,
+  "sufficiency": "CURRENT_DATA_INSUFFICIENT_FOR_FINAL_FINETUNING",
+  "leakage_check": "TRAIN_VAL_TEST_SPLIT_IMPOSSIBLE",
+  "n_sessions_needed_for_final": 5
+}

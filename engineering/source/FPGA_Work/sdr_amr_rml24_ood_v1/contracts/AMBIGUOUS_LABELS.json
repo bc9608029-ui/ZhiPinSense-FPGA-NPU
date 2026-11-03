@@ -1,0 +1,10 @@
+{
+  "description": "near-equivalent modulation names across the 12-class and 24-class orders; treated as AMBIGUOUS and excluded from the main OOD metrics (never counted as known)",
+  "pairs": [
+    {"name_12": "WBFM", "name_24": "FM", "note": "wideband vs narrowband FM"},
+    {"name_12": "GFSK", "name_24": "GMSK", "note": "Gaussian-shaped FSK/MSK"},
+    {"name_12": "2FSK", "name_24": "GMSK", "note": "2-level FSK vs Gaussian MSK"},
+    {"name_12": "AM-DSB", "name_24": "AM-DSB-WC", "note": "generic DSB vs with-carrier"},
+    {"name_12": "AM-DSB", "name_24": "AM-DSB-SC", "note": "generic DSB vs suppressed-carrier"}
+  ]
+}

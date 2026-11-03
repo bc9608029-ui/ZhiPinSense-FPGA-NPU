@@ -1,0 +1,173 @@
+{
+  "kind": "MULTIFREQUENCY_SWEEP_SHORT_NOT_FORMAL_ACCURACY",
+  "phases": [
+    {
+      "phase": "silence",
+      "records": 33,
+      "valid": 0,
+      "main_groups": [
+        {
+          "label": 3,
+          "center_hz": 2400000000,
+          "captures": 0,
+          "correct": 0,
+          "first_latency_sec": null
+        },
+        {
+          "label": 9,
+          "center_hz": 2403600000,
+          "captures": 0,
+          "correct": 0,
+          "first_latency_sec": null
+        }
+      ],
+      "extra_valid": []
+    },
+    {
+      "phase": "a_only",
+      "records": 23,
+      "valid": 6,
+      "main_groups": [
+        {
+          "label": 3,
+          "center_hz": 2400000000,
+          "captures": 6,
+          "correct": 6,
+          "first_latency_sec": 6.051570272
+        },
+        {
+          "label": 9,
+          "center_hz": 2403600000,
+          "captures": 0,
+          "correct": 0,
+          "first_latency_sec": null
+        }
+      ],
+      "extra_valid": []
+    },
+    {
+      "phase": "b_only",
+      "records": 24,
+      "valid": 4,
+      "main_groups": [
+        {
+          "label": 3,
+          "center_hz": 2400000000,
+          "captures": 0,
+          "correct": 0,
+          "first_latency_sec": null
+        },
+        {
+          "label": 9,
+          "center_hz": 2403600000,
+          "captures": 4,
+          "correct": 4,
+          "first_latency_sec": 11.882509662
+        }
+      ],
+      "extra_valid": []
+    },
+    {
+      "phase": "both",
+      "records": 20,
+      "valid": 9,
+      "main_groups": [
+        {
+          "label": 3,
+          "center_hz": 2400000000,
+          "captures": 5,
+          "correct": 5,
+          "first_latency_sec": 22.234928842
+        },
+        {
+          "label": 9,
+          "center_hz": 2403600000,
+          "captures": 4,
+          "correct": 4,
+          "first_latency_sec": 4.294233882
+        }
+      ],
+      "extra_valid": []
+    },
+    {
+      "phase": "a_only",
+      "records": 23,
+      "valid": 6,
+      "main_groups": [
+        {
+          "label": 3,
+          "center_hz": 2400000000,
+          "captures": 6,
+          "correct": 6,
+          "first_latency_sec": 21.405269212
+        },
+        {
+          "label": 9,
+          "center_hz": 2403600000,
+          "captures": 0,
+          "correct": 0,
+          "first_latency_sec": null
+        }
+      ],
+      "extra_valid": []
+    },
+    {
+      "phase": "silence",
+      "records": 32,
+      "valid": 0,
+      "main_groups": [
+        {
+          "label": 3,
+          "center_hz": 2400000000,
+          "captures": 0,
+          "correct": 0,
+          "first_latency_sec": null
+        },
+        {
+          "label": 9,
+          "center_hz": 2403600000,
+          "captures": 0,
+          "correct": 0,
+          "first_latency_sec": null
+        }
+      ],
+      "extra_valid": []
+    }
+  ],
+  "final": {
+    "valid": 26,
+    "rejected": 171,
+    "records": 197,
+    "no_tcp": true,
+    "no_tx_handshake": true,
+    "restore_errors": [],
+    "ui_sent": 224,
+    "ui_failed": 0
+  },
+  "supervisor": {
+    "mode": "CONTINUOUS_SCAN",
+    "rf_tx": false,
+    "candidate_only": true,
+    "normal_npu_eof_before_rx_reap": true,
+    "stop_errors": [],
+    "rx_restore": [],
+    "clean_stop": true
+  },
+  "npu_stop": [
+    "NPU_STREAM_STOP frames=208 apply=1 reset=207 discipline=1"
+  ],
+  "history": "RML24_HISTORY_V1\n1773379480 1773379715 2399999957 18 2 3 1 23 2.54366569e-13 4 3.03797548e-14\n1773379547 1773379636 2403599959 8 2 9 1 11 1.58939098e-10 13 1.15135098e-11\n",
+  "full_cycle_sec": {
+    "min": 19.46005703,
+    "median": 26.58081533,
+    "max": 32.01046366
+  },
+  "tx_restore_ok": {
+    "tx.hardwaregain": true,
+    "tx.sampling_frequency": true,
+    "tx.rf_bandwidth": true,
+    "tlo.frequency": true,
+    "tlo.powerdown": true
+  },
+  "tx_restore_errors": []
+}

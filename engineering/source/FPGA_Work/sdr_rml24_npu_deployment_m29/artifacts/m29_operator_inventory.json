@@ -1,0 +1,228 @@
+{
+  "operator_policy": "Conv/BatchNorm/Relu/Add/ReduceMean/Gemm only",
+  "parameter_count": 280584,
+  "operators": {
+    "Conv1d": {
+      "count": 28,
+      "bias": false,
+      "shapes_in_out_k_stride": [
+        [
+          2,
+          24,
+          7,
+          1
+        ],
+        [
+          24,
+          24,
+          5,
+          1
+        ],
+        [
+          24,
+          24,
+          3,
+          1
+        ],
+        [
+          24,
+          24,
+          5,
+          1
+        ],
+        [
+          24,
+          24,
+          3,
+          1
+        ],
+        [
+          24,
+          24,
+          5,
+          1
+        ],
+        [
+          24,
+          24,
+          3,
+          1
+        ],
+        [
+          24,
+          2,
+          5,
+          1
+        ],
+        [
+          2,
+          32,
+          5,
+          2
+        ],
+        [
+          32,
+          32,
+          3,
+          1
+        ],
+        [
+          2,
+          32,
+          1,
+          2
+        ],
+        [
+          32,
+          32,
+          5,
+          1
+        ],
+        [
+          32,
+          32,
+          3,
+          1
+        ],
+        [
+          32,
+          48,
+          5,
+          2
+        ],
+        [
+          48,
+          48,
+          3,
+          1
+        ],
+        [
+          32,
+          48,
+          1,
+          2
+        ],
+        [
+          48,
+          48,
+          5,
+          1
+        ],
+        [
+          48,
+          48,
+          3,
+          1
+        ],
+        [
+          48,
+          64,
+          5,
+          2
+        ],
+        [
+          64,
+          64,
+          3,
+          1
+        ],
+        [
+          48,
+          64,
+          1,
+          2
+        ],
+        [
+          64,
+          64,
+          5,
+          1
+        ],
+        [
+          64,
+          64,
+          3,
+          1
+        ],
+        [
+          64,
+          96,
+          5,
+          2
+        ],
+        [
+          96,
+          96,
+          3,
+          1
+        ],
+        [
+          64,
+          96,
+          1,
+          2
+        ],
+        [
+          96,
+          96,
+          5,
+          1
+        ],
+        [
+          96,
+          96,
+          3,
+          1
+        ]
+      ]
+    },
+    "BatchNorm1d": {
+      "count": 27
+    },
+    "ReLU": {
+      "count": 24,
+      "note": "graph-level ops (2 per ResidualUnit + stem + classifier); 13 nn.ReLU modules"
+    },
+    "Linear": {
+      "count": 2,
+      "shapes_in_out": [
+        [
+          96,
+          128
+        ],
+        [
+          128,
+          24
+        ]
+      ]
+    },
+    "Dropout": {
+      "count": 1,
+      "note": "identity at eval/export"
+    },
+    "Add_residual": {
+      "count": 12,
+      "note": "residual-unit adds (n_residual_units) + denoiser iq+correction"
+    },
+    "ReduceMean": {
+      "count": 1,
+      "note": "features.mean(dim=-1) over length"
+    }
+  },
+  "architecture": {
+    "denoiser": "stem Conv1d(2->24,k7,p3)+BN+ReLU; 3x ResidualUnit(24,24); correction Conv1d(24->2,k5,p2); out=iq+correction",
+    "features": "4 stages x [ResidualUnit(stride2) + ResidualUnit(stride1)], channels [32,48,64,96]; mean over length",
+    "classifier": "Linear(96->128)+ReLU+Dropout(0.15)+Linear(128->24)",
+    "activation": "ReLU only (no softmax)",
+    "feature_channels": [
+      32,
+      48,
+      64,
+      96
+    ],
+    "denoiser_channels": 24,
+    "denoiser_blocks": 3,
+    "classifier_hidden": 128,
+    "dropout": 0.15
+  }
+}

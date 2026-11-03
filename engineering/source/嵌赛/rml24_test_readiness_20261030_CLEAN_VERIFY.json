@@ -1,0 +1,26 @@
+[
+  {
+    "file": "rml24_test_readiness_20261030_pc.zip",
+    "unpack_sha": "PASS",
+    "clean_entry_preflight": {
+      "package_identity": "PASS",
+      "target_dependencies": "NOT_CHECKED",
+      "arch": "AMD64",
+      "free_bytes": 864606224384,
+      "device_test_performed": false,
+      "rf_authorized_by_this_check": false
+    }
+  },
+  {
+    "file": "rml24_test_readiness_20261030_board.zip",
+    "unpack_sha": "PASS",
+    "clean_entry_preflight": {
+      "package_identity": "PASS",
+      "target_dependencies": "NOT_CHECKED",
+      "arch": "AMD64",
+      "free_bytes": 864669925376,
+      "device_test_performed": false,
+      "rf_authorized_by_this_check": false
+    }
+  }
+]

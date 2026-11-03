@@ -1,0 +1,108 @@
+================================================================================
+ M29 RML23 Stage H-E / Route E — 同设备调制 IQ 数字回环 — fix1 打包勘误交付
+================================================================================
+状态: M29-RML23-IQ-DIGITAL-LOOPBACK-READY-FOR-BOARD-TEST
+      （最高允许状态不变；fix1 仅修复打包源选择/基线覆盖缺陷，本轮未碰板、未训练、
+       未写任何 *_PASS / PROJECT_COMPLETE / FINAL_*；未把
+       DIGITAL_LOOPBACK_CAPABILITY_NOT_PROVEN / RF_LEAKAGE_NOT_PROVEN 改 PROVEN；
+       未判分类通过 / 项目完成）
+
+本交付修复首次合并全量包 2d8b8bab… 的板端编译失败（synthetic_iq_runner.hpp 被静默
+回退到 route-D 基线，缺 RawRxOutput::{iq,pushed_complex,quant_scale}）。旧错误包
+2d8b8babd8a351264a92184c7b388e23936c1a9dfc494c55e509423ab1920c00 原样保留、不覆盖。
+
+--------------------------------------------------------------------------------
+ 根因（审计详见 docs/M29_RML23_STAGE_H_E_IQ_DIGITAL_LOOPBACK_FIX1_AUDIT.md）
+--------------------------------------------------------------------------------
+scripts/package_iq_digital_loopback.py 的 ROUTE_E_FILES 漏列
+board_package/synthetic_iq_runner.hpp。该头在 Route C 持久化增量中已改（新增三字段），
+但打包器未枚举，合并全量包 = copytree(route_d 基线) + 覆盖 ROUTE_E_FILES，导致该头
+停留在 route-D 基线旧版，与已在清单内、引用新字段的
+board_gate9_full_chain_rml23.cpp 错配。
+
+--------------------------------------------------------------------------------
+ 修复（非手工替换 tar，改打包器 + 加编译期护栏）
+--------------------------------------------------------------------------------
+1. ROUTE_E_FILES 显式加入 board_package/synthetic_iq_runner.hpp（MODIFIED）。
+2. 新增 host_tests/test_route_e_raw_rx_output_fields.cpp，编译期直接访问
+   RawRxOutput::iq / ::pushed_complex / ::quant_scale —— 若再漏包/回退该头，此测试
+   编译失败（即本次缺陷的失效模式），把「漏包」从板端运行时错误提前到 host 编译期。
+3. 打包器新增 audit_dependency_closure()：对 ROUTE_E_FILES 全部 C/C++ 文件做传递
+   #include 闭包扫描，凡解析出的头与 route-D 基线逐字节不同、或基线中不存在，却不在
+   ROUTE_E_FILES 里，立即 fail-closed 终止打包并列出遗漏文件。
+
+--------------------------------------------------------------------------------
+ 两份最终工件（均含 SHA256SUMS manifest，已独立解包 sha256sum -c 校验通过）
+--------------------------------------------------------------------------------
+
+[DIFF] Route E fix1 独立补丁（15 文件，相对 route_d 5a4c4d3a… 基线）
+    dist/sdr_rml23_live_iq_digital_loopback_fix1_patch.tar.gz
+      73757 字节  sha256 c6650a4cd795e922837d765dc5882f17f1b246639144cf1cd892b4459793b163
+      manifest: IQ_DIGITAL_LOOPBACK_FIX1_PATCH_SHA256SUMS.txt  (15 内容)
+      校验: sha256sum -c  => 15 OK / 0 FAIL
+
+[MERGE] fix1 合并全量板端测试包（route_d 基线 + Route E fix1）
+    dist/sdr_rml23_live_board_package_iq_digital_loopback_fix1.tar.gz
+      3708521 字节  sha256 3b925f3be82463b6acb9c3f924c8ea4dcebe949909c513791491f543f9d02ac8
+      manifest: sdr_rml23_live_board_package_iq_digital_loopback_fix1.SHA256SUMS.txt (523 内容)
+      校验: sha256sum -c  => 523 OK / 0 FAIL
+
+  确定性: package_iq_digital_loopback.py 固定 uid/gid=0、mtime=0、GNU tar、gzip mtime=0；
+          .sh/.py 保留可执行位。
+  历史包未覆盖: 旧错误包 2d8b8bab…、旧 patch 29946764…、route_d 5a4c4d3a…、
+                synthetic_iq 6c3258a7…、A/B/C 补丁 1158dbfd… 及更早历史包原样保留。
+
+--------------------------------------------------------------------------------
+ 文件差异证明（fix1 全量包 vs route_d 5a4c4d3a… 基线，全量递归）
+--------------------------------------------------------------------------------
+模型 / 标签 / golden / 预处理契约 / RTL / XDC / 位流 / Flash 全部未变化。
+
+  新增（9）:
+    board_package/iq_digital_loopback.hpp
+    board_package/iq_digital_loopback_runner.hpp
+    host_tests/test_iq_digital_loopback.cpp
+    host_tests/test_route_e_raw_rx_output_fields.cpp
+    scripts/analyze_iq_digital_loopback.py
+    scripts/package_iq_digital_loopback.py
+    docs/M29_RML23_STAGE_H_E_IQ_DIGITAL_LOOPBACK_AUDIT.md
+    docs/M29_RML23_STAGE_H_E_IQ_DIGITAL_LOOPBACK_FIX1_AUDIT.md
+    docs/M29_RML23_STAGE_H_E_IQ_DIGITAL_LOOPBACK_VERDICT_TEMPLATE.md
+
+  修改（6，均为 .cpp/.hpp/.sh，无模型/数据）:
+    board_package/board_gate9_full_chain_rml23.cpp
+    board_package/gate9_phase.hpp
+    board_package/synthetic_iq_runner.hpp          <-- fix1 补回的遗漏文件
+    host_tests/build_host_tests.sh
+    host_tests/run_tests.sh
+    scripts/run_gate9_rml23.sh
+
+  （另 SHA256SUMS.txt 为重新生成的 manifest，非内容文件。）
+
+--------------------------------------------------------------------------------
+ 离线验证（本轮从「解包目录」执行，未碰板）
+--------------------------------------------------------------------------------
+  1. 新合并全量包独立解包后 sha256sum -c SHA256SUMS.txt => 523 OK / 0 FAIL（exit 0）。
+     补丁独立解包 sha256sum -c => 15 OK / 0 FAIL（exit 0）。
+  2. 工作树与解包产物逐字节一致（cmp）—— 4 个关键 Route E 文件：
+       board_package/synthetic_iq_runner.hpp           IDENTICAL
+       board_package/board_gate9_full_chain_rml23.cpp  IDENTICAL
+       board_package/iq_digital_loopback.hpp           IDENTICAL
+       board_package/iq_digital_loopback_runner.hpp    IDENTICAL
+  3. host 全套件（build_host_tests.sh 46 目标 + run_tests.sh 全量，含新增
+     test_route_e_raw_rx_output_fields 12/12 PASS，及 test_iq_digital_loopback 75/75、
+     test_synthetic_iq_roundtrip 48/48）=> ALL HOST TESTS PASSED。
+  4. 板端等价构建（host_tests/syntax_check.sh，iCraft 3.39 头，-fsyntax-only
+     -Wall -Wextra -Werror）对包内 board_package 编译 board_gate9_full_chain_rml23.cpp
+     （与包内 synthetic_iq_runner.hpp 一起）=> gate9_rml23: syntax OK
+     （gate7/gate9/gate10 亦 syntax OK）。证明包内头与 .cpp 一起可编译，不再缺字段。
+
+  host 自洽全绿 ≠ 板端判定；回环保真与 RF 泄漏只能由用户上板观测（我禁碰板、禁训练）。
+  板端复测建议不变（两类分别跑，判决填 verdict 模板）:
+    run_gate9_rml23.sh --phase=iq-digital-loopback --input-kind=generated-2p56m \
+        --frozen-dir DIR
+    run_gate9_rml23.sh --phase=iq-digital-loopback \
+        --input-kind=radioml-reconstructed-2p56m --frozen-dir DIR
+  随后 host 独立复核:
+    python -I scripts/analyze_iq_digital_loopback.py --log <producer stdout> \
+        --frozen-dir DIR --input-kind <kind> --json out.json
+================================================================================

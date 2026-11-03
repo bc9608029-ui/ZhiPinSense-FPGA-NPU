@@ -1,0 +1,150 @@
+{
+  "old_rf_session": {
+    "C1_settle_dc_constant": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "T0_baseline": {
+      "end_to_end_accuracy": 0.041666666666666664,
+      "end_to_end_correct": 1,
+      "gate_pass": 23,
+      "gate_pass_frac": 0.9583333333333334,
+      "gated_accuracy": 0.043478260869565216,
+      "gated_correct": 1,
+      "n": 24
+    },
+    "T1_blockwise_linear": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "T2_exp_transient": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "T3_hermite": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "T4_kalman": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "T5_kalman_crossframe": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "T6_best_alternate": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    }
+  },
+  "rf_fix2_target": {
+    "C1_settle_dc_constant": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "T0_baseline": {
+      "end_to_end_accuracy": 0.041666666666666664,
+      "end_to_end_correct": 1,
+      "gate_pass": 23,
+      "gate_pass_frac": 0.9583333333333334,
+      "gated_accuracy": 0.043478260869565216,
+      "gated_correct": 1,
+      "n": 24
+    },
+    "T1_blockwise_linear": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "T2_exp_transient": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "T3_hermite": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "T4_kalman": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "T5_kalman_crossframe": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    },
+    "T6_best_alternate": {
+      "end_to_end_accuracy": 0.08333333333333333,
+      "end_to_end_correct": 2,
+      "gate_pass": 24,
+      "gate_pass_frac": 1.0,
+      "gated_accuracy": 0.08333333333333333,
+      "gated_correct": 2,
+      "n": 24
+    }
+  }
+}

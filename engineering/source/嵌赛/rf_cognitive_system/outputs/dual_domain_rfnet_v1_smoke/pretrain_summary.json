@@ -1,0 +1,122 @@
+{
+  "status": "preparation_only_no_formal_training",
+  "baseline_contract_verified": true,
+  "formal_data": {
+    "train_samples": 25200,
+    "validation_samples": 5040,
+    "test_samples": 8400,
+    "snr_values": [
+      -20,
+      -18,
+      -16,
+      -14,
+      -12,
+      -10,
+      -8,
+      -6,
+      -4,
+      -2,
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "seed": 2026,
+    "epochs_max": 40
+  },
+  "smoke_data": {
+    "train_samples": 672,
+    "validation_samples": 336,
+    "test_samples": 336,
+    "epochs": 2
+  },
+  "variants": {
+    "time_only": {
+      "formal_model_profile": {
+        "parameters": 36232,
+        "trainable_parameters": 36232,
+        "parameter_size_mb_fp32": 0.138214111328125,
+        "persistent_state_size_mb": 0.14058685302734375,
+        "serialized_state_dict_mb": 0.15541934967041016,
+        "approx_macs": 4837888,
+        "approx_flops": 9675776,
+        "cpu_latency_ms_untrained": 0.5812600000012935,
+        "cpu_batch128_throughput_untrained": 24587.581734474545
+      },
+      "smoke": {
+        "epochs": 2,
+        "training_time_sec": 3.6702373000000534,
+        "overall_accuracy_not_for_comparison": 0.125,
+        "macro_f1_not_for_comparison": 0.03626373626373626
+      },
+      "onnx_checker_passed": true,
+      "smoke_onnx_size_mib": 0.03975391387939453,
+      "estimated_formal_cpu_training_minutes": [
+        40,
+        50
+      ]
+    },
+    "frequency_only": {
+      "formal_model_profile": {
+        "parameters": 36120,
+        "trainable_parameters": 36120,
+        "parameter_size_mb_fp32": 0.137786865234375,
+        "persistent_state_size_mb": 0.6401596069335938,
+        "serialized_state_dict_mb": 0.6559629440307617,
+        "approx_macs": 2247168,
+        "approx_flops": 4494336,
+        "cpu_latency_ms_untrained": 0.5759429999989152,
+        "cpu_batch128_throughput_untrained": 29243.77427462067
+      },
+      "smoke": {
+        "epochs": 2,
+        "training_time_sec": 3.2669729000000416,
+        "overall_accuracy_not_for_comparison": 0.13095238095238096,
+        "macro_f1_not_for_comparison": 0.05842139679630372
+      },
+      "onnx_checker_passed": true,
+      "smoke_onnx_size_mib": 0.5463666915893555,
+      "estimated_formal_cpu_training_minutes": [
+        38,
+        48
+      ]
+    },
+    "dual_domain": {
+      "formal_model_profile": {
+        "parameters": 71768,
+        "trainable_parameters": 71768,
+        "parameter_size_mb_fp32": 0.273773193359375,
+        "persistent_state_size_mb": 0.7785186767578125,
+        "serialized_state_dict_mb": 0.8076372146606445,
+        "approx_macs": 7084544,
+        "approx_flops": 14169088,
+        "cpu_latency_ms_untrained": 1.139336999999614,
+        "cpu_batch128_throughput_untrained": 13821.229949087807
+      },
+      "smoke": {
+        "epochs": 2,
+        "training_time_sec": 3.765981699999884,
+        "overall_accuracy_not_for_comparison": 0.11607142857142858,
+        "macro_f1_not_for_comparison": 0.02671232876712329
+      },
+      "onnx_checker_passed": true,
+      "smoke_onnx_size_mib": 0.5843381881713867,
+      "estimated_formal_cpu_training_minutes": [
+        48,
+        62
+      ]
+    }
+  },
+  "estimate_basis": "Observed Baseline V1 CPU time, two-epoch ablation smoke throughput, and formal/smoke record-count scaling; ranges include host-load variation.",
+  "estimated_all_three_cpu_training_minutes": [
+    126,
+    160
+  ]
+}

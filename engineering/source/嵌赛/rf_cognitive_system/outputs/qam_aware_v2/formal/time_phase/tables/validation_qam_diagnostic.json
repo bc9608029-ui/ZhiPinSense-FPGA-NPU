@@ -1,0 +1,18 @@
+{
+  "scope": "fixed validation split only; no development_test or final blind records",
+  "samples": 5040,
+  "per_class_f1": {
+    "BPSK": 0.8041566746602717,
+    "QPSK": 0.6655052264808362,
+    "8PSK": 0.6338363780778395,
+    "16QAM": 0.44886363636363635,
+    "64QAM": 0.5028854080791426,
+    "2FSK": 0.8540305010893247,
+    "CPFSK": 0.7926397735314933,
+    "OFDM": 0.7982391782831988
+  },
+  "16qam_accuracy": 0.3761904761904762,
+  "64qam_accuracy": 0.48412698412698413,
+  "16qam_to_64qam_rate": 0.326984126984127,
+  "64qam_to_16qam_rate": 0.23492063492063492
+}

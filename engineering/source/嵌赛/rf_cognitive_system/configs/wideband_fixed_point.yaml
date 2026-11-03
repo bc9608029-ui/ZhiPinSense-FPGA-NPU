@@ -1,0 +1,77 @@
+contract_version: 1
+status: pre_board_reference_not_procise_ip_contract
+
+input:
+  format: interleaved_signed_int16_iq
+  order: [I, Q]
+  scale: explicit_receiver_scale_no_per_record_normalization
+
+window:
+  type: symmetric_hann
+  coefficient_format: signed_q1_15_int16
+  multiply_width_bits: 32
+  output_rounding: nearest_ties_away_from_zero
+  output_bits: 16
+
+fft_abstract_interface:
+  fft_length: 1024
+  input_real_bits: 16
+  input_imag_bits: 16
+  input_order: natural_time_order
+  output_order: implementation_declared_then_adapted_to_fftshift_bin_index
+  scaling_mode_reference: unscaled
+  worst_case_guard_bits: 10
+  output_real_bits: 26
+  output_imag_bits: 26
+  required_sidebands: [frame_id, bin_index, exponent, valid, start, end, overflow]
+  note: A scaled or block-floating FFT is allowed only if its exponent is carried and Python-equivalent reconstruction is verified.
+
+magnitude_square:
+  formula: re_squared_plus_im_squared
+  input_bits_each: 26
+  output_format: unsigned
+  output_bits: 51
+
+psd:
+  average_frames_reference: 32
+  accumulator_bits: 56
+  formula: magnitude_bits_plus_ceil_log2_average_frames
+  normalization: power_of_two_shift_for_32_frames
+  window_energy_correction: cpu_reference_until_fixed_point_policy_is_frozen
+
+hardware_candidate_descriptor:
+  fields:
+    version: uint8
+    flags: uint16
+    analysis_frame_id: uint32
+    timestamp_sample_index: uint64
+    candidate_id: uint16
+    first_bin: uint16
+    last_bin: uint16
+    peak_bin: uint16
+    bin_count: uint16
+    fft_exponent: int8
+    psd_shift: uint8
+    noise_floor_raw: uint64
+    integrated_excess_power_raw: uint64
+    peak_power_raw: uint64
+  optional_extension:
+    weighted_bin_power_sum_raw: uint72_packed_as_3xuint32
+  flags: [valid, overflow, edge_wrap, descriptor_saturated, frame_error]
+
+cpu_conversions:
+  - fftshift_bin_to_signed_frequency_hz
+  - bin_span_to_bandwidth_hz
+  - weighted_centroid_division_or_psd_roi_refinement
+  - raw_power_to_calibrated_power
+  - power_ratio_to_snr_db
+
+nco_ddc_reference:
+  phase_accumulator_bits: 32
+  sine_cosine_format: signed_q1_15_int16
+  phase_to_amplitude_implementation: unspecified_lut_or_cordic
+  mixer_products: four_signed_16x16
+  mixer_sum_bits: 33
+  output_rounding: nearest_ties_away_from_zero
+  output_saturation: signed_int16
+  headroom_note: Full-scale arbitrary IQ can exceed int16 after rotation; receiver gain or a configurable post-mixer shift is required.

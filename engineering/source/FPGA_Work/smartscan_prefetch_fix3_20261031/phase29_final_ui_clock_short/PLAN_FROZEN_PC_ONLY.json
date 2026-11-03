@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40,
+      "class_index": 3
+    },
+    {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40,
+      "class_index": 4
+    },
+    {
+      "bank": 0,
+      "message": 1,
+      "gain_db": -40,
+      "class_index": 3
+    }
+  ],
+  "denominator": 3,
+  "mode": "CONTINUOUS_SCAN",
+  "scan_start_hz": 2403600000,
+  "scan_stop_hz": 2403600000,
+  "source_hold_sec": 10,
+  "purpose": "Exercise actual sweep discovery and centred recapture timing plus single-observation history; not full-range RF regression"
+}

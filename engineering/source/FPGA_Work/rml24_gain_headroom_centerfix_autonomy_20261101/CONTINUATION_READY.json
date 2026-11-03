@@ -1,0 +1,11 @@
+{
+  "files": {
+    "software_deploy_centerfix.py": "28ead60dbf257ec10ae40ec9ee8fa9890bb51937440d35c2c0d0a878992aa581",
+    "deploy_and_verify.py": "84147926c0adf2145d3f47dd2d9e5c7269d78ac18e8a3fc59b73734281c57700",
+    "post24/tx_formal.py": "857b67f7ced4846be755beb5960e56e69238b8403a78ef7d979cfc0476444d31",
+    "post24/PLAN.json": "94566c541f6e747f68c7c3cd7a87d9bbe6949572e9edcd0bd40a942b095990b1",
+    "post24/TRUTH_FROZEN_PC_ONLY.json": "a8b424a0885a84707cdecf4252df85ea335912d40461d9bdaeb748a7c29a821f",
+    "post24/timing_contract.py": "84d120831ed629f84c1a16e424c87db77b6701cd9a6c5e1aa0eb7e0befacb71b"
+  },
+  "scope": "Autonomous regressions and software deployment authorized; centered confirmation fallback only on primary rejection, unchanged score/CFO limits,8 repeats/model/bit"
+}

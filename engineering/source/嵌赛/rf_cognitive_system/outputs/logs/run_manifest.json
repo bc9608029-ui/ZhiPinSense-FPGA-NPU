@@ -1,0 +1,26 @@
+{
+  "seed": 2026,
+  "config_file": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\smoke.yaml",
+  "git_commit": null,
+  "environment": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "torch": "2.12.0+cpu",
+    "cuda_available": false,
+    "torch_cuda_version": null,
+    "cudnn_version": null,
+    "cuda_devices": []
+  },
+  "selected_device": "cpu",
+  "model_profile": {
+    "parameters": 9672,
+    "trainable_parameters": 9672,
+    "model_size_mb_fp32": 0.036895751953125,
+    "approx_macs": 1163776,
+    "approx_flops": 2327552
+  },
+  "epochs_completed": 3,
+  "training_time_sec": 7.0753312999995615
+}

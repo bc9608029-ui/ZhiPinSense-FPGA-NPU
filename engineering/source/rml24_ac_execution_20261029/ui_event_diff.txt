@@ -1,0 +1,114 @@
+--- board_base
++++ ac_overlay
+@@ -23,6 +23,7 @@
+         "iq_units_per_count": None,
+         "spectrum_valid": False,
+         "spectrum_db_rel_x4": None,
++        "display_measurements": None,
+     }
+     if tensor is None:
+         return empty
+@@ -49,12 +50,51 @@
+     floor = max(float(power_256.max()) * 1e-8, np.finfo(np.float64).tiny)
+     db_rel = 10.0 * np.log10(np.maximum(power_256, floor) / max(float(power_256.max()), floor))
+     spectrum_x4 = np.rint(db_rel * 4.0).clip(-320, 0).astype(np.int16)
++
++    # These are display-domain measurements of the recovered model IQ, not raw
++    # Pluto ADC counts.  Spectrum values are relative to the strongest bin.  A
++    # fixed -20 dB threshold provides an explicitly-labelled occupied-bandwidth
++    # estimate without pretending that the median spectrum is an SNR estimate.
++    magnitude = np.abs(display_iq)
++    rms = float(np.sqrt(np.mean(magnitude * magnitude)))
++    recovered_peak = float(np.max(magnitude))
++    papr_db = float(20.0 * np.log10(max(recovered_peak, np.finfo(float).tiny) /
++                                    max(rms, np.finfo(float).tiny)))
++    spectrum_median_db_rel = float(np.median(db_rel))
++    peak_prominence_db = float(np.max(db_rel) - spectrum_median_db_rel)
++    active = db_rel >= -20.0
++    active_indices = np.flatnonzero(active)
++    bin_width_hz = 2_560_000.0 / 256.0
++    occupied_bins = int(active.sum())
++    occupied_bw_hz = 0.0 if active_indices.size == 0 else float(
++        (active_indices[-1] - active_indices[0] + 1) * bin_width_hz
++    )
++    frequency_hz = np.fft.fftshift(np.fft.fftfreq(1024, d=1.0 / 2_560_000.0))
++    frequency_256_hz = frequency_hz.reshape(256, 4).mean(axis=1)
++    spectral_centroid_hz = float(
++        np.sum(frequency_256_hz * power_256) /
++        max(float(np.sum(power_256)), np.finfo(float).tiny)
++    )
+     return {
+         "iq_valid": True,
+         "iq_i16_interleaved": interleaved.astype(int).tolist(),
+         "iq_units_per_count": units_per_count,
+         "spectrum_valid": True,
+         "spectrum_db_rel_x4": spectrum_x4.astype(int).tolist(),
++        "display_measurements": {
++            "rms_counts": rms,
++            "peak_counts": recovered_peak,
++            "papr_db": papr_db,
++            "clip_ratio": 0.0,
++            "power_dbfs": 20.0 * math.log10(max(rms, np.finfo(float).tiny)),
++            "noise_floor_dbfs": spectrum_median_db_rel,
++            "psd_peak_prominence_db": peak_prominence_db,
++            "snr_est_db": 0.0,
++            "occupied_bins": occupied_bins,
++            "spectral_centroid_hz": spectral_centroid_hz,
++            "occupied_bw_hz": occupied_bw_hz,
++            "model_rms": rms,
++        },
+     }
+ 
+ 
+@@ -145,6 +185,7 @@
+         "prediction", "model_input_sha256", "measurements", "iq_valid",
+         "iq_i16_interleaved", "iq_units_per_count", "spectrum_valid",
+         "spectrum_db_rel_x4", "self_test",
++        "display_measurements",
+     }
+     if set(event) != required:
+         raise ValueError(f"UI event keys differ: {sorted(set(event) ^ required)}")
+@@ -184,6 +225,24 @@
+             raise ValueError("spectrum_valid requires 256 bins")
+     elif event["spectrum_db_rel_x4"] is not None:
+         raise ValueError("invalid spectrum payload must be null")
++    display_measurements = event["display_measurements"]
++    if event["spectrum_valid"]:
++        expected_measurements = {
++            "rms_counts", "peak_counts", "papr_db", "clip_ratio",
++            "power_dbfs", "noise_floor_dbfs", "psd_peak_prominence_db",
++            "snr_est_db", "occupied_bins", "spectral_centroid_hz",
++            "occupied_bw_hz", "model_rms",
++        }
++        if not isinstance(display_measurements, dict) or set(display_measurements) != expected_measurements:
++            raise ValueError("display measurement keys differ")
++        for key, value in display_measurements.items():
++            if key == "occupied_bins":
++                if not isinstance(value, int) or not 0 <= value <= 256:
++                    raise ValueError("invalid occupied bin count")
++            elif not isinstance(value, (float, int)) or not math.isfinite(float(value)):
++                raise ValueError(f"invalid display measurement: {key}")
++    elif display_measurements is not None:
++        raise ValueError("invalid spectrum must not expose display measurements")
+ 
+ 
+ def build_board_ui_result(
+@@ -206,7 +265,8 @@
+         return None
+     measurements = None
+     if event["spectrum_valid"]:
+-        measurements = {
++        measurements = dict(event["display_measurements"])
++        measurements.update({
+             "spectrum_valid": True,
+             "spectrum_fft_length": 1024,
+             "spectrum_bin_count": 256,
+@@ -215,7 +275,7 @@
+             # The legacy renderer field is named dbfs, but these values are
+             # explicitly relative-to-peak in the final schema and screen label.
+             "spectrum_dbfs_x4": event["spectrum_db_rel_x4"],
+-        }
++        })
+     return {
+         "type": "result",
+         "version": "rml24-final-chain-v1",

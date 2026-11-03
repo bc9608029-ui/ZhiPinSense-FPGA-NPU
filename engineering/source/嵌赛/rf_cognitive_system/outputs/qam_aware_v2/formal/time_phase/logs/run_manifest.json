@@ -1,0 +1,65 @@
+{
+  "experiment_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\qam_aware_v2.yaml",
+  "run_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\qam_aware_v2.yaml",
+  "baseline_config": "F:\\\u5d4c\u8d5b\\rf_cognitive_system\\configs\\baseline.yaml",
+  "git_commit": "8d367532c41a34314b7bf9190f616e0975618e75",
+  "variant": "time_phase",
+  "seed": 2026,
+  "model": {
+    "time_base_channels": 22,
+    "physical_base_channels": 8,
+    "fusion_features": 64,
+    "dropout": 0.1
+  },
+  "smoke_only": false,
+  "formal_protocol": true,
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "torch": "2.14.0+cpu",
+    "cuda_available": false,
+    "torch_cuda_version": null,
+    "cudnn_version": null,
+    "cuda_devices": []
+  },
+  "epochs_completed": 40,
+  "best_epoch": 39,
+  "training_time_sec": 6691.1354656,
+  "peak_process_rss_mb": 541.19921875,
+  "loss_decreased": true,
+  "checkpoint_reload_ok": true,
+  "finite_checkpoint": true,
+  "validation_qam_diagnostic": {
+    "scope": "fixed validation split only; no development_test or final blind records",
+    "samples": 5040,
+    "per_class_f1": {
+      "BPSK": 0.8041566746602717,
+      "QPSK": 0.6655052264808362,
+      "8PSK": 0.6338363780778395,
+      "16QAM": 0.44886363636363635,
+      "64QAM": 0.5028854080791426,
+      "2FSK": 0.8540305010893247,
+      "CPFSK": 0.7926397735314933,
+      "OFDM": 0.7982391782831988
+    },
+    "16qam_accuracy": 0.3761904761904762,
+    "64qam_accuracy": 0.48412698412698413,
+    "16qam_to_64qam_rate": 0.326984126984127,
+    "64qam_to_16qam_rate": 0.23492063492063492
+  },
+  "model_profile": {
+    "parameters": 71616,
+    "trainable_parameters": 71616,
+    "neural_macs": 9816064,
+    "neural_flops": 19632128,
+    "physical_frontend_multiplications": 4092,
+    "physical_frontend_additions": 2046,
+    "fp32_parameter_size_mb": 0.273193359375,
+    "checkpoint_tensor_state_size_mb": 0.27730560302734375,
+    "serialized_state_dict_mb": 0.3059253692626953,
+    "projected_npu_model_size_mb": 0.27730560302734375,
+    "hardware_partition_status": "PLANNED ONLY: power/correlation multiply-add frontend is FPGA-suitable; no hardware performance is claimed."
+  }
+}

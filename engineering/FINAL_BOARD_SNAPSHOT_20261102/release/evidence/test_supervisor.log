@@ -1,0 +1,8 @@
+test_preflight_rejects_tampering_before_spawn (__main__.SupervisorTests.test_preflight_rejects_tampering_before_spawn) ... ok
+test_shutdown_rx_first (__main__.SupervisorTests.test_shutdown_rx_first) ... ok
+test_timeout_no_force_kill_or_dependency_stop (__main__.SupervisorTests.test_timeout_no_force_kill_or_dependency_stop) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK

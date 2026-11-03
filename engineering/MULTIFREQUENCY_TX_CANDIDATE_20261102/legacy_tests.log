@@ -1,0 +1,44 @@
+{"event": "prepared", "time_ns": 1793615024870649700, "monotonic_ns": 17643326511300, "clock_id": "windows-qpc", "frames": 1, "real": true}
+{"event": "attribute_readback", "time_ns": 1793615024870879900, "monotonic_ns": 17643326721000, "clock_id": "windows-qpc", "key": "hardwaregain", "requested": -40.0, "actual": -40.0, "tolerance": 0.01}
+{"event": "attribute_readback", "time_ns": 1793615024871005900, "monotonic_ns": 17643326845900, "clock_id": "windows-qpc", "key": "sampling_frequency", "requested": 2560000, "actual": 2560000.0, "tolerance": 0.5}
+{"event": "attribute_readback", "time_ns": 1793615024871115100, "monotonic_ns": 17643326954800, "clock_id": "windows-qpc", "key": "rf_bandwidth", "requested": 18000000, "actual": 18000000.0, "tolerance": 0.5}
+{"event": "attribute_readback", "time_ns": 1793615024871210100, "monotonic_ns": 17643327049600, "clock_id": "windows-qpc", "key": "frequency", "requested": 2400000000, "actual": 2400000000.0, "tolerance": 100}
+{"event": "attribute_readback", "time_ns": 1793615024871309300, "monotonic_ns": 17643327148700, "clock_id": "windows-qpc", "key": "powerdown", "requested": 0, "actual": 0.0, "tolerance": 0.5}
+{"event": "configured", "time_ns": 1793615024871334400, "monotonic_ns": 17643327173600, "clock_id": "windows-qpc", "uri": "usb:1.8.5", "center_hz": 2400000000, "gain_db": -40.0}
+{"event": "error", "time_ns": 1793615024871423300, "monotonic_ns": 17643327262700, "clock_id": "windows-qpc", "message": "injected send error"}
+{"event": "finished", "time_ns": 1793615024872495600, "monotonic_ns": 17643328336300, "clock_id": "windows-qpc", "real": true, "count": 0, "error": "injected send error", "restore_errors": [], "restore_readback": [{"role": "tx", "key": "hardwaregain", "expected": "-60", "actual": "-60", "ok": true}, {"role": "tx", "key": "sampling_frequency", "expected": "2560000", "actual": "2560000", "ok": true}, {"role": "tx", "key": "rf_bandwidth", "expected": "18000000", "actual": "18000000", "ok": true}, {"role": "tlo", "key": "frequency", "expected": "2400000000", "actual": "2400000000", "ok": true}, {"role": "tlo", "key": "powerdown", "expected": "1", "actual": "1", "ok": true}], "restore_status": "READBACK_RESTORE_OK"}
+{"event": "prepared", "time_ns": 1793615025093832000, "monotonic_ns": 17643549677800, "clock_id": "windows-qpc", "frames": 1, "real": false}
+{"event": "preview", "time_ns": 1793615025094061200, "monotonic_ns": 17643549903500, "clock_id": "windows-qpc", "name": "QPSK", "index": 0, "source_sha256": "ae8c10796933951b2ec39bba22c4ff1f8b244ab3dff1818290f663cfc83701b8", "center_hz": 2400000000}
+{"event": "muted", "time_ns": 1793615025297198300, "monotonic_ns": 17643753049500, "clock_id": "windows-qpc", "index": 0}
+{"event": "finished", "time_ns": 1793615025299447900, "monotonic_ns": 17643755293500, "clock_id": "windows-qpc", "real": false, "count": 1, "error": null, "restore_errors": [], "restore_readback": [], "restore_status": "NOT_APPLICABLE"}
+{"event": "prepared", "time_ns": 1793615025321134500, "monotonic_ns": 17643776978200, "clock_id": "windows-qpc", "frames": 1, "real": true}
+{"event": "attribute_readback", "time_ns": 1793615025321340800, "monotonic_ns": 17643777182700, "clock_id": "windows-qpc", "key": "hardwaregain", "requested": -40.0, "actual": 1.0, "tolerance": 0.01}
+{"event": "error", "time_ns": 1793615025321388000, "monotonic_ns": 17643777227300, "clock_id": "windows-qpc", "message": "设备回读不一致: hardwaregain=1.0, requested=-40.0"}
+{"event": "finished", "time_ns": 1793615025322445900, "monotonic_ns": 17643778287600, "clock_id": "windows-qpc", "real": true, "count": 0, "error": "设备回读不一致: hardwaregain=1.0, requested=-40.0", "restore_errors": [], "restore_readback": [{"role": "tx", "key": "hardwaregain", "expected": "1", "actual": "1", "ok": true}], "restore_status": "READBACK_RESTORE_OK"}
+{"event": "prepared", "time_ns": 1793615025536208000, "monotonic_ns": 17643992054100, "clock_id": "windows-qpc", "frames": 1, "real": true}
+{"event": "attribute_readback", "time_ns": 1793615025536431100, "monotonic_ns": 17643992273600, "clock_id": "windows-qpc", "key": "hardwaregain", "requested": -40.0, "actual": -40.0, "tolerance": 0.01}
+{"event": "attribute_readback", "time_ns": 1793615025536560100, "monotonic_ns": 17643992400100, "clock_id": "windows-qpc", "key": "sampling_frequency", "requested": 2560000, "actual": 2560000.0, "tolerance": 0.5}
+{"event": "attribute_readback", "time_ns": 1793615025536662100, "monotonic_ns": 17643992501500, "clock_id": "windows-qpc", "key": "rf_bandwidth", "requested": 18000000, "actual": 18000000.0, "tolerance": 0.5}
+{"event": "attribute_readback", "time_ns": 1793615025536797100, "monotonic_ns": 17643992636600, "clock_id": "windows-qpc", "key": "frequency", "requested": 2400000000, "actual": 2400000000.0, "tolerance": 100}
+{"event": "attribute_readback", "time_ns": 1793615025536892800, "monotonic_ns": 17643992732100, "clock_id": "windows-qpc", "key": "powerdown", "requested": 0, "actual": 0.0, "tolerance": 0.5}
+{"event": "configured", "time_ns": 1793615025536919600, "monotonic_ns": 17643992758700, "clock_id": "windows-qpc", "uri": "usb:1.8.5", "center_hz": 2400000000, "gain_db": -40.0}
+{"event": "transmitting", "time_ns": 1793615025537011100, "monotonic_ns": 17643992850400, "clock_id": "windows-qpc", "name": "QPSK", "index": 0, "source_sha256": "ae8c10796933951b2ec39bba22c4ff1f8b244ab3dff1818290f663cfc83701b8", "center_hz": 2400000000}
+{"event": "muted", "time_ns": 1793615025740734700, "monotonic_ns": 17644196584700, "clock_id": "windows-qpc", "index": 0}
+{"event": "finished", "time_ns": 1793615025742326800, "monotonic_ns": 17644198171100, "clock_id": "windows-qpc", "real": true, "count": 1, "error": null, "restore_errors": ["injected restore error"], "restore_readback": [], "restore_status": "UNVERIFIED"}
+{"event": "prepared", "time_ns": 1793615025760902600, "monotonic_ns": 17644216748500, "clock_id": "windows-qpc", "frames": 1, "real": true}
+{"event": "finished", "time_ns": 1793615025762211800, "monotonic_ns": 17644218055100, "clock_id": "windows-qpc", "real": true, "count": 0, "error": null, "restore_errors": [], "restore_readback": [], "restore_status": "NO_ATTRIBUTES_CHANGED"}
+{"event": "prepared", "time_ns": 1793615025781479400, "monotonic_ns": 17644237326100, "clock_id": "windows-qpc", "frames": 1, "real": true}
+{"event": "attribute_readback", "time_ns": 1793615025781707800, "monotonic_ns": 17644237550900, "clock_id": "windows-qpc", "key": "hardwaregain", "requested": -40.0, "actual": -40.0, "tolerance": 0.01}
+{"event": "attribute_readback", "time_ns": 1793615025781853000, "monotonic_ns": 17644237694200, "clock_id": "windows-qpc", "key": "sampling_frequency", "requested": 2560000, "actual": 2560000.0, "tolerance": 0.5}
+{"event": "attribute_readback", "time_ns": 1793615025781972400, "monotonic_ns": 17644237812400, "clock_id": "windows-qpc", "key": "rf_bandwidth", "requested": 18000000, "actual": 18000000.0, "tolerance": 0.5}
+{"event": "attribute_readback", "time_ns": 1793615025782082700, "monotonic_ns": 17644237922500, "clock_id": "windows-qpc", "key": "frequency", "requested": 2400000000, "actual": 2400000000.0, "tolerance": 100}
+{"event": "attribute_readback", "time_ns": 1793615025782365900, "monotonic_ns": 17644238212300, "clock_id": "windows-qpc", "key": "powerdown", "requested": 0, "actual": 0.0, "tolerance": 0.5}
+{"event": "configured", "time_ns": 1793615025782420500, "monotonic_ns": 17644238259900, "clock_id": "windows-qpc", "uri": "usb:1.8.5", "center_hz": 2400000000, "gain_db": -40.0}
+{"event": "transmitting", "time_ns": 1793615025782556000, "monotonic_ns": 17644238395700, "clock_id": "windows-qpc", "name": "QPSK", "index": 0, "source_sha256": "ae8c10796933951b2ec39bba22c4ff1f8b244ab3dff1818290f663cfc83701b8", "center_hz": 2400000000}
+{"event": "muted", "time_ns": 1793615025985927100, "monotonic_ns": 17644441785800, "clock_id": "windows-qpc", "index": 0}
+{"event": "finished", "time_ns": 1793615025989599200, "monotonic_ns": 17644445448000, "clock_id": "windows-qpc", "real": true, "count": 1, "error": null, "restore_errors": [], "restore_readback": [{"role": "tx", "key": "hardwaregain", "expected": "-60", "actual": "-60", "ok": true}, {"role": "tx", "key": "sampling_frequency", "expected": "2560000", "actual": "2560000", "ok": true}, {"role": "tx", "key": "rf_bandwidth", "expected": "18000000", "actual": "18000000", "ok": true}, {"role": "tlo", "key": "frequency", "expected": "2400000000", "actual": "2400000000", "ok": true}, {"role": "tlo", "key": "powerdown", "expected": "1", "actual": "1", "ok": true}], "restore_status": "READBACK_RESTORE_OK"}
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 2.236s
+
+OK

@@ -1,0 +1,6 @@
+WNS=3.427
+WHS=0.037
+DRC_ERRORS=0
+DRC_WARNINGS=0
+SETUP_PATH=rst_sr_reg[0]/C -> u_fb_read_720p/u_hdmitx/family_7.Inst_clk_oserdese2_10to1/int_rst_reg/PRE
+HOLD_PATH=u_fb_read_720p/u_frame_read_write_largebuf/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][10]/C -> u_fb_read_720p/u_frame_read_write_largebuf/write_buf/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[9]/D
