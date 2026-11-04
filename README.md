@@ -23,3 +23,8 @@
 支持定频、自动锁定、连续巡扫，以及分类、参数、瀑布图、IQ 散点和历史记录界面。已验证结果应结合各批次的信号格式、频率、增益和版本条件理解，不将演示视频中的置信度当作整体测试准确率。
 
 此仓库当前用于私有保存与比赛工程交付。公开前须再次检查供应商材料、个人信息及传播权限。
+
+
+## 评审代码导航
+
+先读 [工程阅读入口](engineering/00_评审请先阅读.md) 和 [模块与关键入口](engineering/CODE_GUIDE/MODULE_ENTRY_POINTS.md)。逐文件查询见 [CSV索引](engineering/CODE_GUIDE/FILE_INDEX.csv)，下载后还可打开 `engineering/CODE_GUIDE/FILE_BROWSER.html` 离线搜索。
