@@ -28,3 +28,5 @@
 ## 评审代码导航
 
 先读 [工程阅读入口](engineering/00_评审请先阅读.md) 和 [模块与关键入口](engineering/CODE_GUIDE/MODULE_ENTRY_POINTS.md)。逐文件查询见 [CSV索引](engineering/CODE_GUIDE/FILE_INDEX.csv)，下载后还可打开 `engineering/CODE_GUIDE/FILE_BROWSER.html` 离线搜索。
+
+最终运行链请读 [最终代码位置](engineering/CODE_GUIDE/FINAL_CODE_LOCATIONS.md)。AI使用详细说明见根目录 [llm_usage.md](llm_usage.md)。
